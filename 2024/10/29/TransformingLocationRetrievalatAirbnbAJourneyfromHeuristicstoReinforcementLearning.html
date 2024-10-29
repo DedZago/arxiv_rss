@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning" />
+<meta name="author" content="Dillon Davis, Huiji Gao, Thomas Legrand, Weiwei Guo, Malay Haldar, Alex Deng, Han Zhao, Liwei He, Sanjeev Katariya" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Airbnb search system grapples with many unique challenges as it continues to evolve. We oversee a marketplace that is nuanced by geography, diversity of homes, and guests with a variety of preferences. Crafting an efficient search system that can accommodate diverse guest needs, while showcasing relevant homes lies at the heart of Airbnb’s success. Airbnb search has many challenges that parallel other recommendation and search systems but it has a unique information retrieval problem, upstream of ranking, called location retrieval. It requires defining a topological map area that is relevant to the searched query for homes listing retrieval. The purpose of this paper is to demonstrate the methodology, challenges, and impact of building a machine learning based location retrieval product from the ground up. Despite the lack of suitable, prevalent machine learning based approaches, we tackle cold start, generalization, differentiation and algorithmic bias. We detail the efficacy of heuristics, statistics, machine learning, and reinforcement learning approaches to solve these challenges, particularly for systems that are often unexplored by current literature." />
+<meta property="og:description" content="The Airbnb search system grapples with many unique challenges as it continues to evolve. We oversee a marketplace that is nuanced by geography, diversity of homes, and guests with a variety of preferences. Crafting an efficient search system that can accommodate diverse guest needs, while showcasing relevant homes lies at the heart of Airbnb’s success. Airbnb search has many challenges that parallel other recommendation and search systems but it has a unique information retrieval problem, upstream of ranking, called location retrieval. It requires defining a topological map area that is relevant to the searched query for homes listing retrieval. The purpose of this paper is to demonstrate the methodology, challenges, and impact of building a machine learning based location retrieval product from the ground up. Despite the lack of suitable, prevalent machine learning based approaches, we tackle cold start, generalization, differentiation and algorithmic bias. We detail the efficacy of heuristics, statistics, machine learning, and reinforcement learning approaches to solve these challenges, particularly for systems that are often unexplored by current literature." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/TransformingLocationRetrievalatAirbnbAJourneyfromHeuristicstoReinforcementLearning.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/TransformingLocationRetrievalatAirbnbAJourneyfromHeuristicstoReinforcementLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning" />
+<script type="application/ld+json">
+{"description":"The Airbnb search system grapples with many unique challenges as it continues to evolve. We oversee a marketplace that is nuanced by geography, diversity of homes, and guests with a variety of preferences. Crafting an efficient search system that can accommodate diverse guest needs, while showcasing relevant homes lies at the heart of Airbnb’s success. Airbnb search has many challenges that parallel other recommendation and search systems but it has a unique information retrieval problem, upstream of ranking, called location retrieval. It requires defining a topological map area that is relevant to the searched query for homes listing retrieval. The purpose of this paper is to demonstrate the methodology, challenges, and impact of building a machine learning based location retrieval product from the ground up. Despite the lack of suitable, prevalent machine learning based approaches, we tackle cold start, generalization, differentiation and algorithmic bias. We detail the efficacy of heuristics, statistics, machine learning, and reinforcement learning approaches to solve these challenges, particularly for systems that are often unexplored by current literature.","author":{"@type":"Person","name":"Dillon Davis, Huiji Gao, Thomas Legrand, Weiwei Guo, Malay Haldar, Alex Deng, Han Zhao, Liwei He, Sanjeev Katariya"},"datePublished":"2024-10-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/TransformingLocationRetrievalatAirbnbAJourneyfromHeuristicstoReinforcementLearning.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/TransformingLocationRetrievalatAirbnbAJourneyfromHeuristicstoReinforcementLearning.html","headline":"Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning","@type":"BlogPosting","dateModified":"2024-10-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Transforming Location Retrieval at Airbnb: A Journey from Heuristics to Reinforcement Learning</h1>
+  <br>Dillon Davis, Huiji Gao, Thomas Legrand, Weiwei Guo, Malay Haldar, Alex Deng, Han Zhao, Liwei He, Sanjeev Katariya</h3>
+  <br> []
+
+  <p>The Airbnb search system grapples with many unique challenges as it continues to evolve. We oversee a marketplace that is nuanced by geography, diversity of homes, and guests with a variety of preferences. Crafting an efficient search system that can accommodate diverse guest needs, while showcasing relevant homes lies at the heart of Airbnb’s success. Airbnb search has many challenges that parallel other recommendation and search systems but it has a unique information retrieval problem, upstream of ranking, called location retrieval. It requires defining a topological map area that is relevant to the searched query for homes listing retrieval. The purpose of this paper is to demonstrate the methodology, challenges, and impact of building a machine learning based location retrieval product from the ground up. Despite the lack of suitable, prevalent machine learning based approaches, we tackle cold start, generalization, differentiation and algorithmic bias. We detail the efficacy of heuristics, statistics, machine learning, and reinforcement learning approaches to solve these challenges, particularly for systems that are often unexplored by current literature.</p>
+
+<p><a href="https://arxiv.org/abs/2408.13399">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

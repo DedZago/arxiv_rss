@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Revisiting PlayeRank</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Revisiting PlayeRank" />
+<meta name="author" content="Louise Schmidt, Cristian Lillo, Javier Bustos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this article we revise the football’s performance score called PlayeRank, designed and evaluated by Pappalardo et al.\ in 2019. First, we analyze the weights extracted from the Linear Support Vector Machine (SVM) that solves the classification problem of “which set of events has a higher impact on the chances of winning a match”. Here, we notice that the previously published results include the Goal-Scored event during the training phase, which produces inconsistencies. We fix these inconsistencies, and show new weights capable of solving the same problem. Following the intuition that the best team should always win a match, we define the team’s quality as the average number of players involved in the game. We show that, using the original PlayeRank, in 94.13\% of the matches either the superior team beats the inferior team or the teams end tied if the scores are similar. Finally, we present a way to use PlayeRank in an online fashion using modified free analysis tools. Calculating this modified version of PlayeRank, we performed an online analysis of a real football match every five minutes of game. Here, we evaluate the usefulness of that information with experts and managers, and conclude that the obtained data indeed provides useful information that was not previously available to the manager during the match." />
+<meta property="og:description" content="In this article we revise the football’s performance score called PlayeRank, designed and evaluated by Pappalardo et al.\ in 2019. First, we analyze the weights extracted from the Linear Support Vector Machine (SVM) that solves the classification problem of “which set of events has a higher impact on the chances of winning a match”. Here, we notice that the previously published results include the Goal-Scored event during the training phase, which produces inconsistencies. We fix these inconsistencies, and show new weights capable of solving the same problem. Following the intuition that the best team should always win a match, we define the team’s quality as the average number of players involved in the game. We show that, using the original PlayeRank, in 94.13\% of the matches either the superior team beats the inferior team or the teams end tied if the scores are similar. Finally, we present a way to use PlayeRank in an online fashion using modified free analysis tools. Calculating this modified version of PlayeRank, we performed an online analysis of a real football match every five minutes of game. Here, we evaluate the usefulness of that information with experts and managers, and conclude that the obtained data indeed provides useful information that was not previously available to the manager during the match." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/RevisitingPlayeRank.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/RevisitingPlayeRank.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Revisiting PlayeRank" />
+<script type="application/ld+json">
+{"description":"In this article we revise the football’s performance score called PlayeRank, designed and evaluated by Pappalardo et al.\\ in 2019. First, we analyze the weights extracted from the Linear Support Vector Machine (SVM) that solves the classification problem of “which set of events has a higher impact on the chances of winning a match”. Here, we notice that the previously published results include the Goal-Scored event during the training phase, which produces inconsistencies. We fix these inconsistencies, and show new weights capable of solving the same problem. Following the intuition that the best team should always win a match, we define the team’s quality as the average number of players involved in the game. We show that, using the original PlayeRank, in 94.13\\% of the matches either the superior team beats the inferior team or the teams end tied if the scores are similar. Finally, we present a way to use PlayeRank in an online fashion using modified free analysis tools. Calculating this modified version of PlayeRank, we performed an online analysis of a real football match every five minutes of game. Here, we evaluate the usefulness of that information with experts and managers, and conclude that the obtained data indeed provides useful information that was not previously available to the manager during the match.","author":{"@type":"Person","name":"Louise Schmidt, Cristian Lillo, Javier Bustos"},"datePublished":"2024-10-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/RevisitingPlayeRank.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/RevisitingPlayeRank.html","headline":"Revisiting PlayeRank","@type":"BlogPosting","dateModified":"2024-10-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Revisiting PlayeRank</h1>
+  <br>Louise Schmidt, Cristian Lillo, Javier Bustos</h3>
+  <br> []
+
+  <p>In this article we revise the football’s performance score called PlayeRank, designed and evaluated by Pappalardo et al.\ in 2019. First, we analyze the weights extracted from the Linear Support Vector Machine (SVM) that solves the classification problem of “which set of events has a higher impact on the chances of winning a match”. Here, we notice that the previously published results include the Goal-Scored event during the training phase, which produces inconsistencies. We fix these inconsistencies, and show new weights capable of solving the same problem.
+  Following the intuition that the best team should always win a match, we define the team’s quality as the average number of players involved in the game. We show that, using the original PlayeRank, in 94.13\% of the matches either the superior team beats the inferior team or the teams end tied if the scores are similar.
+  Finally, we present a way to use PlayeRank in an online fashion using modified free analysis tools. Calculating this modified version of PlayeRank, we performed an online analysis of a real football match every five minutes of game. Here, we evaluate the usefulness of that information with experts and managers, and conclude that the obtained data indeed provides useful information that was not previously available to the manager during the match.</p>
+
+<p><a href="https://arxiv.org/abs/2410.20038">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

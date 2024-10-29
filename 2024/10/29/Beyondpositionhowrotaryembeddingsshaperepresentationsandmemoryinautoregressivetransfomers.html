@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond position: how rotary embeddings shape representations and memory in autoregressive transfomers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Beyond position: how rotary embeddings shape representations and memory in autoregressive transfomers" />
+<meta name="author" content="Valeria Ruscio, Fabrizio Silvestri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Rotary Positional Embeddings (RoPE) enhance positional encoding in Transformer models, yet their full impact on model dynamics remains underexplored. This paper studies how RoPE introduces position-dependent rotations, causing phase shifts in token embeddings that influence higher-frequency components within the model’s internal representations. Through spectral analysis, we demonstrate that RoPE’s rotation matrices induce oscillatory behaviors in embeddings, affecting information retention across layers and shaping temporal modeling capabilities. We show that activation functions in feed-forward networks interact with RoPE-modulated embeddings to generate harmonics, leading to constructive or destructive interference based on phase alignment. Our findings reveal that phase alignment amplifies activations and sharpens attention, while misalignment weakens activations and disrupts focus on positional patterns. This study underscores the importance of frequency components as intrinsic elements of model behavior, offering new insights beyond traditional analyses." />
+<meta property="og:description" content="Rotary Positional Embeddings (RoPE) enhance positional encoding in Transformer models, yet their full impact on model dynamics remains underexplored. This paper studies how RoPE introduces position-dependent rotations, causing phase shifts in token embeddings that influence higher-frequency components within the model’s internal representations. Through spectral analysis, we demonstrate that RoPE’s rotation matrices induce oscillatory behaviors in embeddings, affecting information retention across layers and shaping temporal modeling capabilities. We show that activation functions in feed-forward networks interact with RoPE-modulated embeddings to generate harmonics, leading to constructive or destructive interference based on phase alignment. Our findings reveal that phase alignment amplifies activations and sharpens attention, while misalignment weakens activations and disrupts focus on positional patterns. This study underscores the importance of frequency components as intrinsic elements of model behavior, offering new insights beyond traditional analyses." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/Beyondpositionhowrotaryembeddingsshaperepresentationsandmemoryinautoregressivetransfomers.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/Beyondpositionhowrotaryembeddingsshaperepresentationsandmemoryinautoregressivetransfomers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond position: how rotary embeddings shape representations and memory in autoregressive transfomers" />
+<script type="application/ld+json">
+{"description":"Rotary Positional Embeddings (RoPE) enhance positional encoding in Transformer models, yet their full impact on model dynamics remains underexplored. This paper studies how RoPE introduces position-dependent rotations, causing phase shifts in token embeddings that influence higher-frequency components within the model’s internal representations. Through spectral analysis, we demonstrate that RoPE’s rotation matrices induce oscillatory behaviors in embeddings, affecting information retention across layers and shaping temporal modeling capabilities. We show that activation functions in feed-forward networks interact with RoPE-modulated embeddings to generate harmonics, leading to constructive or destructive interference based on phase alignment. Our findings reveal that phase alignment amplifies activations and sharpens attention, while misalignment weakens activations and disrupts focus on positional patterns. This study underscores the importance of frequency components as intrinsic elements of model behavior, offering new insights beyond traditional analyses.","author":{"@type":"Person","name":"Valeria Ruscio, Fabrizio Silvestri"},"datePublished":"2024-10-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/Beyondpositionhowrotaryembeddingsshaperepresentationsandmemoryinautoregressivetransfomers.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/Beyondpositionhowrotaryembeddingsshaperepresentationsandmemoryinautoregressivetransfomers.html","headline":"Beyond position: how rotary embeddings shape representations and memory in autoregressive transfomers","@type":"BlogPosting","dateModified":"2024-10-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Beyond position: how rotary embeddings shape representations and memory in autoregressive transfomers</h1>
+  <br>Valeria Ruscio, Fabrizio Silvestri</h3>
+  <br> []
+
+  <p>Rotary Positional Embeddings (RoPE) enhance positional encoding in Transformer models, yet their full impact on model dynamics remains underexplored. This paper studies how RoPE introduces position-dependent rotations, causing phase shifts in token embeddings that influence higher-frequency components within the model’s internal representations. Through spectral analysis, we demonstrate that RoPE’s rotation matrices induce oscillatory behaviors in embeddings, affecting information retention across layers and shaping temporal modeling capabilities. We show that activation functions in feed-forward networks interact with RoPE-modulated embeddings to generate harmonics, leading to constructive or destructive interference based on phase alignment. Our findings reveal that phase alignment amplifies activations and sharpens attention, while misalignment weakens activations and disrupts focus on positional patterns. This study underscores the importance of frequency components as intrinsic elements of model behavior, offering new insights beyond traditional analyses.</p>
+
+<p><a href="https://arxiv.org/abs/2410.18067">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

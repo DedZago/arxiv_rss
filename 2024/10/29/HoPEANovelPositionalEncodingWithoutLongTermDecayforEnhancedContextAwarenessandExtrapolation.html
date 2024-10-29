@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>HoPE: A Novel Positional Encoding Without Long-Term Decay for Enhanced Context Awareness and Extrapolation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="HoPE: A Novel Positional Encoding Without Long-Term Decay for Enhanced Context Awareness and Extrapolation" />
+<meta name="author" content="Yuhan Chen, Ang Lv, Jian Luan, Bin Wang, Wei Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many positional encodings (PEs) are designed to exhibit long-term decay, based on an entrenched and long-standing inductive opinion: tokens farther away from the current position carry less relevant information. We argue that long-term decay is outdated in the era of LLMs, as LLMs are now applied to tasks demanding precise retrieval of in-context information from arbitrary positions. Firstly, we present empirical analyses on various PEs, demonstrating that models inherently learn attention with only a local-decay pattern while forming a U-shape pattern globally, contradicting the principle of long-term decay. Furthermore, we conduct a detailed analysis of rotary position encoding (RoPE, a prevalent relative positional encoding in LLMs), and found that the U-shape attention is caused by some learned components, which are also the key factor limiting RoPE’s expressiveness and extrapolation.Inspired by these insights, we propose High-frequency rotary Position Encoding (HoPE). HoPE replaces the specific components in RoPE with position-independent ones, retaining only high-frequency signals, which also breaks the principle of long-term decay in theory. HoPE achieves two major advantages: (1) Without constraints imposed by long-term decay, contradictory factors that limit spontaneous attention optimization and model extrapolation performance are removed. (2) Components representing positions and semantics are are optimized. These enhances model’s context awareness and extrapolation, as validated by extensive experiments." />
+<meta property="og:description" content="Many positional encodings (PEs) are designed to exhibit long-term decay, based on an entrenched and long-standing inductive opinion: tokens farther away from the current position carry less relevant information. We argue that long-term decay is outdated in the era of LLMs, as LLMs are now applied to tasks demanding precise retrieval of in-context information from arbitrary positions. Firstly, we present empirical analyses on various PEs, demonstrating that models inherently learn attention with only a local-decay pattern while forming a U-shape pattern globally, contradicting the principle of long-term decay. Furthermore, we conduct a detailed analysis of rotary position encoding (RoPE, a prevalent relative positional encoding in LLMs), and found that the U-shape attention is caused by some learned components, which are also the key factor limiting RoPE’s expressiveness and extrapolation.Inspired by these insights, we propose High-frequency rotary Position Encoding (HoPE). HoPE replaces the specific components in RoPE with position-independent ones, retaining only high-frequency signals, which also breaks the principle of long-term decay in theory. HoPE achieves two major advantages: (1) Without constraints imposed by long-term decay, contradictory factors that limit spontaneous attention optimization and model extrapolation performance are removed. (2) Components representing positions and semantics are are optimized. These enhances model’s context awareness and extrapolation, as validated by extensive experiments." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/HoPEANovelPositionalEncodingWithoutLongTermDecayforEnhancedContextAwarenessandExtrapolation.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/HoPEANovelPositionalEncodingWithoutLongTermDecayforEnhancedContextAwarenessandExtrapolation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="HoPE: A Novel Positional Encoding Without Long-Term Decay for Enhanced Context Awareness and Extrapolation" />
+<script type="application/ld+json">
+{"description":"Many positional encodings (PEs) are designed to exhibit long-term decay, based on an entrenched and long-standing inductive opinion: tokens farther away from the current position carry less relevant information. We argue that long-term decay is outdated in the era of LLMs, as LLMs are now applied to tasks demanding precise retrieval of in-context information from arbitrary positions. Firstly, we present empirical analyses on various PEs, demonstrating that models inherently learn attention with only a local-decay pattern while forming a U-shape pattern globally, contradicting the principle of long-term decay. Furthermore, we conduct a detailed analysis of rotary position encoding (RoPE, a prevalent relative positional encoding in LLMs), and found that the U-shape attention is caused by some learned components, which are also the key factor limiting RoPE’s expressiveness and extrapolation.Inspired by these insights, we propose High-frequency rotary Position Encoding (HoPE). HoPE replaces the specific components in RoPE with position-independent ones, retaining only high-frequency signals, which also breaks the principle of long-term decay in theory. HoPE achieves two major advantages: (1) Without constraints imposed by long-term decay, contradictory factors that limit spontaneous attention optimization and model extrapolation performance are removed. (2) Components representing positions and semantics are are optimized. These enhances model’s context awareness and extrapolation, as validated by extensive experiments.","author":{"@type":"Person","name":"Yuhan Chen, Ang Lv, Jian Luan, Bin Wang, Wei Liu"},"datePublished":"2024-10-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/HoPEANovelPositionalEncodingWithoutLongTermDecayforEnhancedContextAwarenessandExtrapolation.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/HoPEANovelPositionalEncodingWithoutLongTermDecayforEnhancedContextAwarenessandExtrapolation.html","headline":"HoPE: A Novel Positional Encoding Without Long-Term Decay for Enhanced Context Awareness and Extrapolation","@type":"BlogPosting","dateModified":"2024-10-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>HoPE: A Novel Positional Encoding Without Long-Term Decay for Enhanced Context Awareness and Extrapolation</h1>
+  <br>Yuhan Chen, Ang Lv, Jian Luan, Bin Wang, Wei Liu</h3>
+  <br> []
+
+  <p>Many positional encodings (PEs) are designed to exhibit long-term decay, based on an entrenched and long-standing inductive opinion: tokens farther away from the current position carry less relevant information. We argue that long-term decay is outdated in the era of LLMs, as LLMs are now applied to tasks demanding precise retrieval of in-context information from arbitrary positions. Firstly, we present empirical analyses on various PEs, demonstrating that models inherently learn attention with only a local-decay pattern while forming a U-shape pattern globally, contradicting the principle of long-term decay. Furthermore, we conduct a detailed analysis of rotary position encoding (RoPE, a prevalent relative positional encoding in LLMs), and found that the U-shape attention is caused by some learned components, which are also the key factor limiting RoPE’s expressiveness and extrapolation.Inspired by these insights, we propose High-frequency rotary Position Encoding (HoPE). HoPE replaces the specific components in RoPE with position-independent ones, retaining only high-frequency signals, which also breaks the principle of long-term decay in theory. HoPE achieves two major advantages: (1) Without constraints imposed by long-term decay, contradictory factors that limit spontaneous attention optimization and model extrapolation performance are removed. (2) Components representing positions and semantics are are optimized. These enhances model’s context awareness and extrapolation, as validated by extensive experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2410.21216">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

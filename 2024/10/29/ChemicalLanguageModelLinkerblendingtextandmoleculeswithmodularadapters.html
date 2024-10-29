@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Chemical Language Model Linker: blending text and molecules with modular adapters</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Chemical Language Model Linker: blending text and molecules with modular adapters" />
+<meta name="author" content="Yifan Deng, Spencer S. Ericksen, Anthony Gitter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The development of large language models and multi-modal models has enabled the appealing idea of generating novel molecules from text descriptions. Generative modeling would shift the paradigm from relying on large-scale chemical screening to find molecules with desired properties to directly generating those molecules. However, multi-modal models combining text and molecules are often trained from scratch, without leveraging existing high-quality pretrained models. That approach consumes more computational resources and prohibits model scaling. In contrast, we propose a lightweight adapter-based strategy named Chemical Language Model Linker (ChemLML). ChemLML blends the two single domain models and obtains conditional molecular generation from text descriptions while still operating in the specialized embedding spaces of the molecular domain. ChemLML can tailor diverse pretrained text models for molecule generation by training relatively few adapter parameters. We find that the choice of molecular representation used within ChemLML, SMILES versus SELFIES, has a strong influence on conditional molecular generation performance. SMILES is often preferable despite not guaranteeing valid molecules. We raise issues in using the large PubChem dataset of molecules and their associated descriptions for evaluating molecule generation and provide a filtered version of the dataset as a generation test set. To demonstrate how ChemLML could be used in practice, we generate candidate protein inhibitors and use docking to assess their quality." />
+<meta property="og:description" content="The development of large language models and multi-modal models has enabled the appealing idea of generating novel molecules from text descriptions. Generative modeling would shift the paradigm from relying on large-scale chemical screening to find molecules with desired properties to directly generating those molecules. However, multi-modal models combining text and molecules are often trained from scratch, without leveraging existing high-quality pretrained models. That approach consumes more computational resources and prohibits model scaling. In contrast, we propose a lightweight adapter-based strategy named Chemical Language Model Linker (ChemLML). ChemLML blends the two single domain models and obtains conditional molecular generation from text descriptions while still operating in the specialized embedding spaces of the molecular domain. ChemLML can tailor diverse pretrained text models for molecule generation by training relatively few adapter parameters. We find that the choice of molecular representation used within ChemLML, SMILES versus SELFIES, has a strong influence on conditional molecular generation performance. SMILES is often preferable despite not guaranteeing valid molecules. We raise issues in using the large PubChem dataset of molecules and their associated descriptions for evaluating molecule generation and provide a filtered version of the dataset as a generation test set. To demonstrate how ChemLML could be used in practice, we generate candidate protein inhibitors and use docking to assess their quality." />
+<link rel="canonical" href="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/ChemicalLanguageModelLinkerblendingtextandmoleculeswithmodularadapters.html" />
+<meta property="og:url" content="https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/ChemicalLanguageModelLinkerblendingtextandmoleculeswithmodularadapters.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Chemical Language Model Linker: blending text and molecules with modular adapters" />
+<script type="application/ld+json">
+{"description":"The development of large language models and multi-modal models has enabled the appealing idea of generating novel molecules from text descriptions. Generative modeling would shift the paradigm from relying on large-scale chemical screening to find molecules with desired properties to directly generating those molecules. However, multi-modal models combining text and molecules are often trained from scratch, without leveraging existing high-quality pretrained models. That approach consumes more computational resources and prohibits model scaling. In contrast, we propose a lightweight adapter-based strategy named Chemical Language Model Linker (ChemLML). ChemLML blends the two single domain models and obtains conditional molecular generation from text descriptions while still operating in the specialized embedding spaces of the molecular domain. ChemLML can tailor diverse pretrained text models for molecule generation by training relatively few adapter parameters. We find that the choice of molecular representation used within ChemLML, SMILES versus SELFIES, has a strong influence on conditional molecular generation performance. SMILES is often preferable despite not guaranteeing valid molecules. We raise issues in using the large PubChem dataset of molecules and their associated descriptions for evaluating molecule generation and provide a filtered version of the dataset as a generation test set. To demonstrate how ChemLML could be used in practice, we generate candidate protein inhibitors and use docking to assess their quality.","author":{"@type":"Person","name":"Yifan Deng, Spencer S. Ericksen, Anthony Gitter"},"datePublished":"2024-10-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/ChemicalLanguageModelLinkerblendingtextandmoleculeswithmodularadapters.html"},"url":"https://emanuelealiverti.github.io/arxiv_rss/2024/10/29/ChemicalLanguageModelLinkerblendingtextandmoleculeswithmodularadapters.html","headline":"Chemical Language Model Linker: blending text and molecules with modular adapters","@type":"BlogPosting","dateModified":"2024-10-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://emanuelealiverti.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>Chemical Language Model Linker: blending text and molecules with modular adapters</h1>
+  <br>Yifan Deng, Spencer S. Ericksen, Anthony Gitter</h3>
+  <br> []
+
+  <p>The development of large language models and multi-modal models has enabled the appealing idea of generating novel molecules from text descriptions. Generative modeling would shift the paradigm from relying on large-scale chemical screening to find molecules with desired properties to directly generating those molecules. However, multi-modal models combining text and molecules are often trained from scratch, without leveraging existing high-quality pretrained models. That approach consumes more computational resources and prohibits model scaling. In contrast, we propose a lightweight adapter-based strategy named Chemical Language Model Linker (ChemLML). ChemLML blends the two single domain models and obtains conditional molecular generation from text descriptions while still operating in the specialized embedding spaces of the molecular domain. ChemLML can tailor diverse pretrained text models for molecule generation by training relatively few adapter parameters. We find that the choice of molecular representation used within ChemLML, SMILES versus SELFIES, has a strong influence on conditional molecular generation performance. SMILES is often preferable despite not guaranteeing valid molecules. We raise issues in using the large PubChem dataset of molecules and their associated descriptions for evaluating molecule generation and provide a filtered version of the dataset as a generation test set. To demonstrate how ChemLML could be used in practice, we generate candidate protein inhibitors and use docking to assess their quality.</p>
+
+<p><a href="https://arxiv.org/abs/2410.20182">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
