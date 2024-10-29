@@ -19,11 +19,6 @@ feed_urls = [
         'https://rss.arxiv.org/rss/stat.ME',
         'https://rss.arxiv.org/rss/stat.ML',
         'https://rss.arxiv.org/rss/stat.CO',
-        'https://rss.arxiv.org/rss/cs.AI',
-        'https://rss.arxiv.org/rss/cs.LG',
-        'https://rss.arxiv.org/rss/cs.AI',
-        'https://rss.arxiv.org/rss/cs.NA',
-        'https://rss.arxiv.org/rss/math.NA',
         'https://rss.arxiv.org/rss/stat.AP'
         ]
 
