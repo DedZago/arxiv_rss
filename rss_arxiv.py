@@ -69,7 +69,7 @@ def write_article_to_markdown(article, filename):
     lines = [
         "---",
         "layout: post",
-        rf'title: "{article["title"]}"',
+        f'title: "{article["title"]}"',
         f"date: {today}",  # Use publication date from feed
         f"author: {article['author']}",
         f"tags: {', '.join(article['tags'])}",  # Combine tags with comma and space
