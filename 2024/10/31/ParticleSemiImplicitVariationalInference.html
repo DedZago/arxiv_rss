@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Particle Semi-Implicit Variational Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Particle Semi-Implicit Variational Inference" />
+<meta name="author" content="Jen Ning Lim, Adam M. Johansen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Semi-implicit variational inference (SIVI) enriches the expressiveness of variational families by utilizing a kernel and a mixing distribution to hierarchically define the variational distribution. Existing SIVI methods parameterize the mixing distribution using implicit distributions, leading to intractable variational densities. As a result, directly maximizing the evidence lower bound (ELBO) is not possible, so they resort to one of the following: optimizing bounds on the ELBO, employing costly inner-loop Markov chain Monte Carlo runs, or solving minimax objectives. In this paper, we propose a novel method for SIVI called Particle Variational Inference (PVI) which employs empirical measures to approximate the optimal mixing distributions characterized as the minimizer of a free energy functional. PVI arises naturally as a particle approximation of a Euclidean–Wasserstein gradient flow and, unlike prior works, it directly optimizes the ELBO whilst making no parametric assumption about the mixing distribution. Our empirical results demonstrate that PVI performs favourably compared to other SIVI methods across various tasks. Moreover, we provide a theoretical analysis of the behaviour of the gradient flow of a related free energy functional: establishing the existence and uniqueness of solutions as well as propagation of chaos results." />
+<meta property="og:description" content="Semi-implicit variational inference (SIVI) enriches the expressiveness of variational families by utilizing a kernel and a mixing distribution to hierarchically define the variational distribution. Existing SIVI methods parameterize the mixing distribution using implicit distributions, leading to intractable variational densities. As a result, directly maximizing the evidence lower bound (ELBO) is not possible, so they resort to one of the following: optimizing bounds on the ELBO, employing costly inner-loop Markov chain Monte Carlo runs, or solving minimax objectives. In this paper, we propose a novel method for SIVI called Particle Variational Inference (PVI) which employs empirical measures to approximate the optimal mixing distributions characterized as the minimizer of a free energy functional. PVI arises naturally as a particle approximation of a Euclidean–Wasserstein gradient flow and, unlike prior works, it directly optimizes the ELBO whilst making no parametric assumption about the mixing distribution. Our empirical results demonstrate that PVI performs favourably compared to other SIVI methods across various tasks. Moreover, we provide a theoretical analysis of the behaviour of the gradient flow of a related free energy functional: establishing the existence and uniqueness of solutions as well as propagation of chaos results." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/10/31/ParticleSemiImplicitVariationalInference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/10/31/ParticleSemiImplicitVariationalInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Particle Semi-Implicit Variational Inference" />
+<script type="application/ld+json">
+{"description":"Semi-implicit variational inference (SIVI) enriches the expressiveness of variational families by utilizing a kernel and a mixing distribution to hierarchically define the variational distribution. Existing SIVI methods parameterize the mixing distribution using implicit distributions, leading to intractable variational densities. As a result, directly maximizing the evidence lower bound (ELBO) is not possible, so they resort to one of the following: optimizing bounds on the ELBO, employing costly inner-loop Markov chain Monte Carlo runs, or solving minimax objectives. In this paper, we propose a novel method for SIVI called Particle Variational Inference (PVI) which employs empirical measures to approximate the optimal mixing distributions characterized as the minimizer of a free energy functional. PVI arises naturally as a particle approximation of a Euclidean–Wasserstein gradient flow and, unlike prior works, it directly optimizes the ELBO whilst making no parametric assumption about the mixing distribution. Our empirical results demonstrate that PVI performs favourably compared to other SIVI methods across various tasks. Moreover, we provide a theoretical analysis of the behaviour of the gradient flow of a related free energy functional: establishing the existence and uniqueness of solutions as well as propagation of chaos results.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/10/31/ParticleSemiImplicitVariationalInference.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Jen Ning Lim, Adam M. Johansen"},"headline":"Particle Semi-Implicit Variational Inference","url":"https://dedzago.github.io/arxiv_rss/2024/10/31/ParticleSemiImplicitVariationalInference.html","dateModified":"2024-10-31T00:00:00+00:00","datePublished":"2024-10-31T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-10-31 00:00:00 +0000">10-31</time>
+  </p>
+  
+  <h1>Particle Semi-Implicit Variational Inference</h1>
+  <br>Jen Ning Lim, Adam M. Johansen</h3>
+  <br> [stat.ML]
+
+  <p>Semi-implicit variational inference (SIVI) enriches the expressiveness of variational families by utilizing a kernel and a mixing distribution to hierarchically define the variational distribution. Existing SIVI methods parameterize the mixing distribution using implicit distributions, leading to intractable variational densities. As a result, directly maximizing the evidence lower bound (ELBO) is not possible, so they resort to one of the following: optimizing bounds on the ELBO, employing costly inner-loop Markov chain Monte Carlo runs, or solving minimax objectives. In this paper, we propose a novel method for SIVI called Particle Variational Inference (PVI) which employs empirical measures to approximate the optimal mixing distributions characterized as the minimizer of a free energy functional. PVI arises naturally as a particle approximation of a Euclidean–Wasserstein gradient flow and, unlike prior works, it directly optimizes the ELBO whilst making no parametric assumption about the mixing distribution. Our empirical results demonstrate that PVI performs favourably compared to other SIVI methods across various tasks. Moreover, we provide a theoretical analysis of the behaviour of the gradient flow of a related free energy functional: establishing the existence and uniqueness of solutions as well as propagation of chaos results.</p>
+
+<p><a href="https://arxiv.org/abs/2407.00649">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
