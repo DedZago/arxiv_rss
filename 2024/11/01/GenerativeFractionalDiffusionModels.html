@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Generative Fractional Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Generative Fractional Diffusion Models" />
+<meta name="author" content="Gabriel Nobis, Maximilian Springenberg, Marco Aversa, Michael Detzel, Rembert Daems, Roderick Murray-Smith, Shinichi Nakajima, Sebastian Lapuschkin, Stefano Ermon, Tolga Birdal, Manfred Opper, Christoph Knochenhauer, Luis Oala, Wojciech Samek" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce the first continuous-time score-based generative model that leverages fractional diffusion processes for its underlying dynamics. Although diffusion models have excelled at capturing data distributions, they still suffer from various limitations such as slow convergence, mode-collapse on imbalanced data, and lack of diversity. These issues are partially linked to the use of light-tailed Brownian motion (BM) with independent increments. In this paper, we replace BM with an approximation of its non-Markovian counterpart, fractional Brownian motion (fBM), characterized by correlated increments and Hurst index $H \in (0,1)$, where $H=0.5$ recovers the classical BM. To ensure tractable inference and learning, we employ a recently popularized Markov approximation of fBM (MA-fBM) and derive its reverse-time model, resulting in generative fractional diffusion models (GFDM). We characterize the forward dynamics using a continuous reparameterization trick and propose augmented score matching to efficiently learn the score function, which is partly known in closed form, at minimal added cost. The ability to drive our diffusion model via MA-fBM offers flexibility and control. $H \leq 0.5$ enters the regime of rough paths whereas $H&gt;0.5$ regularizes diffusion paths and invokes long-term memory. The Markov approximation allows added control by varying the number of Markov processes linearly combined to approximate fBM. Our evaluations on real image datasets demonstrate that GFDM achieves greater pixel-wise diversity and enhanced image quality, as indicated by a lower FID, offering a promising alternative to traditional diffusion models" />
+<meta property="og:description" content="We introduce the first continuous-time score-based generative model that leverages fractional diffusion processes for its underlying dynamics. Although diffusion models have excelled at capturing data distributions, they still suffer from various limitations such as slow convergence, mode-collapse on imbalanced data, and lack of diversity. These issues are partially linked to the use of light-tailed Brownian motion (BM) with independent increments. In this paper, we replace BM with an approximation of its non-Markovian counterpart, fractional Brownian motion (fBM), characterized by correlated increments and Hurst index $H \in (0,1)$, where $H=0.5$ recovers the classical BM. To ensure tractable inference and learning, we employ a recently popularized Markov approximation of fBM (MA-fBM) and derive its reverse-time model, resulting in generative fractional diffusion models (GFDM). We characterize the forward dynamics using a continuous reparameterization trick and propose augmented score matching to efficiently learn the score function, which is partly known in closed form, at minimal added cost. The ability to drive our diffusion model via MA-fBM offers flexibility and control. $H \leq 0.5$ enters the regime of rough paths whereas $H&gt;0.5$ regularizes diffusion paths and invokes long-term memory. The Markov approximation allows added control by varying the number of Markov processes linearly combined to approximate fBM. Our evaluations on real image datasets demonstrate that GFDM achieves greater pixel-wise diversity and enhanced image quality, as indicated by a lower FID, offering a promising alternative to traditional diffusion models" />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/01/GenerativeFractionalDiffusionModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/01/GenerativeFractionalDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generative Fractional Diffusion Models" />
+<script type="application/ld+json">
+{"description":"We introduce the first continuous-time score-based generative model that leverages fractional diffusion processes for its underlying dynamics. Although diffusion models have excelled at capturing data distributions, they still suffer from various limitations such as slow convergence, mode-collapse on imbalanced data, and lack of diversity. These issues are partially linked to the use of light-tailed Brownian motion (BM) with independent increments. In this paper, we replace BM with an approximation of its non-Markovian counterpart, fractional Brownian motion (fBM), characterized by correlated increments and Hurst index $H \\in (0,1)$, where $H=0.5$ recovers the classical BM. To ensure tractable inference and learning, we employ a recently popularized Markov approximation of fBM (MA-fBM) and derive its reverse-time model, resulting in generative fractional diffusion models (GFDM). We characterize the forward dynamics using a continuous reparameterization trick and propose augmented score matching to efficiently learn the score function, which is partly known in closed form, at minimal added cost. The ability to drive our diffusion model via MA-fBM offers flexibility and control. $H \\leq 0.5$ enters the regime of rough paths whereas $H&gt;0.5$ regularizes diffusion paths and invokes long-term memory. The Markov approximation allows added control by varying the number of Markov processes linearly combined to approximate fBM. Our evaluations on real image datasets demonstrate that GFDM achieves greater pixel-wise diversity and enhanced image quality, as indicated by a lower FID, offering a promising alternative to traditional diffusion models","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/01/GenerativeFractionalDiffusionModels.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Gabriel Nobis, Maximilian Springenberg, Marco Aversa, Michael Detzel, Rembert Daems, Roderick Murray-Smith, Shinichi Nakajima, Sebastian Lapuschkin, Stefano Ermon, Tolga Birdal, Manfred Opper, Christoph Knochenhauer, Luis Oala, Wojciech Samek"},"headline":"Generative Fractional Diffusion Models","url":"https://dedzago.github.io/arxiv_rss/2024/11/01/GenerativeFractionalDiffusionModels.html","dateModified":"2024-11-01T00:00:00+00:00","datePublished":"2024-11-01T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-01 00:00:00 +0000">11-01</time>
+  </p>
+  
+  <h1>Generative Fractional Diffusion Models</h1>
+  <br>Gabriel Nobis, Maximilian Springenberg, Marco Aversa, Michael Detzel, Rembert Daems, Roderick Murray-Smith, Shinichi Nakajima, Sebastian Lapuschkin, Stefano Ermon, Tolga Birdal, Manfred Opper, Christoph Knochenhauer, Luis Oala, Wojciech Samek</h3>
+  <br> [stat.ML]
+
+  <p>We introduce the first continuous-time score-based generative model that leverages fractional diffusion processes for its underlying dynamics. Although diffusion models have excelled at capturing data distributions, they still suffer from various limitations such as slow convergence, mode-collapse on imbalanced data, and lack of diversity. These issues are partially linked to the use of light-tailed Brownian motion (BM) with independent increments. In this paper, we replace BM with an approximation of its non-Markovian counterpart, fractional Brownian motion (fBM), characterized by correlated increments and Hurst index $H \in (0,1)$, where $H=0.5$ recovers the classical BM. To ensure tractable inference and learning, we employ a recently popularized Markov approximation of fBM (MA-fBM) and derive its reverse-time model, resulting in generative fractional diffusion models (GFDM). We characterize the forward dynamics using a continuous reparameterization trick and propose augmented score matching to efficiently learn the score function, which is partly known in closed form, at minimal added cost. The ability to drive our diffusion model via MA-fBM offers flexibility and control. $H \leq 0.5$ enters the regime of rough paths whereas $H&gt;0.5$ regularizes diffusion paths and invokes long-term memory. The Markov approximation allows added control by varying the number of Markov processes linearly combined to approximate fBM. Our evaluations on real image datasets demonstrate that GFDM achieves greater pixel-wise diversity and enhanced image quality, as indicated by a lower FID, offering a promising alternative to traditional diffusion models</p>
+
+<p><a href="https://arxiv.org/abs/2310.17638">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
