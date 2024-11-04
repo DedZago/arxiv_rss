@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Analysis of Bootstrap and Subsampling in High-dimensional Regularized Regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Analysis of Bootstrap and Subsampling in High-dimensional Regularized Regression" />
+<meta name="author" content="Lucas Clarté, Adrien Vandenbroucque, Guillaume Dalle, Bruno Loureiro, Florent Krzakala, Lenka Zdeborová" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We investigate popular resampling methods for estimating the uncertainty of statistical models, such as subsampling, bootstrap and the jackknife, and their performance in high-dimensional supervised regression tasks. We provide a tight asymptotic description of the biases and variances estimated by these methods in the context of generalized linear models, such as ridge and logistic regression, taking the limit where the number of samples $n$ and dimension $d$ of the covariates grow at a comparable fixed rate $\alpha!=! n/d$. Our findings are three-fold: i) resampling methods are fraught with problems in high dimensions and exhibit the double-descent-like behavior typical of these situations; ii) only when $\alpha$ is large enough do they provide consistent and reliable error estimations (we give convergence rates); iii) in the over-parametrized regime $\alpha!&lt;!1$ relevant to modern machine learning practice, their predictions are not consistent, even with optimal regularization." />
+<meta property="og:description" content="We investigate popular resampling methods for estimating the uncertainty of statistical models, such as subsampling, bootstrap and the jackknife, and their performance in high-dimensional supervised regression tasks. We provide a tight asymptotic description of the biases and variances estimated by these methods in the context of generalized linear models, such as ridge and logistic regression, taking the limit where the number of samples $n$ and dimension $d$ of the covariates grow at a comparable fixed rate $\alpha!=! n/d$. Our findings are three-fold: i) resampling methods are fraught with problems in high dimensions and exhibit the double-descent-like behavior typical of these situations; ii) only when $\alpha$ is large enough do they provide consistent and reliable error estimations (we give convergence rates); iii) in the over-parametrized regime $\alpha!&lt;!1$ relevant to modern machine learning practice, their predictions are not consistent, even with optimal regularization." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/04/AnalysisofBootstrapandSubsamplinginHighdimensionalRegularizedRegression.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/04/AnalysisofBootstrapandSubsamplinginHighdimensionalRegularizedRegression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Analysis of Bootstrap and Subsampling in High-dimensional Regularized Regression" />
+<script type="application/ld+json">
+{"description":"We investigate popular resampling methods for estimating the uncertainty of statistical models, such as subsampling, bootstrap and the jackknife, and their performance in high-dimensional supervised regression tasks. We provide a tight asymptotic description of the biases and variances estimated by these methods in the context of generalized linear models, such as ridge and logistic regression, taking the limit where the number of samples $n$ and dimension $d$ of the covariates grow at a comparable fixed rate $\\alpha!=! n/d$. Our findings are three-fold: i) resampling methods are fraught with problems in high dimensions and exhibit the double-descent-like behavior typical of these situations; ii) only when $\\alpha$ is large enough do they provide consistent and reliable error estimations (we give convergence rates); iii) in the over-parametrized regime $\\alpha!&lt;!1$ relevant to modern machine learning practice, their predictions are not consistent, even with optimal regularization.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/04/AnalysisofBootstrapandSubsamplinginHighdimensionalRegularizedRegression.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Lucas Clarté, Adrien Vandenbroucque, Guillaume Dalle, Bruno Loureiro, Florent Krzakala, Lenka Zdeborová"},"headline":"Analysis of Bootstrap and Subsampling in High-dimensional Regularized Regression","url":"https://dedzago.github.io/arxiv_rss/2024/11/04/AnalysisofBootstrapandSubsamplinginHighdimensionalRegularizedRegression.html","dateModified":"2024-11-04T00:00:00+00:00","datePublished":"2024-11-04T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-04 00:00:00 +0000">11-04</time>
+  </p>
+  
+  <h1>Analysis of Bootstrap and Subsampling in High-dimensional Regularized Regression</h1>
+  <br>Lucas Clarté, Adrien Vandenbroucque, Guillaume Dalle, Bruno Loureiro, Florent Krzakala, Lenka Zdeborová</h3>
+  <br> [stat.ML]
+
+  <p>We investigate popular resampling methods for estimating the uncertainty of statistical models, such as subsampling, bootstrap and the jackknife, and their performance in high-dimensional supervised regression tasks. We provide a tight asymptotic description of the biases and variances estimated by these methods in the context of generalized linear models, such as ridge and logistic regression, taking the limit where the number of samples $n$ and dimension $d$ of the covariates grow at a comparable fixed rate $\alpha!=! n/d$. Our findings are three-fold: i) resampling methods are fraught with problems in high dimensions and exhibit the double-descent-like behavior typical of these situations; ii) only when $\alpha$ is large enough do they provide consistent and reliable error estimations (we give convergence rates); iii) in the over-parametrized regime $\alpha!&lt;!1$ relevant to modern machine learning practice, their predictions are not consistent, even with optimal regularization.</p>
+
+<p><a href="https://arxiv.org/abs/2402.13622">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
