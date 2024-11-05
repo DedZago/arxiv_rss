@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Benchmarking Transcriptomics Foundation Models for Perturbation Analysis : one PCA still rules them all</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Benchmarking Transcriptomics Foundation Models for Perturbation Analysis : one PCA still rules them all" />
+<meta name="author" content="Ihab Bendidi, Shawn Whitfield, Kian Kenyon-Dean, Hanene Ben Yedder, Yassir El Mesbahi, Emmanuel Noutahi, Alisandra K. Denton" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding the relationships among genes, compounds, and their interactions in living organisms remains limited due to technological constraints and the complexity of biological data. Deep learning has shown promise in exploring these relationships using various data types. However, transcriptomics, which provides detailed insights into cellular states, is still underused due to its high noise levels and limited data availability. Recent advancements in transcriptomics sequencing provide new opportunities to uncover valuable insights, especially with the rise of many new foundation models for transcriptomics, yet no benchmark has been made to robustly evaluate the effectiveness of these rising models for perturbation analysis. This article presents a novel biologically motivated evaluation framework and a hierarchy of perturbation analysis tasks for comparing the performance of pretrained foundation models to each other and to more classical techniques of learning from transcriptomics data. We compile diverse public datasets from different sequencing techniques and cell lines to assess models performance. Our approach identifies scVI and PCA to be far better suited models for understanding biological perturbations in comparison to existing foundation models, especially in their application in real-world scenarios." />
+<meta property="og:description" content="Understanding the relationships among genes, compounds, and their interactions in living organisms remains limited due to technological constraints and the complexity of biological data. Deep learning has shown promise in exploring these relationships using various data types. However, transcriptomics, which provides detailed insights into cellular states, is still underused due to its high noise levels and limited data availability. Recent advancements in transcriptomics sequencing provide new opportunities to uncover valuable insights, especially with the rise of many new foundation models for transcriptomics, yet no benchmark has been made to robustly evaluate the effectiveness of these rising models for perturbation analysis. This article presents a novel biologically motivated evaluation framework and a hierarchy of perturbation analysis tasks for comparing the performance of pretrained foundation models to each other and to more classical techniques of learning from transcriptomics data. We compile diverse public datasets from different sequencing techniques and cell lines to assess models performance. Our approach identifies scVI and PCA to be far better suited models for understanding biological perturbations in comparison to existing foundation models, especially in their application in real-world scenarios." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/05/BenchmarkingTranscriptomicsFoundationModelsforPerturbationAnalysisonePCAstillrulesthemall.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/05/BenchmarkingTranscriptomicsFoundationModelsforPerturbationAnalysisonePCAstillrulesthemall.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Benchmarking Transcriptomics Foundation Models for Perturbation Analysis : one PCA still rules them all" />
+<script type="application/ld+json">
+{"description":"Understanding the relationships among genes, compounds, and their interactions in living organisms remains limited due to technological constraints and the complexity of biological data. Deep learning has shown promise in exploring these relationships using various data types. However, transcriptomics, which provides detailed insights into cellular states, is still underused due to its high noise levels and limited data availability. Recent advancements in transcriptomics sequencing provide new opportunities to uncover valuable insights, especially with the rise of many new foundation models for transcriptomics, yet no benchmark has been made to robustly evaluate the effectiveness of these rising models for perturbation analysis. This article presents a novel biologically motivated evaluation framework and a hierarchy of perturbation analysis tasks for comparing the performance of pretrained foundation models to each other and to more classical techniques of learning from transcriptomics data. We compile diverse public datasets from different sequencing techniques and cell lines to assess models performance. Our approach identifies scVI and PCA to be far better suited models for understanding biological perturbations in comparison to existing foundation models, especially in their application in real-world scenarios.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/05/BenchmarkingTranscriptomicsFoundationModelsforPerturbationAnalysisonePCAstillrulesthemall.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Ihab Bendidi, Shawn Whitfield, Kian Kenyon-Dean, Hanene Ben Yedder, Yassir El Mesbahi, Emmanuel Noutahi, Alisandra K. Denton"},"headline":"Benchmarking Transcriptomics Foundation Models for Perturbation Analysis : one PCA still rules them all","url":"https://dedzago.github.io/arxiv_rss/2024/11/05/BenchmarkingTranscriptomicsFoundationModelsforPerturbationAnalysisonePCAstillrulesthemall.html","dateModified":"2024-11-05T00:00:00+00:00","datePublished":"2024-11-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-05 00:00:00 +0000">11-05</time>
+  </p>
+  
+  <h1>Benchmarking Transcriptomics Foundation Models for Perturbation Analysis : one PCA still rules them all</h1>
+  <br>Ihab Bendidi, Shawn Whitfield, Kian Kenyon-Dean, Hanene Ben Yedder, Yassir El Mesbahi, Emmanuel Noutahi, Alisandra K. Denton</h3>
+  <br> [stat.ML]
+
+  <p>Understanding the relationships among genes, compounds, and their interactions in living organisms remains limited due to technological constraints and the complexity of biological data. Deep learning has shown promise in exploring these relationships using various data types. However, transcriptomics, which provides detailed insights into cellular states, is still underused due to its high noise levels and limited data availability. Recent advancements in transcriptomics sequencing provide new opportunities to uncover valuable insights, especially with the rise of many new foundation models for transcriptomics, yet no benchmark has been made to robustly evaluate the effectiveness of these rising models for perturbation analysis. This article presents a novel biologically motivated evaluation framework and a hierarchy of perturbation analysis tasks for comparing the performance of pretrained foundation models to each other and to more classical techniques of learning from transcriptomics data. We compile diverse public datasets from different sequencing techniques and cell lines to assess models performance. Our approach identifies scVI and PCA to be far better suited models for understanding biological perturbations in comparison to existing foundation models, especially in their application in real-world scenarios.</p>
+
+<p><a href="https://arxiv.org/abs/2410.13956">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
