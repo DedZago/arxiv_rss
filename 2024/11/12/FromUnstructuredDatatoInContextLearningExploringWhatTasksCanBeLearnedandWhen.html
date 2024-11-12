@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>From Unstructured Data to In-Context Learning: Exploring What Tasks Can Be Learned and When</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="From Unstructured Data to In-Context Learning: Exploring What Tasks Can Be Learned and When" />
+<meta name="author" content="Kevin Christian Wibisono, Yixin Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language models (LLMs) like transformers demonstrate impressive in-context learning (ICL) capabilities, allowing them to make predictions for new tasks based on prompt exemplars without parameter updates. While existing ICL theories often assume structured training data resembling ICL tasks (e.g., x-y pairs for linear regression), LLMs are typically trained unsupervised on unstructured text, such as web content, which lacks clear parallels to tasks like word analogy. To address this gap, we examine what enables ICL in models trained on unstructured data, focusing on critical sequence model requirements and training data structure. We find that many ICL capabilities can emerge simply from co-occurrence of semantically related word pairs in unstructured data; word analogy completion, for example, can provably arise purely through co-occurrence modeling, using classical language models like continuous bag of words (CBOW), without needing positional information or attention mechanisms. However, positional information becomes crucial for logic reasoning tasks requiring generalization to unseen tokens. Finally, we identify two cases where ICL fails: one in logic reasoning tasks that require generalizing to new, unseen patterns, and another in analogy completion where relevant word pairs appear only in fixed training positions. These findings suggest that LLMs’ ICL abilities depend heavily on the structural elements within their training data." />
+<meta property="og:description" content="Large language models (LLMs) like transformers demonstrate impressive in-context learning (ICL) capabilities, allowing them to make predictions for new tasks based on prompt exemplars without parameter updates. While existing ICL theories often assume structured training data resembling ICL tasks (e.g., x-y pairs for linear regression), LLMs are typically trained unsupervised on unstructured text, such as web content, which lacks clear parallels to tasks like word analogy. To address this gap, we examine what enables ICL in models trained on unstructured data, focusing on critical sequence model requirements and training data structure. We find that many ICL capabilities can emerge simply from co-occurrence of semantically related word pairs in unstructured data; word analogy completion, for example, can provably arise purely through co-occurrence modeling, using classical language models like continuous bag of words (CBOW), without needing positional information or attention mechanisms. However, positional information becomes crucial for logic reasoning tasks requiring generalization to unseen tokens. Finally, we identify two cases where ICL fails: one in logic reasoning tasks that require generalizing to new, unseen patterns, and another in analogy completion where relevant word pairs appear only in fixed training positions. These findings suggest that LLMs’ ICL abilities depend heavily on the structural elements within their training data." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/12/FromUnstructuredDatatoInContextLearningExploringWhatTasksCanBeLearnedandWhen.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/12/FromUnstructuredDatatoInContextLearningExploringWhatTasksCanBeLearnedandWhen.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="From Unstructured Data to In-Context Learning: Exploring What Tasks Can Be Learned and When" />
+<script type="application/ld+json">
+{"description":"Large language models (LLMs) like transformers demonstrate impressive in-context learning (ICL) capabilities, allowing them to make predictions for new tasks based on prompt exemplars without parameter updates. While existing ICL theories often assume structured training data resembling ICL tasks (e.g., x-y pairs for linear regression), LLMs are typically trained unsupervised on unstructured text, such as web content, which lacks clear parallels to tasks like word analogy. To address this gap, we examine what enables ICL in models trained on unstructured data, focusing on critical sequence model requirements and training data structure. We find that many ICL capabilities can emerge simply from co-occurrence of semantically related word pairs in unstructured data; word analogy completion, for example, can provably arise purely through co-occurrence modeling, using classical language models like continuous bag of words (CBOW), without needing positional information or attention mechanisms. However, positional information becomes crucial for logic reasoning tasks requiring generalization to unseen tokens. Finally, we identify two cases where ICL fails: one in logic reasoning tasks that require generalizing to new, unseen patterns, and another in analogy completion where relevant word pairs appear only in fixed training positions. These findings suggest that LLMs’ ICL abilities depend heavily on the structural elements within their training data.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/12/FromUnstructuredDatatoInContextLearningExploringWhatTasksCanBeLearnedandWhen.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Kevin Christian Wibisono, Yixin Wang"},"headline":"From Unstructured Data to In-Context Learning: Exploring What Tasks Can Be Learned and When","url":"https://dedzago.github.io/arxiv_rss/2024/11/12/FromUnstructuredDatatoInContextLearningExploringWhatTasksCanBeLearnedandWhen.html","dateModified":"2024-11-12T00:00:00+00:00","datePublished":"2024-11-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-12 00:00:00 +0000">11-12</time>
+  </p>
+  
+  <h1>From Unstructured Data to In-Context Learning: Exploring What Tasks Can Be Learned and When</h1>
+  <br>Kevin Christian Wibisono, Yixin Wang</h3>
+  <br> [stat.ML]
+
+  <p>Large language models (LLMs) like transformers demonstrate impressive in-context learning (ICL) capabilities, allowing them to make predictions for new tasks based on prompt exemplars without parameter updates. While existing ICL theories often assume structured training data resembling ICL tasks (e.g., x-y pairs for linear regression), LLMs are typically trained unsupervised on unstructured text, such as web content, which lacks clear parallels to tasks like word analogy. To address this gap, we examine what enables ICL in models trained on unstructured data, focusing on critical sequence model requirements and training data structure. We find that many ICL capabilities can emerge simply from co-occurrence of semantically related word pairs in unstructured data; word analogy completion, for example, can provably arise purely through co-occurrence modeling, using classical language models like continuous bag of words (CBOW), without needing positional information or attention mechanisms. However, positional information becomes crucial for logic reasoning tasks requiring generalization to unseen tokens. Finally, we identify two cases where ICL fails: one in logic reasoning tasks that require generalizing to new, unseen patterns, and another in analogy completion where relevant word pairs appear only in fixed training positions. These findings suggest that LLMs’ ICL abilities depend heavily on the structural elements within their training data.</p>
+
+<p><a href="https://arxiv.org/abs/2406.00131">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

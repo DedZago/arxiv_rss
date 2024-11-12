@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Oja's Algorithm for Streaming Sparse PCA</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Oja’s Algorithm for Streaming Sparse PCA" />
+<meta name="author" content="Syamantak Kumar, Purnamrita Sarkar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Oja’s algorithm for Streaming Principal Component Analysis (PCA) for $n$ data-points in a $d$ dimensional space achieves the same sin-squared error $O(r_{\mathsf{eff}}/n)$ as the offline algorithm in $O(d)$ space and $O(nd)$ time and a single pass through the datapoints. Here $r_{\mathsf{eff}}$ is the effective rank (ratio of the trace and the principal eigenvalue of the population covariance matrix $\Sigma$). Under this computational budget, we consider the problem of sparse PCA, where the principal eigenvector of $\Sigma$ is $s$-sparse, and $r_{\mathsf{eff}}$ can be large. In this setting, to our knowledge, \textit{there are no known single-pass algorithms} that achieve the minimax error bound in $O(d)$ space and $O(nd)$ time without either requiring strong initialization conditions or assuming further structure (e.g., spiked) of the covariance matrix. We show that a simple single-pass procedure that thresholds the output of Oja’s algorithm (the Oja vector) can achieve the minimax error bound under some regularity conditions in $O(d)$ space and $O(nd)$ time. We present a nontrivial and novel analysis of the entries of the unnormalized Oja vector, which involves the projection of a product of independent random matrices on a random initial vector. This is completely different from previous analyses of Oja’s algorithm and matrix products, which have been done when the $r_{\mathsf{eff}}$ is bounded." />
+<meta property="og:description" content="Oja’s algorithm for Streaming Principal Component Analysis (PCA) for $n$ data-points in a $d$ dimensional space achieves the same sin-squared error $O(r_{\mathsf{eff}}/n)$ as the offline algorithm in $O(d)$ space and $O(nd)$ time and a single pass through the datapoints. Here $r_{\mathsf{eff}}$ is the effective rank (ratio of the trace and the principal eigenvalue of the population covariance matrix $\Sigma$). Under this computational budget, we consider the problem of sparse PCA, where the principal eigenvector of $\Sigma$ is $s$-sparse, and $r_{\mathsf{eff}}$ can be large. In this setting, to our knowledge, \textit{there are no known single-pass algorithms} that achieve the minimax error bound in $O(d)$ space and $O(nd)$ time without either requiring strong initialization conditions or assuming further structure (e.g., spiked) of the covariance matrix. We show that a simple single-pass procedure that thresholds the output of Oja’s algorithm (the Oja vector) can achieve the minimax error bound under some regularity conditions in $O(d)$ space and $O(nd)$ time. We present a nontrivial and novel analysis of the entries of the unnormalized Oja vector, which involves the projection of a product of independent random matrices on a random initial vector. This is completely different from previous analyses of Oja’s algorithm and matrix products, which have been done when the $r_{\mathsf{eff}}$ is bounded." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/12/OjasAlgorithmforStreamingSparsePCA.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/12/OjasAlgorithmforStreamingSparsePCA.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Oja’s Algorithm for Streaming Sparse PCA" />
+<script type="application/ld+json">
+{"description":"Oja’s algorithm for Streaming Principal Component Analysis (PCA) for $n$ data-points in a $d$ dimensional space achieves the same sin-squared error $O(r_{\\mathsf{eff}}/n)$ as the offline algorithm in $O(d)$ space and $O(nd)$ time and a single pass through the datapoints. Here $r_{\\mathsf{eff}}$ is the effective rank (ratio of the trace and the principal eigenvalue of the population covariance matrix $\\Sigma$). Under this computational budget, we consider the problem of sparse PCA, where the principal eigenvector of $\\Sigma$ is $s$-sparse, and $r_{\\mathsf{eff}}$ can be large. In this setting, to our knowledge, \\textit{there are no known single-pass algorithms} that achieve the minimax error bound in $O(d)$ space and $O(nd)$ time without either requiring strong initialization conditions or assuming further structure (e.g., spiked) of the covariance matrix. We show that a simple single-pass procedure that thresholds the output of Oja’s algorithm (the Oja vector) can achieve the minimax error bound under some regularity conditions in $O(d)$ space and $O(nd)$ time. We present a nontrivial and novel analysis of the entries of the unnormalized Oja vector, which involves the projection of a product of independent random matrices on a random initial vector. This is completely different from previous analyses of Oja’s algorithm and matrix products, which have been done when the $r_{\\mathsf{eff}}$ is bounded.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/12/OjasAlgorithmforStreamingSparsePCA.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Syamantak Kumar, Purnamrita Sarkar"},"headline":"Oja’s Algorithm for Streaming Sparse PCA","url":"https://dedzago.github.io/arxiv_rss/2024/11/12/OjasAlgorithmforStreamingSparsePCA.html","dateModified":"2024-11-12T00:00:00+00:00","datePublished":"2024-11-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-12 00:00:00 +0000">11-12</time>
+  </p>
+  
+  <h1>Oja's Algorithm for Streaming Sparse PCA</h1>
+  <br>Syamantak Kumar, Purnamrita Sarkar</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Oja’s algorithm for Streaming Principal Component Analysis (PCA) for $n$ data-points in a $d$ dimensional space achieves the same sin-squared error $O(r_{\mathsf{eff}}/n)$ as the offline algorithm in $O(d)$ space and $O(nd)$ time and a single pass through the datapoints. Here $r_{\mathsf{eff}}$ is the effective rank (ratio of the trace and the principal eigenvalue of the population covariance matrix $\Sigma$). Under this computational budget, we consider the problem of sparse PCA, where the principal eigenvector of $\Sigma$ is $s$-sparse, and $r_{\mathsf{eff}}$ can be large. In this setting, to our knowledge, \textit{there are no known single-pass algorithms} that achieve the minimax error bound in $O(d)$ space and $O(nd)$ time without either requiring strong initialization conditions or assuming further structure (e.g., spiked) of the covariance matrix. We show that a simple single-pass procedure that thresholds the output of Oja’s algorithm (the Oja vector) can achieve the minimax error bound under some regularity conditions in $O(d)$ space and $O(nd)$ time. We present a nontrivial and novel analysis of the entries of the unnormalized Oja vector, which involves the projection of a product of independent random matrices on a random initial vector. This is completely different from previous analyses of Oja’s algorithm and matrix products, which have been done when the $r_{\mathsf{eff}}$ is bounded.</p>
+
+<p><a href="https://arxiv.org/abs/2402.07240">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

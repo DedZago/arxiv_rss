@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Divide-and-Conquer Posterior Sampling for Denoising Diffusion Priors</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Divide-and-Conquer Posterior Sampling for Denoising Diffusion Priors" />
+<meta name="author" content="Yazid Janati, Badr Moufad, Alain Durmus, Eric Moulines, Jimmy Olsson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent advancements in solving Bayesian inverse problems have spotlighted denoising diffusion models (DDMs) as effective priors. Although these have great potential, DDM priors yield complex posterior distributions that are challenging to sample. Existing approaches to posterior sampling in this context address this problem either by retraining model-specific components, leading to stiff and cumbersome methods, or by introducing approximations with uncontrolled errors that affect the accuracy of the produced samples. We present an innovative framework, divide-and-conquer posterior sampling, which leverages the inherent structure of DDMs to construct a sequence of intermediate posteriors that guide the produced samples to the target posterior. Our method significantly reduces the approximation error associated with current techniques without the need for retraining. We demonstrate the versatility and effectiveness of our approach for a wide range of Bayesian inverse problems. The code is available at \url{https://github.com/Badr-MOUFAD/dcps}" />
+<meta property="og:description" content="Recent advancements in solving Bayesian inverse problems have spotlighted denoising diffusion models (DDMs) as effective priors. Although these have great potential, DDM priors yield complex posterior distributions that are challenging to sample. Existing approaches to posterior sampling in this context address this problem either by retraining model-specific components, leading to stiff and cumbersome methods, or by introducing approximations with uncontrolled errors that affect the accuracy of the produced samples. We present an innovative framework, divide-and-conquer posterior sampling, which leverages the inherent structure of DDMs to construct a sequence of intermediate posteriors that guide the produced samples to the target posterior. Our method significantly reduces the approximation error associated with current techniques without the need for retraining. We demonstrate the versatility and effectiveness of our approach for a wide range of Bayesian inverse problems. The code is available at \url{https://github.com/Badr-MOUFAD/dcps}" />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/12/DivideandConquerPosteriorSamplingforDenoisingDiffusionPriors.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/12/DivideandConquerPosteriorSamplingforDenoisingDiffusionPriors.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Divide-and-Conquer Posterior Sampling for Denoising Diffusion Priors" />
+<script type="application/ld+json">
+{"description":"Recent advancements in solving Bayesian inverse problems have spotlighted denoising diffusion models (DDMs) as effective priors. Although these have great potential, DDM priors yield complex posterior distributions that are challenging to sample. Existing approaches to posterior sampling in this context address this problem either by retraining model-specific components, leading to stiff and cumbersome methods, or by introducing approximations with uncontrolled errors that affect the accuracy of the produced samples. We present an innovative framework, divide-and-conquer posterior sampling, which leverages the inherent structure of DDMs to construct a sequence of intermediate posteriors that guide the produced samples to the target posterior. Our method significantly reduces the approximation error associated with current techniques without the need for retraining. We demonstrate the versatility and effectiveness of our approach for a wide range of Bayesian inverse problems. The code is available at \\url{https://github.com/Badr-MOUFAD/dcps}","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/12/DivideandConquerPosteriorSamplingforDenoisingDiffusionPriors.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"Yazid Janati, Badr Moufad, Alain Durmus, Eric Moulines, Jimmy Olsson"},"headline":"Divide-and-Conquer Posterior Sampling for Denoising Diffusion Priors","url":"https://dedzago.github.io/arxiv_rss/2024/11/12/DivideandConquerPosteriorSamplingforDenoisingDiffusionPriors.html","dateModified":"2024-11-12T00:00:00+00:00","datePublished":"2024-11-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-12 00:00:00 +0000">11-12</time>
+  </p>
+  
+  <h1>Divide-and-Conquer Posterior Sampling for Denoising Diffusion Priors</h1>
+  <br>Yazid Janati, Badr Moufad, Alain Durmus, Eric Moulines, Jimmy Olsson</h3>
+  <br> [stat.ML]
+
+  <p>Recent advancements in solving Bayesian inverse problems have spotlighted denoising diffusion models (DDMs) as effective priors. Although these have great potential, DDM priors yield complex posterior distributions that are challenging to sample. Existing approaches to posterior sampling in this context address this problem either by retraining model-specific components, leading to stiff and cumbersome methods, or by introducing approximations with uncontrolled errors that affect the accuracy of the produced samples. We present an innovative framework, divide-and-conquer posterior sampling, which leverages the inherent structure of DDMs to construct a sequence of intermediate posteriors that guide the produced samples to the target posterior. Our method significantly reduces the approximation error associated with current techniques without the need for retraining. We demonstrate the versatility and effectiveness of our approach for a wide range of Bayesian inverse problems. The code is available at \url{https://github.com/Badr-MOUFAD/dcps}</p>
+
+<p><a href="https://arxiv.org/abs/2403.11407">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
