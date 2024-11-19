@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MRI Parameter Mapping via Gaussian Mixture VAE: Breaking the Assumption of Independent Pixels</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="MRI Parameter Mapping via Gaussian Mixture VAE: Breaking the Assumption of Independent Pixels" />
+<meta name="author" content="Moucheng Xu, Yukun Zhou, Tobias Goodwin-Allcock, Kimia Firoozabadi, Joseph Jacob, Daniel C. Alexander, Paddy J. Slator" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce and demonstrate a new paradigm for quantitative parameter mapping in MRI. Parameter mapping techniques, such as diffusion MRI and quantitative MRI, have the potential to robustly and repeatably measure biologically-relevant tissue maps that strongly relate to underlying microstructure. Quantitative maps are calculated by fitting a model to multiple images, e.g. with least-squares or machine learning. However, the overwhelming majority of model fitting techniques assume that each voxel is independent, ignoring any co-dependencies in the data. This makes model fitting sensitive to voxelwise measurement noise, hampering reliability and repeatability. We propose a self-supervised deep variational approach that breaks the assumption of independent pixels, leveraging redundancies in the data to effectively perform data-driven regularisation of quantitative maps. We demonstrate that our approach outperforms current model fitting techniques in dMRI simulations and real data. Especially with a Gaussian mixture prior, our model enables sharper quantitative maps, revealing finer anatomical details that are not presented in the baselines. Our approach can hence support the clinical adoption of parameter mapping methods such as dMRI and qMRI." />
+<meta property="og:description" content="We introduce and demonstrate a new paradigm for quantitative parameter mapping in MRI. Parameter mapping techniques, such as diffusion MRI and quantitative MRI, have the potential to robustly and repeatably measure biologically-relevant tissue maps that strongly relate to underlying microstructure. Quantitative maps are calculated by fitting a model to multiple images, e.g. with least-squares or machine learning. However, the overwhelming majority of model fitting techniques assume that each voxel is independent, ignoring any co-dependencies in the data. This makes model fitting sensitive to voxelwise measurement noise, hampering reliability and repeatability. We propose a self-supervised deep variational approach that breaks the assumption of independent pixels, leveraging redundancies in the data to effectively perform data-driven regularisation of quantitative maps. We demonstrate that our approach outperforms current model fitting techniques in dMRI simulations and real data. Especially with a Gaussian mixture prior, our model enables sharper quantitative maps, revealing finer anatomical details that are not presented in the baselines. Our approach can hence support the clinical adoption of parameter mapping methods such as dMRI and qMRI." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/19/MRIParameterMappingviaGaussianMixtureVAEBreakingtheAssumptionofIndependentPixels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/19/MRIParameterMappingviaGaussianMixtureVAEBreakingtheAssumptionofIndependentPixels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MRI Parameter Mapping via Gaussian Mixture VAE: Breaking the Assumption of Independent Pixels" />
+<script type="application/ld+json">
+{"description":"We introduce and demonstrate a new paradigm for quantitative parameter mapping in MRI. Parameter mapping techniques, such as diffusion MRI and quantitative MRI, have the potential to robustly and repeatably measure biologically-relevant tissue maps that strongly relate to underlying microstructure. Quantitative maps are calculated by fitting a model to multiple images, e.g. with least-squares or machine learning. However, the overwhelming majority of model fitting techniques assume that each voxel is independent, ignoring any co-dependencies in the data. This makes model fitting sensitive to voxelwise measurement noise, hampering reliability and repeatability. We propose a self-supervised deep variational approach that breaks the assumption of independent pixels, leveraging redundancies in the data to effectively perform data-driven regularisation of quantitative maps. We demonstrate that our approach outperforms current model fitting techniques in dMRI simulations and real data. Especially with a Gaussian mixture prior, our model enables sharper quantitative maps, revealing finer anatomical details that are not presented in the baselines. Our approach can hence support the clinical adoption of parameter mapping methods such as dMRI and qMRI.","headline":"MRI Parameter Mapping via Gaussian Mixture VAE: Breaking the Assumption of Independent Pixels","dateModified":"2024-11-19T00:00:00+00:00","datePublished":"2024-11-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/19/MRIParameterMappingviaGaussianMixtureVAEBreakingtheAssumptionofIndependentPixels.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/11/19/MRIParameterMappingviaGaussianMixtureVAEBreakingtheAssumptionofIndependentPixels.html","author":{"@type":"Person","name":"Moucheng Xu, Yukun Zhou, Tobias Goodwin-Allcock, Kimia Firoozabadi, Joseph Jacob, Daniel C. Alexander, Paddy J. Slator"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-19 00:00:00 +0000">11-19</time>
+  </p>
+  
+  <h1>MRI Parameter Mapping via Gaussian Mixture VAE: Breaking the Assumption of Independent Pixels</h1>
+  <br>Moucheng Xu, Yukun Zhou, Tobias Goodwin-Allcock, Kimia Firoozabadi, Joseph Jacob, Daniel C. Alexander, Paddy J. Slator</h3>
+  <br> [stat.ML]
+
+  <p>We introduce and demonstrate a new paradigm for quantitative parameter mapping in MRI. Parameter mapping techniques, such as diffusion MRI and quantitative MRI, have the potential to robustly and repeatably measure biologically-relevant tissue maps that strongly relate to underlying microstructure. Quantitative maps are calculated by fitting a model to multiple images, e.g. with least-squares or machine learning. However, the overwhelming majority of model fitting techniques assume that each voxel is independent, ignoring any co-dependencies in the data. This makes model fitting sensitive to voxelwise measurement noise, hampering reliability and repeatability. We propose a self-supervised deep variational approach that breaks the assumption of independent pixels, leveraging redundancies in the data to effectively perform data-driven regularisation of quantitative maps. We demonstrate that our approach outperforms current model fitting techniques in dMRI simulations and real data. Especially with a Gaussian mixture prior, our model enables sharper quantitative maps, revealing finer anatomical details that are not presented in the baselines. Our approach can hence support the clinical adoption of parameter mapping methods such as dMRI and qMRI.</p>
+
+<p><a href="https://arxiv.org/abs/2411.10772">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
