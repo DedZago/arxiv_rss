@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Frequency-Guided Posterior Sampling for Diffusion-Based Image Restoration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Frequency-Guided Posterior Sampling for Diffusion-Based Image Restoration" />
+<meta name="author" content="Darshan Thaker, Abhishek Goyal, René Vidal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Image restoration aims to recover high-quality images from degraded observations. When the degradation process is known, the recovery problem can be formulated as an inverse problem, and in a Bayesian context, the goal is to sample a clean reconstruction given the degraded observation. Recently, modern pretrained diffusion models have been used for image restoration by modifying their sampling procedure to account for the degradation process. However, these methods often rely on certain approximations that can lead to significant errors and compromised sample quality. In this paper, we provide the first rigorous analysis of this approximation error for linear inverse problems under distributional assumptions on the space of natural images, demonstrating cases where previous works can fail dramatically. Motivated by our theoretical insights, we propose a simple modification to existing diffusion-based restoration methods. Our approach introduces a time-varying low-pass filter in the frequency domain of the measurements, progressively incorporating higher frequencies during the restoration process. We develop an adaptive curriculum for this frequency schedule based on the underlying data distribution. Our method significantly improves performance on challenging image restoration tasks including motion deblurring and image dehazing." />
+<meta property="og:description" content="Image restoration aims to recover high-quality images from degraded observations. When the degradation process is known, the recovery problem can be formulated as an inverse problem, and in a Bayesian context, the goal is to sample a clean reconstruction given the degraded observation. Recently, modern pretrained diffusion models have been used for image restoration by modifying their sampling procedure to account for the degradation process. However, these methods often rely on certain approximations that can lead to significant errors and compromised sample quality. In this paper, we provide the first rigorous analysis of this approximation error for linear inverse problems under distributional assumptions on the space of natural images, demonstrating cases where previous works can fail dramatically. Motivated by our theoretical insights, we propose a simple modification to existing diffusion-based restoration methods. Our approach introduces a time-varying low-pass filter in the frequency domain of the measurements, progressively incorporating higher frequencies during the restoration process. We develop an adaptive curriculum for this frequency schedule based on the underlying data distribution. Our method significantly improves performance on challenging image restoration tasks including motion deblurring and image dehazing." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/27/FrequencyGuidedPosteriorSamplingforDiffusionBasedImageRestoration.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/27/FrequencyGuidedPosteriorSamplingforDiffusionBasedImageRestoration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Frequency-Guided Posterior Sampling for Diffusion-Based Image Restoration" />
+<script type="application/ld+json">
+{"description":"Image restoration aims to recover high-quality images from degraded observations. When the degradation process is known, the recovery problem can be formulated as an inverse problem, and in a Bayesian context, the goal is to sample a clean reconstruction given the degraded observation. Recently, modern pretrained diffusion models have been used for image restoration by modifying their sampling procedure to account for the degradation process. However, these methods often rely on certain approximations that can lead to significant errors and compromised sample quality. In this paper, we provide the first rigorous analysis of this approximation error for linear inverse problems under distributional assumptions on the space of natural images, demonstrating cases where previous works can fail dramatically. Motivated by our theoretical insights, we propose a simple modification to existing diffusion-based restoration methods. Our approach introduces a time-varying low-pass filter in the frequency domain of the measurements, progressively incorporating higher frequencies during the restoration process. We develop an adaptive curriculum for this frequency schedule based on the underlying data distribution. Our method significantly improves performance on challenging image restoration tasks including motion deblurring and image dehazing.","headline":"Frequency-Guided Posterior Sampling for Diffusion-Based Image Restoration","dateModified":"2024-11-27T00:00:00+00:00","datePublished":"2024-11-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/27/FrequencyGuidedPosteriorSamplingforDiffusionBasedImageRestoration.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/11/27/FrequencyGuidedPosteriorSamplingforDiffusionBasedImageRestoration.html","author":{"@type":"Person","name":"Darshan Thaker, Abhishek Goyal, René Vidal"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-27 00:00:00 +0000">11-27</time>
+  </p>
+  
+  <h1>Frequency-Guided Posterior Sampling for Diffusion-Based Image Restoration</h1>
+  <br>Darshan Thaker, Abhishek Goyal, René Vidal</h3>
+  <br> [stat.ML]
+
+  <p>Image restoration aims to recover high-quality images from degraded observations. When the degradation process is known, the recovery problem can be formulated as an inverse problem, and in a Bayesian context, the goal is to sample a clean reconstruction given the degraded observation. Recently, modern pretrained diffusion models have been used for image restoration by modifying their sampling procedure to account for the degradation process. However, these methods often rely on certain approximations that can lead to significant errors and compromised sample quality. In this paper, we provide the first rigorous analysis of this approximation error for linear inverse problems under distributional assumptions on the space of natural images, demonstrating cases where previous works can fail dramatically. Motivated by our theoretical insights, we propose a simple modification to existing diffusion-based restoration methods. Our approach introduces a time-varying low-pass filter in the frequency domain of the measurements, progressively incorporating higher frequencies during the restoration process. We develop an adaptive curriculum for this frequency schedule based on the underlying data distribution. Our method significantly improves performance on challenging image restoration tasks including motion deblurring and image dehazing.</p>
+
+<p><a href="https://arxiv.org/abs/2411.15295">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

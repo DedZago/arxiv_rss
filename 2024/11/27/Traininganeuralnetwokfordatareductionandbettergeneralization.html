@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Training a neural netwok for data reduction and better generalization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Training a neural netwok for data reduction and better generalization" />
+<meta name="author" content="Sylvain Sardy, Maxime van Cutsem, Xiaoyu Ma" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The motivation for sparse learners is to compress the inputs (features) by selecting only the ones needed for good generalization. Linear models with LASSO-type regularization achieve this by setting the weights of irrelevant features to zero, effectively identifying and ignoring them. In artificial neural networks, this selective focus can be achieved by pruning the input layer. Given a cost function enhanced with a sparsity-promoting penalty, our proposal selects a regularization term $\lambda$ (without the use of cross-validation or a validation set) that creates a local minimum in the cost function at the origin where no features are selected. This local minimum acts as a baseline, meaning that if there is no strong enough signal to justify a feature inclusion, the local minimum remains at zero with a high prescribed probability. The method is flexible, applying to complex models ranging from shallow to deep artificial neural networks and supporting various cost functions and sparsity-promoting penalties. We empirically show a remarkable phase transition in the probability of retrieving the relevant features, as well as good generalization thanks to the choice of $\lambda$, the non-convex penalty and the optimization scheme developed. This approach can be seen as a form of compressed sensing for complex models, allowing us to distill high-dimensional data into a compact, interpretable subset of meaningful features." />
+<meta property="og:description" content="The motivation for sparse learners is to compress the inputs (features) by selecting only the ones needed for good generalization. Linear models with LASSO-type regularization achieve this by setting the weights of irrelevant features to zero, effectively identifying and ignoring them. In artificial neural networks, this selective focus can be achieved by pruning the input layer. Given a cost function enhanced with a sparsity-promoting penalty, our proposal selects a regularization term $\lambda$ (without the use of cross-validation or a validation set) that creates a local minimum in the cost function at the origin where no features are selected. This local minimum acts as a baseline, meaning that if there is no strong enough signal to justify a feature inclusion, the local minimum remains at zero with a high prescribed probability. The method is flexible, applying to complex models ranging from shallow to deep artificial neural networks and supporting various cost functions and sparsity-promoting penalties. We empirically show a remarkable phase transition in the probability of retrieving the relevant features, as well as good generalization thanks to the choice of $\lambda$, the non-convex penalty and the optimization scheme developed. This approach can be seen as a form of compressed sensing for complex models, allowing us to distill high-dimensional data into a compact, interpretable subset of meaningful features." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/11/27/Traininganeuralnetwokfordatareductionandbettergeneralization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/11/27/Traininganeuralnetwokfordatareductionandbettergeneralization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Training a neural netwok for data reduction and better generalization" />
+<script type="application/ld+json">
+{"description":"The motivation for sparse learners is to compress the inputs (features) by selecting only the ones needed for good generalization. Linear models with LASSO-type regularization achieve this by setting the weights of irrelevant features to zero, effectively identifying and ignoring them. In artificial neural networks, this selective focus can be achieved by pruning the input layer. Given a cost function enhanced with a sparsity-promoting penalty, our proposal selects a regularization term $\\lambda$ (without the use of cross-validation or a validation set) that creates a local minimum in the cost function at the origin where no features are selected. This local minimum acts as a baseline, meaning that if there is no strong enough signal to justify a feature inclusion, the local minimum remains at zero with a high prescribed probability. The method is flexible, applying to complex models ranging from shallow to deep artificial neural networks and supporting various cost functions and sparsity-promoting penalties. We empirically show a remarkable phase transition in the probability of retrieving the relevant features, as well as good generalization thanks to the choice of $\\lambda$, the non-convex penalty and the optimization scheme developed. This approach can be seen as a form of compressed sensing for complex models, allowing us to distill high-dimensional data into a compact, interpretable subset of meaningful features.","headline":"Training a neural netwok for data reduction and better generalization","dateModified":"2024-11-27T00:00:00+00:00","datePublished":"2024-11-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/11/27/Traininganeuralnetwokfordatareductionandbettergeneralization.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/11/27/Traininganeuralnetwokfordatareductionandbettergeneralization.html","author":{"@type":"Person","name":"Sylvain Sardy, Maxime van Cutsem, Xiaoyu Ma"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-11-27 00:00:00 +0000">11-27</time>
+  </p>
+  
+  <h1>Training a neural netwok for data reduction and better generalization</h1>
+  <br>Sylvain Sardy, Maxime van Cutsem, Xiaoyu Ma</h3>
+  <br> [stat.ML]
+
+  <p>The motivation for sparse learners is to compress the inputs (features) by selecting only the ones needed for good generalization. Linear models with LASSO-type regularization achieve this by setting the weights of irrelevant features to zero, effectively identifying and ignoring them. In artificial neural networks, this selective focus can be achieved by pruning the input layer. Given a cost function enhanced with a sparsity-promoting penalty, our proposal selects a regularization term $\lambda$ (without the use of cross-validation or a validation set) that creates a local minimum in the cost function at the origin where no features are selected. This local minimum acts as a baseline, meaning that if there is no strong enough signal to justify a feature inclusion, the local minimum remains at zero with a high prescribed probability. The method is flexible, applying to complex models ranging from shallow to deep artificial neural networks and supporting various cost functions and sparsity-promoting penalties. We empirically show a remarkable phase transition in the probability of retrieving the relevant features, as well as good generalization thanks to the choice of $\lambda$, the non-convex penalty and the optimization scheme developed. This approach can be seen as a form of compressed sensing for complex models, allowing us to distill high-dimensional data into a compact, interpretable subset of meaningful features.</p>
+
+<p><a href="https://arxiv.org/abs/2411.17180">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
