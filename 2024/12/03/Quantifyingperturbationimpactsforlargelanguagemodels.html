@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quantifying perturbation impacts for large language models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Quantifying perturbation impacts for large language models" />
+<meta name="author" content="Paulius Rauba, Qiyao Wei, Mihaela van der Schaar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider the problem of quantifying how an input perturbation impacts the outputs of large language models (LLMs), a fundamental task for model reliability and post-hoc interpretability. A key obstacle in this domain is disentangling the meaningful changes in model responses from the intrinsic stochasticity of LLM outputs. To overcome this, we introduce Distribution-Based Perturbation Analysis (DBPA), a framework that reformulates LLM perturbation analysis as a frequentist hypothesis testing problem. DBPA constructs empirical null and alternative output distributions within a low-dimensional semantic similarity space via Monte Carlo sampling. Comparisons of Monte Carlo estimates in the reduced dimensionality space enables tractable frequentist inference without relying on restrictive distributional assumptions. The framework is model-agnostic, supports the evaluation of arbitrary input perturbations on any black-box LLM, yields interpretable p-values, supports multiple perturbation testing via controlled error rates, and provides scalar effect sizes for any chosen similarity or distance metric. We demonstrate the effectiveness of DBPA in evaluating perturbation impacts, showing its versatility for perturbation analysis." />
+<meta property="og:description" content="We consider the problem of quantifying how an input perturbation impacts the outputs of large language models (LLMs), a fundamental task for model reliability and post-hoc interpretability. A key obstacle in this domain is disentangling the meaningful changes in model responses from the intrinsic stochasticity of LLM outputs. To overcome this, we introduce Distribution-Based Perturbation Analysis (DBPA), a framework that reformulates LLM perturbation analysis as a frequentist hypothesis testing problem. DBPA constructs empirical null and alternative output distributions within a low-dimensional semantic similarity space via Monte Carlo sampling. Comparisons of Monte Carlo estimates in the reduced dimensionality space enables tractable frequentist inference without relying on restrictive distributional assumptions. The framework is model-agnostic, supports the evaluation of arbitrary input perturbations on any black-box LLM, yields interpretable p-values, supports multiple perturbation testing via controlled error rates, and provides scalar effect sizes for any chosen similarity or distance metric. We demonstrate the effectiveness of DBPA in evaluating perturbation impacts, showing its versatility for perturbation analysis." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/12/03/Quantifyingperturbationimpactsforlargelanguagemodels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/12/03/Quantifyingperturbationimpactsforlargelanguagemodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quantifying perturbation impacts for large language models" />
+<script type="application/ld+json">
+{"description":"We consider the problem of quantifying how an input perturbation impacts the outputs of large language models (LLMs), a fundamental task for model reliability and post-hoc interpretability. A key obstacle in this domain is disentangling the meaningful changes in model responses from the intrinsic stochasticity of LLM outputs. To overcome this, we introduce Distribution-Based Perturbation Analysis (DBPA), a framework that reformulates LLM perturbation analysis as a frequentist hypothesis testing problem. DBPA constructs empirical null and alternative output distributions within a low-dimensional semantic similarity space via Monte Carlo sampling. Comparisons of Monte Carlo estimates in the reduced dimensionality space enables tractable frequentist inference without relying on restrictive distributional assumptions. The framework is model-agnostic, supports the evaluation of arbitrary input perturbations on any black-box LLM, yields interpretable p-values, supports multiple perturbation testing via controlled error rates, and provides scalar effect sizes for any chosen similarity or distance metric. We demonstrate the effectiveness of DBPA in evaluating perturbation impacts, showing its versatility for perturbation analysis.","headline":"Quantifying perturbation impacts for large language models","dateModified":"2024-12-03T00:00:00+00:00","datePublished":"2024-12-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/12/03/Quantifyingperturbationimpactsforlargelanguagemodels.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/12/03/Quantifyingperturbationimpactsforlargelanguagemodels.html","author":{"@type":"Person","name":"Paulius Rauba, Qiyao Wei, Mihaela van der Schaar"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-03 00:00:00 +0000">12-03</time>
+  </p>
+  
+  <h1>Quantifying perturbation impacts for large language models</h1>
+  <br>Paulius Rauba, Qiyao Wei, Mihaela van der Schaar</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>We consider the problem of quantifying how an input perturbation impacts the outputs of large language models (LLMs), a fundamental task for model reliability and post-hoc interpretability. A key obstacle in this domain is disentangling the meaningful changes in model responses from the intrinsic stochasticity of LLM outputs. To overcome this, we introduce Distribution-Based Perturbation Analysis (DBPA), a framework that reformulates LLM perturbation analysis as a frequentist hypothesis testing problem. DBPA constructs empirical null and alternative output distributions within a low-dimensional semantic similarity space via Monte Carlo sampling. Comparisons of Monte Carlo estimates in the reduced dimensionality space enables tractable frequentist inference without relying on restrictive distributional assumptions. The framework is model-agnostic, supports the evaluation of arbitrary input perturbations on any black-box LLM, yields interpretable p-values, supports multiple perturbation testing via controlled error rates, and provides scalar effect sizes for any chosen similarity or distance metric. We demonstrate the effectiveness of DBPA in evaluating perturbation impacts, showing its versatility for perturbation analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2412.00868">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
