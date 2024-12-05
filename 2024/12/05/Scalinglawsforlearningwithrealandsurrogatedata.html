@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Scaling laws for learning with real and surrogate data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Scaling laws for learning with real and surrogate data" />
+<meta name="author" content="Ayush Jain, Andrea Montanari, Eren Sasoglu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Collecting large quantities of high-quality data can be prohibitively expensive or impractical, and a bottleneck in machine learning. One may instead augment a small set of $n$ data points from the target distribution with data from more accessible sources, e.g. data collected under different circumstances or synthesized by generative models. We refer to such data as `surrogate data’. We study a weighted empirical risk minimization (ERM) approach for integrating surrogate data into training. We analyze mathematically this method under several classical statistical models, and validate our findings empirically on datasets from different domains. Our main findings are: $(i)$ Integrating surrogate data can significantly reduce the test error on the original distribution. Surprisingly, this can happen even when the surrogate data is unrelated to the original ones. We trace back this behavior to the classical Stein’s paradox. $(ii)$ In order to reap the benefit of surrogate data, it is crucial to use optimally weighted ERM. $(iii)$ The test error of models trained on mixtures of real and surrogate data is approximately described by a scaling law. This scaling law can be used to predict the optimal weighting scheme, and to choose the amount of surrogate data to add." />
+<meta property="og:description" content="Collecting large quantities of high-quality data can be prohibitively expensive or impractical, and a bottleneck in machine learning. One may instead augment a small set of $n$ data points from the target distribution with data from more accessible sources, e.g. data collected under different circumstances or synthesized by generative models. We refer to such data as `surrogate data’. We study a weighted empirical risk minimization (ERM) approach for integrating surrogate data into training. We analyze mathematically this method under several classical statistical models, and validate our findings empirically on datasets from different domains. Our main findings are: $(i)$ Integrating surrogate data can significantly reduce the test error on the original distribution. Surprisingly, this can happen even when the surrogate data is unrelated to the original ones. We trace back this behavior to the classical Stein’s paradox. $(ii)$ In order to reap the benefit of surrogate data, it is crucial to use optimally weighted ERM. $(iii)$ The test error of models trained on mixtures of real and surrogate data is approximately described by a scaling law. This scaling law can be used to predict the optimal weighting scheme, and to choose the amount of surrogate data to add." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/12/05/Scalinglawsforlearningwithrealandsurrogatedata.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/12/05/Scalinglawsforlearningwithrealandsurrogatedata.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scaling laws for learning with real and surrogate data" />
+<script type="application/ld+json">
+{"description":"Collecting large quantities of high-quality data can be prohibitively expensive or impractical, and a bottleneck in machine learning. One may instead augment a small set of $n$ data points from the target distribution with data from more accessible sources, e.g. data collected under different circumstances or synthesized by generative models. We refer to such data as `surrogate data’. We study a weighted empirical risk minimization (ERM) approach for integrating surrogate data into training. We analyze mathematically this method under several classical statistical models, and validate our findings empirically on datasets from different domains. Our main findings are: $(i)$ Integrating surrogate data can significantly reduce the test error on the original distribution. Surprisingly, this can happen even when the surrogate data is unrelated to the original ones. We trace back this behavior to the classical Stein’s paradox. $(ii)$ In order to reap the benefit of surrogate data, it is crucial to use optimally weighted ERM. $(iii)$ The test error of models trained on mixtures of real and surrogate data is approximately described by a scaling law. This scaling law can be used to predict the optimal weighting scheme, and to choose the amount of surrogate data to add.","headline":"Scaling laws for learning with real and surrogate data","dateModified":"2024-12-05T00:00:00+00:00","datePublished":"2024-12-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/12/05/Scalinglawsforlearningwithrealandsurrogatedata.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/12/05/Scalinglawsforlearningwithrealandsurrogatedata.html","author":{"@type":"Person","name":"Ayush Jain, Andrea Montanari, Eren Sasoglu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-05 00:00:00 +0000">12-05</time>
+  </p>
+  
+  <h1>Scaling laws for learning with real and surrogate data</h1>
+  <br>Ayush Jain, Andrea Montanari, Eren Sasoglu</h3>
+  <br> [stat.ML]
+
+  <p>Collecting large quantities of high-quality data can be prohibitively expensive or impractical, and a bottleneck in machine learning. One may instead augment a small set of $n$ data points from the target distribution with data from more accessible sources, e.g. data collected under different circumstances or synthesized by generative models. We refer to such data as `surrogate data’. We study a weighted empirical risk minimization (ERM) approach for integrating surrogate data into training. We analyze mathematically this method under several classical statistical models, and validate our findings empirically on datasets from different domains. Our main findings are: $(i)$ Integrating surrogate data can significantly reduce the test error on the original distribution. Surprisingly, this can happen even when the surrogate data is unrelated to the original ones. We trace back this behavior to the classical Stein’s paradox. $(ii)$ In order to reap the benefit of surrogate data, it is crucial to use optimally weighted ERM. $(iii)$ The test error of models trained on mixtures of real and surrogate data is approximately described by a scaling law. This scaling law can be used to predict the optimal weighting scheme, and to choose the amount of surrogate data to add.</p>
+
+<p><a href="https://arxiv.org/abs/2402.04376">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
