@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Another look at inference after prediction</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Another look at inference after prediction" />
+<meta name="author" content="Jessica Gronsbell, Jianhui Gao, Yaqi Shi, Zachary R. McCaw, David Cheng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prediction-based (PB) inference is increasingly used in applications where the outcome of interest is difficult to obtain, but its predictors are readily available. Unlike traditional inference, PB inference performs statistical inference using a partially observed outcome and a set of covariates by leveraging a prediction of the outcome generated from a machine learning (ML) model. Motwani and Witten (2023) recently revisited two innovative PB inference approaches for ordinary least squares. They found that the method proposed by Wang et al. (2020) yields a consistent estimator for the association of interest when the ML model perfectly captures the underlying regression function. Conversely, the prediction-powered inference (PPI) method proposed by Angelopoulos et al. (2023) yields valid inference regardless of the model’s accuracy. In this paper, we study the statistical efficiency of the PPI estimator. Our analysis reveals that a more efficient estimator, proposed 25 years ago by Chen and Chen (2000), can be obtained by simply adding a weight to the PPI estimator. We also contextualize PB inference with methods from the economics and statistics literature dating back to the 1960s. Our extensive theoretical and numerical analyses indicate that the Chen and Chen (CC) estimator offers a balance between robustness to ML model specification and statistical efficiency, making it the preferred choice for use in practice." />
+<meta property="og:description" content="Prediction-based (PB) inference is increasingly used in applications where the outcome of interest is difficult to obtain, but its predictors are readily available. Unlike traditional inference, PB inference performs statistical inference using a partially observed outcome and a set of covariates by leveraging a prediction of the outcome generated from a machine learning (ML) model. Motwani and Witten (2023) recently revisited two innovative PB inference approaches for ordinary least squares. They found that the method proposed by Wang et al. (2020) yields a consistent estimator for the association of interest when the ML model perfectly captures the underlying regression function. Conversely, the prediction-powered inference (PPI) method proposed by Angelopoulos et al. (2023) yields valid inference regardless of the model’s accuracy. In this paper, we study the statistical efficiency of the PPI estimator. Our analysis reveals that a more efficient estimator, proposed 25 years ago by Chen and Chen (2000), can be obtained by simply adding a weight to the PPI estimator. We also contextualize PB inference with methods from the economics and statistics literature dating back to the 1960s. Our extensive theoretical and numerical analyses indicate that the Chen and Chen (CC) estimator offers a balance between robustness to ML model specification and statistical efficiency, making it the preferred choice for use in practice." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/12/09/Anotherlookatinferenceafterprediction.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/12/09/Anotherlookatinferenceafterprediction.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Another look at inference after prediction" />
+<script type="application/ld+json">
+{"description":"Prediction-based (PB) inference is increasingly used in applications where the outcome of interest is difficult to obtain, but its predictors are readily available. Unlike traditional inference, PB inference performs statistical inference using a partially observed outcome and a set of covariates by leveraging a prediction of the outcome generated from a machine learning (ML) model. Motwani and Witten (2023) recently revisited two innovative PB inference approaches for ordinary least squares. They found that the method proposed by Wang et al. (2020) yields a consistent estimator for the association of interest when the ML model perfectly captures the underlying regression function. Conversely, the prediction-powered inference (PPI) method proposed by Angelopoulos et al. (2023) yields valid inference regardless of the model’s accuracy. In this paper, we study the statistical efficiency of the PPI estimator. Our analysis reveals that a more efficient estimator, proposed 25 years ago by Chen and Chen (2000), can be obtained by simply adding a weight to the PPI estimator. We also contextualize PB inference with methods from the economics and statistics literature dating back to the 1960s. Our extensive theoretical and numerical analyses indicate that the Chen and Chen (CC) estimator offers a balance between robustness to ML model specification and statistical efficiency, making it the preferred choice for use in practice.","headline":"Another look at inference after prediction","dateModified":"2024-12-09T00:00:00+00:00","datePublished":"2024-12-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/12/09/Anotherlookatinferenceafterprediction.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/12/09/Anotherlookatinferenceafterprediction.html","author":{"@type":"Person","name":"Jessica Gronsbell, Jianhui Gao, Yaqi Shi, Zachary R. McCaw, David Cheng"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-09 00:00:00 +0000">12-09</time>
+  </p>
+  
+  <h1>Another look at inference after prediction</h1>
+  <br>Jessica Gronsbell, Jianhui Gao, Yaqi Shi, Zachary R. McCaw, David Cheng</h3>
+  <br> [stat.ML]
+
+  <p>Prediction-based (PB) inference is increasingly used in applications where the outcome of interest is difficult to obtain, but its predictors are readily available. Unlike traditional inference, PB inference performs statistical inference using a partially observed outcome and a set of covariates by leveraging a prediction of the outcome generated from a machine learning (ML) model. Motwani and Witten (2023) recently revisited two innovative PB inference approaches for ordinary least squares. They found that the method proposed by Wang et al. (2020) yields a consistent estimator for the association of interest when the ML model perfectly captures the underlying regression function. Conversely, the prediction-powered inference (PPI) method proposed by Angelopoulos et al. (2023) yields valid inference regardless of the model’s accuracy. In this paper, we study the statistical efficiency of the PPI estimator. Our analysis reveals that a more efficient estimator, proposed 25 years ago by Chen and Chen (2000), can be obtained by simply adding a weight to the PPI estimator. We also contextualize PB inference with methods from the economics and statistics literature dating back to the 1960s. Our extensive theoretical and numerical analyses indicate that the Chen and Chen (CC) estimator offers a balance between robustness to ML model specification and statistical efficiency, making it the preferred choice for use in practice.</p>
+
+<p><a href="https://arxiv.org/abs/2411.19908">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
