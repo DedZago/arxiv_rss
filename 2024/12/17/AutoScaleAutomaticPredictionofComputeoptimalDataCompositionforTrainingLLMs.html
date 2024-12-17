@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AutoScale: Automatic Prediction of Compute-optimal Data Composition for Training LLMs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="AutoScale: Automatic Prediction of Compute-optimal Data Composition for Training LLMs" />
+<meta name="author" content="Feiyang Kang, Yifan Sun, Bingbing Wen, Si Chen, Dawn Song, Rafid Mahmood, Ruoxi Jia" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Domain reweighting is an emerging research area aimed at adjusting the relative weights of different data sources to improve the effectiveness and efficiency of language model pre-training. This paper demonstrates that the optimal composition of training data from different domains is scale-dependent, challenging the existing practice of determining optimal mixtures through small-scale experiments and directly applying them at larger scales. We derive an analytical model for the dependence of optimal weights on data scale and introduce AutoScale, a novel, practical approach for optimizing data compositions at potentially large training data scales. AutoScale first uses a principled optimization framework to find optimal compositions at smaller, feasible scales, then predicts optimal compositions at larger scales using our derived model. Our evaluation on GPT-2 Large and BERT pre-training demonstrates AutoScale’s effectiveness in improving training convergence and downstream performance. Particularly, for GPT-2 Large on RedPajama, AutoScale decreases validation perplexity 28% faster than baselines, with up to 38% speed-up over unweighted training, achieving the best performance across downstream tasks. This work provides insights into the varying benefits of data sources across training scales for language models, contributing to the burgeoning research on scale-dependent data curation. Code is open-sourced." />
+<meta property="og:description" content="Domain reweighting is an emerging research area aimed at adjusting the relative weights of different data sources to improve the effectiveness and efficiency of language model pre-training. This paper demonstrates that the optimal composition of training data from different domains is scale-dependent, challenging the existing practice of determining optimal mixtures through small-scale experiments and directly applying them at larger scales. We derive an analytical model for the dependence of optimal weights on data scale and introduce AutoScale, a novel, practical approach for optimizing data compositions at potentially large training data scales. AutoScale first uses a principled optimization framework to find optimal compositions at smaller, feasible scales, then predicts optimal compositions at larger scales using our derived model. Our evaluation on GPT-2 Large and BERT pre-training demonstrates AutoScale’s effectiveness in improving training convergence and downstream performance. Particularly, for GPT-2 Large on RedPajama, AutoScale decreases validation perplexity 28% faster than baselines, with up to 38% speed-up over unweighted training, achieving the best performance across downstream tasks. This work provides insights into the varying benefits of data sources across training scales for language models, contributing to the burgeoning research on scale-dependent data curation. Code is open-sourced." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/12/17/AutoScaleAutomaticPredictionofComputeoptimalDataCompositionforTrainingLLMs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/12/17/AutoScaleAutomaticPredictionofComputeoptimalDataCompositionforTrainingLLMs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AutoScale: Automatic Prediction of Compute-optimal Data Composition for Training LLMs" />
+<script type="application/ld+json">
+{"description":"Domain reweighting is an emerging research area aimed at adjusting the relative weights of different data sources to improve the effectiveness and efficiency of language model pre-training. This paper demonstrates that the optimal composition of training data from different domains is scale-dependent, challenging the existing practice of determining optimal mixtures through small-scale experiments and directly applying them at larger scales. We derive an analytical model for the dependence of optimal weights on data scale and introduce AutoScale, a novel, practical approach for optimizing data compositions at potentially large training data scales. AutoScale first uses a principled optimization framework to find optimal compositions at smaller, feasible scales, then predicts optimal compositions at larger scales using our derived model. Our evaluation on GPT-2 Large and BERT pre-training demonstrates AutoScale’s effectiveness in improving training convergence and downstream performance. Particularly, for GPT-2 Large on RedPajama, AutoScale decreases validation perplexity 28% faster than baselines, with up to 38% speed-up over unweighted training, achieving the best performance across downstream tasks. This work provides insights into the varying benefits of data sources across training scales for language models, contributing to the burgeoning research on scale-dependent data curation. Code is open-sourced.","headline":"AutoScale: Automatic Prediction of Compute-optimal Data Composition for Training LLMs","dateModified":"2024-12-17T00:00:00+00:00","datePublished":"2024-12-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/12/17/AutoScaleAutomaticPredictionofComputeoptimalDataCompositionforTrainingLLMs.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/12/17/AutoScaleAutomaticPredictionofComputeoptimalDataCompositionforTrainingLLMs.html","author":{"@type":"Person","name":"Feiyang Kang, Yifan Sun, Bingbing Wen, Si Chen, Dawn Song, Rafid Mahmood, Ruoxi Jia"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-17 00:00:00 +0000">12-17</time>
+  </p>
+  
+  <h1>AutoScale: Automatic Prediction of Compute-optimal Data Composition for Training LLMs</h1>
+  <br>Feiyang Kang, Yifan Sun, Bingbing Wen, Si Chen, Dawn Song, Rafid Mahmood, Ruoxi Jia</h3>
+  <br> [stat.ML]
+
+  <p>Domain reweighting is an emerging research area aimed at adjusting the relative weights of different data sources to improve the effectiveness and efficiency of language model pre-training. This paper demonstrates that the optimal composition of training data from different domains is scale-dependent, challenging the existing practice of determining optimal mixtures through small-scale experiments and directly applying them at larger scales. We derive an analytical model for the dependence of optimal weights on data scale and introduce <em>AutoScale</em>, a novel, practical approach for optimizing data compositions at potentially large training data scales. <em>AutoScale</em> first uses a principled optimization framework to find optimal compositions at smaller, feasible scales, then predicts optimal compositions at larger scales using our derived model. Our evaluation on GPT-2 Large and BERT pre-training demonstrates <em>AutoScale</em>’s effectiveness in improving training convergence and downstream performance. Particularly, for GPT-2 Large on RedPajama, <em>AutoScale</em> decreases validation perplexity 28% faster than baselines, with up to 38% speed-up over unweighted training, achieving the best performance across downstream tasks. This work provides insights into the varying benefits of data sources across training scales for language models, contributing to the burgeoning research on scale-dependent data curation. Code is open-sourced.</p>
+
+<p><a href="https://arxiv.org/abs/2407.20177">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

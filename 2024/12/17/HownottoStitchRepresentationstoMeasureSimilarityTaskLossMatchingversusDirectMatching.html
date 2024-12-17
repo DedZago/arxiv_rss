@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How not to Stitch Representations to Measure Similarity: Task Loss Matching versus Direct Matching</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How not to Stitch Representations to Measure Similarity: Task Loss Matching versus Direct Matching" />
+<meta name="author" content="András Balogh, Márk Jelasity" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Measuring the similarity of the internal representations of deep neural networks is an important and challenging problem. Model stitching has been proposed as a possible approach, where two half-networks are connected by mapping the output of the first half-network to the input of the second one. The representations are considered functionally similar if the resulting stitched network achieves good task-specific performance. The mapping is normally created by training an affine stitching layer on the task at hand while freezing the two half-networks, a method called task loss matching. Here, we argue that task loss matching may be very misleading as a similarity index. For example, it can indicate very high similarity between very distant layers, whose representations are known to have different functional properties. Moreover, it can indicate very distant layers to be more similar than architecturally corresponding layers. Even more surprisingly, when comparing layers within the same network, task loss matching often indicates that some layers are more similar to a layer than itself. We argue that the main reason behind these problems is that task loss matching tends to create out-of-distribution representations to improve task-specific performance. We demonstrate that direct matching (when the mapping minimizes the distance between the stitched representations) does not suffer from these problems. We compare task loss matching, direct matching, and well-known similarity indices such as CCA and CKA. We conclude that direct matching strikes a good balance between the structural and functional requirements for a good similarity index." />
+<meta property="og:description" content="Measuring the similarity of the internal representations of deep neural networks is an important and challenging problem. Model stitching has been proposed as a possible approach, where two half-networks are connected by mapping the output of the first half-network to the input of the second one. The representations are considered functionally similar if the resulting stitched network achieves good task-specific performance. The mapping is normally created by training an affine stitching layer on the task at hand while freezing the two half-networks, a method called task loss matching. Here, we argue that task loss matching may be very misleading as a similarity index. For example, it can indicate very high similarity between very distant layers, whose representations are known to have different functional properties. Moreover, it can indicate very distant layers to be more similar than architecturally corresponding layers. Even more surprisingly, when comparing layers within the same network, task loss matching often indicates that some layers are more similar to a layer than itself. We argue that the main reason behind these problems is that task loss matching tends to create out-of-distribution representations to improve task-specific performance. We demonstrate that direct matching (when the mapping minimizes the distance between the stitched representations) does not suffer from these problems. We compare task loss matching, direct matching, and well-known similarity indices such as CCA and CKA. We conclude that direct matching strikes a good balance between the structural and functional requirements for a good similarity index." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/12/17/HownottoStitchRepresentationstoMeasureSimilarityTaskLossMatchingversusDirectMatching.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/12/17/HownottoStitchRepresentationstoMeasureSimilarityTaskLossMatchingversusDirectMatching.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How not to Stitch Representations to Measure Similarity: Task Loss Matching versus Direct Matching" />
+<script type="application/ld+json">
+{"description":"Measuring the similarity of the internal representations of deep neural networks is an important and challenging problem. Model stitching has been proposed as a possible approach, where two half-networks are connected by mapping the output of the first half-network to the input of the second one. The representations are considered functionally similar if the resulting stitched network achieves good task-specific performance. The mapping is normally created by training an affine stitching layer on the task at hand while freezing the two half-networks, a method called task loss matching. Here, we argue that task loss matching may be very misleading as a similarity index. For example, it can indicate very high similarity between very distant layers, whose representations are known to have different functional properties. Moreover, it can indicate very distant layers to be more similar than architecturally corresponding layers. Even more surprisingly, when comparing layers within the same network, task loss matching often indicates that some layers are more similar to a layer than itself. We argue that the main reason behind these problems is that task loss matching tends to create out-of-distribution representations to improve task-specific performance. We demonstrate that direct matching (when the mapping minimizes the distance between the stitched representations) does not suffer from these problems. We compare task loss matching, direct matching, and well-known similarity indices such as CCA and CKA. We conclude that direct matching strikes a good balance between the structural and functional requirements for a good similarity index.","headline":"How not to Stitch Representations to Measure Similarity: Task Loss Matching versus Direct Matching","dateModified":"2024-12-17T00:00:00+00:00","datePublished":"2024-12-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/12/17/HownottoStitchRepresentationstoMeasureSimilarityTaskLossMatchingversusDirectMatching.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/12/17/HownottoStitchRepresentationstoMeasureSimilarityTaskLossMatchingversusDirectMatching.html","author":{"@type":"Person","name":"András Balogh, Márk Jelasity"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-17 00:00:00 +0000">12-17</time>
+  </p>
+  
+  <h1>How not to Stitch Representations to Measure Similarity: Task Loss Matching versus Direct Matching</h1>
+  <br>András Balogh, Márk Jelasity</h3>
+  <br> [stat.ML]
+
+  <p>Measuring the similarity of the internal representations of deep neural networks is an important and challenging problem. Model stitching has been proposed as a possible approach, where two half-networks are connected by mapping the output of the first half-network to the input of the second one. The representations are considered functionally similar if the resulting stitched network achieves good task-specific performance. The mapping is normally created by training an affine stitching layer on the task at hand while freezing the two half-networks, a method called task loss matching. Here, we argue that task loss matching may be very misleading as a similarity index. For example, it can indicate very high similarity between very distant layers, whose representations are known to have different functional properties. Moreover, it can indicate very distant layers to be more similar than architecturally corresponding layers. Even more surprisingly, when comparing layers within the same network, task loss matching often indicates that some layers are more similar to a layer than itself. We argue that the main reason behind these problems is that task loss matching tends to create out-of-distribution representations to improve task-specific performance. We demonstrate that direct matching (when the mapping minimizes the distance between the stitched representations) does not suffer from these problems. We compare task loss matching, direct matching, and well-known similarity indices such as CCA and CKA. We conclude that direct matching strikes a good balance between the structural and functional requirements for a good similarity index.</p>
+
+<p><a href="https://arxiv.org/abs/2412.11299">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
