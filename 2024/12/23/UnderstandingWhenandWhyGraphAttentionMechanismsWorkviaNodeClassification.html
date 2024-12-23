@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding When and Why Graph Attention Mechanisms Work via Node Classification</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Understanding When and Why Graph Attention Mechanisms Work via Node Classification" />
+<meta name="author" content="Zhongtian Ma, Qiaosheng Zhang, Bocheng Zhou, Yexin Zhang, Shuyue Hu, Zhen Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Despite the growing popularity of graph attention mechanisms, their theoretical understanding remains limited. This paper aims to explore the conditions under which these mechanisms are effective in node classification tasks through the lens of Contextual Stochastic Block Models (CSBMs). Our theoretical analysis reveals that incorporating graph attention mechanisms is \emph{not universally beneficial}. Specifically, by appropriately defining \emph{structure noise} and \emph{feature noise} in graphs, we show that graph attention mechanisms can enhance classification performance when structure noise exceeds feature noise. Conversely, when feature noise predominates, simpler graph convolution operations are more effective. Furthermore, we examine the over-smoothing phenomenon and show that, in the high signal-to-noise ratio (SNR) regime, graph convolutional networks suffer from over-smoothing, whereas graph attention mechanisms can effectively resolve this issue. Building on these insights, we propose a novel multi-layer Graph Attention Network (GAT) architecture that significantly outperforms single-layer GATs in achieving \emph{perfect node classification} in CSBMs, relaxing the SNR requirement from $ \omega(\sqrt{\log n}) $ to $ \omega(\sqrt{\log n} / \sqrt[3]{n}) $. To our knowledge, this is the first study to delineate the conditions for perfect node classification using multi-layer GATs. Our theoretical contributions are corroborated by extensive experiments on both synthetic and real-world datasets, highlighting the practical implications of our findings." />
+<meta property="og:description" content="Despite the growing popularity of graph attention mechanisms, their theoretical understanding remains limited. This paper aims to explore the conditions under which these mechanisms are effective in node classification tasks through the lens of Contextual Stochastic Block Models (CSBMs). Our theoretical analysis reveals that incorporating graph attention mechanisms is \emph{not universally beneficial}. Specifically, by appropriately defining \emph{structure noise} and \emph{feature noise} in graphs, we show that graph attention mechanisms can enhance classification performance when structure noise exceeds feature noise. Conversely, when feature noise predominates, simpler graph convolution operations are more effective. Furthermore, we examine the over-smoothing phenomenon and show that, in the high signal-to-noise ratio (SNR) regime, graph convolutional networks suffer from over-smoothing, whereas graph attention mechanisms can effectively resolve this issue. Building on these insights, we propose a novel multi-layer Graph Attention Network (GAT) architecture that significantly outperforms single-layer GATs in achieving \emph{perfect node classification} in CSBMs, relaxing the SNR requirement from $ \omega(\sqrt{\log n}) $ to $ \omega(\sqrt{\log n} / \sqrt[3]{n}) $. To our knowledge, this is the first study to delineate the conditions for perfect node classification using multi-layer GATs. Our theoretical contributions are corroborated by extensive experiments on both synthetic and real-world datasets, highlighting the practical implications of our findings." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2024/12/23/UnderstandingWhenandWhyGraphAttentionMechanismsWorkviaNodeClassification.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2024/12/23/UnderstandingWhenandWhyGraphAttentionMechanismsWorkviaNodeClassification.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding When and Why Graph Attention Mechanisms Work via Node Classification" />
+<script type="application/ld+json">
+{"description":"Despite the growing popularity of graph attention mechanisms, their theoretical understanding remains limited. This paper aims to explore the conditions under which these mechanisms are effective in node classification tasks through the lens of Contextual Stochastic Block Models (CSBMs). Our theoretical analysis reveals that incorporating graph attention mechanisms is \\emph{not universally beneficial}. Specifically, by appropriately defining \\emph{structure noise} and \\emph{feature noise} in graphs, we show that graph attention mechanisms can enhance classification performance when structure noise exceeds feature noise. Conversely, when feature noise predominates, simpler graph convolution operations are more effective. Furthermore, we examine the over-smoothing phenomenon and show that, in the high signal-to-noise ratio (SNR) regime, graph convolutional networks suffer from over-smoothing, whereas graph attention mechanisms can effectively resolve this issue. Building on these insights, we propose a novel multi-layer Graph Attention Network (GAT) architecture that significantly outperforms single-layer GATs in achieving \\emph{perfect node classification} in CSBMs, relaxing the SNR requirement from $ \\omega(\\sqrt{\\log n}) $ to $ \\omega(\\sqrt{\\log n} / \\sqrt[3]{n}) $. To our knowledge, this is the first study to delineate the conditions for perfect node classification using multi-layer GATs. Our theoretical contributions are corroborated by extensive experiments on both synthetic and real-world datasets, highlighting the practical implications of our findings.","headline":"Understanding When and Why Graph Attention Mechanisms Work via Node Classification","dateModified":"2024-12-23T00:00:00+00:00","datePublished":"2024-12-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2024/12/23/UnderstandingWhenandWhyGraphAttentionMechanismsWorkviaNodeClassification.html"},"url":"https://dedzago.github.io/arxiv_rss/2024/12/23/UnderstandingWhenandWhyGraphAttentionMechanismsWorkviaNodeClassification.html","author":{"@type":"Person","name":"Zhongtian Ma, Qiaosheng Zhang, Bocheng Zhou, Yexin Zhang, Shuyue Hu, Zhen Wang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2024-12-23 00:00:00 +0000">12-23</time>
+  </p>
+  
+  <h1>Understanding When and Why Graph Attention Mechanisms Work via Node Classification</h1>
+  <br>Zhongtian Ma, Qiaosheng Zhang, Bocheng Zhou, Yexin Zhang, Shuyue Hu, Zhen Wang</h3>
+  <br> [stat.ML]
+
+  <p>Despite the growing popularity of graph attention mechanisms, their theoretical understanding remains limited. This paper aims to explore the conditions under which these mechanisms are effective in node classification tasks through the lens of Contextual Stochastic Block Models (CSBMs). Our theoretical analysis reveals that incorporating graph attention mechanisms is \emph{not universally beneficial}. Specifically, by appropriately defining \emph{structure noise} and \emph{feature noise} in graphs, we show that graph attention mechanisms can enhance classification performance when structure noise exceeds feature noise. Conversely, when feature noise predominates, simpler graph convolution operations are more effective. Furthermore, we examine the over-smoothing phenomenon and show that, in the high signal-to-noise ratio (SNR) regime, graph convolutional networks suffer from over-smoothing, whereas graph attention mechanisms can effectively resolve this issue. Building on these insights, we propose a novel multi-layer Graph Attention Network (GAT) architecture that significantly outperforms single-layer GATs in achieving \emph{perfect node classification} in CSBMs, relaxing the SNR requirement from $ \omega(\sqrt{\log n}) $ to $ \omega(\sqrt{\log n} / \sqrt[3]{n}) $. To our knowledge, this is the first study to delineate the conditions for perfect node classification using multi-layer GATs. Our theoretical contributions are corroborated by extensive experiments on both synthetic and real-world datasets, highlighting the practical implications of our findings.</p>
+
+<p><a href="https://arxiv.org/abs/2412.15496">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
