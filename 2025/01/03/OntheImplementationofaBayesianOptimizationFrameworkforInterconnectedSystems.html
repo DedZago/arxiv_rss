@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Implementation of a Bayesian Optimization Framework for Interconnected Systems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the Implementation of a Bayesian Optimization Framework for Interconnected Systems" />
+<meta name="author" content="Leonardo D. González, Victor M. Zavala" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian optimization (BO) is an effective paradigm for the optimization of expensive-to-sample systems. Standard BO learns the performance of a system $f(x)$ by using a Gaussian Process (GP) model; this treats the system as a black-box and limits its ability to exploit available structural knowledge (e.g., physics and sparse interconnections in a complex system). Grey-box modeling, wherein the performance function is treated as a composition of known and unknown intermediate functions $f(x, y(x))$ (where $y(x)$ is a GP model) offers a solution to this limitation; however, generating an analytical probability density for $f$ from the Gaussian density of $y(x)$ is often an intractable problem (e.g., when $f$ is nonlinear). Previous work has handled this issue by using sampling techniques or by solving an auxiliary problem over an augmented space where the values of $y(x)$ are constrained by confidence intervals derived from the GP models; such solutions are computationally intensive. In this work, we provide a detailed implementation of a recently proposed grey-box BO paradigm, BOIS, that uses adaptive linearizations of $f$ to obtain analytical expressions for the statistical moments of the composite function. We show that the BOIS approach enables the exploitation of structural knowledge, such as that arising in interconnected systems as well as systems that embed multiple GP models and combinations of physics and GP models. We benchmark the effectiveness of BOIS against standard BO and existing grey-box BO algorithms using a pair of case studies focused on chemical process optimization and design. Our results indicate that BOIS performs as well as or better than existing grey-box methods, while also being less computationally intensive." />
+<meta property="og:description" content="Bayesian optimization (BO) is an effective paradigm for the optimization of expensive-to-sample systems. Standard BO learns the performance of a system $f(x)$ by using a Gaussian Process (GP) model; this treats the system as a black-box and limits its ability to exploit available structural knowledge (e.g., physics and sparse interconnections in a complex system). Grey-box modeling, wherein the performance function is treated as a composition of known and unknown intermediate functions $f(x, y(x))$ (where $y(x)$ is a GP model) offers a solution to this limitation; however, generating an analytical probability density for $f$ from the Gaussian density of $y(x)$ is often an intractable problem (e.g., when $f$ is nonlinear). Previous work has handled this issue by using sampling techniques or by solving an auxiliary problem over an augmented space where the values of $y(x)$ are constrained by confidence intervals derived from the GP models; such solutions are computationally intensive. In this work, we provide a detailed implementation of a recently proposed grey-box BO paradigm, BOIS, that uses adaptive linearizations of $f$ to obtain analytical expressions for the statistical moments of the composite function. We show that the BOIS approach enables the exploitation of structural knowledge, such as that arising in interconnected systems as well as systems that embed multiple GP models and combinations of physics and GP models. We benchmark the effectiveness of BOIS against standard BO and existing grey-box BO algorithms using a pair of case studies focused on chemical process optimization and design. Our results indicate that BOIS performs as well as or better than existing grey-box methods, while also being less computationally intensive." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/01/03/OntheImplementationofaBayesianOptimizationFrameworkforInterconnectedSystems.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/01/03/OntheImplementationofaBayesianOptimizationFrameworkforInterconnectedSystems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the Implementation of a Bayesian Optimization Framework for Interconnected Systems" />
+<script type="application/ld+json">
+{"description":"Bayesian optimization (BO) is an effective paradigm for the optimization of expensive-to-sample systems. Standard BO learns the performance of a system $f(x)$ by using a Gaussian Process (GP) model; this treats the system as a black-box and limits its ability to exploit available structural knowledge (e.g., physics and sparse interconnections in a complex system). Grey-box modeling, wherein the performance function is treated as a composition of known and unknown intermediate functions $f(x, y(x))$ (where $y(x)$ is a GP model) offers a solution to this limitation; however, generating an analytical probability density for $f$ from the Gaussian density of $y(x)$ is often an intractable problem (e.g., when $f$ is nonlinear). Previous work has handled this issue by using sampling techniques or by solving an auxiliary problem over an augmented space where the values of $y(x)$ are constrained by confidence intervals derived from the GP models; such solutions are computationally intensive. In this work, we provide a detailed implementation of a recently proposed grey-box BO paradigm, BOIS, that uses adaptive linearizations of $f$ to obtain analytical expressions for the statistical moments of the composite function. We show that the BOIS approach enables the exploitation of structural knowledge, such as that arising in interconnected systems as well as systems that embed multiple GP models and combinations of physics and GP models. We benchmark the effectiveness of BOIS against standard BO and existing grey-box BO algorithms using a pair of case studies focused on chemical process optimization and design. Our results indicate that BOIS performs as well as or better than existing grey-box methods, while also being less computationally intensive.","headline":"On the Implementation of a Bayesian Optimization Framework for Interconnected Systems","dateModified":"2025-01-03T00:00:00+00:00","datePublished":"2025-01-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/01/03/OntheImplementationofaBayesianOptimizationFrameworkforInterconnectedSystems.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/01/03/OntheImplementationofaBayesianOptimizationFrameworkforInterconnectedSystems.html","author":{"@type":"Person","name":"Leonardo D. González, Victor M. Zavala"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-03 00:00:00 +0000">01-03</time>
+  </p>
+  
+  <h1>On the Implementation of a Bayesian Optimization Framework for Interconnected Systems</h1>
+  <br>Leonardo D. González, Victor M. Zavala</h3>
+  <br> [stat.ML]
+
+  <p>Bayesian optimization (BO) is an effective paradigm for the optimization of expensive-to-sample systems. Standard BO learns the performance of a system $f(x)$ by using a Gaussian Process (GP) model; this treats the system as a black-box and limits its ability to exploit available structural knowledge (e.g., physics and sparse interconnections in a complex system). Grey-box modeling, wherein the performance function is treated as a composition of known and unknown intermediate functions $f(x, y(x))$ (where $y(x)$ is a GP model) offers a solution to this limitation; however, generating an analytical probability density for $f$ from the Gaussian density of $y(x)$ is often an intractable problem (e.g., when $f$ is nonlinear). Previous work has handled this issue by using sampling techniques or by solving an auxiliary problem over an augmented space where the values of $y(x)$ are constrained by confidence intervals derived from the GP models; such solutions are computationally intensive. In this work, we provide a detailed implementation of a recently proposed grey-box BO paradigm, BOIS, that uses adaptive linearizations of $f$ to obtain analytical expressions for the statistical moments of the composite function. We show that the BOIS approach enables the exploitation of structural knowledge, such as that arising in interconnected systems as well as systems that embed multiple GP models and combinations of physics and GP models. We benchmark the effectiveness of BOIS against standard BO and existing grey-box BO algorithms using a pair of case studies focused on chemical process optimization and design. Our results indicate that BOIS performs as well as or better than existing grey-box methods, while also being less computationally intensive.</p>
+
+<p><a href="https://arxiv.org/abs/2501.00967">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
