@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Avoiding subtraction and division of stochastic signals using normalizing flows: NFdeconvolve</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Avoiding subtraction and division of stochastic signals using normalizing flows: NFdeconvolve" />
+<meta name="author" content="Pedro Pessoa, Max Schweiger, Lance W. Q. Xu, Tristan Manha, Ayush Saurabh, Julian Antolin Camarena, Steve Pressé" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Across the scientific realm, we find ourselves subtracting or dividing stochastic signals. For instance, consider a stochastic realization, $x$, generated from the addition or multiplication of two stochastic signals $a$ and $b$, namely $x=a+b$ or $x = ab$. For the $x=a+b$ example, $a$ can be fluorescence background and $b$ the signal of interest whose statistics are to be learned from the measured $x$. Similarly, when writing $x=ab$, $a$ can be thought of as the illumination intensity and $b$ the density of fluorescent molecules of interest. Yet dividing or subtracting stochastic signals amplifies noise, and we ask instead whether, using the statistics of $a$ and the measurement of $x$ as input, we can recover the statistics of $b$. Here, we show how normalizing flows can generate an approximation of the probability distribution over $b$, thereby avoiding subtraction or division altogether. This method is implemented in our software package, NFdeconvolve, available on GitHub with a tutorial linked in the main text." />
+<meta property="og:description" content="Across the scientific realm, we find ourselves subtracting or dividing stochastic signals. For instance, consider a stochastic realization, $x$, generated from the addition or multiplication of two stochastic signals $a$ and $b$, namely $x=a+b$ or $x = ab$. For the $x=a+b$ example, $a$ can be fluorescence background and $b$ the signal of interest whose statistics are to be learned from the measured $x$. Similarly, when writing $x=ab$, $a$ can be thought of as the illumination intensity and $b$ the density of fluorescent molecules of interest. Yet dividing or subtracting stochastic signals amplifies noise, and we ask instead whether, using the statistics of $a$ and the measurement of $x$ as input, we can recover the statistics of $b$. Here, we show how normalizing flows can generate an approximation of the probability distribution over $b$, thereby avoiding subtraction or division altogether. This method is implemented in our software package, NFdeconvolve, available on GitHub with a tutorial linked in the main text." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/01/15/AvoidingsubtractionanddivisionofstochasticsignalsusingnormalizingflowsNFdeconvolve.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/01/15/AvoidingsubtractionanddivisionofstochasticsignalsusingnormalizingflowsNFdeconvolve.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Avoiding subtraction and division of stochastic signals using normalizing flows: NFdeconvolve" />
+<script type="application/ld+json">
+{"description":"Across the scientific realm, we find ourselves subtracting or dividing stochastic signals. For instance, consider a stochastic realization, $x$, generated from the addition or multiplication of two stochastic signals $a$ and $b$, namely $x=a+b$ or $x = ab$. For the $x=a+b$ example, $a$ can be fluorescence background and $b$ the signal of interest whose statistics are to be learned from the measured $x$. Similarly, when writing $x=ab$, $a$ can be thought of as the illumination intensity and $b$ the density of fluorescent molecules of interest. Yet dividing or subtracting stochastic signals amplifies noise, and we ask instead whether, using the statistics of $a$ and the measurement of $x$ as input, we can recover the statistics of $b$. Here, we show how normalizing flows can generate an approximation of the probability distribution over $b$, thereby avoiding subtraction or division altogether. This method is implemented in our software package, NFdeconvolve, available on GitHub with a tutorial linked in the main text.","headline":"Avoiding subtraction and division of stochastic signals using normalizing flows: NFdeconvolve","dateModified":"2025-01-15T00:00:00+00:00","datePublished":"2025-01-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/01/15/AvoidingsubtractionanddivisionofstochasticsignalsusingnormalizingflowsNFdeconvolve.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/01/15/AvoidingsubtractionanddivisionofstochasticsignalsusingnormalizingflowsNFdeconvolve.html","author":{"@type":"Person","name":"Pedro Pessoa, Max Schweiger, Lance W. Q. Xu, Tristan Manha, Ayush Saurabh, Julian Antolin Camarena, Steve Pressé"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-15 00:00:00 +0000">01-15</time>
+  </p>
+  
+  <h1>Avoiding subtraction and division of stochastic signals using normalizing flows: NFdeconvolve</h1>
+  <br>Pedro Pessoa, Max Schweiger, Lance W. Q. Xu, Tristan Manha, Ayush Saurabh, Julian Antolin Camarena, Steve Pressé</h3>
+  <br> [stat.ML]
+
+  <p>Across the scientific realm, we find ourselves subtracting or dividing stochastic signals. For instance, consider a stochastic realization, $x$, generated from the addition or multiplication of two stochastic signals $a$ and $b$, namely $x=a+b$ or $x = ab$. For the $x=a+b$ example, $a$ can be fluorescence background and $b$ the signal of interest whose statistics are to be learned from the measured $x$. Similarly, when writing $x=ab$, $a$ can be thought of as the illumination intensity and $b$ the density of fluorescent molecules of interest. Yet dividing or subtracting stochastic signals amplifies noise, and we ask instead whether, using the statistics of $a$ and the measurement of $x$ as input, we can recover the statistics of $b$. Here, we show how normalizing flows can generate an approximation of the probability distribution over $b$, thereby avoiding subtraction or division altogether. This method is implemented in our software package, NFdeconvolve, available on GitHub with a tutorial linked in the main text.</p>
+
+<p><a href="https://arxiv.org/abs/2501.08288">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
