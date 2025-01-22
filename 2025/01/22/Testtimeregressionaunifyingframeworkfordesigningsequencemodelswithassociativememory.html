@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Test-time regression: a unifying framework for designing sequence models with associative memory</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Test-time regression: a unifying framework for designing sequence models with associative memory" />
+<meta name="author" content="Ke Alexander Wang, Jiaxin Shi, Emily B. Fox" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sequences provide a remarkably general way to represent and process information. This powerful abstraction has placed sequence modeling at the center of modern deep learning applications, inspiring numerous architectures from transformers to recurrent networks. While this fragmented development has yielded powerful models, it has left us without a unified framework to understand their fundamental similarities and explain their effectiveness. We present a unifying framework motivated by an empirical observation: effective sequence models must be able to perform associative recall. Our key insight is that memorizing input tokens through an associative memory is equivalent to performing regression at test-time. This regression-memory correspondence provides a framework for deriving sequence models that can perform associative recall, offering a systematic lens to understand seemingly ad-hoc architectural choices. We show numerous recent architectures – including linear attention models, their gated variants, state-space models, online learners, and softmax attention – emerge naturally as specific approaches to test-time regression. Each architecture corresponds to three design choices: the relative importance of each association, the regressor function class, and the optimization algorithm. This connection leads to new understanding: we provide theoretical justification for QKNorm in softmax attention, and we motivate higher-order generalizations of softmax attention. Beyond unification, our work unlocks decades of rich statistical tools that can guide future development of more powerful yet principled sequence models." />
+<meta property="og:description" content="Sequences provide a remarkably general way to represent and process information. This powerful abstraction has placed sequence modeling at the center of modern deep learning applications, inspiring numerous architectures from transformers to recurrent networks. While this fragmented development has yielded powerful models, it has left us without a unified framework to understand their fundamental similarities and explain their effectiveness. We present a unifying framework motivated by an empirical observation: effective sequence models must be able to perform associative recall. Our key insight is that memorizing input tokens through an associative memory is equivalent to performing regression at test-time. This regression-memory correspondence provides a framework for deriving sequence models that can perform associative recall, offering a systematic lens to understand seemingly ad-hoc architectural choices. We show numerous recent architectures – including linear attention models, their gated variants, state-space models, online learners, and softmax attention – emerge naturally as specific approaches to test-time regression. Each architecture corresponds to three design choices: the relative importance of each association, the regressor function class, and the optimization algorithm. This connection leads to new understanding: we provide theoretical justification for QKNorm in softmax attention, and we motivate higher-order generalizations of softmax attention. Beyond unification, our work unlocks decades of rich statistical tools that can guide future development of more powerful yet principled sequence models." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/01/22/Testtimeregressionaunifyingframeworkfordesigningsequencemodelswithassociativememory.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/01/22/Testtimeregressionaunifyingframeworkfordesigningsequencemodelswithassociativememory.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Test-time regression: a unifying framework for designing sequence models with associative memory" />
+<script type="application/ld+json">
+{"description":"Sequences provide a remarkably general way to represent and process information. This powerful abstraction has placed sequence modeling at the center of modern deep learning applications, inspiring numerous architectures from transformers to recurrent networks. While this fragmented development has yielded powerful models, it has left us without a unified framework to understand their fundamental similarities and explain their effectiveness. We present a unifying framework motivated by an empirical observation: effective sequence models must be able to perform associative recall. Our key insight is that memorizing input tokens through an associative memory is equivalent to performing regression at test-time. This regression-memory correspondence provides a framework for deriving sequence models that can perform associative recall, offering a systematic lens to understand seemingly ad-hoc architectural choices. We show numerous recent architectures – including linear attention models, their gated variants, state-space models, online learners, and softmax attention – emerge naturally as specific approaches to test-time regression. Each architecture corresponds to three design choices: the relative importance of each association, the regressor function class, and the optimization algorithm. This connection leads to new understanding: we provide theoretical justification for QKNorm in softmax attention, and we motivate higher-order generalizations of softmax attention. Beyond unification, our work unlocks decades of rich statistical tools that can guide future development of more powerful yet principled sequence models.","headline":"Test-time regression: a unifying framework for designing sequence models with associative memory","dateModified":"2025-01-22T00:00:00+00:00","datePublished":"2025-01-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/01/22/Testtimeregressionaunifyingframeworkfordesigningsequencemodelswithassociativememory.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/01/22/Testtimeregressionaunifyingframeworkfordesigningsequencemodelswithassociativememory.html","author":{"@type":"Person","name":"Ke Alexander Wang, Jiaxin Shi, Emily B. Fox"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-22 00:00:00 +0000">01-22</time>
+  </p>
+  
+  <h1>Test-time regression: a unifying framework for designing sequence models with associative memory</h1>
+  <br>Ke Alexander Wang, Jiaxin Shi, Emily B. Fox</h3>
+  <br> [stat.ML]
+
+  <p>Sequences provide a remarkably general way to represent and process information. This powerful abstraction has placed sequence modeling at the center of modern deep learning applications, inspiring numerous architectures from transformers to recurrent networks. While this fragmented development has yielded powerful models, it has left us without a unified framework to understand their fundamental similarities and explain their effectiveness. We present a unifying framework motivated by an empirical observation: effective sequence models must be able to perform associative recall. Our key insight is that memorizing input tokens through an associative memory is equivalent to performing regression at test-time. This regression-memory correspondence provides a framework for deriving sequence models that can perform associative recall, offering a systematic lens to understand seemingly ad-hoc architectural choices. We show numerous recent architectures – including linear attention models, their gated variants, state-space models, online learners, and softmax attention – emerge naturally as specific approaches to test-time regression. Each architecture corresponds to three design choices: the relative importance of each association, the regressor function class, and the optimization algorithm. This connection leads to new understanding: we provide theoretical justification for QKNorm in softmax attention, and we motivate higher-order generalizations of softmax attention. Beyond unification, our work unlocks decades of rich statistical tools that can guide future development of more powerful yet principled sequence models.</p>
+
+<p><a href="https://arxiv.org/abs/2501.12352">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
