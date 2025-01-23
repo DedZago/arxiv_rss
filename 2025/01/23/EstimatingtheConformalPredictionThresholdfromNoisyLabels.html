@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating the Conformal Prediction Threshold from Noisy Labels</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Estimating the Conformal Prediction Threshold from Noisy Labels" />
+<meta name="author" content="Coby Penso, Jacob Goldberger, Ethan Fetaya" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conformal Prediction (CP) is a method to control prediction uncertainty by producing a small prediction set, ensuring a predetermined probability that the true class lies within this set. This is commonly done by defining a score, based on the model predictions, and setting a threshold on this score using a validation set. In this study, we address the problem of CP calibration when we only have access to a validation set with noisy labels. We show how we can estimate the noise-free conformal threshold based on the noisy labeled data. Our solution is flexible and can accommodate various modeling assumptions regarding the label contamination process, without needing any information about the underlying data distribution or the internal mechanisms of the machine learning classifier. We develop a coverage guarantee for uniform noise that is effective even in tasks with a large number of classes. We dub our approach Noise-Aware Conformal Prediction (NACP) and show on several natural and medical image classification datasets, including ImageNet, that it significantly outperforms current noisy label methods and achieves results comparable to those obtained with a clean validation set." />
+<meta property="og:description" content="Conformal Prediction (CP) is a method to control prediction uncertainty by producing a small prediction set, ensuring a predetermined probability that the true class lies within this set. This is commonly done by defining a score, based on the model predictions, and setting a threshold on this score using a validation set. In this study, we address the problem of CP calibration when we only have access to a validation set with noisy labels. We show how we can estimate the noise-free conformal threshold based on the noisy labeled data. Our solution is flexible and can accommodate various modeling assumptions regarding the label contamination process, without needing any information about the underlying data distribution or the internal mechanisms of the machine learning classifier. We develop a coverage guarantee for uniform noise that is effective even in tasks with a large number of classes. We dub our approach Noise-Aware Conformal Prediction (NACP) and show on several natural and medical image classification datasets, including ImageNet, that it significantly outperforms current noisy label methods and achieves results comparable to those obtained with a clean validation set." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/01/23/EstimatingtheConformalPredictionThresholdfromNoisyLabels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/01/23/EstimatingtheConformalPredictionThresholdfromNoisyLabels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Estimating the Conformal Prediction Threshold from Noisy Labels" />
+<script type="application/ld+json">
+{"description":"Conformal Prediction (CP) is a method to control prediction uncertainty by producing a small prediction set, ensuring a predetermined probability that the true class lies within this set. This is commonly done by defining a score, based on the model predictions, and setting a threshold on this score using a validation set. In this study, we address the problem of CP calibration when we only have access to a validation set with noisy labels. We show how we can estimate the noise-free conformal threshold based on the noisy labeled data. Our solution is flexible and can accommodate various modeling assumptions regarding the label contamination process, without needing any information about the underlying data distribution or the internal mechanisms of the machine learning classifier. We develop a coverage guarantee for uniform noise that is effective even in tasks with a large number of classes. We dub our approach Noise-Aware Conformal Prediction (NACP) and show on several natural and medical image classification datasets, including ImageNet, that it significantly outperforms current noisy label methods and achieves results comparable to those obtained with a clean validation set.","headline":"Estimating the Conformal Prediction Threshold from Noisy Labels","dateModified":"2025-01-23T00:00:00+00:00","datePublished":"2025-01-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/01/23/EstimatingtheConformalPredictionThresholdfromNoisyLabels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/01/23/EstimatingtheConformalPredictionThresholdfromNoisyLabels.html","author":{"@type":"Person","name":"Coby Penso, Jacob Goldberger, Ethan Fetaya"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-23 00:00:00 +0000">01-23</time>
+  </p>
+  
+  <h1>Estimating the Conformal Prediction Threshold from Noisy Labels</h1>
+  <br>Coby Penso, Jacob Goldberger, Ethan Fetaya</h3>
+  <br> [stat.ML]
+
+  <p>Conformal Prediction (CP) is a method to control prediction uncertainty by producing a small prediction set, ensuring a predetermined probability that the true class lies within this set. This is commonly done by defining a score, based on the model predictions, and setting a threshold on this score using a validation set. In this study, we address the problem of CP calibration when we only have access to a validation set with noisy labels. We show how we can estimate the noise-free conformal threshold based on the noisy labeled data. Our solution is flexible and can accommodate various modeling assumptions regarding the label contamination process, without needing any information about the underlying data distribution or the internal mechanisms of the machine learning classifier. We develop a coverage guarantee for uniform noise that is effective even in tasks with a large number of classes. We dub our approach Noise-Aware Conformal Prediction (NACP) and show on several natural and medical image classification datasets, including ImageNet, that it significantly outperforms current noisy label methods and achieves results comparable to those obtained with a clean validation set.</p>
+
+<p><a href="https://arxiv.org/abs/2501.12749">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
