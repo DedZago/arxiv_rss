@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Safety in safe Bayesian optimization and its ramifications for control</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Safety in safe Bayesian optimization and its ramifications for control" />
+<meta name="author" content="Christian Fiedler, Johanna Menn, Sebastian Trimpe" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A recurring and important task in control engineering is parameter tuning under constraints, which conceptually amounts to optimization of a blackbox function accessible only through noisy evaluations. For example, in control practice parameters of a pre-designed controller are often tuned online in feedback with a plant, and only safe parameter values should be tried, avoiding for example instability. Recently, machine learning methods have been deployed for this important problem, in particular, Bayesian optimization (BO). To handle safety constraints, algorithms from safe BO have been utilized, especially SafeOpt-type algorithms, which enjoy considerable popularity in learning-based control, robotics, and adjacent fields. However, we identify two significant obstacles to practical safety. First, SafeOpt-type algorithms rely on quantitative uncertainty bounds, and most implementations replace these by theoretically unsupported heuristics. Second, the theoretically valid uncertainty bounds crucially depend on a quantity - the reproducing kernel Hilbert space norm of the target function - that at present is impossible to reliably bound using established prior engineering knowledge. By careful numerical experiments we show that these issues can indeed cause safety violations. To overcome these problems, we propose Lipschitz-only Safe Bayesian Optimization (LoSBO), a safe BO algorithm that relies only on a known Lipschitz bound for its safety. Furthermore, we propose a variant (LoS-GP-UCB) that avoids gridding of the search space and is therefore applicable even for moderately high-dimensional problems." />
+<meta property="og:description" content="A recurring and important task in control engineering is parameter tuning under constraints, which conceptually amounts to optimization of a blackbox function accessible only through noisy evaluations. For example, in control practice parameters of a pre-designed controller are often tuned online in feedback with a plant, and only safe parameter values should be tried, avoiding for example instability. Recently, machine learning methods have been deployed for this important problem, in particular, Bayesian optimization (BO). To handle safety constraints, algorithms from safe BO have been utilized, especially SafeOpt-type algorithms, which enjoy considerable popularity in learning-based control, robotics, and adjacent fields. However, we identify two significant obstacles to practical safety. First, SafeOpt-type algorithms rely on quantitative uncertainty bounds, and most implementations replace these by theoretically unsupported heuristics. Second, the theoretically valid uncertainty bounds crucially depend on a quantity - the reproducing kernel Hilbert space norm of the target function - that at present is impossible to reliably bound using established prior engineering knowledge. By careful numerical experiments we show that these issues can indeed cause safety violations. To overcome these problems, we propose Lipschitz-only Safe Bayesian Optimization (LoSBO), a safe BO algorithm that relies only on a known Lipschitz bound for its safety. Furthermore, we propose a variant (LoS-GP-UCB) that avoids gridding of the search space and is therefore applicable even for moderately high-dimensional problems." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/01/24/SafetyinsafeBayesianoptimizationanditsramificationsforcontrol.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/01/24/SafetyinsafeBayesianoptimizationanditsramificationsforcontrol.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Safety in safe Bayesian optimization and its ramifications for control" />
+<script type="application/ld+json">
+{"description":"A recurring and important task in control engineering is parameter tuning under constraints, which conceptually amounts to optimization of a blackbox function accessible only through noisy evaluations. For example, in control practice parameters of a pre-designed controller are often tuned online in feedback with a plant, and only safe parameter values should be tried, avoiding for example instability. Recently, machine learning methods have been deployed for this important problem, in particular, Bayesian optimization (BO). To handle safety constraints, algorithms from safe BO have been utilized, especially SafeOpt-type algorithms, which enjoy considerable popularity in learning-based control, robotics, and adjacent fields. However, we identify two significant obstacles to practical safety. First, SafeOpt-type algorithms rely on quantitative uncertainty bounds, and most implementations replace these by theoretically unsupported heuristics. Second, the theoretically valid uncertainty bounds crucially depend on a quantity - the reproducing kernel Hilbert space norm of the target function - that at present is impossible to reliably bound using established prior engineering knowledge. By careful numerical experiments we show that these issues can indeed cause safety violations. To overcome these problems, we propose Lipschitz-only Safe Bayesian Optimization (LoSBO), a safe BO algorithm that relies only on a known Lipschitz bound for its safety. Furthermore, we propose a variant (LoS-GP-UCB) that avoids gridding of the search space and is therefore applicable even for moderately high-dimensional problems.","headline":"Safety in safe Bayesian optimization and its ramifications for control","dateModified":"2025-01-24T00:00:00+00:00","datePublished":"2025-01-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/01/24/SafetyinsafeBayesianoptimizationanditsramificationsforcontrol.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/01/24/SafetyinsafeBayesianoptimizationanditsramificationsforcontrol.html","author":{"@type":"Person","name":"Christian Fiedler, Johanna Menn, Sebastian Trimpe"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-24 00:00:00 +0000">01-24</time>
+  </p>
+  
+  <h1>Safety in safe Bayesian optimization and its ramifications for control</h1>
+  <br>Christian Fiedler, Johanna Menn, Sebastian Trimpe</h3>
+  <br> [stat.ML]
+
+  <p>A recurring and important task in control engineering is parameter tuning under constraints, which conceptually amounts to optimization of a blackbox function accessible only through noisy evaluations. For example, in control practice parameters of a pre-designed controller are often tuned online in feedback with a plant, and only safe parameter values should be tried, avoiding for example instability. Recently, machine learning methods have been deployed for this important problem, in particular, Bayesian optimization (BO). To handle safety constraints, algorithms from safe BO have been utilized, especially SafeOpt-type algorithms, which enjoy considerable popularity in learning-based control, robotics, and adjacent fields. However, we identify two significant obstacles to practical safety. First, SafeOpt-type algorithms rely on quantitative uncertainty bounds, and most implementations replace these by theoretically unsupported heuristics. Second, the theoretically valid uncertainty bounds crucially depend on a quantity - the reproducing kernel Hilbert space norm of the target function - that at present is impossible to reliably bound using established prior engineering knowledge. By careful numerical experiments we show that these issues can indeed cause safety violations. To overcome these problems, we propose Lipschitz-only Safe Bayesian Optimization (LoSBO), a safe BO algorithm that relies only on a known Lipschitz bound for its safety. Furthermore, we propose a variant (LoS-GP-UCB) that avoids gridding of the search space and is therefore applicable even for moderately high-dimensional problems.</p>
+
+<p><a href="https://arxiv.org/abs/2501.13697">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
