@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Marginal and Conditional Importance Measures from Machine Learning Models and Their Relationship with Conditional Average Treatment Effect</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Marginal and Conditional Importance Measures from Machine Learning Models and Their Relationship with Conditional Average Treatment Effect" />
+<meta name="author" content="Mohammad Kaviul Anam Khan, Olli Saarela, Rafal Kustra" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Interpreting black-box machine learning models is challenging due to their strong dependence on data and inherently non-parametric nature. This paper reintroduces the concept of importance through “Marginal Variable Importance Metric” (MVIM), a model-agnostic measure of predictor importance based on the true conditional expectation function. MVIM evaluates predictors’ influence on continuous or discrete outcomes. A permutation-based estimation approach, inspired by \citet{breiman2001random} and \citet{fisher2019all}, is proposed to estimate MVIM. MVIM estimator is biased when predictors are highly correlated, as black-box models struggle to extrapolate in low-probability regions. To address this, we investigated the bias-variance decomposition of MVIM to understand the source and pattern of the bias under high correlation. A Conditional Variable Importance Metric (CVIM), adapted from \citet{strobl2008conditional}, is introduced to reduce this bias. Both MVIM and CVIM exhibit a quadratic relationship with the conditional average treatment effect (CATE)." />
+<meta property="og:description" content="Interpreting black-box machine learning models is challenging due to their strong dependence on data and inherently non-parametric nature. This paper reintroduces the concept of importance through “Marginal Variable Importance Metric” (MVIM), a model-agnostic measure of predictor importance based on the true conditional expectation function. MVIM evaluates predictors’ influence on continuous or discrete outcomes. A permutation-based estimation approach, inspired by \citet{breiman2001random} and \citet{fisher2019all}, is proposed to estimate MVIM. MVIM estimator is biased when predictors are highly correlated, as black-box models struggle to extrapolate in low-probability regions. To address this, we investigated the bias-variance decomposition of MVIM to understand the source and pattern of the bias under high correlation. A Conditional Variable Importance Metric (CVIM), adapted from \citet{strobl2008conditional}, is introduced to reduce this bias. Both MVIM and CVIM exhibit a quadratic relationship with the conditional average treatment effect (CATE)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/01/29/MarginalandConditionalImportanceMeasuresfromMachineLearningModelsandTheirRelationshipwithConditionalAverageTreatmentEffect.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/01/29/MarginalandConditionalImportanceMeasuresfromMachineLearningModelsandTheirRelationshipwithConditionalAverageTreatmentEffect.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Marginal and Conditional Importance Measures from Machine Learning Models and Their Relationship with Conditional Average Treatment Effect" />
+<script type="application/ld+json">
+{"description":"Interpreting black-box machine learning models is challenging due to their strong dependence on data and inherently non-parametric nature. This paper reintroduces the concept of importance through “Marginal Variable Importance Metric” (MVIM), a model-agnostic measure of predictor importance based on the true conditional expectation function. MVIM evaluates predictors’ influence on continuous or discrete outcomes. A permutation-based estimation approach, inspired by \\citet{breiman2001random} and \\citet{fisher2019all}, is proposed to estimate MVIM. MVIM estimator is biased when predictors are highly correlated, as black-box models struggle to extrapolate in low-probability regions. To address this, we investigated the bias-variance decomposition of MVIM to understand the source and pattern of the bias under high correlation. A Conditional Variable Importance Metric (CVIM), adapted from \\citet{strobl2008conditional}, is introduced to reduce this bias. Both MVIM and CVIM exhibit a quadratic relationship with the conditional average treatment effect (CATE).","headline":"Marginal and Conditional Importance Measures from Machine Learning Models and Their Relationship with Conditional Average Treatment Effect","dateModified":"2025-01-29T00:00:00+00:00","datePublished":"2025-01-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/01/29/MarginalandConditionalImportanceMeasuresfromMachineLearningModelsandTheirRelationshipwithConditionalAverageTreatmentEffect.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/01/29/MarginalandConditionalImportanceMeasuresfromMachineLearningModelsandTheirRelationshipwithConditionalAverageTreatmentEffect.html","author":{"@type":"Person","name":"Mohammad Kaviul Anam Khan, Olli Saarela, Rafal Kustra"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-01-29 00:00:00 +0000">01-29</time>
+  </p>
+  
+  <h1>Marginal and Conditional Importance Measures from Machine Learning Models and Their Relationship with Conditional Average Treatment Effect</h1>
+  <br>Mohammad Kaviul Anam Khan, Olli Saarela, Rafal Kustra</h3>
+  <br> [stat.ML]
+
+  <p>Interpreting black-box machine learning models is challenging due to their strong dependence on data and inherently non-parametric nature. This paper reintroduces the concept of importance through “Marginal Variable Importance Metric” (MVIM), a model-agnostic measure of predictor importance based on the true conditional expectation function. MVIM evaluates predictors’ influence on continuous or discrete outcomes. A permutation-based estimation approach, inspired by \citet{breiman2001random} and \citet{fisher2019all}, is proposed to estimate MVIM. MVIM estimator is biased when predictors are highly correlated, as black-box models struggle to extrapolate in low-probability regions. To address this, we investigated the bias-variance decomposition of MVIM to understand the source and pattern of the bias under high correlation. A Conditional Variable Importance Metric (CVIM), adapted from \citet{strobl2008conditional}, is introduced to reduce this bias. Both MVIM and CVIM exhibit a quadratic relationship with the conditional average treatment effect (CATE).</p>
+
+<p><a href="https://arxiv.org/abs/2501.16988">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
