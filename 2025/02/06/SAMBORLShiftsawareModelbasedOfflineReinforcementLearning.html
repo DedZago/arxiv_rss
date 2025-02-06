@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SAMBO-RL: Shifts-aware Model-based Offline Reinforcement Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="SAMBO-RL: Shifts-aware Model-based Offline Reinforcement Learning" />
+<meta name="author" content="Wang Luo, Haoran Li, Zicheng Zhang, Congying Han, Jiayu Lv, Tiande Guo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Model-based offline reinforcement learning trains policies using pre-collected datasets and learned environment models, eliminating the need for direct real-world environment interaction. However, this paradigm is inherently challenged by distribution shift (DS). Existing methods address this issue by leveraging off-policy mechanisms and estimating model uncertainty, but they often result in inconsistent objectives and lack a unified theoretical foundation. This paper offers a comprehensive analysis that disentangles the problem into two fundamental components: model bias and policy shift. Our theoretical and empirical investigations reveal how these factors distort value estimation and restrict policy optimization. To tackle these challenges, we derive a novel Shifts-aware Reward (SAR) through a unified probabilistic inference framework, which modifies the vanilla reward to refine value learning and facilitate policy training. Building on this, we introduce Shifts-aware Model-based Offline Reinforcement Learning (SAMBO-RL), a practical framework that efficiently trains classifiers to approximate SAR for policy optimization. Empirical experiments show that SAR effectively mitigates DS, and SAMBO-RL achieves superior or comparable performance across various benchmarks, underscoring its effectiveness and validating our theoretical analysis." />
+<meta property="og:description" content="Model-based offline reinforcement learning trains policies using pre-collected datasets and learned environment models, eliminating the need for direct real-world environment interaction. However, this paradigm is inherently challenged by distribution shift (DS). Existing methods address this issue by leveraging off-policy mechanisms and estimating model uncertainty, but they often result in inconsistent objectives and lack a unified theoretical foundation. This paper offers a comprehensive analysis that disentangles the problem into two fundamental components: model bias and policy shift. Our theoretical and empirical investigations reveal how these factors distort value estimation and restrict policy optimization. To tackle these challenges, we derive a novel Shifts-aware Reward (SAR) through a unified probabilistic inference framework, which modifies the vanilla reward to refine value learning and facilitate policy training. Building on this, we introduce Shifts-aware Model-based Offline Reinforcement Learning (SAMBO-RL), a practical framework that efficiently trains classifiers to approximate SAR for policy optimization. Empirical experiments show that SAR effectively mitigates DS, and SAMBO-RL achieves superior or comparable performance across various benchmarks, underscoring its effectiveness and validating our theoretical analysis." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/02/06/SAMBORLShiftsawareModelbasedOfflineReinforcementLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/02/06/SAMBORLShiftsawareModelbasedOfflineReinforcementLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SAMBO-RL: Shifts-aware Model-based Offline Reinforcement Learning" />
+<script type="application/ld+json">
+{"description":"Model-based offline reinforcement learning trains policies using pre-collected datasets and learned environment models, eliminating the need for direct real-world environment interaction. However, this paradigm is inherently challenged by distribution shift (DS). Existing methods address this issue by leveraging off-policy mechanisms and estimating model uncertainty, but they often result in inconsistent objectives and lack a unified theoretical foundation. This paper offers a comprehensive analysis that disentangles the problem into two fundamental components: model bias and policy shift. Our theoretical and empirical investigations reveal how these factors distort value estimation and restrict policy optimization. To tackle these challenges, we derive a novel Shifts-aware Reward (SAR) through a unified probabilistic inference framework, which modifies the vanilla reward to refine value learning and facilitate policy training. Building on this, we introduce Shifts-aware Model-based Offline Reinforcement Learning (SAMBO-RL), a practical framework that efficiently trains classifiers to approximate SAR for policy optimization. Empirical experiments show that SAR effectively mitigates DS, and SAMBO-RL achieves superior or comparable performance across various benchmarks, underscoring its effectiveness and validating our theoretical analysis.","headline":"SAMBO-RL: Shifts-aware Model-based Offline Reinforcement Learning","dateModified":"2025-02-06T00:00:00+00:00","datePublished":"2025-02-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/02/06/SAMBORLShiftsawareModelbasedOfflineReinforcementLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/02/06/SAMBORLShiftsawareModelbasedOfflineReinforcementLearning.html","author":{"@type":"Person","name":"Wang Luo, Haoran Li, Zicheng Zhang, Congying Han, Jiayu Lv, Tiande Guo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-06 00:00:00 +0000">02-06</time>
+  </p>
+  
+  <h1>SAMBO-RL: Shifts-aware Model-based Offline Reinforcement Learning</h1>
+  <br>Wang Luo, Haoran Li, Zicheng Zhang, Congying Han, Jiayu Lv, Tiande Guo</h3>
+  <br> [stat.ML]
+
+  <p>Model-based offline reinforcement learning trains policies using pre-collected datasets and learned environment models, eliminating the need for direct real-world environment interaction. However, this paradigm is inherently challenged by distribution shift (DS). Existing methods address this issue by leveraging off-policy mechanisms and estimating model uncertainty, but they often result in inconsistent objectives and lack a unified theoretical foundation. This paper offers a comprehensive analysis that disentangles the problem into two fundamental components: model bias and policy shift. Our theoretical and empirical investigations reveal how these factors distort value estimation and restrict policy optimization. To tackle these challenges, we derive a novel Shifts-aware Reward (SAR) through a unified probabilistic inference framework, which modifies the vanilla reward to refine value learning and facilitate policy training. Building on this, we introduce Shifts-aware Model-based Offline Reinforcement Learning (SAMBO-RL), a practical framework that efficiently trains classifiers to approximate SAR for policy optimization. Empirical experiments show that SAR effectively mitigates DS, and SAMBO-RL achieves superior or comparable performance across various benchmarks, underscoring its effectiveness and validating our theoretical analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2408.12830">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

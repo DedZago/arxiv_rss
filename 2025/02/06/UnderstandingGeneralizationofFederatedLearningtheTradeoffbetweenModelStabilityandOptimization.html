@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding Generalization of Federated Learning: the Trade-off between Model Stability and Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Understanding Generalization of Federated Learning: the Trade-off between Model Stability and Optimization" />
+<meta name="author" content="Dun Zeng, Zheshun Wu, Shiyu Liu, Yu Pan, Xiaoying Tang, Zenglin Xu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Federated Learning (FL) is a distributed learning approach that trains machine learning models across multiple devices while keeping their local data private. However, FL often faces challenges due to data heterogeneity, leading to inconsistent local optima among clients. These inconsistencies can cause unfavorable convergence behavior and generalization performance degradation. Existing studies mainly describe this issue through \textit{convergence analysis}, focusing on how well a model fits training data, or through \textit{algorithmic stability}, which examines the generalization gap. However, neither approach precisely captures the generalization performance of FL algorithms, especially for neural networks. This paper introduces an innovative generalization dynamics analysis framework, named as Libra, for algorithm-dependent excess risk minimization, highlighting the trade-offs between model stability and optimization. Through this framework, we show how the generalization of FL algorithms is affected by the interplay of algorithmic stability and optimization. This framework applies to standard federated optimization and its advanced variants, such as server momentum. Our findings suggest that larger local steps or momentum accelerate convergence but enlarge stability, while yielding a better minimum excess risk. These insights can guide the design of future algorithms to achieve stronger generalization." />
+<meta property="og:description" content="Federated Learning (FL) is a distributed learning approach that trains machine learning models across multiple devices while keeping their local data private. However, FL often faces challenges due to data heterogeneity, leading to inconsistent local optima among clients. These inconsistencies can cause unfavorable convergence behavior and generalization performance degradation. Existing studies mainly describe this issue through \textit{convergence analysis}, focusing on how well a model fits training data, or through \textit{algorithmic stability}, which examines the generalization gap. However, neither approach precisely captures the generalization performance of FL algorithms, especially for neural networks. This paper introduces an innovative generalization dynamics analysis framework, named as Libra, for algorithm-dependent excess risk minimization, highlighting the trade-offs between model stability and optimization. Through this framework, we show how the generalization of FL algorithms is affected by the interplay of algorithmic stability and optimization. This framework applies to standard federated optimization and its advanced variants, such as server momentum. Our findings suggest that larger local steps or momentum accelerate convergence but enlarge stability, while yielding a better minimum excess risk. These insights can guide the design of future algorithms to achieve stronger generalization." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/02/06/UnderstandingGeneralizationofFederatedLearningtheTradeoffbetweenModelStabilityandOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/02/06/UnderstandingGeneralizationofFederatedLearningtheTradeoffbetweenModelStabilityandOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding Generalization of Federated Learning: the Trade-off between Model Stability and Optimization" />
+<script type="application/ld+json">
+{"description":"Federated Learning (FL) is a distributed learning approach that trains machine learning models across multiple devices while keeping their local data private. However, FL often faces challenges due to data heterogeneity, leading to inconsistent local optima among clients. These inconsistencies can cause unfavorable convergence behavior and generalization performance degradation. Existing studies mainly describe this issue through \\textit{convergence analysis}, focusing on how well a model fits training data, or through \\textit{algorithmic stability}, which examines the generalization gap. However, neither approach precisely captures the generalization performance of FL algorithms, especially for neural networks. This paper introduces an innovative generalization dynamics analysis framework, named as Libra, for algorithm-dependent excess risk minimization, highlighting the trade-offs between model stability and optimization. Through this framework, we show how the generalization of FL algorithms is affected by the interplay of algorithmic stability and optimization. This framework applies to standard federated optimization and its advanced variants, such as server momentum. Our findings suggest that larger local steps or momentum accelerate convergence but enlarge stability, while yielding a better minimum excess risk. These insights can guide the design of future algorithms to achieve stronger generalization.","headline":"Understanding Generalization of Federated Learning: the Trade-off between Model Stability and Optimization","dateModified":"2025-02-06T00:00:00+00:00","datePublished":"2025-02-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/02/06/UnderstandingGeneralizationofFederatedLearningtheTradeoffbetweenModelStabilityandOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/02/06/UnderstandingGeneralizationofFederatedLearningtheTradeoffbetweenModelStabilityandOptimization.html","author":{"@type":"Person","name":"Dun Zeng, Zheshun Wu, Shiyu Liu, Yu Pan, Xiaoying Tang, Zenglin Xu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-06 00:00:00 +0000">02-06</time>
+  </p>
+  
+  <h1>Understanding Generalization of Federated Learning: the Trade-off between Model Stability and Optimization</h1>
+  <br>Dun Zeng, Zheshun Wu, Shiyu Liu, Yu Pan, Xiaoying Tang, Zenglin Xu</h3>
+  <br> [stat.ML]
+
+  <p>Federated Learning (FL) is a distributed learning approach that trains machine learning models across multiple devices while keeping their local data private. However, FL often faces challenges due to data heterogeneity, leading to inconsistent local optima among clients. These inconsistencies can cause unfavorable convergence behavior and generalization performance degradation. Existing studies mainly describe this issue through \textit{convergence analysis}, focusing on how well a model fits training data, or through \textit{algorithmic stability}, which examines the generalization gap. However, neither approach precisely captures the generalization performance of FL algorithms, especially for neural networks. This paper introduces an innovative generalization dynamics analysis framework, named as Libra, for algorithm-dependent excess risk minimization, highlighting the trade-offs between model stability and optimization. Through this framework, we show how the generalization of FL algorithms is affected by the interplay of algorithmic stability and optimization. This framework applies to standard federated optimization and its advanced variants, such as server momentum. Our findings suggest that larger local steps or momentum accelerate convergence but enlarge stability, while yielding a better minimum excess risk. These insights can guide the design of future algorithms to achieve stronger generalization.</p>
+
+<p><a href="https://arxiv.org/abs/2411.16303">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
