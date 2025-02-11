@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Transformer Neural Processes - Kernel Regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Transformer Neural Processes - Kernel Regression" />
+<meta name="author" content="Daniel Jenson, Jhonathan Navott, Mengyan Zhang, Makkunda Sharma, Elizaveta Semenova, Seth Flaxman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Neural Processes (NPs) are a rapidly evolving class of models designed to directly model the posterior predictive distribution of stochastic processes. Originally developed as a scalable alternative to Gaussian Processes (GPs), which are limited by $\mathcal{O}(n^3)$ runtime complexity, the most accurate modern NPs can often rival GPs but still suffer from an $\mathcal{O}(n^2)$ bottleneck due to their attention mechanism. We introduce the Transformer Neural Process - Kernel Regression (TNP-KR), a scalable NP featuring: (1) a Kernel Regression Block (KRBlock), a simple, extensible, and parameter efficient transformer block with complexity $\mathcal{O}(n_c^2 + n_c n_t)$, where $n_c$ and $n_t$ are the number of context and test points, respectively; (2) a kernel-based attention bias; and (3) two novel attention mechanisms: scan attention (SA), a memory-efficient scan-based attention that when paired with a kernel-based bias can make TNP-KR translation invariant, and deep kernel attention (DKA), a Performer-style attention that implicitly incoporates a distance bias and further reduces complexity to $\mathcal{O}(n_c)$. These enhancements enable both TNP-KR variants to perform inference with 100K context points on over 1M test points in under a minute on a single 24GB GPU. On benchmarks spanning meta regression, Bayesian optimization, image completion, and epidemiology, TNP-KR with DKA outperforms its Performer counterpart on nearly every benchmark, while TNP-KR with SA achieves state-of-the-art results." />
+<meta property="og:description" content="Neural Processes (NPs) are a rapidly evolving class of models designed to directly model the posterior predictive distribution of stochastic processes. Originally developed as a scalable alternative to Gaussian Processes (GPs), which are limited by $\mathcal{O}(n^3)$ runtime complexity, the most accurate modern NPs can often rival GPs but still suffer from an $\mathcal{O}(n^2)$ bottleneck due to their attention mechanism. We introduce the Transformer Neural Process - Kernel Regression (TNP-KR), a scalable NP featuring: (1) a Kernel Regression Block (KRBlock), a simple, extensible, and parameter efficient transformer block with complexity $\mathcal{O}(n_c^2 + n_c n_t)$, where $n_c$ and $n_t$ are the number of context and test points, respectively; (2) a kernel-based attention bias; and (3) two novel attention mechanisms: scan attention (SA), a memory-efficient scan-based attention that when paired with a kernel-based bias can make TNP-KR translation invariant, and deep kernel attention (DKA), a Performer-style attention that implicitly incoporates a distance bias and further reduces complexity to $\mathcal{O}(n_c)$. These enhancements enable both TNP-KR variants to perform inference with 100K context points on over 1M test points in under a minute on a single 24GB GPU. On benchmarks spanning meta regression, Bayesian optimization, image completion, and epidemiology, TNP-KR with DKA outperforms its Performer counterpart on nearly every benchmark, while TNP-KR with SA achieves state-of-the-art results." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/02/11/TransformerNeuralProcessesKernelRegression.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/02/11/TransformerNeuralProcessesKernelRegression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Transformer Neural Processes - Kernel Regression" />
+<script type="application/ld+json">
+{"description":"Neural Processes (NPs) are a rapidly evolving class of models designed to directly model the posterior predictive distribution of stochastic processes. Originally developed as a scalable alternative to Gaussian Processes (GPs), which are limited by $\\mathcal{O}(n^3)$ runtime complexity, the most accurate modern NPs can often rival GPs but still suffer from an $\\mathcal{O}(n^2)$ bottleneck due to their attention mechanism. We introduce the Transformer Neural Process - Kernel Regression (TNP-KR), a scalable NP featuring: (1) a Kernel Regression Block (KRBlock), a simple, extensible, and parameter efficient transformer block with complexity $\\mathcal{O}(n_c^2 + n_c n_t)$, where $n_c$ and $n_t$ are the number of context and test points, respectively; (2) a kernel-based attention bias; and (3) two novel attention mechanisms: scan attention (SA), a memory-efficient scan-based attention that when paired with a kernel-based bias can make TNP-KR translation invariant, and deep kernel attention (DKA), a Performer-style attention that implicitly incoporates a distance bias and further reduces complexity to $\\mathcal{O}(n_c)$. These enhancements enable both TNP-KR variants to perform inference with 100K context points on over 1M test points in under a minute on a single 24GB GPU. On benchmarks spanning meta regression, Bayesian optimization, image completion, and epidemiology, TNP-KR with DKA outperforms its Performer counterpart on nearly every benchmark, while TNP-KR with SA achieves state-of-the-art results.","headline":"Transformer Neural Processes - Kernel Regression","dateModified":"2025-02-11T00:00:00+00:00","datePublished":"2025-02-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/02/11/TransformerNeuralProcessesKernelRegression.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/02/11/TransformerNeuralProcessesKernelRegression.html","author":{"@type":"Person","name":"Daniel Jenson, Jhonathan Navott, Mengyan Zhang, Makkunda Sharma, Elizaveta Semenova, Seth Flaxman"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-11 00:00:00 +0000">02-11</time>
+  </p>
+  
+  <h1>Transformer Neural Processes - Kernel Regression</h1>
+  <br>Daniel Jenson, Jhonathan Navott, Mengyan Zhang, Makkunda Sharma, Elizaveta Semenova, Seth Flaxman</h3>
+  <br> [stat.ML]
+
+  <p>Neural Processes (NPs) are a rapidly evolving class of models designed to directly model the posterior predictive distribution of stochastic processes. Originally developed as a scalable alternative to Gaussian Processes (GPs), which are limited by $\mathcal{O}(n^3)$ runtime complexity, the most accurate modern NPs can often rival GPs but still suffer from an $\mathcal{O}(n^2)$ bottleneck due to their attention mechanism. We introduce the Transformer Neural Process - Kernel Regression (TNP-KR), a scalable NP featuring: (1) a Kernel Regression Block (KRBlock), a simple, extensible, and parameter efficient transformer block with complexity $\mathcal{O}(n_c^2 + n_c n_t)$, where $n_c$ and $n_t$ are the number of context and test points, respectively; (2) a kernel-based attention bias; and (3) two novel attention mechanisms: scan attention (SA), a memory-efficient scan-based attention that when paired with a kernel-based bias can make TNP-KR translation invariant, and deep kernel attention (DKA), a Performer-style attention that implicitly incoporates a distance bias and further reduces complexity to $\mathcal{O}(n_c)$. These enhancements enable both TNP-KR variants to perform inference with 100K context points on over 1M test points in under a minute on a single 24GB GPU. On benchmarks spanning meta regression, Bayesian optimization, image completion, and epidemiology, TNP-KR with DKA outperforms its Performer counterpart on nearly every benchmark, while TNP-KR with SA achieves state-of-the-art results.</p>
+
+<p><a href="https://arxiv.org/abs/2411.12502">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
