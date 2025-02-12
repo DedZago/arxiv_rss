@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding the Generalization Error of Markov algorithms through Poissonization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Understanding the Generalization Error of Markov algorithms through Poissonization" />
+<meta name="author" content="Benjamin Dupuis, Maxime Haddouche, George Deligiannidis, Umut Simsekli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using continuous-time stochastic differential equation (SDE) proxies to stochastic optimization algorithms has proven fruitful for understanding their generalization abilities. A significant part of these approaches are based on the so-called ``entropy flows’’, which greatly simplify the generalization analysis. Unfortunately, such well-structured entropy flows cannot be obtained for most discrete-time algorithms, and the existing SDE approaches remain limited to specific noise and algorithmic structures. We aim to alleviate this issue by introducing a generic framework for analyzing the generalization error of Markov algorithms through `Poissonization’, a continuous-time approximation of discrete-time processes with formal approximation guarantees. Through this approach, we first develop a novel entropy flow, which directly leads to PAC-Bayesian generalization bounds. We then draw novel links to modified versions of the celebrated logarithmic Sobolev inequalities (LSI), identify cases where such LSIs are satisfied, and obtain improved bounds. Beyond its generality, our framework allows exploiting specific properties of learning algorithms. In particular, we incorporate the noise structure of different algorithm types - namely, those with additional noise injections (noisy) and those without (non-noisy) - through various technical tools. This illustrates the capacity of our methods to achieve known (yet, Poissonized) and new generalization bounds." />
+<meta property="og:description" content="Using continuous-time stochastic differential equation (SDE) proxies to stochastic optimization algorithms has proven fruitful for understanding their generalization abilities. A significant part of these approaches are based on the so-called ``entropy flows’’, which greatly simplify the generalization analysis. Unfortunately, such well-structured entropy flows cannot be obtained for most discrete-time algorithms, and the existing SDE approaches remain limited to specific noise and algorithmic structures. We aim to alleviate this issue by introducing a generic framework for analyzing the generalization error of Markov algorithms through `Poissonization’, a continuous-time approximation of discrete-time processes with formal approximation guarantees. Through this approach, we first develop a novel entropy flow, which directly leads to PAC-Bayesian generalization bounds. We then draw novel links to modified versions of the celebrated logarithmic Sobolev inequalities (LSI), identify cases where such LSIs are satisfied, and obtain improved bounds. Beyond its generality, our framework allows exploiting specific properties of learning algorithms. In particular, we incorporate the noise structure of different algorithm types - namely, those with additional noise injections (noisy) and those without (non-noisy) - through various technical tools. This illustrates the capacity of our methods to achieve known (yet, Poissonized) and new generalization bounds." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/02/12/UnderstandingtheGeneralizationErrorofMarkovalgorithmsthroughPoissonization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/02/12/UnderstandingtheGeneralizationErrorofMarkovalgorithmsthroughPoissonization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding the Generalization Error of Markov algorithms through Poissonization" />
+<script type="application/ld+json">
+{"description":"Using continuous-time stochastic differential equation (SDE) proxies to stochastic optimization algorithms has proven fruitful for understanding their generalization abilities. A significant part of these approaches are based on the so-called ``entropy flows’’, which greatly simplify the generalization analysis. Unfortunately, such well-structured entropy flows cannot be obtained for most discrete-time algorithms, and the existing SDE approaches remain limited to specific noise and algorithmic structures. We aim to alleviate this issue by introducing a generic framework for analyzing the generalization error of Markov algorithms through `Poissonization’, a continuous-time approximation of discrete-time processes with formal approximation guarantees. Through this approach, we first develop a novel entropy flow, which directly leads to PAC-Bayesian generalization bounds. We then draw novel links to modified versions of the celebrated logarithmic Sobolev inequalities (LSI), identify cases where such LSIs are satisfied, and obtain improved bounds. Beyond its generality, our framework allows exploiting specific properties of learning algorithms. In particular, we incorporate the noise structure of different algorithm types - namely, those with additional noise injections (noisy) and those without (non-noisy) - through various technical tools. This illustrates the capacity of our methods to achieve known (yet, Poissonized) and new generalization bounds.","headline":"Understanding the Generalization Error of Markov algorithms through Poissonization","dateModified":"2025-02-12T00:00:00+00:00","datePublished":"2025-02-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/02/12/UnderstandingtheGeneralizationErrorofMarkovalgorithmsthroughPoissonization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/02/12/UnderstandingtheGeneralizationErrorofMarkovalgorithmsthroughPoissonization.html","author":{"@type":"Person","name":"Benjamin Dupuis, Maxime Haddouche, George Deligiannidis, Umut Simsekli"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-12 00:00:00 +0000">02-12</time>
+  </p>
+  
+  <h1>Understanding the Generalization Error of Markov algorithms through Poissonization</h1>
+  <br>Benjamin Dupuis, Maxime Haddouche, George Deligiannidis, Umut Simsekli</h3>
+  <br> [stat.ML]
+
+  <p>Using continuous-time stochastic differential equation (SDE) proxies to stochastic optimization algorithms has proven fruitful for understanding their generalization abilities. A significant part of these approaches are based on the so-called ``entropy flows’’, which greatly simplify the generalization analysis. Unfortunately, such well-structured entropy flows cannot be obtained for most discrete-time algorithms, and the existing SDE approaches remain limited to specific noise and algorithmic structures. We aim to alleviate this issue by introducing a generic framework for analyzing the generalization error of Markov algorithms through `Poissonization’, a continuous-time approximation of discrete-time processes with formal approximation guarantees. Through this approach, we first develop a novel entropy flow, which directly leads to PAC-Bayesian generalization bounds. We then draw novel links to modified versions of the celebrated logarithmic Sobolev inequalities (LSI), identify cases where such LSIs are satisfied, and obtain improved bounds. Beyond its generality, our framework allows exploiting specific properties of learning algorithms. In particular, we incorporate the noise structure of different algorithm types - namely, those with additional noise injections (noisy) and those without (non-noisy) - through various technical tools. This illustrates the capacity of our methods to achieve known (yet, Poissonized) and new generalization bounds.</p>
+
+<p><a href="https://arxiv.org/abs/2502.07584">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
