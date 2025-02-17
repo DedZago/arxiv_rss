@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Solving Empirical Bayes via Transformers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Solving Empirical Bayes via Transformers" />
+<meta name="author" content="Anzo Teh, Mark Jabbour, Yury Polyanskiy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This work applies modern AI tools (transformers) to solving one of the oldest statistical problems: Poisson means under empirical Bayes (Poisson-EB) setting. In Poisson-EB a high-dimensional mean vector $\theta$ (with iid coordinates sampled from an unknown prior $\pi$) is estimated on the basis of $X=\mathrm{Poisson}(\theta)$. A transformer model is pre-trained on a set of synthetically generated pairs $(X,\theta)$ and learns to do in-context learning (ICL) by adapting to unknown $\pi$. Theoretically, we show that a sufficiently wide transformer can achieve vanishing regret with respect to an oracle estimator who knows $\pi$ as dimension grows to infinity. Practically, we discover that already very small models (100k parameters) are able to outperform the best classical algorithm (non-parametric maximum likelihood, or NPMLE) both in runtime and validation loss, which we compute on out-of-distribution synthetic data as well as real-world datasets (NHL hockey, MLB baseball, BookCorpusOpen). Finally, by using linear probes, we confirm that the transformer’s EB estimator appears to internally work differently from either NPMLE or Robbins’ estimators." />
+<meta property="og:description" content="This work applies modern AI tools (transformers) to solving one of the oldest statistical problems: Poisson means under empirical Bayes (Poisson-EB) setting. In Poisson-EB a high-dimensional mean vector $\theta$ (with iid coordinates sampled from an unknown prior $\pi$) is estimated on the basis of $X=\mathrm{Poisson}(\theta)$. A transformer model is pre-trained on a set of synthetically generated pairs $(X,\theta)$ and learns to do in-context learning (ICL) by adapting to unknown $\pi$. Theoretically, we show that a sufficiently wide transformer can achieve vanishing regret with respect to an oracle estimator who knows $\pi$ as dimension grows to infinity. Practically, we discover that already very small models (100k parameters) are able to outperform the best classical algorithm (non-parametric maximum likelihood, or NPMLE) both in runtime and validation loss, which we compute on out-of-distribution synthetic data as well as real-world datasets (NHL hockey, MLB baseball, BookCorpusOpen). Finally, by using linear probes, we confirm that the transformer’s EB estimator appears to internally work differently from either NPMLE or Robbins’ estimators." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/02/17/SolvingEmpiricalBayesviaTransformers.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/02/17/SolvingEmpiricalBayesviaTransformers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Solving Empirical Bayes via Transformers" />
+<script type="application/ld+json">
+{"description":"This work applies modern AI tools (transformers) to solving one of the oldest statistical problems: Poisson means under empirical Bayes (Poisson-EB) setting. In Poisson-EB a high-dimensional mean vector $\\theta$ (with iid coordinates sampled from an unknown prior $\\pi$) is estimated on the basis of $X=\\mathrm{Poisson}(\\theta)$. A transformer model is pre-trained on a set of synthetically generated pairs $(X,\\theta)$ and learns to do in-context learning (ICL) by adapting to unknown $\\pi$. Theoretically, we show that a sufficiently wide transformer can achieve vanishing regret with respect to an oracle estimator who knows $\\pi$ as dimension grows to infinity. Practically, we discover that already very small models (100k parameters) are able to outperform the best classical algorithm (non-parametric maximum likelihood, or NPMLE) both in runtime and validation loss, which we compute on out-of-distribution synthetic data as well as real-world datasets (NHL hockey, MLB baseball, BookCorpusOpen). Finally, by using linear probes, we confirm that the transformer’s EB estimator appears to internally work differently from either NPMLE or Robbins’ estimators.","author":{"@type":"Person","name":"Anzo Teh, Mark Jabbour, Yury Polyanskiy"},"headline":"Solving Empirical Bayes via Transformers","dateModified":"2025-02-17T00:00:00+00:00","datePublished":"2025-02-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/02/17/SolvingEmpiricalBayesviaTransformers.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/02/17/SolvingEmpiricalBayesviaTransformers.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-17 00:00:00 +0000">02-17</time>
+  </p>
+  
+  <h1>Solving Empirical Bayes via Transformers</h1>
+  <br>Anzo Teh, Mark Jabbour, Yury Polyanskiy</h3>
+  <br> [stat.ML]
+
+  <p>This work applies modern AI tools (transformers) to solving one of the oldest statistical problems: Poisson means under empirical Bayes (Poisson-EB) setting. In Poisson-EB a high-dimensional mean vector $\theta$ (with iid coordinates sampled from an unknown prior $\pi$) is estimated on the basis of $X=\mathrm{Poisson}(\theta)$. A transformer model is pre-trained on a set of synthetically generated pairs $(X,\theta)$ and learns to do in-context learning (ICL) by adapting to unknown $\pi$. Theoretically, we show that a sufficiently wide transformer can achieve vanishing regret with respect to an oracle estimator who knows $\pi$ as dimension grows to infinity. Practically, we discover that already very small models (100k parameters) are able to outperform the best classical algorithm (non-parametric maximum likelihood, or NPMLE) both in runtime and validation loss, which we compute on out-of-distribution synthetic data as well as real-world datasets (NHL hockey, MLB baseball, BookCorpusOpen). Finally, by using linear probes, we confirm that the transformer’s EB estimator appears to internally work differently from either NPMLE or Robbins’ estimators.</p>
+
+<p><a href="https://arxiv.org/abs/2502.09844">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
