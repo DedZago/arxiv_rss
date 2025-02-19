@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control" />
+<meta name="author" content="Ehsan Futuhi, Shayan Karimi, Chao Gao, Martin Müller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider deep deterministic policy gradient (DDPG) in the context of reinforcement learning with sparse rewards. To enhance exploration, we introduce a search procedure, \emph{${\epsilon}{t}$-greedy}, which generates exploratory options for exploring less-visited states. We prove that search using $\epsilon t$-greedy has polynomial sample complexity under mild MDP assumptions. To more efficiently use the information provided by rewarded transitions, we develop a new dual experience replay buffer framework, \emph{GDRB}, and implement \emph{longest n-step returns}. The resulting algorithm, \emph{ETGL-DDPG}, integrates all three techniques: \bm{$\epsilon t$}-greedy, \textbf{G}DRB, and \textbf{L}ongest $n$-step, into DDPG. We evaluate ETGL-DDPG on standard benchmarks and demonstrate that it outperforms DDPG, as well as other state-of-the-art methods, across all tested sparse-reward continuous environments. Ablation studies further highlight how each strategy individually enhances the performance of DDPG in this setting." />
+<meta property="og:description" content="We consider deep deterministic policy gradient (DDPG) in the context of reinforcement learning with sparse rewards. To enhance exploration, we introduce a search procedure, \emph{${\epsilon}{t}$-greedy}, which generates exploratory options for exploring less-visited states. We prove that search using $\epsilon t$-greedy has polynomial sample complexity under mild MDP assumptions. To more efficiently use the information provided by rewarded transitions, we develop a new dual experience replay buffer framework, \emph{GDRB}, and implement \emph{longest n-step returns}. The resulting algorithm, \emph{ETGL-DDPG}, integrates all three techniques: \bm{$\epsilon t$}-greedy, \textbf{G}DRB, and \textbf{L}ongest $n$-step, into DDPG. We evaluate ETGL-DDPG on standard benchmarks and demonstrate that it outperforms DDPG, as well as other state-of-the-art methods, across all tested sparse-reward continuous environments. Ablation studies further highlight how each strategy individually enhances the performance of DDPG in this setting." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/02/19/ETGLDDPGADeepDeterministicPolicyGradientAlgorithmforSparseRewardContinuousControl.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/02/19/ETGLDDPGADeepDeterministicPolicyGradientAlgorithmforSparseRewardContinuousControl.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control" />
+<script type="application/ld+json">
+{"description":"We consider deep deterministic policy gradient (DDPG) in the context of reinforcement learning with sparse rewards. To enhance exploration, we introduce a search procedure, \\emph{${\\epsilon}{t}$-greedy}, which generates exploratory options for exploring less-visited states. We prove that search using $\\epsilon t$-greedy has polynomial sample complexity under mild MDP assumptions. To more efficiently use the information provided by rewarded transitions, we develop a new dual experience replay buffer framework, \\emph{GDRB}, and implement \\emph{longest n-step returns}. The resulting algorithm, \\emph{ETGL-DDPG}, integrates all three techniques: \\bm{$\\epsilon t$}-greedy, \\textbf{G}DRB, and \\textbf{L}ongest $n$-step, into DDPG. We evaluate ETGL-DDPG on standard benchmarks and demonstrate that it outperforms DDPG, as well as other state-of-the-art methods, across all tested sparse-reward continuous environments. Ablation studies further highlight how each strategy individually enhances the performance of DDPG in this setting.","author":{"@type":"Person","name":"Ehsan Futuhi, Shayan Karimi, Chao Gao, Martin Müller"},"headline":"ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control","dateModified":"2025-02-19T00:00:00+00:00","datePublished":"2025-02-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/02/19/ETGLDDPGADeepDeterministicPolicyGradientAlgorithmforSparseRewardContinuousControl.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/02/19/ETGLDDPGADeepDeterministicPolicyGradientAlgorithmforSparseRewardContinuousControl.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-19 00:00:00 +0000">02-19</time>
+  </p>
+  
+  <h1>ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control</h1>
+  <br>Ehsan Futuhi, Shayan Karimi, Chao Gao, Martin Müller</h3>
+  <br> [stat.ML]
+
+  <p>We consider deep deterministic policy gradient (DDPG) in the context of reinforcement learning with sparse rewards. To enhance exploration, we introduce a search procedure, \emph{${\epsilon}{t}$-greedy}, which generates exploratory options for exploring less-visited states. We prove that search using $\epsilon t$-greedy has polynomial sample complexity under mild MDP assumptions. To more efficiently use the information provided by rewarded transitions, we develop a new dual experience replay buffer framework, \emph{GDRB}, and implement \emph{longest n-step returns}. The resulting algorithm, \emph{ETGL-DDPG}, integrates all three techniques: \bm{$\epsilon t$}-greedy, \textbf{G}DRB, and \textbf{L}ongest $n$-step, into DDPG. We evaluate ETGL-DDPG on standard benchmarks and demonstrate that it outperforms DDPG, as well as other state-of-the-art methods, across all tested sparse-reward continuous environments. Ablation studies further highlight how each strategy individually enhances the performance of DDPG in this setting.</p>
+
+<p><a href="https://arxiv.org/abs/2410.05225">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
