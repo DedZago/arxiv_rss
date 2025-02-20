@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rethinking Self-Distillation: Label Averaging and Enhanced Soft Label Refinement with Partial Labels</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Rethinking Self-Distillation: Label Averaging and Enhanced Soft Label Refinement with Partial Labels" />
+<meta name="author" content="Hyeonsu Jeong, Hye Won Chung" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We investigate the mechanisms of self-distillation in multi-class classification, particularly in the context of linear probing with fixed feature extractors where traditional feature learning explanations do not apply. Our theoretical analysis reveals that multi-round self-distillation effectively performs label averaging among instances with high feature correlations, governed by the eigenvectors of the Gram matrix derived from input features. This process leads to clustered predictions and improved generalization, mitigating the impact of label noise by reducing the model’s reliance on potentially corrupted labels. We establish conditions under which multi-round self-distillation achieves 100% population accuracy despite label noise. Furthermore, we introduce a novel, efficient single-round self-distillation method using refined partial labels from the teacher’s top two softmax outputs, referred to as the PLL student model. This approach replicates the benefits of multi-round distillation in a single round, achieving comparable or superior performance–especially in high-noise scenarios–while significantly reducing computational cost." />
+<meta property="og:description" content="We investigate the mechanisms of self-distillation in multi-class classification, particularly in the context of linear probing with fixed feature extractors where traditional feature learning explanations do not apply. Our theoretical analysis reveals that multi-round self-distillation effectively performs label averaging among instances with high feature correlations, governed by the eigenvectors of the Gram matrix derived from input features. This process leads to clustered predictions and improved generalization, mitigating the impact of label noise by reducing the model’s reliance on potentially corrupted labels. We establish conditions under which multi-round self-distillation achieves 100% population accuracy despite label noise. Furthermore, we introduce a novel, efficient single-round self-distillation method using refined partial labels from the teacher’s top two softmax outputs, referred to as the PLL student model. This approach replicates the benefits of multi-round distillation in a single round, achieving comparable or superior performance–especially in high-noise scenarios–while significantly reducing computational cost." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/02/20/RethinkingSelfDistillationLabelAveragingandEnhancedSoftLabelRefinementwithPartialLabels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/02/20/RethinkingSelfDistillationLabelAveragingandEnhancedSoftLabelRefinementwithPartialLabels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rethinking Self-Distillation: Label Averaging and Enhanced Soft Label Refinement with Partial Labels" />
+<script type="application/ld+json">
+{"description":"We investigate the mechanisms of self-distillation in multi-class classification, particularly in the context of linear probing with fixed feature extractors where traditional feature learning explanations do not apply. Our theoretical analysis reveals that multi-round self-distillation effectively performs label averaging among instances with high feature correlations, governed by the eigenvectors of the Gram matrix derived from input features. This process leads to clustered predictions and improved generalization, mitigating the impact of label noise by reducing the model’s reliance on potentially corrupted labels. We establish conditions under which multi-round self-distillation achieves 100% population accuracy despite label noise. Furthermore, we introduce a novel, efficient single-round self-distillation method using refined partial labels from the teacher’s top two softmax outputs, referred to as the PLL student model. This approach replicates the benefits of multi-round distillation in a single round, achieving comparable or superior performance–especially in high-noise scenarios–while significantly reducing computational cost.","headline":"Rethinking Self-Distillation: Label Averaging and Enhanced Soft Label Refinement with Partial Labels","dateModified":"2025-02-20T00:00:00+00:00","datePublished":"2025-02-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/02/20/RethinkingSelfDistillationLabelAveragingandEnhancedSoftLabelRefinementwithPartialLabels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/02/20/RethinkingSelfDistillationLabelAveragingandEnhancedSoftLabelRefinementwithPartialLabels.html","author":{"@type":"Person","name":"Hyeonsu Jeong, Hye Won Chung"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-02-20 00:00:00 +0000">02-20</time>
+  </p>
+  
+  <h1>Rethinking Self-Distillation: Label Averaging and Enhanced Soft Label Refinement with Partial Labels</h1>
+  <br>Hyeonsu Jeong, Hye Won Chung</h3>
+  <br> [stat.ML]
+
+  <p>We investigate the mechanisms of self-distillation in multi-class classification, particularly in the context of linear probing with fixed feature extractors where traditional feature learning explanations do not apply. Our theoretical analysis reveals that multi-round self-distillation effectively performs label averaging among instances with high feature correlations, governed by the eigenvectors of the Gram matrix derived from input features. This process leads to clustered predictions and improved generalization, mitigating the impact of label noise by reducing the model’s reliance on potentially corrupted labels. We establish conditions under which multi-round self-distillation achieves 100% population accuracy despite label noise. Furthermore, we introduce a novel, efficient single-round self-distillation method using refined partial labels from the teacher’s top two softmax outputs, referred to as the PLL student model. This approach replicates the benefits of multi-round distillation in a single round, achieving comparable or superior performance–especially in high-noise scenarios–while significantly reducing computational cost.</p>
+
+<p><a href="https://arxiv.org/abs/2402.10482">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
