@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Asymptotic Mean Square Error Optimality of Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the Asymptotic Mean Square Error Optimality of Diffusion Models" />
+<meta name="author" content="Benedikt Fesl, Benedikt Böck, Florian Strasser, Michael Baur, Michael Joham, Wolfgang Utschick" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diffusion models (DMs) as generative priors have recently shown great potential for denoising tasks but lack theoretical understanding with respect to their mean square error (MSE) optimality. This paper proposes a novel denoising strategy inspired by the structure of the MSE-optimal conditional mean estimator (CME). The resulting DM-based denoiser can be conveniently employed using a pre-trained DM, being particularly fast by truncating reverse diffusion steps and not requiring stochastic re-sampling. We present a comprehensive (non-)asymptotic optimality analysis of the proposed diffusion-based denoiser, demonstrating polynomial-time convergence to the CME under mild conditions. Our analysis also derives a novel Lipschitz constant that depends solely on the DM’s hyperparameters. Further, we offer a new perspective on DMs, showing that they inherently combine an asymptotically optimal denoiser with a powerful generator, modifiable by switching re-sampling in the reverse process on or off. The theoretical findings are thoroughly validated with experiments based on various benchmark datasets" />
+<meta property="og:description" content="Diffusion models (DMs) as generative priors have recently shown great potential for denoising tasks but lack theoretical understanding with respect to their mean square error (MSE) optimality. This paper proposes a novel denoising strategy inspired by the structure of the MSE-optimal conditional mean estimator (CME). The resulting DM-based denoiser can be conveniently employed using a pre-trained DM, being particularly fast by truncating reverse diffusion steps and not requiring stochastic re-sampling. We present a comprehensive (non-)asymptotic optimality analysis of the proposed diffusion-based denoiser, demonstrating polynomial-time convergence to the CME under mild conditions. Our analysis also derives a novel Lipschitz constant that depends solely on the DM’s hyperparameters. Further, we offer a new perspective on DMs, showing that they inherently combine an asymptotically optimal denoiser with a powerful generator, modifiable by switching re-sampling in the reverse process on or off. The theoretical findings are thoroughly validated with experiments based on various benchmark datasets" />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/03/04/OntheAsymptoticMeanSquareErrorOptimalityofDiffusionModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/03/04/OntheAsymptoticMeanSquareErrorOptimalityofDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the Asymptotic Mean Square Error Optimality of Diffusion Models" />
+<script type="application/ld+json">
+{"description":"Diffusion models (DMs) as generative priors have recently shown great potential for denoising tasks but lack theoretical understanding with respect to their mean square error (MSE) optimality. This paper proposes a novel denoising strategy inspired by the structure of the MSE-optimal conditional mean estimator (CME). The resulting DM-based denoiser can be conveniently employed using a pre-trained DM, being particularly fast by truncating reverse diffusion steps and not requiring stochastic re-sampling. We present a comprehensive (non-)asymptotic optimality analysis of the proposed diffusion-based denoiser, demonstrating polynomial-time convergence to the CME under mild conditions. Our analysis also derives a novel Lipschitz constant that depends solely on the DM’s hyperparameters. Further, we offer a new perspective on DMs, showing that they inherently combine an asymptotically optimal denoiser with a powerful generator, modifiable by switching re-sampling in the reverse process on or off. The theoretical findings are thoroughly validated with experiments based on various benchmark datasets","author":{"@type":"Person","name":"Benedikt Fesl, Benedikt Böck, Florian Strasser, Michael Baur, Michael Joham, Wolfgang Utschick"},"headline":"On the Asymptotic Mean Square Error Optimality of Diffusion Models","dateModified":"2025-03-04T00:00:00+00:00","datePublished":"2025-03-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/03/04/OntheAsymptoticMeanSquareErrorOptimalityofDiffusionModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/03/04/OntheAsymptoticMeanSquareErrorOptimalityofDiffusionModels.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-04 00:00:00 +0000">03-04</time>
+  </p>
+  
+  <h1>On the Asymptotic Mean Square Error Optimality of Diffusion Models</h1>
+  <br>Benedikt Fesl, Benedikt Böck, Florian Strasser, Michael Baur, Michael Joham, Wolfgang Utschick</h3>
+  <br> [stat.ML]
+
+  <p>Diffusion models (DMs) as generative priors have recently shown great potential for denoising tasks but lack theoretical understanding with respect to their mean square error (MSE) optimality. This paper proposes a novel denoising strategy inspired by the structure of the MSE-optimal conditional mean estimator (CME). The resulting DM-based denoiser can be conveniently employed using a pre-trained DM, being particularly fast by truncating reverse diffusion steps and not requiring stochastic re-sampling. We present a comprehensive (non-)asymptotic optimality analysis of the proposed diffusion-based denoiser, demonstrating polynomial-time convergence to the CME under mild conditions. Our analysis also derives a novel Lipschitz constant that depends solely on the DM’s hyperparameters. Further, we offer a new perspective on DMs, showing that they inherently combine an asymptotically optimal denoiser with a powerful generator, modifiable by switching re-sampling in the reverse process on or off. The theoretical findings are thoroughly validated with experiments based on various benchmark datasets</p>
+
+<p><a href="https://arxiv.org/abs/2403.02957">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

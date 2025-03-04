@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Feature Averaging: An Implicit Bias of Gradient Descent Leading to Non-Robustness in Neural Networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Feature Averaging: An Implicit Bias of Gradient Descent Leading to Non-Robustness in Neural Networks" />
+<meta name="author" content="Binghui Li, Zhixuan Pan, Kaifeng Lyu, Jian Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this work, we investigate a particular implicit bias in gradient descent training, which we term “Feature Averaging,” and argue that it is one of the principal factors contributing to the non-robustness of deep neural networks. We show that, even when multiple discriminative features are present in the input data, neural networks trained by gradient descent tend to rely on an average (or a certain combination) of these features for classification, rather than distinguishing and leveraging each feature individually. Specifically, we provide a detailed theoretical analysis of the training dynamics of two-layer ReLU networks on a binary classification task, where the data distribution consists of multiple clusters with mutually orthogonal centers. We rigorously prove that gradient descent biases the network towards feature averaging, where the weights of each hidden neuron represent an average of the cluster centers (each corresponding to a distinct feature), thereby making the network vulnerable to input perturbations aligned with the negative direction of the averaged features. On the positive side, we demonstrate that this vulnerability can be mitigated through more granular supervision. In particular, we prove that a two-layer ReLU network can achieve optimal robustness when trained to classify individual features rather than merely the original binary classes. Finally, we validate our theoretical findings with experiments on synthetic datasets, MNIST, and CIFAR-10, and confirm the prevalence of feature averaging and its impact on adversarial robustness. We hope these theoretical and empirical insights deepen the understanding of how gradient descent shapes feature learning and adversarial robustness, and how more detailed supervision can enhance robustness." />
+<meta property="og:description" content="In this work, we investigate a particular implicit bias in gradient descent training, which we term “Feature Averaging,” and argue that it is one of the principal factors contributing to the non-robustness of deep neural networks. We show that, even when multiple discriminative features are present in the input data, neural networks trained by gradient descent tend to rely on an average (or a certain combination) of these features for classification, rather than distinguishing and leveraging each feature individually. Specifically, we provide a detailed theoretical analysis of the training dynamics of two-layer ReLU networks on a binary classification task, where the data distribution consists of multiple clusters with mutually orthogonal centers. We rigorously prove that gradient descent biases the network towards feature averaging, where the weights of each hidden neuron represent an average of the cluster centers (each corresponding to a distinct feature), thereby making the network vulnerable to input perturbations aligned with the negative direction of the averaged features. On the positive side, we demonstrate that this vulnerability can be mitigated through more granular supervision. In particular, we prove that a two-layer ReLU network can achieve optimal robustness when trained to classify individual features rather than merely the original binary classes. Finally, we validate our theoretical findings with experiments on synthetic datasets, MNIST, and CIFAR-10, and confirm the prevalence of feature averaging and its impact on adversarial robustness. We hope these theoretical and empirical insights deepen the understanding of how gradient descent shapes feature learning and adversarial robustness, and how more detailed supervision can enhance robustness." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/03/04/FeatureAveragingAnImplicitBiasofGradientDescentLeadingtoNonRobustnessinNeuralNetworks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/03/04/FeatureAveragingAnImplicitBiasofGradientDescentLeadingtoNonRobustnessinNeuralNetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Feature Averaging: An Implicit Bias of Gradient Descent Leading to Non-Robustness in Neural Networks" />
+<script type="application/ld+json">
+{"description":"In this work, we investigate a particular implicit bias in gradient descent training, which we term “Feature Averaging,” and argue that it is one of the principal factors contributing to the non-robustness of deep neural networks. We show that, even when multiple discriminative features are present in the input data, neural networks trained by gradient descent tend to rely on an average (or a certain combination) of these features for classification, rather than distinguishing and leveraging each feature individually. Specifically, we provide a detailed theoretical analysis of the training dynamics of two-layer ReLU networks on a binary classification task, where the data distribution consists of multiple clusters with mutually orthogonal centers. We rigorously prove that gradient descent biases the network towards feature averaging, where the weights of each hidden neuron represent an average of the cluster centers (each corresponding to a distinct feature), thereby making the network vulnerable to input perturbations aligned with the negative direction of the averaged features. On the positive side, we demonstrate that this vulnerability can be mitigated through more granular supervision. In particular, we prove that a two-layer ReLU network can achieve optimal robustness when trained to classify individual features rather than merely the original binary classes. Finally, we validate our theoretical findings with experiments on synthetic datasets, MNIST, and CIFAR-10, and confirm the prevalence of feature averaging and its impact on adversarial robustness. We hope these theoretical and empirical insights deepen the understanding of how gradient descent shapes feature learning and adversarial robustness, and how more detailed supervision can enhance robustness.","author":{"@type":"Person","name":"Binghui Li, Zhixuan Pan, Kaifeng Lyu, Jian Li"},"headline":"Feature Averaging: An Implicit Bias of Gradient Descent Leading to Non-Robustness in Neural Networks","dateModified":"2025-03-04T00:00:00+00:00","datePublished":"2025-03-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/03/04/FeatureAveragingAnImplicitBiasofGradientDescentLeadingtoNonRobustnessinNeuralNetworks.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/03/04/FeatureAveragingAnImplicitBiasofGradientDescentLeadingtoNonRobustnessinNeuralNetworks.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-04 00:00:00 +0000">03-04</time>
+  </p>
+  
+  <h1>Feature Averaging: An Implicit Bias of Gradient Descent Leading to Non-Robustness in Neural Networks</h1>
+  <br>Binghui Li, Zhixuan Pan, Kaifeng Lyu, Jian Li</h3>
+  <br> [stat.ML]
+
+  <p>In this work, we investigate a particular implicit bias in gradient descent training, which we term “Feature Averaging,” and argue that it is one of the principal factors contributing to the non-robustness of deep neural networks. We show that, even when multiple discriminative features are present in the input data, neural networks trained by gradient descent tend to rely on an average (or a certain combination) of these features for classification, rather than distinguishing and leveraging each feature individually. Specifically, we provide a detailed theoretical analysis of the training dynamics of two-layer ReLU networks on a binary classification task, where the data distribution consists of multiple clusters with mutually orthogonal centers. We rigorously prove that gradient descent biases the network towards feature averaging, where the weights of each hidden neuron represent an average of the cluster centers (each corresponding to a distinct feature), thereby making the network vulnerable to input perturbations aligned with the negative direction of the averaged features. On the positive side, we demonstrate that this vulnerability can be mitigated through more granular supervision. In particular, we prove that a two-layer ReLU network can achieve optimal robustness when trained to classify individual features rather than merely the original binary classes. Finally, we validate our theoretical findings with experiments on synthetic datasets, MNIST, and CIFAR-10, and confirm the prevalence of feature averaging and its impact on adversarial robustness. We hope these theoretical and empirical insights deepen the understanding of how gradient descent shapes feature learning and adversarial robustness, and how more detailed supervision can enhance robustness.</p>
+
+<p><a href="https://arxiv.org/abs/2410.10322">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
