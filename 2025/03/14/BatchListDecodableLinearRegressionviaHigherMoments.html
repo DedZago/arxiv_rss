@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Batch List-Decodable Linear Regression via Higher Moments</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Batch List-Decodable Linear Regression via Higher Moments" />
+<meta name="author" content="Ilias Diakonikolas, Daniel M. Kane, Sushrut Karmalkar, Sihan Liu, Thanasis Pittas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study the task of list-decodable linear regression using batches. A batch is called clean if it consists of i.i.d. samples from an unknown linear regression distribution. For a parameter $\alpha \in (0, 1/2)$, an unknown $\alpha$-fraction of the batches are clean and no assumptions are made on the remaining ones. The goal is to output a small list of vectors at least one of which is close to the true regressor vector in $\ell_2$-norm. [DJKS23] gave an efficient algorithm, under natural distributional assumptions, with the following guarantee. Assuming that the batch size $n$ satisfies $n \geq \tilde{\Omega}(\alpha^{-1})$ and the number of batches is $m = \mathrm{poly}(d, n, 1/\alpha)$, their algorithm runs in polynomial time and outputs a list of $O(1/\alpha^2)$ vectors at least one of which is $\tilde{O}(\alpha^{-1/2}/\sqrt{n})$ close to the target regressor. Here we design a new polynomial time algorithm with significantly stronger guarantees under the assumption that the low-degree moments of the covariates distribution are Sum-of-Squares (SoS) certifiably bounded. Specifically, for any constant $\delta&gt;0$, as long as the batch size is $n \geq \Omega_{\delta}(\alpha^{-\delta})$ and the degree-$\Theta(1/\delta)$ moments of the covariates are SoS certifiably bounded, our algorithm uses $m = \mathrm{poly}((dn)^{1/\delta}, 1/\alpha)$ batches, runs in polynomial-time, and outputs an $O(1/\alpha)$-sized list of vectors one of which is $O(\alpha^{-\delta/2}/\sqrt{n})$ close to the target. That is, our algorithm achieves substantially smaller minimum batch size and final error, while achieving the optimal list size. Our approach uses higher-order moment information by carefully combining the SoS paradigm interleaved with an iterative method and a novel list pruning procedure. In the process, we give an SoS proof of the Marcinkiewicz-Zygmund inequality that may be of broader applicability." />
+<meta property="og:description" content="We study the task of list-decodable linear regression using batches. A batch is called clean if it consists of i.i.d. samples from an unknown linear regression distribution. For a parameter $\alpha \in (0, 1/2)$, an unknown $\alpha$-fraction of the batches are clean and no assumptions are made on the remaining ones. The goal is to output a small list of vectors at least one of which is close to the true regressor vector in $\ell_2$-norm. [DJKS23] gave an efficient algorithm, under natural distributional assumptions, with the following guarantee. Assuming that the batch size $n$ satisfies $n \geq \tilde{\Omega}(\alpha^{-1})$ and the number of batches is $m = \mathrm{poly}(d, n, 1/\alpha)$, their algorithm runs in polynomial time and outputs a list of $O(1/\alpha^2)$ vectors at least one of which is $\tilde{O}(\alpha^{-1/2}/\sqrt{n})$ close to the target regressor. Here we design a new polynomial time algorithm with significantly stronger guarantees under the assumption that the low-degree moments of the covariates distribution are Sum-of-Squares (SoS) certifiably bounded. Specifically, for any constant $\delta&gt;0$, as long as the batch size is $n \geq \Omega_{\delta}(\alpha^{-\delta})$ and the degree-$\Theta(1/\delta)$ moments of the covariates are SoS certifiably bounded, our algorithm uses $m = \mathrm{poly}((dn)^{1/\delta}, 1/\alpha)$ batches, runs in polynomial-time, and outputs an $O(1/\alpha)$-sized list of vectors one of which is $O(\alpha^{-\delta/2}/\sqrt{n})$ close to the target. That is, our algorithm achieves substantially smaller minimum batch size and final error, while achieving the optimal list size. Our approach uses higher-order moment information by carefully combining the SoS paradigm interleaved with an iterative method and a novel list pruning procedure. In the process, we give an SoS proof of the Marcinkiewicz-Zygmund inequality that may be of broader applicability." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/03/14/BatchListDecodableLinearRegressionviaHigherMoments.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/03/14/BatchListDecodableLinearRegressionviaHigherMoments.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Batch List-Decodable Linear Regression via Higher Moments" />
+<script type="application/ld+json">
+{"description":"We study the task of list-decodable linear regression using batches. A batch is called clean if it consists of i.i.d. samples from an unknown linear regression distribution. For a parameter $\\alpha \\in (0, 1/2)$, an unknown $\\alpha$-fraction of the batches are clean and no assumptions are made on the remaining ones. The goal is to output a small list of vectors at least one of which is close to the true regressor vector in $\\ell_2$-norm. [DJKS23] gave an efficient algorithm, under natural distributional assumptions, with the following guarantee. Assuming that the batch size $n$ satisfies $n \\geq \\tilde{\\Omega}(\\alpha^{-1})$ and the number of batches is $m = \\mathrm{poly}(d, n, 1/\\alpha)$, their algorithm runs in polynomial time and outputs a list of $O(1/\\alpha^2)$ vectors at least one of which is $\\tilde{O}(\\alpha^{-1/2}/\\sqrt{n})$ close to the target regressor. Here we design a new polynomial time algorithm with significantly stronger guarantees under the assumption that the low-degree moments of the covariates distribution are Sum-of-Squares (SoS) certifiably bounded. Specifically, for any constant $\\delta&gt;0$, as long as the batch size is $n \\geq \\Omega_{\\delta}(\\alpha^{-\\delta})$ and the degree-$\\Theta(1/\\delta)$ moments of the covariates are SoS certifiably bounded, our algorithm uses $m = \\mathrm{poly}((dn)^{1/\\delta}, 1/\\alpha)$ batches, runs in polynomial-time, and outputs an $O(1/\\alpha)$-sized list of vectors one of which is $O(\\alpha^{-\\delta/2}/\\sqrt{n})$ close to the target. That is, our algorithm achieves substantially smaller minimum batch size and final error, while achieving the optimal list size. Our approach uses higher-order moment information by carefully combining the SoS paradigm interleaved with an iterative method and a novel list pruning procedure. In the process, we give an SoS proof of the Marcinkiewicz-Zygmund inequality that may be of broader applicability.","author":{"@type":"Person","name":"Ilias Diakonikolas, Daniel M. Kane, Sushrut Karmalkar, Sihan Liu, Thanasis Pittas"},"headline":"Batch List-Decodable Linear Regression via Higher Moments","dateModified":"2025-03-14T00:00:00+00:00","datePublished":"2025-03-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/03/14/BatchListDecodableLinearRegressionviaHigherMoments.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/03/14/BatchListDecodableLinearRegressionviaHigherMoments.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-14 00:00:00 +0000">03-14</time>
+  </p>
+  
+  <h1>Batch List-Decodable Linear Regression via Higher Moments</h1>
+  <br>Ilias Diakonikolas, Daniel M. Kane, Sushrut Karmalkar, Sihan Liu, Thanasis Pittas</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>We study the task of list-decodable linear regression using batches. A batch is called clean if it consists of i.i.d. samples from an unknown linear regression distribution. For a parameter $\alpha \in (0, 1/2)$, an unknown $\alpha$-fraction of the batches are clean and no assumptions are made on the remaining ones. The goal is to output a small list of vectors at least one of which is close to the true regressor vector in $\ell_2$-norm. [DJKS23] gave an efficient algorithm, under natural distributional assumptions, with the following guarantee. Assuming that the batch size $n$ satisfies $n \geq \tilde{\Omega}(\alpha^{-1})$ and the number of batches is $m = \mathrm{poly}(d, n, 1/\alpha)$, their algorithm runs in polynomial time and outputs a list of $O(1/\alpha^2)$ vectors at least one of which is $\tilde{O}(\alpha^{-1/2}/\sqrt{n})$ close to the target regressor. Here we design a new polynomial time algorithm with significantly stronger guarantees under the assumption that the low-degree moments of the covariates distribution are Sum-of-Squares (SoS) certifiably bounded. Specifically, for any constant $\delta&gt;0$, as long as the batch size is $n \geq \Omega_{\delta}(\alpha^{-\delta})$ and the degree-$\Theta(1/\delta)$ moments of the covariates are SoS certifiably bounded, our algorithm uses $m = \mathrm{poly}((dn)^{1/\delta}, 1/\alpha)$ batches, runs in polynomial-time, and outputs an $O(1/\alpha)$-sized list of vectors one of which is $O(\alpha^{-\delta/2}/\sqrt{n})$ close to the target. That is, our algorithm achieves substantially smaller minimum batch size and final error, while achieving the optimal list size. Our approach uses higher-order moment information by carefully combining the SoS paradigm interleaved with an iterative method and a novel list pruning procedure. In the process, we give an SoS proof of the Marcinkiewicz-Zygmund inequality that may be of broader applicability.</p>
+
+<p><a href="https://arxiv.org/abs/2503.09802">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
