@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On a Neural Implementation of Brenier's Polar Factorization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On a Neural Implementation of Brenier’s Polar Factorization" />
+<meta name="author" content="Nina Vesseron, Marco Cuturi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In 1991, Brenier proved a theorem that generalizes the polar decomposition for square matrices – factored as PSD $\times$ unitary – to any vector field $F:\mathbb{R}^d\rightarrow \mathbb{R}^d$. The theorem, known as the polar factorization theorem, states that any field $F$ can be recovered as the composition of the gradient of a convex function $u$ with a measure-preserving map $M$, namely $F=\nabla u \circ M$. We propose a practical implementation of this far-reaching theoretical result, and explore possible uses within machine learning. The theorem is closely related to optimal transport (OT) theory, and we borrow from recent advances in the field of neural optimal transport to parameterize the potential $u$ as an input convex neural network. The map $M$ can be either evaluated pointwise using $u^$, the convex conjugate of $u$, through the identity $M=\nabla u^ \circ F$, or learned as an auxiliary network. Because $M$ is, in general, not injective, we consider the additional task of estimating the ill-posed inverse map that can approximate the pre-image measure $M^{-1}$ using a stochastic generator. We illustrate possible applications of Brenier’s polar factorization to non-convex optimization problems, as well as sampling of densities that are not log-concave." />
+<meta property="og:description" content="In 1991, Brenier proved a theorem that generalizes the polar decomposition for square matrices – factored as PSD $\times$ unitary – to any vector field $F:\mathbb{R}^d\rightarrow \mathbb{R}^d$. The theorem, known as the polar factorization theorem, states that any field $F$ can be recovered as the composition of the gradient of a convex function $u$ with a measure-preserving map $M$, namely $F=\nabla u \circ M$. We propose a practical implementation of this far-reaching theoretical result, and explore possible uses within machine learning. The theorem is closely related to optimal transport (OT) theory, and we borrow from recent advances in the field of neural optimal transport to parameterize the potential $u$ as an input convex neural network. The map $M$ can be either evaluated pointwise using $u^$, the convex conjugate of $u$, through the identity $M=\nabla u^ \circ F$, or learned as an auxiliary network. Because $M$ is, in general, not injective, we consider the additional task of estimating the ill-posed inverse map that can approximate the pre-image measure $M^{-1}$ using a stochastic generator. We illustrate possible applications of Brenier’s polar factorization to non-convex optimization problems, as well as sampling of densities that are not log-concave." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/03/17/OnaNeuralImplementationofBreniersPolarFactorization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/03/17/OnaNeuralImplementationofBreniersPolarFactorization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On a Neural Implementation of Brenier’s Polar Factorization" />
+<script type="application/ld+json">
+{"description":"In 1991, Brenier proved a theorem that generalizes the polar decomposition for square matrices – factored as PSD $\\times$ unitary – to any vector field $F:\\mathbb{R}^d\\rightarrow \\mathbb{R}^d$. The theorem, known as the polar factorization theorem, states that any field $F$ can be recovered as the composition of the gradient of a convex function $u$ with a measure-preserving map $M$, namely $F=\\nabla u \\circ M$. We propose a practical implementation of this far-reaching theoretical result, and explore possible uses within machine learning. The theorem is closely related to optimal transport (OT) theory, and we borrow from recent advances in the field of neural optimal transport to parameterize the potential $u$ as an input convex neural network. The map $M$ can be either evaluated pointwise using $u^$, the convex conjugate of $u$, through the identity $M=\\nabla u^ \\circ F$, or learned as an auxiliary network. Because $M$ is, in general, not injective, we consider the additional task of estimating the ill-posed inverse map that can approximate the pre-image measure $M^{-1}$ using a stochastic generator. We illustrate possible applications of Brenier’s polar factorization to non-convex optimization problems, as well as sampling of densities that are not log-concave.","author":{"@type":"Person","name":"Nina Vesseron, Marco Cuturi"},"headline":"On a Neural Implementation of Brenier’s Polar Factorization","dateModified":"2025-03-17T00:00:00+00:00","datePublished":"2025-03-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/03/17/OnaNeuralImplementationofBreniersPolarFactorization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/03/17/OnaNeuralImplementationofBreniersPolarFactorization.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-17 00:00:00 +0000">03-17</time>
+  </p>
+  
+  <h1>On a Neural Implementation of Brenier's Polar Factorization</h1>
+  <br>Nina Vesseron, Marco Cuturi</h3>
+  <br> [stat.ML]
+
+  <p>In 1991, Brenier proved a theorem that generalizes the polar decomposition for square matrices – factored as PSD $\times$ unitary – to any vector field $F:\mathbb{R}^d\rightarrow \mathbb{R}^d$. The theorem, known as the polar factorization theorem, states that any field $F$ can be recovered as the composition of the gradient of a convex function $u$ with a measure-preserving map $M$, namely $F=\nabla u \circ M$. We propose a practical implementation of this far-reaching theoretical result, and explore possible uses within machine learning. The theorem is closely related to optimal transport (OT) theory, and we borrow from recent advances in the field of neural optimal transport to parameterize the potential $u$ as an input convex neural network. The map $M$ can be either evaluated pointwise using $u^<em>$, the convex conjugate of $u$, through the identity $M=\nabla u^</em> \circ F$, or learned as an auxiliary network. Because $M$ is, in general, not injective, we consider the additional task of estimating the ill-posed inverse map that can approximate the pre-image measure $M^{-1}$ using a stochastic generator. We illustrate possible applications of Brenier’s polar factorization to non-convex optimization problems, as well as sampling of densities that are not log-concave.</p>
+
+<p><a href="https://arxiv.org/abs/2403.03071">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
