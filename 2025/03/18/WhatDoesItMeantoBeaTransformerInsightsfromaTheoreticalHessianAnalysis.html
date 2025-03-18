@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>What Does It Mean to Be a Transformer? Insights from a Theoretical Hessian Analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="What Does It Mean to Be a Transformer? Insights from a Theoretical Hessian Analysis" />
+<meta name="author" content="Weronika Ormaniec, Felix Dangel, Sidak Pal Singh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Transformer architecture has inarguably revolutionized deep learning, overtaking classical architectures like multi-layer perceptrons (MLPs) and convolutional neural networks (CNNs). At its core, the attention block differs in form and functionality from most other architectural components in deep learning–to the extent that, in comparison to MLPs/CNNs, Transformers are more often accompanied by adaptive optimizers, layer normalization, learning rate warmup, etc. The root causes behind these outward manifestations and the precise mechanisms that govern them remain poorly understood. In this work, we bridge this gap by providing a fundamental understanding of what distinguishes the Transformer from the other architectures–grounded in a theoretical comparison of the (loss) Hessian. Concretely, for a single self-attention layer, (a) we first entirely derive the Transformer’s Hessian and express it in matrix derivatives; (b) we then characterize it in terms of data, weight, and attention moment dependencies; and (c) while doing so further highlight the important structural differences to the Hessian of classical networks. Our results suggest that various common architectural and optimization choices in Transformers can be traced back to their highly non-linear dependencies on the data and weight matrices, which vary heterogeneously across parameters. Ultimately, our findings provide a deeper understanding of the Transformer’s unique optimization landscape and the challenges it poses." />
+<meta property="og:description" content="The Transformer architecture has inarguably revolutionized deep learning, overtaking classical architectures like multi-layer perceptrons (MLPs) and convolutional neural networks (CNNs). At its core, the attention block differs in form and functionality from most other architectural components in deep learning–to the extent that, in comparison to MLPs/CNNs, Transformers are more often accompanied by adaptive optimizers, layer normalization, learning rate warmup, etc. The root causes behind these outward manifestations and the precise mechanisms that govern them remain poorly understood. In this work, we bridge this gap by providing a fundamental understanding of what distinguishes the Transformer from the other architectures–grounded in a theoretical comparison of the (loss) Hessian. Concretely, for a single self-attention layer, (a) we first entirely derive the Transformer’s Hessian and express it in matrix derivatives; (b) we then characterize it in terms of data, weight, and attention moment dependencies; and (c) while doing so further highlight the important structural differences to the Hessian of classical networks. Our results suggest that various common architectural and optimization choices in Transformers can be traced back to their highly non-linear dependencies on the data and weight matrices, which vary heterogeneously across parameters. Ultimately, our findings provide a deeper understanding of the Transformer’s unique optimization landscape and the challenges it poses." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/03/18/WhatDoesItMeantoBeaTransformerInsightsfromaTheoreticalHessianAnalysis.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/03/18/WhatDoesItMeantoBeaTransformerInsightsfromaTheoreticalHessianAnalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="What Does It Mean to Be a Transformer? Insights from a Theoretical Hessian Analysis" />
+<script type="application/ld+json">
+{"description":"The Transformer architecture has inarguably revolutionized deep learning, overtaking classical architectures like multi-layer perceptrons (MLPs) and convolutional neural networks (CNNs). At its core, the attention block differs in form and functionality from most other architectural components in deep learning–to the extent that, in comparison to MLPs/CNNs, Transformers are more often accompanied by adaptive optimizers, layer normalization, learning rate warmup, etc. The root causes behind these outward manifestations and the precise mechanisms that govern them remain poorly understood. In this work, we bridge this gap by providing a fundamental understanding of what distinguishes the Transformer from the other architectures–grounded in a theoretical comparison of the (loss) Hessian. Concretely, for a single self-attention layer, (a) we first entirely derive the Transformer’s Hessian and express it in matrix derivatives; (b) we then characterize it in terms of data, weight, and attention moment dependencies; and (c) while doing so further highlight the important structural differences to the Hessian of classical networks. Our results suggest that various common architectural and optimization choices in Transformers can be traced back to their highly non-linear dependencies on the data and weight matrices, which vary heterogeneously across parameters. Ultimately, our findings provide a deeper understanding of the Transformer’s unique optimization landscape and the challenges it poses.","headline":"What Does It Mean to Be a Transformer? Insights from a Theoretical Hessian Analysis","dateModified":"2025-03-18T00:00:00+00:00","datePublished":"2025-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/03/18/WhatDoesItMeantoBeaTransformerInsightsfromaTheoreticalHessianAnalysis.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/03/18/WhatDoesItMeantoBeaTransformerInsightsfromaTheoreticalHessianAnalysis.html","author":{"@type":"Person","name":"Weronika Ormaniec, Felix Dangel, Sidak Pal Singh"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-18 00:00:00 +0000">03-18</time>
+  </p>
+  
+  <h1>What Does It Mean to Be a Transformer? Insights from a Theoretical Hessian Analysis</h1>
+  <br>Weronika Ormaniec, Felix Dangel, Sidak Pal Singh</h3>
+  <br> [stat.ML]
+
+  <p>The Transformer architecture has inarguably revolutionized deep learning, overtaking classical architectures like multi-layer perceptrons (MLPs) and convolutional neural networks (CNNs). At its core, the attention block differs in form and functionality from most other architectural components in deep learning–to the extent that, in comparison to MLPs/CNNs, Transformers are more often accompanied by adaptive optimizers, layer normalization, learning rate warmup, etc. The root causes behind these outward manifestations and the precise mechanisms that govern them remain poorly understood. In this work, we bridge this gap by providing a fundamental understanding of what distinguishes the Transformer from the other architectures–grounded in a theoretical comparison of the (loss) Hessian. Concretely, for a single self-attention layer, (a) we first entirely derive the Transformer’s Hessian and express it in matrix derivatives; (b) we then characterize it in terms of data, weight, and attention moment dependencies; and (c) while doing so further highlight the important structural differences to the Hessian of classical networks. Our results suggest that various common architectural and optimization choices in Transformers can be traced back to their highly non-linear dependencies on the data and weight matrices, which vary heterogeneously across parameters. Ultimately, our findings provide a deeper understanding of the Transformer’s unique optimization landscape and the challenges it poses.</p>
+
+<p><a href="https://arxiv.org/abs/2410.10986">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

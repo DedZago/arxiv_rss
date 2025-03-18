@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding Gradient Orthogonalization for Deep Learning via Non-Euclidean Trust-Region Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Understanding Gradient Orthogonalization for Deep Learning via Non-Euclidean Trust-Region Optimization" />
+<meta name="author" content="Dmitry Kovalev" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Optimization with matrix gradient orthogonalization has recently demonstrated impressive results in the training of deep neural networks (Jordan et al., 2024; Liu et al., 2025). In this paper, we provide a theoretical analysis of this approach. In particular, we show that the orthogonalized gradient method can be seen as a first-order trust-region optimization method, where the trust-region is defined in terms of the matrix spectral norm. Motivated by this observation, we provide the first theoretical analysis of the stochastic non-Euclidean trust-region gradient method with momentum, which recovers the Muon optimizer (Jordan et al., 2024) as a special case. In addition, we establish the convergence of the normalized SGD with momentum (Cutkosky and Mehta, 2020) in the constrained and composite setting, show that its iteration complexity of finding an $\varepsilon$-accurate solution can be improved from $\mathcal{O}(\varepsilon^{-3.5})$ to $\mathcal{O}(\varepsilon^{-3})$ under the star-convexity assumption, and obtain similar results for the Muon algorithm. Finally, our theoretical findings provide an explanation for the practical superiority of Muon compared to the Orthogonal-SGDM algorithm of Tuddenham et al. (2022)." />
+<meta property="og:description" content="Optimization with matrix gradient orthogonalization has recently demonstrated impressive results in the training of deep neural networks (Jordan et al., 2024; Liu et al., 2025). In this paper, we provide a theoretical analysis of this approach. In particular, we show that the orthogonalized gradient method can be seen as a first-order trust-region optimization method, where the trust-region is defined in terms of the matrix spectral norm. Motivated by this observation, we provide the first theoretical analysis of the stochastic non-Euclidean trust-region gradient method with momentum, which recovers the Muon optimizer (Jordan et al., 2024) as a special case. In addition, we establish the convergence of the normalized SGD with momentum (Cutkosky and Mehta, 2020) in the constrained and composite setting, show that its iteration complexity of finding an $\varepsilon$-accurate solution can be improved from $\mathcal{O}(\varepsilon^{-3.5})$ to $\mathcal{O}(\varepsilon^{-3})$ under the star-convexity assumption, and obtain similar results for the Muon algorithm. Finally, our theoretical findings provide an explanation for the practical superiority of Muon compared to the Orthogonal-SGDM algorithm of Tuddenham et al. (2022)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/03/18/UnderstandingGradientOrthogonalizationforDeepLearningviaNonEuclideanTrustRegionOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/03/18/UnderstandingGradientOrthogonalizationforDeepLearningviaNonEuclideanTrustRegionOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding Gradient Orthogonalization for Deep Learning via Non-Euclidean Trust-Region Optimization" />
+<script type="application/ld+json">
+{"description":"Optimization with matrix gradient orthogonalization has recently demonstrated impressive results in the training of deep neural networks (Jordan et al., 2024; Liu et al., 2025). In this paper, we provide a theoretical analysis of this approach. In particular, we show that the orthogonalized gradient method can be seen as a first-order trust-region optimization method, where the trust-region is defined in terms of the matrix spectral norm. Motivated by this observation, we provide the first theoretical analysis of the stochastic non-Euclidean trust-region gradient method with momentum, which recovers the Muon optimizer (Jordan et al., 2024) as a special case. In addition, we establish the convergence of the normalized SGD with momentum (Cutkosky and Mehta, 2020) in the constrained and composite setting, show that its iteration complexity of finding an $\\varepsilon$-accurate solution can be improved from $\\mathcal{O}(\\varepsilon^{-3.5})$ to $\\mathcal{O}(\\varepsilon^{-3})$ under the star-convexity assumption, and obtain similar results for the Muon algorithm. Finally, our theoretical findings provide an explanation for the practical superiority of Muon compared to the Orthogonal-SGDM algorithm of Tuddenham et al. (2022).","headline":"Understanding Gradient Orthogonalization for Deep Learning via Non-Euclidean Trust-Region Optimization","dateModified":"2025-03-18T00:00:00+00:00","datePublished":"2025-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/03/18/UnderstandingGradientOrthogonalizationforDeepLearningviaNonEuclideanTrustRegionOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/03/18/UnderstandingGradientOrthogonalizationforDeepLearningviaNonEuclideanTrustRegionOptimization.html","author":{"@type":"Person","name":"Dmitry Kovalev"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-18 00:00:00 +0000">03-18</time>
+  </p>
+  
+  <h1>Understanding Gradient Orthogonalization for Deep Learning via Non-Euclidean Trust-Region Optimization</h1>
+  <br>Dmitry Kovalev</h3>
+  <br> [stat.ML]
+
+  <p>Optimization with matrix gradient orthogonalization has recently demonstrated impressive results in the training of deep neural networks (Jordan et al., 2024; Liu et al., 2025). In this paper, we provide a theoretical analysis of this approach. In particular, we show that the orthogonalized gradient method can be seen as a first-order trust-region optimization method, where the trust-region is defined in terms of the matrix spectral norm. Motivated by this observation, we provide the first theoretical analysis of the stochastic non-Euclidean trust-region gradient method with momentum, which recovers the Muon optimizer (Jordan et al., 2024) as a special case. In addition, we establish the convergence of the normalized SGD with momentum (Cutkosky and Mehta, 2020) in the constrained and composite setting, show that its iteration complexity of finding an $\varepsilon$-accurate solution can be improved from $\mathcal{O}(\varepsilon^{-3.5})$ to $\mathcal{O}(\varepsilon^{-3})$ under the star-convexity assumption, and obtain similar results for the Muon algorithm. Finally, our theoretical findings provide an explanation for the practical superiority of Muon compared to the Orthogonal-SGDM algorithm of Tuddenham et al. (2022).</p>
+
+<p><a href="https://arxiv.org/abs/2503.12645">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
