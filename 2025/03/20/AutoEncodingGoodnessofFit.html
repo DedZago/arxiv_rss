@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Auto-Encoding Goodness of Fit</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Auto-Encoding Goodness of Fit" />
+<meta name="author" content="Aaron Palmer, Zhiyi Chi, Derek Aguiar, Jinbo Bi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a new type of generative autoencoder called the Goodness-of-Fit Autoencoder (GoFAE), which incorporates GoF tests at two levels. At the minibatch level, it uses GoF test statistics as regularization objectives. At a more global level, it selects a regularization coefficient based on higher criticism, i.e., a test on the uniformity of the local GoF p-values. We justify the use of GoF tests by providing a relaxed $L_2$-Wasserstein bound on the distance between the latent distribution and a distribution class. We prove that optimization based on these tests can be done with stochastic gradient descent on a compact Riemannian manifold. Empirically, we show that our higher criticism parameter selection procedure balances reconstruction and generation using mutual information and uniformity of p-values respectively. Finally, we show that GoFAE achieves comparable FID scores and mean squared errors with competing deep generative models while retaining statistical indistinguishability from Gaussian in the latent space based on a variety of hypothesis tests." />
+<meta property="og:description" content="We develop a new type of generative autoencoder called the Goodness-of-Fit Autoencoder (GoFAE), which incorporates GoF tests at two levels. At the minibatch level, it uses GoF test statistics as regularization objectives. At a more global level, it selects a regularization coefficient based on higher criticism, i.e., a test on the uniformity of the local GoF p-values. We justify the use of GoF tests by providing a relaxed $L_2$-Wasserstein bound on the distance between the latent distribution and a distribution class. We prove that optimization based on these tests can be done with stochastic gradient descent on a compact Riemannian manifold. Empirically, we show that our higher criticism parameter selection procedure balances reconstruction and generation using mutual information and uniformity of p-values respectively. Finally, we show that GoFAE achieves comparable FID scores and mean squared errors with competing deep generative models while retaining statistical indistinguishability from Gaussian in the latent space based on a variety of hypothesis tests." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/03/20/AutoEncodingGoodnessofFit.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/03/20/AutoEncodingGoodnessofFit.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Auto-Encoding Goodness of Fit" />
+<script type="application/ld+json">
+{"description":"We develop a new type of generative autoencoder called the Goodness-of-Fit Autoencoder (GoFAE), which incorporates GoF tests at two levels. At the minibatch level, it uses GoF test statistics as regularization objectives. At a more global level, it selects a regularization coefficient based on higher criticism, i.e., a test on the uniformity of the local GoF p-values. We justify the use of GoF tests by providing a relaxed $L_2$-Wasserstein bound on the distance between the latent distribution and a distribution class. We prove that optimization based on these tests can be done with stochastic gradient descent on a compact Riemannian manifold. Empirically, we show that our higher criticism parameter selection procedure balances reconstruction and generation using mutual information and uniformity of p-values respectively. Finally, we show that GoFAE achieves comparable FID scores and mean squared errors with competing deep generative models while retaining statistical indistinguishability from Gaussian in the latent space based on a variety of hypothesis tests.","author":{"@type":"Person","name":"Aaron Palmer, Zhiyi Chi, Derek Aguiar, Jinbo Bi"},"headline":"Auto-Encoding Goodness of Fit","dateModified":"2025-03-20T00:00:00+00:00","datePublished":"2025-03-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/03/20/AutoEncodingGoodnessofFit.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/03/20/AutoEncodingGoodnessofFit.html","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-03-20 00:00:00 +0000">03-20</time>
+  </p>
+  
+  <h1>Auto-Encoding Goodness of Fit</h1>
+  <br>Aaron Palmer, Zhiyi Chi, Derek Aguiar, Jinbo Bi</h3>
+  <br> [stat.ML]
+
+  <p>We develop a new type of generative autoencoder called the Goodness-of-Fit Autoencoder (GoFAE), which incorporates GoF tests at two levels. At the minibatch level, it uses GoF test statistics as regularization objectives. At a more global level, it selects a regularization coefficient based on higher criticism, i.e., a test on the uniformity of the local GoF p-values. We justify the use of GoF tests by providing a relaxed $L_2$-Wasserstein bound on the distance between the latent distribution and a distribution class. We prove that optimization based on these tests can be done with stochastic gradient descent on a compact Riemannian manifold. Empirically, we show that our higher criticism parameter selection procedure balances reconstruction and generation using mutual information and uniformity of p-values respectively. Finally, we show that GoFAE achieves comparable FID scores and mean squared errors with competing deep generative models while retaining statistical indistinguishability from Gaussian in the latent space based on a variety of hypothesis tests.</p>
+
+<p><a href="https://arxiv.org/abs/2210.06546">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
