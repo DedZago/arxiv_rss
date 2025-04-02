@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Balls-and-Bins Sampling for DP-SGD</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Balls-and-Bins Sampling for DP-SGD" />
+<meta name="author" content="Lynn Chua, Badih Ghazi, Charlie Harrison, Ethan Leeman, Pritish Kamath, Ravi Kumar, Pasin Manurangsi, Amer Sinha, Chiyuan Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce the Balls-and-Bins sampling for differentially private (DP) optimization methods such as DP-SGD. While it has been common practice to use some form of shuffling in DP-SGD implementations, privacy accounting algorithms have typically assumed that Poisson subsampling is used instead. Recent work by Chua et al. (ICML 2024), however, pointed out that shuffling based DP-SGD can have a much larger privacy cost in practical regimes of parameters. In this work we show that the Balls-and-Bins sampling achieves the “best-of-both” samplers, namely, the implementation of Balls-and-Bins sampling is similar to that of Shuffling and models trained using DP-SGD with Balls-and-Bins sampling achieve utility comparable to those trained using DP-SGD with Shuffling at the same noise multiplier, and yet, Balls-and-Bins sampling enjoys similar-or-better privacy amplification as compared to Poisson subsampling in practical regimes." />
+<meta property="og:description" content="We introduce the Balls-and-Bins sampling for differentially private (DP) optimization methods such as DP-SGD. While it has been common practice to use some form of shuffling in DP-SGD implementations, privacy accounting algorithms have typically assumed that Poisson subsampling is used instead. Recent work by Chua et al. (ICML 2024), however, pointed out that shuffling based DP-SGD can have a much larger privacy cost in practical regimes of parameters. In this work we show that the Balls-and-Bins sampling achieves the “best-of-both” samplers, namely, the implementation of Balls-and-Bins sampling is similar to that of Shuffling and models trained using DP-SGD with Balls-and-Bins sampling achieve utility comparable to those trained using DP-SGD with Shuffling at the same noise multiplier, and yet, Balls-and-Bins sampling enjoys similar-or-better privacy amplification as compared to Poisson subsampling in practical regimes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/04/02/BallsandBinsSamplingforDPSGD.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/04/02/BallsandBinsSamplingforDPSGD.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Balls-and-Bins Sampling for DP-SGD" />
+<script type="application/ld+json">
+{"description":"We introduce the Balls-and-Bins sampling for differentially private (DP) optimization methods such as DP-SGD. While it has been common practice to use some form of shuffling in DP-SGD implementations, privacy accounting algorithms have typically assumed that Poisson subsampling is used instead. Recent work by Chua et al. (ICML 2024), however, pointed out that shuffling based DP-SGD can have a much larger privacy cost in practical regimes of parameters. In this work we show that the Balls-and-Bins sampling achieves the “best-of-both” samplers, namely, the implementation of Balls-and-Bins sampling is similar to that of Shuffling and models trained using DP-SGD with Balls-and-Bins sampling achieve utility comparable to those trained using DP-SGD with Shuffling at the same noise multiplier, and yet, Balls-and-Bins sampling enjoys similar-or-better privacy amplification as compared to Poisson subsampling in practical regimes.","headline":"Balls-and-Bins Sampling for DP-SGD","dateModified":"2025-04-02T00:00:00+00:00","datePublished":"2025-04-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/04/02/BallsandBinsSamplingforDPSGD.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/04/02/BallsandBinsSamplingforDPSGD.html","author":{"@type":"Person","name":"Lynn Chua, Badih Ghazi, Charlie Harrison, Ethan Leeman, Pritish Kamath, Ravi Kumar, Pasin Manurangsi, Amer Sinha, Chiyuan Zhang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-02 00:00:00 +0000">04-02</time>
+  </p>
+  
+  <h1>Balls-and-Bins Sampling for DP-SGD</h1>
+  <br>Lynn Chua, Badih Ghazi, Charlie Harrison, Ethan Leeman, Pritish Kamath, Ravi Kumar, Pasin Manurangsi, Amer Sinha, Chiyuan Zhang</h3>
+  <br> [stat.ML]
+
+  <p>We introduce the Balls-and-Bins sampling for differentially private (DP) optimization methods such as DP-SGD. While it has been common practice to use some form of shuffling in DP-SGD implementations, privacy accounting algorithms have typically assumed that Poisson subsampling is used instead. Recent work by Chua et al. (ICML 2024), however, pointed out that shuffling based DP-SGD can have a much larger privacy cost in practical regimes of parameters. In this work we show that the Balls-and-Bins sampling achieves the “best-of-both” samplers, namely, the implementation of Balls-and-Bins sampling is similar to that of Shuffling and models trained using DP-SGD with Balls-and-Bins sampling achieve utility comparable to those trained using DP-SGD with Shuffling at the same noise multiplier, and yet, Balls-and-Bins sampling enjoys similar-or-better privacy amplification as compared to Poisson subsampling in practical regimes.</p>
+
+<p><a href="https://arxiv.org/abs/2412.16802">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
