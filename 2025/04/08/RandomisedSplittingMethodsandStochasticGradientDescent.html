@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Randomised Splitting Methods and Stochastic Gradient Descent</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Randomised Splitting Methods and Stochastic Gradient Descent" />
+<meta name="author" content="Luke Shaw, Peter A. Whalley" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We explore an explicit link between stochastic gradient descent using common batching strategies and splitting methods for ordinary differential equations. From this perspective, we introduce a new minibatching strategy (called Symmetric Minibatching Strategy) for stochastic gradient optimisation which shows greatly reduced stochastic gradient bias (from $\mathcal{O}(h^2)$ to $\mathcal{O}(h^4)$ in the optimiser stepsize $h$), when combined with momentum-based optimisers. We justify why momentum is needed to obtain the improved performance using the theory of backward analysis for splitting integrators and provide a detailed analytic computation of the stochastic gradient bias on a simple example. Further, we provide improved convergence guarantees for this new minibatching strategy using Lyapunov techniques that show reduced stochastic gradient bias for a fixed stepsize (or learning rate) over the class of strongly-convex and smooth objective functions. Via the same techniques we also improve the known results for the Random Reshuffling strategy for stochastic gradient descent methods with momentum. We argue that this also leads to a faster convergence rate when considering a decreasing stepsize schedule. Both the reduced bias and efficacy of decreasing stepsizes are demonstrated numerically on several motivating examples." />
+<meta property="og:description" content="We explore an explicit link between stochastic gradient descent using common batching strategies and splitting methods for ordinary differential equations. From this perspective, we introduce a new minibatching strategy (called Symmetric Minibatching Strategy) for stochastic gradient optimisation which shows greatly reduced stochastic gradient bias (from $\mathcal{O}(h^2)$ to $\mathcal{O}(h^4)$ in the optimiser stepsize $h$), when combined with momentum-based optimisers. We justify why momentum is needed to obtain the improved performance using the theory of backward analysis for splitting integrators and provide a detailed analytic computation of the stochastic gradient bias on a simple example. Further, we provide improved convergence guarantees for this new minibatching strategy using Lyapunov techniques that show reduced stochastic gradient bias for a fixed stepsize (or learning rate) over the class of strongly-convex and smooth objective functions. Via the same techniques we also improve the known results for the Random Reshuffling strategy for stochastic gradient descent methods with momentum. We argue that this also leads to a faster convergence rate when considering a decreasing stepsize schedule. Both the reduced bias and efficacy of decreasing stepsizes are demonstrated numerically on several motivating examples." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/04/08/RandomisedSplittingMethodsandStochasticGradientDescent.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/04/08/RandomisedSplittingMethodsandStochasticGradientDescent.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Randomised Splitting Methods and Stochastic Gradient Descent" />
+<script type="application/ld+json">
+{"description":"We explore an explicit link between stochastic gradient descent using common batching strategies and splitting methods for ordinary differential equations. From this perspective, we introduce a new minibatching strategy (called Symmetric Minibatching Strategy) for stochastic gradient optimisation which shows greatly reduced stochastic gradient bias (from $\\mathcal{O}(h^2)$ to $\\mathcal{O}(h^4)$ in the optimiser stepsize $h$), when combined with momentum-based optimisers. We justify why momentum is needed to obtain the improved performance using the theory of backward analysis for splitting integrators and provide a detailed analytic computation of the stochastic gradient bias on a simple example. Further, we provide improved convergence guarantees for this new minibatching strategy using Lyapunov techniques that show reduced stochastic gradient bias for a fixed stepsize (or learning rate) over the class of strongly-convex and smooth objective functions. Via the same techniques we also improve the known results for the Random Reshuffling strategy for stochastic gradient descent methods with momentum. We argue that this also leads to a faster convergence rate when considering a decreasing stepsize schedule. Both the reduced bias and efficacy of decreasing stepsizes are demonstrated numerically on several motivating examples.","headline":"Randomised Splitting Methods and Stochastic Gradient Descent","dateModified":"2025-04-08T00:00:00+00:00","datePublished":"2025-04-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/04/08/RandomisedSplittingMethodsandStochasticGradientDescent.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/04/08/RandomisedSplittingMethodsandStochasticGradientDescent.html","author":{"@type":"Person","name":"Luke Shaw, Peter A. Whalley"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-08 00:00:00 +0000">04-08</time>
+  </p>
+  
+  <h1>Randomised Splitting Methods and Stochastic Gradient Descent</h1>
+  <br>Luke Shaw, Peter A. Whalley</h3>
+  <br> [stat.ML]
+
+  <p>We explore an explicit link between stochastic gradient descent using common batching strategies and splitting methods for ordinary differential equations. From this perspective, we introduce a new minibatching strategy (called Symmetric Minibatching Strategy) for stochastic gradient optimisation which shows greatly reduced stochastic gradient bias (from $\mathcal{O}(h^2)$ to $\mathcal{O}(h^4)$ in the optimiser stepsize $h$), when combined with momentum-based optimisers. We justify why momentum is needed to obtain the improved performance using the theory of backward analysis for splitting integrators and provide a detailed analytic computation of the stochastic gradient bias on a simple example.
+  Further, we provide improved convergence guarantees for this new minibatching strategy using Lyapunov techniques that show reduced stochastic gradient bias for a fixed stepsize (or learning rate) over the class of strongly-convex and smooth objective functions. Via the same techniques we also improve the known results for the Random Reshuffling strategy for stochastic gradient descent methods with momentum. We argue that this also leads to a faster convergence rate when considering a decreasing stepsize schedule. Both the reduced bias and efficacy of decreasing stepsizes are demonstrated numerically on several motivating examples.</p>
+
+<p><a href="https://arxiv.org/abs/2504.04274">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
