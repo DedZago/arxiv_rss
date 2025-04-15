@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving Decoupled Posterior Sampling for Inverse Problems using Data Consistency Constraint</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving Decoupled Posterior Sampling for Inverse Problems using Data Consistency Constraint" />
+<meta name="author" content="Zhi Qi, Shihong Yuan, Yulin Yuan, Linling Kuang, Yoshiyuki Kabashima, Xiangming Meng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diffusion models have shown strong performances in solving inverse problems through posterior sampling while they suffer from errors during earlier steps. To mitigate this issue, several Decoupled Posterior Sampling methods have been recently proposed. However, the reverse process in these methods ignores measurement information, leading to errors that impede effective optimization in subsequent steps. To solve this problem, we propose Guided Decoupled Posterior Sampling (GDPS) by integrating a data consistency constraint in the reverse process. The constraint performs a smoother transition within the optimization process, facilitating a more effective convergence toward the target distribution. Furthermore, we extend our method to latent diffusion models and Tweedie’s formula, demonstrating its scalability. We evaluate GDPS on the FFHQ and ImageNet datasets across various linear and nonlinear tasks under both standard and challenging conditions. Experimental results demonstrate that GDPS achieves state-of-the-art performance, improving accuracy over existing methods." />
+<meta property="og:description" content="Diffusion models have shown strong performances in solving inverse problems through posterior sampling while they suffer from errors during earlier steps. To mitigate this issue, several Decoupled Posterior Sampling methods have been recently proposed. However, the reverse process in these methods ignores measurement information, leading to errors that impede effective optimization in subsequent steps. To solve this problem, we propose Guided Decoupled Posterior Sampling (GDPS) by integrating a data consistency constraint in the reverse process. The constraint performs a smoother transition within the optimization process, facilitating a more effective convergence toward the target distribution. Furthermore, we extend our method to latent diffusion models and Tweedie’s formula, demonstrating its scalability. We evaluate GDPS on the FFHQ and ImageNet datasets across various linear and nonlinear tasks under both standard and challenging conditions. Experimental results demonstrate that GDPS achieves state-of-the-art performance, improving accuracy over existing methods." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/04/15/ImprovingDecoupledPosteriorSamplingforInverseProblemsusingDataConsistencyConstraint.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/04/15/ImprovingDecoupledPosteriorSamplingforInverseProblemsusingDataConsistencyConstraint.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving Decoupled Posterior Sampling for Inverse Problems using Data Consistency Constraint" />
+<script type="application/ld+json">
+{"description":"Diffusion models have shown strong performances in solving inverse problems through posterior sampling while they suffer from errors during earlier steps. To mitigate this issue, several Decoupled Posterior Sampling methods have been recently proposed. However, the reverse process in these methods ignores measurement information, leading to errors that impede effective optimization in subsequent steps. To solve this problem, we propose Guided Decoupled Posterior Sampling (GDPS) by integrating a data consistency constraint in the reverse process. The constraint performs a smoother transition within the optimization process, facilitating a more effective convergence toward the target distribution. Furthermore, we extend our method to latent diffusion models and Tweedie’s formula, demonstrating its scalability. We evaluate GDPS on the FFHQ and ImageNet datasets across various linear and nonlinear tasks under both standard and challenging conditions. Experimental results demonstrate that GDPS achieves state-of-the-art performance, improving accuracy over existing methods.","headline":"Improving Decoupled Posterior Sampling for Inverse Problems using Data Consistency Constraint","dateModified":"2025-04-15T00:00:00+00:00","datePublished":"2025-04-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/04/15/ImprovingDecoupledPosteriorSamplingforInverseProblemsusingDataConsistencyConstraint.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/04/15/ImprovingDecoupledPosteriorSamplingforInverseProblemsusingDataConsistencyConstraint.html","author":{"@type":"Person","name":"Zhi Qi, Shihong Yuan, Yulin Yuan, Linling Kuang, Yoshiyuki Kabashima, Xiangming Meng"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-15 00:00:00 +0000">04-15</time>
+  </p>
+  
+  <h1>Improving Decoupled Posterior Sampling for Inverse Problems using Data Consistency Constraint</h1>
+  <br>Zhi Qi, Shihong Yuan, Yulin Yuan, Linling Kuang, Yoshiyuki Kabashima, Xiangming Meng</h3>
+  <br> [stat.ML]
+
+  <p>Diffusion models have shown strong performances in solving inverse problems through posterior sampling while they suffer from errors during earlier steps. To mitigate this issue, several Decoupled Posterior Sampling methods have been recently proposed. However, the reverse process in these methods ignores measurement information, leading to errors that impede effective optimization in subsequent steps. To solve this problem, we propose Guided Decoupled Posterior Sampling (GDPS) by integrating a data consistency constraint in the reverse process. The constraint performs a smoother transition within the optimization process, facilitating a more effective convergence toward the target distribution. Furthermore, we extend our method to latent diffusion models and Tweedie’s formula, demonstrating its scalability. We evaluate GDPS on the FFHQ and ImageNet datasets across various linear and nonlinear tasks under both standard and challenging conditions. Experimental results demonstrate that GDPS achieves state-of-the-art performance, improving accuracy over existing methods.</p>
+
+<p><a href="https://arxiv.org/abs/2412.00664">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
