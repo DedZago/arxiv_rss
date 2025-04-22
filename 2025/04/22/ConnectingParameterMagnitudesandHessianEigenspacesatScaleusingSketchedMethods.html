@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Connecting Parameter Magnitudes and Hessian Eigenspaces at Scale using Sketched Methods</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Connecting Parameter Magnitudes and Hessian Eigenspaces at Scale using Sketched Methods" />
+<meta name="author" content="Andres Fernandez, Frank Schneider, Maren Mahsereci, Philipp Hennig" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recently, it has been observed that when training a deep neural net with SGD, the majority of the loss landscape’s curvature quickly concentrates in a tiny top eigenspace of the loss Hessian, which remains largely stable thereafter. Independently, it has been shown that successful magnitude pruning masks for deep neural nets emerge early in training and remain stable thereafter. In this work, we study these two phenomena jointly and show that they are connected: We develop a methodology to measure the similarity between arbitrary parameter masks and Hessian eigenspaces via Grassmannian metrics. We identify overlap as the most useful such metric due to its interpretability and stability. To compute overlap, we develop a matrix-free algorithm based on sketched SVDs that allows us to compute over 1000 Hessian eigenpairs for nets with over 10M parameters –an unprecedented scale by several orders of magnitude. Our experiments reveal an overlap between magnitude parameter masks and top Hessian eigenspaces consistently higher than chance-level, and that this effect gets accentuated for larger network sizes. This result indicates that top Hessian eigenvectors tend to be concentrated around larger parameters, or equivalently, that larger parameters tend to align with directions of larger loss curvature. Our work provides a methodology to approximate and analyze deep learning Hessians at scale, as well as a novel insight on the structure of their eigenspace." />
+<meta property="og:description" content="Recently, it has been observed that when training a deep neural net with SGD, the majority of the loss landscape’s curvature quickly concentrates in a tiny top eigenspace of the loss Hessian, which remains largely stable thereafter. Independently, it has been shown that successful magnitude pruning masks for deep neural nets emerge early in training and remain stable thereafter. In this work, we study these two phenomena jointly and show that they are connected: We develop a methodology to measure the similarity between arbitrary parameter masks and Hessian eigenspaces via Grassmannian metrics. We identify overlap as the most useful such metric due to its interpretability and stability. To compute overlap, we develop a matrix-free algorithm based on sketched SVDs that allows us to compute over 1000 Hessian eigenpairs for nets with over 10M parameters –an unprecedented scale by several orders of magnitude. Our experiments reveal an overlap between magnitude parameter masks and top Hessian eigenspaces consistently higher than chance-level, and that this effect gets accentuated for larger network sizes. This result indicates that top Hessian eigenvectors tend to be concentrated around larger parameters, or equivalently, that larger parameters tend to align with directions of larger loss curvature. Our work provides a methodology to approximate and analyze deep learning Hessians at scale, as well as a novel insight on the structure of their eigenspace." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/04/22/ConnectingParameterMagnitudesandHessianEigenspacesatScaleusingSketchedMethods.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/04/22/ConnectingParameterMagnitudesandHessianEigenspacesatScaleusingSketchedMethods.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Connecting Parameter Magnitudes and Hessian Eigenspaces at Scale using Sketched Methods" />
+<script type="application/ld+json">
+{"description":"Recently, it has been observed that when training a deep neural net with SGD, the majority of the loss landscape’s curvature quickly concentrates in a tiny top eigenspace of the loss Hessian, which remains largely stable thereafter. Independently, it has been shown that successful magnitude pruning masks for deep neural nets emerge early in training and remain stable thereafter. In this work, we study these two phenomena jointly and show that they are connected: We develop a methodology to measure the similarity between arbitrary parameter masks and Hessian eigenspaces via Grassmannian metrics. We identify overlap as the most useful such metric due to its interpretability and stability. To compute overlap, we develop a matrix-free algorithm based on sketched SVDs that allows us to compute over 1000 Hessian eigenpairs for nets with over 10M parameters –an unprecedented scale by several orders of magnitude. Our experiments reveal an overlap between magnitude parameter masks and top Hessian eigenspaces consistently higher than chance-level, and that this effect gets accentuated for larger network sizes. This result indicates that top Hessian eigenvectors tend to be concentrated around larger parameters, or equivalently, that larger parameters tend to align with directions of larger loss curvature. Our work provides a methodology to approximate and analyze deep learning Hessians at scale, as well as a novel insight on the structure of their eigenspace.","headline":"Connecting Parameter Magnitudes and Hessian Eigenspaces at Scale using Sketched Methods","dateModified":"2025-04-22T00:00:00+00:00","datePublished":"2025-04-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/04/22/ConnectingParameterMagnitudesandHessianEigenspacesatScaleusingSketchedMethods.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/04/22/ConnectingParameterMagnitudesandHessianEigenspacesatScaleusingSketchedMethods.html","author":{"@type":"Person","name":"Andres Fernandez, Frank Schneider, Maren Mahsereci, Philipp Hennig"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-04-22 00:00:00 +0000">04-22</time>
+  </p>
+  
+  <h1>Connecting Parameter Magnitudes and Hessian Eigenspaces at Scale using Sketched Methods</h1>
+  <br>Andres Fernandez, Frank Schneider, Maren Mahsereci, Philipp Hennig</h3>
+  <br> [stat.ML]
+
+  <p>Recently, it has been observed that when training a deep neural net with SGD, the majority of the loss landscape’s curvature quickly concentrates in a tiny <em>top</em> eigenspace of the loss Hessian, which remains largely stable thereafter. Independently, it has been shown that successful magnitude pruning masks for deep neural nets emerge early in training and remain stable thereafter. In this work, we study these two phenomena jointly and show that they are connected: We develop a methodology to measure the similarity between arbitrary parameter masks and Hessian eigenspaces via Grassmannian metrics. We identify <em>overlap</em> as the most useful such metric due to its interpretability and stability. To compute <em>overlap</em>, we develop a matrix-free algorithm based on sketched SVDs that allows us to compute over 1000 Hessian eigenpairs for nets with over 10M parameters –an unprecedented scale by several orders of magnitude. Our experiments reveal an <em>overlap</em> between magnitude parameter masks and top Hessian eigenspaces consistently higher than chance-level, and that this effect gets accentuated for larger network sizes. This result indicates that <em>top Hessian eigenvectors tend to be concentrated around larger parameters</em>, or equivalently, that <em>larger parameters tend to align with directions of larger loss curvature</em>. Our work provides a methodology to approximate and analyze deep learning Hessians at scale, as well as a novel insight on the structure of their eigenspace.</p>
+
+<p><a href="https://arxiv.org/abs/2504.14701">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
