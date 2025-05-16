@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rapid Overfitting of Multi-Pass Stochastic Gradient Descent in Stochastic Convex Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Rapid Overfitting of Multi-Pass Stochastic Gradient Descent in Stochastic Convex Optimization" />
+<meta name="author" content="Shira Vansover-Hager, Tomer Koren, Roi Livni" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study the out-of-sample performance of multi-pass stochastic gradient descent (SGD) in the fundamental stochastic convex optimization (SCO) model. While one-pass SGD is known to achieve an optimal $\Theta(1/\sqrt{n})$ excess population loss given a sample of size $n$, much less is understood about the multi-pass version of the algorithm which is widely used in practice. Somewhat surprisingly, we show that in the general non-smooth case of SCO, just a few epochs of SGD can already hurt its out-of-sample performance significantly and lead to overfitting. In particular, using a step size $\eta = \Theta(1/\sqrt{n})$, which gives the optimal rate after one pass, can lead to population loss as large as $\Omega(1)$ after just one additional pass. More generally, we show that the population loss from the second pass onward is of the order $\Theta(1/(\eta T) + \eta \sqrt{T})$, where $T$ is the total number of steps. These results reveal a certain phase-transition in the out-of-sample behavior of SGD after the first epoch, as well as a sharp separation between the rates of overfitting in the smooth and non-smooth cases of SCO. Additionally, we extend our results to with-replacement SGD, proving that the same asymptotic bounds hold after $O(n \log n)$ steps. Finally, we also prove a lower bound of $\Omega(\eta \sqrt{n})$ on the generalization gap of one-pass SGD in dimension $d = \smash{\widetilde O}(n)$, improving on recent results of Koren et al.(2022) and Schliserman et al.(2024)." />
+<meta property="og:description" content="We study the out-of-sample performance of multi-pass stochastic gradient descent (SGD) in the fundamental stochastic convex optimization (SCO) model. While one-pass SGD is known to achieve an optimal $\Theta(1/\sqrt{n})$ excess population loss given a sample of size $n$, much less is understood about the multi-pass version of the algorithm which is widely used in practice. Somewhat surprisingly, we show that in the general non-smooth case of SCO, just a few epochs of SGD can already hurt its out-of-sample performance significantly and lead to overfitting. In particular, using a step size $\eta = \Theta(1/\sqrt{n})$, which gives the optimal rate after one pass, can lead to population loss as large as $\Omega(1)$ after just one additional pass. More generally, we show that the population loss from the second pass onward is of the order $\Theta(1/(\eta T) + \eta \sqrt{T})$, where $T$ is the total number of steps. These results reveal a certain phase-transition in the out-of-sample behavior of SGD after the first epoch, as well as a sharp separation between the rates of overfitting in the smooth and non-smooth cases of SCO. Additionally, we extend our results to with-replacement SGD, proving that the same asymptotic bounds hold after $O(n \log n)$ steps. Finally, we also prove a lower bound of $\Omega(\eta \sqrt{n})$ on the generalization gap of one-pass SGD in dimension $d = \smash{\widetilde O}(n)$, improving on recent results of Koren et al.(2022) and Schliserman et al.(2024)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/05/16/RapidOverfittingofMultiPassStochasticGradientDescentinStochasticConvexOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/05/16/RapidOverfittingofMultiPassStochasticGradientDescentinStochasticConvexOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rapid Overfitting of Multi-Pass Stochastic Gradient Descent in Stochastic Convex Optimization" />
+<script type="application/ld+json">
+{"description":"We study the out-of-sample performance of multi-pass stochastic gradient descent (SGD) in the fundamental stochastic convex optimization (SCO) model. While one-pass SGD is known to achieve an optimal $\\Theta(1/\\sqrt{n})$ excess population loss given a sample of size $n$, much less is understood about the multi-pass version of the algorithm which is widely used in practice. Somewhat surprisingly, we show that in the general non-smooth case of SCO, just a few epochs of SGD can already hurt its out-of-sample performance significantly and lead to overfitting. In particular, using a step size $\\eta = \\Theta(1/\\sqrt{n})$, which gives the optimal rate after one pass, can lead to population loss as large as $\\Omega(1)$ after just one additional pass. More generally, we show that the population loss from the second pass onward is of the order $\\Theta(1/(\\eta T) + \\eta \\sqrt{T})$, where $T$ is the total number of steps. These results reveal a certain phase-transition in the out-of-sample behavior of SGD after the first epoch, as well as a sharp separation between the rates of overfitting in the smooth and non-smooth cases of SCO. Additionally, we extend our results to with-replacement SGD, proving that the same asymptotic bounds hold after $O(n \\log n)$ steps. Finally, we also prove a lower bound of $\\Omega(\\eta \\sqrt{n})$ on the generalization gap of one-pass SGD in dimension $d = \\smash{\\widetilde O}(n)$, improving on recent results of Koren et al.(2022) and Schliserman et al.(2024).","headline":"Rapid Overfitting of Multi-Pass Stochastic Gradient Descent in Stochastic Convex Optimization","dateModified":"2025-05-16T00:00:00+00:00","datePublished":"2025-05-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/05/16/RapidOverfittingofMultiPassStochasticGradientDescentinStochasticConvexOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/05/16/RapidOverfittingofMultiPassStochasticGradientDescentinStochasticConvexOptimization.html","author":{"@type":"Person","name":"Shira Vansover-Hager, Tomer Koren, Roi Livni"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-16 00:00:00 +0000">05-16</time>
+  </p>
+  
+  <h1>Rapid Overfitting of Multi-Pass Stochastic Gradient Descent in Stochastic Convex Optimization</h1>
+  <br>Shira Vansover-Hager, Tomer Koren, Roi Livni</h3>
+  <br> [stat.ML]
+
+  <p>We study the out-of-sample performance of multi-pass stochastic gradient descent (SGD) in the fundamental stochastic convex optimization (SCO) model. While one-pass SGD is known to achieve an optimal $\Theta(1/\sqrt{n})$ excess population loss given a sample of size $n$, much less is understood about the multi-pass version of the algorithm which is widely used in practice. Somewhat surprisingly, we show that in the general non-smooth case of SCO, just a few epochs of SGD can already hurt its out-of-sample performance significantly and lead to overfitting. In particular, using a step size $\eta = \Theta(1/\sqrt{n})$, which gives the optimal rate after one pass, can lead to population loss as large as $\Omega(1)$ after just one additional pass. More generally, we show that the population loss from the second pass onward is of the order $\Theta(1/(\eta T) + \eta \sqrt{T})$, where $T$ is the total number of steps. These results reveal a certain phase-transition in the out-of-sample behavior of SGD after the first epoch, as well as a sharp separation between the rates of overfitting in the smooth and non-smooth cases of SCO. Additionally, we extend our results to with-replacement SGD, proving that the same asymptotic bounds hold after $O(n \log n)$ steps. Finally, we also prove a lower bound of $\Omega(\eta \sqrt{n})$ on the generalization gap of one-pass SGD in dimension $d = \smash{\widetilde O}(n)$, improving on recent results of Koren et al.(2022) and Schliserman et al.(2024).</p>
+
+<p><a href="https://arxiv.org/abs/2505.08306">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
