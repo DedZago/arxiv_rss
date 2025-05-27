@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Aligning Multiclass Neural Network Classifier Criterion with Task Performance Metrics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Aligning Multiclass Neural Network Classifier Criterion with Task Performance Metrics" />
+<meta name="author" content="Deyuan Li, Taesoo Daniel Lee, Marynel Vázquez, Nathan Tsoi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multiclass neural network classifiers are typically trained using cross-entropy loss but evaluated using metrics derived from the confusion matrix, such as Accuracy, $F_\beta$-Score, and Matthews Correlation Coefficient. This mismatch between the training objective and evaluation metric can lead to suboptimal performance, particularly when the user’s priorities differ from what cross-entropy implicitly optimizes. For example, in the presence of class imbalance, $F_1$-Score may be preferred over Accuracy. Similarly, given a preference towards precision, the $F_{\beta=0.25}$-Score will better reflect this preference than $F_1$-Score. However, standard cross-entropy loss does not accommodate such a preference. Building on prior work leveraging soft-set confusion matrices and a continuous piecewise-linear Heaviside approximation, we propose Evaluation Aligned Surrogate Training (EAST), a novel approach to train multiclass classifiers using close surrogates of confusion-matrix based metrics, thereby aligning a neural network classifier’s predictions more closely to a target evaluation metric than typical cross-entropy loss. EAST introduces three key innovations: First, we propose a novel dynamic thresholding approach during training. Second, we propose using a multiclass soft-set confusion matrix. Third, we introduce an annealing process that gradually aligns the surrogate loss with the target evaluation metric. Our theoretical analysis shows that EAST results in consistent estimators of the target evaluation metric. Furthermore, we show that the learned network parameters converge asymptotically to values that optimize for the target evaluation metric. Extensive experiments validate the effectiveness of our approach, demonstrating improved alignment between training objectives and evaluation metrics, while outperforming existing methods across many datasets." />
+<meta property="og:description" content="Multiclass neural network classifiers are typically trained using cross-entropy loss but evaluated using metrics derived from the confusion matrix, such as Accuracy, $F_\beta$-Score, and Matthews Correlation Coefficient. This mismatch between the training objective and evaluation metric can lead to suboptimal performance, particularly when the user’s priorities differ from what cross-entropy implicitly optimizes. For example, in the presence of class imbalance, $F_1$-Score may be preferred over Accuracy. Similarly, given a preference towards precision, the $F_{\beta=0.25}$-Score will better reflect this preference than $F_1$-Score. However, standard cross-entropy loss does not accommodate such a preference. Building on prior work leveraging soft-set confusion matrices and a continuous piecewise-linear Heaviside approximation, we propose Evaluation Aligned Surrogate Training (EAST), a novel approach to train multiclass classifiers using close surrogates of confusion-matrix based metrics, thereby aligning a neural network classifier’s predictions more closely to a target evaluation metric than typical cross-entropy loss. EAST introduces three key innovations: First, we propose a novel dynamic thresholding approach during training. Second, we propose using a multiclass soft-set confusion matrix. Third, we introduce an annealing process that gradually aligns the surrogate loss with the target evaluation metric. Our theoretical analysis shows that EAST results in consistent estimators of the target evaluation metric. Furthermore, we show that the learned network parameters converge asymptotically to values that optimize for the target evaluation metric. Extensive experiments validate the effectiveness of our approach, demonstrating improved alignment between training objectives and evaluation metrics, while outperforming existing methods across many datasets." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/05/27/AligningMulticlassNeuralNetworkClassifierCriterionwithTaskPerformanceMetrics.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/05/27/AligningMulticlassNeuralNetworkClassifierCriterionwithTaskPerformanceMetrics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Aligning Multiclass Neural Network Classifier Criterion with Task Performance Metrics" />
+<script type="application/ld+json">
+{"description":"Multiclass neural network classifiers are typically trained using cross-entropy loss but evaluated using metrics derived from the confusion matrix, such as Accuracy, $F_\\beta$-Score, and Matthews Correlation Coefficient. This mismatch between the training objective and evaluation metric can lead to suboptimal performance, particularly when the user’s priorities differ from what cross-entropy implicitly optimizes. For example, in the presence of class imbalance, $F_1$-Score may be preferred over Accuracy. Similarly, given a preference towards precision, the $F_{\\beta=0.25}$-Score will better reflect this preference than $F_1$-Score. However, standard cross-entropy loss does not accommodate such a preference. Building on prior work leveraging soft-set confusion matrices and a continuous piecewise-linear Heaviside approximation, we propose Evaluation Aligned Surrogate Training (EAST), a novel approach to train multiclass classifiers using close surrogates of confusion-matrix based metrics, thereby aligning a neural network classifier’s predictions more closely to a target evaluation metric than typical cross-entropy loss. EAST introduces three key innovations: First, we propose a novel dynamic thresholding approach during training. Second, we propose using a multiclass soft-set confusion matrix. Third, we introduce an annealing process that gradually aligns the surrogate loss with the target evaluation metric. Our theoretical analysis shows that EAST results in consistent estimators of the target evaluation metric. Furthermore, we show that the learned network parameters converge asymptotically to values that optimize for the target evaluation metric. Extensive experiments validate the effectiveness of our approach, demonstrating improved alignment between training objectives and evaluation metrics, while outperforming existing methods across many datasets.","headline":"Aligning Multiclass Neural Network Classifier Criterion with Task Performance Metrics","dateModified":"2025-05-27T00:00:00+00:00","datePublished":"2025-05-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/05/27/AligningMulticlassNeuralNetworkClassifierCriterionwithTaskPerformanceMetrics.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/05/27/AligningMulticlassNeuralNetworkClassifierCriterionwithTaskPerformanceMetrics.html","author":{"@type":"Person","name":"Deyuan Li, Taesoo Daniel Lee, Marynel Vázquez, Nathan Tsoi"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-27 00:00:00 +0000">05-27</time>
+  </p>
+  
+  <h1>Aligning Multiclass Neural Network Classifier Criterion with Task Performance Metrics</h1>
+  <br>Deyuan Li, Taesoo Daniel Lee, Marynel Vázquez, Nathan Tsoi</h3>
+  <br> [stat.ML]
+
+  <p>Multiclass neural network classifiers are typically trained using cross-entropy loss but evaluated using metrics derived from the confusion matrix, such as Accuracy, $F_\beta$-Score, and Matthews Correlation Coefficient. This mismatch between the training objective and evaluation metric can lead to suboptimal performance, particularly when the user’s priorities differ from what cross-entropy implicitly optimizes. For example, in the presence of class imbalance, $F_1$-Score may be preferred over Accuracy. Similarly, given a preference towards precision, the $F_{\beta=0.25}$-Score will better reflect this preference than $F_1$-Score. However, standard cross-entropy loss does not accommodate such a preference. Building on prior work leveraging soft-set confusion matrices and a continuous piecewise-linear Heaviside approximation, we propose Evaluation Aligned Surrogate Training (EAST), a novel approach to train multiclass classifiers using close surrogates of confusion-matrix based metrics, thereby aligning a neural network classifier’s predictions more closely to a target evaluation metric than typical cross-entropy loss. EAST introduces three key innovations: First, we propose a novel dynamic thresholding approach during training. Second, we propose using a multiclass soft-set confusion matrix. Third, we introduce an annealing process that gradually aligns the surrogate loss with the target evaluation metric. Our theoretical analysis shows that EAST results in consistent estimators of the target evaluation metric. Furthermore, we show that the learned network parameters converge asymptotically to values that optimize for the target evaluation metric. Extensive experiments validate the effectiveness of our approach, demonstrating improved alignment between training objectives and evaluation metrics, while outperforming existing methods across many datasets.</p>
+
+<p><a href="https://arxiv.org/abs/2405.20954">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

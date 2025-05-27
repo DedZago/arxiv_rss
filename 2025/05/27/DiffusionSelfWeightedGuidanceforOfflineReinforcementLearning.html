@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diffusion Self-Weighted Guidance for Offline Reinforcement Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Diffusion Self-Weighted Guidance for Offline Reinforcement Learning" />
+<meta name="author" content="Augusto Tagle, Javier Ruiz-del-Solar, Felipe Tobar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Offline reinforcement learning (RL) recovers the optimal policy $\pi$ given historical observations of an agent. In practice, $\pi$ is modeled as a weighted version of the agent’s behavior policy $\mu$, using a weight function $w$ working as a critic of the agent’s behavior. Though recent approaches to offline RL based on diffusion models have exhibited promising results, the computation of the required scores is challenging due to their dependence on the unknown $w$. In this work, we alleviate this issue by constructing a diffusion over both the actions and the weights. With the proposed setting, the required scores are directly obtained from the diffusion model without learning extra networks. Our main conceptual contribution is a novel guidance method, where guidance (which is a function of $w$) comes from the same diffusion model, therefore, our proposal is termed Self-Weighted Guidance (SWG). We show that SWG generates samples from the desired distribution on toy examples and performs on par with state-of-the-art methods on D4RL’s challenging environments, while maintaining a streamlined training pipeline. We further validate SWG through ablation studies on weight formulations and scalability." />
+<meta property="og:description" content="Offline reinforcement learning (RL) recovers the optimal policy $\pi$ given historical observations of an agent. In practice, $\pi$ is modeled as a weighted version of the agent’s behavior policy $\mu$, using a weight function $w$ working as a critic of the agent’s behavior. Though recent approaches to offline RL based on diffusion models have exhibited promising results, the computation of the required scores is challenging due to their dependence on the unknown $w$. In this work, we alleviate this issue by constructing a diffusion over both the actions and the weights. With the proposed setting, the required scores are directly obtained from the diffusion model without learning extra networks. Our main conceptual contribution is a novel guidance method, where guidance (which is a function of $w$) comes from the same diffusion model, therefore, our proposal is termed Self-Weighted Guidance (SWG). We show that SWG generates samples from the desired distribution on toy examples and performs on par with state-of-the-art methods on D4RL’s challenging environments, while maintaining a streamlined training pipeline. We further validate SWG through ablation studies on weight formulations and scalability." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/05/27/DiffusionSelfWeightedGuidanceforOfflineReinforcementLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/05/27/DiffusionSelfWeightedGuidanceforOfflineReinforcementLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Diffusion Self-Weighted Guidance for Offline Reinforcement Learning" />
+<script type="application/ld+json">
+{"description":"Offline reinforcement learning (RL) recovers the optimal policy $\\pi$ given historical observations of an agent. In practice, $\\pi$ is modeled as a weighted version of the agent’s behavior policy $\\mu$, using a weight function $w$ working as a critic of the agent’s behavior. Though recent approaches to offline RL based on diffusion models have exhibited promising results, the computation of the required scores is challenging due to their dependence on the unknown $w$. In this work, we alleviate this issue by constructing a diffusion over both the actions and the weights. With the proposed setting, the required scores are directly obtained from the diffusion model without learning extra networks. Our main conceptual contribution is a novel guidance method, where guidance (which is a function of $w$) comes from the same diffusion model, therefore, our proposal is termed Self-Weighted Guidance (SWG). We show that SWG generates samples from the desired distribution on toy examples and performs on par with state-of-the-art methods on D4RL’s challenging environments, while maintaining a streamlined training pipeline. We further validate SWG through ablation studies on weight formulations and scalability.","headline":"Diffusion Self-Weighted Guidance for Offline Reinforcement Learning","dateModified":"2025-05-27T00:00:00+00:00","datePublished":"2025-05-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/05/27/DiffusionSelfWeightedGuidanceforOfflineReinforcementLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/05/27/DiffusionSelfWeightedGuidanceforOfflineReinforcementLearning.html","author":{"@type":"Person","name":"Augusto Tagle, Javier Ruiz-del-Solar, Felipe Tobar"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-27 00:00:00 +0000">05-27</time>
+  </p>
+  
+  <h1>Diffusion Self-Weighted Guidance for Offline Reinforcement Learning</h1>
+  <br>Augusto Tagle, Javier Ruiz-del-Solar, Felipe Tobar</h3>
+  <br> [stat.ML]
+
+  <p>Offline reinforcement learning (RL) recovers the optimal policy $\pi$ given historical observations of an agent. In practice, $\pi$ is modeled as a weighted version of the agent’s behavior policy $\mu$, using a weight function $w$ working as a critic of the agent’s behavior. Though recent approaches to offline RL based on diffusion models have exhibited promising results, the computation of the required scores is challenging due to their dependence on the unknown $w$. In this work, we alleviate this issue by constructing a diffusion over both the actions and the weights. With the proposed setting, the required scores are directly obtained from the diffusion model without learning extra networks. Our main conceptual contribution is a novel guidance method, where guidance (which is a function of $w$) comes from the same diffusion model, therefore, our proposal is termed Self-Weighted Guidance (SWG). We show that SWG generates samples from the desired distribution on toy examples and performs on par with state-of-the-art methods on D4RL’s challenging environments, while maintaining a streamlined training pipeline. We further validate SWG through ablation studies on weight formulations and scalability.</p>
+
+<p><a href="https://arxiv.org/abs/2505.18345">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
