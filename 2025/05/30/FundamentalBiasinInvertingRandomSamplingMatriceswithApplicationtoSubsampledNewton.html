@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Fundamental Bias in Inverting Random Sampling Matrices with Application to Sub-sampled Newton</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Fundamental Bias in Inverting Random Sampling Matrices with Application to Sub-sampled Newton" />
+<meta name="author" content="Chengmei Niu, Zhenyu Liao, Zenan Ling, Michael W. Mahoney" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A substantial body of work in machine learning (ML) and randomized numerical linear algebra (RandNLA) has exploited various sorts of random sketching methodologies, including random sampling and random projection, with much of the analysis using Johnson–Lindenstrauss and subspace embedding techniques. Recent studies have identified the issue of inversion bias – the phenomenon that inverses of random sketches are not unbiased, despite the unbiasedness of the sketches themselves. This bias presents challenges for the use of random sketches in various ML pipelines, such as fast stochastic optimization, scalable statistical estimators, and distributed optimization. In the context of random projection, the inversion bias can be easily corrected for dense Gaussian projections (which are, however, too expensive for many applications). Recent work has shown how the inversion bias can be corrected for sparse sub-gaussian projections. In this paper, we show how the inversion bias can be corrected for random sampling methods, both uniform and non-uniform leverage-based, as well as for structured random projections, including those based on the Hadamard transform. Using these results, we establish problem-independent local convergence rates for sub-sampled Newton methods." />
+<meta property="og:description" content="A substantial body of work in machine learning (ML) and randomized numerical linear algebra (RandNLA) has exploited various sorts of random sketching methodologies, including random sampling and random projection, with much of the analysis using Johnson–Lindenstrauss and subspace embedding techniques. Recent studies have identified the issue of inversion bias – the phenomenon that inverses of random sketches are not unbiased, despite the unbiasedness of the sketches themselves. This bias presents challenges for the use of random sketches in various ML pipelines, such as fast stochastic optimization, scalable statistical estimators, and distributed optimization. In the context of random projection, the inversion bias can be easily corrected for dense Gaussian projections (which are, however, too expensive for many applications). Recent work has shown how the inversion bias can be corrected for sparse sub-gaussian projections. In this paper, we show how the inversion bias can be corrected for random sampling methods, both uniform and non-uniform leverage-based, as well as for structured random projections, including those based on the Hadamard transform. Using these results, we establish problem-independent local convergence rates for sub-sampled Newton methods." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/05/30/FundamentalBiasinInvertingRandomSamplingMatriceswithApplicationtoSubsampledNewton.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/05/30/FundamentalBiasinInvertingRandomSamplingMatriceswithApplicationtoSubsampledNewton.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fundamental Bias in Inverting Random Sampling Matrices with Application to Sub-sampled Newton" />
+<script type="application/ld+json">
+{"description":"A substantial body of work in machine learning (ML) and randomized numerical linear algebra (RandNLA) has exploited various sorts of random sketching methodologies, including random sampling and random projection, with much of the analysis using Johnson–Lindenstrauss and subspace embedding techniques. Recent studies have identified the issue of inversion bias – the phenomenon that inverses of random sketches are not unbiased, despite the unbiasedness of the sketches themselves. This bias presents challenges for the use of random sketches in various ML pipelines, such as fast stochastic optimization, scalable statistical estimators, and distributed optimization. In the context of random projection, the inversion bias can be easily corrected for dense Gaussian projections (which are, however, too expensive for many applications). Recent work has shown how the inversion bias can be corrected for sparse sub-gaussian projections. In this paper, we show how the inversion bias can be corrected for random sampling methods, both uniform and non-uniform leverage-based, as well as for structured random projections, including those based on the Hadamard transform. Using these results, we establish problem-independent local convergence rates for sub-sampled Newton methods.","headline":"Fundamental Bias in Inverting Random Sampling Matrices with Application to Sub-sampled Newton","dateModified":"2025-05-30T00:00:00+00:00","datePublished":"2025-05-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/05/30/FundamentalBiasinInvertingRandomSamplingMatriceswithApplicationtoSubsampledNewton.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/05/30/FundamentalBiasinInvertingRandomSamplingMatriceswithApplicationtoSubsampledNewton.html","author":{"@type":"Person","name":"Chengmei Niu, Zhenyu Liao, Zenan Ling, Michael W. Mahoney"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-30 00:00:00 +0000">05-30</time>
+  </p>
+  
+  <h1>Fundamental Bias in Inverting Random Sampling Matrices with Application to Sub-sampled Newton</h1>
+  <br>Chengmei Niu, Zhenyu Liao, Zenan Ling, Michael W. Mahoney</h3>
+  <br> [stat.ML]
+
+  <p>A substantial body of work in machine learning (ML) and randomized numerical linear algebra (RandNLA) has exploited various sorts of random sketching methodologies, including random sampling and random projection, with much of the analysis using Johnson–Lindenstrauss and subspace embedding techniques. Recent studies have identified the issue of inversion bias – the phenomenon that inverses of random sketches are not unbiased, despite the unbiasedness of the sketches themselves. This bias presents challenges for the use of random sketches in various ML pipelines, such as fast stochastic optimization, scalable statistical estimators, and distributed optimization. In the context of random projection, the inversion bias can be easily corrected for dense Gaussian projections (which are, however, too expensive for many applications). Recent work has shown how the inversion bias can be corrected for sparse sub-gaussian projections. In this paper, we show how the inversion bias can be corrected for random sampling methods, both uniform and non-uniform leverage-based, as well as for structured random projections, including those based on the Hadamard transform. Using these results, we establish problem-independent local convergence rates for sub-sampled Newton methods.</p>
+
+<p><a href="https://arxiv.org/abs/2502.13583">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

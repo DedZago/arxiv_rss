@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gradient Methods with Online Scaling Part I. Theoretical Foundations</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Gradient Methods with Online Scaling Part I. Theoretical Foundations" />
+<meta name="author" content="Wenzhi Gao, Ya-Chi Chu, Yinyu Ye, Madeleine Udell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper establishes the theoretical foundations of the online scaled gradient methods (OSGM), a framework that utilizes online learning to adapt stepsizes and provably accelerate first-order methods. OSGM quantifies the effectiveness of a stepsize by a feedback function motivated from a convergence measure and uses the feedback to adjust the stepsize through an online learning algorithm. Consequently, instantiations of OSGM achieve convergence rates that are asymptotically no worse than the optimal stepsize. OSGM yields desirable convergence guarantees on smooth convex problems, including 1) trajectory-dependent global convergence on smooth convex objectives; 2) an improved complexity result on smooth strongly convex problems, and 3) local superlinear convergence. Notably, OSGM constitutes a new family of first-order methods with non-asymptotic superlinear convergence, joining the celebrated quasi-Newton methods. Finally, OSGM explains the empirical success of the popular hypergradient-descent heuristic in optimization for machine learning." />
+<meta property="og:description" content="This paper establishes the theoretical foundations of the online scaled gradient methods (OSGM), a framework that utilizes online learning to adapt stepsizes and provably accelerate first-order methods. OSGM quantifies the effectiveness of a stepsize by a feedback function motivated from a convergence measure and uses the feedback to adjust the stepsize through an online learning algorithm. Consequently, instantiations of OSGM achieve convergence rates that are asymptotically no worse than the optimal stepsize. OSGM yields desirable convergence guarantees on smooth convex problems, including 1) trajectory-dependent global convergence on smooth convex objectives; 2) an improved complexity result on smooth strongly convex problems, and 3) local superlinear convergence. Notably, OSGM constitutes a new family of first-order methods with non-asymptotic superlinear convergence, joining the celebrated quasi-Newton methods. Finally, OSGM explains the empirical success of the popular hypergradient-descent heuristic in optimization for machine learning." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/05/30/GradientMethodswithOnlineScalingPartITheoreticalFoundations.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/05/30/GradientMethodswithOnlineScalingPartITheoreticalFoundations.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gradient Methods with Online Scaling Part I. Theoretical Foundations" />
+<script type="application/ld+json">
+{"description":"This paper establishes the theoretical foundations of the online scaled gradient methods (OSGM), a framework that utilizes online learning to adapt stepsizes and provably accelerate first-order methods. OSGM quantifies the effectiveness of a stepsize by a feedback function motivated from a convergence measure and uses the feedback to adjust the stepsize through an online learning algorithm. Consequently, instantiations of OSGM achieve convergence rates that are asymptotically no worse than the optimal stepsize. OSGM yields desirable convergence guarantees on smooth convex problems, including 1) trajectory-dependent global convergence on smooth convex objectives; 2) an improved complexity result on smooth strongly convex problems, and 3) local superlinear convergence. Notably, OSGM constitutes a new family of first-order methods with non-asymptotic superlinear convergence, joining the celebrated quasi-Newton methods. Finally, OSGM explains the empirical success of the popular hypergradient-descent heuristic in optimization for machine learning.","headline":"Gradient Methods with Online Scaling Part I. Theoretical Foundations","dateModified":"2025-05-30T00:00:00+00:00","datePublished":"2025-05-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/05/30/GradientMethodswithOnlineScalingPartITheoreticalFoundations.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/05/30/GradientMethodswithOnlineScalingPartITheoreticalFoundations.html","author":{"@type":"Person","name":"Wenzhi Gao, Ya-Chi Chu, Yinyu Ye, Madeleine Udell"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-05-30 00:00:00 +0000">05-30</time>
+  </p>
+  
+  <h1>Gradient Methods with Online Scaling Part I. Theoretical Foundations</h1>
+  <br>Wenzhi Gao, Ya-Chi Chu, Yinyu Ye, Madeleine Udell</h3>
+  <br> [stat.ML]
+
+  <p>This paper establishes the theoretical foundations of the online scaled gradient methods (OSGM), a framework that utilizes online learning to adapt stepsizes and provably accelerate first-order methods. OSGM quantifies the effectiveness of a stepsize by a feedback function motivated from a convergence measure and uses the feedback to adjust the stepsize through an online learning algorithm. Consequently, instantiations of OSGM achieve convergence rates that are asymptotically no worse than the optimal stepsize. OSGM yields desirable convergence guarantees on smooth convex problems, including 1) trajectory-dependent global convergence on smooth convex objectives; 2) an improved complexity result on smooth strongly convex problems, and 3) local superlinear convergence. Notably, OSGM constitutes a new family of first-order methods with non-asymptotic superlinear convergence, joining the celebrated quasi-Newton methods. Finally, OSGM explains the empirical success of the popular hypergradient-descent heuristic in optimization for machine learning.</p>
+
+<p><a href="https://arxiv.org/abs/2505.23081">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
