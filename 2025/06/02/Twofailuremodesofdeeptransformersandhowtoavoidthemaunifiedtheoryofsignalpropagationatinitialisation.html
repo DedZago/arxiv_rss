@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Two failure modes of deep transformers and how to avoid them: a unified theory of signal propagation at initialisation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Two failure modes of deep transformers and how to avoid them: a unified theory of signal propagation at initialisation" />
+<meta name="author" content="Alessio Giorlandino, Sebastian Goldt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Finding the right initialisation for neural networks is crucial to ensure smooth training and good performance. In transformers, the wrong initialisation can lead to one of two failure modes of self-attention layers: rank collapse, where all tokens collapse into similar representations, and entropy collapse, where highly concentrated attention scores lead to training instability. While the right initialisation has been extensively studied in feed-forward networks, an exact description of signal propagation through a full transformer block has so far been lacking. Here, we provide an analytical theory of signal propagation through vanilla transformer blocks with self-attention layers, layer normalisation, skip connections and ReLU MLP. To treat the self-attention layer, we draw on a formal parallel with the Random Energy Model from statistical physics. We identify and characterise two regimes governed by the variance of the query and key initialisations: a low-variance regime, where we recover the known rank collapse behaviour; and a previously unexplored high-variance regime, where signal is preserved but \textit{entropy collapse} occurs. In the low-variance regime, we calculate the critical strength for the residual connection to ensure signal propagation. Our theory yields trainability diagrams that identify the correct choice of initialisation hyper-parameters for a given architecture. Experiments with BERT-style models trained on TinyStories validate our predictions. Our theoretical framework gives a unified perspective on the two failure modes of self-attention and gives quantitative predictions on the scale of both weights and residual connections that guarantees smooth training." />
+<meta property="og:description" content="Finding the right initialisation for neural networks is crucial to ensure smooth training and good performance. In transformers, the wrong initialisation can lead to one of two failure modes of self-attention layers: rank collapse, where all tokens collapse into similar representations, and entropy collapse, where highly concentrated attention scores lead to training instability. While the right initialisation has been extensively studied in feed-forward networks, an exact description of signal propagation through a full transformer block has so far been lacking. Here, we provide an analytical theory of signal propagation through vanilla transformer blocks with self-attention layers, layer normalisation, skip connections and ReLU MLP. To treat the self-attention layer, we draw on a formal parallel with the Random Energy Model from statistical physics. We identify and characterise two regimes governed by the variance of the query and key initialisations: a low-variance regime, where we recover the known rank collapse behaviour; and a previously unexplored high-variance regime, where signal is preserved but \textit{entropy collapse} occurs. In the low-variance regime, we calculate the critical strength for the residual connection to ensure signal propagation. Our theory yields trainability diagrams that identify the correct choice of initialisation hyper-parameters for a given architecture. Experiments with BERT-style models trained on TinyStories validate our predictions. Our theoretical framework gives a unified perspective on the two failure modes of self-attention and gives quantitative predictions on the scale of both weights and residual connections that guarantees smooth training." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/02/Twofailuremodesofdeeptransformersandhowtoavoidthemaunifiedtheoryofsignalpropagationatinitialisation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/02/Twofailuremodesofdeeptransformersandhowtoavoidthemaunifiedtheoryofsignalpropagationatinitialisation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Two failure modes of deep transformers and how to avoid them: a unified theory of signal propagation at initialisation" />
+<script type="application/ld+json">
+{"description":"Finding the right initialisation for neural networks is crucial to ensure smooth training and good performance. In transformers, the wrong initialisation can lead to one of two failure modes of self-attention layers: rank collapse, where all tokens collapse into similar representations, and entropy collapse, where highly concentrated attention scores lead to training instability. While the right initialisation has been extensively studied in feed-forward networks, an exact description of signal propagation through a full transformer block has so far been lacking. Here, we provide an analytical theory of signal propagation through vanilla transformer blocks with self-attention layers, layer normalisation, skip connections and ReLU MLP. To treat the self-attention layer, we draw on a formal parallel with the Random Energy Model from statistical physics. We identify and characterise two regimes governed by the variance of the query and key initialisations: a low-variance regime, where we recover the known rank collapse behaviour; and a previously unexplored high-variance regime, where signal is preserved but \\textit{entropy collapse} occurs. In the low-variance regime, we calculate the critical strength for the residual connection to ensure signal propagation. Our theory yields trainability diagrams that identify the correct choice of initialisation hyper-parameters for a given architecture. Experiments with BERT-style models trained on TinyStories validate our predictions. Our theoretical framework gives a unified perspective on the two failure modes of self-attention and gives quantitative predictions on the scale of both weights and residual connections that guarantees smooth training.","headline":"Two failure modes of deep transformers and how to avoid them: a unified theory of signal propagation at initialisation","dateModified":"2025-06-02T00:00:00+00:00","datePublished":"2025-06-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/02/Twofailuremodesofdeeptransformersandhowtoavoidthemaunifiedtheoryofsignalpropagationatinitialisation.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/02/Twofailuremodesofdeeptransformersandhowtoavoidthemaunifiedtheoryofsignalpropagationatinitialisation.html","author":{"@type":"Person","name":"Alessio Giorlandino, Sebastian Goldt"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-02 00:00:00 +0000">06-02</time>
+  </p>
+  
+  <h1>Two failure modes of deep transformers and how to avoid them: a unified theory of signal propagation at initialisation</h1>
+  <br>Alessio Giorlandino, Sebastian Goldt</h3>
+  <br> [stat.ML,cond-mat.stat-mech]
+
+  <p>Finding the right initialisation for neural networks is crucial to ensure smooth training and good performance. In transformers, the wrong initialisation can lead to one of two failure modes of self-attention layers: rank collapse, where all tokens collapse into similar representations, and entropy collapse, where highly concentrated attention scores lead to training instability. While the right initialisation has been extensively studied in feed-forward networks, an exact description of signal propagation through a full transformer block has so far been lacking. Here, we provide an analytical theory of signal propagation through vanilla transformer blocks with self-attention layers, layer normalisation, skip connections and ReLU MLP. To treat the self-attention layer, we draw on a formal parallel with the Random Energy Model from statistical physics. We identify and characterise two regimes governed by the variance of the query and key initialisations: a low-variance regime, where we recover the known rank collapse behaviour; and a previously unexplored high-variance regime, where signal is preserved but \textit{entropy collapse} occurs. In the low-variance regime, we calculate the critical strength for the residual connection to ensure signal propagation. Our theory yields trainability diagrams that identify the correct choice of initialisation hyper-parameters for a given architecture. Experiments with BERT-style models trained on TinyStories validate our predictions. Our theoretical framework gives a unified perspective on the two failure modes of self-attention and gives quantitative predictions on the scale of both weights and residual connections that guarantees smooth training.</p>
+
+<p><a href="https://arxiv.org/abs/2505.24333">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

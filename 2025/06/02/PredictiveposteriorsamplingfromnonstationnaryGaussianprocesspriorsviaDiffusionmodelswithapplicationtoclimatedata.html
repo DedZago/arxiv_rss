@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Predictive posterior sampling from non-stationnary Gaussian process priors via Diffusion models with application to climate data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Predictive posterior sampling from non-stationnary Gaussian process priors via Diffusion models with application to climate data" />
+<meta name="author" content="Gabriel V Cardoso, Mike Pereira" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian models based on Gaussian processes (GPs) offer a flexible framework to predict spatially distributed variables with uncertainty. But the use of nonstationary priors, often necessary for capturing complex spatial patterns, makes sampling from the predictive posterior distribution (PPD) computationally intractable. In this paper, we propose a two-step approach based on diffusion generative models (DGMs) to mimic PPDs associated with non-stationary GP priors: we replace the GP prior by a DGM surrogate, and leverage recent advances on training-free guidance algorithms for DGMs to sample from the desired posterior distribution. We apply our approach to a rich non-stationary GP prior from which exact posterior sampling is untractable and validate that the issuing distributions are close to their GP counterpart using several statistical metrics. We also demonstrate how one can fine-tune the trained DGMs to target specific parts of the GP prior. Finally we apply the proposed approach to solve inverse problems arising in environmental sciences, thus yielding state-of-the-art predictions." />
+<meta property="og:description" content="Bayesian models based on Gaussian processes (GPs) offer a flexible framework to predict spatially distributed variables with uncertainty. But the use of nonstationary priors, often necessary for capturing complex spatial patterns, makes sampling from the predictive posterior distribution (PPD) computationally intractable. In this paper, we propose a two-step approach based on diffusion generative models (DGMs) to mimic PPDs associated with non-stationary GP priors: we replace the GP prior by a DGM surrogate, and leverage recent advances on training-free guidance algorithms for DGMs to sample from the desired posterior distribution. We apply our approach to a rich non-stationary GP prior from which exact posterior sampling is untractable and validate that the issuing distributions are close to their GP counterpart using several statistical metrics. We also demonstrate how one can fine-tune the trained DGMs to target specific parts of the GP prior. Finally we apply the proposed approach to solve inverse problems arising in environmental sciences, thus yielding state-of-the-art predictions." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/02/PredictiveposteriorsamplingfromnonstationnaryGaussianprocesspriorsviaDiffusionmodelswithapplicationtoclimatedata.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/02/PredictiveposteriorsamplingfromnonstationnaryGaussianprocesspriorsviaDiffusionmodelswithapplicationtoclimatedata.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Predictive posterior sampling from non-stationnary Gaussian process priors via Diffusion models with application to climate data" />
+<script type="application/ld+json">
+{"description":"Bayesian models based on Gaussian processes (GPs) offer a flexible framework to predict spatially distributed variables with uncertainty. But the use of nonstationary priors, often necessary for capturing complex spatial patterns, makes sampling from the predictive posterior distribution (PPD) computationally intractable. In this paper, we propose a two-step approach based on diffusion generative models (DGMs) to mimic PPDs associated with non-stationary GP priors: we replace the GP prior by a DGM surrogate, and leverage recent advances on training-free guidance algorithms for DGMs to sample from the desired posterior distribution. We apply our approach to a rich non-stationary GP prior from which exact posterior sampling is untractable and validate that the issuing distributions are close to their GP counterpart using several statistical metrics. We also demonstrate how one can fine-tune the trained DGMs to target specific parts of the GP prior. Finally we apply the proposed approach to solve inverse problems arising in environmental sciences, thus yielding state-of-the-art predictions.","headline":"Predictive posterior sampling from non-stationnary Gaussian process priors via Diffusion models with application to climate data","dateModified":"2025-06-02T00:00:00+00:00","datePublished":"2025-06-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/02/PredictiveposteriorsamplingfromnonstationnaryGaussianprocesspriorsviaDiffusionmodelswithapplicationtoclimatedata.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/02/PredictiveposteriorsamplingfromnonstationnaryGaussianprocesspriorsviaDiffusionmodelswithapplicationtoclimatedata.html","author":{"@type":"Person","name":"Gabriel V Cardoso, Mike Pereira"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-02 00:00:00 +0000">06-02</time>
+  </p>
+  
+  <h1>Predictive posterior sampling from non-stationnary Gaussian process priors via Diffusion models with application to climate data</h1>
+  <br>Gabriel V Cardoso, Mike Pereira</h3>
+  <br> [stat.ML]
+
+  <p>Bayesian models based on Gaussian processes (GPs) offer a flexible framework to predict spatially distributed variables with uncertainty. But the use of nonstationary priors, often necessary for capturing complex spatial patterns, makes sampling from the predictive posterior distribution (PPD) computationally intractable. In this paper, we propose a two-step approach based on diffusion generative models (DGMs) to mimic PPDs associated with non-stationary GP priors: we replace the GP prior by a DGM surrogate, and leverage recent advances on training-free guidance algorithms for DGMs to sample from the desired posterior distribution. We apply our approach to a rich non-stationary GP prior from which exact posterior sampling is untractable and validate that the issuing distributions are close to their GP counterpart using several statistical metrics. We also demonstrate how one can fine-tune the trained DGMs to target specific parts of the GP prior. Finally we apply the proposed approach to solve inverse problems arising in environmental sciences, thus yielding state-of-the-art predictions.</p>
+
+<p><a href="https://arxiv.org/abs/2505.24556">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
