@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Disentangling Total-Variance and Signal-to-Noise-Ratio Improves Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Disentangling Total-Variance and Signal-to-Noise-Ratio Improves Diffusion Models" />
+<meta name="author" content="Khaled Kahouli, Winfried Ripken, Stefan Gugler, Oliver T. Unke, Klaus-Robert Müller, Shinichi Nakajima" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The long sampling time of diffusion models remains a significant bottleneck, which can be mitigated by reducing the number of diffusion time steps. However, the quality of samples with fewer steps is highly dependent on the noise schedule, i.e., the specific manner in which noise is introduced and the signal is reduced at each step. Although prior work has improved upon the original variance-preserving and variance-exploding schedules, these approaches $\textit{passively}$ adjust the total variance, without direct control over it. In this work, we propose a novel total-variance/signal-to-noise-ratio disentangled (TV/SNR) framework, where TV and SNR can be controlled independently. Our approach reveals that schedules where the TV explodes exponentially can often be improved by adopting a constant TV schedule while preserving the same SNR schedule. Furthermore, generalizing the SNR schedule of the optimal transport flow matching significantly improves the generation performance. Our findings hold across various reverse diffusion solvers and diverse applications, including molecular structure and image generation." />
+<meta property="og:description" content="The long sampling time of diffusion models remains a significant bottleneck, which can be mitigated by reducing the number of diffusion time steps. However, the quality of samples with fewer steps is highly dependent on the noise schedule, i.e., the specific manner in which noise is introduced and the signal is reduced at each step. Although prior work has improved upon the original variance-preserving and variance-exploding schedules, these approaches $\textit{passively}$ adjust the total variance, without direct control over it. In this work, we propose a novel total-variance/signal-to-noise-ratio disentangled (TV/SNR) framework, where TV and SNR can be controlled independently. Our approach reveals that schedules where the TV explodes exponentially can often be improved by adopting a constant TV schedule while preserving the same SNR schedule. Furthermore, generalizing the SNR schedule of the optimal transport flow matching significantly improves the generation performance. Our findings hold across various reverse diffusion solvers and diverse applications, including molecular structure and image generation." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/03/DisentanglingTotalVarianceandSignaltoNoiseRatioImprovesDiffusionModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/03/DisentanglingTotalVarianceandSignaltoNoiseRatioImprovesDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Disentangling Total-Variance and Signal-to-Noise-Ratio Improves Diffusion Models" />
+<script type="application/ld+json">
+{"description":"The long sampling time of diffusion models remains a significant bottleneck, which can be mitigated by reducing the number of diffusion time steps. However, the quality of samples with fewer steps is highly dependent on the noise schedule, i.e., the specific manner in which noise is introduced and the signal is reduced at each step. Although prior work has improved upon the original variance-preserving and variance-exploding schedules, these approaches $\\textit{passively}$ adjust the total variance, without direct control over it. In this work, we propose a novel total-variance/signal-to-noise-ratio disentangled (TV/SNR) framework, where TV and SNR can be controlled independently. Our approach reveals that schedules where the TV explodes exponentially can often be improved by adopting a constant TV schedule while preserving the same SNR schedule. Furthermore, generalizing the SNR schedule of the optimal transport flow matching significantly improves the generation performance. Our findings hold across various reverse diffusion solvers and diverse applications, including molecular structure and image generation.","headline":"Disentangling Total-Variance and Signal-to-Noise-Ratio Improves Diffusion Models","dateModified":"2025-06-03T00:00:00+00:00","datePublished":"2025-06-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/03/DisentanglingTotalVarianceandSignaltoNoiseRatioImprovesDiffusionModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/03/DisentanglingTotalVarianceandSignaltoNoiseRatioImprovesDiffusionModels.html","author":{"@type":"Person","name":"Khaled Kahouli, Winfried Ripken, Stefan Gugler, Oliver T. Unke, Klaus-Robert Müller, Shinichi Nakajima"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-03 00:00:00 +0000">06-03</time>
+  </p>
+  
+  <h1>Disentangling Total-Variance and Signal-to-Noise-Ratio Improves Diffusion Models</h1>
+  <br>Khaled Kahouli, Winfried Ripken, Stefan Gugler, Oliver T. Unke, Klaus-Robert Müller, Shinichi Nakajima</h3>
+  <br> [stat.ML]
+
+  <p>The long sampling time of diffusion models remains a significant bottleneck, which can be mitigated by reducing the number of diffusion time steps. However, the quality of samples with fewer steps is highly dependent on the noise schedule, i.e., the specific manner in which noise is introduced and the signal is reduced at each step. Although prior work has improved upon the original variance-preserving and variance-exploding schedules, these approaches $\textit{passively}$ adjust the total variance, without direct control over it. In this work, we propose a novel total-variance/signal-to-noise-ratio disentangled (TV/SNR) framework, where TV and SNR can be controlled independently. Our approach reveals that schedules where the TV explodes exponentially can often be improved by adopting a constant TV schedule while preserving the same SNR schedule. Furthermore, generalizing the SNR schedule of the optimal transport flow matching significantly improves the generation performance. Our findings hold across various reverse diffusion solvers and diverse applications, including molecular structure and image generation.</p>
+
+<p><a href="https://arxiv.org/abs/2502.08598">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

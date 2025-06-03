@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quantifying First-Order Markov Violations in Noisy Reinforcement Learning: A Causal Discovery Approach</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Quantifying First-Order Markov Violations in Noisy Reinforcement Learning: A Causal Discovery Approach" />
+<meta name="author" content="Naveen Mysore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reinforcement learning (RL) methods frequently assume that each new observation completely reflects the environment’s state, thereby guaranteeing Markovian (one-step) transitions. In practice, partial observability or sensor/actuator noise often invalidates this assumption. This paper proposes a systematic methodology for detecting such violations, combining a partial correlation-based causal discovery process (PCMCI) with a novel Markov Violation score (MVS). The MVS measures multi-step dependencies that emerge when noise or incomplete state information disrupts the Markov property. Classic control tasks (CartPole, Pendulum, Acrobot) serve as examples to illustrate how targeted noise and dimension omissions affect both RL performance and measured Markov consistency. Surprisingly, even substantial observation noise sometimes fails to induce strong multi-lag dependencies in certain domains (e.g., Acrobot). In contrast, dimension-dropping investigations show that excluding some state variables (e.g., angular velocities in CartPole and Pendulum) significantly reduces returns and increases MVS, while removing other dimensions has minimal impact. These findings emphasize the importance of locating and safeguarding the most causally essential dimensions in order to preserve effective single-step learning. By integrating partial correlation tests with RL performance outcomes, the proposed approach precisely identifies when and where the Markov assumption is violated. This framework offers a principled mechanism for developing robust policies, informing representation learning, and addressing partial observability in real-world RL scenarios. All code and experimental logs are accessible for reproducibility (https://github.com/ucsb/markovianess)." />
+<meta property="og:description" content="Reinforcement learning (RL) methods frequently assume that each new observation completely reflects the environment’s state, thereby guaranteeing Markovian (one-step) transitions. In practice, partial observability or sensor/actuator noise often invalidates this assumption. This paper proposes a systematic methodology for detecting such violations, combining a partial correlation-based causal discovery process (PCMCI) with a novel Markov Violation score (MVS). The MVS measures multi-step dependencies that emerge when noise or incomplete state information disrupts the Markov property. Classic control tasks (CartPole, Pendulum, Acrobot) serve as examples to illustrate how targeted noise and dimension omissions affect both RL performance and measured Markov consistency. Surprisingly, even substantial observation noise sometimes fails to induce strong multi-lag dependencies in certain domains (e.g., Acrobot). In contrast, dimension-dropping investigations show that excluding some state variables (e.g., angular velocities in CartPole and Pendulum) significantly reduces returns and increases MVS, while removing other dimensions has minimal impact. These findings emphasize the importance of locating and safeguarding the most causally essential dimensions in order to preserve effective single-step learning. By integrating partial correlation tests with RL performance outcomes, the proposed approach precisely identifies when and where the Markov assumption is violated. This framework offers a principled mechanism for developing robust policies, informing representation learning, and addressing partial observability in real-world RL scenarios. All code and experimental logs are accessible for reproducibility (https://github.com/ucsb/markovianess)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/03/QuantifyingFirstOrderMarkovViolationsinNoisyReinforcementLearningACausalDiscoveryApproach.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/03/QuantifyingFirstOrderMarkovViolationsinNoisyReinforcementLearningACausalDiscoveryApproach.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quantifying First-Order Markov Violations in Noisy Reinforcement Learning: A Causal Discovery Approach" />
+<script type="application/ld+json">
+{"description":"Reinforcement learning (RL) methods frequently assume that each new observation completely reflects the environment’s state, thereby guaranteeing Markovian (one-step) transitions. In practice, partial observability or sensor/actuator noise often invalidates this assumption. This paper proposes a systematic methodology for detecting such violations, combining a partial correlation-based causal discovery process (PCMCI) with a novel Markov Violation score (MVS). The MVS measures multi-step dependencies that emerge when noise or incomplete state information disrupts the Markov property. Classic control tasks (CartPole, Pendulum, Acrobot) serve as examples to illustrate how targeted noise and dimension omissions affect both RL performance and measured Markov consistency. Surprisingly, even substantial observation noise sometimes fails to induce strong multi-lag dependencies in certain domains (e.g., Acrobot). In contrast, dimension-dropping investigations show that excluding some state variables (e.g., angular velocities in CartPole and Pendulum) significantly reduces returns and increases MVS, while removing other dimensions has minimal impact. These findings emphasize the importance of locating and safeguarding the most causally essential dimensions in order to preserve effective single-step learning. By integrating partial correlation tests with RL performance outcomes, the proposed approach precisely identifies when and where the Markov assumption is violated. This framework offers a principled mechanism for developing robust policies, informing representation learning, and addressing partial observability in real-world RL scenarios. All code and experimental logs are accessible for reproducibility (https://github.com/ucsb/markovianess).","headline":"Quantifying First-Order Markov Violations in Noisy Reinforcement Learning: A Causal Discovery Approach","dateModified":"2025-06-03T00:00:00+00:00","datePublished":"2025-06-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/03/QuantifyingFirstOrderMarkovViolationsinNoisyReinforcementLearningACausalDiscoveryApproach.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/03/QuantifyingFirstOrderMarkovViolationsinNoisyReinforcementLearningACausalDiscoveryApproach.html","author":{"@type":"Person","name":"Naveen Mysore"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-03 00:00:00 +0000">06-03</time>
+  </p>
+  
+  <h1>Quantifying First-Order Markov Violations in Noisy Reinforcement Learning: A Causal Discovery Approach</h1>
+  <br>Naveen Mysore</h3>
+  <br> [stat.ML]
+
+  <p>Reinforcement learning (RL) methods frequently assume that each new observation completely reflects the environment’s state, thereby guaranteeing Markovian (one-step) transitions. In practice, partial observability or sensor/actuator noise often invalidates this assumption. This paper proposes a systematic methodology for detecting such violations, combining a partial correlation-based causal discovery process (PCMCI) with a novel Markov Violation score (MVS). The MVS measures multi-step dependencies that emerge when noise or incomplete state information disrupts the Markov property.
+  Classic control tasks (CartPole, Pendulum, Acrobot) serve as examples to illustrate how targeted noise and dimension omissions affect both RL performance and measured Markov consistency. Surprisingly, even substantial observation noise sometimes fails to induce strong multi-lag dependencies in certain domains (e.g., Acrobot). In contrast, dimension-dropping investigations show that excluding some state variables (e.g., angular velocities in CartPole and Pendulum) significantly reduces returns and increases MVS, while removing other dimensions has minimal impact.
+  These findings emphasize the importance of locating and safeguarding the most causally essential dimensions in order to preserve effective single-step learning. By integrating partial correlation tests with RL performance outcomes, the proposed approach precisely identifies when and where the Markov assumption is violated. This framework offers a principled mechanism for developing robust policies, informing representation learning, and addressing partial observability in real-world RL scenarios. All code and experimental logs are accessible for reproducibility (https://github.com/ucsb/markovianess).</p>
+
+<p><a href="https://arxiv.org/abs/2503.00206">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
