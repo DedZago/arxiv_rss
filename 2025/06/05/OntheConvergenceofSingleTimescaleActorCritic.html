@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Convergence of Single-Timescale Actor-Critic</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the Convergence of Single-Timescale Actor-Critic" />
+<meta name="author" content="Navdeep Kumar, Priyank Agrawal, Giorgia Ramponi, Kfir Yehuda Levy, Shie Mannor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We analyze the global convergence of the single-timescale actor-critic (AC) algorithm for the infinite-horizon discounted Markov Decision Processes (MDPs) with finite state spaces. To this end, we introduce an elegant analytical framework for handling complex, coupled recursions inherent in the algorithm. Leveraging this framework, we establish that the algorithm converges to an $\epsilon$-close \textbf{globally optimal} policy with a sample complexity of ( O(\epsilon^{-3}) ). This significantly improves upon the existing complexity of $O(\epsilon^{-2})$ to achieve $\epsilon$-close \textbf{stationary policy}, which is equivalent to the complexity of $O(\epsilon^{-4})$ to achieve $\epsilon$-close \textbf{globally optimal} policy using gradient domination lemma. Furthermore, we demonstrate that to achieve this improvement, the step sizes for both the actor and critic must decay as ( O(k^{-\frac{2}{3}}) ) with iteration $k$, diverging from the conventional ( O(k^{-\frac{1}{2}}) ) rates commonly used in (non)convex optimization." />
+<meta property="og:description" content="We analyze the global convergence of the single-timescale actor-critic (AC) algorithm for the infinite-horizon discounted Markov Decision Processes (MDPs) with finite state spaces. To this end, we introduce an elegant analytical framework for handling complex, coupled recursions inherent in the algorithm. Leveraging this framework, we establish that the algorithm converges to an $\epsilon$-close \textbf{globally optimal} policy with a sample complexity of ( O(\epsilon^{-3}) ). This significantly improves upon the existing complexity of $O(\epsilon^{-2})$ to achieve $\epsilon$-close \textbf{stationary policy}, which is equivalent to the complexity of $O(\epsilon^{-4})$ to achieve $\epsilon$-close \textbf{globally optimal} policy using gradient domination lemma. Furthermore, we demonstrate that to achieve this improvement, the step sizes for both the actor and critic must decay as ( O(k^{-\frac{2}{3}}) ) with iteration $k$, diverging from the conventional ( O(k^{-\frac{1}{2}}) ) rates commonly used in (non)convex optimization." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/05/OntheConvergenceofSingleTimescaleActorCritic.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/05/OntheConvergenceofSingleTimescaleActorCritic.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the Convergence of Single-Timescale Actor-Critic" />
+<script type="application/ld+json">
+{"description":"We analyze the global convergence of the single-timescale actor-critic (AC) algorithm for the infinite-horizon discounted Markov Decision Processes (MDPs) with finite state spaces. To this end, we introduce an elegant analytical framework for handling complex, coupled recursions inherent in the algorithm. Leveraging this framework, we establish that the algorithm converges to an $\\epsilon$-close \\textbf{globally optimal} policy with a sample complexity of ( O(\\epsilon^{-3}) ). This significantly improves upon the existing complexity of $O(\\epsilon^{-2})$ to achieve $\\epsilon$-close \\textbf{stationary policy}, which is equivalent to the complexity of $O(\\epsilon^{-4})$ to achieve $\\epsilon$-close \\textbf{globally optimal} policy using gradient domination lemma. Furthermore, we demonstrate that to achieve this improvement, the step sizes for both the actor and critic must decay as ( O(k^{-\\frac{2}{3}}) ) with iteration $k$, diverging from the conventional ( O(k^{-\\frac{1}{2}}) ) rates commonly used in (non)convex optimization.","headline":"On the Convergence of Single-Timescale Actor-Critic","dateModified":"2025-06-05T00:00:00+00:00","datePublished":"2025-06-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/05/OntheConvergenceofSingleTimescaleActorCritic.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/05/OntheConvergenceofSingleTimescaleActorCritic.html","author":{"@type":"Person","name":"Navdeep Kumar, Priyank Agrawal, Giorgia Ramponi, Kfir Yehuda Levy, Shie Mannor"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>On the Convergence of Single-Timescale Actor-Critic</h1>
+  <br>Navdeep Kumar, Priyank Agrawal, Giorgia Ramponi, Kfir Yehuda Levy, Shie Mannor</h3>
+  <br> [stat.ML]
+
+  <p>We analyze the global convergence of the single-timescale actor-critic (AC) algorithm for the infinite-horizon discounted Markov Decision Processes (MDPs) with finite state spaces. To this end, we introduce an elegant analytical framework for handling complex, coupled recursions inherent in the algorithm. Leveraging this framework, we establish that the algorithm converges to an $\epsilon$-close \textbf{globally optimal} policy with a sample complexity of ( O(\epsilon^{-3}) ). This significantly improves upon the existing complexity of $O(\epsilon^{-2})$ to achieve $\epsilon$-close \textbf{stationary policy}, which is equivalent to the complexity of $O(\epsilon^{-4})$ to achieve $\epsilon$-close \textbf{globally optimal} policy using gradient domination lemma. Furthermore, we demonstrate that to achieve this improvement, the step sizes for both the actor and critic must decay as ( O(k^{-\frac{2}{3}}) ) with iteration $k$, diverging from the conventional ( O(k^{-\frac{1}{2}}) ) rates commonly used in (non)convex optimization.</p>
+
+<p><a href="https://arxiv.org/abs/2410.08868">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
