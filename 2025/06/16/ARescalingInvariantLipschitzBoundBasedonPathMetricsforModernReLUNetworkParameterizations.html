@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Rescaling-Invariant Lipschitz Bound Based on Path-Metrics for Modern ReLU Network Parameterizations</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Rescaling-Invariant Lipschitz Bound Based on Path-Metrics for Modern ReLU Network Parameterizations" />
+<meta name="author" content="Antoine Gonon, Nicolas Brisebarre, Elisa Riccietti, Rémi Gribonval" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Robustness with respect to weight perturbations underpins guarantees for generalization, pruning and quantization. Existing guarantees rely on Lipschitz bounds in parameter space, cover only plain feed-forward MLPs, and break under the ubiquitous neuron-wise rescaling symmetry of ReLU networks. We prove a new Lipschitz inequality expressed through the $\ell^1$-path-metric of the weights. The bound is (i) rescaling-invariant by construction and (ii) applies to any ReLU-DAG architecture with any combination of convolutions, skip connections, pooling, and frozen (inference-time) batch-normalization – thus encompassing ResNets, U-Nets, VGG-style CNNs, and more. By respecting the network’s natural symmetries, the new bound strictly sharpens prior parameter-space bounds and can be computed in two forward passes. To illustrate its utility, we derive from it a symmetry-aware pruning criterion and show – through a proof-of-concept experiment on a ResNet-18 trained on ImageNet – that its pruning performance matches that of classical magnitude pruning, while becoming totally immune to arbitrary neuron-wise rescalings." />
+<meta property="og:description" content="Robustness with respect to weight perturbations underpins guarantees for generalization, pruning and quantization. Existing guarantees rely on Lipschitz bounds in parameter space, cover only plain feed-forward MLPs, and break under the ubiquitous neuron-wise rescaling symmetry of ReLU networks. We prove a new Lipschitz inequality expressed through the $\ell^1$-path-metric of the weights. The bound is (i) rescaling-invariant by construction and (ii) applies to any ReLU-DAG architecture with any combination of convolutions, skip connections, pooling, and frozen (inference-time) batch-normalization – thus encompassing ResNets, U-Nets, VGG-style CNNs, and more. By respecting the network’s natural symmetries, the new bound strictly sharpens prior parameter-space bounds and can be computed in two forward passes. To illustrate its utility, we derive from it a symmetry-aware pruning criterion and show – through a proof-of-concept experiment on a ResNet-18 trained on ImageNet – that its pruning performance matches that of classical magnitude pruning, while becoming totally immune to arbitrary neuron-wise rescalings." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/16/ARescalingInvariantLipschitzBoundBasedonPathMetricsforModernReLUNetworkParameterizations.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/16/ARescalingInvariantLipschitzBoundBasedonPathMetricsforModernReLUNetworkParameterizations.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Rescaling-Invariant Lipschitz Bound Based on Path-Metrics for Modern ReLU Network Parameterizations" />
+<script type="application/ld+json">
+{"description":"Robustness with respect to weight perturbations underpins guarantees for generalization, pruning and quantization. Existing guarantees rely on Lipschitz bounds in parameter space, cover only plain feed-forward MLPs, and break under the ubiquitous neuron-wise rescaling symmetry of ReLU networks. We prove a new Lipschitz inequality expressed through the $\\ell^1$-path-metric of the weights. The bound is (i) rescaling-invariant by construction and (ii) applies to any ReLU-DAG architecture with any combination of convolutions, skip connections, pooling, and frozen (inference-time) batch-normalization – thus encompassing ResNets, U-Nets, VGG-style CNNs, and more. By respecting the network’s natural symmetries, the new bound strictly sharpens prior parameter-space bounds and can be computed in two forward passes. To illustrate its utility, we derive from it a symmetry-aware pruning criterion and show – through a proof-of-concept experiment on a ResNet-18 trained on ImageNet – that its pruning performance matches that of classical magnitude pruning, while becoming totally immune to arbitrary neuron-wise rescalings.","headline":"A Rescaling-Invariant Lipschitz Bound Based on Path-Metrics for Modern ReLU Network Parameterizations","dateModified":"2025-06-16T00:00:00+00:00","datePublished":"2025-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/16/ARescalingInvariantLipschitzBoundBasedonPathMetricsforModernReLUNetworkParameterizations.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/16/ARescalingInvariantLipschitzBoundBasedonPathMetricsforModernReLUNetworkParameterizations.html","author":{"@type":"Person","name":"Antoine Gonon, Nicolas Brisebarre, Elisa Riccietti, Rémi Gribonval"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-16 00:00:00 +0000">06-16</time>
+  </p>
+  
+  <h1>A Rescaling-Invariant Lipschitz Bound Based on Path-Metrics for Modern ReLU Network Parameterizations</h1>
+  <br>Antoine Gonon, Nicolas Brisebarre, Elisa Riccietti, Rémi Gribonval</h3>
+  <br> [stat.ML]
+
+  <p>Robustness with respect to weight perturbations underpins guarantees for generalization, pruning and quantization. Existing guarantees rely on Lipschitz bounds in parameter space, cover only plain feed-forward MLPs, and break under the ubiquitous neuron-wise rescaling symmetry of ReLU networks. We prove a new Lipschitz inequality expressed through the $\ell^1$-path-metric of the weights. The bound is (i) rescaling-invariant by construction and (ii) applies to any ReLU-DAG architecture with any combination of convolutions, skip connections, pooling, and frozen (inference-time) batch-normalization – thus encompassing ResNets, U-Nets, VGG-style CNNs, and more. By respecting the network’s natural symmetries, the new bound strictly sharpens prior parameter-space bounds and can be computed in two forward passes. To illustrate its utility, we derive from it a symmetry-aware pruning criterion and show – through a proof-of-concept experiment on a ResNet-18 trained on ImageNet – that its pruning performance matches that of classical magnitude pruning, while becoming totally immune to arbitrary neuron-wise rescalings.</p>
+
+<p><a href="https://arxiv.org/abs/2405.15006">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
