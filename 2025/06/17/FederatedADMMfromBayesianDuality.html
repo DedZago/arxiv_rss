@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Federated ADMM from Bayesian Duality</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Federated ADMM from Bayesian Duality" />
+<meta name="author" content="Thomas Möllenhoff, Siddharth Swaroop, Finale Doshi-Velez, Mohammad Emtiyaz Khan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ADMM is a popular method for federated deep learning which originated in the 1970s and, even though many new variants of it have been proposed since then, its core algorithmic structure has remained unchanged. Here, we take a major departure from the old structure and present a fundamentally new way to derive and extend federated ADMM. We propose to use a structure called Bayesian Duality which exploits a duality of the posterior distributions obtained by solving a variational-Bayesian reformulation of the original problem. We show that this naturally recovers the original ADMM when isotropic Gaussian posteriors are used, and yields non-trivial extensions for other posterior forms. For instance, full-covariance Gaussians lead to Newton-like variants of ADMM, while diagonal covariances result in a cheap Adam-like variant. This is especially useful to handle heterogeneity in federated deep learning, giving up to 7% accuracy improvements over recent baselines. Our work opens a new Bayesian path to improve primal-dual methods." />
+<meta property="og:description" content="ADMM is a popular method for federated deep learning which originated in the 1970s and, even though many new variants of it have been proposed since then, its core algorithmic structure has remained unchanged. Here, we take a major departure from the old structure and present a fundamentally new way to derive and extend federated ADMM. We propose to use a structure called Bayesian Duality which exploits a duality of the posterior distributions obtained by solving a variational-Bayesian reformulation of the original problem. We show that this naturally recovers the original ADMM when isotropic Gaussian posteriors are used, and yields non-trivial extensions for other posterior forms. For instance, full-covariance Gaussians lead to Newton-like variants of ADMM, while diagonal covariances result in a cheap Adam-like variant. This is especially useful to handle heterogeneity in federated deep learning, giving up to 7% accuracy improvements over recent baselines. Our work opens a new Bayesian path to improve primal-dual methods." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/17/FederatedADMMfromBayesianDuality.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/17/FederatedADMMfromBayesianDuality.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Federated ADMM from Bayesian Duality" />
+<script type="application/ld+json">
+{"description":"ADMM is a popular method for federated deep learning which originated in the 1970s and, even though many new variants of it have been proposed since then, its core algorithmic structure has remained unchanged. Here, we take a major departure from the old structure and present a fundamentally new way to derive and extend federated ADMM. We propose to use a structure called Bayesian Duality which exploits a duality of the posterior distributions obtained by solving a variational-Bayesian reformulation of the original problem. We show that this naturally recovers the original ADMM when isotropic Gaussian posteriors are used, and yields non-trivial extensions for other posterior forms. For instance, full-covariance Gaussians lead to Newton-like variants of ADMM, while diagonal covariances result in a cheap Adam-like variant. This is especially useful to handle heterogeneity in federated deep learning, giving up to 7% accuracy improvements over recent baselines. Our work opens a new Bayesian path to improve primal-dual methods.","headline":"Federated ADMM from Bayesian Duality","dateModified":"2025-06-17T00:00:00+00:00","datePublished":"2025-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/17/FederatedADMMfromBayesianDuality.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/17/FederatedADMMfromBayesianDuality.html","author":{"@type":"Person","name":"Thomas Möllenhoff, Siddharth Swaroop, Finale Doshi-Velez, Mohammad Emtiyaz Khan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-17 00:00:00 +0000">06-17</time>
+  </p>
+  
+  <h1>Federated ADMM from Bayesian Duality</h1>
+  <br>Thomas Möllenhoff, Siddharth Swaroop, Finale Doshi-Velez, Mohammad Emtiyaz Khan</h3>
+  <br> [stat.ML]
+
+  <p>ADMM is a popular method for federated deep learning which originated in the 1970s and, even though many new variants of it have been proposed since then, its core algorithmic structure has remained unchanged. Here, we take a major departure from the old structure and present a fundamentally new way to derive and extend federated ADMM. We propose to use a structure called Bayesian Duality which exploits a duality of the posterior distributions obtained by solving a variational-Bayesian reformulation of the original problem. We show that this naturally recovers the original ADMM when isotropic Gaussian posteriors are used, and yields non-trivial extensions for other posterior forms. For instance, full-covariance Gaussians lead to Newton-like variants of ADMM, while diagonal covariances result in a cheap Adam-like variant. This is especially useful to handle heterogeneity in federated deep learning, giving up to 7% accuracy improvements over recent baselines. Our work opens a new Bayesian path to improve primal-dual methods.</p>
+
+<p><a href="https://arxiv.org/abs/2506.13150">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Vine Copulas as Differentiable Computational Graphs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Vine Copulas as Differentiable Computational Graphs" />
+<meta name="author" content="Tuoyuan Cheng, Thibault Vatter, Thomas Nagler, Kan Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Vine copulas are sophisticated models for multivariate distributions and are increasingly used in machine learning. To facilitate their integration into modern ML pipelines, we introduce the vine computational graph, a DAG that abstracts the multilevel vine structure and associated computations. On this foundation, we devise new algorithms for conditional sampling, efficient sampling-order scheduling, and constructing vine structures for customized conditioning variables. We implement these ideas in torchvinecopulib, a GPU-accelerated Python library built upon PyTorch, delivering improved scalability for fitting, sampling, and density evaluation. Our experiments illustrate how gradient flowing through the vine can improve Vine Copula Autoencoders and that incorporating vines for uncertainty quantification in deep learning can outperform MC-dropout, deep ensembles, and Bayesian Neural Networks in sharpness, calibration, and runtime. By recasting vine copula models as computational graphs, our work connects classical dependence modeling with modern deep-learning toolchains and facilitates the integration of state-of-the-art copula methods in modern machine learning pipelines." />
+<meta property="og:description" content="Vine copulas are sophisticated models for multivariate distributions and are increasingly used in machine learning. To facilitate their integration into modern ML pipelines, we introduce the vine computational graph, a DAG that abstracts the multilevel vine structure and associated computations. On this foundation, we devise new algorithms for conditional sampling, efficient sampling-order scheduling, and constructing vine structures for customized conditioning variables. We implement these ideas in torchvinecopulib, a GPU-accelerated Python library built upon PyTorch, delivering improved scalability for fitting, sampling, and density evaluation. Our experiments illustrate how gradient flowing through the vine can improve Vine Copula Autoencoders and that incorporating vines for uncertainty quantification in deep learning can outperform MC-dropout, deep ensembles, and Bayesian Neural Networks in sharpness, calibration, and runtime. By recasting vine copula models as computational graphs, our work connects classical dependence modeling with modern deep-learning toolchains and facilitates the integration of state-of-the-art copula methods in modern machine learning pipelines." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/17/VineCopulasasDifferentiableComputationalGraphs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/17/VineCopulasasDifferentiableComputationalGraphs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Vine Copulas as Differentiable Computational Graphs" />
+<script type="application/ld+json">
+{"description":"Vine copulas are sophisticated models for multivariate distributions and are increasingly used in machine learning. To facilitate their integration into modern ML pipelines, we introduce the vine computational graph, a DAG that abstracts the multilevel vine structure and associated computations. On this foundation, we devise new algorithms for conditional sampling, efficient sampling-order scheduling, and constructing vine structures for customized conditioning variables. We implement these ideas in torchvinecopulib, a GPU-accelerated Python library built upon PyTorch, delivering improved scalability for fitting, sampling, and density evaluation. Our experiments illustrate how gradient flowing through the vine can improve Vine Copula Autoencoders and that incorporating vines for uncertainty quantification in deep learning can outperform MC-dropout, deep ensembles, and Bayesian Neural Networks in sharpness, calibration, and runtime. By recasting vine copula models as computational graphs, our work connects classical dependence modeling with modern deep-learning toolchains and facilitates the integration of state-of-the-art copula methods in modern machine learning pipelines.","headline":"Vine Copulas as Differentiable Computational Graphs","dateModified":"2025-06-17T00:00:00+00:00","datePublished":"2025-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/17/VineCopulasasDifferentiableComputationalGraphs.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/17/VineCopulasasDifferentiableComputationalGraphs.html","author":{"@type":"Person","name":"Tuoyuan Cheng, Thibault Vatter, Thomas Nagler, Kan Chen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-17 00:00:00 +0000">06-17</time>
+  </p>
+  
+  <h1>Vine Copulas as Differentiable Computational Graphs</h1>
+  <br>Tuoyuan Cheng, Thibault Vatter, Thomas Nagler, Kan Chen</h3>
+  <br> [stat.ML]
+
+  <p>Vine copulas are sophisticated models for multivariate distributions and are increasingly used in machine learning. To facilitate their integration into modern ML pipelines, we introduce the vine computational graph, a DAG that abstracts the multilevel vine structure and associated computations. On this foundation, we devise new algorithms for conditional sampling, efficient sampling-order scheduling, and constructing vine structures for customized conditioning variables. We implement these ideas in torchvinecopulib, a GPU-accelerated Python library built upon PyTorch, delivering improved scalability for fitting, sampling, and density evaluation. Our experiments illustrate how gradient flowing through the vine can improve Vine Copula Autoencoders and that incorporating vines for uncertainty quantification in deep learning can outperform MC-dropout, deep ensembles, and Bayesian Neural Networks in sharpness, calibration, and runtime. By recasting vine copula models as computational graphs, our work connects classical dependence modeling with modern deep-learning toolchains and facilitates the integration of state-of-the-art copula methods in modern machine learning pipelines.</p>
+
+<p><a href="https://arxiv.org/abs/2506.13318">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
