@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Geometric-Aware Variational Inference: Robust and Adaptive Regularization with Directional Weight Uncertainty</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Geometric-Aware Variational Inference: Robust and Adaptive Regularization with Directional Weight Uncertainty" />
+<meta name="author" content="Carlos Stein Brito" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Deep neural networks require principled uncertainty quantification, yet existing variational inference methods often employ isotropic Gaussian approximations in weight space that poorly match the network’s inherent geometry. We address this mismatch by introducing Concentration-Adapted Perturbations (CAP), a variational framework that models weight uncertainties directly on the unit hypersphere using von Mises-Fisher distributions. Building on recent work in radial-directional posterior decompositions and spherical weight constraints, CAP provides the first complete theoretical framework connecting directional statistics to practical noise regularization in neural networks. Our key contribution is an analytical derivation linking vMF concentration parameters to activation noise variance, enabling each layer to learn its optimal uncertainty level through a novel closed-form KL divergence regularizer. In experiments on CIFAR-10, CAP significantly improves model calibration - reducing Expected Calibration Error by 5.6x - while providing interpretable layer-wise uncertainty profiles. CAP requires minimal computational overhead and integrates seamlessly into standard architectures, offering a theoretically grounded yet practical approach to uncertainty quantification in deep learning." />
+<meta property="og:description" content="Deep neural networks require principled uncertainty quantification, yet existing variational inference methods often employ isotropic Gaussian approximations in weight space that poorly match the network’s inherent geometry. We address this mismatch by introducing Concentration-Adapted Perturbations (CAP), a variational framework that models weight uncertainties directly on the unit hypersphere using von Mises-Fisher distributions. Building on recent work in radial-directional posterior decompositions and spherical weight constraints, CAP provides the first complete theoretical framework connecting directional statistics to practical noise regularization in neural networks. Our key contribution is an analytical derivation linking vMF concentration parameters to activation noise variance, enabling each layer to learn its optimal uncertainty level through a novel closed-form KL divergence regularizer. In experiments on CIFAR-10, CAP significantly improves model calibration - reducing Expected Calibration Error by 5.6x - while providing interpretable layer-wise uncertainty profiles. CAP requires minimal computational overhead and integrates seamlessly into standard architectures, offering a theoretically grounded yet practical approach to uncertainty quantification in deep learning." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/06/25/GeometricAwareVariationalInferenceRobustandAdaptiveRegularizationwithDirectionalWeightUncertainty.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/06/25/GeometricAwareVariationalInferenceRobustandAdaptiveRegularizationwithDirectionalWeightUncertainty.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Geometric-Aware Variational Inference: Robust and Adaptive Regularization with Directional Weight Uncertainty" />
+<script type="application/ld+json">
+{"description":"Deep neural networks require principled uncertainty quantification, yet existing variational inference methods often employ isotropic Gaussian approximations in weight space that poorly match the network’s inherent geometry. We address this mismatch by introducing Concentration-Adapted Perturbations (CAP), a variational framework that models weight uncertainties directly on the unit hypersphere using von Mises-Fisher distributions. Building on recent work in radial-directional posterior decompositions and spherical weight constraints, CAP provides the first complete theoretical framework connecting directional statistics to practical noise regularization in neural networks. Our key contribution is an analytical derivation linking vMF concentration parameters to activation noise variance, enabling each layer to learn its optimal uncertainty level through a novel closed-form KL divergence regularizer. In experiments on CIFAR-10, CAP significantly improves model calibration - reducing Expected Calibration Error by 5.6x - while providing interpretable layer-wise uncertainty profiles. CAP requires minimal computational overhead and integrates seamlessly into standard architectures, offering a theoretically grounded yet practical approach to uncertainty quantification in deep learning.","headline":"Geometric-Aware Variational Inference: Robust and Adaptive Regularization with Directional Weight Uncertainty","dateModified":"2025-06-25T00:00:00+00:00","datePublished":"2025-06-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/06/25/GeometricAwareVariationalInferenceRobustandAdaptiveRegularizationwithDirectionalWeightUncertainty.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/06/25/GeometricAwareVariationalInferenceRobustandAdaptiveRegularizationwithDirectionalWeightUncertainty.html","author":{"@type":"Person","name":"Carlos Stein Brito"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-06-25 00:00:00 +0000">06-25</time>
+  </p>
+  
+  <h1>Geometric-Aware Variational Inference: Robust and Adaptive Regularization with Directional Weight Uncertainty</h1>
+  <br>Carlos Stein Brito</h3>
+  <br> [stat.ML]
+
+  <p>Deep neural networks require principled uncertainty quantification, yet existing variational inference methods often employ isotropic Gaussian approximations in weight space that poorly match the network’s inherent geometry. We address this mismatch by introducing Concentration-Adapted Perturbations (CAP), a variational framework that models weight uncertainties directly on the unit hypersphere using von Mises-Fisher distributions. Building on recent work in radial-directional posterior decompositions and spherical weight constraints, CAP provides the first complete theoretical framework connecting directional statistics to practical noise regularization in neural networks. Our key contribution is an analytical derivation linking vMF concentration parameters to activation noise variance, enabling each layer to learn its optimal uncertainty level through a novel closed-form KL divergence regularizer. In experiments on CIFAR-10, CAP significantly improves model calibration - reducing Expected Calibration Error by 5.6x - while providing interpretable layer-wise uncertainty profiles. CAP requires minimal computational overhead and integrates seamlessly into standard architectures, offering a theoretically grounded yet practical approach to uncertainty quantification in deep learning.</p>
+
+<p><a href="https://arxiv.org/abs/2506.19726">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
