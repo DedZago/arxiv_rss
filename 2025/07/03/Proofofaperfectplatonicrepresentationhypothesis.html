@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Proof of a perfect platonic representation hypothesis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Proof of a perfect platonic representation hypothesis" />
+<meta name="author" content="Liu Ziyin, Isaac Chuang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this note, we elaborate on and explain in detail the proof given by Ziyin et al. (2025) of the “perfect” Platonic Representation Hypothesis (PRH) for the embedded deep linear network model (EDLN). We show that if trained with SGD, two EDLNs with different widths and depths and trained on different data will become Perfectly Platonic, meaning that every possible pair of layers will learn the same representation up to a rotation. Because most of the global minima of the loss function are not Platonic, that SGD only finds the perfectly Platonic solution is rather extraordinary. The proof also suggests at least six ways the PRH can be broken. We also show that in the EDLN model, the emergence of the Platonic representations is due to the same reason as the emergence of progressive sharpening. This implies that these two seemingly unrelated phenomena in deep learning can, surprisingly, have a common cause. Overall, the theory and proof highlight the importance of understanding emergent “entropic forces” due to the irreversibility of SGD training and their role in representation learning. The goal of this note is to be instructive and avoid lengthy technical details." />
+<meta property="og:description" content="In this note, we elaborate on and explain in detail the proof given by Ziyin et al. (2025) of the “perfect” Platonic Representation Hypothesis (PRH) for the embedded deep linear network model (EDLN). We show that if trained with SGD, two EDLNs with different widths and depths and trained on different data will become Perfectly Platonic, meaning that every possible pair of layers will learn the same representation up to a rotation. Because most of the global minima of the loss function are not Platonic, that SGD only finds the perfectly Platonic solution is rather extraordinary. The proof also suggests at least six ways the PRH can be broken. We also show that in the EDLN model, the emergence of the Platonic representations is due to the same reason as the emergence of progressive sharpening. This implies that these two seemingly unrelated phenomena in deep learning can, surprisingly, have a common cause. Overall, the theory and proof highlight the importance of understanding emergent “entropic forces” due to the irreversibility of SGD training and their role in representation learning. The goal of this note is to be instructive and avoid lengthy technical details." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/07/03/Proofofaperfectplatonicrepresentationhypothesis.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/07/03/Proofofaperfectplatonicrepresentationhypothesis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Proof of a perfect platonic representation hypothesis" />
+<script type="application/ld+json">
+{"description":"In this note, we elaborate on and explain in detail the proof given by Ziyin et al. (2025) of the “perfect” Platonic Representation Hypothesis (PRH) for the embedded deep linear network model (EDLN). We show that if trained with SGD, two EDLNs with different widths and depths and trained on different data will become Perfectly Platonic, meaning that every possible pair of layers will learn the same representation up to a rotation. Because most of the global minima of the loss function are not Platonic, that SGD only finds the perfectly Platonic solution is rather extraordinary. The proof also suggests at least six ways the PRH can be broken. We also show that in the EDLN model, the emergence of the Platonic representations is due to the same reason as the emergence of progressive sharpening. This implies that these two seemingly unrelated phenomena in deep learning can, surprisingly, have a common cause. Overall, the theory and proof highlight the importance of understanding emergent “entropic forces” due to the irreversibility of SGD training and their role in representation learning. The goal of this note is to be instructive and avoid lengthy technical details.","headline":"Proof of a perfect platonic representation hypothesis","dateModified":"2025-07-03T00:00:00+00:00","datePublished":"2025-07-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/07/03/Proofofaperfectplatonicrepresentationhypothesis.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/07/03/Proofofaperfectplatonicrepresentationhypothesis.html","author":{"@type":"Person","name":"Liu Ziyin, Isaac Chuang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-03 00:00:00 +0000">07-03</time>
+  </p>
+  
+  <h1>Proof of a perfect platonic representation hypothesis</h1>
+  <br>Liu Ziyin, Isaac Chuang</h3>
+  <br> [stat.ML]
+
+  <p>In this note, we elaborate on and explain in detail the proof given by Ziyin et al. (2025) of the “perfect” Platonic Representation Hypothesis (PRH) for the embedded deep linear network model (EDLN). We show that if trained with SGD, two EDLNs with different widths and depths and trained on different data will become Perfectly Platonic, meaning that every possible pair of layers will learn the same representation up to a rotation. Because most of the global minima of the loss function are not Platonic, that SGD only finds the perfectly Platonic solution is rather extraordinary. The proof also suggests at least six ways the PRH can be broken. We also show that in the EDLN model, the emergence of the Platonic representations is due to the same reason as the emergence of progressive sharpening. This implies that these two seemingly unrelated phenomena in deep learning can, surprisingly, have a common cause. Overall, the theory and proof highlight the importance of understanding emergent “entropic forces” due to the irreversibility of SGD training and their role in representation learning. The goal of this note is to be instructive and avoid lengthy technical details.</p>
+
+<p><a href="https://arxiv.org/abs/2507.01098">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
