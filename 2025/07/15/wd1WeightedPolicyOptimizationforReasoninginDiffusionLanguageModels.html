@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>wd1: Weighted Policy Optimization for Reasoning in Diffusion Language Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="wd1: Weighted Policy Optimization for Reasoning in Diffusion Language Models" />
+<meta name="author" content="Xiaohang Tang, Rares Dolga, Sangwoong Yoon, Ilija Bogunovic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Improving the reasoning capabilities of diffusion-based large language models (dLLMs) through reinforcement learning (RL) remains an open problem. The intractability of dLLMs likelihood function necessitates approximating the current, old, and reference policy likelihoods at each policy optimization step. This reliance introduces additional computational overhead and lead to potentially large bias – particularly when approximation errors occur in the denominator of policy ratios used for importance sampling. To mitigate these issues, we introduce $\mathtt{wd1}$, a novel policy optimization approach that reformulates the objective as a weighted likelihood, requiring only a single approximation for the current parametrized policy likelihood. Experiments on widely used reasoning benchmarks demonstrate that $\mathtt{wd1}$, without supervised fine-tuning (SFT) or any supervised data, outperforms existing RL methods for dLLMs, achieving up to 16% higher accuracy. $\mathtt{wd1}$ delivers additional computational gains, including reduced training time and fewer function evaluations (NFEs) per gradient step. These findings, combined with the simplicity of method’s implementation and R1-Zero-like training (no SFT), position $\mathtt{wd1}$ as a more effective and efficient method for applying RL to dLLMs reasoning." />
+<meta property="og:description" content="Improving the reasoning capabilities of diffusion-based large language models (dLLMs) through reinforcement learning (RL) remains an open problem. The intractability of dLLMs likelihood function necessitates approximating the current, old, and reference policy likelihoods at each policy optimization step. This reliance introduces additional computational overhead and lead to potentially large bias – particularly when approximation errors occur in the denominator of policy ratios used for importance sampling. To mitigate these issues, we introduce $\mathtt{wd1}$, a novel policy optimization approach that reformulates the objective as a weighted likelihood, requiring only a single approximation for the current parametrized policy likelihood. Experiments on widely used reasoning benchmarks demonstrate that $\mathtt{wd1}$, without supervised fine-tuning (SFT) or any supervised data, outperforms existing RL methods for dLLMs, achieving up to 16% higher accuracy. $\mathtt{wd1}$ delivers additional computational gains, including reduced training time and fewer function evaluations (NFEs) per gradient step. These findings, combined with the simplicity of method’s implementation and R1-Zero-like training (no SFT), position $\mathtt{wd1}$ as a more effective and efficient method for applying RL to dLLMs reasoning." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/07/15/wd1WeightedPolicyOptimizationforReasoninginDiffusionLanguageModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/07/15/wd1WeightedPolicyOptimizationforReasoninginDiffusionLanguageModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="wd1: Weighted Policy Optimization for Reasoning in Diffusion Language Models" />
+<script type="application/ld+json">
+{"description":"Improving the reasoning capabilities of diffusion-based large language models (dLLMs) through reinforcement learning (RL) remains an open problem. The intractability of dLLMs likelihood function necessitates approximating the current, old, and reference policy likelihoods at each policy optimization step. This reliance introduces additional computational overhead and lead to potentially large bias – particularly when approximation errors occur in the denominator of policy ratios used for importance sampling. To mitigate these issues, we introduce $\\mathtt{wd1}$, a novel policy optimization approach that reformulates the objective as a weighted likelihood, requiring only a single approximation for the current parametrized policy likelihood. Experiments on widely used reasoning benchmarks demonstrate that $\\mathtt{wd1}$, without supervised fine-tuning (SFT) or any supervised data, outperforms existing RL methods for dLLMs, achieving up to 16% higher accuracy. $\\mathtt{wd1}$ delivers additional computational gains, including reduced training time and fewer function evaluations (NFEs) per gradient step. These findings, combined with the simplicity of method’s implementation and R1-Zero-like training (no SFT), position $\\mathtt{wd1}$ as a more effective and efficient method for applying RL to dLLMs reasoning.","headline":"wd1: Weighted Policy Optimization for Reasoning in Diffusion Language Models","dateModified":"2025-07-15T00:00:00+00:00","datePublished":"2025-07-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/07/15/wd1WeightedPolicyOptimizationforReasoninginDiffusionLanguageModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/07/15/wd1WeightedPolicyOptimizationforReasoninginDiffusionLanguageModels.html","author":{"@type":"Person","name":"Xiaohang Tang, Rares Dolga, Sangwoong Yoon, Ilija Bogunovic"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-15 00:00:00 +0000">07-15</time>
+  </p>
+  
+  <h1>wd1: Weighted Policy Optimization for Reasoning in Diffusion Language Models</h1>
+  <br>Xiaohang Tang, Rares Dolga, Sangwoong Yoon, Ilija Bogunovic</h3>
+  <br> [stat.ML]
+
+  <p>Improving the reasoning capabilities of diffusion-based large language models (dLLMs) through reinforcement learning (RL) remains an open problem. The intractability of dLLMs likelihood function necessitates approximating the current, old, and reference policy likelihoods at each policy optimization step. This reliance introduces additional computational overhead and lead to potentially large bias – particularly when approximation errors occur in the denominator of policy ratios used for importance sampling. To mitigate these issues, we introduce $\mathtt{wd1}$, a novel policy optimization approach that reformulates the objective as a weighted likelihood, requiring only a single approximation for the current parametrized policy likelihood. Experiments on widely used reasoning benchmarks demonstrate that $\mathtt{wd1}$, without supervised fine-tuning (SFT) or any supervised data, outperforms existing RL methods for dLLMs, achieving up to 16% higher accuracy. $\mathtt{wd1}$ delivers additional computational gains, including reduced training time and fewer function evaluations (NFEs) per gradient step. These findings, combined with the simplicity of method’s implementation and R1-Zero-like training (no SFT), position $\mathtt{wd1}$ as a more effective and efficient method for applying RL to dLLMs reasoning.</p>
+
+<p><a href="https://arxiv.org/abs/2507.08838">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
