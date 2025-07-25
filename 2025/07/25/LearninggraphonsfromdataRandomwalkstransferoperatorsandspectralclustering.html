@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning graphons from data: Random walks, transfer operators, and spectral clustering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning graphons from data: Random walks, transfer operators, and spectral clustering" />
+<meta name="author" content="Stefan Klus, Jason J. Bramburger" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many signals evolve in time as a stochastic process, randomly switching between states over discretely sampled time points. Here we make an explicit link between the underlying stochastic process of a signal that can take on a bounded continuum of values and a random walk process on a graphon. Graphons are infinite-dimensional objects that represent the limit of convergent sequences of graphs whose size tends to infinity. We introduce transfer operators, such as the Koopman and Perron–Frobenius operators, associated with random walk processes on graphons and then illustrate how these operators can be estimated from signal data and how their eigenvalues and eigenfunctions can be used for detecting clusters, thereby extending conventional spectral clustering methods from graphs to graphons. Furthermore, we show that it is also possible to reconstruct transition probability densities and, if the random walk process is reversible, the graphon itself using only the signal. The resulting data-driven methods are applied to a variety of synthetic and real-world signals, including daily average temperatures and stock index values." />
+<meta property="og:description" content="Many signals evolve in time as a stochastic process, randomly switching between states over discretely sampled time points. Here we make an explicit link between the underlying stochastic process of a signal that can take on a bounded continuum of values and a random walk process on a graphon. Graphons are infinite-dimensional objects that represent the limit of convergent sequences of graphs whose size tends to infinity. We introduce transfer operators, such as the Koopman and Perron–Frobenius operators, associated with random walk processes on graphons and then illustrate how these operators can be estimated from signal data and how their eigenvalues and eigenfunctions can be used for detecting clusters, thereby extending conventional spectral clustering methods from graphs to graphons. Furthermore, we show that it is also possible to reconstruct transition probability densities and, if the random walk process is reversible, the graphon itself using only the signal. The resulting data-driven methods are applied to a variety of synthetic and real-world signals, including daily average temperatures and stock index values." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/07/25/LearninggraphonsfromdataRandomwalkstransferoperatorsandspectralclustering.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/07/25/LearninggraphonsfromdataRandomwalkstransferoperatorsandspectralclustering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning graphons from data: Random walks, transfer operators, and spectral clustering" />
+<script type="application/ld+json">
+{"description":"Many signals evolve in time as a stochastic process, randomly switching between states over discretely sampled time points. Here we make an explicit link between the underlying stochastic process of a signal that can take on a bounded continuum of values and a random walk process on a graphon. Graphons are infinite-dimensional objects that represent the limit of convergent sequences of graphs whose size tends to infinity. We introduce transfer operators, such as the Koopman and Perron–Frobenius operators, associated with random walk processes on graphons and then illustrate how these operators can be estimated from signal data and how their eigenvalues and eigenfunctions can be used for detecting clusters, thereby extending conventional spectral clustering methods from graphs to graphons. Furthermore, we show that it is also possible to reconstruct transition probability densities and, if the random walk process is reversible, the graphon itself using only the signal. The resulting data-driven methods are applied to a variety of synthetic and real-world signals, including daily average temperatures and stock index values.","headline":"Learning graphons from data: Random walks, transfer operators, and spectral clustering","dateModified":"2025-07-25T00:00:00+00:00","datePublished":"2025-07-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/07/25/LearninggraphonsfromdataRandomwalkstransferoperatorsandspectralclustering.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/07/25/LearninggraphonsfromdataRandomwalkstransferoperatorsandspectralclustering.html","author":{"@type":"Person","name":"Stefan Klus, Jason J. Bramburger"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-25 00:00:00 +0000">07-25</time>
+  </p>
+  
+  <h1>Learning graphons from data: Random walks, transfer operators, and spectral clustering</h1>
+  <br>Stefan Klus, Jason J. Bramburger</h3>
+  <br> [stat.ML]
+
+  <p>Many signals evolve in time as a stochastic process, randomly switching between states over discretely sampled time points. Here we make an explicit link between the underlying stochastic process of a signal that can take on a bounded continuum of values and a random walk process on a graphon. Graphons are infinite-dimensional objects that represent the limit of convergent sequences of graphs whose size tends to infinity. We introduce transfer operators, such as the Koopman and Perron–Frobenius operators, associated with random walk processes on graphons and then illustrate how these operators can be estimated from signal data and how their eigenvalues and eigenfunctions can be used for detecting clusters, thereby extending conventional spectral clustering methods from graphs to graphons. Furthermore, we show that it is also possible to reconstruct transition probability densities and, if the random walk process is reversible, the graphon itself using only the signal. The resulting data-driven methods are applied to a variety of synthetic and real-world signals, including daily average temperatures and stock index values.</p>
+
+<p><a href="https://arxiv.org/abs/2507.18147">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
