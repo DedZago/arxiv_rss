@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Recursive KalmanNet: Analyse des capacités de généralisation d'un réseau de neurones récurrent guidé par un filtre de Kalman</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Recursive KalmanNet: Analyse des capacités de généralisation d’un réseau de neurones récurrent guidé par un filtre de Kalman" />
+<meta name="author" content="Cyril Falcon, Hassan Mortada, Mathéo Clavaud, Jean-Philippe Michel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Recursive KalmanNet, recently introduced by the authors, is a recurrent neural network guided by a Kalman filter, capable of estimating the state variables and error covariance of stochastic dynamic systems from noisy measurements, without prior knowledge of the noise characteristics. This paper explores its generalization capabilities in out-of-distribution scenarios, where the temporal dynamics of the test measurements differ from those encountered during training. Le Recursive KalmanNet, r&#39;ecemment introduit par les auteurs, est un r&#39;eseau de neurones r&#39;ecurrent guid&#39;e par un filtre de Kalman, capable d’estimer les variables d’&#39;etat et la covariance des erreurs des syst`emes dynamiques stochastiques `a partir de mesures bruit&#39;ees, sans connaissance pr&#39;ealable des caract&#39;eristiques des bruits. Cet article explore ses capacit&#39;es de g&#39;en&#39;eralisation dans des sc&#39;enarios hors distribution, o`u les dynamiques temporelles des mesures de test diff`erent de celles rencontr&#39;ees `a l’entra\^inement." />
+<meta property="og:description" content="The Recursive KalmanNet, recently introduced by the authors, is a recurrent neural network guided by a Kalman filter, capable of estimating the state variables and error covariance of stochastic dynamic systems from noisy measurements, without prior knowledge of the noise characteristics. This paper explores its generalization capabilities in out-of-distribution scenarios, where the temporal dynamics of the test measurements differ from those encountered during training. Le Recursive KalmanNet, r&#39;ecemment introduit par les auteurs, est un r&#39;eseau de neurones r&#39;ecurrent guid&#39;e par un filtre de Kalman, capable d’estimer les variables d’&#39;etat et la covariance des erreurs des syst`emes dynamiques stochastiques `a partir de mesures bruit&#39;ees, sans connaissance pr&#39;ealable des caract&#39;eristiques des bruits. Cet article explore ses capacit&#39;es de g&#39;en&#39;eralisation dans des sc&#39;enarios hors distribution, o`u les dynamiques temporelles des mesures de test diff`erent de celles rencontr&#39;ees `a l’entra\^inement." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/07/30/RecursiveKalmanNetAnalysedescapacit%C3%A9sdeg%C3%A9n%C3%A9ralisationdunr%C3%A9seaudeneuronesr%C3%A9currentguid%C3%A9parunfiltredeKalman.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/07/30/RecursiveKalmanNetAnalysedescapacit%C3%A9sdeg%C3%A9n%C3%A9ralisationdunr%C3%A9seaudeneuronesr%C3%A9currentguid%C3%A9parunfiltredeKalman.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Recursive KalmanNet: Analyse des capacités de généralisation d’un réseau de neurones récurrent guidé par un filtre de Kalman" />
+<script type="application/ld+json">
+{"description":"The Recursive KalmanNet, recently introduced by the authors, is a recurrent neural network guided by a Kalman filter, capable of estimating the state variables and error covariance of stochastic dynamic systems from noisy measurements, without prior knowledge of the noise characteristics. This paper explores its generalization capabilities in out-of-distribution scenarios, where the temporal dynamics of the test measurements differ from those encountered during training. Le Recursive KalmanNet, r&#39;ecemment introduit par les auteurs, est un r&#39;eseau de neurones r&#39;ecurrent guid&#39;e par un filtre de Kalman, capable d’estimer les variables d’&#39;etat et la covariance des erreurs des syst`emes dynamiques stochastiques `a partir de mesures bruit&#39;ees, sans connaissance pr&#39;ealable des caract&#39;eristiques des bruits. Cet article explore ses capacit&#39;es de g&#39;en&#39;eralisation dans des sc&#39;enarios hors distribution, o`u les dynamiques temporelles des mesures de test diff`erent de celles rencontr&#39;ees `a l’entra\\^inement.","headline":"Recursive KalmanNet: Analyse des capacités de généralisation d’un réseau de neurones récurrent guidé par un filtre de Kalman","dateModified":"2025-07-30T00:00:00+00:00","datePublished":"2025-07-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/07/30/RecursiveKalmanNetAnalysedescapacit%C3%A9sdeg%C3%A9n%C3%A9ralisationdunr%C3%A9seaudeneuronesr%C3%A9currentguid%C3%A9parunfiltredeKalman.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/07/30/RecursiveKalmanNetAnalysedescapacit%C3%A9sdeg%C3%A9n%C3%A9ralisationdunr%C3%A9seaudeneuronesr%C3%A9currentguid%C3%A9parunfiltredeKalman.html","author":{"@type":"Person","name":"Cyril Falcon, Hassan Mortada, Mathéo Clavaud, Jean-Philippe Michel"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-07-30 00:00:00 +0000">07-30</time>
+  </p>
+  
+  <h1>Recursive KalmanNet: Analyse des capacités de généralisation d'un réseau de neurones récurrent guidé par un filtre de Kalman</h1>
+  <br>Cyril Falcon, Hassan Mortada, Mathéo Clavaud, Jean-Philippe Michel</h3>
+  <br> [stat.ML]
+
+  <p>The Recursive KalmanNet, recently introduced by the authors, is a recurrent neural network guided by a Kalman filter, capable of estimating the state variables and error covariance of stochastic dynamic systems from noisy measurements, without prior knowledge of the noise characteristics. This paper explores its generalization capabilities in out-of-distribution scenarios, where the temporal dynamics of the test measurements differ from those encountered during training.
+  Le Recursive KalmanNet, r'ecemment introduit par les auteurs, est un r'eseau de neurones r'ecurrent guid'e par un filtre de Kalman, capable d’estimer les variables d’'etat et la covariance des erreurs des syst`emes dynamiques stochastiques `a partir de mesures bruit'ees, sans connaissance pr'ealable des caract'eristiques des bruits. Cet article explore ses capacit'es de g'en'eralisation dans des sc'enarios hors distribution, o`u les dynamiques temporelles des mesures de test diff`erent de celles rencontr'ees `a l’entra\^inement.</p>
+
+<p><a href="https://arxiv.org/abs/2507.14144">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
