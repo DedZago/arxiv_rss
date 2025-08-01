@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Directional Ensemble Aggregation for Actor-Critics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Directional Ensemble Aggregation for Actor-Critics" />
+<meta name="author" content="Nicklas Werge, Yi-Shan Wu, Bahareh Tasdighi, Melih Kandemir" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Off-policy reinforcement learning in continuous control tasks depends critically on accurate $Q$-value estimates. Conservative aggregation over ensembles, such as taking the minimum, is commonly used to mitigate overestimation bias. However, these static rules are coarse, discard valuable information from the ensemble, and cannot adapt to task-specific needs or different learning regimes. We propose Directional Ensemble Aggregation (DEA), an aggregation method that adaptively combines $Q$-value estimates in actor-critic frameworks. DEA introduces two fully learnable directional parameters: one that modulates critic-side conservatism and another that guides actor-side policy exploration. Both parameters are learned using ensemble disagreement-weighted Bellman errors, which weight each sample solely by the direction of its Bellman error. This directional learning mechanism allows DEA to adjust conservatism and exploration in a data-driven way, adapting aggregation to both uncertainty levels and the phase of training. We evaluate DEA across continuous control benchmarks and learning regimes - from interactive to sample-efficient - and demonstrate its effectiveness over static ensemble strategies." />
+<meta property="og:description" content="Off-policy reinforcement learning in continuous control tasks depends critically on accurate $Q$-value estimates. Conservative aggregation over ensembles, such as taking the minimum, is commonly used to mitigate overestimation bias. However, these static rules are coarse, discard valuable information from the ensemble, and cannot adapt to task-specific needs or different learning regimes. We propose Directional Ensemble Aggregation (DEA), an aggregation method that adaptively combines $Q$-value estimates in actor-critic frameworks. DEA introduces two fully learnable directional parameters: one that modulates critic-side conservatism and another that guides actor-side policy exploration. Both parameters are learned using ensemble disagreement-weighted Bellman errors, which weight each sample solely by the direction of its Bellman error. This directional learning mechanism allows DEA to adjust conservatism and exploration in a data-driven way, adapting aggregation to both uncertainty levels and the phase of training. We evaluate DEA across continuous control benchmarks and learning regimes - from interactive to sample-efficient - and demonstrate its effectiveness over static ensemble strategies." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/01/DirectionalEnsembleAggregationforActorCritics.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/01/DirectionalEnsembleAggregationforActorCritics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Directional Ensemble Aggregation for Actor-Critics" />
+<script type="application/ld+json">
+{"description":"Off-policy reinforcement learning in continuous control tasks depends critically on accurate $Q$-value estimates. Conservative aggregation over ensembles, such as taking the minimum, is commonly used to mitigate overestimation bias. However, these static rules are coarse, discard valuable information from the ensemble, and cannot adapt to task-specific needs or different learning regimes. We propose Directional Ensemble Aggregation (DEA), an aggregation method that adaptively combines $Q$-value estimates in actor-critic frameworks. DEA introduces two fully learnable directional parameters: one that modulates critic-side conservatism and another that guides actor-side policy exploration. Both parameters are learned using ensemble disagreement-weighted Bellman errors, which weight each sample solely by the direction of its Bellman error. This directional learning mechanism allows DEA to adjust conservatism and exploration in a data-driven way, adapting aggregation to both uncertainty levels and the phase of training. We evaluate DEA across continuous control benchmarks and learning regimes - from interactive to sample-efficient - and demonstrate its effectiveness over static ensemble strategies.","headline":"Directional Ensemble Aggregation for Actor-Critics","dateModified":"2025-08-01T00:00:00+00:00","datePublished":"2025-08-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/01/DirectionalEnsembleAggregationforActorCritics.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/01/DirectionalEnsembleAggregationforActorCritics.html","author":{"@type":"Person","name":"Nicklas Werge, Yi-Shan Wu, Bahareh Tasdighi, Melih Kandemir"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-01 00:00:00 +0000">08-01</time>
+  </p>
+  
+  <h1>Directional Ensemble Aggregation for Actor-Critics</h1>
+  <br>Nicklas Werge, Yi-Shan Wu, Bahareh Tasdighi, Melih Kandemir</h3>
+  <br> [stat.ML]
+
+  <p>Off-policy reinforcement learning in continuous control tasks depends critically on accurate $Q$-value estimates. Conservative aggregation over ensembles, such as taking the minimum, is commonly used to mitigate overestimation bias. However, these static rules are coarse, discard valuable information from the ensemble, and cannot adapt to task-specific needs or different learning regimes. We propose Directional Ensemble Aggregation (DEA), an aggregation method that adaptively combines $Q$-value estimates in actor-critic frameworks. DEA introduces two fully learnable directional parameters: one that modulates critic-side conservatism and another that guides actor-side policy exploration. Both parameters are learned using ensemble disagreement-weighted Bellman errors, which weight each sample solely by the direction of its Bellman error. This directional learning mechanism allows DEA to adjust conservatism and exploration in a data-driven way, adapting aggregation to both uncertainty levels and the phase of training. We evaluate DEA across continuous control benchmarks and learning regimes - from interactive to sample-efficient - and demonstrate its effectiveness over static ensemble strategies.</p>
+
+<p><a href="https://arxiv.org/abs/2507.23501">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
