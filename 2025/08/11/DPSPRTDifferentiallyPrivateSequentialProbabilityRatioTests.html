@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DP-SPRT: Differentially Private Sequential Probability Ratio Tests</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="DP-SPRT: Differentially Private Sequential Probability Ratio Tests" />
+<meta name="author" content="Thomas Michel, Debabrota Basu, Emilie Kaufmann" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We revisit Wald’s celebrated Sequential Probability Ratio Test for sequential tests of two simple hypotheses, under privacy constraints. We propose DP-SPRT, a wrapper that can be calibrated to achieve desired error probabilities and privacy constraints, addressing a significant gap in previous work. DP-SPRT relies on a private mechanism that processes a sequence of queries and stops after privately determining when the query results fall outside a predefined interval. This OutsideInterval mechanism improves upon naive composition of existing techniques like AboveThreshold, potentially benefiting other sequential algorithms. We prove generic upper bounds on the error and sample complexity of DP-SPRT that can accommodate various noise distributions based on the practitioner’s privacy needs. We exemplify them in two settings: Laplace noise (pure Differential Privacy) and Gaussian noise (R&#39;enyi differential privacy). In the former setting, by providing a lower bound on the sample complexity of any $\epsilon$-DP test with prescribed type I and type II errors, we show that DP-SPRT is near optimal when both errors are small and the two hypotheses are close. Moreover, we conduct an experimental study revealing its good practical performance." />
+<meta property="og:description" content="We revisit Wald’s celebrated Sequential Probability Ratio Test for sequential tests of two simple hypotheses, under privacy constraints. We propose DP-SPRT, a wrapper that can be calibrated to achieve desired error probabilities and privacy constraints, addressing a significant gap in previous work. DP-SPRT relies on a private mechanism that processes a sequence of queries and stops after privately determining when the query results fall outside a predefined interval. This OutsideInterval mechanism improves upon naive composition of existing techniques like AboveThreshold, potentially benefiting other sequential algorithms. We prove generic upper bounds on the error and sample complexity of DP-SPRT that can accommodate various noise distributions based on the practitioner’s privacy needs. We exemplify them in two settings: Laplace noise (pure Differential Privacy) and Gaussian noise (R&#39;enyi differential privacy). In the former setting, by providing a lower bound on the sample complexity of any $\epsilon$-DP test with prescribed type I and type II errors, we show that DP-SPRT is near optimal when both errors are small and the two hypotheses are close. Moreover, we conduct an experimental study revealing its good practical performance." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/11/DPSPRTDifferentiallyPrivateSequentialProbabilityRatioTests.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/11/DPSPRTDifferentiallyPrivateSequentialProbabilityRatioTests.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DP-SPRT: Differentially Private Sequential Probability Ratio Tests" />
+<script type="application/ld+json">
+{"description":"We revisit Wald’s celebrated Sequential Probability Ratio Test for sequential tests of two simple hypotheses, under privacy constraints. We propose DP-SPRT, a wrapper that can be calibrated to achieve desired error probabilities and privacy constraints, addressing a significant gap in previous work. DP-SPRT relies on a private mechanism that processes a sequence of queries and stops after privately determining when the query results fall outside a predefined interval. This OutsideInterval mechanism improves upon naive composition of existing techniques like AboveThreshold, potentially benefiting other sequential algorithms. We prove generic upper bounds on the error and sample complexity of DP-SPRT that can accommodate various noise distributions based on the practitioner’s privacy needs. We exemplify them in two settings: Laplace noise (pure Differential Privacy) and Gaussian noise (R&#39;enyi differential privacy). In the former setting, by providing a lower bound on the sample complexity of any $\\epsilon$-DP test with prescribed type I and type II errors, we show that DP-SPRT is near optimal when both errors are small and the two hypotheses are close. Moreover, we conduct an experimental study revealing its good practical performance.","headline":"DP-SPRT: Differentially Private Sequential Probability Ratio Tests","dateModified":"2025-08-11T00:00:00+00:00","datePublished":"2025-08-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/11/DPSPRTDifferentiallyPrivateSequentialProbabilityRatioTests.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/11/DPSPRTDifferentiallyPrivateSequentialProbabilityRatioTests.html","author":{"@type":"Person","name":"Thomas Michel, Debabrota Basu, Emilie Kaufmann"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-11 00:00:00 +0000">08-11</time>
+  </p>
+  
+  <h1>DP-SPRT: Differentially Private Sequential Probability Ratio Tests</h1>
+  <br>Thomas Michel, Debabrota Basu, Emilie Kaufmann</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>We revisit Wald’s celebrated Sequential Probability Ratio Test for sequential tests of two simple hypotheses, under privacy constraints. We propose DP-SPRT, a wrapper that can be calibrated to achieve desired error probabilities and privacy constraints, addressing a significant gap in previous work. DP-SPRT relies on a private mechanism that processes a sequence of queries and stops after privately determining when the query results fall outside a predefined interval. This OutsideInterval mechanism improves upon naive composition of existing techniques like AboveThreshold, potentially benefiting other sequential algorithms. We prove generic upper bounds on the error and sample complexity of DP-SPRT that can accommodate various noise distributions based on the practitioner’s privacy needs. We exemplify them in two settings: Laplace noise (pure Differential Privacy) and Gaussian noise (R'enyi differential privacy). In the former setting, by providing a lower bound on the sample complexity of any $\epsilon$-DP test with prescribed type I and type II errors, we show that DP-SPRT is near optimal when both errors are small and the two hypotheses are close. Moreover, we conduct an experimental study revealing its good practical performance.</p>
+
+<p><a href="https://arxiv.org/abs/2508.06377">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
