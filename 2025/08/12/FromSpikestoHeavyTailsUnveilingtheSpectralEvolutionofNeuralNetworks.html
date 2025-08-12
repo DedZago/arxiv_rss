@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>From Spikes to Heavy Tails: Unveiling the Spectral Evolution of Neural Networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="From Spikes to Heavy Tails: Unveiling the Spectral Evolution of Neural Networks" />
+<meta name="author" content="Vignesh Kothapalli, Tianyu Pang, Shenyang Deng, Zongmin Liu, Yaoqing Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Training strategies for modern deep neural networks (NNs) tend to induce a heavy-tailed (HT) empirical spectral density (ESD) in the layer weights. While previous efforts have shown that the HT phenomenon correlates with good generalization in large NNs, a theoretical explanation of its occurrence is still lacking. Especially, understanding the conditions which lead to this phenomenon can shed light on the interplay between generalization and weight spectra. Our work aims to bridge this gap by presenting a simple, rich setting to model the emergence of HT ESD. In particular, we present a theory-informed setup for ‘crafting’ heavy tails in the ESD of two-layer NNs and present a systematic analysis of the HT ESD emergence without any gradient noise. This is the first work to analyze a noise-free setting, and we also incorporate optimizer (GD/Adam) dependent (large) learning rates into the HT ESD analysis. Our results highlight the role of learning rates on the Bulk+Spike and HT shape of the ESDs in the early phase of training, which can facilitate generalization in the two-layer NN. These observations shed light on the behavior of large-scale NNs, albeit in a much simpler setting." />
+<meta property="og:description" content="Training strategies for modern deep neural networks (NNs) tend to induce a heavy-tailed (HT) empirical spectral density (ESD) in the layer weights. While previous efforts have shown that the HT phenomenon correlates with good generalization in large NNs, a theoretical explanation of its occurrence is still lacking. Especially, understanding the conditions which lead to this phenomenon can shed light on the interplay between generalization and weight spectra. Our work aims to bridge this gap by presenting a simple, rich setting to model the emergence of HT ESD. In particular, we present a theory-informed setup for ‘crafting’ heavy tails in the ESD of two-layer NNs and present a systematic analysis of the HT ESD emergence without any gradient noise. This is the first work to analyze a noise-free setting, and we also incorporate optimizer (GD/Adam) dependent (large) learning rates into the HT ESD analysis. Our results highlight the role of learning rates on the Bulk+Spike and HT shape of the ESDs in the early phase of training, which can facilitate generalization in the two-layer NN. These observations shed light on the behavior of large-scale NNs, albeit in a much simpler setting." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/12/FromSpikestoHeavyTailsUnveilingtheSpectralEvolutionofNeuralNetworks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/12/FromSpikestoHeavyTailsUnveilingtheSpectralEvolutionofNeuralNetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="From Spikes to Heavy Tails: Unveiling the Spectral Evolution of Neural Networks" />
+<script type="application/ld+json">
+{"description":"Training strategies for modern deep neural networks (NNs) tend to induce a heavy-tailed (HT) empirical spectral density (ESD) in the layer weights. While previous efforts have shown that the HT phenomenon correlates with good generalization in large NNs, a theoretical explanation of its occurrence is still lacking. Especially, understanding the conditions which lead to this phenomenon can shed light on the interplay between generalization and weight spectra. Our work aims to bridge this gap by presenting a simple, rich setting to model the emergence of HT ESD. In particular, we present a theory-informed setup for ‘crafting’ heavy tails in the ESD of two-layer NNs and present a systematic analysis of the HT ESD emergence without any gradient noise. This is the first work to analyze a noise-free setting, and we also incorporate optimizer (GD/Adam) dependent (large) learning rates into the HT ESD analysis. Our results highlight the role of learning rates on the Bulk+Spike and HT shape of the ESDs in the early phase of training, which can facilitate generalization in the two-layer NN. These observations shed light on the behavior of large-scale NNs, albeit in a much simpler setting.","headline":"From Spikes to Heavy Tails: Unveiling the Spectral Evolution of Neural Networks","dateModified":"2025-08-12T00:00:00+00:00","datePublished":"2025-08-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/12/FromSpikestoHeavyTailsUnveilingtheSpectralEvolutionofNeuralNetworks.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/12/FromSpikestoHeavyTailsUnveilingtheSpectralEvolutionofNeuralNetworks.html","author":{"@type":"Person","name":"Vignesh Kothapalli, Tianyu Pang, Shenyang Deng, Zongmin Liu, Yaoqing Yang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-12 00:00:00 +0000">08-12</time>
+  </p>
+  
+  <h1>From Spikes to Heavy Tails: Unveiling the Spectral Evolution of Neural Networks</h1>
+  <br>Vignesh Kothapalli, Tianyu Pang, Shenyang Deng, Zongmin Liu, Yaoqing Yang</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Training strategies for modern deep neural networks (NNs) tend to induce a heavy-tailed (HT) empirical spectral density (ESD) in the layer weights. While previous efforts have shown that the HT phenomenon correlates with good generalization in large NNs, a theoretical explanation of its occurrence is still lacking. Especially, understanding the conditions which lead to this phenomenon can shed light on the interplay between generalization and weight spectra. Our work aims to bridge this gap by presenting a simple, rich setting to model the emergence of HT ESD. In particular, we present a theory-informed setup for ‘crafting’ heavy tails in the ESD of two-layer NNs and present a systematic analysis of the HT ESD emergence without any gradient noise. This is the first work to analyze a noise-free setting, and we also incorporate optimizer (GD/Adam) dependent (large) learning rates into the HT ESD analysis. Our results highlight the role of learning rates on the Bulk+Spike and HT shape of the ESDs in the early phase of training, which can facilitate generalization in the two-layer NN. These observations shed light on the behavior of large-scale NNs, albeit in a much simpler setting.</p>
+
+<p><a href="https://arxiv.org/abs/2406.04657">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
