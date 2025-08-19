@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mixture of Experts Provably Detect and Learn the Latent Cluster Structure in Gradient-Based Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mixture of Experts Provably Detect and Learn the Latent Cluster Structure in Gradient-Based Learning" />
+<meta name="author" content="Ryotaro Kawata, Kohsei Matsutani, Yuri Kinoshita, Naoki Nishikawa, Taiji Suzuki" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mixture of Experts (MoE), an ensemble of specialized models equipped with a router that dynamically distributes each input to appropriate experts, has achieved successful results in the field of machine learning. However, theoretical understanding of this architecture is falling behind due to its inherent complexity. In this paper, we theoretically study the sample and runtime complexity of MoE following the stochastic gradient descent (SGD) when learning a regression task with an underlying cluster structure of single index models. On the one hand, we prove that a vanilla neural network fails in detecting such a latent organization as it can only process the problem as a whole. This is intrinsically related to the concept of information exponent which is low for each cluster, but increases when we consider the entire task. On the other hand, we show that a MoE succeeds in dividing this problem into easier subproblems by leveraging the ability of each expert to weakly recover the simpler function corresponding to an individual cluster. To the best of our knowledge, this work is among the first to explore the benefits of the MoE framework by examining its SGD dynamics in the context of nonlinear regression." />
+<meta property="og:description" content="Mixture of Experts (MoE), an ensemble of specialized models equipped with a router that dynamically distributes each input to appropriate experts, has achieved successful results in the field of machine learning. However, theoretical understanding of this architecture is falling behind due to its inherent complexity. In this paper, we theoretically study the sample and runtime complexity of MoE following the stochastic gradient descent (SGD) when learning a regression task with an underlying cluster structure of single index models. On the one hand, we prove that a vanilla neural network fails in detecting such a latent organization as it can only process the problem as a whole. This is intrinsically related to the concept of information exponent which is low for each cluster, but increases when we consider the entire task. On the other hand, we show that a MoE succeeds in dividing this problem into easier subproblems by leveraging the ability of each expert to weakly recover the simpler function corresponding to an individual cluster. To the best of our knowledge, this work is among the first to explore the benefits of the MoE framework by examining its SGD dynamics in the context of nonlinear regression." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/19/MixtureofExpertsProvablyDetectandLearntheLatentClusterStructureinGradientBasedLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/19/MixtureofExpertsProvablyDetectandLearntheLatentClusterStructureinGradientBasedLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mixture of Experts Provably Detect and Learn the Latent Cluster Structure in Gradient-Based Learning" />
+<script type="application/ld+json">
+{"description":"Mixture of Experts (MoE), an ensemble of specialized models equipped with a router that dynamically distributes each input to appropriate experts, has achieved successful results in the field of machine learning. However, theoretical understanding of this architecture is falling behind due to its inherent complexity. In this paper, we theoretically study the sample and runtime complexity of MoE following the stochastic gradient descent (SGD) when learning a regression task with an underlying cluster structure of single index models. On the one hand, we prove that a vanilla neural network fails in detecting such a latent organization as it can only process the problem as a whole. This is intrinsically related to the concept of information exponent which is low for each cluster, but increases when we consider the entire task. On the other hand, we show that a MoE succeeds in dividing this problem into easier subproblems by leveraging the ability of each expert to weakly recover the simpler function corresponding to an individual cluster. To the best of our knowledge, this work is among the first to explore the benefits of the MoE framework by examining its SGD dynamics in the context of nonlinear regression.","headline":"Mixture of Experts Provably Detect and Learn the Latent Cluster Structure in Gradient-Based Learning","dateModified":"2025-08-19T00:00:00+00:00","datePublished":"2025-08-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/19/MixtureofExpertsProvablyDetectandLearntheLatentClusterStructureinGradientBasedLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/19/MixtureofExpertsProvablyDetectandLearntheLatentClusterStructureinGradientBasedLearning.html","author":{"@type":"Person","name":"Ryotaro Kawata, Kohsei Matsutani, Yuri Kinoshita, Naoki Nishikawa, Taiji Suzuki"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-19 00:00:00 +0000">08-19</time>
+  </p>
+  
+  <h1>Mixture of Experts Provably Detect and Learn the Latent Cluster Structure in Gradient-Based Learning</h1>
+  <br>Ryotaro Kawata, Kohsei Matsutani, Yuri Kinoshita, Naoki Nishikawa, Taiji Suzuki</h3>
+  <br> [stat.ML]
+
+  <p>Mixture of Experts (MoE), an ensemble of specialized models equipped with a router that dynamically distributes each input to appropriate experts, has achieved successful results in the field of machine learning. However, theoretical understanding of this architecture is falling behind due to its inherent complexity. In this paper, we theoretically study the sample and runtime complexity of MoE following the stochastic gradient descent (SGD) when learning a regression task with an underlying cluster structure of single index models. On the one hand, we prove that a vanilla neural network fails in detecting such a latent organization as it can only process the problem as a whole. This is intrinsically related to the concept of information exponent which is low for each cluster, but increases when we consider the entire task. On the other hand, we show that a MoE succeeds in dividing this problem into easier subproblems by leveraging the ability of each expert to weakly recover the simpler function corresponding to an individual cluster. To the best of our knowledge, this work is among the first to explore the benefits of the MoE framework by examining its SGD dynamics in the context of nonlinear regression.</p>
+
+<p><a href="https://arxiv.org/abs/2506.01656">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
