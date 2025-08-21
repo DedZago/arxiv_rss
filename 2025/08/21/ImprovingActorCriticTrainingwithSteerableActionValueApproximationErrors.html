@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving Actor-Critic Training with Steerable Action-Value Approximation Errors</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving Actor-Critic Training with Steerable Action-Value Approximation Errors" />
+<meta name="author" content="Bahareh Tasdighi, Nicklas Werge, Yi-Shan Wu, Melih Kandemir" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Off-policy actor-critic algorithms have shown strong potential in deep reinforcement learning for continuous control tasks. Their success primarily comes from leveraging pessimistic state-action value function updates, which reduce function approximation errors and stabilize learning. However, excessive pessimism can limit exploration, preventing the agent from effectively refining its policies. Conversely, optimism can encourage exploration but may lead to high-risk behaviors and unstable learning if not carefully managed. To address this trade-off, we propose Utility Soft Actor-Critic (USAC), a novel framework that allows independent, interpretable control of pessimism and optimism for both the actor and the critic. USAC dynamically adapts its exploration strategy based on the uncertainty of critics using a utility function, enabling a task-specific balance between optimism and pessimism. This approach goes beyond binary choices of pessimism or optimism, making the method both theoretically meaningful and practically feasible. Experiments across a variety of continuous control tasks show that adjusting the degree of pessimism or optimism significantly impacts performance. When configured appropriately, USAC consistently outperforms state-of-the-art algorithms, demonstrating its practical utility and feasibility." />
+<meta property="og:description" content="Off-policy actor-critic algorithms have shown strong potential in deep reinforcement learning for continuous control tasks. Their success primarily comes from leveraging pessimistic state-action value function updates, which reduce function approximation errors and stabilize learning. However, excessive pessimism can limit exploration, preventing the agent from effectively refining its policies. Conversely, optimism can encourage exploration but may lead to high-risk behaviors and unstable learning if not carefully managed. To address this trade-off, we propose Utility Soft Actor-Critic (USAC), a novel framework that allows independent, interpretable control of pessimism and optimism for both the actor and the critic. USAC dynamically adapts its exploration strategy based on the uncertainty of critics using a utility function, enabling a task-specific balance between optimism and pessimism. This approach goes beyond binary choices of pessimism or optimism, making the method both theoretically meaningful and practically feasible. Experiments across a variety of continuous control tasks show that adjusting the degree of pessimism or optimism significantly impacts performance. When configured appropriately, USAC consistently outperforms state-of-the-art algorithms, demonstrating its practical utility and feasibility." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/21/ImprovingActorCriticTrainingwithSteerableActionValueApproximationErrors.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/21/ImprovingActorCriticTrainingwithSteerableActionValueApproximationErrors.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving Actor-Critic Training with Steerable Action-Value Approximation Errors" />
+<script type="application/ld+json">
+{"description":"Off-policy actor-critic algorithms have shown strong potential in deep reinforcement learning for continuous control tasks. Their success primarily comes from leveraging pessimistic state-action value function updates, which reduce function approximation errors and stabilize learning. However, excessive pessimism can limit exploration, preventing the agent from effectively refining its policies. Conversely, optimism can encourage exploration but may lead to high-risk behaviors and unstable learning if not carefully managed. To address this trade-off, we propose Utility Soft Actor-Critic (USAC), a novel framework that allows independent, interpretable control of pessimism and optimism for both the actor and the critic. USAC dynamically adapts its exploration strategy based on the uncertainty of critics using a utility function, enabling a task-specific balance between optimism and pessimism. This approach goes beyond binary choices of pessimism or optimism, making the method both theoretically meaningful and practically feasible. Experiments across a variety of continuous control tasks show that adjusting the degree of pessimism or optimism significantly impacts performance. When configured appropriately, USAC consistently outperforms state-of-the-art algorithms, demonstrating its practical utility and feasibility.","headline":"Improving Actor-Critic Training with Steerable Action-Value Approximation Errors","dateModified":"2025-08-21T00:00:00+00:00","datePublished":"2025-08-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/21/ImprovingActorCriticTrainingwithSteerableActionValueApproximationErrors.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/21/ImprovingActorCriticTrainingwithSteerableActionValueApproximationErrors.html","author":{"@type":"Person","name":"Bahareh Tasdighi, Nicklas Werge, Yi-Shan Wu, Melih Kandemir"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-21 00:00:00 +0000">08-21</time>
+  </p>
+  
+  <h1>Improving Actor-Critic Training with Steerable Action-Value Approximation Errors</h1>
+  <br>Bahareh Tasdighi, Nicklas Werge, Yi-Shan Wu, Melih Kandemir</h3>
+  <br> [stat.ML]
+
+  <p>Off-policy actor-critic algorithms have shown strong potential in deep reinforcement learning for continuous control tasks. Their success primarily comes from leveraging pessimistic state-action value function updates, which reduce function approximation errors and stabilize learning. However, excessive pessimism can limit exploration, preventing the agent from effectively refining its policies. Conversely, optimism can encourage exploration but may lead to high-risk behaviors and unstable learning if not carefully managed. To address this trade-off, we propose Utility Soft Actor-Critic (USAC), a novel framework that allows independent, interpretable control of pessimism and optimism for both the actor and the critic. USAC dynamically adapts its exploration strategy based on the uncertainty of critics using a utility function, enabling a task-specific balance between optimism and pessimism. This approach goes beyond binary choices of pessimism or optimism, making the method both theoretically meaningful and practically feasible. Experiments across a variety of continuous control tasks show that adjusting the degree of pessimism or optimism significantly impacts performance. When configured appropriately, USAC consistently outperforms state-of-the-art algorithms, demonstrating its practical utility and feasibility.</p>
+
+<p><a href="https://arxiv.org/abs/2406.03890">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
