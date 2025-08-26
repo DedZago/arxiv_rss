@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When predict can also explain: few-shot prediction to select better neural latents</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When predict can also explain: few-shot prediction to select better neural latents" />
+<meta name="author" content="Kabir Dabholkar, Omri Barak" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Latent variable models serve as powerful tools to infer underlying dynamics from observed neural activity. Ideally, the inferred dynamics should align with true ones. However, due to the absence of ground truth data, prediction benchmarks are often employed as proxies. One widely-used method, $\textit{co-smoothing}$, involves jointly estimating latent variables and predicting observations along held-out channels to assess model performance. In this study, we reveal the limitations of the co-smoothing prediction framework and propose a remedy. Using a student-teacher setup, we demonstrate that models with high co-smoothing can have arbitrary extraneous dynamics in their latent representations. To address this, we introduce a secondary metric – $\textit{few-shot co-smoothing}$, performing regression from the latent variables to held-out neurons in the data using fewer trials. Our results indicate that among models with near-optimal co-smoothing, those with extraneous dynamics underperform in the few-shot co-smoothing compared to `minimal’ models that are devoid of such dynamics. We provide analytical insights into the origin of this phenomenon and further validate our findings on four standard neural datasets using a state-of-the-art method: STNDT. In the absence of ground truth, we suggest a novel measure to validate our approach. By cross-decoding the latent variables of all model pairs with high co-smoothing, we identify models with minimal extraneous dynamics. We find a correlation between few-shot co-smoothing performance and this new measure. In summary, we present a novel prediction metric designed to yield latent variables that more accurately reflect the ground truth, offering a significant improvement for latent dynamics inference." />
+<meta property="og:description" content="Latent variable models serve as powerful tools to infer underlying dynamics from observed neural activity. Ideally, the inferred dynamics should align with true ones. However, due to the absence of ground truth data, prediction benchmarks are often employed as proxies. One widely-used method, $\textit{co-smoothing}$, involves jointly estimating latent variables and predicting observations along held-out channels to assess model performance. In this study, we reveal the limitations of the co-smoothing prediction framework and propose a remedy. Using a student-teacher setup, we demonstrate that models with high co-smoothing can have arbitrary extraneous dynamics in their latent representations. To address this, we introduce a secondary metric – $\textit{few-shot co-smoothing}$, performing regression from the latent variables to held-out neurons in the data using fewer trials. Our results indicate that among models with near-optimal co-smoothing, those with extraneous dynamics underperform in the few-shot co-smoothing compared to `minimal’ models that are devoid of such dynamics. We provide analytical insights into the origin of this phenomenon and further validate our findings on four standard neural datasets using a state-of-the-art method: STNDT. In the absence of ground truth, we suggest a novel measure to validate our approach. By cross-decoding the latent variables of all model pairs with high co-smoothing, we identify models with minimal extraneous dynamics. We find a correlation between few-shot co-smoothing performance and this new measure. In summary, we present a novel prediction metric designed to yield latent variables that more accurately reflect the ground truth, offering a significant improvement for latent dynamics inference." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/26/Whenpredictcanalsoexplainfewshotpredictiontoselectbetterneurallatents.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/26/Whenpredictcanalsoexplainfewshotpredictiontoselectbetterneurallatents.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When predict can also explain: few-shot prediction to select better neural latents" />
+<script type="application/ld+json">
+{"description":"Latent variable models serve as powerful tools to infer underlying dynamics from observed neural activity. Ideally, the inferred dynamics should align with true ones. However, due to the absence of ground truth data, prediction benchmarks are often employed as proxies. One widely-used method, $\\textit{co-smoothing}$, involves jointly estimating latent variables and predicting observations along held-out channels to assess model performance. In this study, we reveal the limitations of the co-smoothing prediction framework and propose a remedy. Using a student-teacher setup, we demonstrate that models with high co-smoothing can have arbitrary extraneous dynamics in their latent representations. To address this, we introduce a secondary metric – $\\textit{few-shot co-smoothing}$, performing regression from the latent variables to held-out neurons in the data using fewer trials. Our results indicate that among models with near-optimal co-smoothing, those with extraneous dynamics underperform in the few-shot co-smoothing compared to `minimal’ models that are devoid of such dynamics. We provide analytical insights into the origin of this phenomenon and further validate our findings on four standard neural datasets using a state-of-the-art method: STNDT. In the absence of ground truth, we suggest a novel measure to validate our approach. By cross-decoding the latent variables of all model pairs with high co-smoothing, we identify models with minimal extraneous dynamics. We find a correlation between few-shot co-smoothing performance and this new measure. In summary, we present a novel prediction metric designed to yield latent variables that more accurately reflect the ground truth, offering a significant improvement for latent dynamics inference.","headline":"When predict can also explain: few-shot prediction to select better neural latents","dateModified":"2025-08-26T00:00:00+00:00","datePublished":"2025-08-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/26/Whenpredictcanalsoexplainfewshotpredictiontoselectbetterneurallatents.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/26/Whenpredictcanalsoexplainfewshotpredictiontoselectbetterneurallatents.html","author":{"@type":"Person","name":"Kabir Dabholkar, Omri Barak"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-26 00:00:00 +0000">08-26</time>
+  </p>
+  
+  <h1>When predict can also explain: few-shot prediction to select better neural latents</h1>
+  <br>Kabir Dabholkar, Omri Barak</h3>
+  <br> [stat.ML]
+
+  <p>Latent variable models serve as powerful tools to infer underlying dynamics from observed neural activity. Ideally, the inferred dynamics should align with true ones. However, due to the absence of ground truth data, prediction benchmarks are often employed as proxies. One widely-used method, $\textit{co-smoothing}$, involves jointly estimating latent variables and predicting observations along held-out channels to assess model performance. In this study, we reveal the limitations of the co-smoothing prediction framework and propose a remedy. Using a student-teacher setup, we demonstrate that models with high co-smoothing can have arbitrary extraneous dynamics in their latent representations. To address this, we introduce a secondary metric – $\textit{few-shot co-smoothing}$, performing regression from the latent variables to held-out neurons in the data using fewer trials. Our results indicate that among models with near-optimal co-smoothing, those with extraneous dynamics underperform in the few-shot co-smoothing compared to `minimal’ models that are devoid of such dynamics. We provide analytical insights into the origin of this phenomenon and further validate our findings on four standard neural datasets using a state-of-the-art method: STNDT. In the absence of ground truth, we suggest a novel measure to validate our approach. By cross-decoding the latent variables of all model pairs with high co-smoothing, we identify models with minimal extraneous dynamics. We find a correlation between few-shot co-smoothing performance and this new measure. In summary, we present a novel prediction metric designed to yield latent variables that more accurately reflect the ground truth, offering a significant improvement for latent dynamics inference.</p>
+
+<p><a href="https://arxiv.org/abs/2405.14425">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

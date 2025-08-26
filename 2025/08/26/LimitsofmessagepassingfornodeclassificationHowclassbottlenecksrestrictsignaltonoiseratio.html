@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Limits of message passing for node classification: How class-bottlenecks restrict signal-to-noise ratio</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Limits of message passing for node classification: How class-bottlenecks restrict signal-to-noise ratio" />
+<meta name="author" content="Jonathan Rubin, Sahil Loomba, Nick S. Jones" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Message passing neural networks (MPNNs) are powerful models for node classification but suffer from performance limitations under heterophily (low same-class connectivity) and structural bottlenecks in the graph. We provide a unifying statistical framework exposing the relationship between heterophily and bottlenecks through the signal-to-noise ratio (SNR) of MPNN representations. The SNR decomposes model performance into feature-dependent parameters and feature-independent sensitivities. We prove that the sensitivity to class-wise signals is bounded by higher-order homophily – a generalisation of classical homophily to multi-hop neighbourhoods – and show that low higher-order homophily manifests locally as the interaction between structural bottlenecks and class labels (class-bottlenecks). Through analysis of graph ensembles, we provide a further quantitative decomposition of bottlenecking into underreaching (lack of depth implying signals cannot arrive) and oversquashing (lack of breadth implying signals arriving on fewer paths) with closed-form expressions. We prove that optimal graph structures for maximising higher-order homophily are disjoint unions of single-class and two-class-bipartite clusters. This yields BRIDGE, a graph ensemble-based rewiring algorithm that achieves near-perfect classification accuracy across all homophily regimes on synthetic benchmarks and significant improvements on real-world benchmarks, by eliminating the ``mid-homophily pitfall’’ where MPNNs typically struggle, surpassing current standard rewiring techniques from the literature. Our framework, whose code we make available for public use, provides both diagnostic tools for assessing MPNN performance, and simple yet effective methods for enhancing performance through principled graph modification." />
+<meta property="og:description" content="Message passing neural networks (MPNNs) are powerful models for node classification but suffer from performance limitations under heterophily (low same-class connectivity) and structural bottlenecks in the graph. We provide a unifying statistical framework exposing the relationship between heterophily and bottlenecks through the signal-to-noise ratio (SNR) of MPNN representations. The SNR decomposes model performance into feature-dependent parameters and feature-independent sensitivities. We prove that the sensitivity to class-wise signals is bounded by higher-order homophily – a generalisation of classical homophily to multi-hop neighbourhoods – and show that low higher-order homophily manifests locally as the interaction between structural bottlenecks and class labels (class-bottlenecks). Through analysis of graph ensembles, we provide a further quantitative decomposition of bottlenecking into underreaching (lack of depth implying signals cannot arrive) and oversquashing (lack of breadth implying signals arriving on fewer paths) with closed-form expressions. We prove that optimal graph structures for maximising higher-order homophily are disjoint unions of single-class and two-class-bipartite clusters. This yields BRIDGE, a graph ensemble-based rewiring algorithm that achieves near-perfect classification accuracy across all homophily regimes on synthetic benchmarks and significant improvements on real-world benchmarks, by eliminating the ``mid-homophily pitfall’’ where MPNNs typically struggle, surpassing current standard rewiring techniques from the literature. Our framework, whose code we make available for public use, provides both diagnostic tools for assessing MPNN performance, and simple yet effective methods for enhancing performance through principled graph modification." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/26/LimitsofmessagepassingfornodeclassificationHowclassbottlenecksrestrictsignaltonoiseratio.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/26/LimitsofmessagepassingfornodeclassificationHowclassbottlenecksrestrictsignaltonoiseratio.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Limits of message passing for node classification: How class-bottlenecks restrict signal-to-noise ratio" />
+<script type="application/ld+json">
+{"description":"Message passing neural networks (MPNNs) are powerful models for node classification but suffer from performance limitations under heterophily (low same-class connectivity) and structural bottlenecks in the graph. We provide a unifying statistical framework exposing the relationship between heterophily and bottlenecks through the signal-to-noise ratio (SNR) of MPNN representations. The SNR decomposes model performance into feature-dependent parameters and feature-independent sensitivities. We prove that the sensitivity to class-wise signals is bounded by higher-order homophily – a generalisation of classical homophily to multi-hop neighbourhoods – and show that low higher-order homophily manifests locally as the interaction between structural bottlenecks and class labels (class-bottlenecks). Through analysis of graph ensembles, we provide a further quantitative decomposition of bottlenecking into underreaching (lack of depth implying signals cannot arrive) and oversquashing (lack of breadth implying signals arriving on fewer paths) with closed-form expressions. We prove that optimal graph structures for maximising higher-order homophily are disjoint unions of single-class and two-class-bipartite clusters. This yields BRIDGE, a graph ensemble-based rewiring algorithm that achieves near-perfect classification accuracy across all homophily regimes on synthetic benchmarks and significant improvements on real-world benchmarks, by eliminating the ``mid-homophily pitfall’’ where MPNNs typically struggle, surpassing current standard rewiring techniques from the literature. Our framework, whose code we make available for public use, provides both diagnostic tools for assessing MPNN performance, and simple yet effective methods for enhancing performance through principled graph modification.","headline":"Limits of message passing for node classification: How class-bottlenecks restrict signal-to-noise ratio","dateModified":"2025-08-26T00:00:00+00:00","datePublished":"2025-08-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/26/LimitsofmessagepassingfornodeclassificationHowclassbottlenecksrestrictsignaltonoiseratio.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/26/LimitsofmessagepassingfornodeclassificationHowclassbottlenecksrestrictsignaltonoiseratio.html","author":{"@type":"Person","name":"Jonathan Rubin, Sahil Loomba, Nick S. Jones"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-26 00:00:00 +0000">08-26</time>
+  </p>
+  
+  <h1>Limits of message passing for node classification: How class-bottlenecks restrict signal-to-noise ratio</h1>
+  <br>Jonathan Rubin, Sahil Loomba, Nick S. Jones</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Message passing neural networks (MPNNs) are powerful models for node classification but suffer from performance limitations under heterophily (low same-class connectivity) and structural bottlenecks in the graph. We provide a unifying statistical framework exposing the relationship between heterophily and bottlenecks through the signal-to-noise ratio (SNR) of MPNN representations. The SNR decomposes model performance into feature-dependent parameters and feature-independent sensitivities. We prove that the sensitivity to class-wise signals is bounded by higher-order homophily – a generalisation of classical homophily to multi-hop neighbourhoods – and show that low higher-order homophily manifests locally as the interaction between structural bottlenecks and class labels (class-bottlenecks). Through analysis of graph ensembles, we provide a further quantitative decomposition of bottlenecking into underreaching (lack of depth implying signals cannot arrive) and oversquashing (lack of breadth implying signals arriving on fewer paths) with closed-form expressions. We prove that optimal graph structures for maximising higher-order homophily are disjoint unions of single-class and two-class-bipartite clusters. This yields BRIDGE, a graph ensemble-based rewiring algorithm that achieves near-perfect classification accuracy across all homophily regimes on synthetic benchmarks and significant improvements on real-world benchmarks, by eliminating the ``mid-homophily pitfall’’ where MPNNs typically struggle, surpassing current standard rewiring techniques from the literature. Our framework, whose code we make available for public use, provides both diagnostic tools for assessing MPNN performance, and simple yet effective methods for enhancing performance through principled graph modification.</p>
+
+<p><a href="https://arxiv.org/abs/2508.17822">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

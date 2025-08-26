@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Convergence and Generalization of Anti-Regularization for Parametric Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Convergence and Generalization of Anti-Regularization for Parametric Models" />
+<meta name="author" content="Dongseok Kim, Wonjun Jeong, Gisung Oh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose Anti-regularization (AR), which adds a sign-reversed reward term to the loss to intentionally increase model expressivity in the small-sample regime, and then attenuates this intervention with a power-law decay as the sample size grows. We formalize spectral safety and trust-region conditions, and design a lightweight stability safeguard that combines a projection operator with gradient clipping, ensuring stable intervention under stated assumptions. Our analysis spans linear smoothers and the Neural Tangent Kernel (NTK) regime, providing practical guidance on selecting the decay exponent by balancing empirical risk against variance. Empirically, AR reduces underfitting while preserving generalization and improving calibration in both regression and classification. Ablation studies confirm that the decay schedule and the stability safeguard are critical to preventing overfitting and numerical instability. We further examine a degrees-of-freedom targeting schedule that keeps per-sample complexity approximately constant. AR is simple to implement and reproducible, integrating cleanly into standard empirical risk minimization pipelines. It enables robust learning in data- and resource-constrained settings by intervening only when beneficial and fading away when unnecessary." />
+<meta property="og:description" content="We propose Anti-regularization (AR), which adds a sign-reversed reward term to the loss to intentionally increase model expressivity in the small-sample regime, and then attenuates this intervention with a power-law decay as the sample size grows. We formalize spectral safety and trust-region conditions, and design a lightweight stability safeguard that combines a projection operator with gradient clipping, ensuring stable intervention under stated assumptions. Our analysis spans linear smoothers and the Neural Tangent Kernel (NTK) regime, providing practical guidance on selecting the decay exponent by balancing empirical risk against variance. Empirically, AR reduces underfitting while preserving generalization and improving calibration in both regression and classification. Ablation studies confirm that the decay schedule and the stability safeguard are critical to preventing overfitting and numerical instability. We further examine a degrees-of-freedom targeting schedule that keeps per-sample complexity approximately constant. AR is simple to implement and reproducible, integrating cleanly into standard empirical risk minimization pipelines. It enables robust learning in data- and resource-constrained settings by intervening only when beneficial and fading away when unnecessary." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/08/26/ConvergenceandGeneralizationofAntiRegularizationforParametricModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/08/26/ConvergenceandGeneralizationofAntiRegularizationforParametricModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Convergence and Generalization of Anti-Regularization for Parametric Models" />
+<script type="application/ld+json">
+{"description":"We propose Anti-regularization (AR), which adds a sign-reversed reward term to the loss to intentionally increase model expressivity in the small-sample regime, and then attenuates this intervention with a power-law decay as the sample size grows. We formalize spectral safety and trust-region conditions, and design a lightweight stability safeguard that combines a projection operator with gradient clipping, ensuring stable intervention under stated assumptions. Our analysis spans linear smoothers and the Neural Tangent Kernel (NTK) regime, providing practical guidance on selecting the decay exponent by balancing empirical risk against variance. Empirically, AR reduces underfitting while preserving generalization and improving calibration in both regression and classification. Ablation studies confirm that the decay schedule and the stability safeguard are critical to preventing overfitting and numerical instability. We further examine a degrees-of-freedom targeting schedule that keeps per-sample complexity approximately constant. AR is simple to implement and reproducible, integrating cleanly into standard empirical risk minimization pipelines. It enables robust learning in data- and resource-constrained settings by intervening only when beneficial and fading away when unnecessary.","headline":"Convergence and Generalization of Anti-Regularization for Parametric Models","dateModified":"2025-08-26T00:00:00+00:00","datePublished":"2025-08-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/08/26/ConvergenceandGeneralizationofAntiRegularizationforParametricModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/08/26/ConvergenceandGeneralizationofAntiRegularizationforParametricModels.html","author":{"@type":"Person","name":"Dongseok Kim, Wonjun Jeong, Gisung Oh"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-08-26 00:00:00 +0000">08-26</time>
+  </p>
+  
+  <h1>Convergence and Generalization of Anti-Regularization for Parametric Models</h1>
+  <br>Dongseok Kim, Wonjun Jeong, Gisung Oh</h3>
+  <br> [stat.ML]
+
+  <p>We propose Anti-regularization (AR), which adds a sign-reversed reward term to the loss to intentionally increase model expressivity in the small-sample regime, and then attenuates this intervention with a power-law decay as the sample size grows. We formalize spectral safety and trust-region conditions, and design a lightweight stability safeguard that combines a projection operator with gradient clipping, ensuring stable intervention under stated assumptions. Our analysis spans linear smoothers and the Neural Tangent Kernel (NTK) regime, providing practical guidance on selecting the decay exponent by balancing empirical risk against variance. Empirically, AR reduces underfitting while preserving generalization and improving calibration in both regression and classification. Ablation studies confirm that the decay schedule and the stability safeguard are critical to preventing overfitting and numerical instability. We further examine a degrees-of-freedom targeting schedule that keeps per-sample complexity approximately constant. AR is simple to implement and reproducible, integrating cleanly into standard empirical risk minimization pipelines. It enables robust learning in data- and resource-constrained settings by intervening only when beneficial and fading away when unnecessary.</p>
+
+<p><a href="https://arxiv.org/abs/2508.17412">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
