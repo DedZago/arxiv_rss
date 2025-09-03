@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Leveraging Offline Data in Linear Latent Contextual Bandits</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Leveraging Offline Data in Linear Latent Contextual Bandits" />
+<meta name="author" content="Chinmaya Kausik, Kevin Tan, Ambuj Tewari" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Leveraging offline data is an attractive way to accelerate online sequential decision-making. However, it is crucial to account for latent states in users or environments in the offline data, and latent bandits form a compelling model for doing so. In this light, we design end-to-end latent bandit algorithms capable of handing uncountably many latent states. We focus on a linear latent contextual bandit $-$ a linear bandit where each user has its own high-dimensional reward parameter in $\mathbb{R}^{d_A}$, but reward parameters across users lie in a low-rank latent subspace of dimension $d_K \ll d_A$. First, we provide an offline algorithm to learn this subspace with provable guarantees. We then present two online algorithms that utilize the output of this offline algorithm to accelerate online learning. The first enjoys $\tilde{O}(\min(d_A\sqrt{T}, d_K\sqrt{T}(1+\sqrt{d_AT/d_KN})))$ regret guarantees, so that the effective dimension is lower when the size $N$ of the offline dataset is larger. We prove a matching lower bound on regret, showing that our algorithm is minimax optimal. The second is a practical algorithm that enjoys only a slightly weaker guarantee, but is computationally efficient. We also establish the efficacy of our methods using experiments on both synthetic data and real-life movie recommendation data from MovieLens. Finally, we theoretically establish the generality of the latent bandit model by proving a de Finetti theorem for stateless decision processes." />
+<meta property="og:description" content="Leveraging offline data is an attractive way to accelerate online sequential decision-making. However, it is crucial to account for latent states in users or environments in the offline data, and latent bandits form a compelling model for doing so. In this light, we design end-to-end latent bandit algorithms capable of handing uncountably many latent states. We focus on a linear latent contextual bandit $-$ a linear bandit where each user has its own high-dimensional reward parameter in $\mathbb{R}^{d_A}$, but reward parameters across users lie in a low-rank latent subspace of dimension $d_K \ll d_A$. First, we provide an offline algorithm to learn this subspace with provable guarantees. We then present two online algorithms that utilize the output of this offline algorithm to accelerate online learning. The first enjoys $\tilde{O}(\min(d_A\sqrt{T}, d_K\sqrt{T}(1+\sqrt{d_AT/d_KN})))$ regret guarantees, so that the effective dimension is lower when the size $N$ of the offline dataset is larger. We prove a matching lower bound on regret, showing that our algorithm is minimax optimal. The second is a practical algorithm that enjoys only a slightly weaker guarantee, but is computationally efficient. We also establish the efficacy of our methods using experiments on both synthetic data and real-life movie recommendation data from MovieLens. Finally, we theoretically establish the generality of the latent bandit model by proving a de Finetti theorem for stateless decision processes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/09/03/LeveragingOfflineDatainLinearLatentContextualBandits.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/09/03/LeveragingOfflineDatainLinearLatentContextualBandits.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Leveraging Offline Data in Linear Latent Contextual Bandits" />
+<script type="application/ld+json">
+{"description":"Leveraging offline data is an attractive way to accelerate online sequential decision-making. However, it is crucial to account for latent states in users or environments in the offline data, and latent bandits form a compelling model for doing so. In this light, we design end-to-end latent bandit algorithms capable of handing uncountably many latent states. We focus on a linear latent contextual bandit $-$ a linear bandit where each user has its own high-dimensional reward parameter in $\\mathbb{R}^{d_A}$, but reward parameters across users lie in a low-rank latent subspace of dimension $d_K \\ll d_A$. First, we provide an offline algorithm to learn this subspace with provable guarantees. We then present two online algorithms that utilize the output of this offline algorithm to accelerate online learning. The first enjoys $\\tilde{O}(\\min(d_A\\sqrt{T}, d_K\\sqrt{T}(1+\\sqrt{d_AT/d_KN})))$ regret guarantees, so that the effective dimension is lower when the size $N$ of the offline dataset is larger. We prove a matching lower bound on regret, showing that our algorithm is minimax optimal. The second is a practical algorithm that enjoys only a slightly weaker guarantee, but is computationally efficient. We also establish the efficacy of our methods using experiments on both synthetic data and real-life movie recommendation data from MovieLens. Finally, we theoretically establish the generality of the latent bandit model by proving a de Finetti theorem for stateless decision processes.","headline":"Leveraging Offline Data in Linear Latent Contextual Bandits","dateModified":"2025-09-03T00:00:00+00:00","datePublished":"2025-09-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/09/03/LeveragingOfflineDatainLinearLatentContextualBandits.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/09/03/LeveragingOfflineDatainLinearLatentContextualBandits.html","author":{"@type":"Person","name":"Chinmaya Kausik, Kevin Tan, Ambuj Tewari"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-03 00:00:00 +0000">09-03</time>
+  </p>
+  
+  <h1>Leveraging Offline Data in Linear Latent Contextual Bandits</h1>
+  <br>Chinmaya Kausik, Kevin Tan, Ambuj Tewari</h3>
+  <br> [stat.ML]
+
+  <p>Leveraging offline data is an attractive way to accelerate online sequential decision-making. However, it is crucial to account for latent states in users or environments in the offline data, and latent bandits form a compelling model for doing so. In this light, we design end-to-end latent bandit algorithms capable of handing uncountably many latent states. We focus on a linear latent contextual bandit $-$ a linear bandit where each user has its own high-dimensional reward parameter in $\mathbb{R}^{d_A}$, but reward parameters across users lie in a low-rank latent subspace of dimension $d_K \ll d_A$. First, we provide an offline algorithm to learn this subspace with provable guarantees. We then present two online algorithms that utilize the output of this offline algorithm to accelerate online learning. The first enjoys $\tilde{O}(\min(d_A\sqrt{T}, d_K\sqrt{T}(1+\sqrt{d_AT/d_KN})))$ regret guarantees, so that the effective dimension is lower when the size $N$ of the offline dataset is larger. We prove a matching lower bound on regret, showing that our algorithm is minimax optimal. The second is a practical algorithm that enjoys only a slightly weaker guarantee, but is computationally efficient. We also establish the efficacy of our methods using experiments on both synthetic data and real-life movie recommendation data from MovieLens. Finally, we theoretically establish the generality of the latent bandit model by proving a de Finetti theorem for stateless decision processes.</p>
+
+<p><a href="https://arxiv.org/abs/2405.17324">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
