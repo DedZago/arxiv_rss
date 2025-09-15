@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PCGBandit: One-shot acceleration of transient PDE solvers via online-learned preconditioners</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="PCGBandit: One-shot acceleration of transient PDE solvers via online-learned preconditioners" />
+<meta name="author" content="Mikhail Khodak, Min Ki Jung, Brian Wynne, Edmond Chow, Egemen Kolemen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data-driven acceleration of scientific computing workflows has been a high-profile aim of machine learning (ML) for science, with numerical simulation of transient partial differential equations (PDEs) being one of the main applications. The focus thus far has been on methods that require classical simulations to train, which when combined with the data-hungriness and optimization challenges of neural networks has caused difficulties in demonstrating a convincing advantage against strong classical baselines. We consider an alternative paradigm in which the learner uses a classical solver’s own data to accelerate it, enabling a one-shot speedup of the simulation. Concretely, since transient PDEs often require solving a sequence of related linear systems, the feedback from repeated calls to a linear solver such as preconditioned conjugate gradient (PCG) can be used by a bandit algorithm to online-learn an adaptive sequence of solver configurations (e.g. preconditioners). The method we develop, PCGBandit, is implemented directly on top of the popular open source software OpenFOAM, which we use to show its effectiveness on a set of fluid and magnetohydrodynamics (MHD) problems." />
+<meta property="og:description" content="Data-driven acceleration of scientific computing workflows has been a high-profile aim of machine learning (ML) for science, with numerical simulation of transient partial differential equations (PDEs) being one of the main applications. The focus thus far has been on methods that require classical simulations to train, which when combined with the data-hungriness and optimization challenges of neural networks has caused difficulties in demonstrating a convincing advantage against strong classical baselines. We consider an alternative paradigm in which the learner uses a classical solver’s own data to accelerate it, enabling a one-shot speedup of the simulation. Concretely, since transient PDEs often require solving a sequence of related linear systems, the feedback from repeated calls to a linear solver such as preconditioned conjugate gradient (PCG) can be used by a bandit algorithm to online-learn an adaptive sequence of solver configurations (e.g. preconditioners). The method we develop, PCGBandit, is implemented directly on top of the popular open source software OpenFOAM, which we use to show its effectiveness on a set of fluid and magnetohydrodynamics (MHD) problems." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/09/15/PCGBanditOneshotaccelerationoftransientPDEsolversviaonlinelearnedpreconditioners.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/09/15/PCGBanditOneshotaccelerationoftransientPDEsolversviaonlinelearnedpreconditioners.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PCGBandit: One-shot acceleration of transient PDE solvers via online-learned preconditioners" />
+<script type="application/ld+json">
+{"description":"Data-driven acceleration of scientific computing workflows has been a high-profile aim of machine learning (ML) for science, with numerical simulation of transient partial differential equations (PDEs) being one of the main applications. The focus thus far has been on methods that require classical simulations to train, which when combined with the data-hungriness and optimization challenges of neural networks has caused difficulties in demonstrating a convincing advantage against strong classical baselines. We consider an alternative paradigm in which the learner uses a classical solver’s own data to accelerate it, enabling a one-shot speedup of the simulation. Concretely, since transient PDEs often require solving a sequence of related linear systems, the feedback from repeated calls to a linear solver such as preconditioned conjugate gradient (PCG) can be used by a bandit algorithm to online-learn an adaptive sequence of solver configurations (e.g. preconditioners). The method we develop, PCGBandit, is implemented directly on top of the popular open source software OpenFOAM, which we use to show its effectiveness on a set of fluid and magnetohydrodynamics (MHD) problems.","headline":"PCGBandit: One-shot acceleration of transient PDE solvers via online-learned preconditioners","dateModified":"2025-09-15T00:00:00+00:00","datePublished":"2025-09-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/09/15/PCGBanditOneshotaccelerationoftransientPDEsolversviaonlinelearnedpreconditioners.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/09/15/PCGBanditOneshotaccelerationoftransientPDEsolversviaonlinelearnedpreconditioners.html","author":{"@type":"Person","name":"Mikhail Khodak, Min Ki Jung, Brian Wynne, Edmond Chow, Egemen Kolemen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-15 00:00:00 +0000">09-15</time>
+  </p>
+  
+  <h1>PCGBandit: One-shot acceleration of transient PDE solvers via online-learned preconditioners</h1>
+  <br>Mikhail Khodak, Min Ki Jung, Brian Wynne, Edmond Chow, Egemen Kolemen</h3>
+  <br> [stat.ML]
+
+  <p>Data-driven acceleration of scientific computing workflows has been a high-profile aim of machine learning (ML) for science, with numerical simulation of transient partial differential equations (PDEs) being one of the main applications. The focus thus far has been on methods that require classical simulations to train, which when combined with the data-hungriness and optimization challenges of neural networks has caused difficulties in demonstrating a convincing advantage against strong classical baselines. We consider an alternative paradigm in which the learner uses a classical solver’s own data to accelerate it, enabling a one-shot speedup of the simulation. Concretely, since transient PDEs often require solving a sequence of related linear systems, the feedback from repeated calls to a linear solver such as preconditioned conjugate gradient (PCG) can be used by a bandit algorithm to online-learn an adaptive sequence of solver configurations (e.g. preconditioners). The method we develop, PCGBandit, is implemented directly on top of the popular open source software OpenFOAM, which we use to show its effectiveness on a set of fluid and magnetohydrodynamics (MHD) problems.</p>
+
+<p><a href="https://arxiv.org/abs/2509.08765">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
