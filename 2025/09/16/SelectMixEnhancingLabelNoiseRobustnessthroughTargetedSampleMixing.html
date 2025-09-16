@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SelectMix: Enhancing Label Noise Robustness through Targeted Sample Mixing</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="SelectMix: Enhancing Label Noise Robustness through Targeted Sample Mixing" />
+<meta name="author" content="Qiuhao Liu, Ling Li, Yao Lu, Qi Xuan, Zhaowei Zhu, Jiaheng Wei" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Deep neural networks tend to memorize noisy labels, severely degrading their generalization performance. Although Mixup has demonstrated effectiveness in improving generalization and robustness, existing Mixup-based methods typically perform indiscriminate mixing without principled guidance on sample selection and mixing strategy, inadvertently propagating noisy supervision. To overcome these limitations, we propose SelectMix, a confidence-guided mixing framework explicitly tailored for noisy labels. SelectMix first identifies potentially noisy or ambiguous samples through confidence based mismatch analysis using K-fold cross-validation, then selectively blends identified uncertain samples with confidently predicted peers from their potential classes. Furthermore, SelectMix employs soft labels derived from all classes involved in the mixing process, ensuring the labels accurately represent the composition of the mixed samples, thus aligning supervision signals closely with the actual mixed inputs. Through extensive theoretical analysis and empirical evaluations on multiple synthetic (MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100) and real-world benchmark datasets (CIFAR-N, MNIST and Clothing1M), we demonstrate that SelectMix consistently outperforms strong baseline methods, validating its effectiveness and robustness in learning with noisy labels." />
+<meta property="og:description" content="Deep neural networks tend to memorize noisy labels, severely degrading their generalization performance. Although Mixup has demonstrated effectiveness in improving generalization and robustness, existing Mixup-based methods typically perform indiscriminate mixing without principled guidance on sample selection and mixing strategy, inadvertently propagating noisy supervision. To overcome these limitations, we propose SelectMix, a confidence-guided mixing framework explicitly tailored for noisy labels. SelectMix first identifies potentially noisy or ambiguous samples through confidence based mismatch analysis using K-fold cross-validation, then selectively blends identified uncertain samples with confidently predicted peers from their potential classes. Furthermore, SelectMix employs soft labels derived from all classes involved in the mixing process, ensuring the labels accurately represent the composition of the mixed samples, thus aligning supervision signals closely with the actual mixed inputs. Through extensive theoretical analysis and empirical evaluations on multiple synthetic (MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100) and real-world benchmark datasets (CIFAR-N, MNIST and Clothing1M), we demonstrate that SelectMix consistently outperforms strong baseline methods, validating its effectiveness and robustness in learning with noisy labels." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/09/16/SelectMixEnhancingLabelNoiseRobustnessthroughTargetedSampleMixing.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/09/16/SelectMixEnhancingLabelNoiseRobustnessthroughTargetedSampleMixing.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SelectMix: Enhancing Label Noise Robustness through Targeted Sample Mixing" />
+<script type="application/ld+json">
+{"description":"Deep neural networks tend to memorize noisy labels, severely degrading their generalization performance. Although Mixup has demonstrated effectiveness in improving generalization and robustness, existing Mixup-based methods typically perform indiscriminate mixing without principled guidance on sample selection and mixing strategy, inadvertently propagating noisy supervision. To overcome these limitations, we propose SelectMix, a confidence-guided mixing framework explicitly tailored for noisy labels. SelectMix first identifies potentially noisy or ambiguous samples through confidence based mismatch analysis using K-fold cross-validation, then selectively blends identified uncertain samples with confidently predicted peers from their potential classes. Furthermore, SelectMix employs soft labels derived from all classes involved in the mixing process, ensuring the labels accurately represent the composition of the mixed samples, thus aligning supervision signals closely with the actual mixed inputs. Through extensive theoretical analysis and empirical evaluations on multiple synthetic (MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100) and real-world benchmark datasets (CIFAR-N, MNIST and Clothing1M), we demonstrate that SelectMix consistently outperforms strong baseline methods, validating its effectiveness and robustness in learning with noisy labels.","headline":"SelectMix: Enhancing Label Noise Robustness through Targeted Sample Mixing","dateModified":"2025-09-16T00:00:00+00:00","datePublished":"2025-09-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/09/16/SelectMixEnhancingLabelNoiseRobustnessthroughTargetedSampleMixing.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/09/16/SelectMixEnhancingLabelNoiseRobustnessthroughTargetedSampleMixing.html","author":{"@type":"Person","name":"Qiuhao Liu, Ling Li, Yao Lu, Qi Xuan, Zhaowei Zhu, Jiaheng Wei"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-16 00:00:00 +0000">09-16</time>
+  </p>
+  
+  <h1>SelectMix: Enhancing Label Noise Robustness through Targeted Sample Mixing</h1>
+  <br>Qiuhao Liu, Ling Li, Yao Lu, Qi Xuan, Zhaowei Zhu, Jiaheng Wei</h3>
+  <br> [stat.ML]
+
+  <p>Deep neural networks tend to memorize noisy labels, severely degrading their generalization performance. Although Mixup has demonstrated effectiveness in improving generalization and robustness, existing Mixup-based methods typically perform indiscriminate mixing without principled guidance on sample selection and mixing strategy, inadvertently propagating noisy supervision. To overcome these limitations, we propose SelectMix, a confidence-guided mixing framework explicitly tailored for noisy labels. SelectMix first identifies potentially noisy or ambiguous samples through confidence based mismatch analysis using K-fold cross-validation, then selectively blends identified uncertain samples with confidently predicted peers from their potential classes. Furthermore, SelectMix employs soft labels derived from all classes involved in the mixing process, ensuring the labels accurately represent the composition of the mixed samples, thus aligning supervision signals closely with the actual mixed inputs. Through extensive theoretical analysis and empirical evaluations on multiple synthetic (MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100) and real-world benchmark datasets (CIFAR-N, MNIST and Clothing1M), we demonstrate that SelectMix consistently outperforms strong baseline methods, validating its effectiveness and robustness in learning with noisy labels.</p>
+
+<p><a href="https://arxiv.org/abs/2509.11265">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
