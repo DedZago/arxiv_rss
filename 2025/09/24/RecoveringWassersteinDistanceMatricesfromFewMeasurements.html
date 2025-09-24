@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Recovering Wasserstein Distance Matrices from Few Measurements</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Recovering Wasserstein Distance Matrices from Few Measurements" />
+<meta name="author" content="Muhammad Rana, Abiy Tasissa, HanQin Cai, Yakov Gavriyelov, Keaton Hamm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper proposes two algorithms for estimating square Wasserstein distance matrices from a small number of entries. These matrices are used to compute manifold learning embeddings like multidimensional scaling (MDS) or Isomap, but contrary to Euclidean distance matrices, are extremely costly to compute. We analyze matrix completion from upper triangular samples and Nystr&quot;{o}m completion in which $\mathcal{O}(d\log(d))$ columns of the distance matrices are computed where $d$ is the desired embedding dimension, prove stability of MDS under Nystr&quot;{o}m completion, and show that it can outperform matrix completion for a fixed budget of sample distances. Finally, we show that classification of the OrganCMNIST dataset from the MedMNIST benchmark is stable on data embedded from the Nystr&quot;{o}m estimation of the distance matrix even when only 10\% of the columns are computed." />
+<meta property="og:description" content="This paper proposes two algorithms for estimating square Wasserstein distance matrices from a small number of entries. These matrices are used to compute manifold learning embeddings like multidimensional scaling (MDS) or Isomap, but contrary to Euclidean distance matrices, are extremely costly to compute. We analyze matrix completion from upper triangular samples and Nystr&quot;{o}m completion in which $\mathcal{O}(d\log(d))$ columns of the distance matrices are computed where $d$ is the desired embedding dimension, prove stability of MDS under Nystr&quot;{o}m completion, and show that it can outperform matrix completion for a fixed budget of sample distances. Finally, we show that classification of the OrganCMNIST dataset from the MedMNIST benchmark is stable on data embedded from the Nystr&quot;{o}m estimation of the distance matrix even when only 10\% of the columns are computed." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/09/24/RecoveringWassersteinDistanceMatricesfromFewMeasurements.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/09/24/RecoveringWassersteinDistanceMatricesfromFewMeasurements.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Recovering Wasserstein Distance Matrices from Few Measurements" />
+<script type="application/ld+json">
+{"description":"This paper proposes two algorithms for estimating square Wasserstein distance matrices from a small number of entries. These matrices are used to compute manifold learning embeddings like multidimensional scaling (MDS) or Isomap, but contrary to Euclidean distance matrices, are extremely costly to compute. We analyze matrix completion from upper triangular samples and Nystr&quot;{o}m completion in which $\\mathcal{O}(d\\log(d))$ columns of the distance matrices are computed where $d$ is the desired embedding dimension, prove stability of MDS under Nystr&quot;{o}m completion, and show that it can outperform matrix completion for a fixed budget of sample distances. Finally, we show that classification of the OrganCMNIST dataset from the MedMNIST benchmark is stable on data embedded from the Nystr&quot;{o}m estimation of the distance matrix even when only 10\\% of the columns are computed.","headline":"Recovering Wasserstein Distance Matrices from Few Measurements","dateModified":"2025-09-24T00:00:00+00:00","datePublished":"2025-09-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/09/24/RecoveringWassersteinDistanceMatricesfromFewMeasurements.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/09/24/RecoveringWassersteinDistanceMatricesfromFewMeasurements.html","author":{"@type":"Person","name":"Muhammad Rana, Abiy Tasissa, HanQin Cai, Yakov Gavriyelov, Keaton Hamm"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-24 00:00:00 +0000">09-24</time>
+  </p>
+  
+  <h1>Recovering Wasserstein Distance Matrices from Few Measurements</h1>
+  <br>Muhammad Rana, Abiy Tasissa, HanQin Cai, Yakov Gavriyelov, Keaton Hamm</h3>
+  <br> [stat.ML]
+
+  <p>This paper proposes two algorithms for estimating square Wasserstein distance matrices from a small number of entries. These matrices are used to compute manifold learning embeddings like multidimensional scaling (MDS) or Isomap, but contrary to Euclidean distance matrices, are extremely costly to compute. We analyze matrix completion from upper triangular samples and Nystr"{o}m completion in which $\mathcal{O}(d\log(d))$ columns of the distance matrices are computed where $d$ is the desired embedding dimension, prove stability of MDS under Nystr"{o}m completion, and show that it can outperform matrix completion for a fixed budget of sample distances. Finally, we show that classification of the OrganCMNIST dataset from the MedMNIST benchmark is stable on data embedded from the Nystr"{o}m estimation of the distance matrix even when only 10\% of the columns are computed.</p>
+
+<p><a href="https://arxiv.org/abs/2509.19250">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
