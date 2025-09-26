@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Response to Promises and Pitfalls of Deep Kernel Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Response to Promises and Pitfalls of Deep Kernel Learning" />
+<meta name="author" content="Andrew Gordon Wilson, Zhiting Hu, Ruslan Salakhutdinov, Eric P. Xing" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This note responds to “Promises and Pitfalls of Deep Kernel Learning” (Ober et al., 2021). The marginal likelihood of a Gaussian process can be compartmentalized into a data fit term and a complexity penalty. Ober et al. (2021) shows that if a kernel can be multiplied by a signal variance coefficient, then reparametrizing and substituting in the maximized value of this parameter sets a reparametrized data fit term to a fixed value. They use this finding to argue that the complexity penalty, a log determinant of the kernel matrix, then dominates in determining the other values of kernel hyperparameters, which can lead to data overcorrelation. By contrast, we show that the reparametrization in fact introduces another data-fit term which influences all other kernel hyperparameters. Thus, a balance between data fit and complexity still plays a significant role in determining kernel hyperparameters." />
+<meta property="og:description" content="This note responds to “Promises and Pitfalls of Deep Kernel Learning” (Ober et al., 2021). The marginal likelihood of a Gaussian process can be compartmentalized into a data fit term and a complexity penalty. Ober et al. (2021) shows that if a kernel can be multiplied by a signal variance coefficient, then reparametrizing and substituting in the maximized value of this parameter sets a reparametrized data fit term to a fixed value. They use this finding to argue that the complexity penalty, a log determinant of the kernel matrix, then dominates in determining the other values of kernel hyperparameters, which can lead to data overcorrelation. By contrast, we show that the reparametrization in fact introduces another data-fit term which influences all other kernel hyperparameters. Thus, a balance between data fit and complexity still plays a significant role in determining kernel hyperparameters." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/09/26/ResponsetoPromisesandPitfallsofDeepKernelLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/09/26/ResponsetoPromisesandPitfallsofDeepKernelLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Response to Promises and Pitfalls of Deep Kernel Learning" />
+<script type="application/ld+json">
+{"description":"This note responds to “Promises and Pitfalls of Deep Kernel Learning” (Ober et al., 2021). The marginal likelihood of a Gaussian process can be compartmentalized into a data fit term and a complexity penalty. Ober et al. (2021) shows that if a kernel can be multiplied by a signal variance coefficient, then reparametrizing and substituting in the maximized value of this parameter sets a reparametrized data fit term to a fixed value. They use this finding to argue that the complexity penalty, a log determinant of the kernel matrix, then dominates in determining the other values of kernel hyperparameters, which can lead to data overcorrelation. By contrast, we show that the reparametrization in fact introduces another data-fit term which influences all other kernel hyperparameters. Thus, a balance between data fit and complexity still plays a significant role in determining kernel hyperparameters.","headline":"Response to Promises and Pitfalls of Deep Kernel Learning","dateModified":"2025-09-26T00:00:00+00:00","datePublished":"2025-09-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/09/26/ResponsetoPromisesandPitfallsofDeepKernelLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/09/26/ResponsetoPromisesandPitfallsofDeepKernelLearning.html","author":{"@type":"Person","name":"Andrew Gordon Wilson, Zhiting Hu, Ruslan Salakhutdinov, Eric P. Xing"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-26 00:00:00 +0000">09-26</time>
+  </p>
+  
+  <h1>Response to Promises and Pitfalls of Deep Kernel Learning</h1>
+  <br>Andrew Gordon Wilson, Zhiting Hu, Ruslan Salakhutdinov, Eric P. Xing</h3>
+  <br> [stat.ML]
+
+  <p>This note responds to “Promises and Pitfalls of Deep Kernel Learning” (Ober et al., 2021). The marginal likelihood of a Gaussian process can be compartmentalized into a data fit term and a complexity penalty. Ober et al. (2021) shows that if a kernel can be multiplied by a signal variance coefficient, then reparametrizing and substituting in the maximized value of this parameter sets a reparametrized data fit term to a fixed value. They use this finding to argue that the complexity penalty, a log determinant of the kernel matrix, then dominates in determining the other values of kernel hyperparameters, which can lead to data overcorrelation. By contrast, we show that the reparametrization in fact introduces another data-fit term which influences all other kernel hyperparameters. Thus, a balance between data fit and complexity still plays a significant role in determining kernel hyperparameters.</p>
+
+<p><a href="https://arxiv.org/abs/2509.21228">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
