@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Warm Starts Accelerate Conditional Diffusion</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Warm Starts Accelerate Conditional Diffusion" />
+<meta name="author" content="Jonas Scholz, Richard E. Turner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generative models like diffusion and flow-matching create high-fidelity samples by progressively refining noise. The refinement process is notoriously slow, often requiring hundreds of function evaluations. We introduce Warm-Start Diffusion (WSD), a method that uses a simple, deterministic model to dramatically accelerate conditional generation by providing a better starting point. Instead of starting generation from an uninformed $N(\boldsymbol{0}, I)$ prior, our deterministic warm-start model predicts an informed prior $N(\hat{\boldsymbol{\mu}}_C, \text{diag}(\hat{\boldsymbol{\sigma}}^2_C))$, whose moments are conditioned on the input context $C$. This warm start substantially reduces the distance the generative process must traverse, and therefore the number of diffusion steps required, particularly when the context $C$ is strongly informative. WSD is applicable to any standard diffusion or flow matching algorithm, is orthogonal to and synergistic with other fast sampling techniques like efficient solvers, and is simple to implement. We test WSD in a variety of settings, and find that it substantially outperforms standard diffusion in the efficient sampling regime, generating realistic samples using only 4-6 function evaluations, and saturating performance with 10-12." />
+<meta property="og:description" content="Generative models like diffusion and flow-matching create high-fidelity samples by progressively refining noise. The refinement process is notoriously slow, often requiring hundreds of function evaluations. We introduce Warm-Start Diffusion (WSD), a method that uses a simple, deterministic model to dramatically accelerate conditional generation by providing a better starting point. Instead of starting generation from an uninformed $N(\boldsymbol{0}, I)$ prior, our deterministic warm-start model predicts an informed prior $N(\hat{\boldsymbol{\mu}}_C, \text{diag}(\hat{\boldsymbol{\sigma}}^2_C))$, whose moments are conditioned on the input context $C$. This warm start substantially reduces the distance the generative process must traverse, and therefore the number of diffusion steps required, particularly when the context $C$ is strongly informative. WSD is applicable to any standard diffusion or flow matching algorithm, is orthogonal to and synergistic with other fast sampling techniques like efficient solvers, and is simple to implement. We test WSD in a variety of settings, and find that it substantially outperforms standard diffusion in the efficient sampling regime, generating realistic samples using only 4-6 function evaluations, and saturating performance with 10-12." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/09/30/WarmStartsAccelerateConditionalDiffusion.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/09/30/WarmStartsAccelerateConditionalDiffusion.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Warm Starts Accelerate Conditional Diffusion" />
+<script type="application/ld+json">
+{"description":"Generative models like diffusion and flow-matching create high-fidelity samples by progressively refining noise. The refinement process is notoriously slow, often requiring hundreds of function evaluations. We introduce Warm-Start Diffusion (WSD), a method that uses a simple, deterministic model to dramatically accelerate conditional generation by providing a better starting point. Instead of starting generation from an uninformed $N(\\boldsymbol{0}, I)$ prior, our deterministic warm-start model predicts an informed prior $N(\\hat{\\boldsymbol{\\mu}}_C, \\text{diag}(\\hat{\\boldsymbol{\\sigma}}^2_C))$, whose moments are conditioned on the input context $C$. This warm start substantially reduces the distance the generative process must traverse, and therefore the number of diffusion steps required, particularly when the context $C$ is strongly informative. WSD is applicable to any standard diffusion or flow matching algorithm, is orthogonal to and synergistic with other fast sampling techniques like efficient solvers, and is simple to implement. We test WSD in a variety of settings, and find that it substantially outperforms standard diffusion in the efficient sampling regime, generating realistic samples using only 4-6 function evaluations, and saturating performance with 10-12.","headline":"Warm Starts Accelerate Conditional Diffusion","dateModified":"2025-09-30T00:00:00+00:00","datePublished":"2025-09-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/09/30/WarmStartsAccelerateConditionalDiffusion.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/09/30/WarmStartsAccelerateConditionalDiffusion.html","author":{"@type":"Person","name":"Jonas Scholz, Richard E. Turner"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-30 00:00:00 +0000">09-30</time>
+  </p>
+  
+  <h1>Warm Starts Accelerate Conditional Diffusion</h1>
+  <br>Jonas Scholz, Richard E. Turner</h3>
+  <br> [stat.ML]
+
+  <p>Generative models like diffusion and flow-matching create high-fidelity samples by progressively refining noise. The refinement process is notoriously slow, often requiring hundreds of function evaluations. We introduce Warm-Start Diffusion (WSD), a method that uses a simple, deterministic model to dramatically accelerate conditional generation by providing a better starting point. Instead of starting generation from an uninformed $N(\boldsymbol{0}, I)$ prior, our deterministic warm-start model predicts an informed prior $N(\hat{\boldsymbol{\mu}}_C, \text{diag}(\hat{\boldsymbol{\sigma}}^2_C))$, whose moments are conditioned on the input context $C$. This warm start substantially reduces the distance the generative process must traverse, and therefore the number of diffusion steps required, particularly when the context $C$ is strongly informative. WSD is applicable to any standard diffusion or flow matching algorithm, is orthogonal to and synergistic with other fast sampling techniques like efficient solvers, and is simple to implement. We test WSD in a variety of settings, and find that it substantially outperforms standard diffusion in the efficient sampling regime, generating realistic samples using only 4-6 function evaluations, and saturating performance with 10-12.</p>
+
+<p><a href="https://arxiv.org/abs/2507.09212">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

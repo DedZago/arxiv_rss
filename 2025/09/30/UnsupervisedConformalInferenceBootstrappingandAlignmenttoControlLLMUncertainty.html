@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Unsupervised Conformal Inference: Bootstrapping and Alignment to Control LLM Uncertainty</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Unsupervised Conformal Inference: Bootstrapping and Alignment to Control LLM Uncertainty" />
+<meta name="author" content="Lingyou Pang, Lei Huang, Jianyu Lin, Tianyu Wang, Akira Horiguchi, Alexander Aue, Carey E. Priebe" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Deploying black-box LLMs requires managing uncertainty in the absence of token-level probability or true labels. We propose introducing an unsupervised conformal inference framework for generation, which integrates: generative models, incorporating: (i) an LLM-compatible atypical score derived from response-embedding Gram matrix, (ii) UCP combined with a bootstrapping variant (BB-UCP) that aggregates residuals to refine quantile precision while maintaining distribution-free, finite-sample coverage, and (iii) conformal alignment, which calibrates a single strictness parameter $\tau$ so a user predicate (e.g., factuality lift) holds on unseen batches with probability $\ge 1-\alpha$. Across different benchmark datasets, our gates achieve close-to-nominal coverage and provide tighter, more stable thresholds than split UCP, while consistently reducing the severity of hallucination, outperforming lightweight per-response detectors with similar computational demands. The result is a label-free, API-compatible gate for test-time filtering that turns geometric signals into calibrated, goal-aligned decisions." />
+<meta property="og:description" content="Deploying black-box LLMs requires managing uncertainty in the absence of token-level probability or true labels. We propose introducing an unsupervised conformal inference framework for generation, which integrates: generative models, incorporating: (i) an LLM-compatible atypical score derived from response-embedding Gram matrix, (ii) UCP combined with a bootstrapping variant (BB-UCP) that aggregates residuals to refine quantile precision while maintaining distribution-free, finite-sample coverage, and (iii) conformal alignment, which calibrates a single strictness parameter $\tau$ so a user predicate (e.g., factuality lift) holds on unseen batches with probability $\ge 1-\alpha$. Across different benchmark datasets, our gates achieve close-to-nominal coverage and provide tighter, more stable thresholds than split UCP, while consistently reducing the severity of hallucination, outperforming lightweight per-response detectors with similar computational demands. The result is a label-free, API-compatible gate for test-time filtering that turns geometric signals into calibrated, goal-aligned decisions." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/09/30/UnsupervisedConformalInferenceBootstrappingandAlignmenttoControlLLMUncertainty.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/09/30/UnsupervisedConformalInferenceBootstrappingandAlignmenttoControlLLMUncertainty.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unsupervised Conformal Inference: Bootstrapping and Alignment to Control LLM Uncertainty" />
+<script type="application/ld+json">
+{"description":"Deploying black-box LLMs requires managing uncertainty in the absence of token-level probability or true labels. We propose introducing an unsupervised conformal inference framework for generation, which integrates: generative models, incorporating: (i) an LLM-compatible atypical score derived from response-embedding Gram matrix, (ii) UCP combined with a bootstrapping variant (BB-UCP) that aggregates residuals to refine quantile precision while maintaining distribution-free, finite-sample coverage, and (iii) conformal alignment, which calibrates a single strictness parameter $\\tau$ so a user predicate (e.g., factuality lift) holds on unseen batches with probability $\\ge 1-\\alpha$. Across different benchmark datasets, our gates achieve close-to-nominal coverage and provide tighter, more stable thresholds than split UCP, while consistently reducing the severity of hallucination, outperforming lightweight per-response detectors with similar computational demands. The result is a label-free, API-compatible gate for test-time filtering that turns geometric signals into calibrated, goal-aligned decisions.","headline":"Unsupervised Conformal Inference: Bootstrapping and Alignment to Control LLM Uncertainty","dateModified":"2025-09-30T00:00:00+00:00","datePublished":"2025-09-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/09/30/UnsupervisedConformalInferenceBootstrappingandAlignmenttoControlLLMUncertainty.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/09/30/UnsupervisedConformalInferenceBootstrappingandAlignmenttoControlLLMUncertainty.html","author":{"@type":"Person","name":"Lingyou Pang, Lei Huang, Jianyu Lin, Tianyu Wang, Akira Horiguchi, Alexander Aue, Carey E. Priebe"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-09-30 00:00:00 +0000">09-30</time>
+  </p>
+  
+  <h1>Unsupervised Conformal Inference: Bootstrapping and Alignment to Control LLM Uncertainty</h1>
+  <br>Lingyou Pang, Lei Huang, Jianyu Lin, Tianyu Wang, Akira Horiguchi, Alexander Aue, Carey E. Priebe</h3>
+  <br> [stat.ML]
+
+  <p>Deploying black-box LLMs requires managing uncertainty in the absence of token-level probability or true labels. We propose introducing an unsupervised conformal inference framework for generation, which integrates: generative models, incorporating: (i) an LLM-compatible atypical score derived from response-embedding Gram matrix, (ii) UCP combined with a bootstrapping variant (BB-UCP) that aggregates residuals to refine quantile precision while maintaining distribution-free, finite-sample coverage, and (iii) conformal alignment, which calibrates a single strictness parameter $\tau$ so a user predicate (e.g., factuality lift) holds on unseen batches with probability $\ge 1-\alpha$. Across different benchmark datasets, our gates achieve close-to-nominal coverage and provide tighter, more stable thresholds than split UCP, while consistently reducing the severity of hallucination, outperforming lightweight per-response detectors with similar computational demands. The result is a label-free, API-compatible gate for test-time filtering that turns geometric signals into calibrated, goal-aligned decisions.</p>
+
+<p><a href="https://arxiv.org/abs/2509.23002">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
