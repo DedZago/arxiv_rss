@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>IMPACT: Importance-Aware Activation Space Reconstruction</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="IMPACT: Importance-Aware Activation Space Reconstruction" />
+<meta name="author" content="Md Mokarram Chowdhury, Daniel Agyei Asante, Ernie Chang, Yang Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language models (LLMs) achieve strong performance across many domains but are difficult to deploy in resource-constrained settings due to their size. Low-rank weight matrix compression is a popular strategy for reducing model size, typically by minimizing weight reconstruction error under the assumption that weights are low-rank. However, this assumption often does not hold in LLMs. Instead, LLM activations exhibit stronger low-rank structure-prompting a shift toward minimizing activation reconstruction error. We show that this shift alone is insufficient: activation dimensions contribute unequally to model performance, and uniform reconstruction can harm performance. We propose IMPACT, a principled framework for importance-aware activation reconstruction that links model compression decisions to their impact on model behavior. IMPACT formulates an optimization problem that considers both activation structure and gradient sensitivity, and derives a closed-form solution where the optimal reconstruction bases are the eigenvectors of an importance-weighted activation covariance matrix. This enables low-rank approximations explicitly optimized to preserve accuracy. Experiments across diverse models and tasks show that IMPACT achieves up to 48.6% greater model size reduction with accuracy comparable to state-of-the-art baselines." />
+<meta property="og:description" content="Large language models (LLMs) achieve strong performance across many domains but are difficult to deploy in resource-constrained settings due to their size. Low-rank weight matrix compression is a popular strategy for reducing model size, typically by minimizing weight reconstruction error under the assumption that weights are low-rank. However, this assumption often does not hold in LLMs. Instead, LLM activations exhibit stronger low-rank structure-prompting a shift toward minimizing activation reconstruction error. We show that this shift alone is insufficient: activation dimensions contribute unequally to model performance, and uniform reconstruction can harm performance. We propose IMPACT, a principled framework for importance-aware activation reconstruction that links model compression decisions to their impact on model behavior. IMPACT formulates an optimization problem that considers both activation structure and gradient sensitivity, and derives a closed-form solution where the optimal reconstruction bases are the eigenvectors of an importance-weighted activation covariance matrix. This enables low-rank approximations explicitly optimized to preserve accuracy. Experiments across diverse models and tasks show that IMPACT achieves up to 48.6% greater model size reduction with accuracy comparable to state-of-the-art baselines." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/01/IMPACTImportanceAwareActivationSpaceReconstruction.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/01/IMPACTImportanceAwareActivationSpaceReconstruction.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="IMPACT: Importance-Aware Activation Space Reconstruction" />
+<script type="application/ld+json">
+{"description":"Large language models (LLMs) achieve strong performance across many domains but are difficult to deploy in resource-constrained settings due to their size. Low-rank weight matrix compression is a popular strategy for reducing model size, typically by minimizing weight reconstruction error under the assumption that weights are low-rank. However, this assumption often does not hold in LLMs. Instead, LLM activations exhibit stronger low-rank structure-prompting a shift toward minimizing activation reconstruction error. We show that this shift alone is insufficient: activation dimensions contribute unequally to model performance, and uniform reconstruction can harm performance. We propose IMPACT, a principled framework for importance-aware activation reconstruction that links model compression decisions to their impact on model behavior. IMPACT formulates an optimization problem that considers both activation structure and gradient sensitivity, and derives a closed-form solution where the optimal reconstruction bases are the eigenvectors of an importance-weighted activation covariance matrix. This enables low-rank approximations explicitly optimized to preserve accuracy. Experiments across diverse models and tasks show that IMPACT achieves up to 48.6% greater model size reduction with accuracy comparable to state-of-the-art baselines.","headline":"IMPACT: Importance-Aware Activation Space Reconstruction","dateModified":"2025-10-01T00:00:00+00:00","datePublished":"2025-10-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/01/IMPACTImportanceAwareActivationSpaceReconstruction.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/01/IMPACTImportanceAwareActivationSpaceReconstruction.html","author":{"@type":"Person","name":"Md Mokarram Chowdhury, Daniel Agyei Asante, Ernie Chang, Yang Li"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>IMPACT: Importance-Aware Activation Space Reconstruction</h1>
+  <br>Md Mokarram Chowdhury, Daniel Agyei Asante, Ernie Chang, Yang Li</h3>
+  <br> [stat.ML]
+
+  <p>Large language models (LLMs) achieve strong performance across many domains but are difficult to deploy in resource-constrained settings due to their size. Low-rank weight matrix compression is a popular strategy for reducing model size, typically by minimizing weight reconstruction error under the assumption that weights are low-rank. However, this assumption often does not hold in LLMs. Instead, LLM activations exhibit stronger low-rank structure-prompting a shift toward minimizing activation reconstruction error.
+  We show that this shift alone is insufficient: activation dimensions contribute unequally to model performance, and uniform reconstruction can harm performance. We propose IMPACT, a principled framework for importance-aware activation reconstruction that links model compression decisions to their impact on model behavior. IMPACT formulates an optimization problem that considers both activation structure and gradient sensitivity, and derives a closed-form solution where the optimal reconstruction bases are the eigenvectors of an importance-weighted activation covariance matrix. This enables low-rank approximations explicitly optimized to preserve accuracy. Experiments across diverse models and tasks show that IMPACT achieves up to 48.6% greater model size reduction with accuracy comparable to state-of-the-art baselines.</p>
+
+<p><a href="https://arxiv.org/abs/2507.03828">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

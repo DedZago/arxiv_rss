@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization" />
+<meta name="author" content="Wu Lin, Scott C. Lowe, Felix Dangel, Runa Eschenhagen, Zikun Xu, Roger B. Grosse" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Shampoo and its efficient variant, SOAP, use structured second-moment estimation and have attracted growing interest for their effectiveness in training neural networks (NNs). In practice, Shampoo requires step-size grafting with Adam to achieve competitive performance. SOAP mitigates this by applying Adam in Shampoo’s eigenbasis and further reducing per-iteration runtime. However, reliance on Adam introduces additional memory overhead in both methods. Prior theoretical interpretations have primarily examined their estimation schemes using the Frobenius norm. Motivated by the natural correspondence between the second moment and a covariance matrix, we reinterpret the estimation procedures in Shampoo and SOAP as instances of covariance estimation through the lens of Kullback-Leibler (KL) divergence minimization. This perspective reveals a previously overlooked theoretical limitation and motivates principled improvements to their design. Building on the KL perspective, we propose practical estimation schemes – $\textbf{KL-Shampoo}$ and $\textbf{KL-SOAP}$ – that match or exceed the performance of Shampoo and SOAP for pre-training various NNs while maintaining SOAP-level per-iteration runtime. Notably, KL-Shampoo does not rely on Adam to achieve superior performance, thereby avoiding the associated memory overhead. Surprisingly, KL-Shampoo consistently outperforms the other methods in our experiments." />
+<meta property="og:description" content="Shampoo and its efficient variant, SOAP, use structured second-moment estimation and have attracted growing interest for their effectiveness in training neural networks (NNs). In practice, Shampoo requires step-size grafting with Adam to achieve competitive performance. SOAP mitigates this by applying Adam in Shampoo’s eigenbasis and further reducing per-iteration runtime. However, reliance on Adam introduces additional memory overhead in both methods. Prior theoretical interpretations have primarily examined their estimation schemes using the Frobenius norm. Motivated by the natural correspondence between the second moment and a covariance matrix, we reinterpret the estimation procedures in Shampoo and SOAP as instances of covariance estimation through the lens of Kullback-Leibler (KL) divergence minimization. This perspective reveals a previously overlooked theoretical limitation and motivates principled improvements to their design. Building on the KL perspective, we propose practical estimation schemes – $\textbf{KL-Shampoo}$ and $\textbf{KL-SOAP}$ – that match or exceed the performance of Shampoo and SOAP for pre-training various NNs while maintaining SOAP-level per-iteration runtime. Notably, KL-Shampoo does not rely on Adam to achieve superior performance, thereby avoiding the associated memory overhead. Surprisingly, KL-Shampoo consistently outperforms the other methods in our experiments." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/01/UnderstandingandImprovingShampooandSOAPviaKullbackLeiblerMinimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/01/UnderstandingandImprovingShampooandSOAPviaKullbackLeiblerMinimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization" />
+<script type="application/ld+json">
+{"description":"Shampoo and its efficient variant, SOAP, use structured second-moment estimation and have attracted growing interest for their effectiveness in training neural networks (NNs). In practice, Shampoo requires step-size grafting with Adam to achieve competitive performance. SOAP mitigates this by applying Adam in Shampoo’s eigenbasis and further reducing per-iteration runtime. However, reliance on Adam introduces additional memory overhead in both methods. Prior theoretical interpretations have primarily examined their estimation schemes using the Frobenius norm. Motivated by the natural correspondence between the second moment and a covariance matrix, we reinterpret the estimation procedures in Shampoo and SOAP as instances of covariance estimation through the lens of Kullback-Leibler (KL) divergence minimization. This perspective reveals a previously overlooked theoretical limitation and motivates principled improvements to their design. Building on the KL perspective, we propose practical estimation schemes – $\\textbf{KL-Shampoo}$ and $\\textbf{KL-SOAP}$ – that match or exceed the performance of Shampoo and SOAP for pre-training various NNs while maintaining SOAP-level per-iteration runtime. Notably, KL-Shampoo does not rely on Adam to achieve superior performance, thereby avoiding the associated memory overhead. Surprisingly, KL-Shampoo consistently outperforms the other methods in our experiments.","headline":"Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization","dateModified":"2025-10-01T00:00:00+00:00","datePublished":"2025-10-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/01/UnderstandingandImprovingShampooandSOAPviaKullbackLeiblerMinimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/01/UnderstandingandImprovingShampooandSOAPviaKullbackLeiblerMinimization.html","author":{"@type":"Person","name":"Wu Lin, Scott C. Lowe, Felix Dangel, Runa Eschenhagen, Zikun Xu, Roger B. Grosse"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>Understanding and Improving Shampoo and SOAP via Kullback-Leibler Minimization</h1>
+  <br>Wu Lin, Scott C. Lowe, Felix Dangel, Runa Eschenhagen, Zikun Xu, Roger B. Grosse</h3>
+  <br> [stat.ML]
+
+  <p>Shampoo and its efficient variant, SOAP, use structured second-moment estimation and have attracted growing interest for their effectiveness in training neural networks (NNs). In practice, Shampoo requires step-size grafting with Adam to achieve competitive performance. SOAP mitigates this by applying Adam in Shampoo’s eigenbasis and further reducing per-iteration runtime. However, reliance on Adam introduces additional memory overhead in both methods. Prior theoretical interpretations have primarily examined their estimation schemes using the Frobenius norm. Motivated by the natural correspondence between the second moment and a covariance matrix, we reinterpret the estimation procedures in Shampoo and SOAP as instances of covariance estimation through the lens of Kullback-Leibler (KL) divergence minimization. This perspective reveals a previously overlooked theoretical limitation and motivates principled improvements to their design. Building on the KL perspective, we propose practical estimation schemes – $\textbf{KL-Shampoo}$ and $\textbf{KL-SOAP}$ – that match or exceed the performance of Shampoo and SOAP for pre-training various NNs while maintaining SOAP-level per-iteration runtime. Notably, KL-Shampoo does not rely on Adam to achieve superior performance, thereby avoiding the associated memory overhead. Surprisingly, KL-Shampoo consistently outperforms the other methods in our experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2509.03378">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Evaluating Double Descent in Machine Learning: Insights from Tree-Based Models Applied to a Genomic Prediction Task</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Evaluating Double Descent in Machine Learning: Insights from Tree-Based Models Applied to a Genomic Prediction Task" />
+<meta name="author" content="Guillermo Comesaña Cimadevila" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Classical learning theory describes a well-characterised U-shaped relationship between model complexity and prediction error, reflecting a transition from underfitting in underparameterised regimes to overfitting as complexity grows. Recent work, however, has introduced the notion of a second descent in test error beyond the interpolation threshold-giving rise to the so-called double descent phenomenon. While double descent has been studied extensively in the context of deep learning, it has also been reported in simpler models, including decision trees and gradient boosting. In this work, we revisit these claims through the lens of classical machine learning applied to a biological classification task: predicting isoniazid resistance in Mycobacterium tuberculosis using whole-genome sequencing data. We systematically vary model complexity along two orthogonal axes-learner capacity (e.g., Pleaf, Pboost) and ensemble size (i.e., Pens)-and show that double descent consistently emerges only when complexity is scaled jointly across these axes. When either axis is held fixed, generalisation behaviour reverts to classical U- or L-shaped patterns. These results are replicated on a synthetic benchmark and support the unfolding hypothesis, which attributes double descent to the projection of distinct generalisation regimes onto a single complexity axis. Our findings underscore the importance of treating model complexity as a multidimensional construct when analysing generalisation behaviour. All code and reproducibility materials are available at: https://github.com/guillermocomesanacimadevila/Demystifying-Double-Descent-in-ML." />
+<meta property="og:description" content="Classical learning theory describes a well-characterised U-shaped relationship between model complexity and prediction error, reflecting a transition from underfitting in underparameterised regimes to overfitting as complexity grows. Recent work, however, has introduced the notion of a second descent in test error beyond the interpolation threshold-giving rise to the so-called double descent phenomenon. While double descent has been studied extensively in the context of deep learning, it has also been reported in simpler models, including decision trees and gradient boosting. In this work, we revisit these claims through the lens of classical machine learning applied to a biological classification task: predicting isoniazid resistance in Mycobacterium tuberculosis using whole-genome sequencing data. We systematically vary model complexity along two orthogonal axes-learner capacity (e.g., Pleaf, Pboost) and ensemble size (i.e., Pens)-and show that double descent consistently emerges only when complexity is scaled jointly across these axes. When either axis is held fixed, generalisation behaviour reverts to classical U- or L-shaped patterns. These results are replicated on a synthetic benchmark and support the unfolding hypothesis, which attributes double descent to the projection of distinct generalisation regimes onto a single complexity axis. Our findings underscore the importance of treating model complexity as a multidimensional construct when analysing generalisation behaviour. All code and reproducibility materials are available at: https://github.com/guillermocomesanacimadevila/Demystifying-Double-Descent-in-ML." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/01/EvaluatingDoubleDescentinMachineLearningInsightsfromTreeBasedModelsAppliedtoaGenomicPredictionTask.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/01/EvaluatingDoubleDescentinMachineLearningInsightsfromTreeBasedModelsAppliedtoaGenomicPredictionTask.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Evaluating Double Descent in Machine Learning: Insights from Tree-Based Models Applied to a Genomic Prediction Task" />
+<script type="application/ld+json">
+{"description":"Classical learning theory describes a well-characterised U-shaped relationship between model complexity and prediction error, reflecting a transition from underfitting in underparameterised regimes to overfitting as complexity grows. Recent work, however, has introduced the notion of a second descent in test error beyond the interpolation threshold-giving rise to the so-called double descent phenomenon. While double descent has been studied extensively in the context of deep learning, it has also been reported in simpler models, including decision trees and gradient boosting. In this work, we revisit these claims through the lens of classical machine learning applied to a biological classification task: predicting isoniazid resistance in Mycobacterium tuberculosis using whole-genome sequencing data. We systematically vary model complexity along two orthogonal axes-learner capacity (e.g., Pleaf, Pboost) and ensemble size (i.e., Pens)-and show that double descent consistently emerges only when complexity is scaled jointly across these axes. When either axis is held fixed, generalisation behaviour reverts to classical U- or L-shaped patterns. These results are replicated on a synthetic benchmark and support the unfolding hypothesis, which attributes double descent to the projection of distinct generalisation regimes onto a single complexity axis. Our findings underscore the importance of treating model complexity as a multidimensional construct when analysing generalisation behaviour. All code and reproducibility materials are available at: https://github.com/guillermocomesanacimadevila/Demystifying-Double-Descent-in-ML.","headline":"Evaluating Double Descent in Machine Learning: Insights from Tree-Based Models Applied to a Genomic Prediction Task","dateModified":"2025-10-01T00:00:00+00:00","datePublished":"2025-10-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/01/EvaluatingDoubleDescentinMachineLearningInsightsfromTreeBasedModelsAppliedtoaGenomicPredictionTask.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/01/EvaluatingDoubleDescentinMachineLearningInsightsfromTreeBasedModelsAppliedtoaGenomicPredictionTask.html","author":{"@type":"Person","name":"Guillermo Comesaña Cimadevila"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>Evaluating Double Descent in Machine Learning: Insights from Tree-Based Models Applied to a Genomic Prediction Task</h1>
+  <br>Guillermo Comesaña Cimadevila</h3>
+  <br> [stat.ML]
+
+  <p>Classical learning theory describes a well-characterised U-shaped relationship between model complexity and prediction error, reflecting a transition from underfitting in underparameterised regimes to overfitting as complexity grows. Recent work, however, has introduced the notion of a second descent in test error beyond the interpolation threshold-giving rise to the so-called double descent phenomenon. While double descent has been studied extensively in the context of deep learning, it has also been reported in simpler models, including decision trees and gradient boosting. In this work, we revisit these claims through the lens of classical machine learning applied to a biological classification task: predicting isoniazid resistance in Mycobacterium tuberculosis using whole-genome sequencing data. We systematically vary model complexity along two orthogonal axes-learner capacity (e.g., Pleaf, Pboost) and ensemble size (i.e., Pens)-and show that double descent consistently emerges only when complexity is scaled jointly across these axes. When either axis is held fixed, generalisation behaviour reverts to classical U- or L-shaped patterns. These results are replicated on a synthetic benchmark and support the unfolding hypothesis, which attributes double descent to the projection of distinct generalisation regimes onto a single complexity axis. Our findings underscore the importance of treating model complexity as a multidimensional construct when analysing generalisation behaviour. All code and reproducibility materials are available at: https://github.com/guillermocomesanacimadevila/Demystifying-Double-Descent-in-ML.</p>
+
+<p><a href="https://arxiv.org/abs/2509.25216">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
