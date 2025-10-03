@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Ensemble Threshold Calibration for Stable Sensitivity Control</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Ensemble Threshold Calibration for Stable Sensitivity Control" />
+<meta name="author" content="John N. Daras" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Precise recall control is critical in large-scale spatial conflation and entity-matching tasks, where missing even a few true matches can break downstream analytics, while excessive manual review inflates cost. Classical confidence-interval cuts such as Clopper-Pearson or Wilson provide lower bounds on recall, but they routinely overshoot the target by several percentage points and exhibit high run-to-run variance under skewed score distributions. We present an end-to-end framework that achieves exact recall with sub-percent variance over tens of millions of geometry pairs, while remaining TPU-friendly. Our pipeline starts with an equigrid bounding-box filter and compressed sparse row (CSR) candidate representation, reducing pair enumeration by two orders of magnitude. A deterministic xxHash bootstrap sample trains a lightweight neural ranker; its scores are propagated to all remaining pairs via a single forward pass and used to construct a reproducible, score-decile-stratified calibration set. Four complementary threshold estimators - Clopper-Pearson, Jeffreys, Wilson, and an exact quantile - are aggregated via inverse-variance weighting, then fused across nine independent subsamples. This ensemble reduces threshold variance compared to any single method. Evaluated on two real cadastral datasets (approximately 6.31M and 67.34M pairs), our approach consistently hits a recall target within a small error, decreases redundant verifications relative to other calibrations, and runs end-to-end on a single TPU v3 core." />
+<meta property="og:description" content="Precise recall control is critical in large-scale spatial conflation and entity-matching tasks, where missing even a few true matches can break downstream analytics, while excessive manual review inflates cost. Classical confidence-interval cuts such as Clopper-Pearson or Wilson provide lower bounds on recall, but they routinely overshoot the target by several percentage points and exhibit high run-to-run variance under skewed score distributions. We present an end-to-end framework that achieves exact recall with sub-percent variance over tens of millions of geometry pairs, while remaining TPU-friendly. Our pipeline starts with an equigrid bounding-box filter and compressed sparse row (CSR) candidate representation, reducing pair enumeration by two orders of magnitude. A deterministic xxHash bootstrap sample trains a lightweight neural ranker; its scores are propagated to all remaining pairs via a single forward pass and used to construct a reproducible, score-decile-stratified calibration set. Four complementary threshold estimators - Clopper-Pearson, Jeffreys, Wilson, and an exact quantile - are aggregated via inverse-variance weighting, then fused across nine independent subsamples. This ensemble reduces threshold variance compared to any single method. Evaluated on two real cadastral datasets (approximately 6.31M and 67.34M pairs), our approach consistently hits a recall target within a small error, decreases redundant verifications relative to other calibrations, and runs end-to-end on a single TPU v3 core." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/03/EnsembleThresholdCalibrationforStableSensitivityControl.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/03/EnsembleThresholdCalibrationforStableSensitivityControl.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Ensemble Threshold Calibration for Stable Sensitivity Control" />
+<script type="application/ld+json">
+{"description":"Precise recall control is critical in large-scale spatial conflation and entity-matching tasks, where missing even a few true matches can break downstream analytics, while excessive manual review inflates cost. Classical confidence-interval cuts such as Clopper-Pearson or Wilson provide lower bounds on recall, but they routinely overshoot the target by several percentage points and exhibit high run-to-run variance under skewed score distributions. We present an end-to-end framework that achieves exact recall with sub-percent variance over tens of millions of geometry pairs, while remaining TPU-friendly. Our pipeline starts with an equigrid bounding-box filter and compressed sparse row (CSR) candidate representation, reducing pair enumeration by two orders of magnitude. A deterministic xxHash bootstrap sample trains a lightweight neural ranker; its scores are propagated to all remaining pairs via a single forward pass and used to construct a reproducible, score-decile-stratified calibration set. Four complementary threshold estimators - Clopper-Pearson, Jeffreys, Wilson, and an exact quantile - are aggregated via inverse-variance weighting, then fused across nine independent subsamples. This ensemble reduces threshold variance compared to any single method. Evaluated on two real cadastral datasets (approximately 6.31M and 67.34M pairs), our approach consistently hits a recall target within a small error, decreases redundant verifications relative to other calibrations, and runs end-to-end on a single TPU v3 core.","headline":"Ensemble Threshold Calibration for Stable Sensitivity Control","dateModified":"2025-10-03T00:00:00+00:00","datePublished":"2025-10-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/03/EnsembleThresholdCalibrationforStableSensitivityControl.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/03/EnsembleThresholdCalibrationforStableSensitivityControl.html","author":{"@type":"Person","name":"John N. Daras"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-03 00:00:00 +0000">10-03</time>
+  </p>
+  
+  <h1>Ensemble Threshold Calibration for Stable Sensitivity Control</h1>
+  <br>John N. Daras</h3>
+  <br> [stat.ML]
+
+  <p>Precise recall control is critical in large-scale spatial conflation and entity-matching tasks, where missing even a few true matches can break downstream analytics, while excessive manual review inflates cost. Classical confidence-interval cuts such as Clopper-Pearson or Wilson provide lower bounds on recall, but they routinely overshoot the target by several percentage points and exhibit high run-to-run variance under skewed score distributions. We present an end-to-end framework that achieves exact recall with sub-percent variance over tens of millions of geometry pairs, while remaining TPU-friendly. Our pipeline starts with an equigrid bounding-box filter and compressed sparse row (CSR) candidate representation, reducing pair enumeration by two orders of magnitude. A deterministic xxHash bootstrap sample trains a lightweight neural ranker; its scores are propagated to all remaining pairs via a single forward pass and used to construct a reproducible, score-decile-stratified calibration set. Four complementary threshold estimators - Clopper-Pearson, Jeffreys, Wilson, and an exact quantile - are aggregated via inverse-variance weighting, then fused across nine independent subsamples. This ensemble reduces threshold variance compared to any single method. Evaluated on two real cadastral datasets (approximately 6.31M and 67.34M pairs), our approach consistently hits a recall target within a small error, decreases redundant verifications relative to other calibrations, and runs end-to-end on a single TPU v3 core.</p>
+
+<p><a href="https://arxiv.org/abs/2510.02116">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
