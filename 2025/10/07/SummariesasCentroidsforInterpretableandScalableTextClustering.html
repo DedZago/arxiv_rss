@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Summaries as Centroids for Interpretable and Scalable Text Clustering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Summaries as Centroids for Interpretable and Scalable Text Clustering" />
+<meta name="author" content="Jairo Diaz-Rodriguez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce k-NLPmeans and k-LLMmeans, text-clustering variants of k-means that periodically replace numeric centroids with textual summaries. The key idea, summary-as-centroid, retains k-means assignments in embedding space while producing human-readable, auditable cluster prototypes. The method is LLM-optional: k-NLPmeans uses lightweight, deterministic summarizers, enabling offline, low-cost, and stable operation; k-LLMmeans is a drop-in upgrade that uses an LLM for summaries under a fixed per-iteration budget whose cost does not grow with dataset size. We also present a mini-batch extension for real-time clustering of streaming text. Across diverse datasets, embedding models, and summarization strategies, our approach consistently outperforms classical baselines and approaches the accuracy of recent LLM-based clustering-without extensive LLM calls. Finally, we provide a case study on sequential text streams and release a StackExchange-derived benchmark for evaluating streaming text clustering." />
+<meta property="og:description" content="We introduce k-NLPmeans and k-LLMmeans, text-clustering variants of k-means that periodically replace numeric centroids with textual summaries. The key idea, summary-as-centroid, retains k-means assignments in embedding space while producing human-readable, auditable cluster prototypes. The method is LLM-optional: k-NLPmeans uses lightweight, deterministic summarizers, enabling offline, low-cost, and stable operation; k-LLMmeans is a drop-in upgrade that uses an LLM for summaries under a fixed per-iteration budget whose cost does not grow with dataset size. We also present a mini-batch extension for real-time clustering of streaming text. Across diverse datasets, embedding models, and summarization strategies, our approach consistently outperforms classical baselines and approaches the accuracy of recent LLM-based clustering-without extensive LLM calls. Finally, we provide a case study on sequential text streams and release a StackExchange-derived benchmark for evaluating streaming text clustering." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/07/SummariesasCentroidsforInterpretableandScalableTextClustering.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/07/SummariesasCentroidsforInterpretableandScalableTextClustering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Summaries as Centroids for Interpretable and Scalable Text Clustering" />
+<script type="application/ld+json">
+{"description":"We introduce k-NLPmeans and k-LLMmeans, text-clustering variants of k-means that periodically replace numeric centroids with textual summaries. The key idea, summary-as-centroid, retains k-means assignments in embedding space while producing human-readable, auditable cluster prototypes. The method is LLM-optional: k-NLPmeans uses lightweight, deterministic summarizers, enabling offline, low-cost, and stable operation; k-LLMmeans is a drop-in upgrade that uses an LLM for summaries under a fixed per-iteration budget whose cost does not grow with dataset size. We also present a mini-batch extension for real-time clustering of streaming text. Across diverse datasets, embedding models, and summarization strategies, our approach consistently outperforms classical baselines and approaches the accuracy of recent LLM-based clustering-without extensive LLM calls. Finally, we provide a case study on sequential text streams and release a StackExchange-derived benchmark for evaluating streaming text clustering.","headline":"Summaries as Centroids for Interpretable and Scalable Text Clustering","dateModified":"2025-10-07T00:00:00+00:00","datePublished":"2025-10-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/07/SummariesasCentroidsforInterpretableandScalableTextClustering.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/07/SummariesasCentroidsforInterpretableandScalableTextClustering.html","author":{"@type":"Person","name":"Jairo Diaz-Rodriguez"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-07 00:00:00 +0000">10-07</time>
+  </p>
+  
+  <h1>Summaries as Centroids for Interpretable and Scalable Text Clustering</h1>
+  <br>Jairo Diaz-Rodriguez</h3>
+  <br> [stat.ML]
+
+  <p>We introduce k-NLPmeans and k-LLMmeans, text-clustering variants of k-means that periodically replace numeric centroids with textual summaries. The key idea, summary-as-centroid, retains k-means assignments in embedding space while producing human-readable, auditable cluster prototypes. The method is LLM-optional: k-NLPmeans uses lightweight, deterministic summarizers, enabling offline, low-cost, and stable operation; k-LLMmeans is a drop-in upgrade that uses an LLM for summaries under a fixed per-iteration budget whose cost does not grow with dataset size. We also present a mini-batch extension for real-time clustering of streaming text. Across diverse datasets, embedding models, and summarization strategies, our approach consistently outperforms classical baselines and approaches the accuracy of recent LLM-based clustering-without extensive LLM calls. Finally, we provide a case study on sequential text streams and release a StackExchange-derived benchmark for evaluating streaming text clustering.</p>
+
+<p><a href="https://arxiv.org/abs/2502.09667">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
