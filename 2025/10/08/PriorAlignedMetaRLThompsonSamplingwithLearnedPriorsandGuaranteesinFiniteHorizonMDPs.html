@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Prior-Aligned Meta-RL: Thompson Sampling with Learned Priors and Guarantees in Finite-Horizon MDPs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Prior-Aligned Meta-RL: Thompson Sampling with Learned Priors and Guarantees in Finite-Horizon MDPs" />
+<meta name="author" content="Runlin Zhou, Chixiang Chen, Elynn Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study meta-reinforcement learning in finite-horizon MDPs where related tasks share similar structures in their optimal action-value functions. Specifically, we posit a linear representation $Q^_h(s,a)=\Phi_h(s,a)\,\theta^{(k)}_h$ and place a Gaussian meta-prior $ \mathcal{N}(\theta^_h,\Sigma^*_h)$ over the task-specific parameters $\theta^{(k)}_h$. Building on randomized value functions, we propose two Thompson-style algorithms: (i) MTSRL, which learns only the prior mean and performs posterior sampling with the learned mean and known covariance; and (ii) $\text{MTSRL}^{+}$, which additionally estimates the covariance and employs prior widening to control finite-sample estimation error. Further, we develop a prior-alignment technique that couples the posterior under the learned prior with a meta-oracle that knows the true prior, yielding meta-regret guarantees: we match prior-independent Thompson sampling in the small-task regime and strictly improve with more tasks once the prior is learned. Concretely, for known covariance we obtain $\tilde{O}(H^{4}S^{3/2}\sqrt{ANK})$ meta-regret, and with learned covariance $\tilde{O}(H^{4}S^{3/2}\sqrt{AN^3K})$; both recover a better behavior than prior-independent after $K \gtrsim \tilde{O}(H^2)$ and $K \gtrsim \tilde{O}(N^2H^2)$, respectively. Simulations on a stateful recommendation environment (with feature and prior misspecification) show that after brief exploration, MTSRL/MTSRL(^+) track the meta-oracle and substantially outperform prior-independent RL and bandit-only meta-baselines. Our results give the first meta-regret guarantees for Thompson-style RL with learned Q-priors, and provide practical recipes (warm-start via RLSVI, OLS aggregation, covariance widening) for experiment-rich settings." />
+<meta property="og:description" content="We study meta-reinforcement learning in finite-horizon MDPs where related tasks share similar structures in their optimal action-value functions. Specifically, we posit a linear representation $Q^_h(s,a)=\Phi_h(s,a)\,\theta^{(k)}_h$ and place a Gaussian meta-prior $ \mathcal{N}(\theta^_h,\Sigma^*_h)$ over the task-specific parameters $\theta^{(k)}_h$. Building on randomized value functions, we propose two Thompson-style algorithms: (i) MTSRL, which learns only the prior mean and performs posterior sampling with the learned mean and known covariance; and (ii) $\text{MTSRL}^{+}$, which additionally estimates the covariance and employs prior widening to control finite-sample estimation error. Further, we develop a prior-alignment technique that couples the posterior under the learned prior with a meta-oracle that knows the true prior, yielding meta-regret guarantees: we match prior-independent Thompson sampling in the small-task regime and strictly improve with more tasks once the prior is learned. Concretely, for known covariance we obtain $\tilde{O}(H^{4}S^{3/2}\sqrt{ANK})$ meta-regret, and with learned covariance $\tilde{O}(H^{4}S^{3/2}\sqrt{AN^3K})$; both recover a better behavior than prior-independent after $K \gtrsim \tilde{O}(H^2)$ and $K \gtrsim \tilde{O}(N^2H^2)$, respectively. Simulations on a stateful recommendation environment (with feature and prior misspecification) show that after brief exploration, MTSRL/MTSRL(^+) track the meta-oracle and substantially outperform prior-independent RL and bandit-only meta-baselines. Our results give the first meta-regret guarantees for Thompson-style RL with learned Q-priors, and provide practical recipes (warm-start via RLSVI, OLS aggregation, covariance widening) for experiment-rich settings." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/08/PriorAlignedMetaRLThompsonSamplingwithLearnedPriorsandGuaranteesinFiniteHorizonMDPs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/08/PriorAlignedMetaRLThompsonSamplingwithLearnedPriorsandGuaranteesinFiniteHorizonMDPs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Prior-Aligned Meta-RL: Thompson Sampling with Learned Priors and Guarantees in Finite-Horizon MDPs" />
+<script type="application/ld+json">
+{"description":"We study meta-reinforcement learning in finite-horizon MDPs where related tasks share similar structures in their optimal action-value functions. Specifically, we posit a linear representation $Q^_h(s,a)=\\Phi_h(s,a)\\,\\theta^{(k)}_h$ and place a Gaussian meta-prior $ \\mathcal{N}(\\theta^_h,\\Sigma^*_h)$ over the task-specific parameters $\\theta^{(k)}_h$. Building on randomized value functions, we propose two Thompson-style algorithms: (i) MTSRL, which learns only the prior mean and performs posterior sampling with the learned mean and known covariance; and (ii) $\\text{MTSRL}^{+}$, which additionally estimates the covariance and employs prior widening to control finite-sample estimation error. Further, we develop a prior-alignment technique that couples the posterior under the learned prior with a meta-oracle that knows the true prior, yielding meta-regret guarantees: we match prior-independent Thompson sampling in the small-task regime and strictly improve with more tasks once the prior is learned. Concretely, for known covariance we obtain $\\tilde{O}(H^{4}S^{3/2}\\sqrt{ANK})$ meta-regret, and with learned covariance $\\tilde{O}(H^{4}S^{3/2}\\sqrt{AN^3K})$; both recover a better behavior than prior-independent after $K \\gtrsim \\tilde{O}(H^2)$ and $K \\gtrsim \\tilde{O}(N^2H^2)$, respectively. Simulations on a stateful recommendation environment (with feature and prior misspecification) show that after brief exploration, MTSRL/MTSRL(^+) track the meta-oracle and substantially outperform prior-independent RL and bandit-only meta-baselines. Our results give the first meta-regret guarantees for Thompson-style RL with learned Q-priors, and provide practical recipes (warm-start via RLSVI, OLS aggregation, covariance widening) for experiment-rich settings.","headline":"Prior-Aligned Meta-RL: Thompson Sampling with Learned Priors and Guarantees in Finite-Horizon MDPs","dateModified":"2025-10-08T00:00:00+00:00","datePublished":"2025-10-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/08/PriorAlignedMetaRLThompsonSamplingwithLearnedPriorsandGuaranteesinFiniteHorizonMDPs.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/08/PriorAlignedMetaRLThompsonSamplingwithLearnedPriorsandGuaranteesinFiniteHorizonMDPs.html","author":{"@type":"Person","name":"Runlin Zhou, Chixiang Chen, Elynn Chen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-08 00:00:00 +0000">10-08</time>
+  </p>
+  
+  <h1>Prior-Aligned Meta-RL: Thompson Sampling with Learned Priors and Guarantees in Finite-Horizon MDPs</h1>
+  <br>Runlin Zhou, Chixiang Chen, Elynn Chen</h3>
+  <br> [stat.ML]
+
+  <p>We study meta-reinforcement learning in finite-horizon MDPs where related tasks share similar structures in their optimal action-value functions. Specifically, we posit a linear representation $Q^<em>_h(s,a)=\Phi_h(s,a)\,\theta^{(k)}_h$ and place a Gaussian meta-prior $ \mathcal{N}(\theta^</em>_h,\Sigma^*_h)$ over the task-specific parameters $\theta^{(k)}_h$. Building on randomized value functions, we propose two Thompson-style algorithms: (i) MTSRL, which learns only the prior mean and performs posterior sampling with the learned mean and known covariance; and (ii) $\text{MTSRL}^{+}$, which additionally estimates the covariance and employs prior widening to control finite-sample estimation error. Further, we develop a prior-alignment technique that couples the posterior under the learned prior with a meta-oracle that knows the true prior, yielding meta-regret guarantees: we match prior-independent Thompson sampling in the small-task regime and strictly improve with more tasks once the prior is learned. Concretely, for known covariance we obtain $\tilde{O}(H^{4}S^{3/2}\sqrt{ANK})$ meta-regret, and with learned covariance $\tilde{O}(H^{4}S^{3/2}\sqrt{AN^3K})$; both recover a better behavior than prior-independent after $K \gtrsim \tilde{O}(H^2)$ and $K \gtrsim \tilde{O}(N^2H^2)$, respectively. Simulations on a stateful recommendation environment (with feature and prior misspecification) show that after brief exploration, MTSRL/MTSRL(^+) track the meta-oracle and substantially outperform prior-independent RL and bandit-only meta-baselines. Our results give the first meta-regret guarantees for Thompson-style RL with learned Q-priors, and provide practical recipes (warm-start via RLSVI, OLS aggregation, covariance widening) for experiment-rich settings.</p>
+
+<p><a href="https://arxiv.org/abs/2510.05446">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
