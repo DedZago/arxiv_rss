@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Hidden Link Between RLHF and Contrastive Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Hidden Link Between RLHF and Contrastive Learning" />
+<meta name="author" content="Xufei Lv, Kehai Chen, Haoyuan Sun, Xuefeng Bai, Min Zhang, Houde Liu, Kehai Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Alignment of large language models (LLMs) with human values has recently garnered significant attention, with prominent examples including the canonical yet costly Reinforcement Learning from Human Feedback (RLHF) and the simple Direct Preference Optimization (DPO). In this work, we demonstrate that both RLHF and DPO can be interpreted from the perspective of mutual information (MI) maximization, uncovering a profound connection to contrastive learning. Within this framework, both RLHF and DPO can be interpreted as methods that performing contrastive learning based on the positive and negative samples derived from base model, leveraging the Donsker-Varadhan (DV) lower bound on MI (equivalently, the MINE estimator). Such paradigm further illuminates why RLHF may not intrinsically incentivize reasoning capacities in LLMs beyond what is already present in the base model. Building on the perspective, we replace the DV/MINE bound with the Jensen-Shannon (JS) MI estimator and propose the Mutual Information Optimization (MIO). Comprehensive theoretical analysis and extensive empirical evaluations demonstrate that MIO mitigates the late-stage decline in chosen-likelihood observed in DPO, achieving competitive or superior performance across various challenging reasoning and mathematical benchmarks." />
+<meta property="og:description" content="Alignment of large language models (LLMs) with human values has recently garnered significant attention, with prominent examples including the canonical yet costly Reinforcement Learning from Human Feedback (RLHF) and the simple Direct Preference Optimization (DPO). In this work, we demonstrate that both RLHF and DPO can be interpreted from the perspective of mutual information (MI) maximization, uncovering a profound connection to contrastive learning. Within this framework, both RLHF and DPO can be interpreted as methods that performing contrastive learning based on the positive and negative samples derived from base model, leveraging the Donsker-Varadhan (DV) lower bound on MI (equivalently, the MINE estimator). Such paradigm further illuminates why RLHF may not intrinsically incentivize reasoning capacities in LLMs beyond what is already present in the base model. Building on the perspective, we replace the DV/MINE bound with the Jensen-Shannon (JS) MI estimator and propose the Mutual Information Optimization (MIO). Comprehensive theoretical analysis and extensive empirical evaluations demonstrate that MIO mitigates the late-stage decline in chosen-likelihood observed in DPO, achieving competitive or superior performance across various challenging reasoning and mathematical benchmarks." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/14/TheHiddenLinkBetweenRLHFandContrastiveLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/14/TheHiddenLinkBetweenRLHFandContrastiveLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Hidden Link Between RLHF and Contrastive Learning" />
+<script type="application/ld+json">
+{"description":"Alignment of large language models (LLMs) with human values has recently garnered significant attention, with prominent examples including the canonical yet costly Reinforcement Learning from Human Feedback (RLHF) and the simple Direct Preference Optimization (DPO). In this work, we demonstrate that both RLHF and DPO can be interpreted from the perspective of mutual information (MI) maximization, uncovering a profound connection to contrastive learning. Within this framework, both RLHF and DPO can be interpreted as methods that performing contrastive learning based on the positive and negative samples derived from base model, leveraging the Donsker-Varadhan (DV) lower bound on MI (equivalently, the MINE estimator). Such paradigm further illuminates why RLHF may not intrinsically incentivize reasoning capacities in LLMs beyond what is already present in the base model. Building on the perspective, we replace the DV/MINE bound with the Jensen-Shannon (JS) MI estimator and propose the Mutual Information Optimization (MIO). Comprehensive theoretical analysis and extensive empirical evaluations demonstrate that MIO mitigates the late-stage decline in chosen-likelihood observed in DPO, achieving competitive or superior performance across various challenging reasoning and mathematical benchmarks.","headline":"The Hidden Link Between RLHF and Contrastive Learning","dateModified":"2025-10-14T00:00:00+00:00","datePublished":"2025-10-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/14/TheHiddenLinkBetweenRLHFandContrastiveLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/14/TheHiddenLinkBetweenRLHFandContrastiveLearning.html","author":{"@type":"Person","name":"Xufei Lv, Kehai Chen, Haoyuan Sun, Xuefeng Bai, Min Zhang, Houde Liu, Kehai Chen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>The Hidden Link Between RLHF and Contrastive Learning</h1>
+  <br>Xufei Lv, Kehai Chen, Haoyuan Sun, Xuefeng Bai, Min Zhang, Houde Liu, Kehai Chen</h3>
+  <br> [stat.ML]
+
+  <p>Alignment of large language models (LLMs) with human values has recently garnered significant attention, with prominent examples including the canonical yet costly Reinforcement Learning from Human Feedback (RLHF) and the simple Direct Preference Optimization (DPO). In this work, we demonstrate that both RLHF and DPO can be interpreted from the perspective of mutual information (MI) maximization, uncovering a profound connection to contrastive learning. Within this framework, both RLHF and DPO can be interpreted as methods that performing contrastive learning based on the positive and negative samples derived from base model, leveraging the Donsker-Varadhan (DV) lower bound on MI (equivalently, the MINE estimator). Such paradigm further illuminates why RLHF may not intrinsically incentivize reasoning capacities in LLMs beyond what is already present in the base model. Building on the perspective, we replace the DV/MINE bound with the Jensen-Shannon (JS) MI estimator and propose the Mutual Information Optimization (MIO). Comprehensive theoretical analysis and extensive empirical evaluations demonstrate that MIO mitigates the late-stage decline in chosen-likelihood observed in DPO, achieving competitive or superior performance across various challenging reasoning and mathematical benchmarks.</p>
+
+<p><a href="https://arxiv.org/abs/2506.22578">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

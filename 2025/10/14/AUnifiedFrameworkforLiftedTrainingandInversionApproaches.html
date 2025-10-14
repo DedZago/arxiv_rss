@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Unified Framework for Lifted Training and Inversion Approaches</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Unified Framework for Lifted Training and Inversion Approaches" />
+<meta name="author" content="Xiaoyu Wang, Alexandra Valavanis, Azhir Mahmood, Andreas Mang, Martin Benning, Audrey Repetti" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The training of deep neural networks predominantly relies on a combination of gradient-based optimisation and back-propagation for the computation of the gradient. While incredibly successful, this approach faces challenges such as vanishing or exploding gradients, difficulties with non-smooth activations, and an inherently sequential structure that limits parallelisation. Lifted training methods offer an alternative by reformulating the nested optimisation problem into a higher-dimensional, constrained optimisation problem where the constraints are no longer enforced directly but penalised with penalty terms. This chapter introduces a unified framework that encapsulates various lifted training strategies, including the Method of Auxiliary Coordinates, Fenchel Lifted Networks, and Lifted Bregman Training, and demonstrates how diverse architectures, such as Multi-Layer Perceptrons, Residual Neural Networks, and Proximal Neural Networks fit within this structure. By leveraging tools from convex optimisation, particularly Bregman distances, the framework facilitates distributed optimisation, accommodates non-differentiable proximal activations, and can improve the conditioning of the training landscape. We discuss the implementation of these methods using block-coordinate descent strategies, including deterministic implementations enhanced by accelerated and adaptive optimisation techniques, as well as implicit stochastic gradient methods. Furthermore, we explore the application of this framework to inverse problems, detailing methodologies for both the training of specialised networks (e.g., unrolled architectures) and the stable inversion of pre-trained networks. Numerical results on standard imaging tasks validate the effectiveness and stability of the lifted Bregman approach compared to conventional training, particularly for architectures employing proximal activations." />
+<meta property="og:description" content="The training of deep neural networks predominantly relies on a combination of gradient-based optimisation and back-propagation for the computation of the gradient. While incredibly successful, this approach faces challenges such as vanishing or exploding gradients, difficulties with non-smooth activations, and an inherently sequential structure that limits parallelisation. Lifted training methods offer an alternative by reformulating the nested optimisation problem into a higher-dimensional, constrained optimisation problem where the constraints are no longer enforced directly but penalised with penalty terms. This chapter introduces a unified framework that encapsulates various lifted training strategies, including the Method of Auxiliary Coordinates, Fenchel Lifted Networks, and Lifted Bregman Training, and demonstrates how diverse architectures, such as Multi-Layer Perceptrons, Residual Neural Networks, and Proximal Neural Networks fit within this structure. By leveraging tools from convex optimisation, particularly Bregman distances, the framework facilitates distributed optimisation, accommodates non-differentiable proximal activations, and can improve the conditioning of the training landscape. We discuss the implementation of these methods using block-coordinate descent strategies, including deterministic implementations enhanced by accelerated and adaptive optimisation techniques, as well as implicit stochastic gradient methods. Furthermore, we explore the application of this framework to inverse problems, detailing methodologies for both the training of specialised networks (e.g., unrolled architectures) and the stable inversion of pre-trained networks. Numerical results on standard imaging tasks validate the effectiveness and stability of the lifted Bregman approach compared to conventional training, particularly for architectures employing proximal activations." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/14/AUnifiedFrameworkforLiftedTrainingandInversionApproaches.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/14/AUnifiedFrameworkforLiftedTrainingandInversionApproaches.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Unified Framework for Lifted Training and Inversion Approaches" />
+<script type="application/ld+json">
+{"description":"The training of deep neural networks predominantly relies on a combination of gradient-based optimisation and back-propagation for the computation of the gradient. While incredibly successful, this approach faces challenges such as vanishing or exploding gradients, difficulties with non-smooth activations, and an inherently sequential structure that limits parallelisation. Lifted training methods offer an alternative by reformulating the nested optimisation problem into a higher-dimensional, constrained optimisation problem where the constraints are no longer enforced directly but penalised with penalty terms. This chapter introduces a unified framework that encapsulates various lifted training strategies, including the Method of Auxiliary Coordinates, Fenchel Lifted Networks, and Lifted Bregman Training, and demonstrates how diverse architectures, such as Multi-Layer Perceptrons, Residual Neural Networks, and Proximal Neural Networks fit within this structure. By leveraging tools from convex optimisation, particularly Bregman distances, the framework facilitates distributed optimisation, accommodates non-differentiable proximal activations, and can improve the conditioning of the training landscape. We discuss the implementation of these methods using block-coordinate descent strategies, including deterministic implementations enhanced by accelerated and adaptive optimisation techniques, as well as implicit stochastic gradient methods. Furthermore, we explore the application of this framework to inverse problems, detailing methodologies for both the training of specialised networks (e.g., unrolled architectures) and the stable inversion of pre-trained networks. Numerical results on standard imaging tasks validate the effectiveness and stability of the lifted Bregman approach compared to conventional training, particularly for architectures employing proximal activations.","headline":"A Unified Framework for Lifted Training and Inversion Approaches","dateModified":"2025-10-14T00:00:00+00:00","datePublished":"2025-10-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/14/AUnifiedFrameworkforLiftedTrainingandInversionApproaches.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/14/AUnifiedFrameworkforLiftedTrainingandInversionApproaches.html","author":{"@type":"Person","name":"Xiaoyu Wang, Alexandra Valavanis, Azhir Mahmood, Andreas Mang, Martin Benning, Audrey Repetti"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>A Unified Framework for Lifted Training and Inversion Approaches</h1>
+  <br>Xiaoyu Wang, Alexandra Valavanis, Azhir Mahmood, Andreas Mang, Martin Benning, Audrey Repetti</h3>
+  <br> [stat.ML]
+
+  <p>The training of deep neural networks predominantly relies on a combination of gradient-based optimisation and back-propagation for the computation of the gradient. While incredibly successful, this approach faces challenges such as vanishing or exploding gradients, difficulties with non-smooth activations, and an inherently sequential structure that limits parallelisation. Lifted training methods offer an alternative by reformulating the nested optimisation problem into a higher-dimensional, constrained optimisation problem where the constraints are no longer enforced directly but penalised with penalty terms. This chapter introduces a unified framework that encapsulates various lifted training strategies, including the Method of Auxiliary Coordinates, Fenchel Lifted Networks, and Lifted Bregman Training, and demonstrates how diverse architectures, such as Multi-Layer Perceptrons, Residual Neural Networks, and Proximal Neural Networks fit within this structure. By leveraging tools from convex optimisation, particularly Bregman distances, the framework facilitates distributed optimisation, accommodates non-differentiable proximal activations, and can improve the conditioning of the training landscape. We discuss the implementation of these methods using block-coordinate descent strategies, including deterministic implementations enhanced by accelerated and adaptive optimisation techniques, as well as implicit stochastic gradient methods. Furthermore, we explore the application of this framework to inverse problems, detailing methodologies for both the training of specialised networks (e.g., unrolled architectures) and the stable inversion of pre-trained networks. Numerical results on standard imaging tasks validate the effectiveness and stability of the lifted Bregman approach compared to conventional training, particularly for architectures employing proximal activations.</p>
+
+<p><a href="https://arxiv.org/abs/2510.09796">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
