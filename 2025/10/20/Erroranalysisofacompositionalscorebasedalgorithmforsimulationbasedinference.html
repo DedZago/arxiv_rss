@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Error analysis of a compositional score-based algorithm for simulation-based inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Error analysis of a compositional score-based algorithm for simulation-based inference" />
+<meta name="author" content="Camille Touron, Gabriel V. Cardoso, Julyan Arbel, Pedro L. C. Rodrigues" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simulation-based inference (SBI) has become a widely used framework in applied sciences for estimating the parameters of stochastic models that best explain experimental observations. A central question in this setting is how to effectively combine multiple observations in order to improve parameter inference and obtain sharper posterior distributions. Recent advances in score-based diffusion methods address this problem by constructing a compositional score, obtained by aggregating individual posterior scores within the diffusion process. While it is natural to suspect that the accumulation of individual errors may significantly degrade sampling quality as the number of observations grows, this important theoretical issue has so far remained unexplored. In this paper, we study the compositional score produced by the GAUSS algorithm of Linhart et al. (2024) and establish an upper bound on its mean squared error in terms of both the individual score errors and the number of observations. We illustrate our theoretical findings on a Gaussian example, where all analytical expressions can be derived in a closed form." />
+<meta property="og:description" content="Simulation-based inference (SBI) has become a widely used framework in applied sciences for estimating the parameters of stochastic models that best explain experimental observations. A central question in this setting is how to effectively combine multiple observations in order to improve parameter inference and obtain sharper posterior distributions. Recent advances in score-based diffusion methods address this problem by constructing a compositional score, obtained by aggregating individual posterior scores within the diffusion process. While it is natural to suspect that the accumulation of individual errors may significantly degrade sampling quality as the number of observations grows, this important theoretical issue has so far remained unexplored. In this paper, we study the compositional score produced by the GAUSS algorithm of Linhart et al. (2024) and establish an upper bound on its mean squared error in terms of both the individual score errors and the number of observations. We illustrate our theoretical findings on a Gaussian example, where all analytical expressions can be derived in a closed form." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/20/Erroranalysisofacompositionalscorebasedalgorithmforsimulationbasedinference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/20/Erroranalysisofacompositionalscorebasedalgorithmforsimulationbasedinference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Error analysis of a compositional score-based algorithm for simulation-based inference" />
+<script type="application/ld+json">
+{"description":"Simulation-based inference (SBI) has become a widely used framework in applied sciences for estimating the parameters of stochastic models that best explain experimental observations. A central question in this setting is how to effectively combine multiple observations in order to improve parameter inference and obtain sharper posterior distributions. Recent advances in score-based diffusion methods address this problem by constructing a compositional score, obtained by aggregating individual posterior scores within the diffusion process. While it is natural to suspect that the accumulation of individual errors may significantly degrade sampling quality as the number of observations grows, this important theoretical issue has so far remained unexplored. In this paper, we study the compositional score produced by the GAUSS algorithm of Linhart et al. (2024) and establish an upper bound on its mean squared error in terms of both the individual score errors and the number of observations. We illustrate our theoretical findings on a Gaussian example, where all analytical expressions can be derived in a closed form.","headline":"Error analysis of a compositional score-based algorithm for simulation-based inference","dateModified":"2025-10-20T00:00:00+00:00","datePublished":"2025-10-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/20/Erroranalysisofacompositionalscorebasedalgorithmforsimulationbasedinference.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/20/Erroranalysisofacompositionalscorebasedalgorithmforsimulationbasedinference.html","author":{"@type":"Person","name":"Camille Touron, Gabriel V. Cardoso, Julyan Arbel, Pedro L. C. Rodrigues"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-20 00:00:00 +0000">10-20</time>
+  </p>
+  
+  <h1>Error analysis of a compositional score-based algorithm for simulation-based inference</h1>
+  <br>Camille Touron, Gabriel V. Cardoso, Julyan Arbel, Pedro L. C. Rodrigues</h3>
+  <br> [stat.ML]
+
+  <p>Simulation-based inference (SBI) has become a widely used framework in applied sciences for estimating the parameters of stochastic models that best explain experimental observations. A central question in this setting is how to effectively combine multiple observations in order to improve parameter inference and obtain sharper posterior distributions. Recent advances in score-based diffusion methods address this problem by constructing a compositional score, obtained by aggregating individual posterior scores within the diffusion process. While it is natural to suspect that the accumulation of individual errors may significantly degrade sampling quality as the number of observations grows, this important theoretical issue has so far remained unexplored. In this paper, we study the compositional score produced by the GAUSS algorithm of Linhart et al. (2024) and establish an upper bound on its mean squared error in terms of both the individual score errors and the number of observations. We illustrate our theoretical findings on a Gaussian example, where all analytical expressions can be derived in a closed form.</p>
+
+<p><a href="https://arxiv.org/abs/2510.15817">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

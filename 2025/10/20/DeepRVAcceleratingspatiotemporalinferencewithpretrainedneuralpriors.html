@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DeepRV: Accelerating spatiotemporal inference with pre-trained neural priors</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="DeepRV: Accelerating spatiotemporal inference with pre-trained neural priors" />
+<meta name="author" content="Jhonathan Navott, Daniel Jenson, Seth Flaxman, Elizaveta Semenova" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian Processes (GPs) provide a flexible and statistically principled foundation for modelling spatiotemporal phenomena, but their $O(N^3)$ scaling makes them intractable for large datasets. Approximate methods such as variational inference (VI), inducing points (sparse GPs), low-rank factorizations (RFFs), local factorizations and approximations (INLA), improve scalability but trade off accuracy or flexibility. We introduce DeepRV, a neural-network surrogate that closely matches full GP accuracy including hyperparameter estimates, while reducing computational complexity to $O(N^2)$, increasing scalability and inference speed. DeepRV serves as a drop-in replacement for GP prior realisations in e.g. MCMC-based probabilistic programming pipelines, preserving full model flexibility. Across simulated benchmarks, non-separable spatiotemporal GPs, and a real-world application to education deprivation in London (n = 4,994 locations), DeepRV achieves the highest fidelity to exact GPs while substantially accelerating inference. Code is provided in the accompanying ZIP archive, with all experiments run on a single consumer-grade GPU to ensure accessibility for practitioners." />
+<meta property="og:description" content="Gaussian Processes (GPs) provide a flexible and statistically principled foundation for modelling spatiotemporal phenomena, but their $O(N^3)$ scaling makes them intractable for large datasets. Approximate methods such as variational inference (VI), inducing points (sparse GPs), low-rank factorizations (RFFs), local factorizations and approximations (INLA), improve scalability but trade off accuracy or flexibility. We introduce DeepRV, a neural-network surrogate that closely matches full GP accuracy including hyperparameter estimates, while reducing computational complexity to $O(N^2)$, increasing scalability and inference speed. DeepRV serves as a drop-in replacement for GP prior realisations in e.g. MCMC-based probabilistic programming pipelines, preserving full model flexibility. Across simulated benchmarks, non-separable spatiotemporal GPs, and a real-world application to education deprivation in London (n = 4,994 locations), DeepRV achieves the highest fidelity to exact GPs while substantially accelerating inference. Code is provided in the accompanying ZIP archive, with all experiments run on a single consumer-grade GPU to ensure accessibility for practitioners." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/20/DeepRVAcceleratingspatiotemporalinferencewithpretrainedneuralpriors.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/20/DeepRVAcceleratingspatiotemporalinferencewithpretrainedneuralpriors.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DeepRV: Accelerating spatiotemporal inference with pre-trained neural priors" />
+<script type="application/ld+json">
+{"description":"Gaussian Processes (GPs) provide a flexible and statistically principled foundation for modelling spatiotemporal phenomena, but their $O(N^3)$ scaling makes them intractable for large datasets. Approximate methods such as variational inference (VI), inducing points (sparse GPs), low-rank factorizations (RFFs), local factorizations and approximations (INLA), improve scalability but trade off accuracy or flexibility. We introduce DeepRV, a neural-network surrogate that closely matches full GP accuracy including hyperparameter estimates, while reducing computational complexity to $O(N^2)$, increasing scalability and inference speed. DeepRV serves as a drop-in replacement for GP prior realisations in e.g. MCMC-based probabilistic programming pipelines, preserving full model flexibility. Across simulated benchmarks, non-separable spatiotemporal GPs, and a real-world application to education deprivation in London (n = 4,994 locations), DeepRV achieves the highest fidelity to exact GPs while substantially accelerating inference. Code is provided in the accompanying ZIP archive, with all experiments run on a single consumer-grade GPU to ensure accessibility for practitioners.","headline":"DeepRV: Accelerating spatiotemporal inference with pre-trained neural priors","dateModified":"2025-10-20T00:00:00+00:00","datePublished":"2025-10-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/20/DeepRVAcceleratingspatiotemporalinferencewithpretrainedneuralpriors.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/20/DeepRVAcceleratingspatiotemporalinferencewithpretrainedneuralpriors.html","author":{"@type":"Person","name":"Jhonathan Navott, Daniel Jenson, Seth Flaxman, Elizaveta Semenova"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-20 00:00:00 +0000">10-20</time>
+  </p>
+  
+  <h1>DeepRV: Accelerating spatiotemporal inference with pre-trained neural priors</h1>
+  <br>Jhonathan Navott, Daniel Jenson, Seth Flaxman, Elizaveta Semenova</h3>
+  <br> [stat.ML]
+
+  <p>Gaussian Processes (GPs) provide a flexible and statistically principled foundation for modelling spatiotemporal phenomena, but their $O(N^3)$ scaling makes them intractable for large datasets. Approximate methods such as variational inference (VI), inducing points (sparse GPs), low-rank factorizations (RFFs), local factorizations and approximations (INLA), improve scalability but trade off accuracy or flexibility. We introduce DeepRV, a neural-network surrogate that closely matches full GP accuracy including hyperparameter estimates, while reducing computational complexity to $O(N^2)$, increasing scalability and inference speed. DeepRV serves as a drop-in replacement for GP prior realisations in e.g. MCMC-based probabilistic programming pipelines, preserving full model flexibility. Across simulated benchmarks, non-separable spatiotemporal GPs, and a real-world application to education deprivation in London (n = 4,994 locations), DeepRV achieves the highest fidelity to exact GPs while substantially accelerating inference. Code is provided in the accompanying ZIP archive, with all experiments run on a single consumer-grade GPU to ensure accessibility for practitioners.</p>
+
+<p><a href="https://arxiv.org/abs/2503.21473">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

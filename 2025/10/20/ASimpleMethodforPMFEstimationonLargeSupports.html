@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Simple Method for PMF Estimation on Large Supports</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Simple Method for PMF Estimation on Large Supports" />
+<meta name="author" content="Alex Shtoff" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study nonparametric estimation of a probability mass function (PMF) on a large discrete support, where the PMF is multi-modal and heavy-tailed. The core idea is to treat the empirical PMF as a signal on a line graph and apply a data-dependent low-pass filter. Concretely, we form a symmetric tri-diagonal operator, the path graph Laplacian perturbed with a diagonal matrix built from the empirical PMF, then compute the eigenvectors, corresponding to the smallest feq eigenvalues. Projecting the empirical PMF onto this low dimensional subspace produces a smooth, multi-modal estimate that preserves coarse structure while suppressing noise. A light post-processing step of clipping and re-normalizing yields a valid PMF. Because we compute the eigenpairs of a symmetric tridiagonal matrix, the computation is reliable and runs time and memory proportional to the support times the dimension of the desired low-dimensional supspace. We also provide a practical, data-driven rule for selecting the dimension based on an orthogonal-series risk estimate, so the method “just works” with minimal tuning. On synthetic and real heavy-tailed examples, the approach preserves coarse structure while suppressing sampling noise, compares favorably to logspline and Gaussian-KDE baselines in the intended regimes. However, it has known failure modes (e.g., abrupt discontinuities). The method is short to implement, robust across sample sizes, and suitable for automated pipelines and exploratory analysis at scale because of its reliability and speed." />
+<meta property="og:description" content="We study nonparametric estimation of a probability mass function (PMF) on a large discrete support, where the PMF is multi-modal and heavy-tailed. The core idea is to treat the empirical PMF as a signal on a line graph and apply a data-dependent low-pass filter. Concretely, we form a symmetric tri-diagonal operator, the path graph Laplacian perturbed with a diagonal matrix built from the empirical PMF, then compute the eigenvectors, corresponding to the smallest feq eigenvalues. Projecting the empirical PMF onto this low dimensional subspace produces a smooth, multi-modal estimate that preserves coarse structure while suppressing noise. A light post-processing step of clipping and re-normalizing yields a valid PMF. Because we compute the eigenpairs of a symmetric tridiagonal matrix, the computation is reliable and runs time and memory proportional to the support times the dimension of the desired low-dimensional supspace. We also provide a practical, data-driven rule for selecting the dimension based on an orthogonal-series risk estimate, so the method “just works” with minimal tuning. On synthetic and real heavy-tailed examples, the approach preserves coarse structure while suppressing sampling noise, compares favorably to logspline and Gaussian-KDE baselines in the intended regimes. However, it has known failure modes (e.g., abrupt discontinuities). The method is short to implement, robust across sample sizes, and suitable for automated pipelines and exploratory analysis at scale because of its reliability and speed." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/20/ASimpleMethodforPMFEstimationonLargeSupports.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/20/ASimpleMethodforPMFEstimationonLargeSupports.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Simple Method for PMF Estimation on Large Supports" />
+<script type="application/ld+json">
+{"description":"We study nonparametric estimation of a probability mass function (PMF) on a large discrete support, where the PMF is multi-modal and heavy-tailed. The core idea is to treat the empirical PMF as a signal on a line graph and apply a data-dependent low-pass filter. Concretely, we form a symmetric tri-diagonal operator, the path graph Laplacian perturbed with a diagonal matrix built from the empirical PMF, then compute the eigenvectors, corresponding to the smallest feq eigenvalues. Projecting the empirical PMF onto this low dimensional subspace produces a smooth, multi-modal estimate that preserves coarse structure while suppressing noise. A light post-processing step of clipping and re-normalizing yields a valid PMF. Because we compute the eigenpairs of a symmetric tridiagonal matrix, the computation is reliable and runs time and memory proportional to the support times the dimension of the desired low-dimensional supspace. We also provide a practical, data-driven rule for selecting the dimension based on an orthogonal-series risk estimate, so the method “just works” with minimal tuning. On synthetic and real heavy-tailed examples, the approach preserves coarse structure while suppressing sampling noise, compares favorably to logspline and Gaussian-KDE baselines in the intended regimes. However, it has known failure modes (e.g., abrupt discontinuities). The method is short to implement, robust across sample sizes, and suitable for automated pipelines and exploratory analysis at scale because of its reliability and speed.","headline":"A Simple Method for PMF Estimation on Large Supports","dateModified":"2025-10-20T00:00:00+00:00","datePublished":"2025-10-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/20/ASimpleMethodforPMFEstimationonLargeSupports.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/20/ASimpleMethodforPMFEstimationonLargeSupports.html","author":{"@type":"Person","name":"Alex Shtoff"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-20 00:00:00 +0000">10-20</time>
+  </p>
+  
+  <h1>A Simple Method for PMF Estimation on Large Supports</h1>
+  <br>Alex Shtoff</h3>
+  <br> [stat.ML]
+
+  <p>We study nonparametric estimation of a probability mass function (PMF) on a large discrete support, where the PMF is multi-modal and heavy-tailed. The core idea is to treat the empirical PMF as a signal on a line graph and apply a data-dependent low-pass filter. Concretely, we form a symmetric tri-diagonal operator, the path graph Laplacian perturbed with a diagonal matrix built from the empirical PMF, then compute the eigenvectors, corresponding to the smallest feq eigenvalues. Projecting the empirical PMF onto this low dimensional subspace produces a smooth, multi-modal estimate that preserves coarse structure while suppressing noise. A light post-processing step of clipping and re-normalizing yields a valid PMF.
+  Because we compute the eigenpairs of a symmetric tridiagonal matrix, the computation is reliable and runs time and memory proportional to the support times the dimension of the desired low-dimensional supspace. We also provide a practical, data-driven rule for selecting the dimension based on an orthogonal-series risk estimate, so the method “just works” with minimal tuning. On synthetic and real heavy-tailed examples, the approach preserves coarse structure while suppressing sampling noise, compares favorably to logspline and Gaussian-KDE baselines in the intended regimes. However, it has known failure modes (e.g., abrupt discontinuities). The method is short to implement, robust across sample sizes, and suitable for automated pipelines and exploratory analysis at scale because of its reliability and speed.</p>
+
+<p><a href="https://arxiv.org/abs/2510.15132">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

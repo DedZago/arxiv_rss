@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Disentanglement of Sources in a Multi-Stream Variational Autoencoder</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Disentanglement of Sources in a Multi-Stream Variational Autoencoder" />
+<meta name="author" content="Veranika Boukun, Jörg Lücke" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Variational autoencoders (VAEs) are a leading approach to address the problem of learning disentangled representations. Typically a single VAE is used and disentangled representations are sought in its continuous latent space. Here we explore a different approach by using discrete latents to combine VAE-representations of individual sources. The combination is done based on an explicit model for source combination, and we here use a linear combination model which is well suited, e.g., for acoustic data. We formally define such a multi-stream VAE (MS-VAE) approach, derive its inference and learning equations, and we numerically investigate its principled functionality. The MS-VAE is domain-agnostic, and we here explore its ability to separate sources into different streams using superimposed hand-written digits, and mixed acoustic sources in a speaker diarization task. We observe a clear separation of digits, and on speaker diarization we observe an especially low rate of missed speakers. Numerical experiments further highlight the flexibility of the approach across varying amounts of supervision and training data." />
+<meta property="og:description" content="Variational autoencoders (VAEs) are a leading approach to address the problem of learning disentangled representations. Typically a single VAE is used and disentangled representations are sought in its continuous latent space. Here we explore a different approach by using discrete latents to combine VAE-representations of individual sources. The combination is done based on an explicit model for source combination, and we here use a linear combination model which is well suited, e.g., for acoustic data. We formally define such a multi-stream VAE (MS-VAE) approach, derive its inference and learning equations, and we numerically investigate its principled functionality. The MS-VAE is domain-agnostic, and we here explore its ability to separate sources into different streams using superimposed hand-written digits, and mixed acoustic sources in a speaker diarization task. We observe a clear separation of digits, and on speaker diarization we observe an especially low rate of missed speakers. Numerical experiments further highlight the flexibility of the approach across varying amounts of supervision and training data." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/20/DisentanglementofSourcesinaMultiStreamVariationalAutoencoder.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/20/DisentanglementofSourcesinaMultiStreamVariationalAutoencoder.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Disentanglement of Sources in a Multi-Stream Variational Autoencoder" />
+<script type="application/ld+json">
+{"description":"Variational autoencoders (VAEs) are a leading approach to address the problem of learning disentangled representations. Typically a single VAE is used and disentangled representations are sought in its continuous latent space. Here we explore a different approach by using discrete latents to combine VAE-representations of individual sources. The combination is done based on an explicit model for source combination, and we here use a linear combination model which is well suited, e.g., for acoustic data. We formally define such a multi-stream VAE (MS-VAE) approach, derive its inference and learning equations, and we numerically investigate its principled functionality. The MS-VAE is domain-agnostic, and we here explore its ability to separate sources into different streams using superimposed hand-written digits, and mixed acoustic sources in a speaker diarization task. We observe a clear separation of digits, and on speaker diarization we observe an especially low rate of missed speakers. Numerical experiments further highlight the flexibility of the approach across varying amounts of supervision and training data.","headline":"Disentanglement of Sources in a Multi-Stream Variational Autoencoder","dateModified":"2025-10-20T00:00:00+00:00","datePublished":"2025-10-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/20/DisentanglementofSourcesinaMultiStreamVariationalAutoencoder.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/20/DisentanglementofSourcesinaMultiStreamVariationalAutoencoder.html","author":{"@type":"Person","name":"Veranika Boukun, Jörg Lücke"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-20 00:00:00 +0000">10-20</time>
+  </p>
+  
+  <h1>Disentanglement of Sources in a Multi-Stream Variational Autoencoder</h1>
+  <br>Veranika Boukun, Jörg Lücke</h3>
+  <br> [stat.ML]
+
+  <p>Variational autoencoders (VAEs) are a leading approach to address the problem of learning disentangled representations. Typically a single VAE is used and disentangled representations are sought in its continuous latent space. Here we explore a different approach by using discrete latents to combine VAE-representations of individual sources. The combination is done based on an explicit model for source combination, and we here use a linear combination model which is well suited, e.g., for acoustic data. We formally define such a multi-stream VAE (MS-VAE) approach, derive its inference and learning equations, and we numerically investigate its principled functionality. The MS-VAE is domain-agnostic, and we here explore its ability to separate sources into different streams using superimposed hand-written digits, and mixed acoustic sources in a speaker diarization task. We observe a clear separation of digits, and on speaker diarization we observe an especially low rate of missed speakers. Numerical experiments further highlight the flexibility of the approach across varying amounts of supervision and training data.</p>
+
+<p><a href="https://arxiv.org/abs/2510.15669">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
