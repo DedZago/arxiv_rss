@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Parametrising the Inhomogeneity Inducing Capacity of a Training Set, and its Impact on Supervised Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Parametrising the Inhomogeneity Inducing Capacity of a Training Set, and its Impact on Supervised Learning" />
+<meta name="author" content="Gargi Roy, Dalia Chakrabarty" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce parametrisation of that property of the available training dataset, that necessitates an inhomogeneous correlation structure for the function that is learnt as a model of the relationship between the pair of variables, observations of which comprise the considered training data. We refer to a parametrisation of this property of a given training set, as its inhomogeneity parameter&#39;&#39;. It is easy to compute this parameter for small-to-large datasets, and we demonstrate such computation on multiple publicly-available datasets, while also demonstrating that conventionalnon-stationarity’’ of data does not imply a non-zero inhomogeneity parameter of the dataset. We prove that - within the probabilistic Gaussian Process-based learning approach - a training set with a non-zero inhomogeneity parameter renders it imperative, that the process that is invoked to model the sought function, be non-stationary. Following the learning of a real-world multivariate function with such a Process, quality and reliability of predictions at test inputs, are demonstrated to be affected by the inhomogeneity parameter of the training data." />
+<meta property="og:description" content="We introduce parametrisation of that property of the available training dataset, that necessitates an inhomogeneous correlation structure for the function that is learnt as a model of the relationship between the pair of variables, observations of which comprise the considered training data. We refer to a parametrisation of this property of a given training set, as its inhomogeneity parameter&#39;&#39;. It is easy to compute this parameter for small-to-large datasets, and we demonstrate such computation on multiple publicly-available datasets, while also demonstrating that conventionalnon-stationarity’’ of data does not imply a non-zero inhomogeneity parameter of the dataset. We prove that - within the probabilistic Gaussian Process-based learning approach - a training set with a non-zero inhomogeneity parameter renders it imperative, that the process that is invoked to model the sought function, be non-stationary. Following the learning of a real-world multivariate function with such a Process, quality and reliability of predictions at test inputs, are demonstrated to be affected by the inhomogeneity parameter of the training data." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/22/ParametrisingtheInhomogeneityInducingCapacityofaTrainingSetanditsImpactonSupervisedLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/22/ParametrisingtheInhomogeneityInducingCapacityofaTrainingSetanditsImpactonSupervisedLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Parametrising the Inhomogeneity Inducing Capacity of a Training Set, and its Impact on Supervised Learning" />
+<script type="application/ld+json">
+{"description":"We introduce parametrisation of that property of the available training dataset, that necessitates an inhomogeneous correlation structure for the function that is learnt as a model of the relationship between the pair of variables, observations of which comprise the considered training data. We refer to a parametrisation of this property of a given training set, as its inhomogeneity parameter&#39;&#39;. It is easy to compute this parameter for small-to-large datasets, and we demonstrate such computation on multiple publicly-available datasets, while also demonstrating that conventionalnon-stationarity’’ of data does not imply a non-zero inhomogeneity parameter of the dataset. We prove that - within the probabilistic Gaussian Process-based learning approach - a training set with a non-zero inhomogeneity parameter renders it imperative, that the process that is invoked to model the sought function, be non-stationary. Following the learning of a real-world multivariate function with such a Process, quality and reliability of predictions at test inputs, are demonstrated to be affected by the inhomogeneity parameter of the training data.","headline":"Parametrising the Inhomogeneity Inducing Capacity of a Training Set, and its Impact on Supervised Learning","dateModified":"2025-10-22T00:00:00+00:00","datePublished":"2025-10-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/22/ParametrisingtheInhomogeneityInducingCapacityofaTrainingSetanditsImpactonSupervisedLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/22/ParametrisingtheInhomogeneityInducingCapacityofaTrainingSetanditsImpactonSupervisedLearning.html","author":{"@type":"Person","name":"Gargi Roy, Dalia Chakrabarty"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-22 00:00:00 +0000">10-22</time>
+  </p>
+  
+  <h1>Parametrising the Inhomogeneity Inducing Capacity of a Training Set, and its Impact on Supervised Learning</h1>
+  <br>Gargi Roy, Dalia Chakrabarty</h3>
+  <br> [stat.ML]
+
+  <p>We introduce parametrisation of that property of the available
+  training dataset, that necessitates an inhomogeneous correlation
+  structure for the function that is learnt as a model of the
+  relationship between the pair of variables, observations of which
+  comprise the considered training data. We refer to a parametrisation
+  of this property of a given training set, as its <code class="language-plaintext highlighter-rouge">inhomogeneity
+  parameter''. It is easy to compute this parameter for small-to-large
+  datasets, and we demonstrate such computation on multiple
+  publicly-available datasets, while also demonstrating that
+  conventional</code>non-stationarity’’ of data does not imply a non-zero
+  inhomogeneity parameter of the dataset. We prove that - within the
+  probabilistic Gaussian Process-based learning approach - a training
+  set with a non-zero inhomogeneity parameter renders it imperative,
+  that the process that is invoked to model the sought function, be
+  non-stationary. Following the learning of a real-world multivariate
+  function with such a Process, quality and reliability of predictions
+  at test inputs, are demonstrated to be affected by the inhomogeneity
+  parameter of the training data.</p>
+
+<p><a href="https://arxiv.org/abs/2510.18332">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
