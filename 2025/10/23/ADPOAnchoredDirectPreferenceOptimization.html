@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ADPO: Anchored Direct Preference Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ADPO: Anchored Direct Preference Optimization" />
+<meta name="author" content="Wang Zixian" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Anchored Direct Preference Optimization (ADPO) is a unified framework that generalizes Direct Preference Optimization (DPO) with soft preferences, reference-policy anchoring, and groupwise extensions. While standard DPO assumes hard binary labels and pairwise comparisons, ADPO introduces: (i) soft preference probabilities that encode uncertainty and mitigate gradient drift; (ii) arbitrary reference-policy anchors that stabilize training via groupwise shift invariance and implicit KL regularization; and (iii) listwise preference modeling through Plackett-Luce distributions. We prove that DPO, Bradley-Terry objectives, and Top-1-vs-Rest formulations emerge as special cases. ADPO yields three practical variants: pairwise anchored Soft-DPO, listwise anchored Soft-DPO with raw rewards, and KDE-based listwise smoothing for heavy-tailed noise. In contextual bandits, anchoring improves WinMass by 38-63% over standard DPO, while KDE smoothing achieves 0.68 vs 0.32 under heavy-tailed contamination (112% relative gain). In sequential reinforcement learning (CartPole, LunarLander), anchoring improves noisy-preference performance by 15-29%, confirming transfer from single-step to multi-step settings. Experiments with 10-256 parameter models provide clear guidance: use pairwise anchored Soft-DPO for clean or moderate noise, and KDE-based listwise ADPO for extreme contamination." />
+<meta property="og:description" content="Anchored Direct Preference Optimization (ADPO) is a unified framework that generalizes Direct Preference Optimization (DPO) with soft preferences, reference-policy anchoring, and groupwise extensions. While standard DPO assumes hard binary labels and pairwise comparisons, ADPO introduces: (i) soft preference probabilities that encode uncertainty and mitigate gradient drift; (ii) arbitrary reference-policy anchors that stabilize training via groupwise shift invariance and implicit KL regularization; and (iii) listwise preference modeling through Plackett-Luce distributions. We prove that DPO, Bradley-Terry objectives, and Top-1-vs-Rest formulations emerge as special cases. ADPO yields three practical variants: pairwise anchored Soft-DPO, listwise anchored Soft-DPO with raw rewards, and KDE-based listwise smoothing for heavy-tailed noise. In contextual bandits, anchoring improves WinMass by 38-63% over standard DPO, while KDE smoothing achieves 0.68 vs 0.32 under heavy-tailed contamination (112% relative gain). In sequential reinforcement learning (CartPole, LunarLander), anchoring improves noisy-preference performance by 15-29%, confirming transfer from single-step to multi-step settings. Experiments with 10-256 parameter models provide clear guidance: use pairwise anchored Soft-DPO for clean or moderate noise, and KDE-based listwise ADPO for extreme contamination." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/23/ADPOAnchoredDirectPreferenceOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/23/ADPOAnchoredDirectPreferenceOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ADPO: Anchored Direct Preference Optimization" />
+<script type="application/ld+json">
+{"description":"Anchored Direct Preference Optimization (ADPO) is a unified framework that generalizes Direct Preference Optimization (DPO) with soft preferences, reference-policy anchoring, and groupwise extensions. While standard DPO assumes hard binary labels and pairwise comparisons, ADPO introduces: (i) soft preference probabilities that encode uncertainty and mitigate gradient drift; (ii) arbitrary reference-policy anchors that stabilize training via groupwise shift invariance and implicit KL regularization; and (iii) listwise preference modeling through Plackett-Luce distributions. We prove that DPO, Bradley-Terry objectives, and Top-1-vs-Rest formulations emerge as special cases. ADPO yields three practical variants: pairwise anchored Soft-DPO, listwise anchored Soft-DPO with raw rewards, and KDE-based listwise smoothing for heavy-tailed noise. In contextual bandits, anchoring improves WinMass by 38-63% over standard DPO, while KDE smoothing achieves 0.68 vs 0.32 under heavy-tailed contamination (112% relative gain). In sequential reinforcement learning (CartPole, LunarLander), anchoring improves noisy-preference performance by 15-29%, confirming transfer from single-step to multi-step settings. Experiments with 10-256 parameter models provide clear guidance: use pairwise anchored Soft-DPO for clean or moderate noise, and KDE-based listwise ADPO for extreme contamination.","headline":"ADPO: Anchored Direct Preference Optimization","dateModified":"2025-10-23T00:00:00+00:00","datePublished":"2025-10-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/23/ADPOAnchoredDirectPreferenceOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/23/ADPOAnchoredDirectPreferenceOptimization.html","author":{"@type":"Person","name":"Wang Zixian"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-23 00:00:00 +0000">10-23</time>
+  </p>
+  
+  <h1>ADPO: Anchored Direct Preference Optimization</h1>
+  <br>Wang Zixian</h3>
+  <br> [stat.ML]
+
+  <p>Anchored Direct Preference Optimization (ADPO) is a unified framework that generalizes Direct Preference Optimization (DPO) with soft preferences, reference-policy anchoring, and groupwise extensions. While standard DPO assumes hard binary labels and pairwise comparisons, ADPO introduces: (i) soft preference probabilities that encode uncertainty and mitigate gradient drift; (ii) arbitrary reference-policy anchors that stabilize training via groupwise shift invariance and implicit KL regularization; and (iii) listwise preference modeling through Plackett-Luce distributions. We prove that DPO, Bradley-Terry objectives, and Top-1-vs-Rest formulations emerge as special cases. ADPO yields three practical variants: pairwise anchored Soft-DPO, listwise anchored Soft-DPO with raw rewards, and KDE-based listwise smoothing for heavy-tailed noise. In contextual bandits, anchoring improves WinMass by 38-63% over standard DPO, while KDE smoothing achieves 0.68 vs 0.32 under heavy-tailed contamination (112% relative gain). In sequential reinforcement learning (CartPole, LunarLander), anchoring improves noisy-preference performance by 15-29%, confirming transfer from single-step to multi-step settings. Experiments with 10-256 parameter models provide clear guidance: use pairwise anchored Soft-DPO for clean or moderate noise, and KDE-based listwise ADPO for extreme contamination.</p>
+
+<p><a href="https://arxiv.org/abs/2510.18913">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
