@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Predictability Enables Parallelization of Nonlinear State Space Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Predictability Enables Parallelization of Nonlinear State Space Models" />
+<meta name="author" content="Xavier Gonzalez, Leo Kozachkov, David M. Zoltowski, Kenneth L. Clarkson, Scott W. Linderman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The rise of parallel computing hardware has made it increasingly important to understand which nonlinear state space models can be efficiently parallelized. Recent advances like DEER (arXiv:2309.12252) or DeepPCR (arXiv:2309.16318) have shown that evaluating a state space model can be recast as solving a parallelizable optimization problem, and sometimes this approach can yield dramatic speed-ups in evaluation time. However, the factors that govern the difficulty of these optimization problems remain unclear, limiting the larger adoption of the technique. In this work, we establish a precise relationship between the dynamics of a nonlinear system and the conditioning of its corresponding optimization formulation. We show that the predictability of a system, defined as the degree to which small perturbations in state influence future behavior, impacts the number of optimization steps required for evaluation. In predictable systems, the state trajectory can be computed in $O((\log T)^2)$ time, where $T$ is the sequence length, a major improvement over the conventional sequential approach. In contrast, chaotic or unpredictable systems exhibit poor conditioning, with the consequence that parallel evaluation converges too slowly to be useful. Importantly, our theoretical analysis demonstrates that for predictable systems, the optimization problem is always well-conditioned, whereas for unpredictable systems, the conditioning degrades exponentially as a function of the sequence length. We validate our claims through extensive experiments, providing practical guidance on when nonlinear dynamical systems can be efficiently parallelized, and highlighting predictability as a key design principle for parallelizable models." />
+<meta property="og:description" content="The rise of parallel computing hardware has made it increasingly important to understand which nonlinear state space models can be efficiently parallelized. Recent advances like DEER (arXiv:2309.12252) or DeepPCR (arXiv:2309.16318) have shown that evaluating a state space model can be recast as solving a parallelizable optimization problem, and sometimes this approach can yield dramatic speed-ups in evaluation time. However, the factors that govern the difficulty of these optimization problems remain unclear, limiting the larger adoption of the technique. In this work, we establish a precise relationship between the dynamics of a nonlinear system and the conditioning of its corresponding optimization formulation. We show that the predictability of a system, defined as the degree to which small perturbations in state influence future behavior, impacts the number of optimization steps required for evaluation. In predictable systems, the state trajectory can be computed in $O((\log T)^2)$ time, where $T$ is the sequence length, a major improvement over the conventional sequential approach. In contrast, chaotic or unpredictable systems exhibit poor conditioning, with the consequence that parallel evaluation converges too slowly to be useful. Importantly, our theoretical analysis demonstrates that for predictable systems, the optimization problem is always well-conditioned, whereas for unpredictable systems, the conditioning degrades exponentially as a function of the sequence length. We validate our claims through extensive experiments, providing practical guidance on when nonlinear dynamical systems can be efficiently parallelized, and highlighting predictability as a key design principle for parallelizable models." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/27/PredictabilityEnablesParallelizationofNonlinearStateSpaceModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/27/PredictabilityEnablesParallelizationofNonlinearStateSpaceModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Predictability Enables Parallelization of Nonlinear State Space Models" />
+<script type="application/ld+json">
+{"description":"The rise of parallel computing hardware has made it increasingly important to understand which nonlinear state space models can be efficiently parallelized. Recent advances like DEER (arXiv:2309.12252) or DeepPCR (arXiv:2309.16318) have shown that evaluating a state space model can be recast as solving a parallelizable optimization problem, and sometimes this approach can yield dramatic speed-ups in evaluation time. However, the factors that govern the difficulty of these optimization problems remain unclear, limiting the larger adoption of the technique. In this work, we establish a precise relationship between the dynamics of a nonlinear system and the conditioning of its corresponding optimization formulation. We show that the predictability of a system, defined as the degree to which small perturbations in state influence future behavior, impacts the number of optimization steps required for evaluation. In predictable systems, the state trajectory can be computed in $O((\\log T)^2)$ time, where $T$ is the sequence length, a major improvement over the conventional sequential approach. In contrast, chaotic or unpredictable systems exhibit poor conditioning, with the consequence that parallel evaluation converges too slowly to be useful. Importantly, our theoretical analysis demonstrates that for predictable systems, the optimization problem is always well-conditioned, whereas for unpredictable systems, the conditioning degrades exponentially as a function of the sequence length. We validate our claims through extensive experiments, providing practical guidance on when nonlinear dynamical systems can be efficiently parallelized, and highlighting predictability as a key design principle for parallelizable models.","headline":"Predictability Enables Parallelization of Nonlinear State Space Models","dateModified":"2025-10-27T00:00:00+00:00","datePublished":"2025-10-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/27/PredictabilityEnablesParallelizationofNonlinearStateSpaceModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/27/PredictabilityEnablesParallelizationofNonlinearStateSpaceModels.html","author":{"@type":"Person","name":"Xavier Gonzalez, Leo Kozachkov, David M. Zoltowski, Kenneth L. Clarkson, Scott W. Linderman"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-27 00:00:00 +0000">10-27</time>
+  </p>
+  
+  <h1>Predictability Enables Parallelization of Nonlinear State Space Models</h1>
+  <br>Xavier Gonzalez, Leo Kozachkov, David M. Zoltowski, Kenneth L. Clarkson, Scott W. Linderman</h3>
+  <br> [stat.ML]
+
+  <p>The rise of parallel computing hardware has made it increasingly important to understand which nonlinear state space models can be efficiently parallelized. Recent advances like DEER (arXiv:2309.12252) or DeepPCR (arXiv:2309.16318) have shown that evaluating a state space model can be recast as solving a parallelizable optimization problem, and sometimes this approach can yield dramatic speed-ups in evaluation time. However, the factors that govern the difficulty of these optimization problems remain unclear, limiting the larger adoption of the technique. In this work, we establish a precise relationship between the dynamics of a nonlinear system and the conditioning of its corresponding optimization formulation. We show that the predictability of a system, defined as the degree to which small perturbations in state influence future behavior, impacts the number of optimization steps required for evaluation. In predictable systems, the state trajectory can be computed in $O((\log T)^2)$ time, where $T$ is the sequence length, a major improvement over the conventional sequential approach. In contrast, chaotic or unpredictable systems exhibit poor conditioning, with the consequence that parallel evaluation converges too slowly to be useful. Importantly, our theoretical analysis demonstrates that for predictable systems, the optimization problem is always well-conditioned, whereas for unpredictable systems, the conditioning degrades exponentially as a function of the sequence length. We validate our claims through extensive experiments, providing practical guidance on when nonlinear dynamical systems can be efficiently parallelized, and highlighting predictability as a key design principle for parallelizable models.</p>
+
+<p><a href="https://arxiv.org/abs/2508.16817">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
