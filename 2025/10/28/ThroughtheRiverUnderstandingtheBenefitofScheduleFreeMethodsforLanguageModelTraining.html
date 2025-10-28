@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training" />
+<meta name="author" content="Minhak Song, Beomhan Baek, Kwangjun Ahn, Chulhee Yun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets-such as cosine learning rate schedules-are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training." />
+<meta property="og:description" content="As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets-such as cosine learning rate schedules-are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/28/ThroughtheRiverUnderstandingtheBenefitofScheduleFreeMethodsforLanguageModelTraining.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/28/ThroughtheRiverUnderstandingtheBenefitofScheduleFreeMethodsforLanguageModelTraining.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training" />
+<script type="application/ld+json">
+{"description":"As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets-such as cosine learning rate schedules-are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training.","headline":"Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training","dateModified":"2025-10-28T00:00:00+00:00","datePublished":"2025-10-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/28/ThroughtheRiverUnderstandingtheBenefitofScheduleFreeMethodsforLanguageModelTraining.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/28/ThroughtheRiverUnderstandingtheBenefitofScheduleFreeMethodsforLanguageModelTraining.html","author":{"@type":"Person","name":"Minhak Song, Beomhan Baek, Kwangjun Ahn, Chulhee Yun"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-28 00:00:00 +0000">10-28</time>
+  </p>
+  
+  <h1>Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training</h1>
+  <br>Minhak Song, Beomhan Baek, Kwangjun Ahn, Chulhee Yun</h3>
+  <br> [stat.ML]
+
+  <p>As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets-such as cosine learning rate schedules-are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training.</p>
+
+<p><a href="https://arxiv.org/abs/2507.09846">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
