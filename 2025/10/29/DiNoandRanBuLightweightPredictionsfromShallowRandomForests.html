@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DiNo and RanBu: Lightweight Predictions from Shallow Random Forests</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="DiNo and RanBu: Lightweight Predictions from Shallow Random Forests" />
+<meta name="author" content="Tiago Mendonça dos Santos, Rafael Izbicki, Luís Gustavo Esteves" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Random Forest ensembles are a strong baseline for tabular prediction tasks, but their reliance on hundreds of deep trees often results in high inference latency and memory demands, limiting deployment in latency-sensitive or resource-constrained environments. We introduce DiNo (Distance with Nodes) and RanBu (Random Bushes), two shallow-forest methods that convert a small set of depth-limited trees into efficient, distance-weighted predictors. DiNo measures cophenetic distances via the most recent common ancestor of observation pairs, while RanBu applies kernel smoothing to Breiman’s classical proximity measure. Both approaches operate entirely after forest training: no additional trees are grown, and tuning of the single bandwidth parameter $h$ requires only lightweight matrix-vector operations. Across three synthetic benchmarks and 25 public datasets, RanBu matches or exceeds the accuracy of full-depth random forests-particularly in high-noise settings-while reducing training plus inference time by up to 95\%. DiNo achieves the best bias-variance trade-off in low-noise regimes at a modest computational cost. Both methods extend directly to quantile regression, maintaining accuracy with substantial speed gains. The implementation is available as an open-source R/C++ package at https://github.com/tiagomendonca/dirf. We focus on structured tabular random samples (i.i.d.), leaving extensions to other modalities for future work." />
+<meta property="og:description" content="Random Forest ensembles are a strong baseline for tabular prediction tasks, but their reliance on hundreds of deep trees often results in high inference latency and memory demands, limiting deployment in latency-sensitive or resource-constrained environments. We introduce DiNo (Distance with Nodes) and RanBu (Random Bushes), two shallow-forest methods that convert a small set of depth-limited trees into efficient, distance-weighted predictors. DiNo measures cophenetic distances via the most recent common ancestor of observation pairs, while RanBu applies kernel smoothing to Breiman’s classical proximity measure. Both approaches operate entirely after forest training: no additional trees are grown, and tuning of the single bandwidth parameter $h$ requires only lightweight matrix-vector operations. Across three synthetic benchmarks and 25 public datasets, RanBu matches or exceeds the accuracy of full-depth random forests-particularly in high-noise settings-while reducing training plus inference time by up to 95\%. DiNo achieves the best bias-variance trade-off in low-noise regimes at a modest computational cost. Both methods extend directly to quantile regression, maintaining accuracy with substantial speed gains. The implementation is available as an open-source R/C++ package at https://github.com/tiagomendonca/dirf. We focus on structured tabular random samples (i.i.d.), leaving extensions to other modalities for future work." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/29/DiNoandRanBuLightweightPredictionsfromShallowRandomForests.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/29/DiNoandRanBuLightweightPredictionsfromShallowRandomForests.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DiNo and RanBu: Lightweight Predictions from Shallow Random Forests" />
+<script type="application/ld+json">
+{"description":"Random Forest ensembles are a strong baseline for tabular prediction tasks, but their reliance on hundreds of deep trees often results in high inference latency and memory demands, limiting deployment in latency-sensitive or resource-constrained environments. We introduce DiNo (Distance with Nodes) and RanBu (Random Bushes), two shallow-forest methods that convert a small set of depth-limited trees into efficient, distance-weighted predictors. DiNo measures cophenetic distances via the most recent common ancestor of observation pairs, while RanBu applies kernel smoothing to Breiman’s classical proximity measure. Both approaches operate entirely after forest training: no additional trees are grown, and tuning of the single bandwidth parameter $h$ requires only lightweight matrix-vector operations. Across three synthetic benchmarks and 25 public datasets, RanBu matches or exceeds the accuracy of full-depth random forests-particularly in high-noise settings-while reducing training plus inference time by up to 95\\%. DiNo achieves the best bias-variance trade-off in low-noise regimes at a modest computational cost. Both methods extend directly to quantile regression, maintaining accuracy with substantial speed gains. The implementation is available as an open-source R/C++ package at https://github.com/tiagomendonca/dirf. We focus on structured tabular random samples (i.i.d.), leaving extensions to other modalities for future work.","headline":"DiNo and RanBu: Lightweight Predictions from Shallow Random Forests","dateModified":"2025-10-29T00:00:00+00:00","datePublished":"2025-10-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/29/DiNoandRanBuLightweightPredictionsfromShallowRandomForests.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/29/DiNoandRanBuLightweightPredictionsfromShallowRandomForests.html","author":{"@type":"Person","name":"Tiago Mendonça dos Santos, Rafael Izbicki, Luís Gustavo Esteves"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-29 00:00:00 +0000">10-29</time>
+  </p>
+  
+  <h1>DiNo and RanBu: Lightweight Predictions from Shallow Random Forests</h1>
+  <br>Tiago Mendonça dos Santos, Rafael Izbicki, Luís Gustavo Esteves</h3>
+  <br> [stat.ML]
+
+  <p>Random Forest ensembles are a strong baseline for tabular prediction tasks, but their reliance on hundreds of deep trees often results in high inference latency and memory demands, limiting deployment in latency-sensitive or resource-constrained environments. We introduce DiNo (Distance with Nodes) and RanBu (Random Bushes), two shallow-forest methods that convert a small set of depth-limited trees into efficient, distance-weighted predictors. DiNo measures cophenetic distances via the most recent common ancestor of observation pairs, while RanBu applies kernel smoothing to Breiman’s classical proximity measure. Both approaches operate entirely after forest training: no additional trees are grown, and tuning of the single bandwidth parameter $h$ requires only lightweight matrix-vector operations. Across three synthetic benchmarks and 25 public datasets, RanBu matches or exceeds the accuracy of full-depth random forests-particularly in high-noise settings-while reducing training plus inference time by up to 95\%. DiNo achieves the best bias-variance trade-off in low-noise regimes at a modest computational cost. Both methods extend directly to quantile regression, maintaining accuracy with substantial speed gains. The implementation is available as an open-source R/C++ package at https://github.com/tiagomendonca/dirf. We focus on structured tabular random samples (i.i.d.), leaving extensions to other modalities for future work.</p>
+
+<p><a href="https://arxiv.org/abs/2510.23624">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
