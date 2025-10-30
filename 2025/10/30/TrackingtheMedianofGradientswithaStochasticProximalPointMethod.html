@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Tracking the Median of Gradients with a Stochastic Proximal Point Method</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Tracking the Median of Gradients with a Stochastic Proximal Point Method" />
+<meta name="author" content="Fabian Schaipp, Guillaume Garrigos, Umut Simsekli, Robert Gower" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There are several applications of stochastic optimization where one can benefit from a robust estimate of the gradient. For example, domains such as distributed learning with corrupted nodes, the presence of large outliers in the training data, learning under privacy constraints, or even heavy-tailed noise due to the dynamics of the algorithm itself. Here we study SGD with robust gradient estimators based on estimating the median. We first derive iterative methods based on the stochastic proximal point method for computing the median gradient and generalizations thereof. Then we propose an algorithm estimating the median gradient across iterations, and find that several well known methods are particular cases of this framework. For instance, we observe that different forms of clipping allow to compute online estimators of the median of gradients, in contrast to (heavy-ball) momentum, which corresponds to an online estimator of the mean. Finally, we provide a theoretical framework for an algorithm computing the median gradient across samples, and show that the resulting method can converge even under heavy-tailed, state-dependent noise." />
+<meta property="og:description" content="There are several applications of stochastic optimization where one can benefit from a robust estimate of the gradient. For example, domains such as distributed learning with corrupted nodes, the presence of large outliers in the training data, learning under privacy constraints, or even heavy-tailed noise due to the dynamics of the algorithm itself. Here we study SGD with robust gradient estimators based on estimating the median. We first derive iterative methods based on the stochastic proximal point method for computing the median gradient and generalizations thereof. Then we propose an algorithm estimating the median gradient across iterations, and find that several well known methods are particular cases of this framework. For instance, we observe that different forms of clipping allow to compute online estimators of the median of gradients, in contrast to (heavy-ball) momentum, which corresponds to an online estimator of the mean. Finally, we provide a theoretical framework for an algorithm computing the median gradient across samples, and show that the resulting method can converge even under heavy-tailed, state-dependent noise." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/30/TrackingtheMedianofGradientswithaStochasticProximalPointMethod.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/30/TrackingtheMedianofGradientswithaStochasticProximalPointMethod.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tracking the Median of Gradients with a Stochastic Proximal Point Method" />
+<script type="application/ld+json">
+{"description":"There are several applications of stochastic optimization where one can benefit from a robust estimate of the gradient. For example, domains such as distributed learning with corrupted nodes, the presence of large outliers in the training data, learning under privacy constraints, or even heavy-tailed noise due to the dynamics of the algorithm itself. Here we study SGD with robust gradient estimators based on estimating the median. We first derive iterative methods based on the stochastic proximal point method for computing the median gradient and generalizations thereof. Then we propose an algorithm estimating the median gradient across iterations, and find that several well known methods are particular cases of this framework. For instance, we observe that different forms of clipping allow to compute online estimators of the median of gradients, in contrast to (heavy-ball) momentum, which corresponds to an online estimator of the mean. Finally, we provide a theoretical framework for an algorithm computing the median gradient across samples, and show that the resulting method can converge even under heavy-tailed, state-dependent noise.","headline":"Tracking the Median of Gradients with a Stochastic Proximal Point Method","dateModified":"2025-10-30T00:00:00+00:00","datePublished":"2025-10-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/30/TrackingtheMedianofGradientswithaStochasticProximalPointMethod.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/30/TrackingtheMedianofGradientswithaStochasticProximalPointMethod.html","author":{"@type":"Person","name":"Fabian Schaipp, Guillaume Garrigos, Umut Simsekli, Robert Gower"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-30 00:00:00 +0000">10-30</time>
+  </p>
+  
+  <h1>Tracking the Median of Gradients with a Stochastic Proximal Point Method</h1>
+  <br>Fabian Schaipp, Guillaume Garrigos, Umut Simsekli, Robert Gower</h3>
+  <br> [stat.ML]
+
+  <p>There are several applications of stochastic optimization where one can benefit from a robust estimate of the gradient. For example, domains such as distributed learning with corrupted nodes, the presence of large outliers in the training data, learning under privacy constraints, or even heavy-tailed noise due to the dynamics of the algorithm itself. Here we study SGD with robust gradient estimators based on estimating the median.
+  We first derive iterative methods based on the stochastic proximal point method for computing the median gradient and generalizations thereof. Then we propose an algorithm estimating the median gradient across iterations, and find that several well known methods are particular cases of this framework. For instance, we observe that different forms of clipping allow to compute online estimators of the median of gradients, in contrast to (heavy-ball) momentum, which corresponds to an online estimator of the mean. Finally, we provide a theoretical framework for an algorithm computing the median gradient across samples, and show that the resulting method can converge even under heavy-tailed, state-dependent noise.</p>
+
+<p><a href="https://arxiv.org/abs/2402.12828">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
