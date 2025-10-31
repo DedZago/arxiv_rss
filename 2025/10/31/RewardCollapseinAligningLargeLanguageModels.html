@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reward Collapse in Aligning Large Language Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Reward Collapse in Aligning Large Language Models" />
+<meta name="author" content="Ziang Song, Tianle Cai, Jason D. Lee, Weijie J. Su" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The extraordinary capabilities of large language models (LLMs) such as ChatGPT and GPT-4 are in part unleashed by aligning them with reward models that are trained on human preferences, which are often represented as rankings of responses to prompts. In this paper, we document the phenomenon of \textit{reward collapse}, an empirical observation where the prevailing ranking-based approach results in an \textit{identical} reward distribution \textit{regardless} of the prompts during the terminal phase of training. This outcome is undesirable as open-ended prompts like write a short story about your best friend&#39;&#39; should yield a continuous range of rewards for their completions, while specific prompts likewhat is the capital of New Zealand’’ should generate either high or low rewards. Our theoretical investigation reveals that reward collapse is primarily due to the insufficiency of the ranking-based objective function to incorporate prompt-related information during optimization. This insight allows us to derive closed-form expressions for the reward distribution associated with a set of utility functions in an asymptotic regime. To overcome reward collapse, we introduce a prompt-aware optimization scheme that provably admits a prompt-dependent reward distribution within the interpolating regime. Our experimental results suggest that our proposed prompt-aware utility functions significantly alleviate reward collapse during the training of reward models." />
+<meta property="og:description" content="The extraordinary capabilities of large language models (LLMs) such as ChatGPT and GPT-4 are in part unleashed by aligning them with reward models that are trained on human preferences, which are often represented as rankings of responses to prompts. In this paper, we document the phenomenon of \textit{reward collapse}, an empirical observation where the prevailing ranking-based approach results in an \textit{identical} reward distribution \textit{regardless} of the prompts during the terminal phase of training. This outcome is undesirable as open-ended prompts like write a short story about your best friend&#39;&#39; should yield a continuous range of rewards for their completions, while specific prompts likewhat is the capital of New Zealand’’ should generate either high or low rewards. Our theoretical investigation reveals that reward collapse is primarily due to the insufficiency of the ranking-based objective function to incorporate prompt-related information during optimization. This insight allows us to derive closed-form expressions for the reward distribution associated with a set of utility functions in an asymptotic regime. To overcome reward collapse, we introduce a prompt-aware optimization scheme that provably admits a prompt-dependent reward distribution within the interpolating regime. Our experimental results suggest that our proposed prompt-aware utility functions significantly alleviate reward collapse during the training of reward models." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/10/31/RewardCollapseinAligningLargeLanguageModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/10/31/RewardCollapseinAligningLargeLanguageModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reward Collapse in Aligning Large Language Models" />
+<script type="application/ld+json">
+{"description":"The extraordinary capabilities of large language models (LLMs) such as ChatGPT and GPT-4 are in part unleashed by aligning them with reward models that are trained on human preferences, which are often represented as rankings of responses to prompts. In this paper, we document the phenomenon of \\textit{reward collapse}, an empirical observation where the prevailing ranking-based approach results in an \\textit{identical} reward distribution \\textit{regardless} of the prompts during the terminal phase of training. This outcome is undesirable as open-ended prompts like write a short story about your best friend&#39;&#39; should yield a continuous range of rewards for their completions, while specific prompts likewhat is the capital of New Zealand’’ should generate either high or low rewards. Our theoretical investigation reveals that reward collapse is primarily due to the insufficiency of the ranking-based objective function to incorporate prompt-related information during optimization. This insight allows us to derive closed-form expressions for the reward distribution associated with a set of utility functions in an asymptotic regime. To overcome reward collapse, we introduce a prompt-aware optimization scheme that provably admits a prompt-dependent reward distribution within the interpolating regime. Our experimental results suggest that our proposed prompt-aware utility functions significantly alleviate reward collapse during the training of reward models.","headline":"Reward Collapse in Aligning Large Language Models","dateModified":"2025-10-31T00:00:00+00:00","datePublished":"2025-10-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/10/31/RewardCollapseinAligningLargeLanguageModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/10/31/RewardCollapseinAligningLargeLanguageModels.html","author":{"@type":"Person","name":"Ziang Song, Tianle Cai, Jason D. Lee, Weijie J. Su"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-10-31 00:00:00 +0000">10-31</time>
+  </p>
+  
+  <h1>Reward Collapse in Aligning Large Language Models</h1>
+  <br>Ziang Song, Tianle Cai, Jason D. Lee, Weijie J. Su</h3>
+  <br> [stat.ML]
+
+  <p>The extraordinary capabilities of large language models (LLMs) such as ChatGPT and GPT-4 are in part unleashed by aligning them with reward models that are trained on human preferences, which are often represented as rankings of responses to prompts. In this paper, we document the phenomenon of \textit{reward collapse}, an empirical observation where the prevailing ranking-based approach results in an \textit{identical} reward distribution \textit{regardless} of the prompts during the terminal phase of training. This outcome is undesirable as open-ended prompts like <code class="language-plaintext highlighter-rouge">write a short story about your best friend'' should yield a continuous range of rewards for their completions, while specific prompts like</code>what is the capital of New Zealand’’ should generate either high or low rewards. Our theoretical investigation reveals that reward collapse is primarily due to the insufficiency of the ranking-based objective function to incorporate prompt-related information during optimization. This insight allows us to derive closed-form expressions for the reward distribution associated with a set of utility functions in an asymptotic regime. To overcome reward collapse, we introduce a prompt-aware optimization scheme that provably admits a prompt-dependent reward distribution within the interpolating regime. Our experimental results suggest that our proposed prompt-aware utility functions significantly alleviate reward collapse during the training of reward models.</p>
+
+<p><a href="https://arxiv.org/abs/2305.17608">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
