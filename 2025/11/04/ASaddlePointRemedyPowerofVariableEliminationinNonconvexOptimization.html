@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Saddle Point Remedy: Power of Variable Elimination in Non-convex Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Saddle Point Remedy: Power of Variable Elimination in Non-convex Optimization" />
+<meta name="author" content="Min Gan, Guang-Yong Chen, Yang Yi, Lin Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The proliferation of saddle points, rather than poor local minima, is increasingly understood to be a primary obstacle in large-scale non-convex optimization for machine learning. Variable elimination algorithms, like Variable Projection (VarPro), have long been observed to exhibit superior convergence and robustness in practice, yet a principled understanding of why they so effectively navigate these complex energy landscapes has remained elusive. In this work, we provide a rigorous geometric explanation by comparing the optimization landscapes of the original and reduced formulations. Through a rigorous analysis based on Hessian inertia and the Schur complement, we prove that variable elimination fundamentally reshapes the critical point structure of the objective function, revealing that local maxima in the reduced landscape are created from, and correspond directly to, saddle points in the original formulation. Our findings are illustrated on the canonical problem of non-convex matrix factorization, visualized directly on two-parameter neural networks, and finally validated in training deep Residual Networks, where our approach yields dramatic improvements in stability and convergence to superior minima. This work goes beyond explaining an existing method; it establishes landscape simplification via saddle point transformation as a powerful principle that can guide the design of a new generation of more robust and efficient optimization algorithms." />
+<meta property="og:description" content="The proliferation of saddle points, rather than poor local minima, is increasingly understood to be a primary obstacle in large-scale non-convex optimization for machine learning. Variable elimination algorithms, like Variable Projection (VarPro), have long been observed to exhibit superior convergence and robustness in practice, yet a principled understanding of why they so effectively navigate these complex energy landscapes has remained elusive. In this work, we provide a rigorous geometric explanation by comparing the optimization landscapes of the original and reduced formulations. Through a rigorous analysis based on Hessian inertia and the Schur complement, we prove that variable elimination fundamentally reshapes the critical point structure of the objective function, revealing that local maxima in the reduced landscape are created from, and correspond directly to, saddle points in the original formulation. Our findings are illustrated on the canonical problem of non-convex matrix factorization, visualized directly on two-parameter neural networks, and finally validated in training deep Residual Networks, where our approach yields dramatic improvements in stability and convergence to superior minima. This work goes beyond explaining an existing method; it establishes landscape simplification via saddle point transformation as a powerful principle that can guide the design of a new generation of more robust and efficient optimization algorithms." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/04/ASaddlePointRemedyPowerofVariableEliminationinNonconvexOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/04/ASaddlePointRemedyPowerofVariableEliminationinNonconvexOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Saddle Point Remedy: Power of Variable Elimination in Non-convex Optimization" />
+<script type="application/ld+json">
+{"description":"The proliferation of saddle points, rather than poor local minima, is increasingly understood to be a primary obstacle in large-scale non-convex optimization for machine learning. Variable elimination algorithms, like Variable Projection (VarPro), have long been observed to exhibit superior convergence and robustness in practice, yet a principled understanding of why they so effectively navigate these complex energy landscapes has remained elusive. In this work, we provide a rigorous geometric explanation by comparing the optimization landscapes of the original and reduced formulations. Through a rigorous analysis based on Hessian inertia and the Schur complement, we prove that variable elimination fundamentally reshapes the critical point structure of the objective function, revealing that local maxima in the reduced landscape are created from, and correspond directly to, saddle points in the original formulation. Our findings are illustrated on the canonical problem of non-convex matrix factorization, visualized directly on two-parameter neural networks, and finally validated in training deep Residual Networks, where our approach yields dramatic improvements in stability and convergence to superior minima. This work goes beyond explaining an existing method; it establishes landscape simplification via saddle point transformation as a powerful principle that can guide the design of a new generation of more robust and efficient optimization algorithms.","headline":"A Saddle Point Remedy: Power of Variable Elimination in Non-convex Optimization","dateModified":"2025-11-04T00:00:00+00:00","datePublished":"2025-11-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/04/ASaddlePointRemedyPowerofVariableEliminationinNonconvexOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/04/ASaddlePointRemedyPowerofVariableEliminationinNonconvexOptimization.html","author":{"@type":"Person","name":"Min Gan, Guang-Yong Chen, Yang Yi, Lin Yang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-04 00:00:00 +0000">11-04</time>
+  </p>
+  
+  <h1>A Saddle Point Remedy: Power of Variable Elimination in Non-convex Optimization</h1>
+  <br>Min Gan, Guang-Yong Chen, Yang Yi, Lin Yang</h3>
+  <br> [stat.ML]
+
+  <p>The proliferation of saddle points, rather than poor local minima, is increasingly understood to be a primary obstacle in large-scale non-convex optimization for machine learning. Variable elimination algorithms, like Variable Projection (VarPro), have long been observed to exhibit superior convergence and robustness in practice, yet a principled understanding of why they so effectively navigate these complex energy landscapes has remained elusive. In this work, we provide a rigorous geometric explanation by comparing the optimization landscapes of the original and reduced formulations. Through a rigorous analysis based on Hessian inertia and the Schur complement, we prove that variable elimination fundamentally reshapes the critical point structure of the objective function, revealing that local maxima in the reduced landscape are created from, and correspond directly to, saddle points in the original formulation. Our findings are illustrated on the canonical problem of non-convex matrix factorization, visualized directly on two-parameter neural networks, and finally validated in training deep Residual Networks, where our approach yields dramatic improvements in stability and convergence to superior minima. This work goes beyond explaining an existing method; it establishes landscape simplification via saddle point transformation as a powerful principle that can guide the design of a new generation of more robust and efficient optimization algorithms.</p>
+
+<p><a href="https://arxiv.org/abs/2511.01234">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
