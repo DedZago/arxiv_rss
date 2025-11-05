@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ConMeZO: Adaptive Descent-Direction Sampling for Gradient-Free Finetuning of Large Language Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ConMeZO: Adaptive Descent-Direction Sampling for Gradient-Free Finetuning of Large Language Models" />
+<meta name="author" content="Lejs Deen Behric, Liang Zhang, Bingcong Li, Kiran Koshy Thekumparampil" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Zeroth-order or derivative-free optimization (MeZO) is an attractive strategy for finetuning large language models (LLMs) because it eliminates the memory overhead of backpropagation. However, it converges slowly due to the inherent curse of dimensionality when searching for descent directions in the high-dimensional parameter space of billion-scale LLMs. We propose ConMeZO, a novel zeroth-order optimizer that accelerates convergence by adaptive directional sampling. Instead of drawing the direction uniformly at random, ConMeZO restricts the sampling to a cone centered around a momentum estimate. This concentrates the search in directions where the true gradient is more likely to lie and thus reduces the effect of high dimensions. We prove that ConMeZO achieves the same worst-case convergence rate as MeZO. Empirically, when finetuning LLMs on natural language tasks, ConMeZO is up to 2X faster than MeZO while retaining the low-memory footprint of zeroth-order methods." />
+<meta property="og:description" content="Zeroth-order or derivative-free optimization (MeZO) is an attractive strategy for finetuning large language models (LLMs) because it eliminates the memory overhead of backpropagation. However, it converges slowly due to the inherent curse of dimensionality when searching for descent directions in the high-dimensional parameter space of billion-scale LLMs. We propose ConMeZO, a novel zeroth-order optimizer that accelerates convergence by adaptive directional sampling. Instead of drawing the direction uniformly at random, ConMeZO restricts the sampling to a cone centered around a momentum estimate. This concentrates the search in directions where the true gradient is more likely to lie and thus reduces the effect of high dimensions. We prove that ConMeZO achieves the same worst-case convergence rate as MeZO. Empirically, when finetuning LLMs on natural language tasks, ConMeZO is up to 2X faster than MeZO while retaining the low-memory footprint of zeroth-order methods." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/05/ConMeZOAdaptiveDescentDirectionSamplingforGradientFreeFinetuningofLargeLanguageModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/05/ConMeZOAdaptiveDescentDirectionSamplingforGradientFreeFinetuningofLargeLanguageModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ConMeZO: Adaptive Descent-Direction Sampling for Gradient-Free Finetuning of Large Language Models" />
+<script type="application/ld+json">
+{"description":"Zeroth-order or derivative-free optimization (MeZO) is an attractive strategy for finetuning large language models (LLMs) because it eliminates the memory overhead of backpropagation. However, it converges slowly due to the inherent curse of dimensionality when searching for descent directions in the high-dimensional parameter space of billion-scale LLMs. We propose ConMeZO, a novel zeroth-order optimizer that accelerates convergence by adaptive directional sampling. Instead of drawing the direction uniformly at random, ConMeZO restricts the sampling to a cone centered around a momentum estimate. This concentrates the search in directions where the true gradient is more likely to lie and thus reduces the effect of high dimensions. We prove that ConMeZO achieves the same worst-case convergence rate as MeZO. Empirically, when finetuning LLMs on natural language tasks, ConMeZO is up to 2X faster than MeZO while retaining the low-memory footprint of zeroth-order methods.","headline":"ConMeZO: Adaptive Descent-Direction Sampling for Gradient-Free Finetuning of Large Language Models","dateModified":"2025-11-05T00:00:00+00:00","datePublished":"2025-11-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/05/ConMeZOAdaptiveDescentDirectionSamplingforGradientFreeFinetuningofLargeLanguageModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/05/ConMeZOAdaptiveDescentDirectionSamplingforGradientFreeFinetuningofLargeLanguageModels.html","author":{"@type":"Person","name":"Lejs Deen Behric, Liang Zhang, Bingcong Li, Kiran Koshy Thekumparampil"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-05 00:00:00 +0000">11-05</time>
+  </p>
+  
+  <h1>ConMeZO: Adaptive Descent-Direction Sampling for Gradient-Free Finetuning of Large Language Models</h1>
+  <br>Lejs Deen Behric, Liang Zhang, Bingcong Li, Kiran Koshy Thekumparampil</h3>
+  <br> [stat.ML]
+
+  <p>Zeroth-order or derivative-free optimization (MeZO) is an attractive strategy for finetuning large language models (LLMs) because it eliminates the memory overhead of backpropagation. However, it converges slowly due to the inherent curse of dimensionality when searching for descent directions in the high-dimensional parameter space of billion-scale LLMs. We propose ConMeZO, a novel zeroth-order optimizer that accelerates convergence by adaptive directional sampling. Instead of drawing the direction uniformly at random, ConMeZO restricts the sampling to a cone centered around a momentum estimate. This concentrates the search in directions where the true gradient is more likely to lie and thus reduces the effect of high dimensions. We prove that ConMeZO achieves the same worst-case convergence rate as MeZO. Empirically, when finetuning LLMs on natural language tasks, ConMeZO is up to 2X faster than MeZO while retaining the low-memory footprint of zeroth-order methods.</p>
+
+<p><a href="https://arxiv.org/abs/2511.02757">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
