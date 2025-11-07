@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Information-theoretic Generalization Analysis for VQ-VAEs: A Role of Latent Variables</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Information-theoretic Generalization Analysis for VQ-VAEs: A Role of Latent Variables" />
+<meta name="author" content="Futoshi Futami, Masahiro Fujisawa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Latent variables (LVs) play a crucial role in encoder-decoder models by enabling effective data compression, prediction, and generation. Although their theoretical properties, such as generalization, have been extensively studied in supervised learning, similar analyses for unsupervised models such as variational autoencoders (VAEs) remain insufficiently underexplored. In this work, we extend information-theoretic generalization analysis to vector-quantized (VQ) VAEs with discrete latent spaces, introducing a novel data-dependent prior to rigorously analyze the relationship among LVs, generalization, and data generation. We derive a novel generalization error bound of the reconstruction loss of VQ-VAEs, which depends solely on the complexity of LVs and the encoder, independent of the decoder. Additionally, we provide the upper bound of the 2-Wasserstein distance between the distributions of the true data and the generated data, explaining how the regularization of the LVs contributes to the data generation performance." />
+<meta property="og:description" content="Latent variables (LVs) play a crucial role in encoder-decoder models by enabling effective data compression, prediction, and generation. Although their theoretical properties, such as generalization, have been extensively studied in supervised learning, similar analyses for unsupervised models such as variational autoencoders (VAEs) remain insufficiently underexplored. In this work, we extend information-theoretic generalization analysis to vector-quantized (VQ) VAEs with discrete latent spaces, introducing a novel data-dependent prior to rigorously analyze the relationship among LVs, generalization, and data generation. We derive a novel generalization error bound of the reconstruction loss of VQ-VAEs, which depends solely on the complexity of LVs and the encoder, independent of the decoder. Additionally, we provide the upper bound of the 2-Wasserstein distance between the distributions of the true data and the generated data, explaining how the regularization of the LVs contributes to the data generation performance." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/07/InformationtheoreticGeneralizationAnalysisforVQVAEsARoleofLatentVariables.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/07/InformationtheoreticGeneralizationAnalysisforVQVAEsARoleofLatentVariables.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Information-theoretic Generalization Analysis for VQ-VAEs: A Role of Latent Variables" />
+<script type="application/ld+json">
+{"description":"Latent variables (LVs) play a crucial role in encoder-decoder models by enabling effective data compression, prediction, and generation. Although their theoretical properties, such as generalization, have been extensively studied in supervised learning, similar analyses for unsupervised models such as variational autoencoders (VAEs) remain insufficiently underexplored. In this work, we extend information-theoretic generalization analysis to vector-quantized (VQ) VAEs with discrete latent spaces, introducing a novel data-dependent prior to rigorously analyze the relationship among LVs, generalization, and data generation. We derive a novel generalization error bound of the reconstruction loss of VQ-VAEs, which depends solely on the complexity of LVs and the encoder, independent of the decoder. Additionally, we provide the upper bound of the 2-Wasserstein distance between the distributions of the true data and the generated data, explaining how the regularization of the LVs contributes to the data generation performance.","headline":"Information-theoretic Generalization Analysis for VQ-VAEs: A Role of Latent Variables","dateModified":"2025-11-07T00:00:00+00:00","datePublished":"2025-11-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/07/InformationtheoreticGeneralizationAnalysisforVQVAEsARoleofLatentVariables.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/07/InformationtheoreticGeneralizationAnalysisforVQVAEsARoleofLatentVariables.html","author":{"@type":"Person","name":"Futoshi Futami, Masahiro Fujisawa"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-07 00:00:00 +0000">11-07</time>
+  </p>
+  
+  <h1>Information-theoretic Generalization Analysis for VQ-VAEs: A Role of Latent Variables</h1>
+  <br>Futoshi Futami, Masahiro Fujisawa</h3>
+  <br> [stat.ML]
+
+  <p>Latent variables (LVs) play a crucial role in encoder-decoder models by enabling effective data compression, prediction, and generation. Although their theoretical properties, such as generalization, have been extensively studied in supervised learning, similar analyses for unsupervised models such as variational autoencoders (VAEs) remain insufficiently underexplored. In this work, we extend information-theoretic generalization analysis to vector-quantized (VQ) VAEs with discrete latent spaces, introducing a novel data-dependent prior to rigorously analyze the relationship among LVs, generalization, and data generation. We derive a novel generalization error bound of the reconstruction loss of VQ-VAEs, which depends solely on the complexity of LVs and the encoder, independent of the decoder. Additionally, we provide the upper bound of the 2-Wasserstein distance between the distributions of the true data and the generated data, explaining how the regularization of the LVs contributes to the data generation performance.</p>
+
+<p><a href="https://arxiv.org/abs/2505.19470">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

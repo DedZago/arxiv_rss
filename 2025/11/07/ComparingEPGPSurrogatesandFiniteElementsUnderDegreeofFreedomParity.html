@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Comparing EPGP Surrogates and Finite Elements Under Degree-of-Freedom Parity</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Comparing EPGP Surrogates and Finite Elements Under Degree-of-Freedom Parity" />
+<meta name="author" content="Obed Amo, Samit Ghosh, Markus Lange-Hegermann, Bogdan Raiţă, Michael Pokojovy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present a new benchmarking study comparing a boundary-constrained Ehrenpreis–Palamodov Gaussian Process (B-EPGP) surrogate with a classical finite element method combined with Crank–Nicolson time stepping (CN-FEM) for solving the two-dimensional wave equation with homogeneous Dirichlet boundary conditions. The B-EPGP construction leverages exponential-polynomial bases derived from the characteristic variety to enforce the PDE and boundary conditions exactly and employs penalized least squares to estimate the coefficients. To ensure fairness across paradigms, we introduce a degrees-of-freedom (DoF) matching protocol. Under matched DoF, B-EPGP consistently attains lower space-time $L^2$-error and maximum-in-time $L^{2}$-error in space than CN-FEM, improving accuracy by roughly two orders of magnitude." />
+<meta property="og:description" content="We present a new benchmarking study comparing a boundary-constrained Ehrenpreis–Palamodov Gaussian Process (B-EPGP) surrogate with a classical finite element method combined with Crank–Nicolson time stepping (CN-FEM) for solving the two-dimensional wave equation with homogeneous Dirichlet boundary conditions. The B-EPGP construction leverages exponential-polynomial bases derived from the characteristic variety to enforce the PDE and boundary conditions exactly and employs penalized least squares to estimate the coefficients. To ensure fairness across paradigms, we introduce a degrees-of-freedom (DoF) matching protocol. Under matched DoF, B-EPGP consistently attains lower space-time $L^2$-error and maximum-in-time $L^{2}$-error in space than CN-FEM, improving accuracy by roughly two orders of magnitude." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/07/ComparingEPGPSurrogatesandFiniteElementsUnderDegreeofFreedomParity.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/07/ComparingEPGPSurrogatesandFiniteElementsUnderDegreeofFreedomParity.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Comparing EPGP Surrogates and Finite Elements Under Degree-of-Freedom Parity" />
+<script type="application/ld+json">
+{"description":"We present a new benchmarking study comparing a boundary-constrained Ehrenpreis–Palamodov Gaussian Process (B-EPGP) surrogate with a classical finite element method combined with Crank–Nicolson time stepping (CN-FEM) for solving the two-dimensional wave equation with homogeneous Dirichlet boundary conditions. The B-EPGP construction leverages exponential-polynomial bases derived from the characteristic variety to enforce the PDE and boundary conditions exactly and employs penalized least squares to estimate the coefficients. To ensure fairness across paradigms, we introduce a degrees-of-freedom (DoF) matching protocol. Under matched DoF, B-EPGP consistently attains lower space-time $L^2$-error and maximum-in-time $L^{2}$-error in space than CN-FEM, improving accuracy by roughly two orders of magnitude.","headline":"Comparing EPGP Surrogates and Finite Elements Under Degree-of-Freedom Parity","dateModified":"2025-11-07T00:00:00+00:00","datePublished":"2025-11-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/07/ComparingEPGPSurrogatesandFiniteElementsUnderDegreeofFreedomParity.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/07/ComparingEPGPSurrogatesandFiniteElementsUnderDegreeofFreedomParity.html","author":{"@type":"Person","name":"Obed Amo, Samit Ghosh, Markus Lange-Hegermann, Bogdan Raiţă, Michael Pokojovy"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-07 00:00:00 +0000">11-07</time>
+  </p>
+  
+  <h1>Comparing EPGP Surrogates and Finite Elements Under Degree-of-Freedom Parity</h1>
+  <br>Obed Amo, Samit Ghosh, Markus Lange-Hegermann, Bogdan Raiţă, Michael Pokojovy</h3>
+  <br> [stat.ML]
+
+  <p>We present a new benchmarking study comparing a boundary-constrained Ehrenpreis–Palamodov Gaussian Process (B-EPGP) surrogate with a classical finite element method combined with Crank–Nicolson time stepping (CN-FEM) for solving the two-dimensional wave equation with homogeneous Dirichlet boundary conditions. The B-EPGP construction leverages exponential-polynomial bases derived from the characteristic variety to enforce the PDE and boundary conditions exactly and employs penalized least squares to estimate the coefficients. To ensure fairness across paradigms, we introduce a degrees-of-freedom (DoF) matching protocol. Under matched DoF, B-EPGP consistently attains lower space-time $L^2$-error and maximum-in-time $L^{2}$-error in space than CN-FEM, improving accuracy by roughly two orders of magnitude.</p>
+
+<p><a href="https://arxiv.org/abs/2511.04518">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
