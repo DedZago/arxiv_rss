@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparse Linear Regression is Easy on Random Supports</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sparse Linear Regression is Easy on Random Supports" />
+<meta name="author" content="Gautam Chandrasekaran, Raghu Meka, Konstantinos Stavropoulos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sparse linear regression is one of the most basic questions in machine learning and statistics. Here, we are given as input a design matrix $X \in \mathbb{R}^{N \times d}$ and measurements or labels ${y} \in \mathbb{R}^N$ where ${y} = {X} {w}^* + {\xi}$, and ${\xi}$ is the noise in the measurements. Importantly, we have the additional constraint that the unknown signal vector ${w}^$ is sparse: it has $k$ non-zero entries where $k$ is much smaller than the ambient dimension. Our goal is to output a prediction vector $\widehat$ that has small prediction error: $\frac{1}{N}\cdot |{X} {w}^ - {X} \widehat|^2_2$. Information-theoretically, we know what is best possible in terms of measurements: under most natural noise distributions, we can get prediction error at most $\epsilon$ with roughly $N = O(k \log d/\epsilon)$ samples. Computationally, this currently needs $d^{\Omega(k)}$ run-time. Alternately, with $N = O(d)$, we can get polynomial-time. Thus, there is an exponential gap (in the dependence on $d$) between the two and we do not know if it is possible to get $d^{o(k)}$ run-time and $o(d)$ samples. We give the first generic positive result for worst-case design matrices ${X}$: For any ${X}$, we show that if the support of ${w}^$ is chosen at random, we can get prediction error $\epsilon$ with $N = \text{poly}(k, \log d, 1/\epsilon)$ samples and run-time $\text{poly}(d,N)$. This run-time holds for any design matrix ${X}$ with condition number up to $2^{\text{poly}(d)}$. Previously, such results were known for worst-case ${w}^$, but only for random design matrices from well-behaved families, matrices that have a very low condition number ($\text{poly}(\log d)$; e.g., as studied in compressed sensing), or those with special structural properties." />
+<meta property="og:description" content="Sparse linear regression is one of the most basic questions in machine learning and statistics. Here, we are given as input a design matrix $X \in \mathbb{R}^{N \times d}$ and measurements or labels ${y} \in \mathbb{R}^N$ where ${y} = {X} {w}^* + {\xi}$, and ${\xi}$ is the noise in the measurements. Importantly, we have the additional constraint that the unknown signal vector ${w}^$ is sparse: it has $k$ non-zero entries where $k$ is much smaller than the ambient dimension. Our goal is to output a prediction vector $\widehat$ that has small prediction error: $\frac{1}{N}\cdot |{X} {w}^ - {X} \widehat|^2_2$. Information-theoretically, we know what is best possible in terms of measurements: under most natural noise distributions, we can get prediction error at most $\epsilon$ with roughly $N = O(k \log d/\epsilon)$ samples. Computationally, this currently needs $d^{\Omega(k)}$ run-time. Alternately, with $N = O(d)$, we can get polynomial-time. Thus, there is an exponential gap (in the dependence on $d$) between the two and we do not know if it is possible to get $d^{o(k)}$ run-time and $o(d)$ samples. We give the first generic positive result for worst-case design matrices ${X}$: For any ${X}$, we show that if the support of ${w}^$ is chosen at random, we can get prediction error $\epsilon$ with $N = \text{poly}(k, \log d, 1/\epsilon)$ samples and run-time $\text{poly}(d,N)$. This run-time holds for any design matrix ${X}$ with condition number up to $2^{\text{poly}(d)}$. Previously, such results were known for worst-case ${w}^$, but only for random design matrices from well-behaved families, matrices that have a very low condition number ($\text{poly}(\log d)$; e.g., as studied in compressed sensing), or those with special structural properties." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/11/SparseLinearRegressionisEasyonRandomSupports.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/11/SparseLinearRegressionisEasyonRandomSupports.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sparse Linear Regression is Easy on Random Supports" />
+<script type="application/ld+json">
+{"description":"Sparse linear regression is one of the most basic questions in machine learning and statistics. Here, we are given as input a design matrix $X \\in \\mathbb{R}^{N \\times d}$ and measurements or labels ${y} \\in \\mathbb{R}^N$ where ${y} = {X} {w}^* + {\\xi}$, and ${\\xi}$ is the noise in the measurements. Importantly, we have the additional constraint that the unknown signal vector ${w}^$ is sparse: it has $k$ non-zero entries where $k$ is much smaller than the ambient dimension. Our goal is to output a prediction vector $\\widehat$ that has small prediction error: $\\frac{1}{N}\\cdot |{X} {w}^ - {X} \\widehat|^2_2$. Information-theoretically, we know what is best possible in terms of measurements: under most natural noise distributions, we can get prediction error at most $\\epsilon$ with roughly $N = O(k \\log d/\\epsilon)$ samples. Computationally, this currently needs $d^{\\Omega(k)}$ run-time. Alternately, with $N = O(d)$, we can get polynomial-time. Thus, there is an exponential gap (in the dependence on $d$) between the two and we do not know if it is possible to get $d^{o(k)}$ run-time and $o(d)$ samples. We give the first generic positive result for worst-case design matrices ${X}$: For any ${X}$, we show that if the support of ${w}^$ is chosen at random, we can get prediction error $\\epsilon$ with $N = \\text{poly}(k, \\log d, 1/\\epsilon)$ samples and run-time $\\text{poly}(d,N)$. This run-time holds for any design matrix ${X}$ with condition number up to $2^{\\text{poly}(d)}$. Previously, such results were known for worst-case ${w}^$, but only for random design matrices from well-behaved families, matrices that have a very low condition number ($\\text{poly}(\\log d)$; e.g., as studied in compressed sensing), or those with special structural properties.","headline":"Sparse Linear Regression is Easy on Random Supports","dateModified":"2025-11-11T00:00:00+00:00","datePublished":"2025-11-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/11/SparseLinearRegressionisEasyonRandomSupports.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/11/SparseLinearRegressionisEasyonRandomSupports.html","author":{"@type":"Person","name":"Gautam Chandrasekaran, Raghu Meka, Konstantinos Stavropoulos"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-11 00:00:00 +0000">11-11</time>
+  </p>
+  
+  <h1>Sparse Linear Regression is Easy on Random Supports</h1>
+  <br>Gautam Chandrasekaran, Raghu Meka, Konstantinos Stavropoulos</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Sparse linear regression is one of the most basic questions in machine learning and statistics. Here, we are given as input a design matrix $X \in \mathbb{R}^{N \times d}$ and measurements or labels ${y} \in \mathbb{R}^N$ where ${y} = {X} {w}^* + {\xi}$, and ${\xi}$ is the noise in the measurements. Importantly, we have the additional constraint that the unknown signal vector ${w}^<em>$ is sparse: it has $k$ non-zero entries where $k$ is much smaller than the ambient dimension. Our goal is to output a prediction vector $\widehat$ that has small prediction error: $\frac{1}{N}\cdot |{X} {w}^</em> - {X} \widehat|^2_2$.
+  Information-theoretically, we know what is best possible in terms of measurements: under most natural noise distributions, we can get prediction error at most $\epsilon$ with roughly $N = O(k \log d/\epsilon)$ samples. Computationally, this currently needs $d^{\Omega(k)}$ run-time. Alternately, with $N = O(d)$, we can get polynomial-time. Thus, there is an exponential gap (in the dependence on $d$) between the two and we do not know if it is possible to get $d^{o(k)}$ run-time and $o(d)$ samples.
+  We give the first generic positive result for worst-case design matrices ${X}$: For any ${X}$, we show that if the support of ${w}^<em>$ is chosen at random, we can get prediction error $\epsilon$ with $N = \text{poly}(k, \log d, 1/\epsilon)$ samples and run-time $\text{poly}(d,N)$. This run-time holds for any design matrix ${X}$ with condition number up to $2^{\text{poly}(d)}$.
+  Previously, such results were known for worst-case ${w}^</em>$, but only for random design matrices from well-behaved families, matrices that have a very low condition number ($\text{poly}(\log d)$; e.g., as studied in compressed sensing), or those with special structural properties.</p>
+
+<p><a href="https://arxiv.org/abs/2511.06211">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

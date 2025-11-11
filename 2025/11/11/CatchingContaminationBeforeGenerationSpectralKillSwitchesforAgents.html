@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Catching Contamination Before Generation: Spectral Kill Switches for Agents</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Catching Contamination Before Generation: Spectral Kill Switches for Agents" />
+<meta name="author" content="Valentin Noël" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Agentic language models compose multi step reasoning chains, yet intermediate steps can be corrupted by inconsistent context, retrieval errors, or adversarial inputs, which makes post hoc evaluation too late because errors propagate before detection. We introduce a diagnostic that requires no additional training and uses only the forward pass to emit a binary accept or reject signal during agent execution. The method analyzes token graphs induced by attention and computes two spectral statistics in early layers, namely the high frequency energy ratio and spectral entropy. We formalize these signals, establish invariances, and provide finite sample estimators with uncertainty quantification. Under a two regime mixture assumption with a monotone likelihood ratio property, we show that a single threshold on the high frequency energy ratio is optimal in the Bayes sense for detecting context inconsistency. Empirically, the high frequency energy ratio exhibits robust bimodality during context verification across multiple model families, which enables gating decisions with overhead below one millisecond on our hardware and configurations. We demonstrate integration into retrieval augmented agent pipelines and discuss deployment as an inline safety monitor. The approach detects contamination while the model is still processing the text, before errors commit to the reasoning chain." />
+<meta property="og:description" content="Agentic language models compose multi step reasoning chains, yet intermediate steps can be corrupted by inconsistent context, retrieval errors, or adversarial inputs, which makes post hoc evaluation too late because errors propagate before detection. We introduce a diagnostic that requires no additional training and uses only the forward pass to emit a binary accept or reject signal during agent execution. The method analyzes token graphs induced by attention and computes two spectral statistics in early layers, namely the high frequency energy ratio and spectral entropy. We formalize these signals, establish invariances, and provide finite sample estimators with uncertainty quantification. Under a two regime mixture assumption with a monotone likelihood ratio property, we show that a single threshold on the high frequency energy ratio is optimal in the Bayes sense for detecting context inconsistency. Empirically, the high frequency energy ratio exhibits robust bimodality during context verification across multiple model families, which enables gating decisions with overhead below one millisecond on our hardware and configurations. We demonstrate integration into retrieval augmented agent pipelines and discuss deployment as an inline safety monitor. The approach detects contamination while the model is still processing the text, before errors commit to the reasoning chain." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/11/CatchingContaminationBeforeGenerationSpectralKillSwitchesforAgents.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/11/CatchingContaminationBeforeGenerationSpectralKillSwitchesforAgents.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Catching Contamination Before Generation: Spectral Kill Switches for Agents" />
+<script type="application/ld+json">
+{"description":"Agentic language models compose multi step reasoning chains, yet intermediate steps can be corrupted by inconsistent context, retrieval errors, or adversarial inputs, which makes post hoc evaluation too late because errors propagate before detection. We introduce a diagnostic that requires no additional training and uses only the forward pass to emit a binary accept or reject signal during agent execution. The method analyzes token graphs induced by attention and computes two spectral statistics in early layers, namely the high frequency energy ratio and spectral entropy. We formalize these signals, establish invariances, and provide finite sample estimators with uncertainty quantification. Under a two regime mixture assumption with a monotone likelihood ratio property, we show that a single threshold on the high frequency energy ratio is optimal in the Bayes sense for detecting context inconsistency. Empirically, the high frequency energy ratio exhibits robust bimodality during context verification across multiple model families, which enables gating decisions with overhead below one millisecond on our hardware and configurations. We demonstrate integration into retrieval augmented agent pipelines and discuss deployment as an inline safety monitor. The approach detects contamination while the model is still processing the text, before errors commit to the reasoning chain.","headline":"Catching Contamination Before Generation: Spectral Kill Switches for Agents","dateModified":"2025-11-11T00:00:00+00:00","datePublished":"2025-11-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/11/CatchingContaminationBeforeGenerationSpectralKillSwitchesforAgents.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/11/CatchingContaminationBeforeGenerationSpectralKillSwitchesforAgents.html","author":{"@type":"Person","name":"Valentin Noël"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-11 00:00:00 +0000">11-11</time>
+  </p>
+  
+  <h1>Catching Contamination Before Generation: Spectral Kill Switches for Agents</h1>
+  <br>Valentin Noël</h3>
+  <br> [stat.ML]
+
+  <p>Agentic language models compose multi step reasoning chains, yet intermediate steps can be corrupted by inconsistent context, retrieval errors, or adversarial inputs, which makes post hoc evaluation too late because errors propagate before detection. We introduce a diagnostic that requires no additional training and uses only the forward pass to emit a binary accept or reject signal during agent execution. The method analyzes token graphs induced by attention and computes two spectral statistics in early layers, namely the high frequency energy ratio and spectral entropy. We formalize these signals, establish invariances, and provide finite sample estimators with uncertainty quantification. Under a two regime mixture assumption with a monotone likelihood ratio property, we show that a single threshold on the high frequency energy ratio is optimal in the Bayes sense for detecting context inconsistency. Empirically, the high frequency energy ratio exhibits robust bimodality during context verification across multiple model families, which enables gating decisions with overhead below one millisecond on our hardware and configurations. We demonstrate integration into retrieval augmented agent pipelines and discuss deployment as an inline safety monitor. The approach detects contamination while the model is still processing the text, before errors commit to the reasoning chain.</p>
+
+<p><a href="https://arxiv.org/abs/2511.05804">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
