@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mitigating Catastrophic Forgetting in Streaming Generative and Predictive Learning via Stateful Replay</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mitigating Catastrophic Forgetting in Streaming Generative and Predictive Learning via Stateful Replay" />
+<meta name="author" content="Wenzhang Du" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many deployed learning systems must update models on streaming data under memory constraints. The default strategy, sequential fine-tuning on each new phase, is architecture-agnostic but often suffers catastrophic forgetting when later phases correspond to different sub-populations or tasks. Replay with a finite buffer is a simple alternative, yet its behaviour across generative and predictive objectives is not well understood. We present a unified study of stateful replay for streaming autoencoding, time series forecasting, and classification. We view both sequential fine-tuning and replay as stochastic gradient methods for an ideal joint objective, and use a gradient alignment analysis to show when mixing current and historical samples should reduce forgetting. We then evaluate a single replay mechanism on six streaming scenarios built from Rotated MNIST, ElectricityLoadDiagrams 2011-2014, and Airlines delay data, using matched training budgets and three seeds. On heterogeneous multi task streams, replay reduces average forgetting by a factor of two to three, while on benign time based streams both methods perform similarly. These results position stateful replay as a strong and simple baseline for continual learning in streaming environments." />
+<meta property="og:description" content="Many deployed learning systems must update models on streaming data under memory constraints. The default strategy, sequential fine-tuning on each new phase, is architecture-agnostic but often suffers catastrophic forgetting when later phases correspond to different sub-populations or tasks. Replay with a finite buffer is a simple alternative, yet its behaviour across generative and predictive objectives is not well understood. We present a unified study of stateful replay for streaming autoencoding, time series forecasting, and classification. We view both sequential fine-tuning and replay as stochastic gradient methods for an ideal joint objective, and use a gradient alignment analysis to show when mixing current and historical samples should reduce forgetting. We then evaluate a single replay mechanism on six streaming scenarios built from Rotated MNIST, ElectricityLoadDiagrams 2011-2014, and Airlines delay data, using matched training budgets and three seeds. On heterogeneous multi task streams, replay reduces average forgetting by a factor of two to three, while on benign time based streams both methods perform similarly. These results position stateful replay as a strong and simple baseline for continual learning in streaming environments." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/25/MitigatingCatastrophicForgettinginStreamingGenerativeandPredictiveLearningviaStatefulReplay.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/25/MitigatingCatastrophicForgettinginStreamingGenerativeandPredictiveLearningviaStatefulReplay.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mitigating Catastrophic Forgetting in Streaming Generative and Predictive Learning via Stateful Replay" />
+<script type="application/ld+json">
+{"description":"Many deployed learning systems must update models on streaming data under memory constraints. The default strategy, sequential fine-tuning on each new phase, is architecture-agnostic but often suffers catastrophic forgetting when later phases correspond to different sub-populations or tasks. Replay with a finite buffer is a simple alternative, yet its behaviour across generative and predictive objectives is not well understood. We present a unified study of stateful replay for streaming autoencoding, time series forecasting, and classification. We view both sequential fine-tuning and replay as stochastic gradient methods for an ideal joint objective, and use a gradient alignment analysis to show when mixing current and historical samples should reduce forgetting. We then evaluate a single replay mechanism on six streaming scenarios built from Rotated MNIST, ElectricityLoadDiagrams 2011-2014, and Airlines delay data, using matched training budgets and three seeds. On heterogeneous multi task streams, replay reduces average forgetting by a factor of two to three, while on benign time based streams both methods perform similarly. These results position stateful replay as a strong and simple baseline for continual learning in streaming environments.","headline":"Mitigating Catastrophic Forgetting in Streaming Generative and Predictive Learning via Stateful Replay","dateModified":"2025-11-25T00:00:00+00:00","datePublished":"2025-11-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/25/MitigatingCatastrophicForgettinginStreamingGenerativeandPredictiveLearningviaStatefulReplay.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/25/MitigatingCatastrophicForgettinginStreamingGenerativeandPredictiveLearningviaStatefulReplay.html","author":{"@type":"Person","name":"Wenzhang Du"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-25 00:00:00 +0000">11-25</time>
+  </p>
+  
+  <h1>Mitigating Catastrophic Forgetting in Streaming Generative and Predictive Learning via Stateful Replay</h1>
+  <br>Wenzhang Du</h3>
+  <br> [stat.ML]
+
+  <p>Many deployed learning systems must update models on streaming data under memory constraints. The default strategy, sequential fine-tuning on each new phase, is architecture-agnostic but often suffers catastrophic forgetting when later phases correspond to different sub-populations or tasks. Replay with a finite buffer is a simple alternative, yet its behaviour across generative and predictive objectives is not well understood. We present a unified study of stateful replay for streaming autoencoding, time series forecasting, and classification. We view both sequential fine-tuning and replay as stochastic gradient methods for an ideal joint objective, and use a gradient alignment analysis to show when mixing current and historical samples should reduce forgetting. We then evaluate a single replay mechanism on six streaming scenarios built from Rotated MNIST, ElectricityLoadDiagrams 2011-2014, and Airlines delay data, using matched training budgets and three seeds. On heterogeneous multi task streams, replay reduces average forgetting by a factor of two to three, while on benign time based streams both methods perform similarly. These results position stateful replay as a strong and simple baseline for continual learning in streaming environments.</p>
+
+<p><a href="https://arxiv.org/abs/2511.17936">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
