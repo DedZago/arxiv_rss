@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When +1% Is Not Enough: A Paired Bootstrap Protocol for Evaluating Small Improvements</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When +1% Is Not Enough: A Paired Bootstrap Protocol for Evaluating Small Improvements" />
+<meta name="author" content="Wenzhang Du" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent machine learning papers often report 1-2 percentage point improvements from a single run on a benchmark. These gains are highly sensitive to random seeds, data ordering, and implementation details, yet are rarely accompanied by uncertainty estimates or significance tests. It is therefore unclear when a reported +1-2% reflects a real algorithmic advance versus noise. We revisit this problem under realistic compute budgets, where only a few runs are affordable. We propose a simple, PC-friendly evaluation protocol based on paired multi-seed runs, bias-corrected and accelerated (BCa) bootstrap confidence intervals, and a sign-flip permutation test on per-seed deltas. The protocol is intentionally conservative and is meant as a guardrail against over-claiming. We instantiate it on CIFAR-10, CIFAR-10N, and AG News using synthetic no-improvement, small-gain, and medium-gain scenarios. Single runs and unpaired t-tests often suggest significant gains for 0.6-2.0 point improvements, especially on text. With only three seeds, our paired protocol never declares significance in these settings. We argue that such conservative evaluation is a safer default for small gains under tight budgets." />
+<meta property="og:description" content="Recent machine learning papers often report 1-2 percentage point improvements from a single run on a benchmark. These gains are highly sensitive to random seeds, data ordering, and implementation details, yet are rarely accompanied by uncertainty estimates or significance tests. It is therefore unclear when a reported +1-2% reflects a real algorithmic advance versus noise. We revisit this problem under realistic compute budgets, where only a few runs are affordable. We propose a simple, PC-friendly evaluation protocol based on paired multi-seed runs, bias-corrected and accelerated (BCa) bootstrap confidence intervals, and a sign-flip permutation test on per-seed deltas. The protocol is intentionally conservative and is meant as a guardrail against over-claiming. We instantiate it on CIFAR-10, CIFAR-10N, and AG News using synthetic no-improvement, small-gain, and medium-gain scenarios. Single runs and unpaired t-tests often suggest significant gains for 0.6-2.0 point improvements, especially on text. With only three seeds, our paired protocol never declares significance in these settings. We argue that such conservative evaluation is a safer default for small gains under tight budgets." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/26/When1IsNotEnoughAPairedBootstrapProtocolforEvaluatingSmallImprovements.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/26/When1IsNotEnoughAPairedBootstrapProtocolforEvaluatingSmallImprovements.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When +1% Is Not Enough: A Paired Bootstrap Protocol for Evaluating Small Improvements" />
+<script type="application/ld+json">
+{"description":"Recent machine learning papers often report 1-2 percentage point improvements from a single run on a benchmark. These gains are highly sensitive to random seeds, data ordering, and implementation details, yet are rarely accompanied by uncertainty estimates or significance tests. It is therefore unclear when a reported +1-2% reflects a real algorithmic advance versus noise. We revisit this problem under realistic compute budgets, where only a few runs are affordable. We propose a simple, PC-friendly evaluation protocol based on paired multi-seed runs, bias-corrected and accelerated (BCa) bootstrap confidence intervals, and a sign-flip permutation test on per-seed deltas. The protocol is intentionally conservative and is meant as a guardrail against over-claiming. We instantiate it on CIFAR-10, CIFAR-10N, and AG News using synthetic no-improvement, small-gain, and medium-gain scenarios. Single runs and unpaired t-tests often suggest significant gains for 0.6-2.0 point improvements, especially on text. With only three seeds, our paired protocol never declares significance in these settings. We argue that such conservative evaluation is a safer default for small gains under tight budgets.","headline":"When +1% Is Not Enough: A Paired Bootstrap Protocol for Evaluating Small Improvements","dateModified":"2025-11-26T00:00:00+00:00","datePublished":"2025-11-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/26/When1IsNotEnoughAPairedBootstrapProtocolforEvaluatingSmallImprovements.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/26/When1IsNotEnoughAPairedBootstrapProtocolforEvaluatingSmallImprovements.html","author":{"@type":"Person","name":"Wenzhang Du"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-26 00:00:00 +0000">11-26</time>
+  </p>
+  
+  <h1>When +1% Is Not Enough: A Paired Bootstrap Protocol for Evaluating Small Improvements</h1>
+  <br>Wenzhang Du</h3>
+  <br> [stat.ML]
+
+  <p>Recent machine learning papers often report 1-2 percentage point improvements from a single run on a benchmark. These gains are highly sensitive to random seeds, data ordering, and implementation details, yet are rarely accompanied by uncertainty estimates or significance tests. It is therefore unclear when a reported +1-2% reflects a real algorithmic advance versus noise.
+  We revisit this problem under realistic compute budgets, where only a few runs are affordable. We propose a simple, PC-friendly evaluation protocol based on paired multi-seed runs, bias-corrected and accelerated (BCa) bootstrap confidence intervals, and a sign-flip permutation test on per-seed deltas. The protocol is intentionally conservative and is meant as a guardrail against over-claiming.
+  We instantiate it on CIFAR-10, CIFAR-10N, and AG News using synthetic no-improvement, small-gain, and medium-gain scenarios. Single runs and unpaired t-tests often suggest significant gains for 0.6-2.0 point improvements, especially on text. With only three seeds, our paired protocol never declares significance in these settings. We argue that such conservative evaluation is a safer default for small gains under tight budgets.</p>
+
+<p><a href="https://arxiv.org/abs/2511.19794">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
