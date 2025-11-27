@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Selecting Belief-State Approximations in Simulators with Latent States</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Selecting Belief-State Approximations in Simulators with Latent States" />
+<meta name="author" content="Nan Jiang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="State resetting is a fundamental but often overlooked capability of simulators. It supports sample-based planning by allowing resets to previously encountered simulation states, and enables calibration of simulators using real data by resetting to states observed in real-system traces. While often taken for granted, state resetting in complex simulators can be nontrivial: when the simulator comes with latent variables (states), state resetting requires sampling from the posterior over the latent state given the observable history, a.k.a. the belief state (Silver and Veness, 2010). While exact sampling is often infeasible, many approximate belief-state samplers can be constructed, raising the question of how to select among them using only sampling access to the simulator. In this paper, we show that this problem reduces to a general conditional distribution-selection task and develop a new algorithm and analysis under sampling-only access. Building on this reduction, the belief-state selection problem admits two different formulations: latent state-based selection, which directly targets the conditional distribution of the latent state, and observation-based selection, which targets the induced distribution over the observation. Interestingly, these formulations differ in how their guarantees interact with the downstream roll-out methods: perhaps surprisingly, observation-based selection may fail under the most natural roll-out method (which we call Single-Reset) but enjoys guarantees under the less conventional alternative (which we call Repeated-Reset). Together with discussion on issues such as distribution shift and the choice of sampling policies, our paper reveals a rich landscape of algorithmic choices, theoretical nuances, and open questions, in this seemingly simple problem." />
+<meta property="og:description" content="State resetting is a fundamental but often overlooked capability of simulators. It supports sample-based planning by allowing resets to previously encountered simulation states, and enables calibration of simulators using real data by resetting to states observed in real-system traces. While often taken for granted, state resetting in complex simulators can be nontrivial: when the simulator comes with latent variables (states), state resetting requires sampling from the posterior over the latent state given the observable history, a.k.a. the belief state (Silver and Veness, 2010). While exact sampling is often infeasible, many approximate belief-state samplers can be constructed, raising the question of how to select among them using only sampling access to the simulator. In this paper, we show that this problem reduces to a general conditional distribution-selection task and develop a new algorithm and analysis under sampling-only access. Building on this reduction, the belief-state selection problem admits two different formulations: latent state-based selection, which directly targets the conditional distribution of the latent state, and observation-based selection, which targets the induced distribution over the observation. Interestingly, these formulations differ in how their guarantees interact with the downstream roll-out methods: perhaps surprisingly, observation-based selection may fail under the most natural roll-out method (which we call Single-Reset) but enjoys guarantees under the less conventional alternative (which we call Repeated-Reset). Together with discussion on issues such as distribution shift and the choice of sampling policies, our paper reveals a rich landscape of algorithmic choices, theoretical nuances, and open questions, in this seemingly simple problem." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/11/27/SelectingBeliefStateApproximationsinSimulatorswithLatentStates.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/11/27/SelectingBeliefStateApproximationsinSimulatorswithLatentStates.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Selecting Belief-State Approximations in Simulators with Latent States" />
+<script type="application/ld+json">
+{"description":"State resetting is a fundamental but often overlooked capability of simulators. It supports sample-based planning by allowing resets to previously encountered simulation states, and enables calibration of simulators using real data by resetting to states observed in real-system traces. While often taken for granted, state resetting in complex simulators can be nontrivial: when the simulator comes with latent variables (states), state resetting requires sampling from the posterior over the latent state given the observable history, a.k.a. the belief state (Silver and Veness, 2010). While exact sampling is often infeasible, many approximate belief-state samplers can be constructed, raising the question of how to select among them using only sampling access to the simulator. In this paper, we show that this problem reduces to a general conditional distribution-selection task and develop a new algorithm and analysis under sampling-only access. Building on this reduction, the belief-state selection problem admits two different formulations: latent state-based selection, which directly targets the conditional distribution of the latent state, and observation-based selection, which targets the induced distribution over the observation. Interestingly, these formulations differ in how their guarantees interact with the downstream roll-out methods: perhaps surprisingly, observation-based selection may fail under the most natural roll-out method (which we call Single-Reset) but enjoys guarantees under the less conventional alternative (which we call Repeated-Reset). Together with discussion on issues such as distribution shift and the choice of sampling policies, our paper reveals a rich landscape of algorithmic choices, theoretical nuances, and open questions, in this seemingly simple problem.","headline":"Selecting Belief-State Approximations in Simulators with Latent States","dateModified":"2025-11-27T00:00:00+00:00","datePublished":"2025-11-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/11/27/SelectingBeliefStateApproximationsinSimulatorswithLatentStates.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/11/27/SelectingBeliefStateApproximationsinSimulatorswithLatentStates.html","author":{"@type":"Person","name":"Nan Jiang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-11-27 00:00:00 +0000">11-27</time>
+  </p>
+  
+  <h1>Selecting Belief-State Approximations in Simulators with Latent States</h1>
+  <br>Nan Jiang</h3>
+  <br> [stat.ML]
+
+  <p>State resetting is a fundamental but often overlooked capability of simulators. It supports sample-based planning by allowing resets to previously encountered simulation states, and enables calibration of simulators using real data by resetting to states observed in real-system traces. While often taken for granted, state resetting in complex simulators can be nontrivial: when the simulator comes with latent variables (states), state resetting requires sampling from the posterior over the latent state given the observable history, a.k.a. the belief state (Silver and Veness, 2010). While exact sampling is often infeasible, many approximate belief-state samplers can be constructed, raising the question of how to select among them using only sampling access to the simulator.
+  In this paper, we show that this problem reduces to a general conditional distribution-selection task and develop a new algorithm and analysis under sampling-only access. Building on this reduction, the belief-state selection problem admits two different formulations: latent state-based selection, which directly targets the conditional distribution of the latent state, and observation-based selection, which targets the induced distribution over the observation. Interestingly, these formulations differ in how their guarantees interact with the downstream roll-out methods: perhaps surprisingly, observation-based selection may fail under the most natural roll-out method (which we call Single-Reset) but enjoys guarantees under the less conventional alternative (which we call Repeated-Reset). Together with discussion on issues such as distribution shift and the choice of sampling policies, our paper reveals a rich landscape of algorithmic choices, theoretical nuances, and open questions, in this seemingly simple problem.</p>
+
+<p><a href="https://arxiv.org/abs/2511.20870">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
