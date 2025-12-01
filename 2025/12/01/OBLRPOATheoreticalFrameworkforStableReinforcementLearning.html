@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>OBLR-PO: A Theoretical Framework for Stable Reinforcement Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="OBLR-PO: A Theoretical Framework for Stable Reinforcement Learning" />
+<meta name="author" content="Zixun Huang, Jiayi Sheng, Zeyu Zheng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Existing reinforcement learning (RL)-based post-training methods for large language models have advanced rapidly, yet their design has largely been guided by heuristics rather than systematic theoretical principles. This gap limits our understanding of the properties of the gradient estimators and the associated optimization algorithms, thereby constraining opportunities to improve training stability and overall performance. In this work, we provide a unified theoretical framework that characterizes the statistical properties of commonly used policy-gradient estimators under mild assumptions. Our analysis establishes unbiasedness, derives exact variance expressions, and yields an optimization-loss upper bound that enables principled reasoning about learning dynamics. Building on these results, we prove convergence guarantees and derive an adaptive learning-rate schedule governed by the signal-to-noise ratio (SNR) of gradients. We further show that the variance-optimal baseline is a gradient-weighted estimator, offering a new principle for variance reduction and naturally enhancing stability beyond existing methods. These insights motivate Optimal Baseline and Learning-Rate Policy Optimization (OBLR-PO), an algorithm that jointly adapts learning rates and baselines in a theoretically grounded manner. Experiments on Qwen3-4B-Base and Qwen3-8B-Base demonstrate consistent gains over existing policy optimization methods, validating that our theoretical contributions translate into practical improvements in large-scale post-training." />
+<meta property="og:description" content="Existing reinforcement learning (RL)-based post-training methods for large language models have advanced rapidly, yet their design has largely been guided by heuristics rather than systematic theoretical principles. This gap limits our understanding of the properties of the gradient estimators and the associated optimization algorithms, thereby constraining opportunities to improve training stability and overall performance. In this work, we provide a unified theoretical framework that characterizes the statistical properties of commonly used policy-gradient estimators under mild assumptions. Our analysis establishes unbiasedness, derives exact variance expressions, and yields an optimization-loss upper bound that enables principled reasoning about learning dynamics. Building on these results, we prove convergence guarantees and derive an adaptive learning-rate schedule governed by the signal-to-noise ratio (SNR) of gradients. We further show that the variance-optimal baseline is a gradient-weighted estimator, offering a new principle for variance reduction and naturally enhancing stability beyond existing methods. These insights motivate Optimal Baseline and Learning-Rate Policy Optimization (OBLR-PO), an algorithm that jointly adapts learning rates and baselines in a theoretically grounded manner. Experiments on Qwen3-4B-Base and Qwen3-8B-Base demonstrate consistent gains over existing policy optimization methods, validating that our theoretical contributions translate into practical improvements in large-scale post-training." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/01/OBLRPOATheoreticalFrameworkforStableReinforcementLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/01/OBLRPOATheoreticalFrameworkforStableReinforcementLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="OBLR-PO: A Theoretical Framework for Stable Reinforcement Learning" />
+<script type="application/ld+json">
+{"description":"Existing reinforcement learning (RL)-based post-training methods for large language models have advanced rapidly, yet their design has largely been guided by heuristics rather than systematic theoretical principles. This gap limits our understanding of the properties of the gradient estimators and the associated optimization algorithms, thereby constraining opportunities to improve training stability and overall performance. In this work, we provide a unified theoretical framework that characterizes the statistical properties of commonly used policy-gradient estimators under mild assumptions. Our analysis establishes unbiasedness, derives exact variance expressions, and yields an optimization-loss upper bound that enables principled reasoning about learning dynamics. Building on these results, we prove convergence guarantees and derive an adaptive learning-rate schedule governed by the signal-to-noise ratio (SNR) of gradients. We further show that the variance-optimal baseline is a gradient-weighted estimator, offering a new principle for variance reduction and naturally enhancing stability beyond existing methods. These insights motivate Optimal Baseline and Learning-Rate Policy Optimization (OBLR-PO), an algorithm that jointly adapts learning rates and baselines in a theoretically grounded manner. Experiments on Qwen3-4B-Base and Qwen3-8B-Base demonstrate consistent gains over existing policy optimization methods, validating that our theoretical contributions translate into practical improvements in large-scale post-training.","headline":"OBLR-PO: A Theoretical Framework for Stable Reinforcement Learning","dateModified":"2025-12-01T00:00:00+00:00","datePublished":"2025-12-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/01/OBLRPOATheoreticalFrameworkforStableReinforcementLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/01/OBLRPOATheoreticalFrameworkforStableReinforcementLearning.html","author":{"@type":"Person","name":"Zixun Huang, Jiayi Sheng, Zeyu Zheng"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-01 00:00:00 +0000">12-01</time>
+  </p>
+  
+  <h1>OBLR-PO: A Theoretical Framework for Stable Reinforcement Learning</h1>
+  <br>Zixun Huang, Jiayi Sheng, Zeyu Zheng</h3>
+  <br> [stat.ML]
+
+  <p>Existing reinforcement learning (RL)-based post-training methods for large language models have advanced rapidly, yet their design has largely been guided by heuristics rather than systematic theoretical principles. This gap limits our understanding of the properties of the gradient estimators and the associated optimization algorithms, thereby constraining opportunities to improve training stability and overall performance. In this work, we provide a unified theoretical framework that characterizes the statistical properties of commonly used policy-gradient estimators under mild assumptions. Our analysis establishes unbiasedness, derives exact variance expressions, and yields an optimization-loss upper bound that enables principled reasoning about learning dynamics. Building on these results, we prove convergence guarantees and derive an adaptive learning-rate schedule governed by the signal-to-noise ratio (SNR) of gradients. We further show that the variance-optimal baseline is a gradient-weighted estimator, offering a new principle for variance reduction and naturally enhancing stability beyond existing methods. These insights motivate Optimal Baseline and Learning-Rate Policy Optimization (OBLR-PO), an algorithm that jointly adapts learning rates and baselines in a theoretically grounded manner. Experiments on Qwen3-4B-Base and Qwen3-8B-Base demonstrate consistent gains over existing policy optimization methods, validating that our theoretical contributions translate into practical improvements in large-scale post-training.</p>
+
+<p><a href="https://arxiv.org/abs/2511.23310">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Saddle-Free Guidance: Improved On-Manifold Sampling without Labels or Additional Training</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Saddle-Free Guidance: Improved On-Manifold Sampling without Labels or Additional Training" />
+<meta name="author" content="Eric Yeats, Darryl Hannan, Wilson Fearn, Timothy Doster, Henry Kvinge, Scott Mahan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Score-based generative models require guidance in order to generate plausible, on-manifold samples. The most popular guidance method, Classifier-Free Guidance (CFG), is only applicable in settings with labeled data and requires training an additional unconditional score-based model. More recently, Auto-Guidance adopts a smaller, less capable version of the original model to guide generation. While each method effectively promotes the fidelity of generated data, each requires labeled data or the training of additional models, making it challenging to guide score-based models when (labeled) training data are not available or training new models is not feasible. We make the surprising discovery that the positive curvature of log density estimates in saddle regions provides strong guidance for score-based models. Motivated by this, we develop saddle-free guidance (SFG) which maintains estimates of maximal positive curvature of the log density to guide individual score-based models. SFG has the same computational cost of classifier-free guidance, does not require additional training, and works with off-the-shelf diffusion and flow matching models. Our experiments indicate that SFG achieves state-of-the-art FID and FD-DINOv2 metrics in single-model unconditional ImageNet-512 generation. When SFG is combined with Auto-Guidance, its unconditional samples achieve general state-of-the-art in FD-DINOv2 score. Our experiments with FLUX.1-dev and Stable Diffusion v3.5 indicate that SFG boosts the diversity of output images compared to CFG while maintaining excellent prompt adherence and image fidelity." />
+<meta property="og:description" content="Score-based generative models require guidance in order to generate plausible, on-manifold samples. The most popular guidance method, Classifier-Free Guidance (CFG), is only applicable in settings with labeled data and requires training an additional unconditional score-based model. More recently, Auto-Guidance adopts a smaller, less capable version of the original model to guide generation. While each method effectively promotes the fidelity of generated data, each requires labeled data or the training of additional models, making it challenging to guide score-based models when (labeled) training data are not available or training new models is not feasible. We make the surprising discovery that the positive curvature of log density estimates in saddle regions provides strong guidance for score-based models. Motivated by this, we develop saddle-free guidance (SFG) which maintains estimates of maximal positive curvature of the log density to guide individual score-based models. SFG has the same computational cost of classifier-free guidance, does not require additional training, and works with off-the-shelf diffusion and flow matching models. Our experiments indicate that SFG achieves state-of-the-art FID and FD-DINOv2 metrics in single-model unconditional ImageNet-512 generation. When SFG is combined with Auto-Guidance, its unconditional samples achieve general state-of-the-art in FD-DINOv2 score. Our experiments with FLUX.1-dev and Stable Diffusion v3.5 indicate that SFG boosts the diversity of output images compared to CFG while maintaining excellent prompt adherence and image fidelity." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/01/SaddleFreeGuidanceImprovedOnManifoldSamplingwithoutLabelsorAdditionalTraining.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/01/SaddleFreeGuidanceImprovedOnManifoldSamplingwithoutLabelsorAdditionalTraining.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Saddle-Free Guidance: Improved On-Manifold Sampling without Labels or Additional Training" />
+<script type="application/ld+json">
+{"description":"Score-based generative models require guidance in order to generate plausible, on-manifold samples. The most popular guidance method, Classifier-Free Guidance (CFG), is only applicable in settings with labeled data and requires training an additional unconditional score-based model. More recently, Auto-Guidance adopts a smaller, less capable version of the original model to guide generation. While each method effectively promotes the fidelity of generated data, each requires labeled data or the training of additional models, making it challenging to guide score-based models when (labeled) training data are not available or training new models is not feasible. We make the surprising discovery that the positive curvature of log density estimates in saddle regions provides strong guidance for score-based models. Motivated by this, we develop saddle-free guidance (SFG) which maintains estimates of maximal positive curvature of the log density to guide individual score-based models. SFG has the same computational cost of classifier-free guidance, does not require additional training, and works with off-the-shelf diffusion and flow matching models. Our experiments indicate that SFG achieves state-of-the-art FID and FD-DINOv2 metrics in single-model unconditional ImageNet-512 generation. When SFG is combined with Auto-Guidance, its unconditional samples achieve general state-of-the-art in FD-DINOv2 score. Our experiments with FLUX.1-dev and Stable Diffusion v3.5 indicate that SFG boosts the diversity of output images compared to CFG while maintaining excellent prompt adherence and image fidelity.","headline":"Saddle-Free Guidance: Improved On-Manifold Sampling without Labels or Additional Training","dateModified":"2025-12-01T00:00:00+00:00","datePublished":"2025-12-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/01/SaddleFreeGuidanceImprovedOnManifoldSamplingwithoutLabelsorAdditionalTraining.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/01/SaddleFreeGuidanceImprovedOnManifoldSamplingwithoutLabelsorAdditionalTraining.html","author":{"@type":"Person","name":"Eric Yeats, Darryl Hannan, Wilson Fearn, Timothy Doster, Henry Kvinge, Scott Mahan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-01 00:00:00 +0000">12-01</time>
+  </p>
+  
+  <h1>Saddle-Free Guidance: Improved On-Manifold Sampling without Labels or Additional Training</h1>
+  <br>Eric Yeats, Darryl Hannan, Wilson Fearn, Timothy Doster, Henry Kvinge, Scott Mahan</h3>
+  <br> [stat.ML]
+
+  <p>Score-based generative models require guidance in order to generate plausible, on-manifold samples. The most popular guidance method, Classifier-Free Guidance (CFG), is only applicable in settings with labeled data and requires training an additional unconditional score-based model. More recently, Auto-Guidance adopts a smaller, less capable version of the original model to guide generation. While each method effectively promotes the fidelity of generated data, each requires labeled data or the training of additional models, making it challenging to guide score-based models when (labeled) training data are not available or training new models is not feasible.
+  We make the surprising discovery that the positive curvature of log density estimates in saddle regions provides strong guidance for score-based models. Motivated by this, we develop saddle-free guidance (SFG) which maintains estimates of maximal positive curvature of the log density to guide individual score-based models. SFG has the same computational cost of classifier-free guidance, does not require additional training, and works with off-the-shelf diffusion and flow matching models. Our experiments indicate that SFG achieves state-of-the-art FID and FD-DINOv2 metrics in single-model unconditional ImageNet-512 generation. When SFG is combined with Auto-Guidance, its unconditional samples achieve general state-of-the-art in FD-DINOv2 score. Our experiments with FLUX.1-dev and Stable Diffusion v3.5 indicate that SFG boosts the diversity of output images compared to CFG while maintaining excellent prompt adherence and image fidelity.</p>
+
+<p><a href="https://arxiv.org/abs/2511.21863">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
