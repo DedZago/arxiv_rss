@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ESPO: Entropy Importance Sampling Policy Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ESPO: Entropy Importance Sampling Policy Optimization" />
+<meta name="author" content="Yuepeng Sheng, Yuwei Huang, Shuman Liu, Haibo Zhang, Anxiang Zeng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language model (LLM) reinforcement learning has increasingly relied on group-based policy optimization frameworks, such as GRPO and GSPO, to achieve stable fine-tuning at scale. However, a fundamental trade-off persists between optimization granularity and training stability. While GSPO improves robustness via sequence-level optimization, its monolithic treatment of sequences introduces severe inefficiencies: its conservative clipping mechanism indiscriminately discards valid training samples-a phenomenon we term gradient underutilization-and its uniform credit assignment fails to capture the heterogeneous contributions of critical reasoning steps. In this work, we propose Entropy Importance Sampling Policy Optimization (ESPO), a novel framework that reconciles fine-grained control with training stability. ESPO decomposes sequences into groups based on predictive entropy, enabling (1) Entropy-driven Importance Sampling to capture intra-sequence heterogeneity, and (2) Entropy-adaptive Clipping to dynamically allocate trust regions based on model uncertainty. Extensive experiments on mathematical reasoning benchmarks demonstrate that ESPO not only accelerates convergence but also achieves state-of-the-art performance, notably improving accuracy on the challenging HMMT benchmark from 4.4% to 13.13%." />
+<meta property="og:description" content="Large language model (LLM) reinforcement learning has increasingly relied on group-based policy optimization frameworks, such as GRPO and GSPO, to achieve stable fine-tuning at scale. However, a fundamental trade-off persists between optimization granularity and training stability. While GSPO improves robustness via sequence-level optimization, its monolithic treatment of sequences introduces severe inefficiencies: its conservative clipping mechanism indiscriminately discards valid training samples-a phenomenon we term gradient underutilization-and its uniform credit assignment fails to capture the heterogeneous contributions of critical reasoning steps. In this work, we propose Entropy Importance Sampling Policy Optimization (ESPO), a novel framework that reconciles fine-grained control with training stability. ESPO decomposes sequences into groups based on predictive entropy, enabling (1) Entropy-driven Importance Sampling to capture intra-sequence heterogeneity, and (2) Entropy-adaptive Clipping to dynamically allocate trust regions based on model uncertainty. Extensive experiments on mathematical reasoning benchmarks demonstrate that ESPO not only accelerates convergence but also achieves state-of-the-art performance, notably improving accuracy on the challenging HMMT benchmark from 4.4% to 13.13%." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/02/ESPOEntropyImportanceSamplingPolicyOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/02/ESPOEntropyImportanceSamplingPolicyOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ESPO: Entropy Importance Sampling Policy Optimization" />
+<script type="application/ld+json">
+{"description":"Large language model (LLM) reinforcement learning has increasingly relied on group-based policy optimization frameworks, such as GRPO and GSPO, to achieve stable fine-tuning at scale. However, a fundamental trade-off persists between optimization granularity and training stability. While GSPO improves robustness via sequence-level optimization, its monolithic treatment of sequences introduces severe inefficiencies: its conservative clipping mechanism indiscriminately discards valid training samples-a phenomenon we term gradient underutilization-and its uniform credit assignment fails to capture the heterogeneous contributions of critical reasoning steps. In this work, we propose Entropy Importance Sampling Policy Optimization (ESPO), a novel framework that reconciles fine-grained control with training stability. ESPO decomposes sequences into groups based on predictive entropy, enabling (1) Entropy-driven Importance Sampling to capture intra-sequence heterogeneity, and (2) Entropy-adaptive Clipping to dynamically allocate trust regions based on model uncertainty. Extensive experiments on mathematical reasoning benchmarks demonstrate that ESPO not only accelerates convergence but also achieves state-of-the-art performance, notably improving accuracy on the challenging HMMT benchmark from 4.4% to 13.13%.","headline":"ESPO: Entropy Importance Sampling Policy Optimization","dateModified":"2025-12-02T00:00:00+00:00","datePublished":"2025-12-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/02/ESPOEntropyImportanceSamplingPolicyOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/02/ESPOEntropyImportanceSamplingPolicyOptimization.html","author":{"@type":"Person","name":"Yuepeng Sheng, Yuwei Huang, Shuman Liu, Haibo Zhang, Anxiang Zeng"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-02 00:00:00 +0000">12-02</time>
+  </p>
+  
+  <h1>ESPO: Entropy Importance Sampling Policy Optimization</h1>
+  <br>Yuepeng Sheng, Yuwei Huang, Shuman Liu, Haibo Zhang, Anxiang Zeng</h3>
+  <br> [stat.ML]
+
+  <p>Large language model (LLM) reinforcement learning has increasingly relied on group-based policy optimization frameworks, such as GRPO and GSPO, to achieve stable fine-tuning at scale. However, a fundamental trade-off persists between optimization granularity and training stability. While GSPO improves robustness via sequence-level optimization, its monolithic treatment of sequences introduces severe inefficiencies: its conservative clipping mechanism indiscriminately discards valid training samples-a phenomenon we term gradient underutilization-and its uniform credit assignment fails to capture the heterogeneous contributions of critical reasoning steps. In this work, we propose Entropy Importance Sampling Policy Optimization (ESPO), a novel framework that reconciles fine-grained control with training stability. ESPO decomposes sequences into groups based on predictive entropy, enabling (1) Entropy-driven Importance Sampling to capture intra-sequence heterogeneity, and (2) Entropy-adaptive Clipping to dynamically allocate trust regions based on model uncertainty. Extensive experiments on mathematical reasoning benchmarks demonstrate that ESPO not only accelerates convergence but also achieves state-of-the-art performance, notably improving accuracy on the challenging HMMT benchmark from 4.4% to 13.13%.</p>
+
+<p><a href="https://arxiv.org/abs/2512.00499">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
