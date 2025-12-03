@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Unlocking the Power of Boltzmann Machines by Parallelizable Sampler and Efficient Temperature Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Unlocking the Power of Boltzmann Machines by Parallelizable Sampler and Efficient Temperature Estimation" />
+<meta name="author" content="Kentaro Kubo, Hayato Goto" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Boltzmann machines (BMs) are powerful energy-based generative models, but their heavy training cost has largely confined practical use to Restricted BMs (RBMs) trained with an efficient learning method called contrastive divergence. More accurate learning typically requires Markov chain Monte Carlo (MCMC) Boltzmann sampling, but it is time-consuming due to the difficulty of parallelization for more expressive models. To address this limitation, we first propose a new Boltzmann sampler inspired by a quantum-inspired combinatorial optimization called simulated bifurcation (SB). This SB-inspired approach, which we name Langevin SB (LSB), enables parallelized sampling while maintaining accuracy comparable to MCMC. Furthermore, this is applicable not only to RBMs but also to BMs with general couplings. However, LSB cannot control the inverse temperature of the output Boltzmann distribution, which hinders learning and degrades performance. To overcome this limitation, we also developed an efficient method for estimating the inverse temperature during the learning process, which we call conditional expectation matching (CEM). By combining LSB and CEM, we establish an efficient learning framework for BMs with greater expressive power than RBMs. We refer to this framework as sampler-adaptive learning (SAL). SAL opens new avenues for energy-based generative modeling beyond RBMs." />
+<meta property="og:description" content="Boltzmann machines (BMs) are powerful energy-based generative models, but their heavy training cost has largely confined practical use to Restricted BMs (RBMs) trained with an efficient learning method called contrastive divergence. More accurate learning typically requires Markov chain Monte Carlo (MCMC) Boltzmann sampling, but it is time-consuming due to the difficulty of parallelization for more expressive models. To address this limitation, we first propose a new Boltzmann sampler inspired by a quantum-inspired combinatorial optimization called simulated bifurcation (SB). This SB-inspired approach, which we name Langevin SB (LSB), enables parallelized sampling while maintaining accuracy comparable to MCMC. Furthermore, this is applicable not only to RBMs but also to BMs with general couplings. However, LSB cannot control the inverse temperature of the output Boltzmann distribution, which hinders learning and degrades performance. To overcome this limitation, we also developed an efficient method for estimating the inverse temperature during the learning process, which we call conditional expectation matching (CEM). By combining LSB and CEM, we establish an efficient learning framework for BMs with greater expressive power than RBMs. We refer to this framework as sampler-adaptive learning (SAL). SAL opens new avenues for energy-based generative modeling beyond RBMs." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/03/UnlockingthePowerofBoltzmannMachinesbyParallelizableSamplerandEfficientTemperatureEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/03/UnlockingthePowerofBoltzmannMachinesbyParallelizableSamplerandEfficientTemperatureEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unlocking the Power of Boltzmann Machines by Parallelizable Sampler and Efficient Temperature Estimation" />
+<script type="application/ld+json">
+{"description":"Boltzmann machines (BMs) are powerful energy-based generative models, but their heavy training cost has largely confined practical use to Restricted BMs (RBMs) trained with an efficient learning method called contrastive divergence. More accurate learning typically requires Markov chain Monte Carlo (MCMC) Boltzmann sampling, but it is time-consuming due to the difficulty of parallelization for more expressive models. To address this limitation, we first propose a new Boltzmann sampler inspired by a quantum-inspired combinatorial optimization called simulated bifurcation (SB). This SB-inspired approach, which we name Langevin SB (LSB), enables parallelized sampling while maintaining accuracy comparable to MCMC. Furthermore, this is applicable not only to RBMs but also to BMs with general couplings. However, LSB cannot control the inverse temperature of the output Boltzmann distribution, which hinders learning and degrades performance. To overcome this limitation, we also developed an efficient method for estimating the inverse temperature during the learning process, which we call conditional expectation matching (CEM). By combining LSB and CEM, we establish an efficient learning framework for BMs with greater expressive power than RBMs. We refer to this framework as sampler-adaptive learning (SAL). SAL opens new avenues for energy-based generative modeling beyond RBMs.","headline":"Unlocking the Power of Boltzmann Machines by Parallelizable Sampler and Efficient Temperature Estimation","dateModified":"2025-12-03T00:00:00+00:00","datePublished":"2025-12-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/03/UnlockingthePowerofBoltzmannMachinesbyParallelizableSamplerandEfficientTemperatureEstimation.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/03/UnlockingthePowerofBoltzmannMachinesbyParallelizableSamplerandEfficientTemperatureEstimation.html","author":{"@type":"Person","name":"Kentaro Kubo, Hayato Goto"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-03 00:00:00 +0000">12-03</time>
+  </p>
+  
+  <h1>Unlocking the Power of Boltzmann Machines by Parallelizable Sampler and Efficient Temperature Estimation</h1>
+  <br>Kentaro Kubo, Hayato Goto</h3>
+  <br> [stat.ML]
+
+  <p>Boltzmann machines (BMs) are powerful energy-based generative models, but their heavy training cost has largely confined practical use to Restricted BMs (RBMs) trained with an efficient learning method called contrastive divergence. More accurate learning typically requires Markov chain Monte Carlo (MCMC) Boltzmann sampling, but it is time-consuming due to the difficulty of parallelization for more expressive models. To address this limitation, we first propose a new Boltzmann sampler inspired by a quantum-inspired combinatorial optimization called simulated bifurcation (SB). This SB-inspired approach, which we name Langevin SB (LSB), enables parallelized sampling while maintaining accuracy comparable to MCMC. Furthermore, this is applicable not only to RBMs but also to BMs with general couplings. However, LSB cannot control the inverse temperature of the output Boltzmann distribution, which hinders learning and degrades performance. To overcome this limitation, we also developed an efficient method for estimating the inverse temperature during the learning process, which we call conditional expectation matching (CEM). By combining LSB and CEM, we establish an efficient learning framework for BMs with greater expressive power than RBMs. We refer to this framework as sampler-adaptive learning (SAL). SAL opens new avenues for energy-based generative modeling beyond RBMs.</p>
+
+<p><a href="https://arxiv.org/abs/2512.02323">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
