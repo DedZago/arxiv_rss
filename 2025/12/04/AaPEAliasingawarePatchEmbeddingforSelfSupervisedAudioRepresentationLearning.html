@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AaPE: Aliasing-aware Patch Embedding for Self-Supervised Audio Representation Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="AaPE: Aliasing-aware Patch Embedding for Self-Supervised Audio Representation Learning" />
+<meta name="author" content="Kohei Yamamoto, Kosuke Okusa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Transformer-based audio SSL (self-supervised learning) models often treat spectrograms as images, applying convolutional patchification with heavy temporal downsampling. This lowers the effective Nyquist frequency and introduces aliasing, while na&quot;ive low-pass filtering removes task-relevant high-frequency cues. In this study, we present Aliasing-aware Patch Embedding (AaPE), a drop-in patch stem that mitigates aliasing while preserving high-frequency information. AaPE augments standard patch tokens with features produced by a band-limited complex sinusoidal kernel using a two-sided exponential window that dynamically targets alias-prone bands. Frequency and decay parameters of the kernel are estimated from the input, enabling parallel, adaptive subband analysis whose outputs are fused with the standard patch tokens. AaPE integrates seamlessly into the masked teacher-student self-supervised learning. In addition, we combine a multi-mask strategy with a contrastive objective to enforce consistency across diverse mask patterns, stabilizing training. Pre-training on AudioSet followed by fine-tuning evaluation across diverse downstream benchmarks, which spanned categories, such as environmental sounds and other common audio domains. This approach yields state-of-the-art performance on a subset of tasks and competitive results across the remainder. Complementary linear probing evaluation mirrors this pattern, yielding clear gains on several benchmarks and strong performance elsewhere. The collective analysis of these results indicates that AaPE serves to mitigate the effects of aliasing without discarding of informative high-frequency content." />
+<meta property="og:description" content="Transformer-based audio SSL (self-supervised learning) models often treat spectrograms as images, applying convolutional patchification with heavy temporal downsampling. This lowers the effective Nyquist frequency and introduces aliasing, while na&quot;ive low-pass filtering removes task-relevant high-frequency cues. In this study, we present Aliasing-aware Patch Embedding (AaPE), a drop-in patch stem that mitigates aliasing while preserving high-frequency information. AaPE augments standard patch tokens with features produced by a band-limited complex sinusoidal kernel using a two-sided exponential window that dynamically targets alias-prone bands. Frequency and decay parameters of the kernel are estimated from the input, enabling parallel, adaptive subband analysis whose outputs are fused with the standard patch tokens. AaPE integrates seamlessly into the masked teacher-student self-supervised learning. In addition, we combine a multi-mask strategy with a contrastive objective to enforce consistency across diverse mask patterns, stabilizing training. Pre-training on AudioSet followed by fine-tuning evaluation across diverse downstream benchmarks, which spanned categories, such as environmental sounds and other common audio domains. This approach yields state-of-the-art performance on a subset of tasks and competitive results across the remainder. Complementary linear probing evaluation mirrors this pattern, yielding clear gains on several benchmarks and strong performance elsewhere. The collective analysis of these results indicates that AaPE serves to mitigate the effects of aliasing without discarding of informative high-frequency content." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/04/AaPEAliasingawarePatchEmbeddingforSelfSupervisedAudioRepresentationLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/04/AaPEAliasingawarePatchEmbeddingforSelfSupervisedAudioRepresentationLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AaPE: Aliasing-aware Patch Embedding for Self-Supervised Audio Representation Learning" />
+<script type="application/ld+json">
+{"description":"Transformer-based audio SSL (self-supervised learning) models often treat spectrograms as images, applying convolutional patchification with heavy temporal downsampling. This lowers the effective Nyquist frequency and introduces aliasing, while na&quot;ive low-pass filtering removes task-relevant high-frequency cues. In this study, we present Aliasing-aware Patch Embedding (AaPE), a drop-in patch stem that mitigates aliasing while preserving high-frequency information. AaPE augments standard patch tokens with features produced by a band-limited complex sinusoidal kernel using a two-sided exponential window that dynamically targets alias-prone bands. Frequency and decay parameters of the kernel are estimated from the input, enabling parallel, adaptive subband analysis whose outputs are fused with the standard patch tokens. AaPE integrates seamlessly into the masked teacher-student self-supervised learning. In addition, we combine a multi-mask strategy with a contrastive objective to enforce consistency across diverse mask patterns, stabilizing training. Pre-training on AudioSet followed by fine-tuning evaluation across diverse downstream benchmarks, which spanned categories, such as environmental sounds and other common audio domains. This approach yields state-of-the-art performance on a subset of tasks and competitive results across the remainder. Complementary linear probing evaluation mirrors this pattern, yielding clear gains on several benchmarks and strong performance elsewhere. The collective analysis of these results indicates that AaPE serves to mitigate the effects of aliasing without discarding of informative high-frequency content.","headline":"AaPE: Aliasing-aware Patch Embedding for Self-Supervised Audio Representation Learning","dateModified":"2025-12-04T00:00:00+00:00","datePublished":"2025-12-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/04/AaPEAliasingawarePatchEmbeddingforSelfSupervisedAudioRepresentationLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/04/AaPEAliasingawarePatchEmbeddingforSelfSupervisedAudioRepresentationLearning.html","author":{"@type":"Person","name":"Kohei Yamamoto, Kosuke Okusa"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-04 00:00:00 +0000">12-04</time>
+  </p>
+  
+  <h1>AaPE: Aliasing-aware Patch Embedding for Self-Supervised Audio Representation Learning</h1>
+  <br>Kohei Yamamoto, Kosuke Okusa</h3>
+  <br> [stat.ML]
+
+  <p>Transformer-based audio SSL (self-supervised learning) models often treat spectrograms as images, applying convolutional patchification with heavy temporal downsampling. This lowers the effective Nyquist frequency and introduces aliasing, while na"ive low-pass filtering removes task-relevant high-frequency cues. In this study, we present Aliasing-aware Patch Embedding (AaPE), a drop-in patch stem that mitigates aliasing while preserving high-frequency information. AaPE augments standard patch tokens with features produced by a band-limited complex sinusoidal kernel using a two-sided exponential window that dynamically targets alias-prone bands. Frequency and decay parameters of the kernel are estimated from the input, enabling parallel, adaptive subband analysis whose outputs are fused with the standard patch tokens. AaPE integrates seamlessly into the masked teacher-student self-supervised learning. In addition, we combine a multi-mask strategy with a contrastive objective to enforce consistency across diverse mask patterns, stabilizing training. Pre-training on AudioSet followed by fine-tuning evaluation across diverse downstream benchmarks, which spanned categories, such as environmental sounds and other common audio domains. This approach yields state-of-the-art performance on a subset of tasks and competitive results across the remainder. Complementary linear probing evaluation mirrors this pattern, yielding clear gains on several benchmarks and strong performance elsewhere. The collective analysis of these results indicates that AaPE serves to mitigate the effects of aliasing without discarding of informative high-frequency content.</p>
+
+<p><a href="https://arxiv.org/abs/2512.03637">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
