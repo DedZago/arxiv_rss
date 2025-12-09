@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deep Hedging Under Non-Convexity: Limitations and a Case for AlphaZero</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Deep Hedging Under Non-Convexity: Limitations and a Case for AlphaZero" />
+<meta name="author" content="Matteo Maggiolo, Giuseppe Nuti, Miroslav Štrupl, Oleg Szehr" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper examines replication portfolio construction in incomplete markets - a key problem in financial engineering with applications in pricing, hedging, balance sheet management, and energy storage planning. We model this as a two-player game between an investor and the market, where the investor makes strategic bets on future states while the market reveals outcomes. Inspired by the success of Monte Carlo Tree Search in stochastic games, we introduce an AlphaZero-based system and compare its performance to deep hedging - a widely used industry method based on gradient descent. Through theoretical analysis and experiments, we show that deep hedging struggles in environments where the optimal action-value function is not subject to convexity constraints - such as those involving non-convex transaction costs, capital constraints, or regulatory limitations - converging to local optima. We construct specific market environments to highlight these limitations and demonstrate that AlphaZero consistently finds near-optimal replication strategies. On the theoretical side, we establish a connection between deep hedging and convex optimization, suggesting that its effectiveness is contingent on convexity assumptions. Our experiments further suggest that AlphaZero is more sample-efficient - an important advantage in data-scarce, overfitting-prone derivative markets." />
+<meta property="og:description" content="This paper examines replication portfolio construction in incomplete markets - a key problem in financial engineering with applications in pricing, hedging, balance sheet management, and energy storage planning. We model this as a two-player game between an investor and the market, where the investor makes strategic bets on future states while the market reveals outcomes. Inspired by the success of Monte Carlo Tree Search in stochastic games, we introduce an AlphaZero-based system and compare its performance to deep hedging - a widely used industry method based on gradient descent. Through theoretical analysis and experiments, we show that deep hedging struggles in environments where the optimal action-value function is not subject to convexity constraints - such as those involving non-convex transaction costs, capital constraints, or regulatory limitations - converging to local optima. We construct specific market environments to highlight these limitations and demonstrate that AlphaZero consistently finds near-optimal replication strategies. On the theoretical side, we establish a connection between deep hedging and convex optimization, suggesting that its effectiveness is contingent on convexity assumptions. Our experiments further suggest that AlphaZero is more sample-efficient - an important advantage in data-scarce, overfitting-prone derivative markets." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/09/DeepHedgingUnderNonConvexityLimitationsandaCaseforAlphaZero.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/09/DeepHedgingUnderNonConvexityLimitationsandaCaseforAlphaZero.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Deep Hedging Under Non-Convexity: Limitations and a Case for AlphaZero" />
+<script type="application/ld+json">
+{"description":"This paper examines replication portfolio construction in incomplete markets - a key problem in financial engineering with applications in pricing, hedging, balance sheet management, and energy storage planning. We model this as a two-player game between an investor and the market, where the investor makes strategic bets on future states while the market reveals outcomes. Inspired by the success of Monte Carlo Tree Search in stochastic games, we introduce an AlphaZero-based system and compare its performance to deep hedging - a widely used industry method based on gradient descent. Through theoretical analysis and experiments, we show that deep hedging struggles in environments where the optimal action-value function is not subject to convexity constraints - such as those involving non-convex transaction costs, capital constraints, or regulatory limitations - converging to local optima. We construct specific market environments to highlight these limitations and demonstrate that AlphaZero consistently finds near-optimal replication strategies. On the theoretical side, we establish a connection between deep hedging and convex optimization, suggesting that its effectiveness is contingent on convexity assumptions. Our experiments further suggest that AlphaZero is more sample-efficient - an important advantage in data-scarce, overfitting-prone derivative markets.","headline":"Deep Hedging Under Non-Convexity: Limitations and a Case for AlphaZero","dateModified":"2025-12-09T00:00:00+00:00","datePublished":"2025-12-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/09/DeepHedgingUnderNonConvexityLimitationsandaCaseforAlphaZero.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/09/DeepHedgingUnderNonConvexityLimitationsandaCaseforAlphaZero.html","author":{"@type":"Person","name":"Matteo Maggiolo, Giuseppe Nuti, Miroslav Štrupl, Oleg Szehr"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-09 00:00:00 +0000">12-09</time>
+  </p>
+  
+  <h1>Deep Hedging Under Non-Convexity: Limitations and a Case for AlphaZero</h1>
+  <br>Matteo Maggiolo, Giuseppe Nuti, Miroslav Štrupl, Oleg Szehr</h3>
+  <br> [stat.ML]
+
+  <p>This paper examines replication portfolio construction in incomplete markets - a key problem in financial engineering with applications in pricing, hedging, balance sheet management, and energy storage planning. We model this as a two-player game between an investor and the market, where the investor makes strategic bets on future states while the market reveals outcomes. Inspired by the success of Monte Carlo Tree Search in stochastic games, we introduce an AlphaZero-based system and compare its performance to deep hedging - a widely used industry method based on gradient descent. Through theoretical analysis and experiments, we show that deep hedging struggles in environments where the optimal action-value function is not subject to convexity constraints - such as those involving non-convex transaction costs, capital constraints, or regulatory limitations - converging to local optima. We construct specific market environments to highlight these limitations and demonstrate that AlphaZero consistently finds near-optimal replication strategies. On the theoretical side, we establish a connection between deep hedging and convex optimization, suggesting that its effectiveness is contingent on convexity assumptions. Our experiments further suggest that AlphaZero is more sample-efficient - an important advantage in data-scarce, overfitting-prone derivative markets.</p>
+
+<p><a href="https://arxiv.org/abs/2510.01874">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
