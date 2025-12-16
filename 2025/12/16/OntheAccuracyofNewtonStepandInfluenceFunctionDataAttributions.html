@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Accuracy of Newton Step and Influence Function Data Attributions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the Accuracy of Newton Step and Influence Function Data Attributions" />
+<meta name="author" content="Ittai Rubinstein, Samuel B. Hopkins" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data attribution aims to explain model predictions by estimating how they would change if certain training points were removed, and is used in a wide range of applications, from interpretability and credit assignment to unlearning and privacy. Even in the relatively simple case of linear regressions, existing mathematical analyses of leading data attribution methods such as Influence Functions (IF) and single Newton Step (NS) remain limited in two key ways. First, they rely on global strong convexity assumptions which are often not satisfied in practice. Second, the resulting bounds scale very poorly with the number of parameters ($d$) and the number of samples removed ($k$). As a result, these analyses are not tight enough to answer fundamental questions such as “what is the asymptotic scaling of the errors of each method?” or “which of these methods is more accurate for a given dataset?” In this paper, we introduce a new analysis of the NS and IF data attribution methods for convex learning problems. To the best of our knowledge, this is the first analysis of these questions that does not assume global strong convexity and also the first explanation of [KATL19] and [RH25a]’s observation that NS data attribution is often more accurate than IF. We prove that for sufficiently well-behaved logistic regression, our bounds are asymptotically tight up to poly-logarithmic factors, yielding scaling laws for the errors in the average-case sample removals. [ \mathbb{E}{T \subseteq [n],\, |T| = k} \bigl[ |\hat{\theta}_T - \hat{\theta}_T^{\mathrm{NS}}|_2 \bigr] = \widetilde{\Theta}!\left(\frac{k d}{n^2}\right), \qquad \mathbb{E}{T \subseteq [n],\, |T| = k} \bigl[ |\hat{\theta}_T^{\mathrm{NS}} - \hat{\theta}_T^{\mathrm{IF}}|_2 \bigr] = \widetilde{\Theta}!\left( \frac{(k + d)\sqrt{k d}}{n^2} \right). ]" />
+<meta property="og:description" content="Data attribution aims to explain model predictions by estimating how they would change if certain training points were removed, and is used in a wide range of applications, from interpretability and credit assignment to unlearning and privacy. Even in the relatively simple case of linear regressions, existing mathematical analyses of leading data attribution methods such as Influence Functions (IF) and single Newton Step (NS) remain limited in two key ways. First, they rely on global strong convexity assumptions which are often not satisfied in practice. Second, the resulting bounds scale very poorly with the number of parameters ($d$) and the number of samples removed ($k$). As a result, these analyses are not tight enough to answer fundamental questions such as “what is the asymptotic scaling of the errors of each method?” or “which of these methods is more accurate for a given dataset?” In this paper, we introduce a new analysis of the NS and IF data attribution methods for convex learning problems. To the best of our knowledge, this is the first analysis of these questions that does not assume global strong convexity and also the first explanation of [KATL19] and [RH25a]’s observation that NS data attribution is often more accurate than IF. We prove that for sufficiently well-behaved logistic regression, our bounds are asymptotically tight up to poly-logarithmic factors, yielding scaling laws for the errors in the average-case sample removals. [ \mathbb{E}{T \subseteq [n],\, |T| = k} \bigl[ |\hat{\theta}_T - \hat{\theta}_T^{\mathrm{NS}}|_2 \bigr] = \widetilde{\Theta}!\left(\frac{k d}{n^2}\right), \qquad \mathbb{E}{T \subseteq [n],\, |T| = k} \bigl[ |\hat{\theta}_T^{\mathrm{NS}} - \hat{\theta}_T^{\mathrm{IF}}|_2 \bigr] = \widetilde{\Theta}!\left( \frac{(k + d)\sqrt{k d}}{n^2} \right). ]" />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/16/OntheAccuracyofNewtonStepandInfluenceFunctionDataAttributions.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/16/OntheAccuracyofNewtonStepandInfluenceFunctionDataAttributions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the Accuracy of Newton Step and Influence Function Data Attributions" />
+<script type="application/ld+json">
+{"description":"Data attribution aims to explain model predictions by estimating how they would change if certain training points were removed, and is used in a wide range of applications, from interpretability and credit assignment to unlearning and privacy. Even in the relatively simple case of linear regressions, existing mathematical analyses of leading data attribution methods such as Influence Functions (IF) and single Newton Step (NS) remain limited in two key ways. First, they rely on global strong convexity assumptions which are often not satisfied in practice. Second, the resulting bounds scale very poorly with the number of parameters ($d$) and the number of samples removed ($k$). As a result, these analyses are not tight enough to answer fundamental questions such as “what is the asymptotic scaling of the errors of each method?” or “which of these methods is more accurate for a given dataset?” In this paper, we introduce a new analysis of the NS and IF data attribution methods for convex learning problems. To the best of our knowledge, this is the first analysis of these questions that does not assume global strong convexity and also the first explanation of [KATL19] and [RH25a]’s observation that NS data attribution is often more accurate than IF. We prove that for sufficiently well-behaved logistic regression, our bounds are asymptotically tight up to poly-logarithmic factors, yielding scaling laws for the errors in the average-case sample removals. [ \\mathbb{E}{T \\subseteq [n],\\, |T| = k} \\bigl[ |\\hat{\\theta}_T - \\hat{\\theta}_T^{\\mathrm{NS}}|_2 \\bigr] = \\widetilde{\\Theta}!\\left(\\frac{k d}{n^2}\\right), \\qquad \\mathbb{E}{T \\subseteq [n],\\, |T| = k} \\bigl[ |\\hat{\\theta}_T^{\\mathrm{NS}} - \\hat{\\theta}_T^{\\mathrm{IF}}|_2 \\bigr] = \\widetilde{\\Theta}!\\left( \\frac{(k + d)\\sqrt{k d}}{n^2} \\right). ]","headline":"On the Accuracy of Newton Step and Influence Function Data Attributions","dateModified":"2025-12-16T00:00:00+00:00","datePublished":"2025-12-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/16/OntheAccuracyofNewtonStepandInfluenceFunctionDataAttributions.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/16/OntheAccuracyofNewtonStepandInfluenceFunctionDataAttributions.html","author":{"@type":"Person","name":"Ittai Rubinstein, Samuel B. Hopkins"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-16 00:00:00 +0000">12-16</time>
+  </p>
+  
+  <h1>On the Accuracy of Newton Step and Influence Function Data Attributions</h1>
+  <br>Ittai Rubinstein, Samuel B. Hopkins</h3>
+  <br> [stat.ML]
+
+  <p>Data attribution aims to explain model predictions by estimating how they would change if certain training points were removed, and is used in a wide range of applications, from interpretability and credit assignment to unlearning and privacy.
+  Even in the relatively simple case of linear regressions, existing mathematical analyses of leading data attribution methods such as Influence Functions (IF) and single Newton Step (NS) remain limited in two key ways. First, they rely on global strong convexity assumptions which are often not satisfied in practice. Second, the resulting bounds scale very poorly with the number of parameters ($d$) and the number of samples removed ($k$). As a result, these analyses are not tight enough to answer fundamental questions such as “what is the asymptotic scaling of the errors of each method?” or “which of these methods is more accurate for a given dataset?”
+  In this paper, we introduce a new analysis of the NS and IF data attribution methods for convex learning problems. To the best of our knowledge, this is the first analysis of these questions that does not assume global strong convexity and also the first explanation of [KATL19] and [RH25a]’s observation that NS data attribution is often more accurate than IF. We prove that for sufficiently well-behaved logistic regression, our bounds are asymptotically tight up to poly-logarithmic factors, yielding scaling laws for the errors in the average-case sample removals.
+  [ \mathbb{E}<em>{T \subseteq [n],\, |T| = k} \bigl[ |\hat{\theta}_T - \hat{\theta}_T^{\mathrm{NS}}|_2 \bigr] = \widetilde{\Theta}!\left(\frac{k d}{n^2}\right), \qquad \mathbb{E}</em>{T \subseteq [n],\, |T| = k} \bigl[ |\hat{\theta}_T^{\mathrm{NS}} - \hat{\theta}_T^{\mathrm{IF}}|_2 \bigr] = \widetilde{\Theta}!\left( \frac{(k + d)\sqrt{k d}}{n^2} \right). ]</p>
+
+<p><a href="https://arxiv.org/abs/2512.12572">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

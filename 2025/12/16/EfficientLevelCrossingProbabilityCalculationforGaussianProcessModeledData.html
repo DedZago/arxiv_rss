@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Level-Crossing Probability Calculation for Gaussian Process Modeled Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Level-Crossing Probability Calculation for Gaussian Process Modeled Data" />
+<meta name="author" content="Haoyu Li, Isaac J Michaud, Ayan Biswas, Han-Wei Shen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Almost all scientific data have uncertainties originating from different sources. Gaussian process regression (GPR) models are a natural way to model data with Gaussian-distributed uncertainties. GPR also has the benefit of reducing I/O bandwidth and storage requirements for large scientific simulations. However, the reconstruction from the GPR models suffers from high computation complexity. To make the situation worse, classic approaches for visualizing the data uncertainties, like probabilistic marching cubes, are also computationally very expensive, especially for data of high resolutions. In this paper, we accelerate the level-crossing probability calculation efficiency on GPR models by subdividing the data spatially into a hierarchical data structure and only reconstructing values adaptively in the regions that have a non-zero probability. For each region, leveraging the known GPR kernel and the saved data observations, we propose a novel approach to efficiently calculate an upper bound for the level-crossing probability inside the region and use this upper bound to make the subdivision and reconstruction decisions. We demonstrate that our value occurrence probability estimation is accurate with a low computation cost by experiments that calculate the level-crossing probability fields on different datasets." />
+<meta property="og:description" content="Almost all scientific data have uncertainties originating from different sources. Gaussian process regression (GPR) models are a natural way to model data with Gaussian-distributed uncertainties. GPR also has the benefit of reducing I/O bandwidth and storage requirements for large scientific simulations. However, the reconstruction from the GPR models suffers from high computation complexity. To make the situation worse, classic approaches for visualizing the data uncertainties, like probabilistic marching cubes, are also computationally very expensive, especially for data of high resolutions. In this paper, we accelerate the level-crossing probability calculation efficiency on GPR models by subdividing the data spatially into a hierarchical data structure and only reconstructing values adaptively in the regions that have a non-zero probability. For each region, leveraging the known GPR kernel and the saved data observations, we propose a novel approach to efficiently calculate an upper bound for the level-crossing probability inside the region and use this upper bound to make the subdivision and reconstruction decisions. We demonstrate that our value occurrence probability estimation is accurate with a low computation cost by experiments that calculate the level-crossing probability fields on different datasets." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/16/EfficientLevelCrossingProbabilityCalculationforGaussianProcessModeledData.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/16/EfficientLevelCrossingProbabilityCalculationforGaussianProcessModeledData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Level-Crossing Probability Calculation for Gaussian Process Modeled Data" />
+<script type="application/ld+json">
+{"description":"Almost all scientific data have uncertainties originating from different sources. Gaussian process regression (GPR) models are a natural way to model data with Gaussian-distributed uncertainties. GPR also has the benefit of reducing I/O bandwidth and storage requirements for large scientific simulations. However, the reconstruction from the GPR models suffers from high computation complexity. To make the situation worse, classic approaches for visualizing the data uncertainties, like probabilistic marching cubes, are also computationally very expensive, especially for data of high resolutions. In this paper, we accelerate the level-crossing probability calculation efficiency on GPR models by subdividing the data spatially into a hierarchical data structure and only reconstructing values adaptively in the regions that have a non-zero probability. For each region, leveraging the known GPR kernel and the saved data observations, we propose a novel approach to efficiently calculate an upper bound for the level-crossing probability inside the region and use this upper bound to make the subdivision and reconstruction decisions. We demonstrate that our value occurrence probability estimation is accurate with a low computation cost by experiments that calculate the level-crossing probability fields on different datasets.","headline":"Efficient Level-Crossing Probability Calculation for Gaussian Process Modeled Data","dateModified":"2025-12-16T00:00:00+00:00","datePublished":"2025-12-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/16/EfficientLevelCrossingProbabilityCalculationforGaussianProcessModeledData.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/16/EfficientLevelCrossingProbabilityCalculationforGaussianProcessModeledData.html","author":{"@type":"Person","name":"Haoyu Li, Isaac J Michaud, Ayan Biswas, Han-Wei Shen"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-16 00:00:00 +0000">12-16</time>
+  </p>
+  
+  <h1>Efficient Level-Crossing Probability Calculation for Gaussian Process Modeled Data</h1>
+  <br>Haoyu Li, Isaac J Michaud, Ayan Biswas, Han-Wei Shen</h3>
+  <br> [stat.ML]
+
+  <p>Almost all scientific data have uncertainties originating from different sources. Gaussian process regression (GPR) models are a natural way to model data with Gaussian-distributed uncertainties. GPR also has the benefit of reducing I/O bandwidth and storage requirements for large scientific simulations. However, the reconstruction from the GPR models suffers from high computation complexity. To make the situation worse, classic approaches for visualizing the data uncertainties, like probabilistic marching cubes, are also computationally very expensive, especially for data of high resolutions. In this paper, we accelerate the level-crossing probability calculation efficiency on GPR models by subdividing the data spatially into a hierarchical data structure and only reconstructing values adaptively in the regions that have a non-zero probability. For each region, leveraging the known GPR kernel and the saved data observations, we propose a novel approach to efficiently calculate an upper bound for the level-crossing probability inside the region and use this upper bound to make the subdivision and reconstruction decisions. We demonstrate that our value occurrence probability estimation is accurate with a low computation cost by experiments that calculate the level-crossing probability fields on different datasets.</p>
+
+<p><a href="https://arxiv.org/abs/2512.12442">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
