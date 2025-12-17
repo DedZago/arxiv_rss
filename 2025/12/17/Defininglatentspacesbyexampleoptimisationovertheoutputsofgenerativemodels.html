@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Defining latent spaces by example: optimisation over the outputs of generative models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Defining latent spaces by example: optimisation over the outputs of generative models" />
+<meta name="author" content="Samuel Willis, Alexandru I. Stere, Dragos D. Margineantu, Henry T. Oldroyd, John A. Fozard, Carl Henrik Ek, Henry Moss, Erik Bodin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern generative AI models like diffusion and flow matching can sample from rich data distributions, but many downstream tasks - such as experimental design or creative content generation - require a higher level of control than unconstrained sampling. Here, the challenge is to efficiently identify outputs that are both probable under the model and satisfy task-specific constraints. Often, the evaluation of samples is expensive and lack gradients - a setting known as black-box optimisation. In this work, we allow black-box optimisation on top of diffusion and flow matching models for the first time by introducing surrogate latent spaces: non-parametric, low-dimensional Euclidean embeddings that can be extracted from any generative model without additional training. The axes can be defined via examples, providing a simple and interpretable approach to define custom latent spaces that express intended features and is convenient to use in downstream tasks. Our proposed representation is Euclidean and has controllable dimensionality, permitting direct application of standard optimisation algorithms. We demonstrate that our approach is architecture-agnostic, incurs almost no additional computational cost over standard generation, and generalises across modalities, including images, audio, videos, and structured objects like proteins." />
+<meta property="og:description" content="Modern generative AI models like diffusion and flow matching can sample from rich data distributions, but many downstream tasks - such as experimental design or creative content generation - require a higher level of control than unconstrained sampling. Here, the challenge is to efficiently identify outputs that are both probable under the model and satisfy task-specific constraints. Often, the evaluation of samples is expensive and lack gradients - a setting known as black-box optimisation. In this work, we allow black-box optimisation on top of diffusion and flow matching models for the first time by introducing surrogate latent spaces: non-parametric, low-dimensional Euclidean embeddings that can be extracted from any generative model without additional training. The axes can be defined via examples, providing a simple and interpretable approach to define custom latent spaces that express intended features and is convenient to use in downstream tasks. Our proposed representation is Euclidean and has controllable dimensionality, permitting direct application of standard optimisation algorithms. We demonstrate that our approach is architecture-agnostic, incurs almost no additional computational cost over standard generation, and generalises across modalities, including images, audio, videos, and structured objects like proteins." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/17/Defininglatentspacesbyexampleoptimisationovertheoutputsofgenerativemodels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/17/Defininglatentspacesbyexampleoptimisationovertheoutputsofgenerativemodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Defining latent spaces by example: optimisation over the outputs of generative models" />
+<script type="application/ld+json">
+{"description":"Modern generative AI models like diffusion and flow matching can sample from rich data distributions, but many downstream tasks - such as experimental design or creative content generation - require a higher level of control than unconstrained sampling. Here, the challenge is to efficiently identify outputs that are both probable under the model and satisfy task-specific constraints. Often, the evaluation of samples is expensive and lack gradients - a setting known as black-box optimisation. In this work, we allow black-box optimisation on top of diffusion and flow matching models for the first time by introducing surrogate latent spaces: non-parametric, low-dimensional Euclidean embeddings that can be extracted from any generative model without additional training. The axes can be defined via examples, providing a simple and interpretable approach to define custom latent spaces that express intended features and is convenient to use in downstream tasks. Our proposed representation is Euclidean and has controllable dimensionality, permitting direct application of standard optimisation algorithms. We demonstrate that our approach is architecture-agnostic, incurs almost no additional computational cost over standard generation, and generalises across modalities, including images, audio, videos, and structured objects like proteins.","headline":"Defining latent spaces by example: optimisation over the outputs of generative models","dateModified":"2025-12-17T00:00:00+00:00","datePublished":"2025-12-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/17/Defininglatentspacesbyexampleoptimisationovertheoutputsofgenerativemodels.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/17/Defininglatentspacesbyexampleoptimisationovertheoutputsofgenerativemodels.html","author":{"@type":"Person","name":"Samuel Willis, Alexandru I. Stere, Dragos D. Margineantu, Henry T. Oldroyd, John A. Fozard, Carl Henrik Ek, Henry Moss, Erik Bodin"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-17 00:00:00 +0000">12-17</time>
+  </p>
+  
+  <h1>Defining latent spaces by example: optimisation over the outputs of generative models</h1>
+  <br>Samuel Willis, Alexandru I. Stere, Dragos D. Margineantu, Henry T. Oldroyd, John A. Fozard, Carl Henrik Ek, Henry Moss, Erik Bodin</h3>
+  <br> [stat.ML]
+
+  <p>Modern generative AI models like diffusion and flow matching can sample from rich data distributions, but many downstream tasks - such as experimental design or creative content generation - require a higher level of control than unconstrained sampling. Here, the challenge is to efficiently identify outputs that are both probable under the model and satisfy task-specific constraints. Often, the evaluation of samples is expensive and lack gradients - a setting known as black-box optimisation. In this work, we allow black-box optimisation on top of diffusion and flow matching models for the first time by introducing surrogate latent spaces: non-parametric, low-dimensional Euclidean embeddings that can be extracted from any generative model without additional training. The axes can be defined via examples, providing a simple and interpretable approach to define custom latent spaces that express intended features and is convenient to use in downstream tasks. Our proposed representation is Euclidean and has controllable dimensionality, permitting direct application of standard optimisation algorithms. We demonstrate that our approach is architecture-agnostic, incurs almost no additional computational cost over standard generation, and generalises across modalities, including images, audio, videos, and structured objects like proteins.</p>
+
+<p><a href="https://arxiv.org/abs/2509.23800">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dropout Neural Network Training Viewed from a Percolation Perspective</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Dropout Neural Network Training Viewed from a Percolation Perspective" />
+<meta name="author" content="Finley Devlin, Jaron Sanders" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this work, we investigate the existence and effect of percolation in training deep Neural Networks (NNs) with dropout. Dropout methods are regularisation techniques for training NNs, first introduced by G. Hinton et al. (2012). These methods temporarily remove connections in the NN, randomly at each stage of training, and update the remaining subnetwork with Stochastic Gradient Descent (SGD). The process of removing connections from a network at random is similar to percolation, a paradigm model of statistical physics. If dropout were to remove enough connections such that there is no path between the input and output of the NN, then the NN could not make predictions informed by the data. We study new percolation models that mimic dropout in NNs and characterise the relationship between network topology and this path problem. The theory shows the existence of a percolative effect in dropout. We also show that this percolative effect can cause a breakdown when training NNs without biases with dropout; and we argue heuristically that this breakdown extends to NNs with biases." />
+<meta property="og:description" content="In this work, we investigate the existence and effect of percolation in training deep Neural Networks (NNs) with dropout. Dropout methods are regularisation techniques for training NNs, first introduced by G. Hinton et al. (2012). These methods temporarily remove connections in the NN, randomly at each stage of training, and update the remaining subnetwork with Stochastic Gradient Descent (SGD). The process of removing connections from a network at random is similar to percolation, a paradigm model of statistical physics. If dropout were to remove enough connections such that there is no path between the input and output of the NN, then the NN could not make predictions informed by the data. We study new percolation models that mimic dropout in NNs and characterise the relationship between network topology and this path problem. The theory shows the existence of a percolative effect in dropout. We also show that this percolative effect can cause a breakdown when training NNs without biases with dropout; and we argue heuristically that this breakdown extends to NNs with biases." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/17/DropoutNeuralNetworkTrainingViewedfromaPercolationPerspective.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/17/DropoutNeuralNetworkTrainingViewedfromaPercolationPerspective.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dropout Neural Network Training Viewed from a Percolation Perspective" />
+<script type="application/ld+json">
+{"description":"In this work, we investigate the existence and effect of percolation in training deep Neural Networks (NNs) with dropout. Dropout methods are regularisation techniques for training NNs, first introduced by G. Hinton et al. (2012). These methods temporarily remove connections in the NN, randomly at each stage of training, and update the remaining subnetwork with Stochastic Gradient Descent (SGD). The process of removing connections from a network at random is similar to percolation, a paradigm model of statistical physics. If dropout were to remove enough connections such that there is no path between the input and output of the NN, then the NN could not make predictions informed by the data. We study new percolation models that mimic dropout in NNs and characterise the relationship between network topology and this path problem. The theory shows the existence of a percolative effect in dropout. We also show that this percolative effect can cause a breakdown when training NNs without biases with dropout; and we argue heuristically that this breakdown extends to NNs with biases.","headline":"Dropout Neural Network Training Viewed from a Percolation Perspective","dateModified":"2025-12-17T00:00:00+00:00","datePublished":"2025-12-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/17/DropoutNeuralNetworkTrainingViewedfromaPercolationPerspective.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/17/DropoutNeuralNetworkTrainingViewedfromaPercolationPerspective.html","author":{"@type":"Person","name":"Finley Devlin, Jaron Sanders"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-17 00:00:00 +0000">12-17</time>
+  </p>
+  
+  <h1>Dropout Neural Network Training Viewed from a Percolation Perspective</h1>
+  <br>Finley Devlin, Jaron Sanders</h3>
+  <br> [cond-mat.stat-mech,stat.ML]
+
+  <p>In this work, we investigate the existence and effect of percolation in training deep Neural Networks (NNs) with dropout. Dropout methods are regularisation techniques for training NNs, first introduced by G. Hinton et al. (2012). These methods temporarily remove connections in the NN, randomly at each stage of training, and update the remaining subnetwork with Stochastic Gradient Descent (SGD). The process of removing connections from a network at random is similar to percolation, a paradigm model of statistical physics.
+  If dropout were to remove enough connections such that there is no path between the input and output of the NN, then the NN could not make predictions informed by the data. We study new percolation models that mimic dropout in NNs and characterise the relationship between network topology and this path problem. The theory shows the existence of a percolative effect in dropout. We also show that this percolative effect can cause a breakdown when training NNs without biases with dropout; and we argue heuristically that this breakdown extends to NNs with biases.</p>
+
+<p><a href="https://arxiv.org/abs/2512.13853">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
