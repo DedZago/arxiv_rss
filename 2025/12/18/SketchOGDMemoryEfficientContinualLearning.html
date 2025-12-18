@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SketchOGD: Memory-Efficient Continual Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="SketchOGD: Memory-Efficient Continual Learning" />
+<meta name="author" content="Youngjae Min, Benjamin Wright, Jeremy Bernstein, Navid Azizan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When machine learning models are trained continually on a sequence of tasks, they are often liable to forget what they learned on previous tasks–a phenomenon known as catastrophic forgetting. Proposed solutions to catastrophic forgetting tend to involve storing information about past tasks, meaning that memory usage is a chief consideration in determining their practicality. This paper develops a memory-efficient solution to catastrophic forgetting using the idea of matrix sketching, in the context of a simple continual learning algorithm known as orthogonal gradient descent (OGD). OGD finds weight updates that aim to preserve performance on prior datapoints, using gradients of the model on those datapoints. However, since the memory cost of storing prior model gradients grows with the runtime of the algorithm, OGD is ill-suited to continual learning over long time horizons. To address this problem, we propose SketchOGD. SketchOGD employs an online sketching algorithm to compress model gradients as they are encountered into a matrix of a fixed, user-determined size. In contrast to existing memory-efficient variants of OGD, SketchOGD runs online without the need for advance knowledge of the total number of tasks, is simple to implement, and is more amenable to analysis. We provide theoretical guarantees on the approximation error of the relevant sketches under a novel metric suited to the downstream task of OGD. Experimentally, we find that SketchOGD tends to outperform current state-of-the-art variants of OGD given a fixed memory budget." />
+<meta property="og:description" content="When machine learning models are trained continually on a sequence of tasks, they are often liable to forget what they learned on previous tasks–a phenomenon known as catastrophic forgetting. Proposed solutions to catastrophic forgetting tend to involve storing information about past tasks, meaning that memory usage is a chief consideration in determining their practicality. This paper develops a memory-efficient solution to catastrophic forgetting using the idea of matrix sketching, in the context of a simple continual learning algorithm known as orthogonal gradient descent (OGD). OGD finds weight updates that aim to preserve performance on prior datapoints, using gradients of the model on those datapoints. However, since the memory cost of storing prior model gradients grows with the runtime of the algorithm, OGD is ill-suited to continual learning over long time horizons. To address this problem, we propose SketchOGD. SketchOGD employs an online sketching algorithm to compress model gradients as they are encountered into a matrix of a fixed, user-determined size. In contrast to existing memory-efficient variants of OGD, SketchOGD runs online without the need for advance knowledge of the total number of tasks, is simple to implement, and is more amenable to analysis. We provide theoretical guarantees on the approximation error of the relevant sketches under a novel metric suited to the downstream task of OGD. Experimentally, we find that SketchOGD tends to outperform current state-of-the-art variants of OGD given a fixed memory budget." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/18/SketchOGDMemoryEfficientContinualLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/18/SketchOGDMemoryEfficientContinualLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SketchOGD: Memory-Efficient Continual Learning" />
+<script type="application/ld+json">
+{"description":"When machine learning models are trained continually on a sequence of tasks, they are often liable to forget what they learned on previous tasks–a phenomenon known as catastrophic forgetting. Proposed solutions to catastrophic forgetting tend to involve storing information about past tasks, meaning that memory usage is a chief consideration in determining their practicality. This paper develops a memory-efficient solution to catastrophic forgetting using the idea of matrix sketching, in the context of a simple continual learning algorithm known as orthogonal gradient descent (OGD). OGD finds weight updates that aim to preserve performance on prior datapoints, using gradients of the model on those datapoints. However, since the memory cost of storing prior model gradients grows with the runtime of the algorithm, OGD is ill-suited to continual learning over long time horizons. To address this problem, we propose SketchOGD. SketchOGD employs an online sketching algorithm to compress model gradients as they are encountered into a matrix of a fixed, user-determined size. In contrast to existing memory-efficient variants of OGD, SketchOGD runs online without the need for advance knowledge of the total number of tasks, is simple to implement, and is more amenable to analysis. We provide theoretical guarantees on the approximation error of the relevant sketches under a novel metric suited to the downstream task of OGD. Experimentally, we find that SketchOGD tends to outperform current state-of-the-art variants of OGD given a fixed memory budget.","headline":"SketchOGD: Memory-Efficient Continual Learning","dateModified":"2025-12-18T00:00:00+00:00","datePublished":"2025-12-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/18/SketchOGDMemoryEfficientContinualLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/18/SketchOGDMemoryEfficientContinualLearning.html","author":{"@type":"Person","name":"Youngjae Min, Benjamin Wright, Jeremy Bernstein, Navid Azizan"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-18 00:00:00 +0000">12-18</time>
+  </p>
+  
+  <h1>SketchOGD: Memory-Efficient Continual Learning</h1>
+  <br>Youngjae Min, Benjamin Wright, Jeremy Bernstein, Navid Azizan</h3>
+  <br> [stat.ML]
+
+  <p>When machine learning models are trained continually on a sequence of tasks, they are often liable to forget what they learned on previous tasks–a phenomenon known as catastrophic forgetting. Proposed solutions to catastrophic forgetting tend to involve storing information about past tasks, meaning that memory usage is a chief consideration in determining their practicality. This paper develops a memory-efficient solution to catastrophic forgetting using the idea of matrix sketching, in the context of a simple continual learning algorithm known as orthogonal gradient descent (OGD). OGD finds weight updates that aim to preserve performance on prior datapoints, using gradients of the model on those datapoints. However, since the memory cost of storing prior model gradients grows with the runtime of the algorithm, OGD is ill-suited to continual learning over long time horizons. To address this problem, we propose SketchOGD. SketchOGD employs an online sketching algorithm to compress model gradients as they are encountered into a matrix of a fixed, user-determined size. In contrast to existing memory-efficient variants of OGD, SketchOGD runs online without the need for advance knowledge of the total number of tasks, is simple to implement, and is more amenable to analysis. We provide theoretical guarantees on the approximation error of the relevant sketches under a novel metric suited to the downstream task of OGD. Experimentally, we find that SketchOGD tends to outperform current state-of-the-art variants of OGD given a fixed memory budget.</p>
+
+<p><a href="https://arxiv.org/abs/2305.16424">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
