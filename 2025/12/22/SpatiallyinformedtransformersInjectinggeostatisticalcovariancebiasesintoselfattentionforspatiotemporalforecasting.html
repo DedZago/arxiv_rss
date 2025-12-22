@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Spatially-informed transformers: Injecting geostatistical covariance biases into self-attention for spatio-temporal forecasting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Spatially-informed transformers: Injecting geostatistical covariance biases into self-attention for spatio-temporal forecasting" />
+<meta name="author" content="Yuri Calleo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The modeling of high-dimensional spatio-temporal processes presents a fundamental dichotomy between the probabilistic rigor of classical geostatistics and the flexible, high-capacity representations of deep learning. While Gaussian processes offer theoretical consistency and exact uncertainty quantification, their prohibitive computational scaling renders them impractical for massive sensor networks. Conversely, modern transformer architectures excel at sequence modeling but inherently lack a geometric inductive bias, treating spatial sensors as permutation-invariant tokens without a native understanding of distance. In this work, we propose a spatially-informed transformer, a hybrid architecture that injects a geostatistical inductive bias directly into the self-attention mechanism via a learnable covariance kernel. By formally decomposing the attention structure into a stationary physical prior and a non-stationary data-driven residual, we impose a soft topological constraint that favors spatially proximal interactions while retaining the capacity to model complex dynamics. We demonstrate the phenomenon of ``Deep Variography’’, where the network successfully recovers the true spatial decay parameters of the underlying process end-to-end via backpropagation. Extensive experiments on synthetic Gaussian random fields and real-world traffic benchmarks confirm that our method outperforms state-of-the-art graph neural networks. Furthermore, rigorous statistical validation confirms that the proposed method delivers not only superior predictive accuracy but also well-calibrated probabilistic forecasts, effectively bridging the gap between physics-aware modeling and data-driven learning." />
+<meta property="og:description" content="The modeling of high-dimensional spatio-temporal processes presents a fundamental dichotomy between the probabilistic rigor of classical geostatistics and the flexible, high-capacity representations of deep learning. While Gaussian processes offer theoretical consistency and exact uncertainty quantification, their prohibitive computational scaling renders them impractical for massive sensor networks. Conversely, modern transformer architectures excel at sequence modeling but inherently lack a geometric inductive bias, treating spatial sensors as permutation-invariant tokens without a native understanding of distance. In this work, we propose a spatially-informed transformer, a hybrid architecture that injects a geostatistical inductive bias directly into the self-attention mechanism via a learnable covariance kernel. By formally decomposing the attention structure into a stationary physical prior and a non-stationary data-driven residual, we impose a soft topological constraint that favors spatially proximal interactions while retaining the capacity to model complex dynamics. We demonstrate the phenomenon of ``Deep Variography’’, where the network successfully recovers the true spatial decay parameters of the underlying process end-to-end via backpropagation. Extensive experiments on synthetic Gaussian random fields and real-world traffic benchmarks confirm that our method outperforms state-of-the-art graph neural networks. Furthermore, rigorous statistical validation confirms that the proposed method delivers not only superior predictive accuracy but also well-calibrated probabilistic forecasts, effectively bridging the gap between physics-aware modeling and data-driven learning." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/22/SpatiallyinformedtransformersInjectinggeostatisticalcovariancebiasesintoselfattentionforspatiotemporalforecasting.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/22/SpatiallyinformedtransformersInjectinggeostatisticalcovariancebiasesintoselfattentionforspatiotemporalforecasting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Spatially-informed transformers: Injecting geostatistical covariance biases into self-attention for spatio-temporal forecasting" />
+<script type="application/ld+json">
+{"description":"The modeling of high-dimensional spatio-temporal processes presents a fundamental dichotomy between the probabilistic rigor of classical geostatistics and the flexible, high-capacity representations of deep learning. While Gaussian processes offer theoretical consistency and exact uncertainty quantification, their prohibitive computational scaling renders them impractical for massive sensor networks. Conversely, modern transformer architectures excel at sequence modeling but inherently lack a geometric inductive bias, treating spatial sensors as permutation-invariant tokens without a native understanding of distance. In this work, we propose a spatially-informed transformer, a hybrid architecture that injects a geostatistical inductive bias directly into the self-attention mechanism via a learnable covariance kernel. By formally decomposing the attention structure into a stationary physical prior and a non-stationary data-driven residual, we impose a soft topological constraint that favors spatially proximal interactions while retaining the capacity to model complex dynamics. We demonstrate the phenomenon of ``Deep Variography’’, where the network successfully recovers the true spatial decay parameters of the underlying process end-to-end via backpropagation. Extensive experiments on synthetic Gaussian random fields and real-world traffic benchmarks confirm that our method outperforms state-of-the-art graph neural networks. Furthermore, rigorous statistical validation confirms that the proposed method delivers not only superior predictive accuracy but also well-calibrated probabilistic forecasts, effectively bridging the gap between physics-aware modeling and data-driven learning.","headline":"Spatially-informed transformers: Injecting geostatistical covariance biases into self-attention for spatio-temporal forecasting","dateModified":"2025-12-22T00:00:00+00:00","datePublished":"2025-12-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/22/SpatiallyinformedtransformersInjectinggeostatisticalcovariancebiasesintoselfattentionforspatiotemporalforecasting.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/22/SpatiallyinformedtransformersInjectinggeostatisticalcovariancebiasesintoselfattentionforspatiotemporalforecasting.html","author":{"@type":"Person","name":"Yuri Calleo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-22 00:00:00 +0000">12-22</time>
+  </p>
+  
+  <h1>Spatially-informed transformers: Injecting geostatistical covariance biases into self-attention for spatio-temporal forecasting</h1>
+  <br>Yuri Calleo</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>The modeling of high-dimensional spatio-temporal processes presents a fundamental dichotomy between the probabilistic rigor of classical geostatistics and the flexible, high-capacity representations of deep learning. While Gaussian processes offer theoretical consistency and exact uncertainty quantification, their prohibitive computational scaling renders them impractical for massive sensor networks. Conversely, modern transformer architectures excel at sequence modeling but inherently lack a geometric inductive bias, treating spatial sensors as permutation-invariant tokens without a native understanding of distance. In this work, we propose a spatially-informed transformer, a hybrid architecture that injects a geostatistical inductive bias directly into the self-attention mechanism via a learnable covariance kernel. By formally decomposing the attention structure into a stationary physical prior and a non-stationary data-driven residual, we impose a soft topological constraint that favors spatially proximal interactions while retaining the capacity to model complex dynamics. We demonstrate the phenomenon of ``Deep Variography’’, where the network successfully recovers the true spatial decay parameters of the underlying process end-to-end via backpropagation. Extensive experiments on synthetic Gaussian random fields and real-world traffic benchmarks confirm that our method outperforms state-of-the-art graph neural networks. Furthermore, rigorous statistical validation confirms that the proposed method delivers not only superior predictive accuracy but also well-calibrated probabilistic forecasts, effectively bridging the gap between physics-aware modeling and data-driven learning.</p>
+
+<p><a href="https://arxiv.org/abs/2512.17696">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
