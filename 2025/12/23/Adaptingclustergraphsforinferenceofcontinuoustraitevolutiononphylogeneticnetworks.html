@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adapting cluster graphs for inference of continuous trait evolution on phylogenetic networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adapting cluster graphs for inference of continuous trait evolution on phylogenetic networks" />
+<meta name="author" content="Benjamin Teo, Cécile Ané" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Dynamic programming approaches have long been applied to fit models of univariate and multivariate trait evolution on phylogenetic trees for discrete and continuous traits, and more recently adapted to phylogenetic networks with reticulation. We previously showed that various trait evolution models on a network can be readily cast as probabilistic graphical models, so that likelihood-based estimation can proceed efficiently via belief propagation on an associated clique tree. Even so, exact likelihood inference can grow computationally prohibitive for large complex networks. Loopy belief propagation can similarly be applied to these settings, using non-tree cluster graphs to optimize a factored energy approximation to the log-likelihood, and may provide a more practical trade-off between estimation accuracy and runtime. However, the influence of cluster graph structure on this trade-off is not precisely understood. We conduct a simulation study using the Julia package PhyloGaussianBeliefProp to investigate how varying maximum cluster size affects this trade-off for Gaussian trait evolution models on networks. We discuss recommended choices for maximum cluster size, and prove the equivalence of likelihood-based and factored-energy-based parameter estimates for the homogeneous Brownian motion model." />
+<meta property="og:description" content="Dynamic programming approaches have long been applied to fit models of univariate and multivariate trait evolution on phylogenetic trees for discrete and continuous traits, and more recently adapted to phylogenetic networks with reticulation. We previously showed that various trait evolution models on a network can be readily cast as probabilistic graphical models, so that likelihood-based estimation can proceed efficiently via belief propagation on an associated clique tree. Even so, exact likelihood inference can grow computationally prohibitive for large complex networks. Loopy belief propagation can similarly be applied to these settings, using non-tree cluster graphs to optimize a factored energy approximation to the log-likelihood, and may provide a more practical trade-off between estimation accuracy and runtime. However, the influence of cluster graph structure on this trade-off is not precisely understood. We conduct a simulation study using the Julia package PhyloGaussianBeliefProp to investigate how varying maximum cluster size affects this trade-off for Gaussian trait evolution models on networks. We discuss recommended choices for maximum cluster size, and prove the equivalence of likelihood-based and factored-energy-based parameter estimates for the homogeneous Brownian motion model." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/23/Adaptingclustergraphsforinferenceofcontinuoustraitevolutiononphylogeneticnetworks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/23/Adaptingclustergraphsforinferenceofcontinuoustraitevolutiononphylogeneticnetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adapting cluster graphs for inference of continuous trait evolution on phylogenetic networks" />
+<script type="application/ld+json">
+{"description":"Dynamic programming approaches have long been applied to fit models of univariate and multivariate trait evolution on phylogenetic trees for discrete and continuous traits, and more recently adapted to phylogenetic networks with reticulation. We previously showed that various trait evolution models on a network can be readily cast as probabilistic graphical models, so that likelihood-based estimation can proceed efficiently via belief propagation on an associated clique tree. Even so, exact likelihood inference can grow computationally prohibitive for large complex networks. Loopy belief propagation can similarly be applied to these settings, using non-tree cluster graphs to optimize a factored energy approximation to the log-likelihood, and may provide a more practical trade-off between estimation accuracy and runtime. However, the influence of cluster graph structure on this trade-off is not precisely understood. We conduct a simulation study using the Julia package PhyloGaussianBeliefProp to investigate how varying maximum cluster size affects this trade-off for Gaussian trait evolution models on networks. We discuss recommended choices for maximum cluster size, and prove the equivalence of likelihood-based and factored-energy-based parameter estimates for the homogeneous Brownian motion model.","headline":"Adapting cluster graphs for inference of continuous trait evolution on phylogenetic networks","dateModified":"2025-12-23T00:00:00+00:00","datePublished":"2025-12-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/23/Adaptingclustergraphsforinferenceofcontinuoustraitevolutiononphylogeneticnetworks.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/23/Adaptingclustergraphsforinferenceofcontinuoustraitevolutiononphylogeneticnetworks.html","author":{"@type":"Person","name":"Benjamin Teo, Cécile Ané"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-23 00:00:00 +0000">12-23</time>
+  </p>
+  
+  <h1>Adapting cluster graphs for inference of continuous trait evolution on phylogenetic networks</h1>
+  <br>Benjamin Teo, Cécile Ané</h3>
+  <br> [stat.CO]
+
+  <p>Dynamic programming approaches have long been applied to fit models of univariate and multivariate trait evolution on phylogenetic trees for discrete and continuous traits, and more recently adapted to phylogenetic networks with reticulation. We previously showed that various trait evolution models on a network can be readily cast as probabilistic graphical models, so that likelihood-based estimation can proceed efficiently via belief propagation on an associated clique tree. Even so, exact likelihood inference can grow computationally prohibitive for large complex networks. Loopy belief propagation can similarly be applied to these settings, using non-tree cluster graphs to optimize a factored energy approximation to the log-likelihood, and may provide a more practical trade-off between estimation accuracy and runtime. However, the influence of cluster graph structure on this trade-off is not precisely understood. We conduct a simulation study using the Julia package PhyloGaussianBeliefProp to investigate how varying maximum cluster size affects this trade-off for Gaussian trait evolution models on networks. We discuss recommended choices for maximum cluster size, and prove the equivalence of likelihood-based and factored-energy-based parameter estimates for the homogeneous Brownian motion model.</p>
+
+<p><a href="https://arxiv.org/abs/2512.18139">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
