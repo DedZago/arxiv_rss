@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>RANSAC Scoring Functions: Analysis and Reality Check</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="RANSAC Scoring Functions: Analysis and Reality Check" />
+<meta name="author" content="A. Shekhovtsov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We revisit the problem of assigning a score (a quality of fit) to candidate geometric models – one of the key components of RANSAC for robust geometric fitting. In a non-robust setting, the ``gold standard’’ scoring function, known as the geometric error, follows from a probabilistic model with Gaussian noises. We extend it to spherical noises. In a robust setting, we consider a mixture with uniformly distributed outliers and show that a threshold-based parameterization leads to a unified view of likelihood-based and robust M-estimators and associated local optimization schemes. Next we analyze MAGSAC++ which stands out for two reasons. First, it achieves the best results according to existing benchmarks. Second, it makes quite different modeling assumptions and derivation steps. We discovered, however that the derivation does not correspond to sound principles and the resulting score function is in fact numerically equivalent to a simple Gaussian-uniform likelihood, a basic model within the proposed framework. Finally, we propose an experimental methodology for evaluating scoring functions: assuming either a large validation set, or a small random validation set in expectation. We find that all scoring functions, including using a learned inlier distribution, perform identically. In particular, MAGSAC++ score is found to be neither better performing than simple contenders nor less sensitive to the choice of the threshold hyperparameter. Our theoretical and experimental analysis thus comprehensively revisit the state-of-the-art, which is critical for any future research seeking to improve the methods or apply them to other robust fitting problems." />
+<meta property="og:description" content="We revisit the problem of assigning a score (a quality of fit) to candidate geometric models – one of the key components of RANSAC for robust geometric fitting. In a non-robust setting, the ``gold standard’’ scoring function, known as the geometric error, follows from a probabilistic model with Gaussian noises. We extend it to spherical noises. In a robust setting, we consider a mixture with uniformly distributed outliers and show that a threshold-based parameterization leads to a unified view of likelihood-based and robust M-estimators and associated local optimization schemes. Next we analyze MAGSAC++ which stands out for two reasons. First, it achieves the best results according to existing benchmarks. Second, it makes quite different modeling assumptions and derivation steps. We discovered, however that the derivation does not correspond to sound principles and the resulting score function is in fact numerically equivalent to a simple Gaussian-uniform likelihood, a basic model within the proposed framework. Finally, we propose an experimental methodology for evaluating scoring functions: assuming either a large validation set, or a small random validation set in expectation. We find that all scoring functions, including using a learned inlier distribution, perform identically. In particular, MAGSAC++ score is found to be neither better performing than simple contenders nor less sensitive to the choice of the threshold hyperparameter. Our theoretical and experimental analysis thus comprehensively revisit the state-of-the-art, which is critical for any future research seeking to improve the methods or apply them to other robust fitting problems." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/24/RANSACScoringFunctionsAnalysisandRealityCheck.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/24/RANSACScoringFunctionsAnalysisandRealityCheck.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RANSAC Scoring Functions: Analysis and Reality Check" />
+<script type="application/ld+json">
+{"description":"We revisit the problem of assigning a score (a quality of fit) to candidate geometric models – one of the key components of RANSAC for robust geometric fitting. In a non-robust setting, the ``gold standard’’ scoring function, known as the geometric error, follows from a probabilistic model with Gaussian noises. We extend it to spherical noises. In a robust setting, we consider a mixture with uniformly distributed outliers and show that a threshold-based parameterization leads to a unified view of likelihood-based and robust M-estimators and associated local optimization schemes. Next we analyze MAGSAC++ which stands out for two reasons. First, it achieves the best results according to existing benchmarks. Second, it makes quite different modeling assumptions and derivation steps. We discovered, however that the derivation does not correspond to sound principles and the resulting score function is in fact numerically equivalent to a simple Gaussian-uniform likelihood, a basic model within the proposed framework. Finally, we propose an experimental methodology for evaluating scoring functions: assuming either a large validation set, or a small random validation set in expectation. We find that all scoring functions, including using a learned inlier distribution, perform identically. In particular, MAGSAC++ score is found to be neither better performing than simple contenders nor less sensitive to the choice of the threshold hyperparameter. Our theoretical and experimental analysis thus comprehensively revisit the state-of-the-art, which is critical for any future research seeking to improve the methods or apply them to other robust fitting problems.","headline":"RANSAC Scoring Functions: Analysis and Reality Check","dateModified":"2025-12-24T00:00:00+00:00","datePublished":"2025-12-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/24/RANSACScoringFunctionsAnalysisandRealityCheck.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/24/RANSACScoringFunctionsAnalysisandRealityCheck.html","author":{"@type":"Person","name":"A. Shekhovtsov"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-24 00:00:00 +0000">12-24</time>
+  </p>
+  
+  <h1>RANSAC Scoring Functions: Analysis and Reality Check</h1>
+  <br>A. Shekhovtsov</h3>
+  <br> [stat.AP]
+
+  <p>We revisit the problem of assigning a score (a quality of fit) to candidate geometric models – one of the key components of RANSAC for robust geometric fitting. In a non-robust setting, the ``gold standard’’ scoring function, known as the geometric error, follows from a probabilistic model with Gaussian noises. We extend it to spherical noises. In a robust setting, we consider a mixture with uniformly distributed outliers and show that a threshold-based parameterization leads to a unified view of likelihood-based and robust M-estimators and associated local optimization schemes.
+  Next we analyze MAGSAC++ which stands out for two reasons. First, it achieves the best results according to existing benchmarks. Second, it makes quite different modeling assumptions and derivation steps. We discovered, however that the derivation does not correspond to sound principles and the resulting score function is in fact numerically equivalent to a simple Gaussian-uniform likelihood, a basic model within the proposed framework.
+  Finally, we propose an experimental methodology for evaluating scoring functions: assuming either a large validation set, or a small random validation set in expectation. We find that all scoring functions, including using a learned inlier distribution, perform identically. In particular, MAGSAC++ score is found to be neither better performing than simple contenders nor less sensitive to the choice of the threshold hyperparameter.
+  Our theoretical and experimental analysis thus comprehensively revisit the state-of-the-art, which is critical for any future research seeking to improve the methods or apply them to other robust fitting problems.</p>
+
+<p><a href="https://arxiv.org/abs/2512.19850">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
