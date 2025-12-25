@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Measuring Variable Importance via Accumulated Local Effects</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Measuring Variable Importance via Accumulated Local Effects" />
+<meta name="author" content="Jingyu Zhu, Daniel W. Apley" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A shortcoming of black-box supervised learning models is their lack of interpretability or transparency. To facilitate interpretation, post-hoc global variable importance measures (VIMs) are widely used to assign to each predictor or input variable a numerical score that represents the extent to which that predictor impacts the fitted model’s response predictions across the training data. It is well known that the most common existing VIMs, namely marginal Shapley and marginal permutation-based methods, can produce unreliable results if the predictors are highly correlated, because they require extrapolation of the response at predictor values that fall far outside the training data. Conditional versions of Shapley and permutation VIMs avoid or reduce the extrapolation but can substantially deflate the importance of correlated predictors. For the related goal of visualizing the effects of each predictor when strong predictor correlation is present, accumulated local effects (ALE) plots were recently introduced and have been widely adopted. This paper presents a new VIM approach based on ALE concepts that avoids both the extrapolation and the VIM deflation problems when predictors are correlated. We contrast, both theoretically and numerically, ALE VIMs with Shapley and permutation VIMs. Our results indicate that ALE VIMs produce similar variable importance rankings as Shapley and permutation VIMs when predictor correlations are mild and more reliable rankings when correlations are strong. An additional advantage is that ALE VIMs are far less computationally expensive." />
+<meta property="og:description" content="A shortcoming of black-box supervised learning models is their lack of interpretability or transparency. To facilitate interpretation, post-hoc global variable importance measures (VIMs) are widely used to assign to each predictor or input variable a numerical score that represents the extent to which that predictor impacts the fitted model’s response predictions across the training data. It is well known that the most common existing VIMs, namely marginal Shapley and marginal permutation-based methods, can produce unreliable results if the predictors are highly correlated, because they require extrapolation of the response at predictor values that fall far outside the training data. Conditional versions of Shapley and permutation VIMs avoid or reduce the extrapolation but can substantially deflate the importance of correlated predictors. For the related goal of visualizing the effects of each predictor when strong predictor correlation is present, accumulated local effects (ALE) plots were recently introduced and have been widely adopted. This paper presents a new VIM approach based on ALE concepts that avoids both the extrapolation and the VIM deflation problems when predictors are correlated. We contrast, both theoretically and numerically, ALE VIMs with Shapley and permutation VIMs. Our results indicate that ALE VIMs produce similar variable importance rankings as Shapley and permutation VIMs when predictor correlations are mild and more reliable rankings when correlations are strong. An additional advantage is that ALE VIMs are far less computationally expensive." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/25/MeasuringVariableImportanceviaAccumulatedLocalEffects.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/25/MeasuringVariableImportanceviaAccumulatedLocalEffects.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Measuring Variable Importance via Accumulated Local Effects" />
+<script type="application/ld+json">
+{"description":"A shortcoming of black-box supervised learning models is their lack of interpretability or transparency. To facilitate interpretation, post-hoc global variable importance measures (VIMs) are widely used to assign to each predictor or input variable a numerical score that represents the extent to which that predictor impacts the fitted model’s response predictions across the training data. It is well known that the most common existing VIMs, namely marginal Shapley and marginal permutation-based methods, can produce unreliable results if the predictors are highly correlated, because they require extrapolation of the response at predictor values that fall far outside the training data. Conditional versions of Shapley and permutation VIMs avoid or reduce the extrapolation but can substantially deflate the importance of correlated predictors. For the related goal of visualizing the effects of each predictor when strong predictor correlation is present, accumulated local effects (ALE) plots were recently introduced and have been widely adopted. This paper presents a new VIM approach based on ALE concepts that avoids both the extrapolation and the VIM deflation problems when predictors are correlated. We contrast, both theoretically and numerically, ALE VIMs with Shapley and permutation VIMs. Our results indicate that ALE VIMs produce similar variable importance rankings as Shapley and permutation VIMs when predictor correlations are mild and more reliable rankings when correlations are strong. An additional advantage is that ALE VIMs are far less computationally expensive.","headline":"Measuring Variable Importance via Accumulated Local Effects","dateModified":"2025-12-25T00:00:00+00:00","datePublished":"2025-12-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/25/MeasuringVariableImportanceviaAccumulatedLocalEffects.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/25/MeasuringVariableImportanceviaAccumulatedLocalEffects.html","author":{"@type":"Person","name":"Jingyu Zhu, Daniel W. Apley"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-25 00:00:00 +0000">12-25</time>
+  </p>
+  
+  <h1>Measuring Variable Importance via Accumulated Local Effects</h1>
+  <br>Jingyu Zhu, Daniel W. Apley</h3>
+  <br> [stat.ME]
+
+  <p>A shortcoming of black-box supervised learning models is their lack of interpretability or transparency. To facilitate interpretation, post-hoc global variable importance measures (VIMs) are widely used to assign to each predictor or input variable a numerical score that represents the extent to which that predictor impacts the fitted model’s response predictions across the training data. It is well known that the most common existing VIMs, namely marginal Shapley and marginal permutation-based methods, can produce unreliable results if the predictors are highly correlated, because they require extrapolation of the response at predictor values that fall far outside the training data. Conditional versions of Shapley and permutation VIMs avoid or reduce the extrapolation but can substantially deflate the importance of correlated predictors. For the related goal of visualizing the effects of each predictor when strong predictor correlation is present, accumulated local effects (ALE) plots were recently introduced and have been widely adopted. This paper presents a new VIM approach based on ALE concepts that avoids both the extrapolation and the VIM deflation problems when predictors are correlated. We contrast, both theoretically and numerically, ALE VIMs with Shapley and permutation VIMs. Our results indicate that ALE VIMs produce similar variable importance rankings as Shapley and permutation VIMs when predictor correlations are mild and more reliable rankings when correlations are strong. An additional advantage is that ALE VIMs are far less computationally expensive.</p>
+
+<p><a href="https://arxiv.org/abs/2512.21124">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

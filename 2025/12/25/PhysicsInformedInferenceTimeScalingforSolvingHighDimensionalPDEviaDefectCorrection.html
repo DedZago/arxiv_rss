@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction" />
+<meta name="author" content="Zexi Fan, Yan Sun, Shihao Yang, Yiping Lu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Solving high-dimensional partial differential equations (PDEs) is a critical challenge where modern data-driven solvers often lack reliability and rigorous error guarantees. We introduce Simulation-Calibrated Scientific Machine Learning (SCaSML), a framework that systematically improves pre-trained PDE solvers at inference time without any retraining. Our core idea is to use defect correction method that derive a new PDE, termed Structural-preserving Law of Defect, that precisely describes the error of a given surrogate model. Since it retains the structure of the original problem, we can solve it efficiently with traditional stochastic simulators and correct the initial machine-learned solution. We prove that SCaSML achieves a faster convergence rate, with a final error bounded by the product of the surrogate and simulation errors. On challenging PDEs up to 160 dimensions, SCaSML reduces the error of various surrogate models, including PINNs and Gaussian Processes, by 20-80%. Code of SCaSML is available at https://github.com/Francis-Fan-create/SCaSML." />
+<meta property="og:description" content="Solving high-dimensional partial differential equations (PDEs) is a critical challenge where modern data-driven solvers often lack reliability and rigorous error guarantees. We introduce Simulation-Calibrated Scientific Machine Learning (SCaSML), a framework that systematically improves pre-trained PDE solvers at inference time without any retraining. Our core idea is to use defect correction method that derive a new PDE, termed Structural-preserving Law of Defect, that precisely describes the error of a given surrogate model. Since it retains the structure of the original problem, we can solve it efficiently with traditional stochastic simulators and correct the initial machine-learned solution. We prove that SCaSML achieves a faster convergence rate, with a final error bounded by the product of the surrogate and simulation errors. On challenging PDEs up to 160 dimensions, SCaSML reduces the error of various surrogate models, including PINNs and Gaussian Processes, by 20-80%. Code of SCaSML is available at https://github.com/Francis-Fan-create/SCaSML." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/25/PhysicsInformedInferenceTimeScalingforSolvingHighDimensionalPDEviaDefectCorrection.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/25/PhysicsInformedInferenceTimeScalingforSolvingHighDimensionalPDEviaDefectCorrection.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction" />
+<script type="application/ld+json">
+{"description":"Solving high-dimensional partial differential equations (PDEs) is a critical challenge where modern data-driven solvers often lack reliability and rigorous error guarantees. We introduce Simulation-Calibrated Scientific Machine Learning (SCaSML), a framework that systematically improves pre-trained PDE solvers at inference time without any retraining. Our core idea is to use defect correction method that derive a new PDE, termed Structural-preserving Law of Defect, that precisely describes the error of a given surrogate model. Since it retains the structure of the original problem, we can solve it efficiently with traditional stochastic simulators and correct the initial machine-learned solution. We prove that SCaSML achieves a faster convergence rate, with a final error bounded by the product of the surrogate and simulation errors. On challenging PDEs up to 160 dimensions, SCaSML reduces the error of various surrogate models, including PINNs and Gaussian Processes, by 20-80%. Code of SCaSML is available at https://github.com/Francis-Fan-create/SCaSML.","headline":"Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction","dateModified":"2025-12-25T00:00:00+00:00","datePublished":"2025-12-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/25/PhysicsInformedInferenceTimeScalingforSolvingHighDimensionalPDEviaDefectCorrection.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/25/PhysicsInformedInferenceTimeScalingforSolvingHighDimensionalPDEviaDefectCorrection.html","author":{"@type":"Person","name":"Zexi Fan, Yan Sun, Shihao Yang, Yiping Lu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-25 00:00:00 +0000">12-25</time>
+  </p>
+  
+  <h1>Physics-Informed Inference Time Scaling for Solving High-Dimensional PDE via Defect Correction</h1>
+  <br>Zexi Fan, Yan Sun, Shihao Yang, Yiping Lu</h3>
+  <br> [stat.ML]
+
+  <p>Solving high-dimensional partial differential equations (PDEs) is a critical challenge where modern data-driven solvers often lack reliability and rigorous error guarantees. We introduce Simulation-Calibrated Scientific Machine Learning (SCaSML), a framework that systematically improves pre-trained PDE solvers at inference time without any retraining. Our core idea is to use defect correction method that derive a new PDE, termed Structural-preserving Law of Defect, that precisely describes the error of a given surrogate model. Since it retains the structure of the original problem, we can solve it efficiently with traditional stochastic simulators and correct the initial machine-learned solution. We prove that SCaSML achieves a faster convergence rate, with a final error bounded by the product of the surrogate and simulation errors. On challenging PDEs up to 160 dimensions, SCaSML reduces the error of various surrogate models, including PINNs and Gaussian Processes, by 20-80%. Code of SCaSML is available at https://github.com/Francis-Fan-create/SCaSML.</p>
+
+<p><a href="https://arxiv.org/abs/2504.16172">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
