@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Preconditioning for Accelerated Gradient Descent Optimization and Regularization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Preconditioning for Accelerated Gradient Descent Optimization and Regularization" />
+<meta name="author" content="Qiang Ye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Accelerated training algorithms, such as adaptive learning rates (or preconditioning) and various normalization methods, are widely used but not fully understood. When regularization is introduced, standard optimizers like adaptive learning rates may not perform effectively. This raises the need for alternative regularization approaches such as AdamW and the question of how to properly combine regularization with preconditioning. In this paper, we address these challenges using the theory of preconditioning as follows: (1) We explain how AdaGrad, RMSProp, and Adam accelerates training through improving Hessian conditioning; (2) We explore the interaction between $L_2$-regularization and preconditioning, demonstrating that AdamW amounts to selecting the underlying intrinsic parameters for regularization, and we derive a generalization for the $L_1$-regularization; and (3) We demonstrate how various normalization methods such as input data normalization, batch normalization, and layer normalization accelerate training by improving Hessian conditioning. Our analysis offers a unified mathematical framework for understanding various acceleration techniques or deriving appropriate regularization schemes." />
+<meta property="og:description" content="Accelerated training algorithms, such as adaptive learning rates (or preconditioning) and various normalization methods, are widely used but not fully understood. When regularization is introduced, standard optimizers like adaptive learning rates may not perform effectively. This raises the need for alternative regularization approaches such as AdamW and the question of how to properly combine regularization with preconditioning. In this paper, we address these challenges using the theory of preconditioning as follows: (1) We explain how AdaGrad, RMSProp, and Adam accelerates training through improving Hessian conditioning; (2) We explore the interaction between $L_2$-regularization and preconditioning, demonstrating that AdamW amounts to selecting the underlying intrinsic parameters for regularization, and we derive a generalization for the $L_1$-regularization; and (3) We demonstrate how various normalization methods such as input data normalization, batch normalization, and layer normalization accelerate training by improving Hessian conditioning. Our analysis offers a unified mathematical framework for understanding various acceleration techniques or deriving appropriate regularization schemes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2025/12/30/PreconditioningforAcceleratedGradientDescentOptimizationandRegularization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2025/12/30/PreconditioningforAcceleratedGradientDescentOptimizationandRegularization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Preconditioning for Accelerated Gradient Descent Optimization and Regularization" />
+<script type="application/ld+json">
+{"description":"Accelerated training algorithms, such as adaptive learning rates (or preconditioning) and various normalization methods, are widely used but not fully understood. When regularization is introduced, standard optimizers like adaptive learning rates may not perform effectively. This raises the need for alternative regularization approaches such as AdamW and the question of how to properly combine regularization with preconditioning. In this paper, we address these challenges using the theory of preconditioning as follows: (1) We explain how AdaGrad, RMSProp, and Adam accelerates training through improving Hessian conditioning; (2) We explore the interaction between $L_2$-regularization and preconditioning, demonstrating that AdamW amounts to selecting the underlying intrinsic parameters for regularization, and we derive a generalization for the $L_1$-regularization; and (3) We demonstrate how various normalization methods such as input data normalization, batch normalization, and layer normalization accelerate training by improving Hessian conditioning. Our analysis offers a unified mathematical framework for understanding various acceleration techniques or deriving appropriate regularization schemes.","headline":"Preconditioning for Accelerated Gradient Descent Optimization and Regularization","dateModified":"2025-12-30T00:00:00+00:00","datePublished":"2025-12-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2025/12/30/PreconditioningforAcceleratedGradientDescentOptimizationandRegularization.html"},"url":"https://dedzago.github.io/arxiv_rss/2025/12/30/PreconditioningforAcceleratedGradientDescentOptimizationandRegularization.html","author":{"@type":"Person","name":"Qiang Ye"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2025-12-30 00:00:00 +0000">12-30</time>
+  </p>
+  
+  <h1>Preconditioning for Accelerated Gradient Descent Optimization and Regularization</h1>
+  <br>Qiang Ye</h3>
+  <br> [stat.ML]
+
+  <p>Accelerated training algorithms, such as adaptive learning rates (or preconditioning) and various normalization methods, are widely used but not fully understood. When regularization is introduced, standard optimizers like adaptive learning rates may not perform effectively. This raises the need for alternative regularization approaches such as AdamW and the question of how to properly combine regularization with preconditioning. In this paper, we address these challenges using the theory of preconditioning as follows: (1) We explain how AdaGrad, RMSProp, and Adam accelerates training through improving Hessian conditioning; (2) We explore the interaction between $L_2$-regularization and preconditioning, demonstrating that AdamW amounts to selecting the underlying intrinsic parameters for regularization, and we derive a generalization for the $L_1$-regularization; and (3) We demonstrate how various normalization methods such as input data normalization, batch normalization, and layer normalization accelerate training by improving Hessian conditioning. Our analysis offers a unified mathematical framework for understanding various acceleration techniques or deriving appropriate regularization schemes.</p>
+
+<p><a href="https://arxiv.org/abs/2410.00232">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
