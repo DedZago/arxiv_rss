@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios" />
+<meta name="author" content="Haley Rosso, Talea Mayo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For complex simulation problems, inferring parameters of scientific interest often precludes the use of classical likelihood-based techniques due to intractable likelihood functions. Simulation-based inference (SBI) methods forego the need for explicit likelihoods by directly utilizing samples from the simulator to learn posterior distributions over parameters $\mathbf{\theta}$ given observed data $\mathbf{x}_{\text{o}}$. Recent work has brought attention to diffusion models – a type of generative model rooted in score matching and reverse-time stochastic dynamics – as a flexible framework SBI tasks. This article reviews diffusion-based SBI from first principles to applications in practice. We first recall the mathematical foundations of diffusion modeling (forward noising, reverse-time SDE/ODE, probability flow, and denoising score matching) and explain how conditional scores enable likelihood-free posterior sampling. We then examine where diffusion models address pain points of normalizing flows in neural posterior/likelihood estimation and where they introduce new trade-offs (e.g., iterative sampling costs). The key theme of this review is robustness of diffusion-based SBI in non-ideal conditions common to scientific data: misspecification (mismatch between simulated training data and reality), unstructured or infinite-dimensional observations, and missingness. We synthesize methods spanning foundations drawing from Schrodinger-bridge formulations, conditional and sequential posterior samplers, amortized architectures for unstructured data, and inference-time prior adaptation. Throughout, we adopt consistent notation and emphasize conditions and caveats required for accurate posteriors. The review closes with a discussion of open problems with an eye toward applications of uncertainty quantification for probabilistic geophysical models that may benefit from diffusion-based SBI." />
+<meta property="og:description" content="For complex simulation problems, inferring parameters of scientific interest often precludes the use of classical likelihood-based techniques due to intractable likelihood functions. Simulation-based inference (SBI) methods forego the need for explicit likelihoods by directly utilizing samples from the simulator to learn posterior distributions over parameters $\mathbf{\theta}$ given observed data $\mathbf{x}_{\text{o}}$. Recent work has brought attention to diffusion models – a type of generative model rooted in score matching and reverse-time stochastic dynamics – as a flexible framework SBI tasks. This article reviews diffusion-based SBI from first principles to applications in practice. We first recall the mathematical foundations of diffusion modeling (forward noising, reverse-time SDE/ODE, probability flow, and denoising score matching) and explain how conditional scores enable likelihood-free posterior sampling. We then examine where diffusion models address pain points of normalizing flows in neural posterior/likelihood estimation and where they introduce new trade-offs (e.g., iterative sampling costs). The key theme of this review is robustness of diffusion-based SBI in non-ideal conditions common to scientific data: misspecification (mismatch between simulated training data and reality), unstructured or infinite-dimensional observations, and missingness. We synthesize methods spanning foundations drawing from Schrodinger-bridge formulations, conditional and sequential posterior samplers, amortized architectures for unstructured data, and inference-time prior adaptation. Throughout, we adopt consistent notation and emphasize conditions and caveats required for accurate posteriors. The review closes with a discussion of open problems with an eye toward applications of uncertainty quantification for probabilistic geophysical models that may benefit from diffusion-based SBI." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/01/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/01/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios" />
+<script type="application/ld+json">
+{"description":"For complex simulation problems, inferring parameters of scientific interest often precludes the use of classical likelihood-based techniques due to intractable likelihood functions. Simulation-based inference (SBI) methods forego the need for explicit likelihoods by directly utilizing samples from the simulator to learn posterior distributions over parameters $\\mathbf{\\theta}$ given observed data $\\mathbf{x}_{\\text{o}}$. Recent work has brought attention to diffusion models – a type of generative model rooted in score matching and reverse-time stochastic dynamics – as a flexible framework SBI tasks. This article reviews diffusion-based SBI from first principles to applications in practice. We first recall the mathematical foundations of diffusion modeling (forward noising, reverse-time SDE/ODE, probability flow, and denoising score matching) and explain how conditional scores enable likelihood-free posterior sampling. We then examine where diffusion models address pain points of normalizing flows in neural posterior/likelihood estimation and where they introduce new trade-offs (e.g., iterative sampling costs). The key theme of this review is robustness of diffusion-based SBI in non-ideal conditions common to scientific data: misspecification (mismatch between simulated training data and reality), unstructured or infinite-dimensional observations, and missingness. We synthesize methods spanning foundations drawing from Schrodinger-bridge formulations, conditional and sequential posterior samplers, amortized architectures for unstructured data, and inference-time prior adaptation. Throughout, we adopt consistent notation and emphasize conditions and caveats required for accurate posteriors. The review closes with a discussion of open problems with an eye toward applications of uncertainty quantification for probabilistic geophysical models that may benefit from diffusion-based SBI.","headline":"A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios","dateModified":"2026-01-01T00:00:00+00:00","datePublished":"2026-01-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/01/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/01/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html","author":{"@type":"Person","name":"Haley Rosso, Talea Mayo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-01 00:00:00 +0000">01-01</time>
+  </p>
+  
+  <h1>A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios</h1>
+  <br>Haley Rosso, Talea Mayo</h3>
+  <br> [stat.ML]
+
+  <p>For complex simulation problems, inferring parameters of scientific interest often precludes the use of classical likelihood-based techniques due to intractable likelihood functions. Simulation-based inference (SBI) methods forego the need for explicit likelihoods by directly utilizing samples from the simulator to learn posterior distributions over parameters $\mathbf{\theta}$ given observed data $\mathbf{x}_{\text{o}}$. Recent work has brought attention to diffusion models – a type of generative model rooted in score matching and reverse-time stochastic dynamics – as a flexible framework SBI tasks. This article reviews diffusion-based SBI from first principles to applications in practice. We first recall the mathematical foundations of diffusion modeling (forward noising, reverse-time SDE/ODE, probability flow, and denoising score matching) and explain how conditional scores enable likelihood-free posterior sampling. We then examine where diffusion models address pain points of normalizing flows in neural posterior/likelihood estimation and where they introduce new trade-offs (e.g., iterative sampling costs). The key theme of this review is robustness of diffusion-based SBI in non-ideal conditions common to scientific data: misspecification (mismatch between simulated training data and reality), unstructured or infinite-dimensional observations, and missingness. We synthesize methods spanning foundations drawing from Schrodinger-bridge formulations, conditional and sequential posterior samplers, amortized architectures for unstructured data, and inference-time prior adaptation. Throughout, we adopt consistent notation and emphasize conditions and caveats required for accurate posteriors. The review closes with a discussion of open problems with an eye toward applications of uncertainty quantification for probabilistic geophysical models that may benefit from diffusion-based SBI.</p>
+
+<p><a href="https://arxiv.org/abs/2512.23748">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

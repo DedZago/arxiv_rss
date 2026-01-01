@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving the stability of the covariance-controlled adaptive Langevin thermostat for large-scale Bayesian sampling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving the stability of the covariance-controlled adaptive Langevin thermostat for large-scale Bayesian sampling" />
+<meta name="author" content="Jiani Wei, Xiaocheng Shang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stochastic gradient Langevin dynamics and its variants approximate the likelihood of an entire dataset, via random (and typically much smaller) subsets, in the setting of Bayesian sampling. Due to the (often substantial) improvement of the computational efficiency, they have been widely used in large-scale machine learning applications. It has been demonstrated that the so-called covariance-controlled adaptive Langevin (CCAdL) thermostat, which incorporates an additional term involving the covariance matrix of the noisy force, outperforms popular alternative methods. A moving average is used in CCAdL to estimate the covariance matrix of the noisy force, in which case the covariance matrix will converge to a constant matrix in long-time limit. Moreover, it appears in our numerical experiments that the use of a moving average could reduce the stability of the numerical integrators, thereby limiting the largest usable stepsize. In this article, we propose a modified CCAdL (i.e., mCCAdL) thermostat that uses the scaling part of the scaling and squaring method together with a truncated Taylor series approximation to the exponential to numerically approximate the exact solution to the subsystem involving the additional term proposed in CCAdL. We also propose a symmetric splitting method for mCCAdL, instead of an Euler-type discretisation used in the original CCAdL thermostat. We demonstrate in our numerical experiments that the newly proposed mCCAdL thermostat achieves a substantial improvement in the numerical stability over the original CCAdL thermostat, while significantly outperforming popular alternative stochastic gradient methods in terms of the numerical accuracy for large-scale machine learning applications." />
+<meta property="og:description" content="Stochastic gradient Langevin dynamics and its variants approximate the likelihood of an entire dataset, via random (and typically much smaller) subsets, in the setting of Bayesian sampling. Due to the (often substantial) improvement of the computational efficiency, they have been widely used in large-scale machine learning applications. It has been demonstrated that the so-called covariance-controlled adaptive Langevin (CCAdL) thermostat, which incorporates an additional term involving the covariance matrix of the noisy force, outperforms popular alternative methods. A moving average is used in CCAdL to estimate the covariance matrix of the noisy force, in which case the covariance matrix will converge to a constant matrix in long-time limit. Moreover, it appears in our numerical experiments that the use of a moving average could reduce the stability of the numerical integrators, thereby limiting the largest usable stepsize. In this article, we propose a modified CCAdL (i.e., mCCAdL) thermostat that uses the scaling part of the scaling and squaring method together with a truncated Taylor series approximation to the exponential to numerically approximate the exact solution to the subsystem involving the additional term proposed in CCAdL. We also propose a symmetric splitting method for mCCAdL, instead of an Euler-type discretisation used in the original CCAdL thermostat. We demonstrate in our numerical experiments that the newly proposed mCCAdL thermostat achieves a substantial improvement in the numerical stability over the original CCAdL thermostat, while significantly outperforming popular alternative stochastic gradient methods in terms of the numerical accuracy for large-scale machine learning applications." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/01/ImprovingthestabilityofthecovariancecontrolledadaptiveLangevinthermostatforlargescaleBayesiansampling.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/01/ImprovingthestabilityofthecovariancecontrolledadaptiveLangevinthermostatforlargescaleBayesiansampling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving the stability of the covariance-controlled adaptive Langevin thermostat for large-scale Bayesian sampling" />
+<script type="application/ld+json">
+{"description":"Stochastic gradient Langevin dynamics and its variants approximate the likelihood of an entire dataset, via random (and typically much smaller) subsets, in the setting of Bayesian sampling. Due to the (often substantial) improvement of the computational efficiency, they have been widely used in large-scale machine learning applications. It has been demonstrated that the so-called covariance-controlled adaptive Langevin (CCAdL) thermostat, which incorporates an additional term involving the covariance matrix of the noisy force, outperforms popular alternative methods. A moving average is used in CCAdL to estimate the covariance matrix of the noisy force, in which case the covariance matrix will converge to a constant matrix in long-time limit. Moreover, it appears in our numerical experiments that the use of a moving average could reduce the stability of the numerical integrators, thereby limiting the largest usable stepsize. In this article, we propose a modified CCAdL (i.e., mCCAdL) thermostat that uses the scaling part of the scaling and squaring method together with a truncated Taylor series approximation to the exponential to numerically approximate the exact solution to the subsystem involving the additional term proposed in CCAdL. We also propose a symmetric splitting method for mCCAdL, instead of an Euler-type discretisation used in the original CCAdL thermostat. We demonstrate in our numerical experiments that the newly proposed mCCAdL thermostat achieves a substantial improvement in the numerical stability over the original CCAdL thermostat, while significantly outperforming popular alternative stochastic gradient methods in terms of the numerical accuracy for large-scale machine learning applications.","headline":"Improving the stability of the covariance-controlled adaptive Langevin thermostat for large-scale Bayesian sampling","dateModified":"2026-01-01T00:00:00+00:00","datePublished":"2026-01-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/01/ImprovingthestabilityofthecovariancecontrolledadaptiveLangevinthermostatforlargescaleBayesiansampling.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/01/ImprovingthestabilityofthecovariancecontrolledadaptiveLangevinthermostatforlargescaleBayesiansampling.html","author":{"@type":"Person","name":"Jiani Wei, Xiaocheng Shang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-01 00:00:00 +0000">01-01</time>
+  </p>
+  
+  <h1>Improving the stability of the covariance-controlled adaptive Langevin thermostat for large-scale Bayesian sampling</h1>
+  <br>Jiani Wei, Xiaocheng Shang</h3>
+  <br> [stat.ML,stat.CO,stat.ME]
+
+  <p>Stochastic gradient Langevin dynamics and its variants approximate the likelihood of an entire dataset, via random (and typically much smaller) subsets, in the setting of Bayesian sampling. Due to the (often substantial) improvement of the computational efficiency, they have been widely used in large-scale machine learning applications. It has been demonstrated that the so-called covariance-controlled adaptive Langevin (CCAdL) thermostat, which incorporates an additional term involving the covariance matrix of the noisy force, outperforms popular alternative methods. A moving average is used in CCAdL to estimate the covariance matrix of the noisy force, in which case the covariance matrix will converge to a constant matrix in long-time limit. Moreover, it appears in our numerical experiments that the use of a moving average could reduce the stability of the numerical integrators, thereby limiting the largest usable stepsize. In this article, we propose a modified CCAdL (i.e., mCCAdL) thermostat that uses the scaling part of the scaling and squaring method together with a truncated Taylor series approximation to the exponential to numerically approximate the exact solution to the subsystem involving the additional term proposed in CCAdL. We also propose a symmetric splitting method for mCCAdL, instead of an Euler-type discretisation used in the original CCAdL thermostat. We demonstrate in our numerical experiments that the newly proposed mCCAdL thermostat achieves a substantial improvement in the numerical stability over the original CCAdL thermostat, while significantly outperforming popular alternative stochastic gradient methods in terms of the numerical accuracy for large-scale machine learning applications.</p>
+
+<p><a href="https://arxiv.org/abs/2512.24515">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
