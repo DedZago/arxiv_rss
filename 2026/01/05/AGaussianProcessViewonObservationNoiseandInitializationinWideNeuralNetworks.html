@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Gaussian Process View on Observation Noise and Initialization in Wide Neural Networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Gaussian Process View on Observation Noise and Initialization in Wide Neural Networks" />
+<meta name="author" content="Sergio Calvo-Ordoñez, Jonathan Plenk, Richard Bergna, Alvaro Cartea, Jose Miguel Hernandez-Lobato, Konstantina Palla, Kamil Ciosek" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Performing gradient descent in a wide neural network is equivalent to computing the posterior mean of a Gaussian Process with the Neural Tangent Kernel (NTK-GP), for a specific prior mean and with zero observation noise. However, existing formulations have two limitations: (i) the NTK-GP assumes noiseless targets, leading to misspecification on noisy data; (ii) the equivalence does not extend to arbitrary prior means, which are essential for well-specified models. To address (i), we introduce a regularizer into the training objective, showing its correspondence to incorporating observation noise in the NTK-GP. To address (ii), we propose a \textit{shifted network} that enables arbitrary prior means and allows obtaining the posterior mean with gradient descent on a single network, without ensembling or kernel inversion. We validate our results with experiments across datasets and architectures, showing that this approach removes key obstacles to the practical use of NTK-GP equivalence in applied Gaussian process modeling." />
+<meta property="og:description" content="Performing gradient descent in a wide neural network is equivalent to computing the posterior mean of a Gaussian Process with the Neural Tangent Kernel (NTK-GP), for a specific prior mean and with zero observation noise. However, existing formulations have two limitations: (i) the NTK-GP assumes noiseless targets, leading to misspecification on noisy data; (ii) the equivalence does not extend to arbitrary prior means, which are essential for well-specified models. To address (i), we introduce a regularizer into the training objective, showing its correspondence to incorporating observation noise in the NTK-GP. To address (ii), we propose a \textit{shifted network} that enables arbitrary prior means and allows obtaining the posterior mean with gradient descent on a single network, without ensembling or kernel inversion. We validate our results with experiments across datasets and architectures, showing that this approach removes key obstacles to the practical use of NTK-GP equivalence in applied Gaussian process modeling." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/05/AGaussianProcessViewonObservationNoiseandInitializationinWideNeuralNetworks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/05/AGaussianProcessViewonObservationNoiseandInitializationinWideNeuralNetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Gaussian Process View on Observation Noise and Initialization in Wide Neural Networks" />
+<script type="application/ld+json">
+{"description":"Performing gradient descent in a wide neural network is equivalent to computing the posterior mean of a Gaussian Process with the Neural Tangent Kernel (NTK-GP), for a specific prior mean and with zero observation noise. However, existing formulations have two limitations: (i) the NTK-GP assumes noiseless targets, leading to misspecification on noisy data; (ii) the equivalence does not extend to arbitrary prior means, which are essential for well-specified models. To address (i), we introduce a regularizer into the training objective, showing its correspondence to incorporating observation noise in the NTK-GP. To address (ii), we propose a \\textit{shifted network} that enables arbitrary prior means and allows obtaining the posterior mean with gradient descent on a single network, without ensembling or kernel inversion. We validate our results with experiments across datasets and architectures, showing that this approach removes key obstacles to the practical use of NTK-GP equivalence in applied Gaussian process modeling.","headline":"A Gaussian Process View on Observation Noise and Initialization in Wide Neural Networks","dateModified":"2026-01-05T00:00:00+00:00","datePublished":"2026-01-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/05/AGaussianProcessViewonObservationNoiseandInitializationinWideNeuralNetworks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/05/AGaussianProcessViewonObservationNoiseandInitializationinWideNeuralNetworks.html","author":{"@type":"Person","name":"Sergio Calvo-Ordoñez, Jonathan Plenk, Richard Bergna, Alvaro Cartea, Jose Miguel Hernandez-Lobato, Konstantina Palla, Kamil Ciosek"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-05 00:00:00 +0000">01-05</time>
+  </p>
+  
+  <h1>A Gaussian Process View on Observation Noise and Initialization in Wide Neural Networks</h1>
+  <br>Sergio Calvo-Ordoñez, Jonathan Plenk, Richard Bergna, Alvaro Cartea, Jose Miguel Hernandez-Lobato, Konstantina Palla, Kamil Ciosek</h3>
+  <br> [stat.ML]
+
+  <p>Performing gradient descent in a wide neural network is equivalent to computing the posterior mean of a Gaussian Process with the Neural Tangent Kernel (NTK-GP), for a specific prior mean and with zero observation noise. However, existing formulations have two limitations: (i) the NTK-GP assumes noiseless targets, leading to misspecification on noisy data; (ii) the equivalence does not extend to arbitrary prior means, which are essential for well-specified models. To address (i), we introduce a regularizer into the training objective, showing its correspondence to incorporating observation noise in the NTK-GP. To address (ii), we propose a \textit{shifted network} that enables arbitrary prior means and allows obtaining the posterior mean with gradient descent on a single network, without ensembling or kernel inversion. We validate our results with experiments across datasets and architectures, showing that this approach removes key obstacles to the practical use of NTK-GP equivalence in applied Gaussian process modeling.</p>
+
+<p><a href="https://arxiv.org/abs/2502.01556">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
