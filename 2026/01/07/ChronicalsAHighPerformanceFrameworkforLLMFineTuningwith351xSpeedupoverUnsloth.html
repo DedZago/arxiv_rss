@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Chronicals: A High-Performance Framework for LLM Fine-Tuning with 3.51x Speedup over Unsloth</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Chronicals: A High-Performance Framework for LLM Fine-Tuning with 3.51x Speedup over Unsloth" />
+<meta name="author" content="Arjun S. Nair" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language model fine-tuning is bottlenecked by memory: a 7B parameter model requires 84GB–14GB for weights, 14GB for gradients, and 56GB for FP32 optimizer states–exceeding even A100-40GB capacity. We present Chronicals, an open-source training framework achieving 3.51x speedup over Unsloth through four synergistic optimizations: (1) fused Triton kernels eliminating 75% of memory traffic via RMSNorm (7x), SwiGLU (5x), and QK-RoPE (2.3x) fusion; (2) Cut Cross-Entropy reducing logit memory from 5GB to 135MB through online softmax computation; (3) LoRA+ with theoretically-derived 16x differential learning rates between adapter matrices; and (4) Best-Fit Decreasing sequence packing recovering 60-75% of compute wasted on padding. On Qwen2.5-0.5B with A100-40GB, Chronicals achieves 41,184 tokens/second for full fine-tuning versus Unsloth’s 11,736 tokens/second (3.51x). For LoRA at rank 32, we reach 11,699 tokens/second versus Unsloth MAX’s 2,857 tokens/second (4.10x). Critically, we discovered that Unsloth’s reported 46,000 tokens/second benchmark exhibited zero gradient norms–the model was not training. We provide complete mathematical foundations: online softmax correctness proofs, FlashAttention IO complexity bounds O(N^2 d^2 M^{-1}), LoRA+ learning rate derivations from gradient magnitude analysis, and bin-packing approximation guarantees. All implementations, benchmarks, and proofs are available at https://github.com/Ajwebdevs/Chronicals with pip installation via https://pypi.org/project/chronicals/." />
+<meta property="og:description" content="Large language model fine-tuning is bottlenecked by memory: a 7B parameter model requires 84GB–14GB for weights, 14GB for gradients, and 56GB for FP32 optimizer states–exceeding even A100-40GB capacity. We present Chronicals, an open-source training framework achieving 3.51x speedup over Unsloth through four synergistic optimizations: (1) fused Triton kernels eliminating 75% of memory traffic via RMSNorm (7x), SwiGLU (5x), and QK-RoPE (2.3x) fusion; (2) Cut Cross-Entropy reducing logit memory from 5GB to 135MB through online softmax computation; (3) LoRA+ with theoretically-derived 16x differential learning rates between adapter matrices; and (4) Best-Fit Decreasing sequence packing recovering 60-75% of compute wasted on padding. On Qwen2.5-0.5B with A100-40GB, Chronicals achieves 41,184 tokens/second for full fine-tuning versus Unsloth’s 11,736 tokens/second (3.51x). For LoRA at rank 32, we reach 11,699 tokens/second versus Unsloth MAX’s 2,857 tokens/second (4.10x). Critically, we discovered that Unsloth’s reported 46,000 tokens/second benchmark exhibited zero gradient norms–the model was not training. We provide complete mathematical foundations: online softmax correctness proofs, FlashAttention IO complexity bounds O(N^2 d^2 M^{-1}), LoRA+ learning rate derivations from gradient magnitude analysis, and bin-packing approximation guarantees. All implementations, benchmarks, and proofs are available at https://github.com/Ajwebdevs/Chronicals with pip installation via https://pypi.org/project/chronicals/." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/07/ChronicalsAHighPerformanceFrameworkforLLMFineTuningwith351xSpeedupoverUnsloth.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/07/ChronicalsAHighPerformanceFrameworkforLLMFineTuningwith351xSpeedupoverUnsloth.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Chronicals: A High-Performance Framework for LLM Fine-Tuning with 3.51x Speedup over Unsloth" />
+<script type="application/ld+json">
+{"description":"Large language model fine-tuning is bottlenecked by memory: a 7B parameter model requires 84GB–14GB for weights, 14GB for gradients, and 56GB for FP32 optimizer states–exceeding even A100-40GB capacity. We present Chronicals, an open-source training framework achieving 3.51x speedup over Unsloth through four synergistic optimizations: (1) fused Triton kernels eliminating 75% of memory traffic via RMSNorm (7x), SwiGLU (5x), and QK-RoPE (2.3x) fusion; (2) Cut Cross-Entropy reducing logit memory from 5GB to 135MB through online softmax computation; (3) LoRA+ with theoretically-derived 16x differential learning rates between adapter matrices; and (4) Best-Fit Decreasing sequence packing recovering 60-75% of compute wasted on padding. On Qwen2.5-0.5B with A100-40GB, Chronicals achieves 41,184 tokens/second for full fine-tuning versus Unsloth’s 11,736 tokens/second (3.51x). For LoRA at rank 32, we reach 11,699 tokens/second versus Unsloth MAX’s 2,857 tokens/second (4.10x). Critically, we discovered that Unsloth’s reported 46,000 tokens/second benchmark exhibited zero gradient norms–the model was not training. We provide complete mathematical foundations: online softmax correctness proofs, FlashAttention IO complexity bounds O(N^2 d^2 M^{-1}), LoRA+ learning rate derivations from gradient magnitude analysis, and bin-packing approximation guarantees. All implementations, benchmarks, and proofs are available at https://github.com/Ajwebdevs/Chronicals with pip installation via https://pypi.org/project/chronicals/.","headline":"Chronicals: A High-Performance Framework for LLM Fine-Tuning with 3.51x Speedup over Unsloth","dateModified":"2026-01-07T00:00:00+00:00","datePublished":"2026-01-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/07/ChronicalsAHighPerformanceFrameworkforLLMFineTuningwith351xSpeedupoverUnsloth.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/07/ChronicalsAHighPerformanceFrameworkforLLMFineTuningwith351xSpeedupoverUnsloth.html","author":{"@type":"Person","name":"Arjun S. Nair"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-07 00:00:00 +0000">01-07</time>
+  </p>
+  
+  <h1>Chronicals: A High-Performance Framework for LLM Fine-Tuning with 3.51x Speedup over Unsloth</h1>
+  <br>Arjun S. Nair</h3>
+  <br> [stat.ML]
+
+  <p>Large language model fine-tuning is bottlenecked by memory: a 7B parameter model requires 84GB–14GB for weights, 14GB for gradients, and 56GB for FP32 optimizer states–exceeding even A100-40GB capacity. We present Chronicals, an open-source training framework achieving 3.51x speedup over Unsloth through four synergistic optimizations: (1) fused Triton kernels eliminating 75% of memory traffic via RMSNorm (7x), SwiGLU (5x), and QK-RoPE (2.3x) fusion; (2) Cut Cross-Entropy reducing logit memory from 5GB to 135MB through online softmax computation; (3) LoRA+ with theoretically-derived 16x differential learning rates between adapter matrices; and (4) Best-Fit Decreasing sequence packing recovering 60-75% of compute wasted on padding.
+  On Qwen2.5-0.5B with A100-40GB, Chronicals achieves 41,184 tokens/second for full fine-tuning versus Unsloth’s 11,736 tokens/second (3.51x). For LoRA at rank 32, we reach 11,699 tokens/second versus Unsloth MAX’s 2,857 tokens/second (4.10x). Critically, we discovered that Unsloth’s reported 46,000 tokens/second benchmark exhibited zero gradient norms–the model was not training.
+  We provide complete mathematical foundations: online softmax correctness proofs, FlashAttention IO complexity bounds O(N^2 d^2 M^{-1}), LoRA+ learning rate derivations from gradient magnitude analysis, and bin-packing approximation guarantees. All implementations, benchmarks, and proofs are available at https://github.com/Ajwebdevs/Chronicals with pip installation via https://pypi.org/project/chronicals/.</p>
+
+<p><a href="https://arxiv.org/abs/2601.02609">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
