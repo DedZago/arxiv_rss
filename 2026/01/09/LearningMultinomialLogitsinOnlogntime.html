@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning Multinomial Logits in $O(n \log n)$ time</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning Multinomial Logits in $O(n \log n)$ time" />
+<meta name="author" content="Flavio Chierichetti, Mirko Giacchini, Ravi Kumar, Silvio Lattanzi, Alessandro Panconesi, Erasmo Tani, Andrew Tomkins" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Multinomial Logit (MNL) model is composed of a finite universe of items $[n]={1,…, n}$, each assigned a positive weight. A query specifies an admissible subset – called a slate – and the model chooses one item from that slate with probability proportional to its weight. This query model is also known as the Plackett-Luce model or conditional sampling oracle in the literature. Although MNLs have been studied extensively, a basic computational question remains open: given query access to slates, how efficiently can we learn weights so that, for every slate, the induced choice distribution is within total variation distance $\varepsilon$ of the ground truth? This question is central to MNL learning and has direct implications for modern recommender system interfaces. We provide two algorithms for this task, one with adaptive queries and one with non-adaptive queries. Each algorithm outputs an MNL $M’$ that induces, for each slate $S$, a distribution $M’_S$ on $S$ that is within $\varepsilon$ total variation distance of the true distribution. Our adaptive algorithm makes $O\left(\frac{n}{\varepsilon^{3}}\log n\right)$ queries, while our non-adaptive algorithm makes $O\left(\frac{n^{2}}{\varepsilon^{3}}\log n \log\frac{n}{\varepsilon}\right)$ queries. Both algorithms query only slates of size two and run in time proportional to their query complexity. We complement these upper bounds with lower bounds of $\Omega\left(\frac{n}{\varepsilon^{2}}\log n\right)$ for adaptive queries and $\Omega\left(\frac{n^{2}}{\varepsilon^{2}}\log n\right)$ for non-adaptive queries, thus proving that our adaptive algorithm is optimal in its dependence on the support size $n$, while the non-adaptive one is tight within a $\log n$ factor." />
+<meta property="og:description" content="A Multinomial Logit (MNL) model is composed of a finite universe of items $[n]={1,…, n}$, each assigned a positive weight. A query specifies an admissible subset – called a slate – and the model chooses one item from that slate with probability proportional to its weight. This query model is also known as the Plackett-Luce model or conditional sampling oracle in the literature. Although MNLs have been studied extensively, a basic computational question remains open: given query access to slates, how efficiently can we learn weights so that, for every slate, the induced choice distribution is within total variation distance $\varepsilon$ of the ground truth? This question is central to MNL learning and has direct implications for modern recommender system interfaces. We provide two algorithms for this task, one with adaptive queries and one with non-adaptive queries. Each algorithm outputs an MNL $M’$ that induces, for each slate $S$, a distribution $M’_S$ on $S$ that is within $\varepsilon$ total variation distance of the true distribution. Our adaptive algorithm makes $O\left(\frac{n}{\varepsilon^{3}}\log n\right)$ queries, while our non-adaptive algorithm makes $O\left(\frac{n^{2}}{\varepsilon^{3}}\log n \log\frac{n}{\varepsilon}\right)$ queries. Both algorithms query only slates of size two and run in time proportional to their query complexity. We complement these upper bounds with lower bounds of $\Omega\left(\frac{n}{\varepsilon^{2}}\log n\right)$ for adaptive queries and $\Omega\left(\frac{n^{2}}{\varepsilon^{2}}\log n\right)$ for non-adaptive queries, thus proving that our adaptive algorithm is optimal in its dependence on the support size $n$, while the non-adaptive one is tight within a $\log n$ factor." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/09/LearningMultinomialLogitsinOnlogntime.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/09/LearningMultinomialLogitsinOnlogntime.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning Multinomial Logits in $O(n \log n)$ time" />
+<script type="application/ld+json">
+{"description":"A Multinomial Logit (MNL) model is composed of a finite universe of items $[n]={1,…, n}$, each assigned a positive weight. A query specifies an admissible subset – called a slate – and the model chooses one item from that slate with probability proportional to its weight. This query model is also known as the Plackett-Luce model or conditional sampling oracle in the literature. Although MNLs have been studied extensively, a basic computational question remains open: given query access to slates, how efficiently can we learn weights so that, for every slate, the induced choice distribution is within total variation distance $\\varepsilon$ of the ground truth? This question is central to MNL learning and has direct implications for modern recommender system interfaces. We provide two algorithms for this task, one with adaptive queries and one with non-adaptive queries. Each algorithm outputs an MNL $M’$ that induces, for each slate $S$, a distribution $M’_S$ on $S$ that is within $\\varepsilon$ total variation distance of the true distribution. Our adaptive algorithm makes $O\\left(\\frac{n}{\\varepsilon^{3}}\\log n\\right)$ queries, while our non-adaptive algorithm makes $O\\left(\\frac{n^{2}}{\\varepsilon^{3}}\\log n \\log\\frac{n}{\\varepsilon}\\right)$ queries. Both algorithms query only slates of size two and run in time proportional to their query complexity. We complement these upper bounds with lower bounds of $\\Omega\\left(\\frac{n}{\\varepsilon^{2}}\\log n\\right)$ for adaptive queries and $\\Omega\\left(\\frac{n^{2}}{\\varepsilon^{2}}\\log n\\right)$ for non-adaptive queries, thus proving that our adaptive algorithm is optimal in its dependence on the support size $n$, while the non-adaptive one is tight within a $\\log n$ factor.","headline":"Learning Multinomial Logits in $O(n \\log n)$ time","dateModified":"2026-01-09T00:00:00+00:00","datePublished":"2026-01-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/09/LearningMultinomialLogitsinOnlogntime.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/09/LearningMultinomialLogitsinOnlogntime.html","author":{"@type":"Person","name":"Flavio Chierichetti, Mirko Giacchini, Ravi Kumar, Silvio Lattanzi, Alessandro Panconesi, Erasmo Tani, Andrew Tomkins"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-09 00:00:00 +0000">01-09</time>
+  </p>
+  
+  <h1>Learning Multinomial Logits in $O(n \log n)$ time</h1>
+  <br>Flavio Chierichetti, Mirko Giacchini, Ravi Kumar, Silvio Lattanzi, Alessandro Panconesi, Erasmo Tani, Andrew Tomkins</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>A Multinomial Logit (MNL) model is composed of a finite universe of items $[n]={1,…, n}$, each assigned a positive weight. A query specifies an admissible subset – called a slate – and the model chooses one item from that slate with probability proportional to its weight. This query model is also known as the Plackett-Luce model or conditional sampling oracle in the literature. Although MNLs have been studied extensively, a basic computational question remains open: given query access to slates, how efficiently can we learn weights so that, for every slate, the induced choice distribution is within total variation distance $\varepsilon$ of the ground truth? This question is central to MNL learning and has direct implications for modern recommender system interfaces.
+  We provide two algorithms for this task, one with adaptive queries and one with non-adaptive queries. Each algorithm outputs an MNL $M’$ that induces, for each slate $S$, a distribution $M’_S$ on $S$ that is within $\varepsilon$ total variation distance of the true distribution. Our adaptive algorithm makes $O\left(\frac{n}{\varepsilon^{3}}\log n\right)$ queries, while our non-adaptive algorithm makes $O\left(\frac{n^{2}}{\varepsilon^{3}}\log n \log\frac{n}{\varepsilon}\right)$ queries. Both algorithms query only slates of size two and run in time proportional to their query complexity.
+  We complement these upper bounds with lower bounds of $\Omega\left(\frac{n}{\varepsilon^{2}}\log n\right)$ for adaptive queries and $\Omega\left(\frac{n^{2}}{\varepsilon^{2}}\log n\right)$ for non-adaptive queries, thus proving that our adaptive algorithm is optimal in its dependence on the support size $n$, while the non-adaptive one is tight within a $\log n$ factor.</p>
+
+<p><a href="https://arxiv.org/abs/2601.04423">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
