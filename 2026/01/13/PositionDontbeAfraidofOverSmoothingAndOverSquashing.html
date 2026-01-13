@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Position: Don't be Afraid of Over-Smoothing And Over-Squashing</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Position: Don’t be Afraid of Over-Smoothing And Over-Squashing" />
+<meta name="author" content="Niklas Kormann, Benjamin Doerr, Johannes F. Lutzeyer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Over-smoothing and over-squashing have been extensively studied in the literature on Graph Neural Networks (GNNs) over the past years. We challenge this prevailing focus in GNN research, arguing that these phenomena are less critical for practical applications than assumed. We suggest that performance decreases often stem from uninformative receptive fields rather than over-smoothing. We support this position with extensive experiments on several standard benchmark datasets, demonstrating that accuracy and over-smoothing are mostly uncorrelated and that optimal model depths remain small even with mitigation techniques, thus highlighting the negligible role of over-smoothing. Similarly, we challenge that over-squashing is always detrimental in practical applications. Instead, we posit that the distribution of relevant information over the graph frequently factorises and is often localised within a small k-hop neighbourhood, questioning the necessity of jointly observing entire receptive fields or engaging in an extensive search for long-range interactions. The results of our experiments show that architectural interventions designed to mitigate over-squashing fail to yield significant performance gains. This position paper advocates for a paradigm shift in theoretical research, urging a diligent analysis of learning tasks and datasets using statistics that measure the underlying distribution of label-relevant information to better understand their localisation and factorisation." />
+<meta property="og:description" content="Over-smoothing and over-squashing have been extensively studied in the literature on Graph Neural Networks (GNNs) over the past years. We challenge this prevailing focus in GNN research, arguing that these phenomena are less critical for practical applications than assumed. We suggest that performance decreases often stem from uninformative receptive fields rather than over-smoothing. We support this position with extensive experiments on several standard benchmark datasets, demonstrating that accuracy and over-smoothing are mostly uncorrelated and that optimal model depths remain small even with mitigation techniques, thus highlighting the negligible role of over-smoothing. Similarly, we challenge that over-squashing is always detrimental in practical applications. Instead, we posit that the distribution of relevant information over the graph frequently factorises and is often localised within a small k-hop neighbourhood, questioning the necessity of jointly observing entire receptive fields or engaging in an extensive search for long-range interactions. The results of our experiments show that architectural interventions designed to mitigate over-squashing fail to yield significant performance gains. This position paper advocates for a paradigm shift in theoretical research, urging a diligent analysis of learning tasks and datasets using statistics that measure the underlying distribution of label-relevant information to better understand their localisation and factorisation." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/13/PositionDontbeAfraidofOverSmoothingAndOverSquashing.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/13/PositionDontbeAfraidofOverSmoothingAndOverSquashing.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Position: Don’t be Afraid of Over-Smoothing And Over-Squashing" />
+<script type="application/ld+json">
+{"description":"Over-smoothing and over-squashing have been extensively studied in the literature on Graph Neural Networks (GNNs) over the past years. We challenge this prevailing focus in GNN research, arguing that these phenomena are less critical for practical applications than assumed. We suggest that performance decreases often stem from uninformative receptive fields rather than over-smoothing. We support this position with extensive experiments on several standard benchmark datasets, demonstrating that accuracy and over-smoothing are mostly uncorrelated and that optimal model depths remain small even with mitigation techniques, thus highlighting the negligible role of over-smoothing. Similarly, we challenge that over-squashing is always detrimental in practical applications. Instead, we posit that the distribution of relevant information over the graph frequently factorises and is often localised within a small k-hop neighbourhood, questioning the necessity of jointly observing entire receptive fields or engaging in an extensive search for long-range interactions. The results of our experiments show that architectural interventions designed to mitigate over-squashing fail to yield significant performance gains. This position paper advocates for a paradigm shift in theoretical research, urging a diligent analysis of learning tasks and datasets using statistics that measure the underlying distribution of label-relevant information to better understand their localisation and factorisation.","headline":"Position: Don’t be Afraid of Over-Smoothing And Over-Squashing","dateModified":"2026-01-13T00:00:00+00:00","datePublished":"2026-01-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/13/PositionDontbeAfraidofOverSmoothingAndOverSquashing.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/13/PositionDontbeAfraidofOverSmoothingAndOverSquashing.html","author":{"@type":"Person","name":"Niklas Kormann, Benjamin Doerr, Johannes F. Lutzeyer"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-13 00:00:00 +0000">01-13</time>
+  </p>
+  
+  <h1>Position: Don't be Afraid of Over-Smoothing And Over-Squashing</h1>
+  <br>Niklas Kormann, Benjamin Doerr, Johannes F. Lutzeyer</h3>
+  <br> [stat.ML]
+
+  <p>Over-smoothing and over-squashing have been extensively studied in the literature on Graph Neural Networks (GNNs) over the past years. We challenge this prevailing focus in GNN research, arguing that these phenomena are less critical for practical applications than assumed. We suggest that performance decreases often stem from uninformative receptive fields rather than over-smoothing. We support this position with extensive experiments on several standard benchmark datasets, demonstrating that accuracy and over-smoothing are mostly uncorrelated and that optimal model depths remain small even with mitigation techniques, thus highlighting the negligible role of over-smoothing. Similarly, we challenge that over-squashing is always detrimental in practical applications. Instead, we posit that the distribution of relevant information over the graph frequently factorises and is often localised within a small k-hop neighbourhood, questioning the necessity of jointly observing entire receptive fields or engaging in an extensive search for long-range interactions. The results of our experiments show that architectural interventions designed to mitigate over-squashing fail to yield significant performance gains. This position paper advocates for a paradigm shift in theoretical research, urging a diligent analysis of learning tasks and datasets using statistics that measure the underlying distribution of label-relevant information to better understand their localisation and factorisation.</p>
+
+<p><a href="https://arxiv.org/abs/2601.07419">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

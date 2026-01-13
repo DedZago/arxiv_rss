@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Unity Forests: Improving Interaction Modelling and Interpretability in Random Forests</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Unity Forests: Improving Interaction Modelling and Interpretability in Random Forests" />
+<meta name="author" content="Roman Hornung , Alexander Hapfelmeier" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Random forests (RFs) are widely used for prediction and variable importance analysis and are often believed to capture any types of interactions via recursive splitting. However, since the splits are chosen locally, interactions are only reliably captured when at least one involved covariate has a marginal effect. We introduce unity forests (UFOs), an RF variant designed to better exploit interactions involving covariates without marginal effects. In UFOs, the first few splits of each tree are optimized jointly across a random covariate subset to form a “tree root” capturing such interactions; the remainder is grown conventionally. We further propose the unity variable importance measure (VIM), which is based on out-of-bag split criterion values from the tree roots. Here, only a small fraction of tree root splits with the highest in-bag criterion values are considered per covariate, reflecting that covariates with purely interaction-based effects are discriminative only if a split in an interacting covariate occurred earlier in the tree. Finally, we introduce covariate-representative tree roots (CRTRs), which select representative tree roots per covariate and provide interpretable insight into the conditions - marginal or interactive - under which each covariate has its strongest effects. In a simulation study, the unity VIM reliably identified interacting covariates without marginal effects, unlike conventional RF-based VIMs. In a large-scale real-data comparison, UFOs achieved higher discrimination and predictive accuracy than standard RFs, with comparable calibration. The CRTRs reproduced the covariates’ true effect types reliably in simulated data and provided interesting insights in a real data analysis." />
+<meta property="og:description" content="Random forests (RFs) are widely used for prediction and variable importance analysis and are often believed to capture any types of interactions via recursive splitting. However, since the splits are chosen locally, interactions are only reliably captured when at least one involved covariate has a marginal effect. We introduce unity forests (UFOs), an RF variant designed to better exploit interactions involving covariates without marginal effects. In UFOs, the first few splits of each tree are optimized jointly across a random covariate subset to form a “tree root” capturing such interactions; the remainder is grown conventionally. We further propose the unity variable importance measure (VIM), which is based on out-of-bag split criterion values from the tree roots. Here, only a small fraction of tree root splits with the highest in-bag criterion values are considered per covariate, reflecting that covariates with purely interaction-based effects are discriminative only if a split in an interacting covariate occurred earlier in the tree. Finally, we introduce covariate-representative tree roots (CRTRs), which select representative tree roots per covariate and provide interpretable insight into the conditions - marginal or interactive - under which each covariate has its strongest effects. In a simulation study, the unity VIM reliably identified interacting covariates without marginal effects, unlike conventional RF-based VIMs. In a large-scale real-data comparison, UFOs achieved higher discrimination and predictive accuracy than standard RFs, with comparable calibration. The CRTRs reproduced the covariates’ true effect types reliably in simulated data and provided interesting insights in a real data analysis." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/13/UnityForestsImprovingInteractionModellingandInterpretabilityinRandomForests.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/13/UnityForestsImprovingInteractionModellingandInterpretabilityinRandomForests.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unity Forests: Improving Interaction Modelling and Interpretability in Random Forests" />
+<script type="application/ld+json">
+{"description":"Random forests (RFs) are widely used for prediction and variable importance analysis and are often believed to capture any types of interactions via recursive splitting. However, since the splits are chosen locally, interactions are only reliably captured when at least one involved covariate has a marginal effect. We introduce unity forests (UFOs), an RF variant designed to better exploit interactions involving covariates without marginal effects. In UFOs, the first few splits of each tree are optimized jointly across a random covariate subset to form a “tree root” capturing such interactions; the remainder is grown conventionally. We further propose the unity variable importance measure (VIM), which is based on out-of-bag split criterion values from the tree roots. Here, only a small fraction of tree root splits with the highest in-bag criterion values are considered per covariate, reflecting that covariates with purely interaction-based effects are discriminative only if a split in an interacting covariate occurred earlier in the tree. Finally, we introduce covariate-representative tree roots (CRTRs), which select representative tree roots per covariate and provide interpretable insight into the conditions - marginal or interactive - under which each covariate has its strongest effects. In a simulation study, the unity VIM reliably identified interacting covariates without marginal effects, unlike conventional RF-based VIMs. In a large-scale real-data comparison, UFOs achieved higher discrimination and predictive accuracy than standard RFs, with comparable calibration. The CRTRs reproduced the covariates’ true effect types reliably in simulated data and provided interesting insights in a real data analysis.","headline":"Unity Forests: Improving Interaction Modelling and Interpretability in Random Forests","dateModified":"2026-01-13T00:00:00+00:00","datePublished":"2026-01-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/13/UnityForestsImprovingInteractionModellingandInterpretabilityinRandomForests.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/13/UnityForestsImprovingInteractionModellingandInterpretabilityinRandomForests.html","author":{"@type":"Person","name":"Roman Hornung , Alexander Hapfelmeier"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-13 00:00:00 +0000">01-13</time>
+  </p>
+  
+  <h1>Unity Forests: Improving Interaction Modelling and Interpretability in Random Forests</h1>
+  <br>Roman Hornung , Alexander Hapfelmeier</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Random forests (RFs) are widely used for prediction and variable importance analysis and are often believed to capture any types of interactions via recursive splitting. However, since the splits are chosen locally, interactions are only reliably captured when at least one involved covariate has a marginal effect. We introduce unity forests (UFOs), an RF variant designed to better exploit interactions involving covariates without marginal effects. In UFOs, the first few splits of each tree are optimized jointly across a random covariate subset to form a “tree root” capturing such interactions; the remainder is grown conventionally. We further propose the unity variable importance measure (VIM), which is based on out-of-bag split criterion values from the tree roots. Here, only a small fraction of tree root splits with the highest in-bag criterion values are considered per covariate, reflecting that covariates with purely interaction-based effects are discriminative only if a split in an interacting covariate occurred earlier in the tree. Finally, we introduce covariate-representative tree roots (CRTRs), which select representative tree roots per covariate and provide interpretable insight into the conditions - marginal or interactive - under which each covariate has its strongest effects. In a simulation study, the unity VIM reliably identified interacting covariates without marginal effects, unlike conventional RF-based VIMs. In a large-scale real-data comparison, UFOs achieved higher discrimination and predictive accuracy than standard RFs, with comparable calibration. The CRTRs reproduced the covariates’ true effect types reliably in simulated data and provided interesting insights in a real data analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2601.07003">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

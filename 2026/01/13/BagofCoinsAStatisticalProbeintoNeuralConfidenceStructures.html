@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bag of Coins: A Statistical Probe into Neural Confidence Structures</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bag of Coins: A Statistical Probe into Neural Confidence Structures" />
+<meta name="author" content="Agnideep Aich, Sameera Hewage, Md Monzur Murshed, Bruce Wade, Ashit Baran Aich" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern neural networks often produce miscalibrated confidence scores and struggle to detect out-of-distribution (OOD) inputs, while most existing methods post-process outputs without testing internal consistency. We introduce the Bag-of-Coins (BoC) probe, a non-parametric diagnostic of logit coherence that compares softmax confidence $\hat p$ to an aggregate of pairwise Luce-style dominance probabilities $\bar q$, yielding a deterministic coherence score and a p-value-based structural score. Across ViT, ResNet, and RoBERTa with ID/OOD test sets, the coherence gap $\Delta=\bar q-\hat p$ reveals clear ID/OOD separation for ViT (ID ${\sim}0.1$-$0.2$, OOD ${\sim}0.5$-$0.6$) but substantial overlap for ResNet and RoBERTa (both ${\sim}0$), indicating architecture-dependent uncertainty geometry. As a practical method, BoC improves calibration only when the base model is poorly calibrated (ViT: ECE $0.024$ vs.\ $0.180$) and underperforms standard calibrators (ECE ${\sim}0.005$), while for OOD detection it fails across architectures (AUROC $0.020$-$0.253$) compared to standard scores ($0.75$-$0.99$). We position BoC as a research diagnostic for interrogating how architectures encode uncertainty in logit geometry rather than a production calibration or OOD detection method." />
+<meta property="og:description" content="Modern neural networks often produce miscalibrated confidence scores and struggle to detect out-of-distribution (OOD) inputs, while most existing methods post-process outputs without testing internal consistency. We introduce the Bag-of-Coins (BoC) probe, a non-parametric diagnostic of logit coherence that compares softmax confidence $\hat p$ to an aggregate of pairwise Luce-style dominance probabilities $\bar q$, yielding a deterministic coherence score and a p-value-based structural score. Across ViT, ResNet, and RoBERTa with ID/OOD test sets, the coherence gap $\Delta=\bar q-\hat p$ reveals clear ID/OOD separation for ViT (ID ${\sim}0.1$-$0.2$, OOD ${\sim}0.5$-$0.6$) but substantial overlap for ResNet and RoBERTa (both ${\sim}0$), indicating architecture-dependent uncertainty geometry. As a practical method, BoC improves calibration only when the base model is poorly calibrated (ViT: ECE $0.024$ vs.\ $0.180$) and underperforms standard calibrators (ECE ${\sim}0.005$), while for OOD detection it fails across architectures (AUROC $0.020$-$0.253$) compared to standard scores ($0.75$-$0.99$). We position BoC as a research diagnostic for interrogating how architectures encode uncertainty in logit geometry rather than a production calibration or OOD detection method." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/13/BagofCoinsAStatisticalProbeintoNeuralConfidenceStructures.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/13/BagofCoinsAStatisticalProbeintoNeuralConfidenceStructures.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bag of Coins: A Statistical Probe into Neural Confidence Structures" />
+<script type="application/ld+json">
+{"description":"Modern neural networks often produce miscalibrated confidence scores and struggle to detect out-of-distribution (OOD) inputs, while most existing methods post-process outputs without testing internal consistency. We introduce the Bag-of-Coins (BoC) probe, a non-parametric diagnostic of logit coherence that compares softmax confidence $\\hat p$ to an aggregate of pairwise Luce-style dominance probabilities $\\bar q$, yielding a deterministic coherence score and a p-value-based structural score. Across ViT, ResNet, and RoBERTa with ID/OOD test sets, the coherence gap $\\Delta=\\bar q-\\hat p$ reveals clear ID/OOD separation for ViT (ID ${\\sim}0.1$-$0.2$, OOD ${\\sim}0.5$-$0.6$) but substantial overlap for ResNet and RoBERTa (both ${\\sim}0$), indicating architecture-dependent uncertainty geometry. As a practical method, BoC improves calibration only when the base model is poorly calibrated (ViT: ECE $0.024$ vs.\\ $0.180$) and underperforms standard calibrators (ECE ${\\sim}0.005$), while for OOD detection it fails across architectures (AUROC $0.020$-$0.253$) compared to standard scores ($0.75$-$0.99$). We position BoC as a research diagnostic for interrogating how architectures encode uncertainty in logit geometry rather than a production calibration or OOD detection method.","headline":"Bag of Coins: A Statistical Probe into Neural Confidence Structures","dateModified":"2026-01-13T00:00:00+00:00","datePublished":"2026-01-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/13/BagofCoinsAStatisticalProbeintoNeuralConfidenceStructures.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/13/BagofCoinsAStatisticalProbeintoNeuralConfidenceStructures.html","author":{"@type":"Person","name":"Agnideep Aich, Sameera Hewage, Md Monzur Murshed, Bruce Wade, Ashit Baran Aich"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-13 00:00:00 +0000">01-13</time>
+  </p>
+  
+  <h1>Bag of Coins: A Statistical Probe into Neural Confidence Structures</h1>
+  <br>Agnideep Aich, Sameera Hewage, Md Monzur Murshed, Bruce Wade, Ashit Baran Aich</h3>
+  <br> [stat.ML]
+
+  <p>Modern neural networks often produce miscalibrated confidence scores and struggle to detect out-of-distribution (OOD) inputs, while most existing methods post-process outputs without testing internal consistency. We introduce the Bag-of-Coins (BoC) probe, a non-parametric diagnostic of logit coherence that compares softmax confidence $\hat p$ to an aggregate of pairwise Luce-style dominance probabilities $\bar q$, yielding a deterministic coherence score and a p-value-based structural score. Across ViT, ResNet, and RoBERTa with ID/OOD test sets, the coherence gap $\Delta=\bar q-\hat p$ reveals clear ID/OOD separation for ViT (ID ${\sim}0.1$-$0.2$, OOD ${\sim}0.5$-$0.6$) but substantial overlap for ResNet and RoBERTa (both ${\sim}0$), indicating architecture-dependent uncertainty geometry. As a practical method, BoC improves calibration only when the base model is poorly calibrated (ViT: ECE $0.024$ vs.\ $0.180$) and underperforms standard calibrators (ECE ${\sim}0.005$), while for OOD detection it fails across architectures (AUROC $0.020$-$0.253$) compared to standard scores ($0.75$-$0.99$). We position BoC as a research diagnostic for interrogating how architectures encode uncertainty in logit geometry rather than a production calibration or OOD detection method.</p>
+
+<p><a href="https://arxiv.org/abs/2507.19774">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

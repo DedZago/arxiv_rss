@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>From Sublinear to Linear: Fast Convergence in Deep Networks via Locally Polyak-Lojasiewicz Regions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="From Sublinear to Linear: Fast Convergence in Deep Networks via Locally Polyak-Lojasiewicz Regions" />
+<meta name="author" content="Agnideep Aich, Ashit Baran Aich, Bruce Wade" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gradient descent (GD) on deep neural network loss landscapes is non-convex, yet often converges far faster in practice than classical guarantees suggest. Prior work shows that within locally quasi-convex regions (LQCRs), GD converges to stationary points at sublinear rates, leaving the commonly observed near-exponential training dynamics unexplained. We show that, under a mild local Neural Tangent Kernel (NTK) stability assumption, the loss satisfies a PL-type error bound within these regions, yielding a Locally Polyak-Lojasiewicz Region (LPLR) in which the squared gradient norm controls the suboptimality gap. For properly initialized finite-width networks, we show that under local NTK stability this PL-type mechanism holds around initialization and establish linear convergence of GD as long as the iterates remain within the resulting LPLR. Empirically, we observe PL-like scaling and linear-rate loss decay in controlled full-batch training and in a ResNet-style CNN trained with mini-batch SGD on a CIFAR-10 subset, indicating that LPLR signatures can persist under modern architectures and stochastic optimization. Overall, the results connect local geometric structure, local NTK stability, and fast optimization rates in a finite-width setting." />
+<meta property="og:description" content="Gradient descent (GD) on deep neural network loss landscapes is non-convex, yet often converges far faster in practice than classical guarantees suggest. Prior work shows that within locally quasi-convex regions (LQCRs), GD converges to stationary points at sublinear rates, leaving the commonly observed near-exponential training dynamics unexplained. We show that, under a mild local Neural Tangent Kernel (NTK) stability assumption, the loss satisfies a PL-type error bound within these regions, yielding a Locally Polyak-Lojasiewicz Region (LPLR) in which the squared gradient norm controls the suboptimality gap. For properly initialized finite-width networks, we show that under local NTK stability this PL-type mechanism holds around initialization and establish linear convergence of GD as long as the iterates remain within the resulting LPLR. Empirically, we observe PL-like scaling and linear-rate loss decay in controlled full-batch training and in a ResNet-style CNN trained with mini-batch SGD on a CIFAR-10 subset, indicating that LPLR signatures can persist under modern architectures and stochastic optimization. Overall, the results connect local geometric structure, local NTK stability, and fast optimization rates in a finite-width setting." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/13/FromSublineartoLinearFastConvergenceinDeepNetworksviaLocallyPolyakLojasiewiczRegions.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/13/FromSublineartoLinearFastConvergenceinDeepNetworksviaLocallyPolyakLojasiewiczRegions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="From Sublinear to Linear: Fast Convergence in Deep Networks via Locally Polyak-Lojasiewicz Regions" />
+<script type="application/ld+json">
+{"description":"Gradient descent (GD) on deep neural network loss landscapes is non-convex, yet often converges far faster in practice than classical guarantees suggest. Prior work shows that within locally quasi-convex regions (LQCRs), GD converges to stationary points at sublinear rates, leaving the commonly observed near-exponential training dynamics unexplained. We show that, under a mild local Neural Tangent Kernel (NTK) stability assumption, the loss satisfies a PL-type error bound within these regions, yielding a Locally Polyak-Lojasiewicz Region (LPLR) in which the squared gradient norm controls the suboptimality gap. For properly initialized finite-width networks, we show that under local NTK stability this PL-type mechanism holds around initialization and establish linear convergence of GD as long as the iterates remain within the resulting LPLR. Empirically, we observe PL-like scaling and linear-rate loss decay in controlled full-batch training and in a ResNet-style CNN trained with mini-batch SGD on a CIFAR-10 subset, indicating that LPLR signatures can persist under modern architectures and stochastic optimization. Overall, the results connect local geometric structure, local NTK stability, and fast optimization rates in a finite-width setting.","headline":"From Sublinear to Linear: Fast Convergence in Deep Networks via Locally Polyak-Lojasiewicz Regions","dateModified":"2026-01-13T00:00:00+00:00","datePublished":"2026-01-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/13/FromSublineartoLinearFastConvergenceinDeepNetworksviaLocallyPolyakLojasiewiczRegions.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/13/FromSublineartoLinearFastConvergenceinDeepNetworksviaLocallyPolyakLojasiewiczRegions.html","author":{"@type":"Person","name":"Agnideep Aich, Ashit Baran Aich, Bruce Wade"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-13 00:00:00 +0000">01-13</time>
+  </p>
+  
+  <h1>From Sublinear to Linear: Fast Convergence in Deep Networks via Locally Polyak-Lojasiewicz Regions</h1>
+  <br>Agnideep Aich, Ashit Baran Aich, Bruce Wade</h3>
+  <br> [stat.ML]
+
+  <p>Gradient descent (GD) on deep neural network loss landscapes is non-convex, yet often converges far faster in practice than classical guarantees suggest. Prior work shows that within locally quasi-convex regions (LQCRs), GD converges to stationary points at sublinear rates, leaving the commonly observed near-exponential training dynamics unexplained. We show that, under a mild local Neural Tangent Kernel (NTK) stability assumption, the loss satisfies a PL-type error bound within these regions, yielding a Locally Polyak-Lojasiewicz Region (LPLR) in which the squared gradient norm controls the suboptimality gap. For properly initialized finite-width networks, we show that under local NTK stability this PL-type mechanism holds around initialization and establish linear convergence of GD as long as the iterates remain within the resulting LPLR. Empirically, we observe PL-like scaling and linear-rate loss decay in controlled full-batch training and in a ResNet-style CNN trained with mini-batch SGD on a CIFAR-10 subset, indicating that LPLR signatures can persist under modern architectures and stochastic optimization. Overall, the results connect local geometric structure, local NTK stability, and fast optimization rates in a finite-width setting.</p>
+
+<p><a href="https://arxiv.org/abs/2507.21429">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
