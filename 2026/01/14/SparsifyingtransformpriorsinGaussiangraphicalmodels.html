@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sparsifying transform priors in Gaussian graphical models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sparsifying transform priors in Gaussian graphical models" />
+<meta name="author" content="Marcus Gehrmann, H{\aa}kon Tjelmeland" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian methods constitute a popular approach for estimating the conditional independence structure in Gaussian graphical models, since they can quantify the uncertainty through the posterior distribution. Inference in this framework is typically carried out with Markov chain Monte Carlo (MCMC). However, the most widely used choice of prior distribution for the precision matrix, the so called G-Wishart distribution, suffers from an intractable normalizing constant, which gives rise to the problem of double intractability in the updating steps of the MCMC algorithm. In this article, we propose a new class of prior distributions for the precision matrix, termed ST priors, that allow for the construction of MCMC algorithms that do not suffer from double intractability issues. A realization from an ST prior distribution is obtained by applying a sparsifying transform on a matrix from a distribution with support in the set of all positive definite matrices. We carefully present the theory behind the construction of our proposed class of priors and also perform some numerical experiments, where we apply our methods on a human gene expression dataset. The results suggest that our proposed MCMC algorithm is able to converge and achieve acceptable mixing when applied on the real data." />
+<meta property="og:description" content="Bayesian methods constitute a popular approach for estimating the conditional independence structure in Gaussian graphical models, since they can quantify the uncertainty through the posterior distribution. Inference in this framework is typically carried out with Markov chain Monte Carlo (MCMC). However, the most widely used choice of prior distribution for the precision matrix, the so called G-Wishart distribution, suffers from an intractable normalizing constant, which gives rise to the problem of double intractability in the updating steps of the MCMC algorithm. In this article, we propose a new class of prior distributions for the precision matrix, termed ST priors, that allow for the construction of MCMC algorithms that do not suffer from double intractability issues. A realization from an ST prior distribution is obtained by applying a sparsifying transform on a matrix from a distribution with support in the set of all positive definite matrices. We carefully present the theory behind the construction of our proposed class of priors and also perform some numerical experiments, where we apply our methods on a human gene expression dataset. The results suggest that our proposed MCMC algorithm is able to converge and achieve acceptable mixing when applied on the real data." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/14/SparsifyingtransformpriorsinGaussiangraphicalmodels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/14/SparsifyingtransformpriorsinGaussiangraphicalmodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sparsifying transform priors in Gaussian graphical models" />
+<script type="application/ld+json">
+{"description":"Bayesian methods constitute a popular approach for estimating the conditional independence structure in Gaussian graphical models, since they can quantify the uncertainty through the posterior distribution. Inference in this framework is typically carried out with Markov chain Monte Carlo (MCMC). However, the most widely used choice of prior distribution for the precision matrix, the so called G-Wishart distribution, suffers from an intractable normalizing constant, which gives rise to the problem of double intractability in the updating steps of the MCMC algorithm. In this article, we propose a new class of prior distributions for the precision matrix, termed ST priors, that allow for the construction of MCMC algorithms that do not suffer from double intractability issues. A realization from an ST prior distribution is obtained by applying a sparsifying transform on a matrix from a distribution with support in the set of all positive definite matrices. We carefully present the theory behind the construction of our proposed class of priors and also perform some numerical experiments, where we apply our methods on a human gene expression dataset. The results suggest that our proposed MCMC algorithm is able to converge and achieve acceptable mixing when applied on the real data.","headline":"Sparsifying transform priors in Gaussian graphical models","dateModified":"2026-01-14T00:00:00+00:00","datePublished":"2026-01-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/14/SparsifyingtransformpriorsinGaussiangraphicalmodels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/14/SparsifyingtransformpriorsinGaussiangraphicalmodels.html","author":{"@type":"Person","name":"Marcus Gehrmann, H{\\aa}kon Tjelmeland"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-14 00:00:00 +0000">01-14</time>
+  </p>
+  
+  <h1>Sparsifying transform priors in Gaussian graphical models</h1>
+  <br>Marcus Gehrmann, H{\aa}kon Tjelmeland</h3>
+  <br> [stat.ME]
+
+  <p>Bayesian methods constitute a popular approach for estimating the conditional independence structure in Gaussian graphical models, since they can quantify the uncertainty through the posterior distribution. Inference in this framework is typically carried out with Markov chain Monte Carlo (MCMC). However, the most widely used choice of prior distribution for the precision matrix, the so called G-Wishart distribution, suffers from an intractable normalizing constant, which gives rise to the problem of double intractability in the updating steps of the MCMC algorithm. In this article, we propose a new class of prior distributions for the precision matrix, termed ST priors, that allow for the construction of MCMC algorithms that do not suffer from double intractability issues. A realization from an ST prior distribution is obtained by applying a sparsifying transform on a matrix from a distribution with support in the set of all positive definite matrices. We carefully present the theory behind the construction of our proposed class of priors and also perform some numerical experiments, where we apply our methods on a human gene expression dataset. The results suggest that our proposed MCMC algorithm is able to converge and achieve acceptable mixing when applied on the real data.</p>
+
+<p><a href="https://arxiv.org/abs/2601.08596">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
