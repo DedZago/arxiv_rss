@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>TPV: Parameter Perturbations Through the Lens of Test Prediction Variance</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="TPV: Parameter Perturbations Through the Lens of Test Prediction Variance" />
+<meta name="author" content="Devansh Arpit" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We identify test prediction variance (TPV) – the first-order sensitivity of model outputs to parameter perturbations around a trained solution – as a unifying quantity that links several classical observations about generalization in deep networks. TPV is a fully label-free object whose trace form separates the geometry of the trained model from the specific perturbation mechanism, allowing a broad family of parameter perturbations like SGD noise, label noise, finite-precision noise, and other post-training perturbations to be analyzed under a single framework. Theoretically, we show that TPV estimated on the training set converges to its test-set value in the overparameterized limit, providing the first result that prediction variance under local parameter perturbations can be inferred from training inputs alone. Empirically, TPV exhibits a striking stability across datasets and architectures – including extremely narrow networks – and correlates well with clean test loss. Finally, we demonstrate that modeling pruning as a TPV perturbation yields a simple label-free importance measure that performs competitively with state-of-the-art pruning methods, illustrating the practical utility of TPV. Code available at github.com/devansharpit/TPV." />
+<meta property="og:description" content="We identify test prediction variance (TPV) – the first-order sensitivity of model outputs to parameter perturbations around a trained solution – as a unifying quantity that links several classical observations about generalization in deep networks. TPV is a fully label-free object whose trace form separates the geometry of the trained model from the specific perturbation mechanism, allowing a broad family of parameter perturbations like SGD noise, label noise, finite-precision noise, and other post-training perturbations to be analyzed under a single framework. Theoretically, we show that TPV estimated on the training set converges to its test-set value in the overparameterized limit, providing the first result that prediction variance under local parameter perturbations can be inferred from training inputs alone. Empirically, TPV exhibits a striking stability across datasets and architectures – including extremely narrow networks – and correlates well with clean test loss. Finally, we demonstrate that modeling pruning as a TPV perturbation yields a simple label-free importance measure that performs competitively with state-of-the-art pruning methods, illustrating the practical utility of TPV. Code available at github.com/devansharpit/TPV." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/16/TPVParameterPerturbationsThroughtheLensofTestPredictionVariance.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/16/TPVParameterPerturbationsThroughtheLensofTestPredictionVariance.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TPV: Parameter Perturbations Through the Lens of Test Prediction Variance" />
+<script type="application/ld+json">
+{"description":"We identify test prediction variance (TPV) – the first-order sensitivity of model outputs to parameter perturbations around a trained solution – as a unifying quantity that links several classical observations about generalization in deep networks. TPV is a fully label-free object whose trace form separates the geometry of the trained model from the specific perturbation mechanism, allowing a broad family of parameter perturbations like SGD noise, label noise, finite-precision noise, and other post-training perturbations to be analyzed under a single framework. Theoretically, we show that TPV estimated on the training set converges to its test-set value in the overparameterized limit, providing the first result that prediction variance under local parameter perturbations can be inferred from training inputs alone. Empirically, TPV exhibits a striking stability across datasets and architectures – including extremely narrow networks – and correlates well with clean test loss. Finally, we demonstrate that modeling pruning as a TPV perturbation yields a simple label-free importance measure that performs competitively with state-of-the-art pruning methods, illustrating the practical utility of TPV. Code available at github.com/devansharpit/TPV.","headline":"TPV: Parameter Perturbations Through the Lens of Test Prediction Variance","dateModified":"2026-01-16T00:00:00+00:00","datePublished":"2026-01-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/16/TPVParameterPerturbationsThroughtheLensofTestPredictionVariance.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/16/TPVParameterPerturbationsThroughtheLensofTestPredictionVariance.html","author":{"@type":"Person","name":"Devansh Arpit"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-16 00:00:00 +0000">01-16</time>
+  </p>
+  
+  <h1>TPV: Parameter Perturbations Through the Lens of Test Prediction Variance</h1>
+  <br>Devansh Arpit</h3>
+  <br> [stat.ML]
+
+  <p>We identify test prediction variance (TPV) – the first-order sensitivity of model outputs to parameter perturbations around a trained solution – as a unifying quantity that links several classical observations about generalization in deep networks. TPV is a fully label-free object whose trace form separates the geometry of the trained model from the specific perturbation mechanism, allowing a broad family of parameter perturbations like SGD noise, label noise, finite-precision noise, and other post-training perturbations to be analyzed under a single framework. Theoretically, we show that TPV estimated on the training set converges to its test-set value in the overparameterized limit, providing the first result that prediction variance under local parameter perturbations can be inferred from training inputs alone. Empirically, TPV exhibits a striking stability across datasets and architectures – including extremely narrow networks – and correlates well with clean test loss. Finally, we demonstrate that modeling pruning as a TPV perturbation yields a simple label-free importance measure that performs competitively with state-of-the-art pruning methods, illustrating the practical utility of TPV. Code available at github.com/devansharpit/TPV.</p>
+
+<p><a href="https://arxiv.org/abs/2512.11089">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
