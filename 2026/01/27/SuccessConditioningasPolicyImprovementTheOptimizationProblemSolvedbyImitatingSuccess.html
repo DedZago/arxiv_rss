@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Success Conditioning as Policy Improvement: The Optimization Problem Solved by Imitating Success</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Success Conditioning as Policy Improvement: The Optimization Problem Solved by Imitating Success" />
+<meta name="author" content="Daniel Russo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A widely used technique for improving policies is success conditioning, in which one collects trajectories, identifies those that achieve a desired outcome, and updates the policy to imitate the actions taken along successful trajectories. This principle appears under many names – rejection sampling with SFT, goal-conditioned RL, Decision Transformers – yet what optimization problem it solves, if any, has remained unclear. We prove that success conditioning exactly solves a trust-region optimization problem, maximizing policy improvement subject to a $\chi^2$ divergence constraint whose radius is determined automatically by the data. This yields an identity: relative policy improvement, the magnitude of policy change, and a quantity we call action-influence – measuring how random variation in action choices affects success rates – are exactly equal at every state. Success conditioning thus emerges as a conservative improvement operator. Exact success conditioning cannot degrade performance or induce dangerous distribution shift, but when it fails, it does so observably, by hardly changing the policy at all. We apply our theory to the common practice of return thresholding, showing this can amplify improvement, but at the cost of potential misalignment with the true objective." />
+<meta property="og:description" content="A widely used technique for improving policies is success conditioning, in which one collects trajectories, identifies those that achieve a desired outcome, and updates the policy to imitate the actions taken along successful trajectories. This principle appears under many names – rejection sampling with SFT, goal-conditioned RL, Decision Transformers – yet what optimization problem it solves, if any, has remained unclear. We prove that success conditioning exactly solves a trust-region optimization problem, maximizing policy improvement subject to a $\chi^2$ divergence constraint whose radius is determined automatically by the data. This yields an identity: relative policy improvement, the magnitude of policy change, and a quantity we call action-influence – measuring how random variation in action choices affects success rates – are exactly equal at every state. Success conditioning thus emerges as a conservative improvement operator. Exact success conditioning cannot degrade performance or induce dangerous distribution shift, but when it fails, it does so observably, by hardly changing the policy at all. We apply our theory to the common practice of return thresholding, showing this can amplify improvement, but at the cost of potential misalignment with the true objective." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/27/SuccessConditioningasPolicyImprovementTheOptimizationProblemSolvedbyImitatingSuccess.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/27/SuccessConditioningasPolicyImprovementTheOptimizationProblemSolvedbyImitatingSuccess.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Success Conditioning as Policy Improvement: The Optimization Problem Solved by Imitating Success" />
+<script type="application/ld+json">
+{"description":"A widely used technique for improving policies is success conditioning, in which one collects trajectories, identifies those that achieve a desired outcome, and updates the policy to imitate the actions taken along successful trajectories. This principle appears under many names – rejection sampling with SFT, goal-conditioned RL, Decision Transformers – yet what optimization problem it solves, if any, has remained unclear. We prove that success conditioning exactly solves a trust-region optimization problem, maximizing policy improvement subject to a $\\chi^2$ divergence constraint whose radius is determined automatically by the data. This yields an identity: relative policy improvement, the magnitude of policy change, and a quantity we call action-influence – measuring how random variation in action choices affects success rates – are exactly equal at every state. Success conditioning thus emerges as a conservative improvement operator. Exact success conditioning cannot degrade performance or induce dangerous distribution shift, but when it fails, it does so observably, by hardly changing the policy at all. We apply our theory to the common practice of return thresholding, showing this can amplify improvement, but at the cost of potential misalignment with the true objective.","datePublished":"2026-01-27T00:00:00+00:00","headline":"Success Conditioning as Policy Improvement: The Optimization Problem Solved by Imitating Success","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/27/SuccessConditioningasPolicyImprovementTheOptimizationProblemSolvedbyImitatingSuccess.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/27/SuccessConditioningasPolicyImprovementTheOptimizationProblemSolvedbyImitatingSuccess.html","author":{"@type":"Person","name":"Daniel Russo"},"@type":"BlogPosting","dateModified":"2026-01-27T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-27 00:00:00 +0000">01-27</time>
+  </p>
+  
+  <h1>Success Conditioning as Policy Improvement: The Optimization Problem Solved by Imitating Success</h1>
+  <br>Daniel Russo</h3>
+  <br> [stat.ML]
+
+  <p>A widely used technique for improving policies is success conditioning, in which one collects trajectories, identifies those that achieve a desired outcome, and updates the policy to imitate the actions taken along successful trajectories. This principle appears under many names – rejection sampling with SFT, goal-conditioned RL, Decision Transformers – yet what optimization problem it solves, if any, has remained unclear. We prove that success conditioning exactly solves a trust-region optimization problem, maximizing policy improvement subject to a $\chi^2$ divergence constraint whose radius is determined automatically by the data. This yields an identity: relative policy improvement, the magnitude of policy change, and a quantity we call action-influence – measuring how random variation in action choices affects success rates – are exactly equal at every state. Success conditioning thus emerges as a conservative improvement operator. Exact success conditioning cannot degrade performance or induce dangerous distribution shift, but when it fails, it does so observably, by hardly changing the policy at all. We apply our theory to the common practice of return thresholding, showing this can amplify improvement, but at the cost of potential misalignment with the true objective.</p>
+
+<p><a href="https://arxiv.org/abs/2601.18175">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
