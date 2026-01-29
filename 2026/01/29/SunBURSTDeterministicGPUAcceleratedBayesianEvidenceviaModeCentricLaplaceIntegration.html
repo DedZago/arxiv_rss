@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SunBURST: Deterministic GPU-Accelerated Bayesian Evidence via Mode-Centric Laplace Integration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="SunBURST: Deterministic GPU-Accelerated Bayesian Evidence via Mode-Centric Laplace Integration" />
+<meta name="author" content="Ira Wolfson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian evidence evaluation becomes computationally prohibitive in high dimensions due to the curse of dimensionality and the sequential nature of sampling-based methods. We introduce SunBURST, a deterministic GPU-native algorithm for Bayesian evidence calculation that replaces global volume exploration with mode-centric geometric integration. The pipeline combines radial mode discovery, batched L-BFGS refinement, and Laplace-based analytic integration, treating modes independently and converting large batches of likelihood evaluations into massively parallel GPU workloads. For Gaussian and near-Gaussian posteriors, where the Laplace approximation is exact or highly accurate, SunBURST achieves numerical agreement at double-precision tolerance in dimensions up to 1024 in our benchmarks, with sub-linear wall-clock scaling across the tested range. In multimodal Gaussian mixtures, conservative configurations yield sub-percent accuracy while maintaining favorable scaling. SunBURST is not intended as a universal replacement for sampling-based inference. Its design targets regimes common in physical parameter estimation and inverse problems, where posterior mass is locally well approximated by Gaussian structure around a finite number of modes. In strongly non-Gaussian settings, the method can serve as a fast geometry-aware evidence estimator or as a preprocessing stage for hybrid workflows. These results show that high-precision Bayesian evidence evaluation can be made computationally tractable in very high dimensions through deterministic integration combined with massive parallelism." />
+<meta property="og:description" content="Bayesian evidence evaluation becomes computationally prohibitive in high dimensions due to the curse of dimensionality and the sequential nature of sampling-based methods. We introduce SunBURST, a deterministic GPU-native algorithm for Bayesian evidence calculation that replaces global volume exploration with mode-centric geometric integration. The pipeline combines radial mode discovery, batched L-BFGS refinement, and Laplace-based analytic integration, treating modes independently and converting large batches of likelihood evaluations into massively parallel GPU workloads. For Gaussian and near-Gaussian posteriors, where the Laplace approximation is exact or highly accurate, SunBURST achieves numerical agreement at double-precision tolerance in dimensions up to 1024 in our benchmarks, with sub-linear wall-clock scaling across the tested range. In multimodal Gaussian mixtures, conservative configurations yield sub-percent accuracy while maintaining favorable scaling. SunBURST is not intended as a universal replacement for sampling-based inference. Its design targets regimes common in physical parameter estimation and inverse problems, where posterior mass is locally well approximated by Gaussian structure around a finite number of modes. In strongly non-Gaussian settings, the method can serve as a fast geometry-aware evidence estimator or as a preprocessing stage for hybrid workflows. These results show that high-precision Bayesian evidence evaluation can be made computationally tractable in very high dimensions through deterministic integration combined with massive parallelism." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/29/SunBURSTDeterministicGPUAcceleratedBayesianEvidenceviaModeCentricLaplaceIntegration.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/29/SunBURSTDeterministicGPUAcceleratedBayesianEvidenceviaModeCentricLaplaceIntegration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SunBURST: Deterministic GPU-Accelerated Bayesian Evidence via Mode-Centric Laplace Integration" />
+<script type="application/ld+json">
+{"description":"Bayesian evidence evaluation becomes computationally prohibitive in high dimensions due to the curse of dimensionality and the sequential nature of sampling-based methods. We introduce SunBURST, a deterministic GPU-native algorithm for Bayesian evidence calculation that replaces global volume exploration with mode-centric geometric integration. The pipeline combines radial mode discovery, batched L-BFGS refinement, and Laplace-based analytic integration, treating modes independently and converting large batches of likelihood evaluations into massively parallel GPU workloads. For Gaussian and near-Gaussian posteriors, where the Laplace approximation is exact or highly accurate, SunBURST achieves numerical agreement at double-precision tolerance in dimensions up to 1024 in our benchmarks, with sub-linear wall-clock scaling across the tested range. In multimodal Gaussian mixtures, conservative configurations yield sub-percent accuracy while maintaining favorable scaling. SunBURST is not intended as a universal replacement for sampling-based inference. Its design targets regimes common in physical parameter estimation and inverse problems, where posterior mass is locally well approximated by Gaussian structure around a finite number of modes. In strongly non-Gaussian settings, the method can serve as a fast geometry-aware evidence estimator or as a preprocessing stage for hybrid workflows. These results show that high-precision Bayesian evidence evaluation can be made computationally tractable in very high dimensions through deterministic integration combined with massive parallelism.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/29/SunBURSTDeterministicGPUAcceleratedBayesianEvidenceviaModeCentricLaplaceIntegration.html"},"dateModified":"2026-01-29T00:00:00+00:00","author":{"@type":"Person","name":"Ira Wolfson"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/29/SunBURSTDeterministicGPUAcceleratedBayesianEvidenceviaModeCentricLaplaceIntegration.html","headline":"SunBURST: Deterministic GPU-Accelerated Bayesian Evidence via Mode-Centric Laplace Integration","@type":"BlogPosting","datePublished":"2026-01-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-29 00:00:00 +0000">01-29</time>
+  </p>
+  
+  <h1>SunBURST: Deterministic GPU-Accelerated Bayesian Evidence via Mode-Centric Laplace Integration</h1>
+  <br>Ira Wolfson</h3>
+  <br> [stat.CO]
+
+  <p>Bayesian evidence evaluation becomes computationally prohibitive in high dimensions due to the curse of dimensionality and the sequential nature of sampling-based methods. We introduce SunBURST, a deterministic GPU-native algorithm for Bayesian evidence calculation that replaces global volume exploration with mode-centric geometric integration. The pipeline combines radial mode discovery, batched L-BFGS refinement, and Laplace-based analytic integration, treating modes independently and converting large batches of likelihood evaluations into massively parallel GPU workloads.
+  For Gaussian and near-Gaussian posteriors, where the Laplace approximation is exact or highly accurate, SunBURST achieves numerical agreement at double-precision tolerance in dimensions up to 1024 in our benchmarks, with sub-linear wall-clock scaling across the tested range. In multimodal Gaussian mixtures, conservative configurations yield sub-percent accuracy while maintaining favorable scaling.
+  SunBURST is not intended as a universal replacement for sampling-based inference. Its design targets regimes common in physical parameter estimation and inverse problems, where posterior mass is locally well approximated by Gaussian structure around a finite number of modes. In strongly non-Gaussian settings, the method can serve as a fast geometry-aware evidence estimator or as a preprocessing stage for hybrid workflows. These results show that high-precision Bayesian evidence evaluation can be made computationally tractable in very high dimensions through deterministic integration combined with massive parallelism.</p>
+
+<p><a href="https://arxiv.org/abs/2601.19957">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
