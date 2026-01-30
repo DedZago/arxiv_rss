@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>bigMICE: Multiple Imputation of Big Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="bigMICE: Multiple Imputation of Big Data" />
+<meta name="author" content="Hugo Morvan, Jonas Agholme, Bjorn Eliasson, Katarina Olofsson, Ludger Grote, Fredrik Iredahl, Oleg Sysoev" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Missing data is a prevalent issue in many applications, including large medical registries such as the Swedish Healthcare Quality Registries, potentially leading to biased or inefficient analyses if not handled properly. Multiple Imputation by Chained Equations (MICE) is a popular and versatile method for handling multivariate missing data but traditional implementations face significant challenges when applied to big data sets due to computational time and memory limitations. To address this, the bigMICE package was developed, adapting the MICE framework to big data using Apache Spark MLLib and Spark ML. Our implementation allows for controlling the maximum memory usage during the execution, enabling processing of very large data sets on a hardware with a limited memory, such as ordinary laptops. The developed package was tested on a large Swedish medical registry to measure memory usage, runtime and dependence of the imputation quality on sample size and on missingness proportion in the data. In conclusion, our method is generally more memory efficient and faster on large data sets compared to a commonly used MICE implementation. We also demonstrate that working with very large datasets can result in high quality imputations even when a variable has a large proportion of missing data. This paper also provides guidelines and recommendations on how to install and use our open source package." />
+<meta property="og:description" content="Missing data is a prevalent issue in many applications, including large medical registries such as the Swedish Healthcare Quality Registries, potentially leading to biased or inefficient analyses if not handled properly. Multiple Imputation by Chained Equations (MICE) is a popular and versatile method for handling multivariate missing data but traditional implementations face significant challenges when applied to big data sets due to computational time and memory limitations. To address this, the bigMICE package was developed, adapting the MICE framework to big data using Apache Spark MLLib and Spark ML. Our implementation allows for controlling the maximum memory usage during the execution, enabling processing of very large data sets on a hardware with a limited memory, such as ordinary laptops. The developed package was tested on a large Swedish medical registry to measure memory usage, runtime and dependence of the imputation quality on sample size and on missingness proportion in the data. In conclusion, our method is generally more memory efficient and faster on large data sets compared to a commonly used MICE implementation. We also demonstrate that working with very large datasets can result in high quality imputations even when a variable has a large proportion of missing data. This paper also provides guidelines and recommendations on how to install and use our open source package." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/01/30/bigMICEMultipleImputationofBigData.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/01/30/bigMICEMultipleImputationofBigData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="bigMICE: Multiple Imputation of Big Data" />
+<script type="application/ld+json">
+{"description":"Missing data is a prevalent issue in many applications, including large medical registries such as the Swedish Healthcare Quality Registries, potentially leading to biased or inefficient analyses if not handled properly. Multiple Imputation by Chained Equations (MICE) is a popular and versatile method for handling multivariate missing data but traditional implementations face significant challenges when applied to big data sets due to computational time and memory limitations. To address this, the bigMICE package was developed, adapting the MICE framework to big data using Apache Spark MLLib and Spark ML. Our implementation allows for controlling the maximum memory usage during the execution, enabling processing of very large data sets on a hardware with a limited memory, such as ordinary laptops. The developed package was tested on a large Swedish medical registry to measure memory usage, runtime and dependence of the imputation quality on sample size and on missingness proportion in the data. In conclusion, our method is generally more memory efficient and faster on large data sets compared to a commonly used MICE implementation. We also demonstrate that working with very large datasets can result in high quality imputations even when a variable has a large proportion of missing data. This paper also provides guidelines and recommendations on how to install and use our open source package.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/01/30/bigMICEMultipleImputationofBigData.html"},"dateModified":"2026-01-30T00:00:00+00:00","author":{"@type":"Person","name":"Hugo Morvan, Jonas Agholme, Bjorn Eliasson, Katarina Olofsson, Ludger Grote, Fredrik Iredahl, Oleg Sysoev"},"url":"https://dedzago.github.io/arxiv_rss/2026/01/30/bigMICEMultipleImputationofBigData.html","headline":"bigMICE: Multiple Imputation of Big Data","@type":"BlogPosting","datePublished":"2026-01-30T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-01-30 00:00:00 +0000">01-30</time>
+  </p>
+  
+  <h1>bigMICE: Multiple Imputation of Big Data</h1>
+  <br>Hugo Morvan, Jonas Agholme, Bjorn Eliasson, Katarina Olofsson, Ludger Grote, Fredrik Iredahl, Oleg Sysoev</h3>
+  <br> [stat.CO]
+
+  <p>Missing data is a prevalent issue in many applications, including large medical registries such as the Swedish Healthcare Quality Registries, potentially leading to biased or inefficient analyses if not handled properly. Multiple Imputation by Chained Equations (MICE) is a popular and versatile method for handling multivariate missing data but traditional implementations face significant challenges when applied to big data sets due to computational time and memory limitations.
+  To address this, the bigMICE package was developed, adapting the MICE framework to big data using Apache Spark MLLib and Spark ML. Our implementation allows for controlling the maximum memory usage during the execution, enabling processing of very large data sets on a hardware with a limited memory, such as ordinary laptops.
+  The developed package was tested on a large Swedish medical registry to measure memory usage, runtime and dependence of the imputation quality on sample size and on missingness proportion in the data. In conclusion, our method is generally more memory efficient and faster on large data sets compared to a commonly used MICE implementation. We also demonstrate that working with very large datasets can result in high quality imputations even when a variable has a large proportion of missing data. This paper also provides guidelines and recommendations on how to install and use our open source package.</p>
+
+<p><a href="https://arxiv.org/abs/2601.21613">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
