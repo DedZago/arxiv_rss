@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>LatentTrack: Sequential Weight Generation via Latent Filtering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="LatentTrack: Sequential Weight Generation via Latent Filtering" />
+<meta name="author" content="Omer Haq" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce LatentTrack (LT), a sequential neural architecture for online probabilistic prediction under nonstationary dynamics. LT performs causal Bayesian filtering in a low-dimensional latent space and uses a lightweight hypernetwork to generate predictive model parameters at each time step, enabling constant-time online adaptation without per-step gradient updates. At each time step, a learned latent model predicts the next latent distribution, which is updated via amortized inference using new observations, yielding a predict–generate–update filtering framework in function space. The formulation supports both structured (Markovian) and unstructured latent dynamics within a unified objective, while Monte Carlo inference over latent trajectories produces calibrated predictive mixtures with fixed per-step cost. Evaluated on long-horizon online regression using the Jena Climate benchmark, LT consistently achieves lower negative log-likelihood and mean squared error than stateful sequential and static uncertainty-aware baselines, with competitive calibration, demonstrating that latent-conditioned function evolution is an effective alternative to traditional latent-state modeling under distribution shift." />
+<meta property="og:description" content="We introduce LatentTrack (LT), a sequential neural architecture for online probabilistic prediction under nonstationary dynamics. LT performs causal Bayesian filtering in a low-dimensional latent space and uses a lightweight hypernetwork to generate predictive model parameters at each time step, enabling constant-time online adaptation without per-step gradient updates. At each time step, a learned latent model predicts the next latent distribution, which is updated via amortized inference using new observations, yielding a predict–generate–update filtering framework in function space. The formulation supports both structured (Markovian) and unstructured latent dynamics within a unified objective, while Monte Carlo inference over latent trajectories produces calibrated predictive mixtures with fixed per-step cost. Evaluated on long-horizon online regression using the Jena Climate benchmark, LT consistently achieves lower negative log-likelihood and mean squared error than stateful sequential and static uncertainty-aware baselines, with competitive calibration, demonstrating that latent-conditioned function evolution is an effective alternative to traditional latent-state modeling under distribution shift." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/03/LatentTrackSequentialWeightGenerationviaLatentFiltering.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/03/LatentTrackSequentialWeightGenerationviaLatentFiltering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LatentTrack: Sequential Weight Generation via Latent Filtering" />
+<script type="application/ld+json">
+{"description":"We introduce LatentTrack (LT), a sequential neural architecture for online probabilistic prediction under nonstationary dynamics. LT performs causal Bayesian filtering in a low-dimensional latent space and uses a lightweight hypernetwork to generate predictive model parameters at each time step, enabling constant-time online adaptation without per-step gradient updates. At each time step, a learned latent model predicts the next latent distribution, which is updated via amortized inference using new observations, yielding a predict–generate–update filtering framework in function space. The formulation supports both structured (Markovian) and unstructured latent dynamics within a unified objective, while Monte Carlo inference over latent trajectories produces calibrated predictive mixtures with fixed per-step cost. Evaluated on long-horizon online regression using the Jena Climate benchmark, LT consistently achieves lower negative log-likelihood and mean squared error than stateful sequential and static uncertainty-aware baselines, with competitive calibration, demonstrating that latent-conditioned function evolution is an effective alternative to traditional latent-state modeling under distribution shift.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/03/LatentTrackSequentialWeightGenerationviaLatentFiltering.html"},"dateModified":"2026-02-03T00:00:00+00:00","author":{"@type":"Person","name":"Omer Haq"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/03/LatentTrackSequentialWeightGenerationviaLatentFiltering.html","headline":"LatentTrack: Sequential Weight Generation via Latent Filtering","@type":"BlogPosting","datePublished":"2026-02-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-03 00:00:00 +0000">02-03</time>
+  </p>
+  
+  <h1>LatentTrack: Sequential Weight Generation via Latent Filtering</h1>
+  <br>Omer Haq</h3>
+  <br> [stat.ML]
+
+  <p>We introduce LatentTrack (LT), a sequential neural architecture for online probabilistic prediction under nonstationary dynamics. LT performs causal Bayesian filtering in a low-dimensional latent space and uses a lightweight hypernetwork to generate predictive model parameters at each time step, enabling constant-time online adaptation without per-step gradient updates.
+  At each time step, a learned latent model predicts the next latent distribution, which is updated via amortized inference using new observations, yielding a predict–generate–update filtering framework in function space. The formulation supports both structured (Markovian) and unstructured latent dynamics within a unified objective, while Monte Carlo inference over latent trajectories produces calibrated predictive mixtures with fixed per-step cost. Evaluated on long-horizon online regression using the Jena Climate benchmark, LT consistently achieves lower negative log-likelihood and mean squared error than stateful sequential and static uncertainty-aware baselines, with competitive calibration, demonstrating that latent-conditioned function evolution is an effective alternative to traditional latent-state modeling under distribution shift.</p>
+
+<p><a href="https://arxiv.org/abs/2602.00458">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Test-Time Adaptation for Non-stationary Time Series: From Synthetic Regime Shifts to Financial Markets</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Test-Time Adaptation for Non-stationary Time Series: From Synthetic Regime Shifts to Financial Markets" />
+<meta name="author" content="Yurui Wu, Qingying Deng, Wonou Chung, Mairui Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Time series encountered in practice are rarely stationary. When the data distribution changes, a forecasting model trained on past observations can lose accuracy. We study a small-footprint test-time adaptation (TTA) framework for causal timeseries forecasting and direction classification. The backbone is frozen, and only normalization affine parameters are updated using recent unlabeled windows. For classification we minimize entropy and enforce temporal consistency; for regression we minimize prediction variance across weak time-preserving augmentations and optionally distill from an EMA teacher. A quadratic drift penalty and an uncertainty triggered fallback keep updates stable. We evaluate this framework in two stages: synthetic regime shifts on ETT benchmarks, and daily equity and FX series (SPY, QQQ, EUR/USD) across pandemic, high-inflation, and recovery regimes. On synthetic gradual drift, normalization-based TTA improves forecasting error, while in financial markets a simple batch-normalization statistics update is a robust default and more aggressive norm-only adaptation can even hurt. Our results provide practical guidance for deploying TTA on non-stationary time series." />
+<meta property="og:description" content="Time series encountered in practice are rarely stationary. When the data distribution changes, a forecasting model trained on past observations can lose accuracy. We study a small-footprint test-time adaptation (TTA) framework for causal timeseries forecasting and direction classification. The backbone is frozen, and only normalization affine parameters are updated using recent unlabeled windows. For classification we minimize entropy and enforce temporal consistency; for regression we minimize prediction variance across weak time-preserving augmentations and optionally distill from an EMA teacher. A quadratic drift penalty and an uncertainty triggered fallback keep updates stable. We evaluate this framework in two stages: synthetic regime shifts on ETT benchmarks, and daily equity and FX series (SPY, QQQ, EUR/USD) across pandemic, high-inflation, and recovery regimes. On synthetic gradual drift, normalization-based TTA improves forecasting error, while in financial markets a simple batch-normalization statistics update is a robust default and more aggressive norm-only adaptation can even hurt. Our results provide practical guidance for deploying TTA on non-stationary time series." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/03/TestTimeAdaptationforNonstationaryTimeSeriesFromSyntheticRegimeShiftstoFinancialMarkets.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/03/TestTimeAdaptationforNonstationaryTimeSeriesFromSyntheticRegimeShiftstoFinancialMarkets.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Test-Time Adaptation for Non-stationary Time Series: From Synthetic Regime Shifts to Financial Markets" />
+<script type="application/ld+json">
+{"description":"Time series encountered in practice are rarely stationary. When the data distribution changes, a forecasting model trained on past observations can lose accuracy. We study a small-footprint test-time adaptation (TTA) framework for causal timeseries forecasting and direction classification. The backbone is frozen, and only normalization affine parameters are updated using recent unlabeled windows. For classification we minimize entropy and enforce temporal consistency; for regression we minimize prediction variance across weak time-preserving augmentations and optionally distill from an EMA teacher. A quadratic drift penalty and an uncertainty triggered fallback keep updates stable. We evaluate this framework in two stages: synthetic regime shifts on ETT benchmarks, and daily equity and FX series (SPY, QQQ, EUR/USD) across pandemic, high-inflation, and recovery regimes. On synthetic gradual drift, normalization-based TTA improves forecasting error, while in financial markets a simple batch-normalization statistics update is a robust default and more aggressive norm-only adaptation can even hurt. Our results provide practical guidance for deploying TTA on non-stationary time series.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/03/TestTimeAdaptationforNonstationaryTimeSeriesFromSyntheticRegimeShiftstoFinancialMarkets.html"},"dateModified":"2026-02-03T00:00:00+00:00","author":{"@type":"Person","name":"Yurui Wu, Qingying Deng, Wonou Chung, Mairui Li"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/03/TestTimeAdaptationforNonstationaryTimeSeriesFromSyntheticRegimeShiftstoFinancialMarkets.html","headline":"Test-Time Adaptation for Non-stationary Time Series: From Synthetic Regime Shifts to Financial Markets","@type":"BlogPosting","datePublished":"2026-02-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-03 00:00:00 +0000">02-03</time>
+  </p>
+  
+  <h1>Test-Time Adaptation for Non-stationary Time Series: From Synthetic Regime Shifts to Financial Markets</h1>
+  <br>Yurui Wu, Qingying Deng, Wonou Chung, Mairui Li</h3>
+  <br> [stat.ML]
+
+  <p>Time series encountered in practice are rarely stationary. When the data distribution changes, a forecasting model trained on past observations can lose accuracy. We study a small-footprint test-time adaptation (TTA) framework for causal timeseries forecasting and direction classification. The backbone is frozen, and only normalization affine parameters are updated using recent unlabeled windows. For classification we minimize entropy and enforce temporal consistency; for regression we minimize prediction variance across weak time-preserving augmentations and optionally distill from an EMA teacher. A quadratic drift penalty and an uncertainty triggered fallback keep updates stable. We evaluate this framework in two stages: synthetic regime shifts on ETT benchmarks, and daily equity and FX series (SPY, QQQ, EUR/USD) across pandemic, high-inflation, and recovery regimes. On synthetic gradual drift, normalization-based TTA improves forecasting error, while in financial markets a simple batch-normalization statistics update is a robust default and more aggressive norm-only adaptation can even hurt. Our results provide practical guidance for deploying TTA on non-stationary time series.</p>
+
+<p><a href="https://arxiv.org/abs/2602.00073">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

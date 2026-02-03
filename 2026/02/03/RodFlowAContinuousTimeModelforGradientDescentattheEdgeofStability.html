@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rod Flow: A Continuous-Time Model for Gradient Descent at the Edge of Stability</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Rod Flow: A Continuous-Time Model for Gradient Descent at the Edge of Stability" />
+<meta name="author" content="Eric Regis, Sinho Chewi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How can we understand gradient-based training over non-convex landscapes? The edge of stability phenomenon, introduced in Cohen et al. (2021), indicates that the answer is not so simple: namely, gradient descent (GD) with large step sizes often diverges away from the gradient flow. In this regime, the “Central Flow”, recently proposed in Cohen et al. (2025), provides an accurate ODE approximation to the GD dynamics over many architectures. In this work, we propose Rod Flow, an alternative ODE approximation, which carries the following advantages: (1) it rests on a principled derivation stemming from a physical picture of GD iterates as an extended one-dimensional object – a “rod”; (2) it better captures GD dynamics for simple toy examples and matches the accuracy of Central Flow for representative neural network architectures, and (3) is explicit and cheap to compute. Theoretically, we prove that Rod Flow correctly predicts the critical sharpness threshold and explains self-stabilization in quartic potentials. We validate our theory with a range of numerical experiments." />
+<meta property="og:description" content="How can we understand gradient-based training over non-convex landscapes? The edge of stability phenomenon, introduced in Cohen et al. (2021), indicates that the answer is not so simple: namely, gradient descent (GD) with large step sizes often diverges away from the gradient flow. In this regime, the “Central Flow”, recently proposed in Cohen et al. (2025), provides an accurate ODE approximation to the GD dynamics over many architectures. In this work, we propose Rod Flow, an alternative ODE approximation, which carries the following advantages: (1) it rests on a principled derivation stemming from a physical picture of GD iterates as an extended one-dimensional object – a “rod”; (2) it better captures GD dynamics for simple toy examples and matches the accuracy of Central Flow for representative neural network architectures, and (3) is explicit and cheap to compute. Theoretically, we prove that Rod Flow correctly predicts the critical sharpness threshold and explains self-stabilization in quartic potentials. We validate our theory with a range of numerical experiments." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/03/RodFlowAContinuousTimeModelforGradientDescentattheEdgeofStability.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/03/RodFlowAContinuousTimeModelforGradientDescentattheEdgeofStability.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rod Flow: A Continuous-Time Model for Gradient Descent at the Edge of Stability" />
+<script type="application/ld+json">
+{"description":"How can we understand gradient-based training over non-convex landscapes? The edge of stability phenomenon, introduced in Cohen et al. (2021), indicates that the answer is not so simple: namely, gradient descent (GD) with large step sizes often diverges away from the gradient flow. In this regime, the “Central Flow”, recently proposed in Cohen et al. (2025), provides an accurate ODE approximation to the GD dynamics over many architectures. In this work, we propose Rod Flow, an alternative ODE approximation, which carries the following advantages: (1) it rests on a principled derivation stemming from a physical picture of GD iterates as an extended one-dimensional object – a “rod”; (2) it better captures GD dynamics for simple toy examples and matches the accuracy of Central Flow for representative neural network architectures, and (3) is explicit and cheap to compute. Theoretically, we prove that Rod Flow correctly predicts the critical sharpness threshold and explains self-stabilization in quartic potentials. We validate our theory with a range of numerical experiments.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/03/RodFlowAContinuousTimeModelforGradientDescentattheEdgeofStability.html"},"dateModified":"2026-02-03T00:00:00+00:00","author":{"@type":"Person","name":"Eric Regis, Sinho Chewi"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/03/RodFlowAContinuousTimeModelforGradientDescentattheEdgeofStability.html","headline":"Rod Flow: A Continuous-Time Model for Gradient Descent at the Edge of Stability","@type":"BlogPosting","datePublished":"2026-02-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-03 00:00:00 +0000">02-03</time>
+  </p>
+  
+  <h1>Rod Flow: A Continuous-Time Model for Gradient Descent at the Edge of Stability</h1>
+  <br>Eric Regis, Sinho Chewi</h3>
+  <br> [stat.ML]
+
+  <p>How can we understand gradient-based training over non-convex landscapes? The edge of stability phenomenon, introduced in Cohen et al. (2021), indicates that the answer is not so simple: namely, gradient descent (GD) with large step sizes often diverges away from the gradient flow. In this regime, the “Central Flow”, recently proposed in Cohen et al. (2025), provides an accurate ODE approximation to the GD dynamics over many architectures. In this work, we propose Rod Flow, an alternative ODE approximation, which carries the following advantages: (1) it rests on a principled derivation stemming from a physical picture of GD iterates as an extended one-dimensional object – a “rod”; (2) it better captures GD dynamics for simple toy examples and matches the accuracy of Central Flow for representative neural network architectures, and (3) is explicit and cheap to compute. Theoretically, we prove that Rod Flow correctly predicts the critical sharpness threshold and explains self-stabilization in quartic potentials. We validate our theory with a range of numerical experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2602.01480">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

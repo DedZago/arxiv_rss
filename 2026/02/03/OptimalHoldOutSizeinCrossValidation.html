@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimal Hold-Out Size in Cross-Validation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Optimal Hold-Out Size in Cross-Validation" />
+<meta name="author" content="Kenichiro McAlinn, Kōsaku Takanashi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cross-validation (CV) is routinely used across the sciences to select models and tune parameters, and the resulting choices are often interpreted as substantive scientific conclusions (e.g., which variables, mechanisms, or risk factors are ``supported by the data’’). A key part of the CV procedure – the hold-out size, or equivalently the fold count $K$ – is typically set by convention (e.g., 80/20, $K=5$) rather than by a principled criterion. Central to the issue is the tradeoff between training and testing: increasing the training sample size improves model accuracy, while sacrificing certainty around the accuracy itself. We formalize the tradeoff by targeting predictive performance and explicitly penalizing evaluation uncertainty, which cannot be identified from the data without additional assumptions. We derive finite-sample expressions of this evaluation uncertainty under symmetric errors and general upper bounds under broader error conditions, yielding a transparent utility-based rule for selecting the hold-out size as a function of an irreducible-noise parameter. Empirical analyses with linear regression and random forests across multiple domains, and a high-dimensional genomics application, show that (i) the choice of $K$ is dependent on the data and model. (ii) the optimal $K$ varies based on the assumption on the irreducible error, and (iii) the implied inferential conclusions can change materially as the irreducible error, and thus $K$, varies. The resulting framework replaces a one-size-fits-all convention with a context-specific, assumption-explicit choice of $K$, enabling more reliable model comparisons and downstream scientific inference." />
+<meta property="og:description" content="Cross-validation (CV) is routinely used across the sciences to select models and tune parameters, and the resulting choices are often interpreted as substantive scientific conclusions (e.g., which variables, mechanisms, or risk factors are ``supported by the data’’). A key part of the CV procedure – the hold-out size, or equivalently the fold count $K$ – is typically set by convention (e.g., 80/20, $K=5$) rather than by a principled criterion. Central to the issue is the tradeoff between training and testing: increasing the training sample size improves model accuracy, while sacrificing certainty around the accuracy itself. We formalize the tradeoff by targeting predictive performance and explicitly penalizing evaluation uncertainty, which cannot be identified from the data without additional assumptions. We derive finite-sample expressions of this evaluation uncertainty under symmetric errors and general upper bounds under broader error conditions, yielding a transparent utility-based rule for selecting the hold-out size as a function of an irreducible-noise parameter. Empirical analyses with linear regression and random forests across multiple domains, and a high-dimensional genomics application, show that (i) the choice of $K$ is dependent on the data and model. (ii) the optimal $K$ varies based on the assumption on the irreducible error, and (iii) the implied inferential conclusions can change materially as the irreducible error, and thus $K$, varies. The resulting framework replaces a one-size-fits-all convention with a context-specific, assumption-explicit choice of $K$, enabling more reliable model comparisons and downstream scientific inference." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/03/OptimalHoldOutSizeinCrossValidation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/03/OptimalHoldOutSizeinCrossValidation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Optimal Hold-Out Size in Cross-Validation" />
+<script type="application/ld+json">
+{"description":"Cross-validation (CV) is routinely used across the sciences to select models and tune parameters, and the resulting choices are often interpreted as substantive scientific conclusions (e.g., which variables, mechanisms, or risk factors are ``supported by the data’’). A key part of the CV procedure – the hold-out size, or equivalently the fold count $K$ – is typically set by convention (e.g., 80/20, $K=5$) rather than by a principled criterion. Central to the issue is the tradeoff between training and testing: increasing the training sample size improves model accuracy, while sacrificing certainty around the accuracy itself. We formalize the tradeoff by targeting predictive performance and explicitly penalizing evaluation uncertainty, which cannot be identified from the data without additional assumptions. We derive finite-sample expressions of this evaluation uncertainty under symmetric errors and general upper bounds under broader error conditions, yielding a transparent utility-based rule for selecting the hold-out size as a function of an irreducible-noise parameter. Empirical analyses with linear regression and random forests across multiple domains, and a high-dimensional genomics application, show that (i) the choice of $K$ is dependent on the data and model. (ii) the optimal $K$ varies based on the assumption on the irreducible error, and (iii) the implied inferential conclusions can change materially as the irreducible error, and thus $K$, varies. The resulting framework replaces a one-size-fits-all convention with a context-specific, assumption-explicit choice of $K$, enabling more reliable model comparisons and downstream scientific inference.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/03/OptimalHoldOutSizeinCrossValidation.html"},"dateModified":"2026-02-03T00:00:00+00:00","author":{"@type":"Person","name":"Kenichiro McAlinn, Kōsaku Takanashi"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/03/OptimalHoldOutSizeinCrossValidation.html","headline":"Optimal Hold-Out Size in Cross-Validation","@type":"BlogPosting","datePublished":"2026-02-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-03 00:00:00 +0000">02-03</time>
+  </p>
+  
+  <h1>Optimal Hold-Out Size in Cross-Validation</h1>
+  <br>Kenichiro McAlinn, Kōsaku Takanashi</h3>
+  <br> [stat.ME]
+
+  <p>Cross-validation (CV) is routinely used across the sciences to select models and tune parameters, and the resulting choices are often interpreted as substantive scientific conclusions (e.g., which variables, mechanisms, or risk factors are ``supported by the data’’). A key part of the CV procedure – the hold-out size, or equivalently the fold count $K$ – is typically set by convention (e.g., 80/20, $K=5$) rather than by a principled criterion. Central to the issue is the tradeoff between training and testing: increasing the training sample size improves model accuracy, while sacrificing certainty around the accuracy itself. We formalize the tradeoff by targeting predictive performance and explicitly penalizing evaluation uncertainty, which cannot be identified from the data without additional assumptions. We derive finite-sample expressions of this evaluation uncertainty under symmetric errors and general upper bounds under broader error conditions, yielding a transparent utility-based rule for selecting the hold-out size as a function of an irreducible-noise parameter. Empirical analyses with linear regression and random forests across multiple domains, and a high-dimensional genomics application, show that (i) the choice of $K$ is dependent on the data and model. (ii) the optimal $K$ varies based on the assumption on the irreducible error, and (iii) the implied inferential conclusions can change materially as the irreducible error, and thus $K$, varies. The resulting framework replaces a one-size-fits-all convention with a context-specific, assumption-explicit choice of $K$, enabling more reliable model comparisons and downstream scientific inference.</p>
+
+<p><a href="https://arxiv.org/abs/2511.12698">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
