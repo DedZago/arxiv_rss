@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>mmcmcBayes:An R Package Implementing a Multistage MCMC Framework for Detecting the Differentially Methylated Regions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="mmcmcBayes:An R Package Implementing a Multistage MCMC Framework for Detecting the Differentially Methylated Regions" />
+<meta name="author" content="Zhexuan Yang, Duchwan Ryu, Feng Luan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Identifying differentially methylated regions is an important task in epigenome-wide association studies, where differential signals often arise across groups of neighboring CpG sites. Many existing methods detect differentially methylated regions by aggregating CpG-level test results, which may limit their ability to capture complex regional methylation patterns. In this paper, we introduce the R package mmcmcBayes, which implements a multistage Markov chain Monte Carlo procedure for region-level detection of differentially methylated regions. The method models sample-wise regional methylation summaries using the alpha-skew generalized normal distribution and evaluates evidence for differential methylation between groups through Bayes factors. We use a multistage region-splitting strategy to refine candidate regions based on statistical evidence. We describe the underlying methodology and software implementation, and illustrate its performance through simulation studies and applications to Illumina 450K methylation data. The mmcmcBayes package provides a practical region-level alternative to existing CpG-based differentially methylated regions detection methods and includes supporting functions for summarizing, comparing, and visualizing detected regions." />
+<meta property="og:description" content="Identifying differentially methylated regions is an important task in epigenome-wide association studies, where differential signals often arise across groups of neighboring CpG sites. Many existing methods detect differentially methylated regions by aggregating CpG-level test results, which may limit their ability to capture complex regional methylation patterns. In this paper, we introduce the R package mmcmcBayes, which implements a multistage Markov chain Monte Carlo procedure for region-level detection of differentially methylated regions. The method models sample-wise regional methylation summaries using the alpha-skew generalized normal distribution and evaluates evidence for differential methylation between groups through Bayes factors. We use a multistage region-splitting strategy to refine candidate regions based on statistical evidence. We describe the underlying methodology and software implementation, and illustrate its performance through simulation studies and applications to Illumina 450K methylation data. The mmcmcBayes package provides a practical region-level alternative to existing CpG-based differentially methylated regions detection methods and includes supporting functions for summarizing, comparing, and visualizing detected regions." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/05/mmcmcBayesAnRPackageImplementingaMultistageMCMCFrameworkforDetectingtheDifferentiallyMethylatedRegions.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/05/mmcmcBayesAnRPackageImplementingaMultistageMCMCFrameworkforDetectingtheDifferentiallyMethylatedRegions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="mmcmcBayes:An R Package Implementing a Multistage MCMC Framework for Detecting the Differentially Methylated Regions" />
+<script type="application/ld+json">
+{"description":"Identifying differentially methylated regions is an important task in epigenome-wide association studies, where differential signals often arise across groups of neighboring CpG sites. Many existing methods detect differentially methylated regions by aggregating CpG-level test results, which may limit their ability to capture complex regional methylation patterns. In this paper, we introduce the R package mmcmcBayes, which implements a multistage Markov chain Monte Carlo procedure for region-level detection of differentially methylated regions. The method models sample-wise regional methylation summaries using the alpha-skew generalized normal distribution and evaluates evidence for differential methylation between groups through Bayes factors. We use a multistage region-splitting strategy to refine candidate regions based on statistical evidence. We describe the underlying methodology and software implementation, and illustrate its performance through simulation studies and applications to Illumina 450K methylation data. The mmcmcBayes package provides a practical region-level alternative to existing CpG-based differentially methylated regions detection methods and includes supporting functions for summarizing, comparing, and visualizing detected regions.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/05/mmcmcBayesAnRPackageImplementingaMultistageMCMCFrameworkforDetectingtheDifferentiallyMethylatedRegions.html"},"dateModified":"2026-02-05T00:00:00+00:00","author":{"@type":"Person","name":"Zhexuan Yang, Duchwan Ryu, Feng Luan"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/05/mmcmcBayesAnRPackageImplementingaMultistageMCMCFrameworkforDetectingtheDifferentiallyMethylatedRegions.html","headline":"mmcmcBayes:An R Package Implementing a Multistage MCMC Framework for Detecting the Differentially Methylated Regions","@type":"BlogPosting","datePublished":"2026-02-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-05 00:00:00 +0000">02-05</time>
+  </p>
+  
+  <h1>mmcmcBayes:An R Package Implementing a Multistage MCMC Framework for Detecting the Differentially Methylated Regions</h1>
+  <br>Zhexuan Yang, Duchwan Ryu, Feng Luan</h3>
+  <br> [stat.AP,stat.CO]
+
+  <p>Identifying differentially methylated regions is an important task in epigenome-wide association studies, where differential signals often arise across groups of neighboring CpG sites. Many existing methods detect differentially methylated regions by aggregating CpG-level test results, which may limit their ability to capture complex regional methylation patterns. In this paper, we introduce the R package mmcmcBayes, which implements a multistage Markov chain Monte Carlo procedure for region-level detection of differentially methylated regions. The method models sample-wise regional methylation summaries using the alpha-skew generalized normal distribution and evaluates evidence for differential methylation between groups through Bayes factors. We use a multistage region-splitting strategy to refine candidate regions based on statistical evidence. We describe the underlying methodology and software implementation, and illustrate its performance through simulation studies and applications to Illumina 450K methylation data. The mmcmcBayes package provides a practical region-level alternative to existing CpG-based differentially methylated regions detection methods and includes supporting functions for summarizing, comparing, and visualizing detected regions.</p>
+
+<p><a href="https://arxiv.org/abs/2602.04554">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

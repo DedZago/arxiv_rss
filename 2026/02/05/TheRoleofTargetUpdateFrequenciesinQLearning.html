@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Role of Target Update Frequencies in Q-Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Role of Target Update Frequencies in Q-Learning" />
+<meta name="author" content="Simon Weissmann, Tilman Aach, Benedikt Wille, Sebastian Kassing, Leif Döring" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The target network update frequency (TUF) is a central stabilization mechanism in (deep) Q-learning. However, their selection remains poorly understood and is often treated merely as another tunable hyperparameter rather than as a principled design decision. This work provides a theoretical analysis of target fixing in tabular Q-learning through the lens of approximate dynamic programming. We formulate periodic target updates as a nested optimization scheme in which each outer iteration applies an inexact Bellman optimality operator, approximated by a generic inner loop optimizer. Rigorous theory yields a finite-time convergence analysis for the asynchronous sampling setting, specializing to stochastic gradient descent in the inner loop. Our results deliver an explicit characterization of the bias-variance trade-off induced by the target update period, showing how to optimally set this critical hyperparameter. We prove that constant target update schedules are suboptimal, incurring a logarithmic overhead in sample complexity that is entirely avoidable with adaptive schedules. Our analysis shows that the optimal target update frequency increases geometrically over the course of the learning process." />
+<meta property="og:description" content="The target network update frequency (TUF) is a central stabilization mechanism in (deep) Q-learning. However, their selection remains poorly understood and is often treated merely as another tunable hyperparameter rather than as a principled design decision. This work provides a theoretical analysis of target fixing in tabular Q-learning through the lens of approximate dynamic programming. We formulate periodic target updates as a nested optimization scheme in which each outer iteration applies an inexact Bellman optimality operator, approximated by a generic inner loop optimizer. Rigorous theory yields a finite-time convergence analysis for the asynchronous sampling setting, specializing to stochastic gradient descent in the inner loop. Our results deliver an explicit characterization of the bias-variance trade-off induced by the target update period, showing how to optimally set this critical hyperparameter. We prove that constant target update schedules are suboptimal, incurring a logarithmic overhead in sample complexity that is entirely avoidable with adaptive schedules. Our analysis shows that the optimal target update frequency increases geometrically over the course of the learning process." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/05/TheRoleofTargetUpdateFrequenciesinQLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/05/TheRoleofTargetUpdateFrequenciesinQLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Role of Target Update Frequencies in Q-Learning" />
+<script type="application/ld+json">
+{"description":"The target network update frequency (TUF) is a central stabilization mechanism in (deep) Q-learning. However, their selection remains poorly understood and is often treated merely as another tunable hyperparameter rather than as a principled design decision. This work provides a theoretical analysis of target fixing in tabular Q-learning through the lens of approximate dynamic programming. We formulate periodic target updates as a nested optimization scheme in which each outer iteration applies an inexact Bellman optimality operator, approximated by a generic inner loop optimizer. Rigorous theory yields a finite-time convergence analysis for the asynchronous sampling setting, specializing to stochastic gradient descent in the inner loop. Our results deliver an explicit characterization of the bias-variance trade-off induced by the target update period, showing how to optimally set this critical hyperparameter. We prove that constant target update schedules are suboptimal, incurring a logarithmic overhead in sample complexity that is entirely avoidable with adaptive schedules. Our analysis shows that the optimal target update frequency increases geometrically over the course of the learning process.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/05/TheRoleofTargetUpdateFrequenciesinQLearning.html"},"dateModified":"2026-02-05T00:00:00+00:00","author":{"@type":"Person","name":"Simon Weissmann, Tilman Aach, Benedikt Wille, Sebastian Kassing, Leif Döring"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/05/TheRoleofTargetUpdateFrequenciesinQLearning.html","headline":"The Role of Target Update Frequencies in Q-Learning","@type":"BlogPosting","datePublished":"2026-02-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-05 00:00:00 +0000">02-05</time>
+  </p>
+  
+  <h1>The Role of Target Update Frequencies in Q-Learning</h1>
+  <br>Simon Weissmann, Tilman Aach, Benedikt Wille, Sebastian Kassing, Leif Döring</h3>
+  <br> [stat.ML]
+
+  <p>The target network update frequency (TUF) is a central stabilization mechanism in (deep) Q-learning. However, their selection remains poorly understood and is often treated merely as another tunable hyperparameter rather than as a principled design decision. This work provides a theoretical analysis of target fixing in tabular Q-learning through the lens of approximate dynamic programming. We formulate periodic target updates as a nested optimization scheme in which each outer iteration applies an inexact Bellman optimality operator, approximated by a generic inner loop optimizer. Rigorous theory yields a finite-time convergence analysis for the asynchronous sampling setting, specializing to stochastic gradient descent in the inner loop. Our results deliver an explicit characterization of the bias-variance trade-off induced by the target update period, showing how to optimally set this critical hyperparameter. We prove that constant target update schedules are suboptimal, incurring a logarithmic overhead in sample complexity that is entirely avoidable with adaptive schedules. Our analysis shows that the optimal target update frequency increases geometrically over the course of the learning process.</p>
+
+<p><a href="https://arxiv.org/abs/2602.03911">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
