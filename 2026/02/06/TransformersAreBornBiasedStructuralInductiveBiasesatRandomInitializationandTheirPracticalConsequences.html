@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences" />
+<meta name="author" content="Siquan Li, Yao Tong, Haonan Wang, Tianyang Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Transformers underpin modern large language models (LLMs) and are commonly assumed to be behaviorally unstructured at random initialization, with all meaningful preferences emerging only through large-scale training. We challenge this assumption by showing that randomly initialized transformers already exhibit strong and systematic structural biases. In particular, untrained models display extreme token preferences: across random input sequences, certain tokens are predicted with probabilities orders of magnitude larger. We provide a mechanistic explanation for this phenomenon by dissecting the transformer architecture at initialization. We show that extreme token preference arises from a contraction of token representations along a random seed-dependent direction. This contraction is driven by two interacting forces: (i) asymmetric nonlinear activations in MLP sublayers induce global (inter-sequence) representation concentration, and (ii) self-attention further amplifies this effect through local (intra-sequence) aggregation. Together, these mechanisms align hidden representations along a direction determined solely by the random initialization, producing highly non-uniform next-token predictions. Beyond mechanistic insight, we demonstrate that these initialization-induced biases persist throughout training, forming a stable and intrinsic model identity. Leveraging this property, we introduce SeedPrint, a fingerprinting method that can reliably distinguish models that differ only in their random initialization, even after extensive training and under substantial distribution shift. Finally, we identify a fundamental positional discrepancy inherent to the attention mechanism’s intra-sequence contraction that is causally linked to the attention-sink phenomenon. This discovery provides a principled explanation for the emergence of sinks and offers a pathway for their control." />
+<meta property="og:description" content="Transformers underpin modern large language models (LLMs) and are commonly assumed to be behaviorally unstructured at random initialization, with all meaningful preferences emerging only through large-scale training. We challenge this assumption by showing that randomly initialized transformers already exhibit strong and systematic structural biases. In particular, untrained models display extreme token preferences: across random input sequences, certain tokens are predicted with probabilities orders of magnitude larger. We provide a mechanistic explanation for this phenomenon by dissecting the transformer architecture at initialization. We show that extreme token preference arises from a contraction of token representations along a random seed-dependent direction. This contraction is driven by two interacting forces: (i) asymmetric nonlinear activations in MLP sublayers induce global (inter-sequence) representation concentration, and (ii) self-attention further amplifies this effect through local (intra-sequence) aggregation. Together, these mechanisms align hidden representations along a direction determined solely by the random initialization, producing highly non-uniform next-token predictions. Beyond mechanistic insight, we demonstrate that these initialization-induced biases persist throughout training, forming a stable and intrinsic model identity. Leveraging this property, we introduce SeedPrint, a fingerprinting method that can reliably distinguish models that differ only in their random initialization, even after extensive training and under substantial distribution shift. Finally, we identify a fundamental positional discrepancy inherent to the attention mechanism’s intra-sequence contraction that is causally linked to the attention-sink phenomenon. This discovery provides a principled explanation for the emergence of sinks and offers a pathway for their control." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/06/TransformersAreBornBiasedStructuralInductiveBiasesatRandomInitializationandTheirPracticalConsequences.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/06/TransformersAreBornBiasedStructuralInductiveBiasesatRandomInitializationandTheirPracticalConsequences.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences" />
+<script type="application/ld+json">
+{"description":"Transformers underpin modern large language models (LLMs) and are commonly assumed to be behaviorally unstructured at random initialization, with all meaningful preferences emerging only through large-scale training. We challenge this assumption by showing that randomly initialized transformers already exhibit strong and systematic structural biases. In particular, untrained models display extreme token preferences: across random input sequences, certain tokens are predicted with probabilities orders of magnitude larger. We provide a mechanistic explanation for this phenomenon by dissecting the transformer architecture at initialization. We show that extreme token preference arises from a contraction of token representations along a random seed-dependent direction. This contraction is driven by two interacting forces: (i) asymmetric nonlinear activations in MLP sublayers induce global (inter-sequence) representation concentration, and (ii) self-attention further amplifies this effect through local (intra-sequence) aggregation. Together, these mechanisms align hidden representations along a direction determined solely by the random initialization, producing highly non-uniform next-token predictions. Beyond mechanistic insight, we demonstrate that these initialization-induced biases persist throughout training, forming a stable and intrinsic model identity. Leveraging this property, we introduce SeedPrint, a fingerprinting method that can reliably distinguish models that differ only in their random initialization, even after extensive training and under substantial distribution shift. Finally, we identify a fundamental positional discrepancy inherent to the attention mechanism’s intra-sequence contraction that is causally linked to the attention-sink phenomenon. This discovery provides a principled explanation for the emergence of sinks and offers a pathway for their control.","datePublished":"2026-02-06T00:00:00+00:00","headline":"Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/06/TransformersAreBornBiasedStructuralInductiveBiasesatRandomInitializationandTheirPracticalConsequences.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/06/TransformersAreBornBiasedStructuralInductiveBiasesatRandomInitializationandTheirPracticalConsequences.html","author":{"@type":"Person","name":"Siquan Li, Yao Tong, Haonan Wang, Tianyang Hu"},"@type":"BlogPosting","dateModified":"2026-02-06T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-06 00:00:00 +0000">02-06</time>
+  </p>
+  
+  <h1>Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences</h1>
+  <br>Siquan Li, Yao Tong, Haonan Wang, Tianyang Hu</h3>
+  <br> [stat.ML]
+
+  <p>Transformers underpin modern large language models (LLMs) and are commonly assumed to be behaviorally unstructured at random initialization, with all meaningful preferences emerging only through large-scale training. We challenge this assumption by showing that randomly initialized transformers already exhibit strong and systematic structural biases. In particular, untrained models display extreme token preferences: across random input sequences, certain tokens are predicted with probabilities orders of magnitude larger.
+  We provide a mechanistic explanation for this phenomenon by dissecting the transformer architecture at initialization. We show that extreme token preference arises from a contraction of token representations along a random seed-dependent direction. This contraction is driven by two interacting forces: (i) asymmetric nonlinear activations in MLP sublayers induce global (inter-sequence) representation concentration, and (ii) self-attention further amplifies this effect through local (intra-sequence) aggregation. Together, these mechanisms align hidden representations along a direction determined solely by the random initialization, producing highly non-uniform next-token predictions.
+  Beyond mechanistic insight, we demonstrate that these initialization-induced biases persist throughout training, forming a stable and intrinsic model identity. Leveraging this property, we introduce SeedPrint, a fingerprinting method that can reliably distinguish models that differ only in their random initialization, even after extensive training and under substantial distribution shift. Finally, we identify a fundamental positional discrepancy inherent to the attention mechanism’s intra-sequence contraction that is causally linked to the attention-sink phenomenon. This discovery provides a principled explanation for the emergence of sinks and offers a pathway for their control.</p>
+
+<p><a href="https://arxiv.org/abs/2602.05927">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

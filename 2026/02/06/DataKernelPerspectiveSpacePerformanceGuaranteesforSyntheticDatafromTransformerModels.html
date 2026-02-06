@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Data Kernel Perspective Space Performance Guarantees for Synthetic Data from Transformer Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Data Kernel Perspective Space Performance Guarantees for Synthetic Data from Transformer Models" />
+<meta name="author" content="Michael Browder, Kevin Duh, J. David Harris, Vince Lyzinski, Paul McNamee, Youngser Park, Carey E. Priebe, Peter Viechnicki" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Scarcity of labeled training data remains the long pole in the tent for building performant language technology and generative AI models. Transformer models – particularly LLMs – are increasingly being used to mitigate the data scarcity problem via synthetic data generation. However, because the models are black boxes, the properties of the synthetic data are difficult to predict. In practice it is common for language technology engineers to ‘fiddle’ with the LLM temperature setting and hope that what comes out the other end improves the downstream model. Faced with this uncertainty, here we propose Data Kernel Perspective Space (DKPS) to provide the foundation for mathematical analysis yielding concrete statistical guarantees for the quality of the outputs of transformer models. We first show the mathematical derivation of DKPS and how it provides performance guarantees. Next we show how DKPS performance guarantees can elucidate performance of a downstream task, such as neural machine translation models or LLMs trained using Contrastive Preference Optimization (CPO). Limitations of the current work and future research are also discussed." />
+<meta property="og:description" content="Scarcity of labeled training data remains the long pole in the tent for building performant language technology and generative AI models. Transformer models – particularly LLMs – are increasingly being used to mitigate the data scarcity problem via synthetic data generation. However, because the models are black boxes, the properties of the synthetic data are difficult to predict. In practice it is common for language technology engineers to ‘fiddle’ with the LLM temperature setting and hope that what comes out the other end improves the downstream model. Faced with this uncertainty, here we propose Data Kernel Perspective Space (DKPS) to provide the foundation for mathematical analysis yielding concrete statistical guarantees for the quality of the outputs of transformer models. We first show the mathematical derivation of DKPS and how it provides performance guarantees. Next we show how DKPS performance guarantees can elucidate performance of a downstream task, such as neural machine translation models or LLMs trained using Contrastive Preference Optimization (CPO). Limitations of the current work and future research are also discussed." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/06/DataKernelPerspectiveSpacePerformanceGuaranteesforSyntheticDatafromTransformerModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/06/DataKernelPerspectiveSpacePerformanceGuaranteesforSyntheticDatafromTransformerModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Kernel Perspective Space Performance Guarantees for Synthetic Data from Transformer Models" />
+<script type="application/ld+json">
+{"description":"Scarcity of labeled training data remains the long pole in the tent for building performant language technology and generative AI models. Transformer models – particularly LLMs – are increasingly being used to mitigate the data scarcity problem via synthetic data generation. However, because the models are black boxes, the properties of the synthetic data are difficult to predict. In practice it is common for language technology engineers to ‘fiddle’ with the LLM temperature setting and hope that what comes out the other end improves the downstream model. Faced with this uncertainty, here we propose Data Kernel Perspective Space (DKPS) to provide the foundation for mathematical analysis yielding concrete statistical guarantees for the quality of the outputs of transformer models. We first show the mathematical derivation of DKPS and how it provides performance guarantees. Next we show how DKPS performance guarantees can elucidate performance of a downstream task, such as neural machine translation models or LLMs trained using Contrastive Preference Optimization (CPO). Limitations of the current work and future research are also discussed.","datePublished":"2026-02-06T00:00:00+00:00","headline":"Data Kernel Perspective Space Performance Guarantees for Synthetic Data from Transformer Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/06/DataKernelPerspectiveSpacePerformanceGuaranteesforSyntheticDatafromTransformerModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/06/DataKernelPerspectiveSpacePerformanceGuaranteesforSyntheticDatafromTransformerModels.html","author":{"@type":"Person","name":"Michael Browder, Kevin Duh, J. David Harris, Vince Lyzinski, Paul McNamee, Youngser Park, Carey E. Priebe, Peter Viechnicki"},"@type":"BlogPosting","dateModified":"2026-02-06T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-06 00:00:00 +0000">02-06</time>
+  </p>
+  
+  <h1>Data Kernel Perspective Space Performance Guarantees for Synthetic Data from Transformer Models</h1>
+  <br>Michael Browder, Kevin Duh, J. David Harris, Vince Lyzinski, Paul McNamee, Youngser Park, Carey E. Priebe, Peter Viechnicki</h3>
+  <br> [stat.ML]
+
+  <p>Scarcity of labeled training data remains the long pole in the tent for building performant language technology and generative AI models. Transformer models – particularly LLMs – are increasingly being used to mitigate the data scarcity problem via synthetic data generation. However, because the models are black boxes, the properties of the synthetic data are difficult to predict. In practice it is common for language technology engineers to ‘fiddle’ with the LLM temperature setting and hope that what comes out the other end improves the downstream model. Faced with this uncertainty, here we propose Data Kernel Perspective Space (DKPS) to provide the foundation for mathematical analysis yielding concrete statistical guarantees for the quality of the outputs of transformer models. We first show the mathematical derivation of DKPS and how it provides performance guarantees. Next we show how DKPS performance guarantees can elucidate performance of a downstream task, such as neural machine translation models or LLMs trained using Contrastive Preference Optimization (CPO). Limitations of the current work and future research are also discussed.</p>
+
+<p><a href="https://arxiv.org/abs/2602.05106">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
