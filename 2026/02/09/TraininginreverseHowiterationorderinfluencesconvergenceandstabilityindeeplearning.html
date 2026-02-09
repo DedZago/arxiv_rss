@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Training in reverse: How iteration order influences convergence and stability in deep learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Training in reverse: How iteration order influences convergence and stability in deep learning" />
+<meta name="author" content="Benoit Dherin, Benny Avelin, Anders Karlsson, Hanna Mazzawi, Javier Gonzalvo, Michael Munn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Despite exceptional achievements, training neural networks remains computationally expensive and is often plagued by instabilities that can degrade convergence. While learning rate schedules can help mitigate these issues, finding optimal schedules is time-consuming and resource-intensive. This work explores theoretical issues concerning training stability in the constant-learning-rate (i.e., without schedule) and small-batch-size regime. Surprisingly, we show that the composition order of gradient updates affects stability and convergence in gradient-based optimizers. We illustrate this new line of thinking using backward-SGD, which produces parameter iterates at each step by reverting the usual forward composition order of batch gradients. Our theoretical analysis shows that in contractive regions (e.g., around minima) backward-SGD converges to a point while the standard forward-SGD generally only converges to a distribution. This leads to improved stability and convergence which we demonstrate experimentally. While full backward-SGD is computationally intensive in practice, it highlights that the extra freedom of modifying the usual iteration composition by reusing creatively previous batches at each optimization step may have important beneficial effects in improving training. Our experiments provide a proof of concept supporting this phenomenon. To our knowledge, this represents a new and unexplored avenue in deep learning optimization." />
+<meta property="og:description" content="Despite exceptional achievements, training neural networks remains computationally expensive and is often plagued by instabilities that can degrade convergence. While learning rate schedules can help mitigate these issues, finding optimal schedules is time-consuming and resource-intensive. This work explores theoretical issues concerning training stability in the constant-learning-rate (i.e., without schedule) and small-batch-size regime. Surprisingly, we show that the composition order of gradient updates affects stability and convergence in gradient-based optimizers. We illustrate this new line of thinking using backward-SGD, which produces parameter iterates at each step by reverting the usual forward composition order of batch gradients. Our theoretical analysis shows that in contractive regions (e.g., around minima) backward-SGD converges to a point while the standard forward-SGD generally only converges to a distribution. This leads to improved stability and convergence which we demonstrate experimentally. While full backward-SGD is computationally intensive in practice, it highlights that the extra freedom of modifying the usual iteration composition by reusing creatively previous batches at each optimization step may have important beneficial effects in improving training. Our experiments provide a proof of concept supporting this phenomenon. To our knowledge, this represents a new and unexplored avenue in deep learning optimization." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/09/TraininginreverseHowiterationorderinfluencesconvergenceandstabilityindeeplearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/09/TraininginreverseHowiterationorderinfluencesconvergenceandstabilityindeeplearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Training in reverse: How iteration order influences convergence and stability in deep learning" />
+<script type="application/ld+json">
+{"description":"Despite exceptional achievements, training neural networks remains computationally expensive and is often plagued by instabilities that can degrade convergence. While learning rate schedules can help mitigate these issues, finding optimal schedules is time-consuming and resource-intensive. This work explores theoretical issues concerning training stability in the constant-learning-rate (i.e., without schedule) and small-batch-size regime. Surprisingly, we show that the composition order of gradient updates affects stability and convergence in gradient-based optimizers. We illustrate this new line of thinking using backward-SGD, which produces parameter iterates at each step by reverting the usual forward composition order of batch gradients. Our theoretical analysis shows that in contractive regions (e.g., around minima) backward-SGD converges to a point while the standard forward-SGD generally only converges to a distribution. This leads to improved stability and convergence which we demonstrate experimentally. While full backward-SGD is computationally intensive in practice, it highlights that the extra freedom of modifying the usual iteration composition by reusing creatively previous batches at each optimization step may have important beneficial effects in improving training. Our experiments provide a proof of concept supporting this phenomenon. To our knowledge, this represents a new and unexplored avenue in deep learning optimization.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/09/TraininginreverseHowiterationorderinfluencesconvergenceandstabilityindeeplearning.html"},"dateModified":"2026-02-09T00:00:00+00:00","author":{"@type":"Person","name":"Benoit Dherin, Benny Avelin, Anders Karlsson, Hanna Mazzawi, Javier Gonzalvo, Michael Munn"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/09/TraininginreverseHowiterationorderinfluencesconvergenceandstabilityindeeplearning.html","headline":"Training in reverse: How iteration order influences convergence and stability in deep learning","@type":"BlogPosting","datePublished":"2026-02-09T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-09 00:00:00 +0000">02-09</time>
+  </p>
+  
+  <h1>Training in reverse: How iteration order influences convergence and stability in deep learning</h1>
+  <br>Benoit Dherin, Benny Avelin, Anders Karlsson, Hanna Mazzawi, Javier Gonzalvo, Michael Munn</h3>
+  <br> [stat.ML]
+
+  <p>Despite exceptional achievements, training neural networks remains computationally expensive and is often plagued by instabilities that can degrade convergence. While learning rate schedules can help mitigate these issues, finding optimal schedules is time-consuming and resource-intensive. This work explores theoretical issues concerning training stability in the constant-learning-rate (i.e., without schedule) and small-batch-size regime. Surprisingly, we show that the composition order of gradient updates affects stability and convergence in gradient-based optimizers. We illustrate this new line of thinking using backward-SGD, which produces parameter iterates at each step by reverting the usual forward composition order of batch gradients. Our theoretical analysis shows that in contractive regions (e.g., around minima) backward-SGD converges to a point while the standard forward-SGD generally only converges to a distribution. This leads to improved stability and convergence which we demonstrate experimentally. While full backward-SGD is computationally intensive in practice, it highlights that the extra freedom of modifying the usual iteration composition by reusing creatively previous batches at each optimization step may have important beneficial effects in improving training. Our experiments provide a proof of concept supporting this phenomenon. To our knowledge, this represents a new and unexplored avenue in deep learning optimization.</p>
+
+<p><a href="https://arxiv.org/abs/2502.01557">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
