@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Estimating Individual Customer Lifetime Values with R: The CLVTools Package</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Estimating Individual Customer Lifetime Values with R: The CLVTools Package" />
+<meta name="author" content="Markus Meierer, Patrick Bachmann, Jeffrey Näf, Patrik Schilter, René Algesheimer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Customer lifetime value (CLV) describes a customer’s long-term economic value for a business. This metric is widely used in marketing, for example, to select customers for a marketing campaign. However, modeling CLV is challenging. When relying on customers’ purchase histories, the input data is sparse. Additionally, given its long-term focus, prediction horizons are often longer than estimation periods. Probabilistic models are able to overcome these challenges and, thus, are a popular option among researchers and practitioners. The latter also appreciate their applicability for both small and big data as well as their robust predictive performance without any fine-tuning requirements. Their popularity is due to three characteristics: data parsimony, scalability, and predictive accuracy. The R package CLVTools provides an efficient and user-friendly implementation framework to apply key probabilistic models such as the Pareto/NBD and Gamma-Gamma model. Further, it provides access to the latest model extensions to include time-invariant and time-varying covariates, parameter regularization, and equality constraints. This article gives an overview of the fundamental ideas of these statistical models and illustrates their application to derive CLV predictions for existing and new customers." />
+<meta property="og:description" content="Customer lifetime value (CLV) describes a customer’s long-term economic value for a business. This metric is widely used in marketing, for example, to select customers for a marketing campaign. However, modeling CLV is challenging. When relying on customers’ purchase histories, the input data is sparse. Additionally, given its long-term focus, prediction horizons are often longer than estimation periods. Probabilistic models are able to overcome these challenges and, thus, are a popular option among researchers and practitioners. The latter also appreciate their applicability for both small and big data as well as their robust predictive performance without any fine-tuning requirements. Their popularity is due to three characteristics: data parsimony, scalability, and predictive accuracy. The R package CLVTools provides an efficient and user-friendly implementation framework to apply key probabilistic models such as the Pareto/NBD and Gamma-Gamma model. Further, it provides access to the latest model extensions to include time-invariant and time-varying covariates, parameter regularization, and equality constraints. This article gives an overview of the fundamental ideas of these statistical models and illustrates their application to derive CLV predictions for existing and new customers." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/11/EstimatingIndividualCustomerLifetimeValueswithRTheCLVToolsPackage.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/11/EstimatingIndividualCustomerLifetimeValueswithRTheCLVToolsPackage.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Estimating Individual Customer Lifetime Values with R: The CLVTools Package" />
+<script type="application/ld+json">
+{"description":"Customer lifetime value (CLV) describes a customer’s long-term economic value for a business. This metric is widely used in marketing, for example, to select customers for a marketing campaign. However, modeling CLV is challenging. When relying on customers’ purchase histories, the input data is sparse. Additionally, given its long-term focus, prediction horizons are often longer than estimation periods. Probabilistic models are able to overcome these challenges and, thus, are a popular option among researchers and practitioners. The latter also appreciate their applicability for both small and big data as well as their robust predictive performance without any fine-tuning requirements. Their popularity is due to three characteristics: data parsimony, scalability, and predictive accuracy. The R package CLVTools provides an efficient and user-friendly implementation framework to apply key probabilistic models such as the Pareto/NBD and Gamma-Gamma model. Further, it provides access to the latest model extensions to include time-invariant and time-varying covariates, parameter regularization, and equality constraints. This article gives an overview of the fundamental ideas of these statistical models and illustrates their application to derive CLV predictions for existing and new customers.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/11/EstimatingIndividualCustomerLifetimeValueswithRTheCLVToolsPackage.html"},"dateModified":"2026-02-11T00:00:00+00:00","author":{"@type":"Person","name":"Markus Meierer, Patrick Bachmann, Jeffrey Näf, Patrik Schilter, René Algesheimer"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/11/EstimatingIndividualCustomerLifetimeValueswithRTheCLVToolsPackage.html","headline":"Estimating Individual Customer Lifetime Values with R: The CLVTools Package","@type":"BlogPosting","datePublished":"2026-02-11T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-11 00:00:00 +0000">02-11</time>
+  </p>
+  
+  <h1>Estimating Individual Customer Lifetime Values with R: The CLVTools Package</h1>
+  <br>Markus Meierer, Patrick Bachmann, Jeffrey Näf, Patrik Schilter, René Algesheimer</h3>
+  <br> [stat.CO]
+
+  <p>Customer lifetime value (CLV) describes a customer’s long-term economic value for a business. This metric is widely used in marketing, for example, to select customers for a marketing campaign. However, modeling CLV is challenging. When relying on customers’ purchase histories, the input data is sparse. Additionally, given its long-term focus, prediction horizons are often longer than estimation periods. Probabilistic models are able to overcome these challenges and, thus, are a popular option among researchers and practitioners. The latter also appreciate their applicability for both small and big data as well as their robust predictive performance without any fine-tuning requirements. Their popularity is due to three characteristics: data parsimony, scalability, and predictive accuracy. The R package CLVTools provides an efficient and user-friendly implementation framework to apply key probabilistic models such as the Pareto/NBD and Gamma-Gamma model. Further, it provides access to the latest model extensions to include time-invariant and time-varying covariates, parameter regularization, and equality constraints. This article gives an overview of the fundamental ideas of these statistical models and illustrates their application to derive CLV predictions for existing and new customers.</p>
+
+<p><a href="https://arxiv.org/abs/2602.09845">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
