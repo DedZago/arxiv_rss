@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Inference for relative sparsity</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Inference for relative sparsity" />
+<meta name="author" content="Samuel J. Weisenthal, Sally W. Thurston, Ashkan Ertefaie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In healthcare, there is much interest in estimating policies, or mappings from covariates to treatment decisions. Recently, there is also interest in constraining these estimated policies to the standard of care, which generated the observed data. A relative sparsity penalty was proposed to derive policies that have sparse, explainable differences from the standard of care, facilitating justification of the new policy. However, the developers of this penalty only considered estimation, not inference. Here, we develop inference for the relative sparsity objective function, because characterizing uncertainty is crucial to applications in medicine. Further, in the relative sparsity work, the authors only considered the single-stage decision case; here, we consider the more general, multi-stage case. Inference is difficult, because the relative sparsity objective depends on the unpenalized value function, which is unstable and has infinite estimands in the binary action case. Further, one must deal with a non-differentiable penalty. To tackle these issues, we nest a weighted Trust Region Policy Optimization function within a relative sparsity objective, implement an adaptive relative sparsity penalty, and propose a sample-splitting framework for post-selection inference. We study the asymptotic behavior of our proposed approaches, perform extensive simulations, and analyze a real, electronic health record dataset." />
+<meta property="og:description" content="In healthcare, there is much interest in estimating policies, or mappings from covariates to treatment decisions. Recently, there is also interest in constraining these estimated policies to the standard of care, which generated the observed data. A relative sparsity penalty was proposed to derive policies that have sparse, explainable differences from the standard of care, facilitating justification of the new policy. However, the developers of this penalty only considered estimation, not inference. Here, we develop inference for the relative sparsity objective function, because characterizing uncertainty is crucial to applications in medicine. Further, in the relative sparsity work, the authors only considered the single-stage decision case; here, we consider the more general, multi-stage case. Inference is difficult, because the relative sparsity objective depends on the unpenalized value function, which is unstable and has infinite estimands in the binary action case. Further, one must deal with a non-differentiable penalty. To tackle these issues, we nest a weighted Trust Region Policy Optimization function within a relative sparsity objective, implement an adaptive relative sparsity penalty, and propose a sample-splitting framework for post-selection inference. We study the asymptotic behavior of our proposed approaches, perform extensive simulations, and analyze a real, electronic health record dataset." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/17/Inferenceforrelativesparsity.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/17/Inferenceforrelativesparsity.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Inference for relative sparsity" />
+<script type="application/ld+json">
+{"description":"In healthcare, there is much interest in estimating policies, or mappings from covariates to treatment decisions. Recently, there is also interest in constraining these estimated policies to the standard of care, which generated the observed data. A relative sparsity penalty was proposed to derive policies that have sparse, explainable differences from the standard of care, facilitating justification of the new policy. However, the developers of this penalty only considered estimation, not inference. Here, we develop inference for the relative sparsity objective function, because characterizing uncertainty is crucial to applications in medicine. Further, in the relative sparsity work, the authors only considered the single-stage decision case; here, we consider the more general, multi-stage case. Inference is difficult, because the relative sparsity objective depends on the unpenalized value function, which is unstable and has infinite estimands in the binary action case. Further, one must deal with a non-differentiable penalty. To tackle these issues, we nest a weighted Trust Region Policy Optimization function within a relative sparsity objective, implement an adaptive relative sparsity penalty, and propose a sample-splitting framework for post-selection inference. We study the asymptotic behavior of our proposed approaches, perform extensive simulations, and analyze a real, electronic health record dataset.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/17/Inferenceforrelativesparsity.html"},"dateModified":"2026-02-17T00:00:00+00:00","author":{"@type":"Person","name":"Samuel J. Weisenthal, Sally W. Thurston, Ashkan Ertefaie"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/17/Inferenceforrelativesparsity.html","headline":"Inference for relative sparsity","@type":"BlogPosting","datePublished":"2026-02-17T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-17 00:00:00 +0000">02-17</time>
+  </p>
+  
+  <h1>Inference for relative sparsity</h1>
+  <br>Samuel J. Weisenthal, Sally W. Thurston, Ashkan Ertefaie</h3>
+  <br> [stat.ME]
+
+  <p>In healthcare, there is much interest in estimating policies, or mappings from covariates to treatment decisions. Recently, there is also interest in constraining these estimated policies to the standard of care, which generated the observed data. A relative sparsity penalty was proposed to derive policies that have sparse, explainable differences from the standard of care, facilitating justification of the new policy. However, the developers of this penalty only considered estimation, not inference. Here, we develop inference for the relative sparsity objective function, because characterizing uncertainty is crucial to applications in medicine. Further, in the relative sparsity work, the authors only considered the single-stage decision case; here, we consider the more general, multi-stage case. Inference is difficult, because the relative sparsity objective depends on the unpenalized value function, which is unstable and has infinite estimands in the binary action case. Further, one must deal with a non-differentiable penalty. To tackle these issues, we nest a weighted Trust Region Policy Optimization function within a relative sparsity objective, implement an adaptive relative sparsity penalty, and propose a sample-splitting framework for post-selection inference. We study the asymptotic behavior of our proposed approaches, perform extensive simulations, and analyze a real, electronic health record dataset.</p>
+
+<p><a href="https://arxiv.org/abs/2306.14297">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
