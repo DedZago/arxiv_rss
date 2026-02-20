@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking" />
+<meta name="author" content="Jianliang He, Leda Wang, Siyu Chen, Zhuoran Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We present a comprehensive analysis of how two-layer neural networks learn features to solve the modular addition task. Our work provides a full mechanistic interpretation of the learned model and a theoretical explanation of its training dynamics. While prior work has identified that individual neurons learn single-frequency Fourier features and phase alignment, it does not fully explain how these features combine into a global solution. We bridge this gap by formalizing a diversification condition that emerges during training when overparametrized, consisting of two parts: phase symmetry and frequency diversification. We prove that these properties allow the network to collectively approximate a flawed indicator function on the correct logic for the modular addition task. While individual neurons produce noisy signals, the phase symmetry enables a majority-voting scheme that cancels out noise, allowing the network to robustly identify the correct sum. Furthermore, we explain the emergence of these features under random initialization via a lottery ticket mechanism. Our gradient flow analysis proves that frequencies compete within each neuron, with the “winner” determined by its initial spectral magnitude and phase alignment. From a technical standpoint, we provide a rigorous characterization of the layer-wise phase coupling dynamics and formalize the competitive landscape using the ODE comparison lemma. Finally, we use these insights to demystify grokking, characterizing it as a three-stage process involving memorization followed by two generalization phases, driven by the competition between loss minimization and weight decay." />
+<meta property="og:description" content="We present a comprehensive analysis of how two-layer neural networks learn features to solve the modular addition task. Our work provides a full mechanistic interpretation of the learned model and a theoretical explanation of its training dynamics. While prior work has identified that individual neurons learn single-frequency Fourier features and phase alignment, it does not fully explain how these features combine into a global solution. We bridge this gap by formalizing a diversification condition that emerges during training when overparametrized, consisting of two parts: phase symmetry and frequency diversification. We prove that these properties allow the network to collectively approximate a flawed indicator function on the correct logic for the modular addition task. While individual neurons produce noisy signals, the phase symmetry enables a majority-voting scheme that cancels out noise, allowing the network to robustly identify the correct sum. Furthermore, we explain the emergence of these features under random initialization via a lottery ticket mechanism. Our gradient flow analysis proves that frequencies compete within each neuron, with the “winner” determined by its initial spectral magnitude and phase alignment. From a technical standpoint, we provide a rigorous characterization of the layer-wise phase coupling dynamics and formalize the competitive landscape using the ODE comparison lemma. Finally, we use these insights to demystify grokking, characterizing it as a three-stage process involving memorization followed by two generalization phases, driven by the competition between loss minimization and weight decay." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/20/OntheMechanismandDynamicsofModularAdditionFourierFeaturesLotteryTicketandGrokking.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/20/OntheMechanismandDynamicsofModularAdditionFourierFeaturesLotteryTicketandGrokking.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking" />
+<script type="application/ld+json">
+{"description":"We present a comprehensive analysis of how two-layer neural networks learn features to solve the modular addition task. Our work provides a full mechanistic interpretation of the learned model and a theoretical explanation of its training dynamics. While prior work has identified that individual neurons learn single-frequency Fourier features and phase alignment, it does not fully explain how these features combine into a global solution. We bridge this gap by formalizing a diversification condition that emerges during training when overparametrized, consisting of two parts: phase symmetry and frequency diversification. We prove that these properties allow the network to collectively approximate a flawed indicator function on the correct logic for the modular addition task. While individual neurons produce noisy signals, the phase symmetry enables a majority-voting scheme that cancels out noise, allowing the network to robustly identify the correct sum. Furthermore, we explain the emergence of these features under random initialization via a lottery ticket mechanism. Our gradient flow analysis proves that frequencies compete within each neuron, with the “winner” determined by its initial spectral magnitude and phase alignment. From a technical standpoint, we provide a rigorous characterization of the layer-wise phase coupling dynamics and formalize the competitive landscape using the ODE comparison lemma. Finally, we use these insights to demystify grokking, characterizing it as a three-stage process involving memorization followed by two generalization phases, driven by the competition between loss minimization and weight decay.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/20/OntheMechanismandDynamicsofModularAdditionFourierFeaturesLotteryTicketandGrokking.html"},"dateModified":"2026-02-20T00:00:00+00:00","author":{"@type":"Person","name":"Jianliang He, Leda Wang, Siyu Chen, Zhuoran Yang"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/20/OntheMechanismandDynamicsofModularAdditionFourierFeaturesLotteryTicketandGrokking.html","headline":"On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking","@type":"BlogPosting","datePublished":"2026-02-20T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-20 00:00:00 +0000">02-20</time>
+  </p>
+  
+  <h1>On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking</h1>
+  <br>Jianliang He, Leda Wang, Siyu Chen, Zhuoran Yang</h3>
+  <br> [stat.ML]
+
+  <p>We present a comprehensive analysis of how two-layer neural networks learn features to solve the modular addition task. Our work provides a full mechanistic interpretation of the learned model and a theoretical explanation of its training dynamics. While prior work has identified that individual neurons learn single-frequency Fourier features and phase alignment, it does not fully explain how these features combine into a global solution. We bridge this gap by formalizing a diversification condition that emerges during training when overparametrized, consisting of two parts: phase symmetry and frequency diversification. We prove that these properties allow the network to collectively approximate a flawed indicator function on the correct logic for the modular addition task. While individual neurons produce noisy signals, the phase symmetry enables a majority-voting scheme that cancels out noise, allowing the network to robustly identify the correct sum. Furthermore, we explain the emergence of these features under random initialization via a lottery ticket mechanism. Our gradient flow analysis proves that frequencies compete within each neuron, with the “winner” determined by its initial spectral magnitude and phase alignment. From a technical standpoint, we provide a rigorous characterization of the layer-wise phase coupling dynamics and formalize the competitive landscape using the ODE comparison lemma. Finally, we use these insights to demystify grokking, characterizing it as a three-stage process involving memorization followed by two generalization phases, driven by the competition between loss minimization and weight decay.</p>
+
+<p><a href="https://arxiv.org/abs/2602.16849">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
