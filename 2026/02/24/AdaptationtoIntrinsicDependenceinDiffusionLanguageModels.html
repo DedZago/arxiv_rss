@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptation to Intrinsic Dependence in Diffusion Language Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adaptation to Intrinsic Dependence in Diffusion Language Models" />
+<meta name="author" content="Yunxiao Zhao, Changxiao Cai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diffusion language models (DLMs) have recently emerged as a promising alternative to autoregressive (AR) approaches, enabling parallel token generation beyond a rigid left-to-right order. Despite growing empirical success, the theoretical understanding of how unmasking schedules – which specify the order and size of unmasked tokens during sampling – affect generation quality remains limited. In this work, we introduce a distribution-agnostic unmasking schedule for DLMs that adapts to the (unknown) dependence structure of the target data distribution, without requiring any prior knowledge or hyperparameter tuning. In contrast to prior deterministic procedures that fix unmasking sizes, our method randomizes the number of tokens revealed at each iteration. We show that, for two specific parameter choices, the sampling convergence guarantees – measured by Kullback-Leibler (KL) divergence – scale as $\widetilde O(\mathsf{TC}/K)$ and $\widetilde O(\mathsf{DTC}/K)$ respectively. Here, $K$ is the number of iterations, and $\mathsf{TC}$ and $\mathsf{DTC}$ are the total correlation and dual total correlation of the target distribution, capturing the intrinsic dependence structure underlying the data. Importantly, our guarantees hold in the practically relevant parallel-sampling regime $K&lt;L$ where $L$ is the token sequence length. These results significantly improve upon prior convergence theories and yield substantial sampling acceleration for low-complexity distributions. Overall, our findings unveil the adaptivity of DLMs to intrinsic data structures and shed light on the benefit of randomized unmasking sizes in inference schedule design." />
+<meta property="og:description" content="Diffusion language models (DLMs) have recently emerged as a promising alternative to autoregressive (AR) approaches, enabling parallel token generation beyond a rigid left-to-right order. Despite growing empirical success, the theoretical understanding of how unmasking schedules – which specify the order and size of unmasked tokens during sampling – affect generation quality remains limited. In this work, we introduce a distribution-agnostic unmasking schedule for DLMs that adapts to the (unknown) dependence structure of the target data distribution, without requiring any prior knowledge or hyperparameter tuning. In contrast to prior deterministic procedures that fix unmasking sizes, our method randomizes the number of tokens revealed at each iteration. We show that, for two specific parameter choices, the sampling convergence guarantees – measured by Kullback-Leibler (KL) divergence – scale as $\widetilde O(\mathsf{TC}/K)$ and $\widetilde O(\mathsf{DTC}/K)$ respectively. Here, $K$ is the number of iterations, and $\mathsf{TC}$ and $\mathsf{DTC}$ are the total correlation and dual total correlation of the target distribution, capturing the intrinsic dependence structure underlying the data. Importantly, our guarantees hold in the practically relevant parallel-sampling regime $K&lt;L$ where $L$ is the token sequence length. These results significantly improve upon prior convergence theories and yield substantial sampling acceleration for low-complexity distributions. Overall, our findings unveil the adaptivity of DLMs to intrinsic data structures and shed light on the benefit of randomized unmasking sizes in inference schedule design." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/24/AdaptationtoIntrinsicDependenceinDiffusionLanguageModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/24/AdaptationtoIntrinsicDependenceinDiffusionLanguageModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adaptation to Intrinsic Dependence in Diffusion Language Models" />
+<script type="application/ld+json">
+{"description":"Diffusion language models (DLMs) have recently emerged as a promising alternative to autoregressive (AR) approaches, enabling parallel token generation beyond a rigid left-to-right order. Despite growing empirical success, the theoretical understanding of how unmasking schedules – which specify the order and size of unmasked tokens during sampling – affect generation quality remains limited. In this work, we introduce a distribution-agnostic unmasking schedule for DLMs that adapts to the (unknown) dependence structure of the target data distribution, without requiring any prior knowledge or hyperparameter tuning. In contrast to prior deterministic procedures that fix unmasking sizes, our method randomizes the number of tokens revealed at each iteration. We show that, for two specific parameter choices, the sampling convergence guarantees – measured by Kullback-Leibler (KL) divergence – scale as $\\widetilde O(\\mathsf{TC}/K)$ and $\\widetilde O(\\mathsf{DTC}/K)$ respectively. Here, $K$ is the number of iterations, and $\\mathsf{TC}$ and $\\mathsf{DTC}$ are the total correlation and dual total correlation of the target distribution, capturing the intrinsic dependence structure underlying the data. Importantly, our guarantees hold in the practically relevant parallel-sampling regime $K&lt;L$ where $L$ is the token sequence length. These results significantly improve upon prior convergence theories and yield substantial sampling acceleration for low-complexity distributions. Overall, our findings unveil the adaptivity of DLMs to intrinsic data structures and shed light on the benefit of randomized unmasking sizes in inference schedule design.","datePublished":"2026-02-24T00:00:00+00:00","headline":"Adaptation to Intrinsic Dependence in Diffusion Language Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/24/AdaptationtoIntrinsicDependenceinDiffusionLanguageModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/24/AdaptationtoIntrinsicDependenceinDiffusionLanguageModels.html","author":{"@type":"Person","name":"Yunxiao Zhao, Changxiao Cai"},"@type":"BlogPosting","dateModified":"2026-02-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-24 00:00:00 +0000">02-24</time>
+  </p>
+  
+  <h1>Adaptation to Intrinsic Dependence in Diffusion Language Models</h1>
+  <br>Yunxiao Zhao, Changxiao Cai</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Diffusion language models (DLMs) have recently emerged as a promising alternative to autoregressive (AR) approaches, enabling parallel token generation beyond a rigid left-to-right order. Despite growing empirical success, the theoretical understanding of how unmasking schedules – which specify the order and size of unmasked tokens during sampling – affect generation quality remains limited. In this work, we introduce a distribution-agnostic unmasking schedule for DLMs that adapts to the (unknown) dependence structure of the target data distribution, without requiring any prior knowledge or hyperparameter tuning. In contrast to prior deterministic procedures that fix unmasking sizes, our method randomizes the number of tokens revealed at each iteration. We show that, for two specific parameter choices, the sampling convergence guarantees – measured by Kullback-Leibler (KL) divergence – scale as $\widetilde O(\mathsf{TC}/K)$ and $\widetilde O(\mathsf{DTC}/K)$ respectively. Here, $K$ is the number of iterations, and $\mathsf{TC}$ and $\mathsf{DTC}$ are the total correlation and dual total correlation of the target distribution, capturing the intrinsic dependence structure underlying the data. Importantly, our guarantees hold in the practically relevant parallel-sampling regime $K&lt;L$ where $L$ is the token sequence length. These results significantly improve upon prior convergence theories and yield substantial sampling acceleration for low-complexity distributions. Overall, our findings unveil the adaptivity of DLMs to intrinsic data structures and shed light on the benefit of randomized unmasking sizes in inference schedule design.</p>
+
+<p><a href="https://arxiv.org/abs/2602.20126">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Empirical Bayes Covariance Decomposition, and a Solution to the Multiple Tuning Problem in Sparse PCA</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Empirical Bayes Covariance Decomposition, and a Solution to the Multiple Tuning Problem in Sparse PCA" />
+<meta name="author" content="Joonsuk Kang, Matthew Stephens" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sparse Principal Components Analysis (PCA) has been proposed as a way to improve both interpretability and reliability of PCA. However, use of sparse PCA in practice is hindered by the difficulty of tuning the multiple hyperparameters that control the sparsity of different PCs (the “multiple tuning problem”, MTP). Here we present a solution to the MTP using Empirical Bayes methods. We first introduce a general formulation for penalized PCA of a data matrix $\mathbf{X}$, which includes some existing sparse PCA methods as special cases. We show that this formulation also leads to a penalized decomposition of the covariance (or Gram) matrix, $\mathbf{X}^T\mathbf{X}$. We introduce empirical Bayes versions of these penalized problems, in which the penalties are determined by prior distributions that are estimated from the data by maximum likelihood rather than cross-validation. The resulting “Empirical Bayes Covariance Decomposition” provides a principled and efficient solution to the MTP in sparse PCA, and one that can be immediately extended to incorporate other structural assumptions (e.g. non-negative PCA). We illustrate the effectiveness of this approach on both simulated and real data examples." />
+<meta property="og:description" content="Sparse Principal Components Analysis (PCA) has been proposed as a way to improve both interpretability and reliability of PCA. However, use of sparse PCA in practice is hindered by the difficulty of tuning the multiple hyperparameters that control the sparsity of different PCs (the “multiple tuning problem”, MTP). Here we present a solution to the MTP using Empirical Bayes methods. We first introduce a general formulation for penalized PCA of a data matrix $\mathbf{X}$, which includes some existing sparse PCA methods as special cases. We show that this formulation also leads to a penalized decomposition of the covariance (or Gram) matrix, $\mathbf{X}^T\mathbf{X}$. We introduce empirical Bayes versions of these penalized problems, in which the penalties are determined by prior distributions that are estimated from the data by maximum likelihood rather than cross-validation. The resulting “Empirical Bayes Covariance Decomposition” provides a principled and efficient solution to the MTP in sparse PCA, and one that can be immediately extended to incorporate other structural assumptions (e.g. non-negative PCA). We illustrate the effectiveness of this approach on both simulated and real data examples." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/24/EmpiricalBayesCovarianceDecompositionandaSolutiontotheMultipleTuningProbleminSparsePCA.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/24/EmpiricalBayesCovarianceDecompositionandaSolutiontotheMultipleTuningProbleminSparsePCA.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Empirical Bayes Covariance Decomposition, and a Solution to the Multiple Tuning Problem in Sparse PCA" />
+<script type="application/ld+json">
+{"description":"Sparse Principal Components Analysis (PCA) has been proposed as a way to improve both interpretability and reliability of PCA. However, use of sparse PCA in practice is hindered by the difficulty of tuning the multiple hyperparameters that control the sparsity of different PCs (the “multiple tuning problem”, MTP). Here we present a solution to the MTP using Empirical Bayes methods. We first introduce a general formulation for penalized PCA of a data matrix $\\mathbf{X}$, which includes some existing sparse PCA methods as special cases. We show that this formulation also leads to a penalized decomposition of the covariance (or Gram) matrix, $\\mathbf{X}^T\\mathbf{X}$. We introduce empirical Bayes versions of these penalized problems, in which the penalties are determined by prior distributions that are estimated from the data by maximum likelihood rather than cross-validation. The resulting “Empirical Bayes Covariance Decomposition” provides a principled and efficient solution to the MTP in sparse PCA, and one that can be immediately extended to incorporate other structural assumptions (e.g. non-negative PCA). We illustrate the effectiveness of this approach on both simulated and real data examples.","datePublished":"2026-02-24T00:00:00+00:00","headline":"Empirical Bayes Covariance Decomposition, and a Solution to the Multiple Tuning Problem in Sparse PCA","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/24/EmpiricalBayesCovarianceDecompositionandaSolutiontotheMultipleTuningProbleminSparsePCA.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/24/EmpiricalBayesCovarianceDecompositionandaSolutiontotheMultipleTuningProbleminSparsePCA.html","author":{"@type":"Person","name":"Joonsuk Kang, Matthew Stephens"},"@type":"BlogPosting","dateModified":"2026-02-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-24 00:00:00 +0000">02-24</time>
+  </p>
+  
+  <h1>Empirical Bayes Covariance Decomposition, and a Solution to the Multiple Tuning Problem in Sparse PCA</h1>
+  <br>Joonsuk Kang, Matthew Stephens</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Sparse Principal Components Analysis (PCA) has been proposed as a way to improve both interpretability and reliability of PCA. However, use of sparse PCA in practice is hindered by the difficulty of tuning the multiple hyperparameters that control the sparsity of different PCs (the “multiple tuning problem”, MTP). Here we present a solution to the MTP using Empirical Bayes methods. We first introduce a general formulation for penalized PCA of a data matrix $\mathbf{X}$, which includes some existing sparse PCA methods as special cases. We show that this formulation also leads to a penalized decomposition of the covariance (or Gram) matrix, $\mathbf{X}^T\mathbf{X}$. We introduce empirical Bayes versions of these penalized problems, in which the penalties are determined by prior distributions that are estimated from the data by maximum likelihood rather than cross-validation. The resulting “Empirical Bayes Covariance Decomposition” provides a principled and efficient solution to the MTP in sparse PCA, and one that can be immediately extended to incorporate other structural assumptions (e.g. non-negative PCA). We illustrate the effectiveness of this approach on both simulated and real data examples.</p>
+
+<p><a href="https://arxiv.org/abs/2312.03274">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

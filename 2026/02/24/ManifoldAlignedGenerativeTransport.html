@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Manifold-Aligned Generative Transport</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Manifold-Aligned Generative Transport" />
+<meta name="author" content="Xinyu Tian, Xiaotong Shen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="High-dimensional generative modeling is fundamentally a manifold-learning problem: real data concentrate near a low-dimensional structure embedded in the ambient space. Effective generators must therefore balance support fidelity – placing probability mass near the data manifold – with sampling efficiency. Diffusion models often capture near-manifold structure but require many iterative denoising steps and can leak off-support; normalizing flows sample in one pass but are limited by invertibility and dimension preservation. We propose MAGT (Manifold-Aligned Generative Transport), a flow-like generator that learns a one-shot, manifold-aligned transport from a low-dimensional base distribution to the data space. Training is performed at a fixed Gaussian smoothing level, where the score is well-defined and numerically stable. We approximate this fixed-level score using a finite set of latent anchor points with self-normalized importance sampling, yielding a tractable objective. MAGT samples in a single forward pass, concentrates probability near the learned support, and induces an intrinsic density with respect to the manifold volume measure, enabling principled likelihood evaluation for generated samples. We establish finite-sample Wasserstein bounds linking smoothing level and score-approximation accuracy to generative fidelity, and empirically improve fidelity and manifold concentration across synthetic and benchmark datasets while sampling substantially faster than diffusion models." />
+<meta property="og:description" content="High-dimensional generative modeling is fundamentally a manifold-learning problem: real data concentrate near a low-dimensional structure embedded in the ambient space. Effective generators must therefore balance support fidelity – placing probability mass near the data manifold – with sampling efficiency. Diffusion models often capture near-manifold structure but require many iterative denoising steps and can leak off-support; normalizing flows sample in one pass but are limited by invertibility and dimension preservation. We propose MAGT (Manifold-Aligned Generative Transport), a flow-like generator that learns a one-shot, manifold-aligned transport from a low-dimensional base distribution to the data space. Training is performed at a fixed Gaussian smoothing level, where the score is well-defined and numerically stable. We approximate this fixed-level score using a finite set of latent anchor points with self-normalized importance sampling, yielding a tractable objective. MAGT samples in a single forward pass, concentrates probability near the learned support, and induces an intrinsic density with respect to the manifold volume measure, enabling principled likelihood evaluation for generated samples. We establish finite-sample Wasserstein bounds linking smoothing level and score-approximation accuracy to generative fidelity, and empirically improve fidelity and manifold concentration across synthetic and benchmark datasets while sampling substantially faster than diffusion models." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/24/ManifoldAlignedGenerativeTransport.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/24/ManifoldAlignedGenerativeTransport.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Manifold-Aligned Generative Transport" />
+<script type="application/ld+json">
+{"description":"High-dimensional generative modeling is fundamentally a manifold-learning problem: real data concentrate near a low-dimensional structure embedded in the ambient space. Effective generators must therefore balance support fidelity – placing probability mass near the data manifold – with sampling efficiency. Diffusion models often capture near-manifold structure but require many iterative denoising steps and can leak off-support; normalizing flows sample in one pass but are limited by invertibility and dimension preservation. We propose MAGT (Manifold-Aligned Generative Transport), a flow-like generator that learns a one-shot, manifold-aligned transport from a low-dimensional base distribution to the data space. Training is performed at a fixed Gaussian smoothing level, where the score is well-defined and numerically stable. We approximate this fixed-level score using a finite set of latent anchor points with self-normalized importance sampling, yielding a tractable objective. MAGT samples in a single forward pass, concentrates probability near the learned support, and induces an intrinsic density with respect to the manifold volume measure, enabling principled likelihood evaluation for generated samples. We establish finite-sample Wasserstein bounds linking smoothing level and score-approximation accuracy to generative fidelity, and empirically improve fidelity and manifold concentration across synthetic and benchmark datasets while sampling substantially faster than diffusion models.","datePublished":"2026-02-24T00:00:00+00:00","headline":"Manifold-Aligned Generative Transport","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/24/ManifoldAlignedGenerativeTransport.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/24/ManifoldAlignedGenerativeTransport.html","author":{"@type":"Person","name":"Xinyu Tian, Xiaotong Shen"},"@type":"BlogPosting","dateModified":"2026-02-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-24 00:00:00 +0000">02-24</time>
+  </p>
+  
+  <h1>Manifold-Aligned Generative Transport</h1>
+  <br>Xinyu Tian, Xiaotong Shen</h3>
+  <br> [stat.ML]
+
+  <p>High-dimensional generative modeling is fundamentally a manifold-learning problem: real data concentrate near a low-dimensional structure embedded in the ambient space. Effective generators must therefore balance support fidelity – placing probability mass near the data manifold – with sampling efficiency. Diffusion models often capture near-manifold structure but require many iterative denoising steps and can leak off-support; normalizing flows sample in one pass but are limited by invertibility and dimension preservation. We propose MAGT (Manifold-Aligned Generative Transport), a flow-like generator that learns a one-shot, manifold-aligned transport from a low-dimensional base distribution to the data space. Training is performed at a fixed Gaussian smoothing level, where the score is well-defined and numerically stable. We approximate this fixed-level score using a finite set of latent anchor points with self-normalized importance sampling, yielding a tractable objective. MAGT samples in a single forward pass, concentrates probability near the learned support, and induces an intrinsic density with respect to the manifold volume measure, enabling principled likelihood evaluation for generated samples. We establish finite-sample Wasserstein bounds linking smoothing level and score-approximation accuracy to generative fidelity, and empirically improve fidelity and manifold concentration across synthetic and benchmark datasets while sampling substantially faster than diffusion models.</p>
+
+<p><a href="https://arxiv.org/abs/2602.19600">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

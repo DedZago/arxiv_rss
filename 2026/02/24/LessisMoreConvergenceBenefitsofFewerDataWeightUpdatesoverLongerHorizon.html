@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Less is More: Convergence Benefits of Fewer Data Weight Updates over Longer Horizon</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Less is More: Convergence Benefits of Fewer Data Weight Updates over Longer Horizon" />
+<meta name="author" content="Rudrajit Das, Neel Patel, Meisam Razaviyayn, Vahab Mirrokni" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data mixing–the strategic reweighting of training domains–is a critical component in training robust machine learning models. This problem is naturally formulated as a bilevel optimization task, where the outer loop optimizes domain weights to minimize validation loss, and the inner loop optimizes model parameters to minimize the weighted training loss. Classical bilevel optimization relies on hypergradients, which theoretically require the inner optimization to reach convergence. However, due to computational constraints, state-of-the-art methods use a finite, often small, number of inner update steps before updating the weights. The theoretical implications of this approximation are not well understood. In this work, we rigorously analyze the convergence behavior of data mixing with a finite number of inner steps $T$. We prove that the “greedy” practical approach of using $T=1$ can fail even in a simple quadratic example. Under a fixed parameter update budget $N$ and assuming the per-domain losses are strongly convex, we show that the optimal $T$ scales as $\Theta(\log N)$ (resp., $\Theta({(N \log N)}^{1/2})$) for the data mixing problem with access to full (resp., stochastic) gradients. We complement our theoretical results with proof-of-concept experiments." />
+<meta property="og:description" content="Data mixing–the strategic reweighting of training domains–is a critical component in training robust machine learning models. This problem is naturally formulated as a bilevel optimization task, where the outer loop optimizes domain weights to minimize validation loss, and the inner loop optimizes model parameters to minimize the weighted training loss. Classical bilevel optimization relies on hypergradients, which theoretically require the inner optimization to reach convergence. However, due to computational constraints, state-of-the-art methods use a finite, often small, number of inner update steps before updating the weights. The theoretical implications of this approximation are not well understood. In this work, we rigorously analyze the convergence behavior of data mixing with a finite number of inner steps $T$. We prove that the “greedy” practical approach of using $T=1$ can fail even in a simple quadratic example. Under a fixed parameter update budget $N$ and assuming the per-domain losses are strongly convex, we show that the optimal $T$ scales as $\Theta(\log N)$ (resp., $\Theta({(N \log N)}^{1/2})$) for the data mixing problem with access to full (resp., stochastic) gradients. We complement our theoretical results with proof-of-concept experiments." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/24/LessisMoreConvergenceBenefitsofFewerDataWeightUpdatesoverLongerHorizon.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/24/LessisMoreConvergenceBenefitsofFewerDataWeightUpdatesoverLongerHorizon.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Less is More: Convergence Benefits of Fewer Data Weight Updates over Longer Horizon" />
+<script type="application/ld+json">
+{"description":"Data mixing–the strategic reweighting of training domains–is a critical component in training robust machine learning models. This problem is naturally formulated as a bilevel optimization task, where the outer loop optimizes domain weights to minimize validation loss, and the inner loop optimizes model parameters to minimize the weighted training loss. Classical bilevel optimization relies on hypergradients, which theoretically require the inner optimization to reach convergence. However, due to computational constraints, state-of-the-art methods use a finite, often small, number of inner update steps before updating the weights. The theoretical implications of this approximation are not well understood. In this work, we rigorously analyze the convergence behavior of data mixing with a finite number of inner steps $T$. We prove that the “greedy” practical approach of using $T=1$ can fail even in a simple quadratic example. Under a fixed parameter update budget $N$ and assuming the per-domain losses are strongly convex, we show that the optimal $T$ scales as $\\Theta(\\log N)$ (resp., $\\Theta({(N \\log N)}^{1/2})$) for the data mixing problem with access to full (resp., stochastic) gradients. We complement our theoretical results with proof-of-concept experiments.","datePublished":"2026-02-24T00:00:00+00:00","headline":"Less is More: Convergence Benefits of Fewer Data Weight Updates over Longer Horizon","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/24/LessisMoreConvergenceBenefitsofFewerDataWeightUpdatesoverLongerHorizon.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/24/LessisMoreConvergenceBenefitsofFewerDataWeightUpdatesoverLongerHorizon.html","author":{"@type":"Person","name":"Rudrajit Das, Neel Patel, Meisam Razaviyayn, Vahab Mirrokni"},"@type":"BlogPosting","dateModified":"2026-02-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-24 00:00:00 +0000">02-24</time>
+  </p>
+  
+  <h1>Less is More: Convergence Benefits of Fewer Data Weight Updates over Longer Horizon</h1>
+  <br>Rudrajit Das, Neel Patel, Meisam Razaviyayn, Vahab Mirrokni</h3>
+  <br> [stat.ML]
+
+  <p>Data mixing–the strategic reweighting of training domains–is a critical component in training robust machine learning models. This problem is naturally formulated as a bilevel optimization task, where the outer loop optimizes domain weights to minimize validation loss, and the inner loop optimizes model parameters to minimize the weighted training loss. Classical bilevel optimization relies on hypergradients, which theoretically require the inner optimization to reach convergence. However, due to computational constraints, state-of-the-art methods use a finite, often small, number of inner update steps before updating the weights. The theoretical implications of this approximation are not well understood. In this work, we rigorously analyze the convergence behavior of data mixing with a finite number of inner steps $T$. We prove that the “greedy” practical approach of using $T=1$ can fail even in a simple quadratic example. Under a fixed parameter update budget $N$ and assuming the per-domain losses are strongly convex, we show that the optimal $T$ scales as $\Theta(\log N)$ (resp., $\Theta({(N \log N)}^{1/2})$) for the data mixing problem with access to full (resp., stochastic) gradients. We complement our theoretical results with proof-of-concept experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2602.19510">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

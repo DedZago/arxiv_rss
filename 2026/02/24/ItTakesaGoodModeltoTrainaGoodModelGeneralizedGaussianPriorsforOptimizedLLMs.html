@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>It Takes a Good Model to Train a Good Model: Generalized Gaussian Priors for Optimized LLMs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="It Takes a Good Model to Train a Good Model: Generalized Gaussian Priors for Optimized LLMs" />
+<meta name="author" content="Jun Wu, Patrick Huang, Jiangtao Wen, Yuxing Han" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Despite rapid progress in large language models (LLMs), the statistical structure of their weights, activations, and gradients-and its implications for initialization, training dynamics, and efficiency-remains largely unexplored. We empirically show that these quantities in LLMs are well modeled by generalized Gaussian (GG) distributions, and introduce a unified, end-to-end optimization framework grounded in this observation. Our contributions are threefold: (1) a GG-based initialization that aligns with trained model statistics, accelerating convergence and improving accuracy; (2) ACT, a progressive activation-constrained training method that reduces redundancy and propagation overhead; and (3) GCT, a gradient-constrained training algorithm that substantially lowers communication cost in distributed training. Experiments across diverse architectures demonstrate consistently smaller, faster models with minimal communication overhead that match or surpass standard baselines. By anchoring LLM optimization in principled statistical modeling, this work advances efficient, scalable, and hardware-aware AI systems." />
+<meta property="og:description" content="Despite rapid progress in large language models (LLMs), the statistical structure of their weights, activations, and gradients-and its implications for initialization, training dynamics, and efficiency-remains largely unexplored. We empirically show that these quantities in LLMs are well modeled by generalized Gaussian (GG) distributions, and introduce a unified, end-to-end optimization framework grounded in this observation. Our contributions are threefold: (1) a GG-based initialization that aligns with trained model statistics, accelerating convergence and improving accuracy; (2) ACT, a progressive activation-constrained training method that reduces redundancy and propagation overhead; and (3) GCT, a gradient-constrained training algorithm that substantially lowers communication cost in distributed training. Experiments across diverse architectures demonstrate consistently smaller, faster models with minimal communication overhead that match or surpass standard baselines. By anchoring LLM optimization in principled statistical modeling, this work advances efficient, scalable, and hardware-aware AI systems." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/24/ItTakesaGoodModeltoTrainaGoodModelGeneralizedGaussianPriorsforOptimizedLLMs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/24/ItTakesaGoodModeltoTrainaGoodModelGeneralizedGaussianPriorsforOptimizedLLMs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="It Takes a Good Model to Train a Good Model: Generalized Gaussian Priors for Optimized LLMs" />
+<script type="application/ld+json">
+{"description":"Despite rapid progress in large language models (LLMs), the statistical structure of their weights, activations, and gradients-and its implications for initialization, training dynamics, and efficiency-remains largely unexplored. We empirically show that these quantities in LLMs are well modeled by generalized Gaussian (GG) distributions, and introduce a unified, end-to-end optimization framework grounded in this observation. Our contributions are threefold: (1) a GG-based initialization that aligns with trained model statistics, accelerating convergence and improving accuracy; (2) ACT, a progressive activation-constrained training method that reduces redundancy and propagation overhead; and (3) GCT, a gradient-constrained training algorithm that substantially lowers communication cost in distributed training. Experiments across diverse architectures demonstrate consistently smaller, faster models with minimal communication overhead that match or surpass standard baselines. By anchoring LLM optimization in principled statistical modeling, this work advances efficient, scalable, and hardware-aware AI systems.","datePublished":"2026-02-24T00:00:00+00:00","headline":"It Takes a Good Model to Train a Good Model: Generalized Gaussian Priors for Optimized LLMs","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/24/ItTakesaGoodModeltoTrainaGoodModelGeneralizedGaussianPriorsforOptimizedLLMs.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/24/ItTakesaGoodModeltoTrainaGoodModelGeneralizedGaussianPriorsforOptimizedLLMs.html","author":{"@type":"Person","name":"Jun Wu, Patrick Huang, Jiangtao Wen, Yuxing Han"},"@type":"BlogPosting","dateModified":"2026-02-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-24 00:00:00 +0000">02-24</time>
+  </p>
+  
+  <h1>It Takes a Good Model to Train a Good Model: Generalized Gaussian Priors for Optimized LLMs</h1>
+  <br>Jun Wu, Patrick Huang, Jiangtao Wen, Yuxing Han</h3>
+  <br> [stat.ML]
+
+  <p>Despite rapid progress in large language models (LLMs), the statistical structure of their weights, activations, and gradients-and its implications for initialization, training dynamics, and efficiency-remains largely unexplored. We empirically show that these quantities in LLMs are well modeled by generalized Gaussian (GG) distributions, and introduce a unified, end-to-end optimization framework grounded in this observation. Our contributions are threefold: (1) a GG-based initialization that aligns with trained model statistics, accelerating convergence and improving accuracy; (2) ACT, a progressive activation-constrained training method that reduces redundancy and propagation overhead; and (3) GCT, a gradient-constrained training algorithm that substantially lowers communication cost in distributed training. Experiments across diverse architectures demonstrate consistently smaller, faster models with minimal communication overhead that match or surpass standard baselines. By anchoring LLM optimization in principled statistical modeling, this work advances efficient, scalable, and hardware-aware AI systems.</p>
+
+<p><a href="https://arxiv.org/abs/2506.00486">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

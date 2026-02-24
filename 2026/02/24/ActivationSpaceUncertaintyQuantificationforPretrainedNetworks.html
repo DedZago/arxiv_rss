@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Activation-Space Uncertainty Quantification for Pretrained Networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Activation-Space Uncertainty Quantification for Pretrained Networks" />
+<meta name="author" content="Richard Bergna, Stefan Depeweg, Sergio Calvo-Ordoñez, Jonathan Plenk, Alvaro Cartea, Jose Miguel Hernández-Lobato" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reliable uncertainty estimates are crucial for deploying pretrained models; yet, many strong methods for quantifying uncertainty require retraining, Monte Carlo sampling, or expensive second-order computations and may alter a frozen backbone’s predictions. To address this, we introduce Gaussian Process Activations (GAPA), a post-hoc method that shifts Bayesian modeling from weights to activations. GAPA replaces standard nonlinearities with Gaussian-process activations whose posterior mean exactly matches the original activation, preserving the backbone’s point predictions by construction while providing closed-form epistemic variances in activation space. To scale to modern architectures, we use a sparse variational inducing-point approximation over cached training activations, combined with local k-nearest-neighbor subset conditioning, enabling deterministic single-pass uncertainty propagation without sampling, backpropagation, or second-order information. Across regression, classification, image segmentation, and language modeling, GAPA matches or outperforms strong post-hoc baselines in calibration and out-of-distribution detection while remaining efficient at test time." />
+<meta property="og:description" content="Reliable uncertainty estimates are crucial for deploying pretrained models; yet, many strong methods for quantifying uncertainty require retraining, Monte Carlo sampling, or expensive second-order computations and may alter a frozen backbone’s predictions. To address this, we introduce Gaussian Process Activations (GAPA), a post-hoc method that shifts Bayesian modeling from weights to activations. GAPA replaces standard nonlinearities with Gaussian-process activations whose posterior mean exactly matches the original activation, preserving the backbone’s point predictions by construction while providing closed-form epistemic variances in activation space. To scale to modern architectures, we use a sparse variational inducing-point approximation over cached training activations, combined with local k-nearest-neighbor subset conditioning, enabling deterministic single-pass uncertainty propagation without sampling, backpropagation, or second-order information. Across regression, classification, image segmentation, and language modeling, GAPA matches or outperforms strong post-hoc baselines in calibration and out-of-distribution detection while remaining efficient at test time." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/02/24/ActivationSpaceUncertaintyQuantificationforPretrainedNetworks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/02/24/ActivationSpaceUncertaintyQuantificationforPretrainedNetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Activation-Space Uncertainty Quantification for Pretrained Networks" />
+<script type="application/ld+json">
+{"description":"Reliable uncertainty estimates are crucial for deploying pretrained models; yet, many strong methods for quantifying uncertainty require retraining, Monte Carlo sampling, or expensive second-order computations and may alter a frozen backbone’s predictions. To address this, we introduce Gaussian Process Activations (GAPA), a post-hoc method that shifts Bayesian modeling from weights to activations. GAPA replaces standard nonlinearities with Gaussian-process activations whose posterior mean exactly matches the original activation, preserving the backbone’s point predictions by construction while providing closed-form epistemic variances in activation space. To scale to modern architectures, we use a sparse variational inducing-point approximation over cached training activations, combined with local k-nearest-neighbor subset conditioning, enabling deterministic single-pass uncertainty propagation without sampling, backpropagation, or second-order information. Across regression, classification, image segmentation, and language modeling, GAPA matches or outperforms strong post-hoc baselines in calibration and out-of-distribution detection while remaining efficient at test time.","datePublished":"2026-02-24T00:00:00+00:00","headline":"Activation-Space Uncertainty Quantification for Pretrained Networks","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/02/24/ActivationSpaceUncertaintyQuantificationforPretrainedNetworks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/02/24/ActivationSpaceUncertaintyQuantificationforPretrainedNetworks.html","author":{"@type":"Person","name":"Richard Bergna, Stefan Depeweg, Sergio Calvo-Ordoñez, Jonathan Plenk, Alvaro Cartea, Jose Miguel Hernández-Lobato"},"@type":"BlogPosting","dateModified":"2026-02-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-02-24 00:00:00 +0000">02-24</time>
+  </p>
+  
+  <h1>Activation-Space Uncertainty Quantification for Pretrained Networks</h1>
+  <br>Richard Bergna, Stefan Depeweg, Sergio Calvo-Ordoñez, Jonathan Plenk, Alvaro Cartea, Jose Miguel Hernández-Lobato</h3>
+  <br> [stat.ML]
+
+  <p>Reliable uncertainty estimates are crucial for deploying pretrained models; yet, many strong methods for quantifying uncertainty require retraining, Monte Carlo sampling, or expensive second-order computations and may alter a frozen backbone’s predictions. To address this, we introduce Gaussian Process Activations (GAPA), a post-hoc method that shifts Bayesian modeling from weights to activations. GAPA replaces standard nonlinearities with Gaussian-process activations whose posterior mean exactly matches the original activation, preserving the backbone’s point predictions by construction while providing closed-form epistemic variances in activation space. To scale to modern architectures, we use a sparse variational inducing-point approximation over cached training activations, combined with local k-nearest-neighbor subset conditioning, enabling deterministic single-pass uncertainty propagation without sampling, backpropagation, or second-order information. Across regression, classification, image segmentation, and language modeling, GAPA matches or outperforms strong post-hoc baselines in calibration and out-of-distribution detection while remaining efficient at test time.</p>
+
+<p><a href="https://arxiv.org/abs/2602.14934">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
