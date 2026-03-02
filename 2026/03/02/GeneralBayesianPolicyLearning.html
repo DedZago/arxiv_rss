@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>General Bayesian Policy Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="General Bayesian Policy Learning" />
+<meta name="author" content="Masahiro Kato" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This study proposes the General Bayes framework for policy learning. We consider decision problems in which a decision-maker chooses an action from an action set to maximize its expected welfare. Typical examples include treatment choice and portfolio selection. In such problems, the statistical target is a decision rule, and the prediction of each outcome $Y(a)$ is not necessarily of primary interest. We formulate this policy learning problem by loss-based Bayesian updating. Our main technical device is a squared-loss surrogate for welfare maximization. We show that maximizing empirical welfare over a policy class is equivalent to minimizing a scaled squared error in the outcome difference, up to a quadratic regularization controlled by a tuning parameter $\zeta&gt;0$. This rewriting yields a General Bayes posterior over decision rules that admits a Gaussian pseudo-likelihood interpretation. We clarify two Bayesian interpretations of the resulting generalized posterior, a working Gaussian view and a decision-theoretic loss-based view. As one implementation example, we introduce neural networks with tanh-squashed outputs. Finally, we provide theoretical guarantees in a PAC-Bayes style." />
+<meta property="og:description" content="This study proposes the General Bayes framework for policy learning. We consider decision problems in which a decision-maker chooses an action from an action set to maximize its expected welfare. Typical examples include treatment choice and portfolio selection. In such problems, the statistical target is a decision rule, and the prediction of each outcome $Y(a)$ is not necessarily of primary interest. We formulate this policy learning problem by loss-based Bayesian updating. Our main technical device is a squared-loss surrogate for welfare maximization. We show that maximizing empirical welfare over a policy class is equivalent to minimizing a scaled squared error in the outcome difference, up to a quadratic regularization controlled by a tuning parameter $\zeta&gt;0$. This rewriting yields a General Bayes posterior over decision rules that admits a Gaussian pseudo-likelihood interpretation. We clarify two Bayesian interpretations of the resulting generalized posterior, a working Gaussian view and a decision-theoretic loss-based view. As one implementation example, we introduce neural networks with tanh-squashed outputs. Finally, we provide theoretical guarantees in a PAC-Bayes style." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/02/GeneralBayesianPolicyLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/02/GeneralBayesianPolicyLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="General Bayesian Policy Learning" />
+<script type="application/ld+json">
+{"description":"This study proposes the General Bayes framework for policy learning. We consider decision problems in which a decision-maker chooses an action from an action set to maximize its expected welfare. Typical examples include treatment choice and portfolio selection. In such problems, the statistical target is a decision rule, and the prediction of each outcome $Y(a)$ is not necessarily of primary interest. We formulate this policy learning problem by loss-based Bayesian updating. Our main technical device is a squared-loss surrogate for welfare maximization. We show that maximizing empirical welfare over a policy class is equivalent to minimizing a scaled squared error in the outcome difference, up to a quadratic regularization controlled by a tuning parameter $\\zeta&gt;0$. This rewriting yields a General Bayes posterior over decision rules that admits a Gaussian pseudo-likelihood interpretation. We clarify two Bayesian interpretations of the resulting generalized posterior, a working Gaussian view and a decision-theoretic loss-based view. As one implementation example, we introduce neural networks with tanh-squashed outputs. Finally, we provide theoretical guarantees in a PAC-Bayes style.","author":{"@type":"Person","name":"Masahiro Kato"},"datePublished":"2026-03-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/02/GeneralBayesianPolicyLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/02/GeneralBayesianPolicyLearning.html","headline":"General Bayesian Policy Learning","@type":"BlogPosting","dateModified":"2026-03-02T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-02 00:00:00 +0000">03-02</time>
+  </p>
+  
+  <h1>General Bayesian Policy Learning</h1>
+  <br>Masahiro Kato</h3>
+  <br> [stat.ML,stat.ME,stat.TH]
+
+  <p>This study proposes the General Bayes framework for policy learning. We consider decision problems in which a decision-maker chooses an action from an action set to maximize its expected welfare. Typical examples include treatment choice and portfolio selection. In such problems, the statistical target is a decision rule, and the prediction of each outcome $Y(a)$ is not necessarily of primary interest. We formulate this policy learning problem by loss-based Bayesian updating. Our main technical device is a squared-loss surrogate for welfare maximization. We show that maximizing empirical welfare over a policy class is equivalent to minimizing a scaled squared error in the outcome difference, up to a quadratic regularization controlled by a tuning parameter $\zeta&gt;0$. This rewriting yields a General Bayes posterior over decision rules that admits a Gaussian pseudo-likelihood interpretation. We clarify two Bayesian interpretations of the resulting generalized posterior, a working Gaussian view and a decision-theoretic loss-based view. As one implementation example, we introduce neural networks with tanh-squashed outputs. Finally, we provide theoretical guarantees in a PAC-Bayes style.</p>
+
+<p><a href="https://arxiv.org/abs/2602.23672">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

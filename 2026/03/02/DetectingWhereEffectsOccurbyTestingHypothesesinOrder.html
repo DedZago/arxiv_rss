@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Detecting Where Effects Occur by Testing Hypotheses in Order</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Detecting Where Effects Occur by Testing Hypotheses in Order" />
+<meta name="author" content="Jake Bowers, David Kim, Nuole Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Experimental evaluations of public policies often randomize a new intervention within many sites or blocks. After a report of an overall result – statistically significant or not – the natural question from a policy maker is: \emph{where} did any effects occur? Standard adjustments for multiple testing provide little power to answer this question. In simulations modeled after a 44-block education trial, the Hommel adjustment – among the most powerful procedures controlling the family-wise error rate (FWER) – detects effects in only 11\% of truly non-null blocks. We develop a procedure that tests hypotheses top-down through a tree: test the overall null at the root, then groups of blocks, then individual blocks, stopping any branch where the null is not rejected. In the same 44-block design, this approach detects effects in 44\% of non-null blocks – roughly four times the detection rate. A stopping rule and valid tests at each node suffice for weak FWER control. We show that the strong-sense FWER depends on how rejection probabilities accumulate along paths through the tree. This yields a diagnostic: when power decays fast enough relative to branching, no adjustment is needed; otherwise, an adaptive $\alpha$-adjustment restores control. We apply the method to 25 MDRC education trials and provide an R package, \texttt{manytestsr}." />
+<meta property="og:description" content="Experimental evaluations of public policies often randomize a new intervention within many sites or blocks. After a report of an overall result – statistically significant or not – the natural question from a policy maker is: \emph{where} did any effects occur? Standard adjustments for multiple testing provide little power to answer this question. In simulations modeled after a 44-block education trial, the Hommel adjustment – among the most powerful procedures controlling the family-wise error rate (FWER) – detects effects in only 11\% of truly non-null blocks. We develop a procedure that tests hypotheses top-down through a tree: test the overall null at the root, then groups of blocks, then individual blocks, stopping any branch where the null is not rejected. In the same 44-block design, this approach detects effects in 44\% of non-null blocks – roughly four times the detection rate. A stopping rule and valid tests at each node suffice for weak FWER control. We show that the strong-sense FWER depends on how rejection probabilities accumulate along paths through the tree. This yields a diagnostic: when power decays fast enough relative to branching, no adjustment is needed; otherwise, an adaptive $\alpha$-adjustment restores control. We apply the method to 25 MDRC education trials and provide an R package, \texttt{manytestsr}." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/02/DetectingWhereEffectsOccurbyTestingHypothesesinOrder.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/02/DetectingWhereEffectsOccurbyTestingHypothesesinOrder.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Detecting Where Effects Occur by Testing Hypotheses in Order" />
+<script type="application/ld+json">
+{"description":"Experimental evaluations of public policies often randomize a new intervention within many sites or blocks. After a report of an overall result – statistically significant or not – the natural question from a policy maker is: \\emph{where} did any effects occur? Standard adjustments for multiple testing provide little power to answer this question. In simulations modeled after a 44-block education trial, the Hommel adjustment – among the most powerful procedures controlling the family-wise error rate (FWER) – detects effects in only 11\\% of truly non-null blocks. We develop a procedure that tests hypotheses top-down through a tree: test the overall null at the root, then groups of blocks, then individual blocks, stopping any branch where the null is not rejected. In the same 44-block design, this approach detects effects in 44\\% of non-null blocks – roughly four times the detection rate. A stopping rule and valid tests at each node suffice for weak FWER control. We show that the strong-sense FWER depends on how rejection probabilities accumulate along paths through the tree. This yields a diagnostic: when power decays fast enough relative to branching, no adjustment is needed; otherwise, an adaptive $\\alpha$-adjustment restores control. We apply the method to 25 MDRC education trials and provide an R package, \\texttt{manytestsr}.","author":{"@type":"Person","name":"Jake Bowers, David Kim, Nuole Chen"},"datePublished":"2026-03-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/02/DetectingWhereEffectsOccurbyTestingHypothesesinOrder.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/02/DetectingWhereEffectsOccurbyTestingHypothesesinOrder.html","headline":"Detecting Where Effects Occur by Testing Hypotheses in Order","@type":"BlogPosting","dateModified":"2026-03-02T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-02 00:00:00 +0000">03-02</time>
+  </p>
+  
+  <h1>Detecting Where Effects Occur by Testing Hypotheses in Order</h1>
+  <br>Jake Bowers, David Kim, Nuole Chen</h3>
+  <br> [stat.ME,stat.AP,stat.TH]
+
+  <p>Experimental evaluations of public policies often randomize a new intervention within many sites or blocks. After a report of an overall result – statistically significant or not – the natural question from a policy maker is: \emph{where} did any effects occur? Standard adjustments for multiple testing provide little power to answer this question. In simulations modeled after a 44-block education trial, the Hommel adjustment – among the most powerful procedures controlling the family-wise error rate (FWER) – detects effects in only 11\% of truly non-null blocks. We develop a procedure that tests hypotheses top-down through a tree: test the overall null at the root, then groups of blocks, then individual blocks, stopping any branch where the null is not rejected. In the same 44-block design, this approach detects effects in 44\% of non-null blocks – roughly four times the detection rate. A stopping rule and valid tests at each node suffice for weak FWER control. We show that the strong-sense FWER depends on how rejection probabilities accumulate along paths through the tree. This yields a diagnostic: when power decays fast enough relative to branching, no adjustment is needed; otherwise, an adaptive $\alpha$-adjustment restores control. We apply the method to 25 MDRC education trials and provide an R package, \texttt{manytestsr}.</p>
+
+<p><a href="https://arxiv.org/abs/2602.21068">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
