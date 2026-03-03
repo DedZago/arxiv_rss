@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dual-space posterior sampling for Bayesian inference in constrained inverse problems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Dual-space posterior sampling for Bayesian inference in constrained inverse problems" />
+<meta name="author" content="Ali Siahkoohi, Kamal Aghazade, Ali Gholami" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Inverse problems constrained by partial differential equations are often ill-conditioned due to noisy and incomplete data or inherent non-uniqueness. A prominent example is full waveform inversion, which estimates Earth’s subsurface properties by fitting seismic measurements subject to the wave equation, where ill-conditioning is inherent to noisy, band-limited, finite-aperture data and shadow zones. Casting the inverse problem into a Bayesian framework allows for a more comprehensive description of its solution, where instead of a single estimate, the posterior distribution characterizes non-uniqueness and can be sampled to quantify uncertainty. However, no clear procedure exists for translating hard physical constraints, such as the wave equation, into prior distributions amenable to existing sampling techniques. To address this, we perform posterior sampling in the dual space using an augmented Lagrangian formulation, which translates hard constraints into penalties amenable to sampling algorithms while ensuring their exact satisfaction. We achieve this by seamlessly integrating the alternating direction method of multipliers (ADMM) with Stein variational gradient descent (SVGD) – a particle-based sampler – where the constraint is relaxed at each iteration and multiplier updates progressively enforce satisfaction. This enables constrained posterior sampling while inheriting the favorable conditioning properties of dual-space solvers, where partial constraint relaxation allows productive updates even when the current model is far from the true solution. We validate the method on a stylized Rosenbrock conditional inference problem and on frequency-domain full waveform inversion for a Gaussian anomaly model and the Marmousi~II benchmark, demonstrating well-calibrated uncertainty estimates and posterior contraction with increasing data coverage." />
+<meta property="og:description" content="Inverse problems constrained by partial differential equations are often ill-conditioned due to noisy and incomplete data or inherent non-uniqueness. A prominent example is full waveform inversion, which estimates Earth’s subsurface properties by fitting seismic measurements subject to the wave equation, where ill-conditioning is inherent to noisy, band-limited, finite-aperture data and shadow zones. Casting the inverse problem into a Bayesian framework allows for a more comprehensive description of its solution, where instead of a single estimate, the posterior distribution characterizes non-uniqueness and can be sampled to quantify uncertainty. However, no clear procedure exists for translating hard physical constraints, such as the wave equation, into prior distributions amenable to existing sampling techniques. To address this, we perform posterior sampling in the dual space using an augmented Lagrangian formulation, which translates hard constraints into penalties amenable to sampling algorithms while ensuring their exact satisfaction. We achieve this by seamlessly integrating the alternating direction method of multipliers (ADMM) with Stein variational gradient descent (SVGD) – a particle-based sampler – where the constraint is relaxed at each iteration and multiplier updates progressively enforce satisfaction. This enables constrained posterior sampling while inheriting the favorable conditioning properties of dual-space solvers, where partial constraint relaxation allows productive updates even when the current model is far from the true solution. We validate the method on a stylized Rosenbrock conditional inference problem and on frequency-domain full waveform inversion for a Gaussian anomaly model and the Marmousi~II benchmark, demonstrating well-calibrated uncertainty estimates and posterior contraction with increasing data coverage." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/03/DualspaceposteriorsamplingforBayesianinferenceinconstrainedinverseproblems.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/03/DualspaceposteriorsamplingforBayesianinferenceinconstrainedinverseproblems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dual-space posterior sampling for Bayesian inference in constrained inverse problems" />
+<script type="application/ld+json">
+{"description":"Inverse problems constrained by partial differential equations are often ill-conditioned due to noisy and incomplete data or inherent non-uniqueness. A prominent example is full waveform inversion, which estimates Earth’s subsurface properties by fitting seismic measurements subject to the wave equation, where ill-conditioning is inherent to noisy, band-limited, finite-aperture data and shadow zones. Casting the inverse problem into a Bayesian framework allows for a more comprehensive description of its solution, where instead of a single estimate, the posterior distribution characterizes non-uniqueness and can be sampled to quantify uncertainty. However, no clear procedure exists for translating hard physical constraints, such as the wave equation, into prior distributions amenable to existing sampling techniques. To address this, we perform posterior sampling in the dual space using an augmented Lagrangian formulation, which translates hard constraints into penalties amenable to sampling algorithms while ensuring their exact satisfaction. We achieve this by seamlessly integrating the alternating direction method of multipliers (ADMM) with Stein variational gradient descent (SVGD) – a particle-based sampler – where the constraint is relaxed at each iteration and multiplier updates progressively enforce satisfaction. This enables constrained posterior sampling while inheriting the favorable conditioning properties of dual-space solvers, where partial constraint relaxation allows productive updates even when the current model is far from the true solution. We validate the method on a stylized Rosenbrock conditional inference problem and on frequency-domain full waveform inversion for a Gaussian anomaly model and the Marmousi~II benchmark, demonstrating well-calibrated uncertainty estimates and posterior contraction with increasing data coverage.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/03/DualspaceposteriorsamplingforBayesianinferenceinconstrainedinverseproblems.html"},"author":{"@type":"Person","name":"Ali Siahkoohi, Kamal Aghazade, Ali Gholami"},"dateModified":"2026-03-03T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/03/03/DualspaceposteriorsamplingforBayesianinferenceinconstrainedinverseproblems.html","headline":"Dual-space posterior sampling for Bayesian inference in constrained inverse problems","@type":"BlogPosting","datePublished":"2026-03-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-03 00:00:00 +0000">03-03</time>
+  </p>
+  
+  <h1>Dual-space posterior sampling for Bayesian inference in constrained inverse problems</h1>
+  <br>Ali Siahkoohi, Kamal Aghazade, Ali Gholami</h3>
+  <br> [stat.ML]
+
+  <p>Inverse problems constrained by partial differential equations are often ill-conditioned due to noisy and incomplete data or inherent non-uniqueness. A prominent example is full waveform inversion, which estimates Earth’s subsurface properties by fitting seismic measurements subject to the wave equation, where ill-conditioning is inherent to noisy, band-limited, finite-aperture data and shadow zones. Casting the inverse problem into a Bayesian framework allows for a more comprehensive description of its solution, where instead of a single estimate, the posterior distribution characterizes non-uniqueness and can be sampled to quantify uncertainty. However, no clear procedure exists for translating hard physical constraints, such as the wave equation, into prior distributions amenable to existing sampling techniques. To address this, we perform posterior sampling in the dual space using an augmented Lagrangian formulation, which translates hard constraints into penalties amenable to sampling algorithms while ensuring their exact satisfaction. We achieve this by seamlessly integrating the alternating direction method of multipliers (ADMM) with Stein variational gradient descent (SVGD) – a particle-based sampler – where the constraint is relaxed at each iteration and multiplier updates progressively enforce satisfaction. This enables constrained posterior sampling while inheriting the favorable conditioning properties of dual-space solvers, where partial constraint relaxation allows productive updates even when the current model is far from the true solution. We validate the method on a stylized Rosenbrock conditional inference problem and on frequency-domain full waveform inversion for a Gaussian anomaly model and the Marmousi~II benchmark, demonstrating well-calibrated uncertainty estimates and posterior contraction with increasing data coverage.</p>
+
+<p><a href="https://arxiv.org/abs/2603.00393">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

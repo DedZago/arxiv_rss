@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Random Forests as Statistical Procedures: Design, Variance, and Dependence</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Random Forests as Statistical Procedures: Design, Variance, and Dependence" />
+<meta name="author" content="Nathaniel S. O'Connell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a finite-sample, design-based theory for random forests in which each tree is a randomized conditional predictor acting on fixed covariates and the forest is their Monte Carlo average. An exact variance identity separates Monte Carlo error from a covariance floor that persists under infinite aggregation. The floor arises through two mechanisms: observation reuse, where the same training outcomes receive weight across multiple trees, and partition alignment, where independently generated trees discover similar conditional prediction rules. We prove the floor is strictly positive under minimal conditions and show that alignment persists even when sample splitting eliminates observation overlap entirely. We introduce procedure-aligned synthetic resampling (PASR) to estimate the covariance floor, decomposing the total prediction uncertainty of a deployed forest into interpretable components. For continuous outcomes, resulting prediction intervals achieve nominal coverage with a theoretically guaranteed conservative bias direction. For classification forests, the PASR estimator is asymptotically unbiased, providing the first pointwise confidence intervals for predicted conditional probabilities from a deployed forest. Nominal coverage is maintained across a range of design configurations for both outcome types, including high-dimensional settings. The underlying theory extends to any tree-based ensemble with an exchangeable tree-generating mechanism." />
+<meta property="og:description" content="We develop a finite-sample, design-based theory for random forests in which each tree is a randomized conditional predictor acting on fixed covariates and the forest is their Monte Carlo average. An exact variance identity separates Monte Carlo error from a covariance floor that persists under infinite aggregation. The floor arises through two mechanisms: observation reuse, where the same training outcomes receive weight across multiple trees, and partition alignment, where independently generated trees discover similar conditional prediction rules. We prove the floor is strictly positive under minimal conditions and show that alignment persists even when sample splitting eliminates observation overlap entirely. We introduce procedure-aligned synthetic resampling (PASR) to estimate the covariance floor, decomposing the total prediction uncertainty of a deployed forest into interpretable components. For continuous outcomes, resulting prediction intervals achieve nominal coverage with a theoretically guaranteed conservative bias direction. For classification forests, the PASR estimator is asymptotically unbiased, providing the first pointwise confidence intervals for predicted conditional probabilities from a deployed forest. Nominal coverage is maintained across a range of design configurations for both outcome types, including high-dimensional settings. The underlying theory extends to any tree-based ensemble with an exchangeable tree-generating mechanism." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/03/RandomForestsasStatisticalProceduresDesignVarianceandDependence.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/03/RandomForestsasStatisticalProceduresDesignVarianceandDependence.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Random Forests as Statistical Procedures: Design, Variance, and Dependence" />
+<script type="application/ld+json">
+{"description":"We develop a finite-sample, design-based theory for random forests in which each tree is a randomized conditional predictor acting on fixed covariates and the forest is their Monte Carlo average. An exact variance identity separates Monte Carlo error from a covariance floor that persists under infinite aggregation. The floor arises through two mechanisms: observation reuse, where the same training outcomes receive weight across multiple trees, and partition alignment, where independently generated trees discover similar conditional prediction rules. We prove the floor is strictly positive under minimal conditions and show that alignment persists even when sample splitting eliminates observation overlap entirely. We introduce procedure-aligned synthetic resampling (PASR) to estimate the covariance floor, decomposing the total prediction uncertainty of a deployed forest into interpretable components. For continuous outcomes, resulting prediction intervals achieve nominal coverage with a theoretically guaranteed conservative bias direction. For classification forests, the PASR estimator is asymptotically unbiased, providing the first pointwise confidence intervals for predicted conditional probabilities from a deployed forest. Nominal coverage is maintained across a range of design configurations for both outcome types, including high-dimensional settings. The underlying theory extends to any tree-based ensemble with an exchangeable tree-generating mechanism.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/03/RandomForestsasStatisticalProceduresDesignVarianceandDependence.html"},"author":{"@type":"Person","name":"Nathaniel S. O'Connell"},"dateModified":"2026-03-03T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/03/03/RandomForestsasStatisticalProceduresDesignVarianceandDependence.html","headline":"Random Forests as Statistical Procedures: Design, Variance, and Dependence","@type":"BlogPosting","datePublished":"2026-03-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-03 00:00:00 +0000">03-03</time>
+  </p>
+  
+  <h1>Random Forests as Statistical Procedures: Design, Variance, and Dependence</h1>
+  <br>Nathaniel S. O'Connell</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>We develop a finite-sample, design-based theory for random forests in which each tree is a randomized conditional predictor acting on fixed covariates and the forest is their Monte Carlo average. An exact variance identity separates Monte Carlo error from a covariance floor that persists under infinite aggregation. The floor arises through two mechanisms: observation reuse, where the same training outcomes receive weight across multiple trees, and partition alignment, where independently generated trees discover similar conditional prediction rules. We prove the floor is strictly positive under minimal conditions and show that alignment persists even when sample splitting eliminates observation overlap entirely. We introduce procedure-aligned synthetic resampling (PASR) to estimate the covariance floor, decomposing the total prediction uncertainty of a deployed forest into interpretable components. For continuous outcomes, resulting prediction intervals achieve nominal coverage with a theoretically guaranteed conservative bias direction. For classification forests, the PASR estimator is asymptotically unbiased, providing the first pointwise confidence intervals for predicted conditional probabilities from a deployed forest. Nominal coverage is maintained across a range of design configurations for both outcome types, including high-dimensional settings. The underlying theory extends to any tree-based ensemble with an exchangeable tree-generating mechanism.</p>
+
+<p><a href="https://arxiv.org/abs/2602.13104">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

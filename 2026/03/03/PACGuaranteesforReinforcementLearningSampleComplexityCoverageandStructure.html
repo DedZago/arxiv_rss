@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PAC Guarantees for Reinforcement Learning: Sample Complexity, Coverage, and Structure</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="PAC Guarantees for Reinforcement Learning: Sample Complexity, Coverage, and Structure" />
+<meta name="author" content="Joshua Steier" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When data is scarce or mistakes are costly, average-case metrics fall short. What a practitioner needs is a guarantee: with probability at least $1-\delta$, the learned policy is $\varepsilon$-close to optimal after $N$ episodes. This is the PAC promise, and between 2018 and 2025 the RL theory community made striking progress on when such promises can be kept. We survey that progress. Our organizing tool is the Coverage-Structure-Objective (CSO) framework, proposed here, which decomposes nearly every PAC sample complexity result into three factors: coverage (how data were obtained), structure (intrinsic MDP or function-class complexity), and objective (what the learner must deliver). CSO is not a theorem but an interpretive template that identifies bottlenecks and makes cross-setting comparison immediate. The technical core covers tight tabular baselines and the uniform-PAC bridge to regret; structural complexity measures (Bellman rank, witness rank, Bellman-Eluder dimension) governing learnability with function approximation; results for linear, kernel/NTK, and low-rank models; reward-free exploration as upfront coverage investment; and pessimistic offline RL where inherited coverage is the binding constraint. We provide practitioner tools: rate lookup tables indexed by CSO coordinates, Bellman residual diagnostics, coverage estimation with deployment gates, and per-episode policy certificates. A final section catalogs open problems, separating near-term targets from frontier questions where coverage, structure, and computation tangle in ways current theory cannot resolve." />
+<meta property="og:description" content="When data is scarce or mistakes are costly, average-case metrics fall short. What a practitioner needs is a guarantee: with probability at least $1-\delta$, the learned policy is $\varepsilon$-close to optimal after $N$ episodes. This is the PAC promise, and between 2018 and 2025 the RL theory community made striking progress on when such promises can be kept. We survey that progress. Our organizing tool is the Coverage-Structure-Objective (CSO) framework, proposed here, which decomposes nearly every PAC sample complexity result into three factors: coverage (how data were obtained), structure (intrinsic MDP or function-class complexity), and objective (what the learner must deliver). CSO is not a theorem but an interpretive template that identifies bottlenecks and makes cross-setting comparison immediate. The technical core covers tight tabular baselines and the uniform-PAC bridge to regret; structural complexity measures (Bellman rank, witness rank, Bellman-Eluder dimension) governing learnability with function approximation; results for linear, kernel/NTK, and low-rank models; reward-free exploration as upfront coverage investment; and pessimistic offline RL where inherited coverage is the binding constraint. We provide practitioner tools: rate lookup tables indexed by CSO coordinates, Bellman residual diagnostics, coverage estimation with deployment gates, and per-episode policy certificates. A final section catalogs open problems, separating near-term targets from frontier questions where coverage, structure, and computation tangle in ways current theory cannot resolve." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/03/PACGuaranteesforReinforcementLearningSampleComplexityCoverageandStructure.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/03/PACGuaranteesforReinforcementLearningSampleComplexityCoverageandStructure.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PAC Guarantees for Reinforcement Learning: Sample Complexity, Coverage, and Structure" />
+<script type="application/ld+json">
+{"description":"When data is scarce or mistakes are costly, average-case metrics fall short. What a practitioner needs is a guarantee: with probability at least $1-\\delta$, the learned policy is $\\varepsilon$-close to optimal after $N$ episodes. This is the PAC promise, and between 2018 and 2025 the RL theory community made striking progress on when such promises can be kept. We survey that progress. Our organizing tool is the Coverage-Structure-Objective (CSO) framework, proposed here, which decomposes nearly every PAC sample complexity result into three factors: coverage (how data were obtained), structure (intrinsic MDP or function-class complexity), and objective (what the learner must deliver). CSO is not a theorem but an interpretive template that identifies bottlenecks and makes cross-setting comparison immediate. The technical core covers tight tabular baselines and the uniform-PAC bridge to regret; structural complexity measures (Bellman rank, witness rank, Bellman-Eluder dimension) governing learnability with function approximation; results for linear, kernel/NTK, and low-rank models; reward-free exploration as upfront coverage investment; and pessimistic offline RL where inherited coverage is the binding constraint. We provide practitioner tools: rate lookup tables indexed by CSO coordinates, Bellman residual diagnostics, coverage estimation with deployment gates, and per-episode policy certificates. A final section catalogs open problems, separating near-term targets from frontier questions where coverage, structure, and computation tangle in ways current theory cannot resolve.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/03/PACGuaranteesforReinforcementLearningSampleComplexityCoverageandStructure.html"},"author":{"@type":"Person","name":"Joshua Steier"},"dateModified":"2026-03-03T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/03/03/PACGuaranteesforReinforcementLearningSampleComplexityCoverageandStructure.html","headline":"PAC Guarantees for Reinforcement Learning: Sample Complexity, Coverage, and Structure","@type":"BlogPosting","datePublished":"2026-03-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-03 00:00:00 +0000">03-03</time>
+  </p>
+  
+  <h1>PAC Guarantees for Reinforcement Learning: Sample Complexity, Coverage, and Structure</h1>
+  <br>Joshua Steier</h3>
+  <br> [stat.ML]
+
+  <p>When data is scarce or mistakes are costly, average-case metrics fall short. What a practitioner needs is a guarantee: with probability at least $1-\delta$, the learned policy is $\varepsilon$-close to optimal after $N$ episodes. This is the PAC promise, and between 2018 and 2025 the RL theory community made striking progress on when such promises can be kept. We survey that progress. Our organizing tool is the Coverage-Structure-Objective (CSO) framework, proposed here, which decomposes nearly every PAC sample complexity result into three factors: coverage (how data were obtained), structure (intrinsic MDP or function-class complexity), and objective (what the learner must deliver). CSO is not a theorem but an interpretive template that identifies bottlenecks and makes cross-setting comparison immediate. The technical core covers tight tabular baselines and the uniform-PAC bridge to regret; structural complexity measures (Bellman rank, witness rank, Bellman-Eluder dimension) governing learnability with function approximation; results for linear, kernel/NTK, and low-rank models; reward-free exploration as upfront coverage investment; and pessimistic offline RL where inherited coverage is the binding constraint. We provide practitioner tools: rate lookup tables indexed by CSO coordinates, Bellman residual diagnostics, coverage estimation with deployment gates, and per-episode policy certificates. A final section catalogs open problems, separating near-term targets from frontier questions where coverage, structure, and computation tangle in ways current theory cannot resolve.</p>
+
+<p><a href="https://arxiv.org/abs/2603.01309">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
