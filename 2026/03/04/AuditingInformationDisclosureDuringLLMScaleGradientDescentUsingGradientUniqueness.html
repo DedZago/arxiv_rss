@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Auditing Information Disclosure During LLM-Scale Gradient Descent Using Gradient Uniqueness</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Auditing Information Disclosure During LLM-Scale Gradient Descent Using Gradient Uniqueness" />
+<meta name="author" content="Sleem Abdelghafar, Maryam Aliakbarpour, Chris Jermaine" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Disclosing information via the publication of a machine learning model poses significant privacy risks. However, auditing this disclosure across every datapoint during the training of Large Language Models (LLMs) is computationally prohibitive. In this paper, we present Gradient Uniqueness (GNQ), a principled, attack-agnostic metric derived from an information-theoretic upper bound on the amount of information embedded in a model about individual training points via gradient descent. While naively computing GNQ requires forming and inverting an $P \times P$ matrix for every datapoint (for a model with $P$ parameters), we introduce Batch-Space Ghost GNQ (BS-Ghost GNQ). This efficient algorithm performs all computations in a much smaller batch-space and leverages ghost kernels to compute GNQ ``in-run’’ with minimal computational overhead. We empirically validate that GNQ successfully accounts for prior/common knowledge. Our evaluation demonstrates that GNQ strongly predicts sequence extractability in targeted attacks and reveals how disclosure risk concentrates heterogeneously on specific examples over the course of LLM training." />
+<meta property="og:description" content="Disclosing information via the publication of a machine learning model poses significant privacy risks. However, auditing this disclosure across every datapoint during the training of Large Language Models (LLMs) is computationally prohibitive. In this paper, we present Gradient Uniqueness (GNQ), a principled, attack-agnostic metric derived from an information-theoretic upper bound on the amount of information embedded in a model about individual training points via gradient descent. While naively computing GNQ requires forming and inverting an $P \times P$ matrix for every datapoint (for a model with $P$ parameters), we introduce Batch-Space Ghost GNQ (BS-Ghost GNQ). This efficient algorithm performs all computations in a much smaller batch-space and leverages ghost kernels to compute GNQ ``in-run’’ with minimal computational overhead. We empirically validate that GNQ successfully accounts for prior/common knowledge. Our evaluation demonstrates that GNQ strongly predicts sequence extractability in targeted attacks and reveals how disclosure risk concentrates heterogeneously on specific examples over the course of LLM training." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/04/AuditingInformationDisclosureDuringLLMScaleGradientDescentUsingGradientUniqueness.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/04/AuditingInformationDisclosureDuringLLMScaleGradientDescentUsingGradientUniqueness.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Auditing Information Disclosure During LLM-Scale Gradient Descent Using Gradient Uniqueness" />
+<script type="application/ld+json">
+{"description":"Disclosing information via the publication of a machine learning model poses significant privacy risks. However, auditing this disclosure across every datapoint during the training of Large Language Models (LLMs) is computationally prohibitive. In this paper, we present Gradient Uniqueness (GNQ), a principled, attack-agnostic metric derived from an information-theoretic upper bound on the amount of information embedded in a model about individual training points via gradient descent. While naively computing GNQ requires forming and inverting an $P \\times P$ matrix for every datapoint (for a model with $P$ parameters), we introduce Batch-Space Ghost GNQ (BS-Ghost GNQ). This efficient algorithm performs all computations in a much smaller batch-space and leverages ghost kernels to compute GNQ ``in-run’’ with minimal computational overhead. We empirically validate that GNQ successfully accounts for prior/common knowledge. Our evaluation demonstrates that GNQ strongly predicts sequence extractability in targeted attacks and reveals how disclosure risk concentrates heterogeneously on specific examples over the course of LLM training.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/04/AuditingInformationDisclosureDuringLLMScaleGradientDescentUsingGradientUniqueness.html"},"author":{"@type":"Person","name":"Sleem Abdelghafar, Maryam Aliakbarpour, Chris Jermaine"},"dateModified":"2026-03-04T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/03/04/AuditingInformationDisclosureDuringLLMScaleGradientDescentUsingGradientUniqueness.html","headline":"Auditing Information Disclosure During LLM-Scale Gradient Descent Using Gradient Uniqueness","@type":"BlogPosting","datePublished":"2026-03-04T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-04 00:00:00 +0000">03-04</time>
+  </p>
+  
+  <h1>Auditing Information Disclosure During LLM-Scale Gradient Descent Using Gradient Uniqueness</h1>
+  <br>Sleem Abdelghafar, Maryam Aliakbarpour, Chris Jermaine</h3>
+  <br> [stat.ML]
+
+  <p>Disclosing information via the publication of a machine learning model poses significant privacy risks. However, auditing this disclosure across every datapoint during the training of Large Language Models (LLMs) is computationally prohibitive. In this paper, we present Gradient Uniqueness (GNQ), a principled, attack-agnostic metric derived from an information-theoretic upper bound on the amount of information embedded in a model about individual training points via gradient descent. While naively computing GNQ requires forming and inverting an $P \times P$ matrix for every datapoint (for a model with $P$ parameters), we introduce Batch-Space Ghost GNQ (BS-Ghost GNQ). This efficient algorithm performs all computations in a much smaller batch-space and leverages ghost kernels to compute GNQ ``in-run’’ with minimal computational overhead. We empirically validate that GNQ successfully accounts for prior/common knowledge. Our evaluation demonstrates that GNQ strongly predicts sequence extractability in targeted attacks and reveals how disclosure risk concentrates heterogeneously on specific examples over the course of LLM training.</p>
+
+<p><a href="https://arxiv.org/abs/2510.10902">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
