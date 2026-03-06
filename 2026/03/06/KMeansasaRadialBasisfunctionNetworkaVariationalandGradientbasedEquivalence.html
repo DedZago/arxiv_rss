@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>K-Means as a Radial Basis function Network: a Variational and Gradient-based Equivalence</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="K-Means as a Radial Basis function Network: a Variational and Gradient-based Equivalence" />
+<meta name="author" content="Felipe de Jesus Felix Arredondo, Alejandro Ucan-Puc, Carlos Astengo Noguez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This work establishes a rigorous variational and gradient-based equivalence between the classical K-Means algorithm and differentiable Radial Basis Function (RBF) neural networks with smooth responsibilities. By reparameterizing the K-Means objective and embedding its distortion functional into a smooth weighted loss, we prove that the RBF objective $\Gamma$-converges to the K-Means solution as the temperature parameter $\sigma$ vanishes. We further demonstrate that the gradient-based updates of the RBF centers recover the exact K-Means centroid update rule and induce identical training trajectories in the limit. To address the numerical instability of the Softmax transformation in the low-temperature regime, we propose the integration of Entmax-1.5, which ensures stable polynomial convergence while preserving the underlying Voronoi partition structure. These results bridge the conceptual gap between discrete partitioning and continuous optimization, enabling K-Means to be embedded directly into deep learning architectures for the joint optimization of representations and clusters. Empirical validation across diverse synthetic geometries confirms a monotone collapse of soft RBF centroids toward K-Means fixed points, providing a unified framework for end-to-end differentiable clustering." />
+<meta property="og:description" content="This work establishes a rigorous variational and gradient-based equivalence between the classical K-Means algorithm and differentiable Radial Basis Function (RBF) neural networks with smooth responsibilities. By reparameterizing the K-Means objective and embedding its distortion functional into a smooth weighted loss, we prove that the RBF objective $\Gamma$-converges to the K-Means solution as the temperature parameter $\sigma$ vanishes. We further demonstrate that the gradient-based updates of the RBF centers recover the exact K-Means centroid update rule and induce identical training trajectories in the limit. To address the numerical instability of the Softmax transformation in the low-temperature regime, we propose the integration of Entmax-1.5, which ensures stable polynomial convergence while preserving the underlying Voronoi partition structure. These results bridge the conceptual gap between discrete partitioning and continuous optimization, enabling K-Means to be embedded directly into deep learning architectures for the joint optimization of representations and clusters. Empirical validation across diverse synthetic geometries confirms a monotone collapse of soft RBF centroids toward K-Means fixed points, providing a unified framework for end-to-end differentiable clustering." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/06/KMeansasaRadialBasisfunctionNetworkaVariationalandGradientbasedEquivalence.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/06/KMeansasaRadialBasisfunctionNetworkaVariationalandGradientbasedEquivalence.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="K-Means as a Radial Basis function Network: a Variational and Gradient-based Equivalence" />
+<script type="application/ld+json">
+{"description":"This work establishes a rigorous variational and gradient-based equivalence between the classical K-Means algorithm and differentiable Radial Basis Function (RBF) neural networks with smooth responsibilities. By reparameterizing the K-Means objective and embedding its distortion functional into a smooth weighted loss, we prove that the RBF objective $\\Gamma$-converges to the K-Means solution as the temperature parameter $\\sigma$ vanishes. We further demonstrate that the gradient-based updates of the RBF centers recover the exact K-Means centroid update rule and induce identical training trajectories in the limit. To address the numerical instability of the Softmax transformation in the low-temperature regime, we propose the integration of Entmax-1.5, which ensures stable polynomial convergence while preserving the underlying Voronoi partition structure. These results bridge the conceptual gap between discrete partitioning and continuous optimization, enabling K-Means to be embedded directly into deep learning architectures for the joint optimization of representations and clusters. Empirical validation across diverse synthetic geometries confirms a monotone collapse of soft RBF centroids toward K-Means fixed points, providing a unified framework for end-to-end differentiable clustering.","author":{"@type":"Person","name":"Felipe de Jesus Felix Arredondo, Alejandro Ucan-Puc, Carlos Astengo Noguez"},"datePublished":"2026-03-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/06/KMeansasaRadialBasisfunctionNetworkaVariationalandGradientbasedEquivalence.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/06/KMeansasaRadialBasisfunctionNetworkaVariationalandGradientbasedEquivalence.html","headline":"K-Means as a Radial Basis function Network: a Variational and Gradient-based Equivalence","@type":"BlogPosting","dateModified":"2026-03-06T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-06 00:00:00 +0000">03-06</time>
+  </p>
+  
+  <h1>K-Means as a Radial Basis function Network: a Variational and Gradient-based Equivalence</h1>
+  <br>Felipe de Jesus Felix Arredondo, Alejandro Ucan-Puc, Carlos Astengo Noguez</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>This work establishes a rigorous variational and gradient-based equivalence between the classical K-Means algorithm and differentiable Radial Basis Function (RBF) neural networks with smooth responsibilities. By reparameterizing the K-Means objective and embedding its distortion functional into a smooth weighted loss, we prove that the RBF objective $\Gamma$-converges to the K-Means solution as the temperature parameter $\sigma$ vanishes. We further demonstrate that the gradient-based updates of the RBF centers recover the exact K-Means centroid update rule and induce identical training trajectories in the limit. To address the numerical instability of the Softmax transformation in the low-temperature regime, we propose the integration of Entmax-1.5, which ensures stable polynomial convergence while preserving the underlying Voronoi partition structure. These results bridge the conceptual gap between discrete partitioning and continuous optimization, enabling K-Means to be embedded directly into deep learning architectures for the joint optimization of representations and clusters. Empirical validation across diverse synthetic geometries confirms a monotone collapse of soft RBF centroids toward K-Means fixed points, providing a unified framework for end-to-end differentiable clustering.</p>
+
+<p><a href="https://arxiv.org/abs/2603.04625">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
