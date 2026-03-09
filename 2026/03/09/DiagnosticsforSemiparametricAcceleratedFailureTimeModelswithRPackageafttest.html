@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diagnostics for Semiparametric Accelerated Failure Time Models with R Package afttest</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Diagnostics for Semiparametric Accelerated Failure Time Models with R Package afttest" />
+<meta name="author" content="Woojung Bae, Dongrak Choi, Jun Yan, Sangwook Kang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The semiparametric accelerated failure time (AFT) model offers a direct and interpretable alternative to the Cox proportional hazards model, yet practical diagnostic tools for this framework remain limited. We introduce afttest, an R package that implements martingale-residual-based goodness-of-fit procedures for semiparametric AFT models. In addition to the recently developed multiplier bootstrap diagnostics, the package introduces a new computationally efficient resampling strategy based on an influence-function linear approximation. Unlike the original approach, which requires repeatedly solving estimating equations for each bootstrap replicate, the proposed method avoids iterative optimization and substantially reduces computation time while preserving asymptotic validity. Both the standard multiplier bootstrap and the accelerated linear approximation are implemented, allowing users to balance finite-sample performance and computational scalability. The package supports rank-based and least-squares estimators, provides omnibus, link function, and functional form tests, and includes graphical tools for visualizing residual processes. An application to the Mayo Clinic primary biliary cirrhosis study illustrates the workflow." />
+<meta property="og:description" content="The semiparametric accelerated failure time (AFT) model offers a direct and interpretable alternative to the Cox proportional hazards model, yet practical diagnostic tools for this framework remain limited. We introduce afttest, an R package that implements martingale-residual-based goodness-of-fit procedures for semiparametric AFT models. In addition to the recently developed multiplier bootstrap diagnostics, the package introduces a new computationally efficient resampling strategy based on an influence-function linear approximation. Unlike the original approach, which requires repeatedly solving estimating equations for each bootstrap replicate, the proposed method avoids iterative optimization and substantially reduces computation time while preserving asymptotic validity. Both the standard multiplier bootstrap and the accelerated linear approximation are implemented, allowing users to balance finite-sample performance and computational scalability. The package supports rank-based and least-squares estimators, provides omnibus, link function, and functional form tests, and includes graphical tools for visualizing residual processes. An application to the Mayo Clinic primary biliary cirrhosis study illustrates the workflow." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/09/DiagnosticsforSemiparametricAcceleratedFailureTimeModelswithRPackageafttest.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/09/DiagnosticsforSemiparametricAcceleratedFailureTimeModelswithRPackageafttest.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Diagnostics for Semiparametric Accelerated Failure Time Models with R Package afttest" />
+<script type="application/ld+json">
+{"description":"The semiparametric accelerated failure time (AFT) model offers a direct and interpretable alternative to the Cox proportional hazards model, yet practical diagnostic tools for this framework remain limited. We introduce afttest, an R package that implements martingale-residual-based goodness-of-fit procedures for semiparametric AFT models. In addition to the recently developed multiplier bootstrap diagnostics, the package introduces a new computationally efficient resampling strategy based on an influence-function linear approximation. Unlike the original approach, which requires repeatedly solving estimating equations for each bootstrap replicate, the proposed method avoids iterative optimization and substantially reduces computation time while preserving asymptotic validity. Both the standard multiplier bootstrap and the accelerated linear approximation are implemented, allowing users to balance finite-sample performance and computational scalability. The package supports rank-based and least-squares estimators, provides omnibus, link function, and functional form tests, and includes graphical tools for visualizing residual processes. An application to the Mayo Clinic primary biliary cirrhosis study illustrates the workflow.","author":{"@type":"Person","name":"Woojung Bae, Dongrak Choi, Jun Yan, Sangwook Kang"},"datePublished":"2026-03-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/09/DiagnosticsforSemiparametricAcceleratedFailureTimeModelswithRPackageafttest.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/09/DiagnosticsforSemiparametricAcceleratedFailureTimeModelswithRPackageafttest.html","headline":"Diagnostics for Semiparametric Accelerated Failure Time Models with R Package afttest","@type":"BlogPosting","dateModified":"2026-03-09T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-09 00:00:00 +0000">03-09</time>
+  </p>
+  
+  <h1>Diagnostics for Semiparametric Accelerated Failure Time Models with R Package afttest</h1>
+  <br>Woojung Bae, Dongrak Choi, Jun Yan, Sangwook Kang</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>The semiparametric accelerated failure time (AFT) model offers a direct and interpretable alternative to the Cox proportional hazards model, yet practical diagnostic tools for this framework remain limited. We introduce afttest, an R package that implements martingale-residual-based goodness-of-fit procedures for semiparametric AFT models. In addition to the recently developed multiplier bootstrap diagnostics, the package introduces a new computationally efficient resampling strategy based on an influence-function linear approximation. Unlike the original approach, which requires repeatedly solving estimating equations for each bootstrap replicate, the proposed method avoids iterative optimization and substantially reduces computation time while preserving asymptotic validity. Both the standard multiplier bootstrap and the accelerated linear approximation are implemented, allowing users to balance finite-sample performance and computational scalability. The package supports rank-based and least-squares estimators, provides omnibus, link function, and functional form tests, and includes graphical tools for visualizing residual processes. An application to the Mayo Clinic primary biliary cirrhosis study illustrates the workflow.</p>
+
+<p><a href="https://arxiv.org/abs/2511.09823">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

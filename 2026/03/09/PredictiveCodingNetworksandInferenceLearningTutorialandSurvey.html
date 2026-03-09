@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Predictive Coding Networks and Inference Learning: Tutorial and Survey</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Predictive Coding Networks and Inference Learning: Tutorial and Survey" />
+<meta name="author" content="Björn van Zwol, Ro Jefferson, Egon L. van den Broek" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent years have witnessed a growing call for renewed emphasis on neuroscience-inspired approaches in artificial intelligence research, under the banner of NeuroAI. A prime example of this is predictive coding networks (PCNs), based on the neuroscientific framework of predictive coding. This framework views the brain as a hierarchical Bayesian inference model that minimizes prediction errors through feedback connections. Unlike traditional neural networks trained with backpropagation (BP), PCNs utilize inference learning (IL), a more biologically plausible algorithm that explains patterns of neural activity that BP cannot. Historically, IL has been more computationally intensive, but recent advancements have demonstrated that it can achieve higher efficiency than BP with sufficient parallelization. Furthermore, PCNs can be mathematically considered a superset of traditional feedforward neural networks (FNNs), significantly extending the range of trainable architectures. As inherently probabilistic (graphical) latent variable models, PCNs provide a versatile framework for both supervised learning and unsupervised (generative) modeling that goes beyond traditional artificial neural networks. This work provides a comprehensive review and detailed formal specification of PCNs, particularly situating them within the context of modern ML methods. This positions PC as a promising framework for future ML innovations." />
+<meta property="og:description" content="Recent years have witnessed a growing call for renewed emphasis on neuroscience-inspired approaches in artificial intelligence research, under the banner of NeuroAI. A prime example of this is predictive coding networks (PCNs), based on the neuroscientific framework of predictive coding. This framework views the brain as a hierarchical Bayesian inference model that minimizes prediction errors through feedback connections. Unlike traditional neural networks trained with backpropagation (BP), PCNs utilize inference learning (IL), a more biologically plausible algorithm that explains patterns of neural activity that BP cannot. Historically, IL has been more computationally intensive, but recent advancements have demonstrated that it can achieve higher efficiency than BP with sufficient parallelization. Furthermore, PCNs can be mathematically considered a superset of traditional feedforward neural networks (FNNs), significantly extending the range of trainable architectures. As inherently probabilistic (graphical) latent variable models, PCNs provide a versatile framework for both supervised learning and unsupervised (generative) modeling that goes beyond traditional artificial neural networks. This work provides a comprehensive review and detailed formal specification of PCNs, particularly situating them within the context of modern ML methods. This positions PC as a promising framework for future ML innovations." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/09/PredictiveCodingNetworksandInferenceLearningTutorialandSurvey.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/09/PredictiveCodingNetworksandInferenceLearningTutorialandSurvey.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Predictive Coding Networks and Inference Learning: Tutorial and Survey" />
+<script type="application/ld+json">
+{"description":"Recent years have witnessed a growing call for renewed emphasis on neuroscience-inspired approaches in artificial intelligence research, under the banner of NeuroAI. A prime example of this is predictive coding networks (PCNs), based on the neuroscientific framework of predictive coding. This framework views the brain as a hierarchical Bayesian inference model that minimizes prediction errors through feedback connections. Unlike traditional neural networks trained with backpropagation (BP), PCNs utilize inference learning (IL), a more biologically plausible algorithm that explains patterns of neural activity that BP cannot. Historically, IL has been more computationally intensive, but recent advancements have demonstrated that it can achieve higher efficiency than BP with sufficient parallelization. Furthermore, PCNs can be mathematically considered a superset of traditional feedforward neural networks (FNNs), significantly extending the range of trainable architectures. As inherently probabilistic (graphical) latent variable models, PCNs provide a versatile framework for both supervised learning and unsupervised (generative) modeling that goes beyond traditional artificial neural networks. This work provides a comprehensive review and detailed formal specification of PCNs, particularly situating them within the context of modern ML methods. This positions PC as a promising framework for future ML innovations.","author":{"@type":"Person","name":"Björn van Zwol, Ro Jefferson, Egon L. van den Broek"},"datePublished":"2026-03-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/09/PredictiveCodingNetworksandInferenceLearningTutorialandSurvey.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/09/PredictiveCodingNetworksandInferenceLearningTutorialandSurvey.html","headline":"Predictive Coding Networks and Inference Learning: Tutorial and Survey","@type":"BlogPosting","dateModified":"2026-03-09T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-09 00:00:00 +0000">03-09</time>
+  </p>
+  
+  <h1>Predictive Coding Networks and Inference Learning: Tutorial and Survey</h1>
+  <br>Björn van Zwol, Ro Jefferson, Egon L. van den Broek</h3>
+  <br> [stat.ML]
+
+  <p>Recent years have witnessed a growing call for renewed emphasis on neuroscience-inspired approaches in artificial intelligence research, under the banner of NeuroAI. A prime example of this is predictive coding networks (PCNs), based on the neuroscientific framework of predictive coding. This framework views the brain as a hierarchical Bayesian inference model that minimizes prediction errors through feedback connections. Unlike traditional neural networks trained with backpropagation (BP), PCNs utilize inference learning (IL), a more biologically plausible algorithm that explains patterns of neural activity that BP cannot. Historically, IL has been more computationally intensive, but recent advancements have demonstrated that it can achieve higher efficiency than BP with sufficient parallelization. Furthermore, PCNs can be mathematically considered a superset of traditional feedforward neural networks (FNNs), significantly extending the range of trainable architectures. As inherently probabilistic (graphical) latent variable models, PCNs provide a versatile framework for both supervised learning and unsupervised (generative) modeling that goes beyond traditional artificial neural networks. This work provides a comprehensive review and detailed formal specification of PCNs, particularly situating them within the context of modern ML methods. This positions PC as a promising framework for future ML innovations.</p>
+
+<p><a href="https://arxiv.org/abs/2407.04117">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
