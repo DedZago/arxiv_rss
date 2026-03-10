@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Exposing the Illusion of Fairness: Auditing Vulnerabilities to Distributional Manipulation Attacks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Exposing the Illusion of Fairness: Auditing Vulnerabilities to Distributional Manipulation Attacks" />
+<meta name="author" content="Valentin Lafargue, Adriana Laurindo Monteiro, Emmanuelle Claeys, Laurent Risser, Jean-Michel Loubes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The rapid deployment of AI systems in high-stakes domains, including those classified as high-risk under the The EU AI Act (Regulation (EU) 2024/1689), has intensified the need for reliable compliance auditing. For binary classifiers, regulatory risk assessment often relies on global fairness metrics such as the Disparate Impact ratio, widely used to evaluate potential discrimination. In typical auditing settings, the auditee provides a subset of its dataset to an auditor, while a supervisory authority may verify whether this subset is representative of the full underlying distribution. In this work, we investigate to what extent a malicious auditee can construct a fairness-compliant yet representative-looking sample from a non-compliant original distribution, thereby creating an illusion of fairness. We formalize this problem as a constrained distributional projection task and introduce mathematically grounded manipulation strategies based on entropic and optimal transport projections. These constructions characterize the minimal distributional shift required to satisfy fairness constraints. To counter such attacks, we formalize representativeness through distributional distance based statistical tests and systematically evaluate their ability to detect manipulated samples. Our analysis highlights the conditions under which fairness manipulation can remain statistically undetected and provides practical guidelines for strengthening supervisory verification. We validate our theoretical findings through experiments on standard tabular datasets for bias detection. Code is publicly available at https://github.com/ValentinLafargue/Inspection." />
+<meta property="og:description" content="The rapid deployment of AI systems in high-stakes domains, including those classified as high-risk under the The EU AI Act (Regulation (EU) 2024/1689), has intensified the need for reliable compliance auditing. For binary classifiers, regulatory risk assessment often relies on global fairness metrics such as the Disparate Impact ratio, widely used to evaluate potential discrimination. In typical auditing settings, the auditee provides a subset of its dataset to an auditor, while a supervisory authority may verify whether this subset is representative of the full underlying distribution. In this work, we investigate to what extent a malicious auditee can construct a fairness-compliant yet representative-looking sample from a non-compliant original distribution, thereby creating an illusion of fairness. We formalize this problem as a constrained distributional projection task and introduce mathematically grounded manipulation strategies based on entropic and optimal transport projections. These constructions characterize the minimal distributional shift required to satisfy fairness constraints. To counter such attacks, we formalize representativeness through distributional distance based statistical tests and systematically evaluate their ability to detect manipulated samples. Our analysis highlights the conditions under which fairness manipulation can remain statistically undetected and provides practical guidelines for strengthening supervisory verification. We validate our theoretical findings through experiments on standard tabular datasets for bias detection. Code is publicly available at https://github.com/ValentinLafargue/Inspection." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/10/ExposingtheIllusionofFairnessAuditingVulnerabilitiestoDistributionalManipulationAttacks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/10/ExposingtheIllusionofFairnessAuditingVulnerabilitiestoDistributionalManipulationAttacks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Exposing the Illusion of Fairness: Auditing Vulnerabilities to Distributional Manipulation Attacks" />
+<script type="application/ld+json">
+{"description":"The rapid deployment of AI systems in high-stakes domains, including those classified as high-risk under the The EU AI Act (Regulation (EU) 2024/1689), has intensified the need for reliable compliance auditing. For binary classifiers, regulatory risk assessment often relies on global fairness metrics such as the Disparate Impact ratio, widely used to evaluate potential discrimination. In typical auditing settings, the auditee provides a subset of its dataset to an auditor, while a supervisory authority may verify whether this subset is representative of the full underlying distribution. In this work, we investigate to what extent a malicious auditee can construct a fairness-compliant yet representative-looking sample from a non-compliant original distribution, thereby creating an illusion of fairness. We formalize this problem as a constrained distributional projection task and introduce mathematically grounded manipulation strategies based on entropic and optimal transport projections. These constructions characterize the minimal distributional shift required to satisfy fairness constraints. To counter such attacks, we formalize representativeness through distributional distance based statistical tests and systematically evaluate their ability to detect manipulated samples. Our analysis highlights the conditions under which fairness manipulation can remain statistically undetected and provides practical guidelines for strengthening supervisory verification. We validate our theoretical findings through experiments on standard tabular datasets for bias detection. Code is publicly available at https://github.com/ValentinLafargue/Inspection.","author":{"@type":"Person","name":"Valentin Lafargue, Adriana Laurindo Monteiro, Emmanuelle Claeys, Laurent Risser, Jean-Michel Loubes"},"datePublished":"2026-03-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/10/ExposingtheIllusionofFairnessAuditingVulnerabilitiestoDistributionalManipulationAttacks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/10/ExposingtheIllusionofFairnessAuditingVulnerabilitiestoDistributionalManipulationAttacks.html","headline":"Exposing the Illusion of Fairness: Auditing Vulnerabilities to Distributional Manipulation Attacks","@type":"BlogPosting","dateModified":"2026-03-10T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-10 00:00:00 +0000">03-10</time>
+  </p>
+  
+  <h1>Exposing the Illusion of Fairness: Auditing Vulnerabilities to Distributional Manipulation Attacks</h1>
+  <br>Valentin Lafargue, Adriana Laurindo Monteiro, Emmanuelle Claeys, Laurent Risser, Jean-Michel Loubes</h3>
+  <br> [stat.AP]
+
+  <p>The rapid deployment of AI systems in high-stakes domains, including those classified as high-risk under the The EU AI Act (Regulation (EU) 2024/1689), has intensified the need for reliable compliance auditing. For binary classifiers, regulatory risk assessment often relies on global fairness metrics such as the Disparate Impact ratio, widely used to evaluate potential discrimination. In typical auditing settings, the auditee provides a subset of its dataset to an auditor, while a supervisory authority may verify whether this subset is representative of the full underlying distribution. In this work, we investigate to what extent a malicious auditee can construct a fairness-compliant yet representative-looking sample from a non-compliant original distribution, thereby creating an illusion of fairness. We formalize this problem as a constrained distributional projection task and introduce mathematically grounded manipulation strategies based on entropic and optimal transport projections. These constructions characterize the minimal distributional shift required to satisfy fairness constraints. To counter such attacks, we formalize representativeness through distributional distance based statistical tests and systematically evaluate their ability to detect manipulated samples. Our analysis highlights the conditions under which fairness manipulation can remain statistically undetected and provides practical guidelines for strengthening supervisory verification. We validate our theoretical findings through experiments on standard tabular datasets for bias detection. Code is publicly available at https://github.com/ValentinLafargue/Inspection.</p>
+
+<p><a href="https://arxiv.org/abs/2507.20708">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

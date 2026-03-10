@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts" />
+<meta name="author" content="Yuxuan Han, Meng-Hao Guo, Zhengning Liu, Wenguang Chen, Shi-Min Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Optimizing GPU kernels manually is a challenging and time-consuming task. With the rapid development of LLMs, automated GPU kernel optimization is gradually becoming a tangible reality. However, current LLM-driven automated optimization methods narrowly focus on machine learning applications, such as PyTorch operator optimization, while overlooking broader domains like sparse matrix operations in scientific computing. Extending to these broader applications brings new challenges for the benchmark and algorithm. Therefore, developing a general-purpose automated kernel optimization method becomes our primary focus. In this paper, we address the absence of systematic evaluation for multi-scenario settings by introducing MSKernelBench, which spans multiple scenarios, including fundamental algebraic operations, common LLM kernels, sparse matrix operators, and scientific computing routines, each supporting both FP32 and BF16 precision. Building on this benchmark, we introduce CUDAMaster, a multi-agent, hardware-aware system for kernel optimization that leverages profiling information and automatically constructs the full compilation and execution toolchain. Experimental results demonstrate that CUDAMaster achieves significant speedups across most operators, outperforming Astra by about 35%. In several cases, its performance matches or surpasses that of highly optimized, closed-source libraries such as cuBLAS. A demo showcasing the original and optimized code for each operator is available at https://hanyx2021.github.io/MSKernelBenchDemo/." />
+<meta property="og:description" content="Optimizing GPU kernels manually is a challenging and time-consuming task. With the rapid development of LLMs, automated GPU kernel optimization is gradually becoming a tangible reality. However, current LLM-driven automated optimization methods narrowly focus on machine learning applications, such as PyTorch operator optimization, while overlooking broader domains like sparse matrix operations in scientific computing. Extending to these broader applications brings new challenges for the benchmark and algorithm. Therefore, developing a general-purpose automated kernel optimization method becomes our primary focus. In this paper, we address the absence of systematic evaluation for multi-scenario settings by introducing MSKernelBench, which spans multiple scenarios, including fundamental algebraic operations, common LLM kernels, sparse matrix operators, and scientific computing routines, each supporting both FP32 and BF16 precision. Building on this benchmark, we introduce CUDAMaster, a multi-agent, hardware-aware system for kernel optimization that leverages profiling information and automatically constructs the full compilation and execution toolchain. Experimental results demonstrate that CUDAMaster achieves significant speedups across most operators, outperforming Astra by about 35%. In several cases, its performance matches or surpasses that of highly optimized, closed-source libraries such as cuBLAS. A demo showcasing the original and optimized code for each operator is available at https://hanyx2021.github.io/MSKernelBenchDemo/." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/10/MakingLLMsOptimizeMultiScenarioCUDAKernelsLikeExperts.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/10/MakingLLMsOptimizeMultiScenarioCUDAKernelsLikeExperts.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts" />
+<script type="application/ld+json">
+{"description":"Optimizing GPU kernels manually is a challenging and time-consuming task. With the rapid development of LLMs, automated GPU kernel optimization is gradually becoming a tangible reality. However, current LLM-driven automated optimization methods narrowly focus on machine learning applications, such as PyTorch operator optimization, while overlooking broader domains like sparse matrix operations in scientific computing. Extending to these broader applications brings new challenges for the benchmark and algorithm. Therefore, developing a general-purpose automated kernel optimization method becomes our primary focus. In this paper, we address the absence of systematic evaluation for multi-scenario settings by introducing MSKernelBench, which spans multiple scenarios, including fundamental algebraic operations, common LLM kernels, sparse matrix operators, and scientific computing routines, each supporting both FP32 and BF16 precision. Building on this benchmark, we introduce CUDAMaster, a multi-agent, hardware-aware system for kernel optimization that leverages profiling information and automatically constructs the full compilation and execution toolchain. Experimental results demonstrate that CUDAMaster achieves significant speedups across most operators, outperforming Astra by about 35%. In several cases, its performance matches or surpasses that of highly optimized, closed-source libraries such as cuBLAS. A demo showcasing the original and optimized code for each operator is available at https://hanyx2021.github.io/MSKernelBenchDemo/.","author":{"@type":"Person","name":"Yuxuan Han, Meng-Hao Guo, Zhengning Liu, Wenguang Chen, Shi-Min Hu"},"datePublished":"2026-03-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/10/MakingLLMsOptimizeMultiScenarioCUDAKernelsLikeExperts.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/10/MakingLLMsOptimizeMultiScenarioCUDAKernelsLikeExperts.html","headline":"Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts","@type":"BlogPosting","dateModified":"2026-03-10T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-10 00:00:00 +0000">03-10</time>
+  </p>
+  
+  <h1>Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts</h1>
+  <br>Yuxuan Han, Meng-Hao Guo, Zhengning Liu, Wenguang Chen, Shi-Min Hu</h3>
+  <br> [stat.ML]
+
+  <p>Optimizing GPU kernels manually is a challenging and time-consuming task. With the rapid development of LLMs, automated GPU kernel optimization is gradually becoming a tangible reality. However, current LLM-driven automated optimization methods narrowly focus on machine learning applications, such as PyTorch operator optimization, while overlooking broader domains like sparse matrix operations in scientific computing. Extending to these broader applications brings new challenges for the benchmark and algorithm. Therefore, developing a general-purpose automated kernel optimization method becomes our primary focus. In this paper, we address the absence of systematic evaluation for multi-scenario settings by introducing MSKernelBench, which spans multiple scenarios, including fundamental algebraic operations, common LLM kernels, sparse matrix operators, and scientific computing routines, each supporting both FP32 and BF16 precision. Building on this benchmark, we introduce CUDAMaster, a multi-agent, hardware-aware system for kernel optimization that leverages profiling information and automatically constructs the full compilation and execution toolchain. Experimental results demonstrate that CUDAMaster achieves significant speedups across most operators, outperforming Astra by about 35%. In several cases, its performance matches or surpasses that of highly optimized, closed-source libraries such as cuBLAS. A demo showcasing the original and optimized code for each operator is available at https://hanyx2021.github.io/MSKernelBenchDemo/.</p>
+
+<p><a href="https://arxiv.org/abs/2603.07169">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
