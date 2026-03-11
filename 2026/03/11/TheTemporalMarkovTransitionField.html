@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Temporal Markov Transition Field</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Temporal Markov Transition Field" />
+<meta name="author" content="Michael Leznik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Markov Transition Field (MTF), introduced by Wang and Oates (2015), encodes a time series as a two-dimensional image by mapping each pair of time steps to the transition probability between their quantile states, estimated from a single global transition matrix. This construction is efficient when the transition dynamics are stationary, but produces a misleading representation when the process changes regime over time: the global matrix averages across regimes and the resulting image loses all information about \emph{when} each dynamical regime was active. In this paper we introduce the \emph{Temporal Markov Transition Field} (TMTF), an extension that partitions the series into $K$ contiguous temporal chunks, estimates a separate local transition matrix for each chunk, and assembles the image so that each row reflects the dynamics local to its chunk rather than the global average. The resulting $T \times T$ image has $K$ horizontal bands of distinct texture, each encoding the transition dynamics of one temporal segment. We develop the formal definition, establish the key structural properties of the representation, work through a complete numerical example that makes the distinction from the global MTF concrete, analyse the bias–variance trade-off introduced by temporal chunking, and discuss the geometric interpretation of the local transition matrices in terms of process properties such as persistence, mean reversion, and trending behaviour. The TMTF is amplitude-agnostic and order-preserving, making it suitable as an input channel for convolutional neural networks applied to time series characterisation tasks." />
+<meta property="og:description" content="The Markov Transition Field (MTF), introduced by Wang and Oates (2015), encodes a time series as a two-dimensional image by mapping each pair of time steps to the transition probability between their quantile states, estimated from a single global transition matrix. This construction is efficient when the transition dynamics are stationary, but produces a misleading representation when the process changes regime over time: the global matrix averages across regimes and the resulting image loses all information about \emph{when} each dynamical regime was active. In this paper we introduce the \emph{Temporal Markov Transition Field} (TMTF), an extension that partitions the series into $K$ contiguous temporal chunks, estimates a separate local transition matrix for each chunk, and assembles the image so that each row reflects the dynamics local to its chunk rather than the global average. The resulting $T \times T$ image has $K$ horizontal bands of distinct texture, each encoding the transition dynamics of one temporal segment. We develop the formal definition, establish the key structural properties of the representation, work through a complete numerical example that makes the distinction from the global MTF concrete, analyse the bias–variance trade-off introduced by temporal chunking, and discuss the geometric interpretation of the local transition matrices in terms of process properties such as persistence, mean reversion, and trending behaviour. The TMTF is amplitude-agnostic and order-preserving, making it suitable as an input channel for convolutional neural networks applied to time series characterisation tasks." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/11/TheTemporalMarkovTransitionField.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/11/TheTemporalMarkovTransitionField.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Temporal Markov Transition Field" />
+<script type="application/ld+json">
+{"description":"The Markov Transition Field (MTF), introduced by Wang and Oates (2015), encodes a time series as a two-dimensional image by mapping each pair of time steps to the transition probability between their quantile states, estimated from a single global transition matrix. This construction is efficient when the transition dynamics are stationary, but produces a misleading representation when the process changes regime over time: the global matrix averages across regimes and the resulting image loses all information about \\emph{when} each dynamical regime was active. In this paper we introduce the \\emph{Temporal Markov Transition Field} (TMTF), an extension that partitions the series into $K$ contiguous temporal chunks, estimates a separate local transition matrix for each chunk, and assembles the image so that each row reflects the dynamics local to its chunk rather than the global average. The resulting $T \\times T$ image has $K$ horizontal bands of distinct texture, each encoding the transition dynamics of one temporal segment. We develop the formal definition, establish the key structural properties of the representation, work through a complete numerical example that makes the distinction from the global MTF concrete, analyse the bias–variance trade-off introduced by temporal chunking, and discuss the geometric interpretation of the local transition matrices in terms of process properties such as persistence, mean reversion, and trending behaviour. The TMTF is amplitude-agnostic and order-preserving, making it suitable as an input channel for convolutional neural networks applied to time series characterisation tasks.","author":{"@type":"Person","name":"Michael Leznik"},"datePublished":"2026-03-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/11/TheTemporalMarkovTransitionField.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/11/TheTemporalMarkovTransitionField.html","headline":"The Temporal Markov Transition Field","@type":"BlogPosting","dateModified":"2026-03-11T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-11 00:00:00 +0000">03-11</time>
+  </p>
+  
+  <h1>The Temporal Markov Transition Field</h1>
+  <br>Michael Leznik</h3>
+  <br> [stat.ML]
+
+  <p>The Markov Transition Field (MTF), introduced by Wang and Oates (2015), encodes a time series as a two-dimensional image by mapping each pair of time steps to the transition probability between their quantile states, estimated from a single global transition matrix. This construction is efficient when the transition dynamics are stationary, but produces a misleading representation when the process changes regime over time: the global matrix averages across regimes and the resulting image loses all information about \emph{when} each dynamical regime was active. In this paper we introduce the \emph{Temporal Markov Transition Field} (TMTF), an extension that partitions the series into $K$ contiguous temporal chunks, estimates a separate local transition matrix for each chunk, and assembles the image so that each row reflects the dynamics local to its chunk rather than the global average. The resulting $T \times T$ image has $K$ horizontal bands of distinct texture, each encoding the transition dynamics of one temporal segment. We develop the formal definition, establish the key structural properties of the representation, work through a complete numerical example that makes the distinction from the global MTF concrete, analyse the bias–variance trade-off introduced by temporal chunking, and discuss the geometric interpretation of the local transition matrices in terms of process properties such as persistence, mean reversion, and trending behaviour. The TMTF is amplitude-agnostic and order-preserving, making it suitable as an input channel for convolutional neural networks applied to time series characterisation tasks.</p>
+
+<p><a href="https://arxiv.org/abs/2603.08803">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
