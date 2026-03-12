@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rethinking Adam for Time Series Forecasting: A Simple Heuristic to Improve Optimization under Distribution Shifts</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Rethinking Adam for Time Series Forecasting: A Simple Heuristic to Improve Optimization under Distribution Shifts" />
+<meta name="author" content="Yuze Dong, Jinsong Wu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Time-series forecasting often faces challenges from non-stationarity, particularly distributional drift, where the data distribution evolves over time. This dynamic behavior can undermine the effectiveness of adaptive optimizers, such as Adam, which are typically designed for stationary objectives. In this paper, we revisit Adam in the context of non-stationary forecasting and identify that its second-order bias correction limits responsiveness to shifting loss landscapes. To address this, we propose TS_Adam, a lightweight variant that removes the second-order correction from the learning rate computation. This simple modification improves adaptability to distributional drift while preserving the optimizer core structure and requiring no additional hyperparameters. TS_Adam integrates easily into existing models and consistently improves performance across long- and short-term forecasting tasks. On the ETT datasets with the MICN model, it achieves an average reduction of 12.8% in MSE and 5.7% in MAE compared to Adam. These results underscore the practicality and versatility of TS_Adam as an effective optimization strategy for real-world forecasting scenarios involving non-stationary data. Code is available at: https://github.com/DD-459-1/TS_Adam." />
+<meta property="og:description" content="Time-series forecasting often faces challenges from non-stationarity, particularly distributional drift, where the data distribution evolves over time. This dynamic behavior can undermine the effectiveness of adaptive optimizers, such as Adam, which are typically designed for stationary objectives. In this paper, we revisit Adam in the context of non-stationary forecasting and identify that its second-order bias correction limits responsiveness to shifting loss landscapes. To address this, we propose TS_Adam, a lightweight variant that removes the second-order correction from the learning rate computation. This simple modification improves adaptability to distributional drift while preserving the optimizer core structure and requiring no additional hyperparameters. TS_Adam integrates easily into existing models and consistently improves performance across long- and short-term forecasting tasks. On the ETT datasets with the MICN model, it achieves an average reduction of 12.8% in MSE and 5.7% in MAE compared to Adam. These results underscore the practicality and versatility of TS_Adam as an effective optimization strategy for real-world forecasting scenarios involving non-stationary data. Code is available at: https://github.com/DD-459-1/TS_Adam." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/12/RethinkingAdamforTimeSeriesForecastingASimpleHeuristictoImproveOptimizationunderDistributionShifts.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/12/RethinkingAdamforTimeSeriesForecastingASimpleHeuristictoImproveOptimizationunderDistributionShifts.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rethinking Adam for Time Series Forecasting: A Simple Heuristic to Improve Optimization under Distribution Shifts" />
+<script type="application/ld+json">
+{"description":"Time-series forecasting often faces challenges from non-stationarity, particularly distributional drift, where the data distribution evolves over time. This dynamic behavior can undermine the effectiveness of adaptive optimizers, such as Adam, which are typically designed for stationary objectives. In this paper, we revisit Adam in the context of non-stationary forecasting and identify that its second-order bias correction limits responsiveness to shifting loss landscapes. To address this, we propose TS_Adam, a lightweight variant that removes the second-order correction from the learning rate computation. This simple modification improves adaptability to distributional drift while preserving the optimizer core structure and requiring no additional hyperparameters. TS_Adam integrates easily into existing models and consistently improves performance across long- and short-term forecasting tasks. On the ETT datasets with the MICN model, it achieves an average reduction of 12.8% in MSE and 5.7% in MAE compared to Adam. These results underscore the practicality and versatility of TS_Adam as an effective optimization strategy for real-world forecasting scenarios involving non-stationary data. Code is available at: https://github.com/DD-459-1/TS_Adam.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/12/RethinkingAdamforTimeSeriesForecastingASimpleHeuristictoImproveOptimizationunderDistributionShifts.html"},"author":{"@type":"Person","name":"Yuze Dong, Jinsong Wu"},"dateModified":"2026-03-12T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/03/12/RethinkingAdamforTimeSeriesForecastingASimpleHeuristictoImproveOptimizationunderDistributionShifts.html","headline":"Rethinking Adam for Time Series Forecasting: A Simple Heuristic to Improve Optimization under Distribution Shifts","@type":"BlogPosting","datePublished":"2026-03-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-12 00:00:00 +0000">03-12</time>
+  </p>
+  
+  <h1>Rethinking Adam for Time Series Forecasting: A Simple Heuristic to Improve Optimization under Distribution Shifts</h1>
+  <br>Yuze Dong, Jinsong Wu</h3>
+  <br> [stat.ML]
+
+  <p>Time-series forecasting often faces challenges from non-stationarity, particularly distributional drift, where the data distribution evolves over time. This dynamic behavior can undermine the effectiveness of adaptive optimizers, such as Adam, which are typically designed for stationary objectives. In this paper, we revisit Adam in the context of non-stationary forecasting and identify that its second-order bias correction limits responsiveness to shifting loss landscapes. To address this, we propose TS_Adam, a lightweight variant that removes the second-order correction from the learning rate computation. This simple modification improves adaptability to distributional drift while preserving the optimizer core structure and requiring no additional hyperparameters. TS_Adam integrates easily into existing models and consistently improves performance across long- and short-term forecasting tasks. On the ETT datasets with the MICN model, it achieves an average reduction of 12.8% in MSE and 5.7% in MAE compared to Adam. These results underscore the practicality and versatility of TS_Adam as an effective optimization strategy for real-world forecasting scenarios involving non-stationary data. Code is available at: https://github.com/DD-459-1/TS_Adam.</p>
+
+<p><a href="https://arxiv.org/abs/2603.10095">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
