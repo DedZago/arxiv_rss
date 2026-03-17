@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust Automatic Differentiation of Square-Root Kalman Filters via Gramian Differentials</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Robust Automatic Differentiation of Square-Root Kalman Filters via Gramian Differentials" />
+<meta name="author" content="Adrien Corenflos" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Square-root Kalman filters propagate state covariances in Cholesky-factor form for numerical stability, and are a natural target for gradient-based parameter learning in state-space models. Their core operation, triangularization of a matrix $M \in \mathbb{R}^{n \times m}$, is computed via a QR decomposition in practice, but naively differentiating through it causes two problems: the semi-orthogonal factor is non-unique when $m &gt; n$, yielding undefined gradients; and the standard Jacobian formula involves inverses, which diverges when $M$ is rank-deficient. Both are resolved by the observation that all filter outputs relevant to learning depend on the input matrix only through the Gramian $MM^\top$, so the composite loss is smooth in $M$ even where the triangularization is not. We derive a closed-form chain-rule directly from the differential of this Gramian identity, prove it exact for the Kalman log-marginal likelihood and filtered moments, and extend it to rank-deficient inputs via a two-component decomposition: a column-space term based on the Moore–Penrose pseudoinverse, and a null-space correction for perturbations outside the column space of $M$." />
+<meta property="og:description" content="Square-root Kalman filters propagate state covariances in Cholesky-factor form for numerical stability, and are a natural target for gradient-based parameter learning in state-space models. Their core operation, triangularization of a matrix $M \in \mathbb{R}^{n \times m}$, is computed via a QR decomposition in practice, but naively differentiating through it causes two problems: the semi-orthogonal factor is non-unique when $m &gt; n$, yielding undefined gradients; and the standard Jacobian formula involves inverses, which diverges when $M$ is rank-deficient. Both are resolved by the observation that all filter outputs relevant to learning depend on the input matrix only through the Gramian $MM^\top$, so the composite loss is smooth in $M$ even where the triangularization is not. We derive a closed-form chain-rule directly from the differential of this Gramian identity, prove it exact for the Kalman log-marginal likelihood and filtered moments, and extend it to rank-deficient inputs via a two-component decomposition: a column-space term based on the Moore–Penrose pseudoinverse, and a null-space correction for perturbations outside the column space of $M$." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/17/RobustAutomaticDifferentiationofSquareRootKalmanFiltersviaGramianDifferentials.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/17/RobustAutomaticDifferentiationofSquareRootKalmanFiltersviaGramianDifferentials.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Robust Automatic Differentiation of Square-Root Kalman Filters via Gramian Differentials" />
+<script type="application/ld+json">
+{"description":"Square-root Kalman filters propagate state covariances in Cholesky-factor form for numerical stability, and are a natural target for gradient-based parameter learning in state-space models. Their core operation, triangularization of a matrix $M \\in \\mathbb{R}^{n \\times m}$, is computed via a QR decomposition in practice, but naively differentiating through it causes two problems: the semi-orthogonal factor is non-unique when $m &gt; n$, yielding undefined gradients; and the standard Jacobian formula involves inverses, which diverges when $M$ is rank-deficient. Both are resolved by the observation that all filter outputs relevant to learning depend on the input matrix only through the Gramian $MM^\\top$, so the composite loss is smooth in $M$ even where the triangularization is not. We derive a closed-form chain-rule directly from the differential of this Gramian identity, prove it exact for the Kalman log-marginal likelihood and filtered moments, and extend it to rank-deficient inputs via a two-component decomposition: a column-space term based on the Moore–Penrose pseudoinverse, and a null-space correction for perturbations outside the column space of $M$.","author":{"@type":"Person","name":"Adrien Corenflos"},"datePublished":"2026-03-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/17/RobustAutomaticDifferentiationofSquareRootKalmanFiltersviaGramianDifferentials.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/17/RobustAutomaticDifferentiationofSquareRootKalmanFiltersviaGramianDifferentials.html","headline":"Robust Automatic Differentiation of Square-Root Kalman Filters via Gramian Differentials","@type":"BlogPosting","dateModified":"2026-03-17T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-17 00:00:00 +0000">03-17</time>
+  </p>
+  
+  <h1>Robust Automatic Differentiation of Square-Root Kalman Filters via Gramian Differentials</h1>
+  <br>Adrien Corenflos</h3>
+  <br> [stat.ML]
+
+  <p>Square-root Kalman filters propagate state covariances in Cholesky-factor form for numerical stability, and are a natural target for gradient-based parameter learning in state-space models. Their core operation, triangularization of a matrix $M \in \mathbb{R}^{n \times m}$, is computed via a QR decomposition in practice, but naively differentiating through it causes two problems: the semi-orthogonal factor is non-unique when $m &gt; n$, yielding undefined gradients; and the standard Jacobian formula involves inverses, which diverges when $M$ is rank-deficient. Both are resolved by the observation that all filter outputs relevant to learning depend on the input matrix only through the Gramian $MM^\top$, so the composite loss is smooth in $M$ even where the triangularization is not. We derive a closed-form chain-rule directly from the differential of this Gramian identity, prove it exact for the Kalman log-marginal likelihood and filtered moments, and extend it to rank-deficient inputs via a two-component decomposition: a column-space term based on the Moore–Penrose pseudoinverse, and a null-space correction for perturbations outside the column space of $M$.</p>
+
+<p><a href="https://arxiv.org/abs/2603.13559">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
