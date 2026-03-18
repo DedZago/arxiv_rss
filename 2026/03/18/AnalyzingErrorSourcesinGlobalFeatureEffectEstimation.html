@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Analyzing Error Sources in Global Feature Effect Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Analyzing Error Sources in Global Feature Effect Estimation" />
+<meta name="author" content="Timo Hei{\ss}, Coco Bögel, Bernd Bischl, Giuseppe Casalicchio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Global feature effects such as partial dependence (PD) and accumulated local effects (ALE) plots are widely used to interpret black-box models. However, they are only estimates of true underlying effects, and their reliability depends on multiple sources of error. Despite the popularity of global feature effects, these error sources are largely unexplored. In particular, the practically relevant question of whether to use training or holdout data to estimate feature effects remains unanswered. We address this gap by providing a systematic, estimator-level analysis that disentangles sources of bias and variance for PD and ALE. To this end, we derive a mean-squared-error decomposition that separates model bias, estimation bias, model variance, and estimation variance, and analyze their dependence on model characteristics, data selection, and sample size. We validate our theoretical findings through an extensive simulation study across multiple data-generating processes, learners, estimation strategies (training data, validation data, and cross-validation), and sample sizes. Our results reveal that, while using holdout data is theoretically the cleanest, potential biases arising from the training data are empirically negligible and dominated by the impact of the usually higher sample size. The estimation variance depends on both the presence of interactions and the sample size, with ALE being particularly sensitive to the latter. Cross-validation-based estimation is a promising approach that reduces the model variance component, particularly for overfitting models. Our analysis provides a principled explanation of the sources of error in feature effect estimates and offers concrete guidance on choosing estimation strategies when interpreting machine learning models." />
+<meta property="og:description" content="Global feature effects such as partial dependence (PD) and accumulated local effects (ALE) plots are widely used to interpret black-box models. However, they are only estimates of true underlying effects, and their reliability depends on multiple sources of error. Despite the popularity of global feature effects, these error sources are largely unexplored. In particular, the practically relevant question of whether to use training or holdout data to estimate feature effects remains unanswered. We address this gap by providing a systematic, estimator-level analysis that disentangles sources of bias and variance for PD and ALE. To this end, we derive a mean-squared-error decomposition that separates model bias, estimation bias, model variance, and estimation variance, and analyze their dependence on model characteristics, data selection, and sample size. We validate our theoretical findings through an extensive simulation study across multiple data-generating processes, learners, estimation strategies (training data, validation data, and cross-validation), and sample sizes. Our results reveal that, while using holdout data is theoretically the cleanest, potential biases arising from the training data are empirically negligible and dominated by the impact of the usually higher sample size. The estimation variance depends on both the presence of interactions and the sample size, with ALE being particularly sensitive to the latter. Cross-validation-based estimation is a promising approach that reduces the model variance component, particularly for overfitting models. Our analysis provides a principled explanation of the sources of error in feature effect estimates and offers concrete guidance on choosing estimation strategies when interpreting machine learning models." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/18/AnalyzingErrorSourcesinGlobalFeatureEffectEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/18/AnalyzingErrorSourcesinGlobalFeatureEffectEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Analyzing Error Sources in Global Feature Effect Estimation" />
+<script type="application/ld+json">
+{"description":"Global feature effects such as partial dependence (PD) and accumulated local effects (ALE) plots are widely used to interpret black-box models. However, they are only estimates of true underlying effects, and their reliability depends on multiple sources of error. Despite the popularity of global feature effects, these error sources are largely unexplored. In particular, the practically relevant question of whether to use training or holdout data to estimate feature effects remains unanswered. We address this gap by providing a systematic, estimator-level analysis that disentangles sources of bias and variance for PD and ALE. To this end, we derive a mean-squared-error decomposition that separates model bias, estimation bias, model variance, and estimation variance, and analyze their dependence on model characteristics, data selection, and sample size. We validate our theoretical findings through an extensive simulation study across multiple data-generating processes, learners, estimation strategies (training data, validation data, and cross-validation), and sample sizes. Our results reveal that, while using holdout data is theoretically the cleanest, potential biases arising from the training data are empirically negligible and dominated by the impact of the usually higher sample size. The estimation variance depends on both the presence of interactions and the sample size, with ALE being particularly sensitive to the latter. Cross-validation-based estimation is a promising approach that reduces the model variance component, particularly for overfitting models. Our analysis provides a principled explanation of the sources of error in feature effect estimates and offers concrete guidance on choosing estimation strategies when interpreting machine learning models.","author":{"@type":"Person","name":"Timo Hei{\\ss}, Coco Bögel, Bernd Bischl, Giuseppe Casalicchio"},"datePublished":"2026-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/18/AnalyzingErrorSourcesinGlobalFeatureEffectEstimation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/18/AnalyzingErrorSourcesinGlobalFeatureEffectEstimation.html","headline":"Analyzing Error Sources in Global Feature Effect Estimation","@type":"BlogPosting","dateModified":"2026-03-18T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-18 00:00:00 +0000">03-18</time>
+  </p>
+  
+  <h1>Analyzing Error Sources in Global Feature Effect Estimation</h1>
+  <br>Timo Hei{\ss}, Coco Bögel, Bernd Bischl, Giuseppe Casalicchio</h3>
+  <br> [stat.ML]
+
+  <p>Global feature effects such as partial dependence (PD) and accumulated local effects (ALE) plots are widely used to interpret black-box models. However, they are only estimates of true underlying effects, and their reliability depends on multiple sources of error. Despite the popularity of global feature effects, these error sources are largely unexplored. In particular, the practically relevant question of whether to use training or holdout data to estimate feature effects remains unanswered. We address this gap by providing a systematic, estimator-level analysis that disentangles sources of bias and variance for PD and ALE. To this end, we derive a mean-squared-error decomposition that separates model bias, estimation bias, model variance, and estimation variance, and analyze their dependence on model characteristics, data selection, and sample size. We validate our theoretical findings through an extensive simulation study across multiple data-generating processes, learners, estimation strategies (training data, validation data, and cross-validation), and sample sizes. Our results reveal that, while using holdout data is theoretically the cleanest, potential biases arising from the training data are empirically negligible and dominated by the impact of the usually higher sample size. The estimation variance depends on both the presence of interactions and the sample size, with ALE being particularly sensitive to the latter. Cross-validation-based estimation is a promising approach that reduces the model variance component, particularly for overfitting models. Our analysis provides a principled explanation of the sources of error in feature effect estimates and offers concrete guidance on choosing estimation strategies when interpreting machine learning models.</p>
+
+<p><a href="https://arxiv.org/abs/2603.15057">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

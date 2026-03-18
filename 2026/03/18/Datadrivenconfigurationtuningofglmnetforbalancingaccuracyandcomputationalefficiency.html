@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Data-driven configuration tuning of glmnet for balancing accuracy and computational efficiency</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Data-driven configuration tuning of glmnet for balancing accuracy and computational efficiency" />
+<meta name="author" content="Shuhei Muroya, Kei Hirose" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The glmnet package in R is widely used for lasso estimation because of its computational efficiency. Despite its popularity, glmnet occasionally yields solutions that deviate substantially from the true ones because of the inappropriate default configuration of the algorithm. The accuracy of the obtained solutions can be improved by appropriately tuning the configuration. However, such improvements typically increase computational time, resulting in a tradeoff between accuracy and computational efficiency. Therefore, a systematic approach is required to determine the appropriate configuration. To address this need, we propose a unified data-driven framework specifically designed to optimize the configuration by balancing solution path accuracy and computational cost. Specifically, we generate a large-scale training dataset by measuring the accuracy and computation time of glmnet. Using this dataset, we construct neural networks to predict accuracy and computation time from data characteristics and configuration. For a new dataset, the proposed framework uses the trained networks to explore the configuration space and derive a Pareto front that represents the tradeoff between accuracy and computational cost. This front enables automatic selection of the configuration that maximizes accuracy under a user-specified time constraint. The proposed method is implemented in the R package glmnetconf, available at https://github.com/Shuhei-Muroya/glmnetconf.git." />
+<meta property="og:description" content="The glmnet package in R is widely used for lasso estimation because of its computational efficiency. Despite its popularity, glmnet occasionally yields solutions that deviate substantially from the true ones because of the inappropriate default configuration of the algorithm. The accuracy of the obtained solutions can be improved by appropriately tuning the configuration. However, such improvements typically increase computational time, resulting in a tradeoff between accuracy and computational efficiency. Therefore, a systematic approach is required to determine the appropriate configuration. To address this need, we propose a unified data-driven framework specifically designed to optimize the configuration by balancing solution path accuracy and computational cost. Specifically, we generate a large-scale training dataset by measuring the accuracy and computation time of glmnet. Using this dataset, we construct neural networks to predict accuracy and computation time from data characteristics and configuration. For a new dataset, the proposed framework uses the trained networks to explore the configuration space and derive a Pareto front that represents the tradeoff between accuracy and computational cost. This front enables automatic selection of the configuration that maximizes accuracy under a user-specified time constraint. The proposed method is implemented in the R package glmnetconf, available at https://github.com/Shuhei-Muroya/glmnetconf.git." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/18/Datadrivenconfigurationtuningofglmnetforbalancingaccuracyandcomputationalefficiency.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/18/Datadrivenconfigurationtuningofglmnetforbalancingaccuracyandcomputationalefficiency.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data-driven configuration tuning of glmnet for balancing accuracy and computational efficiency" />
+<script type="application/ld+json">
+{"description":"The glmnet package in R is widely used for lasso estimation because of its computational efficiency. Despite its popularity, glmnet occasionally yields solutions that deviate substantially from the true ones because of the inappropriate default configuration of the algorithm. The accuracy of the obtained solutions can be improved by appropriately tuning the configuration. However, such improvements typically increase computational time, resulting in a tradeoff between accuracy and computational efficiency. Therefore, a systematic approach is required to determine the appropriate configuration. To address this need, we propose a unified data-driven framework specifically designed to optimize the configuration by balancing solution path accuracy and computational cost. Specifically, we generate a large-scale training dataset by measuring the accuracy and computation time of glmnet. Using this dataset, we construct neural networks to predict accuracy and computation time from data characteristics and configuration. For a new dataset, the proposed framework uses the trained networks to explore the configuration space and derive a Pareto front that represents the tradeoff between accuracy and computational cost. This front enables automatic selection of the configuration that maximizes accuracy under a user-specified time constraint. The proposed method is implemented in the R package glmnetconf, available at https://github.com/Shuhei-Muroya/glmnetconf.git.","author":{"@type":"Person","name":"Shuhei Muroya, Kei Hirose"},"datePublished":"2026-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/18/Datadrivenconfigurationtuningofglmnetforbalancingaccuracyandcomputationalefficiency.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/18/Datadrivenconfigurationtuningofglmnetforbalancingaccuracyandcomputationalefficiency.html","headline":"Data-driven configuration tuning of glmnet for balancing accuracy and computational efficiency","@type":"BlogPosting","dateModified":"2026-03-18T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-18 00:00:00 +0000">03-18</time>
+  </p>
+  
+  <h1>Data-driven configuration tuning of glmnet for balancing accuracy and computational efficiency</h1>
+  <br>Shuhei Muroya, Kei Hirose</h3>
+  <br> [stat.CO,stat.ME,stat.ML]
+
+  <p>The glmnet package in R is widely used for lasso estimation because of its computational efficiency. Despite its popularity, glmnet occasionally yields solutions that deviate substantially from the true ones because of the inappropriate default configuration of the algorithm. The accuracy of the obtained solutions can be improved by appropriately tuning the configuration. However, such improvements typically increase computational time, resulting in a tradeoff between accuracy and computational efficiency. Therefore, a systematic approach is required to determine the appropriate configuration. To address this need, we propose a unified data-driven framework specifically designed to optimize the configuration by balancing solution path accuracy and computational cost. Specifically, we generate a large-scale training dataset by measuring the accuracy and computation time of glmnet. Using this dataset, we construct neural networks to predict accuracy and computation time from data characteristics and configuration. For a new dataset, the proposed framework uses the trained networks to explore the configuration space and derive a Pareto front that represents the tradeoff between accuracy and computational cost. This front enables automatic selection of the configuration that maximizes accuracy under a user-specified time constraint. The proposed method is implemented in the R package glmnetconf, available at https://github.com/Shuhei-Muroya/glmnetconf.git.</p>
+
+<p><a href="https://arxiv.org/abs/2602.17922">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
