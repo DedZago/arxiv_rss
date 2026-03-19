@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How Proxy Race Distorts Regression-Based Fairness Audits</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How Proxy Race Distorts Regression-Based Fairness Audits" />
+<meta name="author" content="Xi Xin, Giles Hooker, Fei Huang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Proxy-based race inference is increasingly used to conduct fairness assessments when protected-class data are unavailable or legally restricted – most prominently in U.S. fair-lending enforcement, and now explicitly contemplated in emerging insurance regulation, including Colorado’s draft SB21-169 testing framework and New York’s Insurance Circular Letter No. 7. Despite this growing regulatory relevance, little is known about how standard regression-based discrimination analyses behave when race is measured with error through proxies such as Bayesian Improved Surname Geocoding (BISG) or Bayesian Improved First Name and Surname Geocoding (BIFSG). This paper studies the consequences of using proxy-imputed race as a categorical regressor in regression-based fairness assessments. Treating proxy race as a categorical covariate subject to misclassification, we show that proxy-based coefficients become weighted mixtures of true group effects, systematically shrinking estimated disparities toward the majority group – even when overall classification accuracy is high. Empirically, using a linked North Carolina voter-insurance dataset with self-reported race and ZIP-level auto insurance premiums, we demonstrate two mechanisms through which it distorts inference: (i) the intrinsic mixing of group effects implied by misclassification, and (ii) structured errors that vary with ZIP-level racial composition and socioeconomic conditions and remain correlated with pricing residuals after controls. As a result, regression-based disparity estimates can be attenuated or amplified relative to analogous analyses based on self-reported race. Our findings caution against treating proxy race as a plug-in substitute in regulatory testing and highlight design implications for proxy-based audit frameworks in insurance and other high-stakes domains." />
+<meta property="og:description" content="Proxy-based race inference is increasingly used to conduct fairness assessments when protected-class data are unavailable or legally restricted – most prominently in U.S. fair-lending enforcement, and now explicitly contemplated in emerging insurance regulation, including Colorado’s draft SB21-169 testing framework and New York’s Insurance Circular Letter No. 7. Despite this growing regulatory relevance, little is known about how standard regression-based discrimination analyses behave when race is measured with error through proxies such as Bayesian Improved Surname Geocoding (BISG) or Bayesian Improved First Name and Surname Geocoding (BIFSG). This paper studies the consequences of using proxy-imputed race as a categorical regressor in regression-based fairness assessments. Treating proxy race as a categorical covariate subject to misclassification, we show that proxy-based coefficients become weighted mixtures of true group effects, systematically shrinking estimated disparities toward the majority group – even when overall classification accuracy is high. Empirically, using a linked North Carolina voter-insurance dataset with self-reported race and ZIP-level auto insurance premiums, we demonstrate two mechanisms through which it distorts inference: (i) the intrinsic mixing of group effects implied by misclassification, and (ii) structured errors that vary with ZIP-level racial composition and socioeconomic conditions and remain correlated with pricing residuals after controls. As a result, regression-based disparity estimates can be attenuated or amplified relative to analogous analyses based on self-reported race. Our findings caution against treating proxy race as a plug-in substitute in regulatory testing and highlight design implications for proxy-based audit frameworks in insurance and other high-stakes domains." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/19/HowProxyRaceDistortsRegressionBasedFairnessAudits.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/19/HowProxyRaceDistortsRegressionBasedFairnessAudits.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How Proxy Race Distorts Regression-Based Fairness Audits" />
+<script type="application/ld+json">
+{"description":"Proxy-based race inference is increasingly used to conduct fairness assessments when protected-class data are unavailable or legally restricted – most prominently in U.S. fair-lending enforcement, and now explicitly contemplated in emerging insurance regulation, including Colorado’s draft SB21-169 testing framework and New York’s Insurance Circular Letter No. 7. Despite this growing regulatory relevance, little is known about how standard regression-based discrimination analyses behave when race is measured with error through proxies such as Bayesian Improved Surname Geocoding (BISG) or Bayesian Improved First Name and Surname Geocoding (BIFSG). This paper studies the consequences of using proxy-imputed race as a categorical regressor in regression-based fairness assessments. Treating proxy race as a categorical covariate subject to misclassification, we show that proxy-based coefficients become weighted mixtures of true group effects, systematically shrinking estimated disparities toward the majority group – even when overall classification accuracy is high. Empirically, using a linked North Carolina voter-insurance dataset with self-reported race and ZIP-level auto insurance premiums, we demonstrate two mechanisms through which it distorts inference: (i) the intrinsic mixing of group effects implied by misclassification, and (ii) structured errors that vary with ZIP-level racial composition and socioeconomic conditions and remain correlated with pricing residuals after controls. As a result, regression-based disparity estimates can be attenuated or amplified relative to analogous analyses based on self-reported race. Our findings caution against treating proxy race as a plug-in substitute in regulatory testing and highlight design implications for proxy-based audit frameworks in insurance and other high-stakes domains.","author":{"@type":"Person","name":"Xi Xin, Giles Hooker, Fei Huang"},"datePublished":"2026-03-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/19/HowProxyRaceDistortsRegressionBasedFairnessAudits.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/19/HowProxyRaceDistortsRegressionBasedFairnessAudits.html","headline":"How Proxy Race Distorts Regression-Based Fairness Audits","@type":"BlogPosting","dateModified":"2026-03-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-19 00:00:00 +0000">03-19</time>
+  </p>
+  
+  <h1>How Proxy Race Distorts Regression-Based Fairness Audits</h1>
+  <br>Xi Xin, Giles Hooker, Fei Huang</h3>
+  <br> [stat.AP]
+
+  <p>Proxy-based race inference is increasingly used to conduct fairness assessments when protected-class data are unavailable or legally restricted – most prominently in U.S. fair-lending enforcement, and now explicitly contemplated in emerging insurance regulation, including Colorado’s draft SB21-169 testing framework and New York’s Insurance Circular Letter No. 7. Despite this growing regulatory relevance, little is known about how standard regression-based discrimination analyses behave when race is measured with error through proxies such as Bayesian Improved Surname Geocoding (BISG) or Bayesian Improved First Name and Surname Geocoding (BIFSG). This paper studies the consequences of using proxy-imputed race as a categorical regressor in regression-based fairness assessments. Treating proxy race as a categorical covariate subject to misclassification, we show that proxy-based coefficients become weighted mixtures of true group effects, systematically shrinking estimated disparities toward the majority group – even when overall classification accuracy is high. Empirically, using a linked North Carolina voter-insurance dataset with self-reported race and ZIP-level auto insurance premiums, we demonstrate two mechanisms through which it distorts inference: (i) the intrinsic mixing of group effects implied by misclassification, and (ii) structured errors that vary with ZIP-level racial composition and socioeconomic conditions and remain correlated with pricing residuals after controls. As a result, regression-based disparity estimates can be attenuated or amplified relative to analogous analyses based on self-reported race. Our findings caution against treating proxy race as a plug-in substitute in regulatory testing and highlight design implications for proxy-based audit frameworks in insurance and other high-stakes domains.</p>
+
+<p><a href="https://arxiv.org/abs/2603.17106">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

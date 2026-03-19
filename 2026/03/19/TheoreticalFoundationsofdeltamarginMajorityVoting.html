@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Theoretical Foundations of {\delta}-margin Majority Voting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Theoretical Foundations of {\delta}-margin Majority Voting" />
+<meta name="author" content="Margarita Boyarskaya, Panos Ipeirotis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In high-stakes ML applications such as fraud detection, medical diagnostics, and content moderation, practitioners rely on consensus-based approaches to control prediction quality. A particularly valuable technique – {\delta}\delta {\delta}-margin majority voting – collects votes sequentially until one label exceeds alternatives by a threshold {\delta}\delta {\delta}, offering stronger confidence than simple majority voting. Despite widespread adoption, this approach has lacked rigorous theoretical foundations, leaving practitioners reliant on heuristics for key metrics like expected accuracy and cost. This paper establishes a comprehensive theoretical framework for {\delta}\delta {\delta}-margin majority voting by formulating it as an absorbing Markov chain and leveraging Gambler’s Ruin theory. Our contributions form a practical \emph{design calculus} for {\delta}\delta {\delta}-margin voting: (1)~Closed-form expressions for consensus accuracy, expected voting duration, variance, and the stopping-time PMF, enabling model-based design rather than trial-and-error. (2)~A Bayesian extension handling uncertainty in worker accuracy, supporting real-time monitoring of expected quality and cost as votes arrive, with single-Beta and mixture-of-Betas priors. (3)~Cost-calibration methods for achieving equivalent quality across worker pools with different accuracies and for setting payment rates accordingly. We validate our predictions on two real-world datasets, demonstrating close agreement between theory and observed outcomes. The framework gives practitioners a rigorous toolkit for designing {\delta}\delta {\delta}-margin voting processes, replacing ad-hoc experimentation with model-based design where quality control and cost transparency are essential." />
+<meta property="og:description" content="In high-stakes ML applications such as fraud detection, medical diagnostics, and content moderation, practitioners rely on consensus-based approaches to control prediction quality. A particularly valuable technique – {\delta}\delta {\delta}-margin majority voting – collects votes sequentially until one label exceeds alternatives by a threshold {\delta}\delta {\delta}, offering stronger confidence than simple majority voting. Despite widespread adoption, this approach has lacked rigorous theoretical foundations, leaving practitioners reliant on heuristics for key metrics like expected accuracy and cost. This paper establishes a comprehensive theoretical framework for {\delta}\delta {\delta}-margin majority voting by formulating it as an absorbing Markov chain and leveraging Gambler’s Ruin theory. Our contributions form a practical \emph{design calculus} for {\delta}\delta {\delta}-margin voting: (1)~Closed-form expressions for consensus accuracy, expected voting duration, variance, and the stopping-time PMF, enabling model-based design rather than trial-and-error. (2)~A Bayesian extension handling uncertainty in worker accuracy, supporting real-time monitoring of expected quality and cost as votes arrive, with single-Beta and mixture-of-Betas priors. (3)~Cost-calibration methods for achieving equivalent quality across worker pools with different accuracies and for setting payment rates accordingly. We validate our predictions on two real-world datasets, demonstrating close agreement between theory and observed outcomes. The framework gives practitioners a rigorous toolkit for designing {\delta}\delta {\delta}-margin voting processes, replacing ad-hoc experimentation with model-based design where quality control and cost transparency are essential." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/19/TheoreticalFoundationsofdeltamarginMajorityVoting.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/19/TheoreticalFoundationsofdeltamarginMajorityVoting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Theoretical Foundations of {\delta}-margin Majority Voting" />
+<script type="application/ld+json">
+{"description":"In high-stakes ML applications such as fraud detection, medical diagnostics, and content moderation, practitioners rely on consensus-based approaches to control prediction quality. A particularly valuable technique – {\\delta}\\delta {\\delta}-margin majority voting – collects votes sequentially until one label exceeds alternatives by a threshold {\\delta}\\delta {\\delta}, offering stronger confidence than simple majority voting. Despite widespread adoption, this approach has lacked rigorous theoretical foundations, leaving practitioners reliant on heuristics for key metrics like expected accuracy and cost. This paper establishes a comprehensive theoretical framework for {\\delta}\\delta {\\delta}-margin majority voting by formulating it as an absorbing Markov chain and leveraging Gambler’s Ruin theory. Our contributions form a practical \\emph{design calculus} for {\\delta}\\delta {\\delta}-margin voting: (1)~Closed-form expressions for consensus accuracy, expected voting duration, variance, and the stopping-time PMF, enabling model-based design rather than trial-and-error. (2)~A Bayesian extension handling uncertainty in worker accuracy, supporting real-time monitoring of expected quality and cost as votes arrive, with single-Beta and mixture-of-Betas priors. (3)~Cost-calibration methods for achieving equivalent quality across worker pools with different accuracies and for setting payment rates accordingly. We validate our predictions on two real-world datasets, demonstrating close agreement between theory and observed outcomes. The framework gives practitioners a rigorous toolkit for designing {\\delta}\\delta {\\delta}-margin voting processes, replacing ad-hoc experimentation with model-based design where quality control and cost transparency are essential.","author":{"@type":"Person","name":"Margarita Boyarskaya, Panos Ipeirotis"},"datePublished":"2026-03-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/19/TheoreticalFoundationsofdeltamarginMajorityVoting.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/19/TheoreticalFoundationsofdeltamarginMajorityVoting.html","headline":"Theoretical Foundations of {\\delta}-margin Majority Voting","@type":"BlogPosting","dateModified":"2026-03-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-19 00:00:00 +0000">03-19</time>
+  </p>
+  
+  <h1>Theoretical Foundations of {\delta}-margin Majority Voting</h1>
+  <br>Margarita Boyarskaya, Panos Ipeirotis</h3>
+  <br> [stat.AP]
+
+  <p>In high-stakes ML applications such as fraud detection, medical diagnostics, and content moderation, practitioners rely on consensus-based approaches to control prediction quality. A particularly valuable technique – {\delta}\delta {\delta}-margin majority voting – collects votes sequentially until one label exceeds alternatives by a threshold {\delta}\delta {\delta}, offering stronger confidence than simple majority voting. Despite widespread adoption, this approach has lacked rigorous theoretical foundations, leaving practitioners reliant on heuristics for key metrics like expected accuracy and cost.
+  This paper establishes a comprehensive theoretical framework for {\delta}\delta {\delta}-margin majority voting by formulating it as an absorbing Markov chain and leveraging Gambler’s Ruin theory. Our contributions form a practical \emph{design calculus} for {\delta}\delta {\delta}-margin voting: (1)~Closed-form expressions for consensus accuracy, expected voting duration, variance, and the stopping-time PMF, enabling model-based design rather than trial-and-error. (2)~A Bayesian extension handling uncertainty in worker accuracy, supporting real-time monitoring of expected quality and cost as votes arrive, with single-Beta and mixture-of-Betas priors. (3)~Cost-calibration methods for achieving equivalent quality across worker pools with different accuracies and for setting payment rates accordingly.
+  We validate our predictions on two real-world datasets, demonstrating close agreement between theory and observed outcomes. The framework gives practitioners a rigorous toolkit for designing {\delta}\delta {\delta}-margin voting processes, replacing ad-hoc experimentation with model-based design where quality control and cost transparency are essential.</p>
+
+<p><a href="https://arxiv.org/abs/2111.06390">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
