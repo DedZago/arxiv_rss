@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Preconditioning Hamiltonian Monte Carlo by minimizing Fisher Divergence</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Preconditioning Hamiltonian Monte Carlo by minimizing Fisher Divergence" />
+<meta name="author" content="Adrian Seyboldt, Eliot L. Carlson, Bob Carpenter" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Although Hamiltonian Monte Carlo (HMC) scales as O(d^(1/4)) in dimension, there is a large constant factor determined by the curvature of the target density. This constant factor can be reduced in most cases through preconditioning, the state of the art for which uses diagonal or dense penalized maximum likelihood estimation of (co)variance based on a sample of warmup draws. These estimates converge slowly in the diagonal case and scale poorly when expanded to the dense case. We propose a more effective estimator based on minimizing the sample Fisher divergence from a linearly transformed density to a standard normal distribution. We present this estimator in three forms, (a) diagonal, (b) dense, and (c) low-rank plus diagonal. Using a collection of 114 models from posteriordb, we demonstrate that the diagonal minimizer of Fisher divergence outperforms the industry-standard variance-based diagonal estimators used by Stan and PyMC by a median factor of 1.3. The low-rank plus diagonal minimizer of the Fisher divergence outperforms Stan and PyMC’s diagonal estimators by a median factor of 4." />
+<meta property="og:description" content="Although Hamiltonian Monte Carlo (HMC) scales as O(d^(1/4)) in dimension, there is a large constant factor determined by the curvature of the target density. This constant factor can be reduced in most cases through preconditioning, the state of the art for which uses diagonal or dense penalized maximum likelihood estimation of (co)variance based on a sample of warmup draws. These estimates converge slowly in the diagonal case and scale poorly when expanded to the dense case. We propose a more effective estimator based on minimizing the sample Fisher divergence from a linearly transformed density to a standard normal distribution. We present this estimator in three forms, (a) diagonal, (b) dense, and (c) low-rank plus diagonal. Using a collection of 114 models from posteriordb, we demonstrate that the diagonal minimizer of Fisher divergence outperforms the industry-standard variance-based diagonal estimators used by Stan and PyMC by a median factor of 1.3. The low-rank plus diagonal minimizer of the Fisher divergence outperforms Stan and PyMC’s diagonal estimators by a median factor of 4." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/20/PreconditioningHamiltonianMonteCarlobyminimizingFisherDivergence.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/20/PreconditioningHamiltonianMonteCarlobyminimizingFisherDivergence.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Preconditioning Hamiltonian Monte Carlo by minimizing Fisher Divergence" />
+<script type="application/ld+json">
+{"description":"Although Hamiltonian Monte Carlo (HMC) scales as O(d^(1/4)) in dimension, there is a large constant factor determined by the curvature of the target density. This constant factor can be reduced in most cases through preconditioning, the state of the art for which uses diagonal or dense penalized maximum likelihood estimation of (co)variance based on a sample of warmup draws. These estimates converge slowly in the diagonal case and scale poorly when expanded to the dense case. We propose a more effective estimator based on minimizing the sample Fisher divergence from a linearly transformed density to a standard normal distribution. We present this estimator in three forms, (a) diagonal, (b) dense, and (c) low-rank plus diagonal. Using a collection of 114 models from posteriordb, we demonstrate that the diagonal minimizer of Fisher divergence outperforms the industry-standard variance-based diagonal estimators used by Stan and PyMC by a median factor of 1.3. The low-rank plus diagonal minimizer of the Fisher divergence outperforms Stan and PyMC’s diagonal estimators by a median factor of 4.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/20/PreconditioningHamiltonianMonteCarlobyminimizingFisherDivergence.html"},"author":{"@type":"Person","name":"Adrian Seyboldt, Eliot L. Carlson, Bob Carpenter"},"dateModified":"2026-03-20T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/03/20/PreconditioningHamiltonianMonteCarlobyminimizingFisherDivergence.html","headline":"Preconditioning Hamiltonian Monte Carlo by minimizing Fisher Divergence","@type":"BlogPosting","datePublished":"2026-03-20T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-20 00:00:00 +0000">03-20</time>
+  </p>
+  
+  <h1>Preconditioning Hamiltonian Monte Carlo by minimizing Fisher Divergence</h1>
+  <br>Adrian Seyboldt, Eliot L. Carlson, Bob Carpenter</h3>
+  <br> [stat.CO]
+
+  <p>Although Hamiltonian Monte Carlo (HMC) scales as O(d^(1/4)) in dimension, there is a large constant factor determined by the curvature of the target density. This constant factor can be reduced in most cases through preconditioning, the state of the art for which uses diagonal or dense penalized maximum likelihood estimation of (co)variance based on a sample of warmup draws. These estimates converge slowly in the diagonal case and scale poorly when expanded to the dense case. We propose a more effective estimator based on minimizing the sample Fisher divergence from a linearly transformed density to a standard normal distribution. We present this estimator in three forms, (a) diagonal, (b) dense, and (c) low-rank plus diagonal. Using a collection of 114 models from posteriordb, we demonstrate that the diagonal minimizer of Fisher divergence outperforms the industry-standard variance-based diagonal estimators used by Stan and PyMC by a median factor of 1.3. The low-rank plus diagonal minimizer of the Fisher divergence outperforms Stan and PyMC’s diagonal estimators by a median factor of 4.</p>
+
+<p><a href="https://arxiv.org/abs/2603.18845">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
