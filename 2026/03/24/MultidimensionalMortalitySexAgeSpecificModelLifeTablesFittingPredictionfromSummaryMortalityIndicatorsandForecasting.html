@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Multi-dimensional Mortality: Sex-Age-Specific Model Life Tables, Fitting, Prediction from Summary Mortality Indicators, and Forecasting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Multi-dimensional Mortality: Sex-Age-Specific Model Life Tables, Fitting, Prediction from Summary Mortality Indicators, and Forecasting" />
+<meta name="author" content="Samuel J. Clark" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Demographers rely on a variety of tools and methods to work with mortality schedules - model life tables, fitting methods, summary-indicator prediction, and forecasting - largely developed independently and not providing structurally coherent sex-specific outputs. The multi-dimensional mortality model (MDMx) unifies all four within one Tucker tensor decomposition demonstrated using the Human Mortality Database. Period life tables from the Human Mortality Database are organized as a four-way tensor of logit(1qx) indexed by sex, age, country, and year. Shared factor matrices for sex and age make every output schedule structurally coherent by construction. From this decomposition four capabilities emerge: model life tables via clustering and smooth within-regime trajectories; life table fitting via a three-stage algorithm with Bayes-factor disruption detection; summary-indicator prediction mapping child or adult mortality to complete schedules, reformulating SVD-Comp in tensor coordinates; and forecasting via a damped local linear trend Kalman filter on PCA-reduced core matrices with hierarchical drift." />
+<meta property="og:description" content="Demographers rely on a variety of tools and methods to work with mortality schedules - model life tables, fitting methods, summary-indicator prediction, and forecasting - largely developed independently and not providing structurally coherent sex-specific outputs. The multi-dimensional mortality model (MDMx) unifies all four within one Tucker tensor decomposition demonstrated using the Human Mortality Database. Period life tables from the Human Mortality Database are organized as a four-way tensor of logit(1qx) indexed by sex, age, country, and year. Shared factor matrices for sex and age make every output schedule structurally coherent by construction. From this decomposition four capabilities emerge: model life tables via clustering and smooth within-regime trajectories; life table fitting via a three-stage algorithm with Bayes-factor disruption detection; summary-indicator prediction mapping child or adult mortality to complete schedules, reformulating SVD-Comp in tensor coordinates; and forecasting via a damped local linear trend Kalman filter on PCA-reduced core matrices with hierarchical drift." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/24/MultidimensionalMortalitySexAgeSpecificModelLifeTablesFittingPredictionfromSummaryMortalityIndicatorsandForecasting.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/24/MultidimensionalMortalitySexAgeSpecificModelLifeTablesFittingPredictionfromSummaryMortalityIndicatorsandForecasting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Multi-dimensional Mortality: Sex-Age-Specific Model Life Tables, Fitting, Prediction from Summary Mortality Indicators, and Forecasting" />
+<script type="application/ld+json">
+{"description":"Demographers rely on a variety of tools and methods to work with mortality schedules - model life tables, fitting methods, summary-indicator prediction, and forecasting - largely developed independently and not providing structurally coherent sex-specific outputs. The multi-dimensional mortality model (MDMx) unifies all four within one Tucker tensor decomposition demonstrated using the Human Mortality Database. Period life tables from the Human Mortality Database are organized as a four-way tensor of logit(1qx) indexed by sex, age, country, and year. Shared factor matrices for sex and age make every output schedule structurally coherent by construction. From this decomposition four capabilities emerge: model life tables via clustering and smooth within-regime trajectories; life table fitting via a three-stage algorithm with Bayes-factor disruption detection; summary-indicator prediction mapping child or adult mortality to complete schedules, reformulating SVD-Comp in tensor coordinates; and forecasting via a damped local linear trend Kalman filter on PCA-reduced core matrices with hierarchical drift.","author":{"@type":"Person","name":"Samuel J. Clark"},"datePublished":"2026-03-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/24/MultidimensionalMortalitySexAgeSpecificModelLifeTablesFittingPredictionfromSummaryMortalityIndicatorsandForecasting.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/24/MultidimensionalMortalitySexAgeSpecificModelLifeTablesFittingPredictionfromSummaryMortalityIndicatorsandForecasting.html","headline":"Multi-dimensional Mortality: Sex-Age-Specific Model Life Tables, Fitting, Prediction from Summary Mortality Indicators, and Forecasting","@type":"BlogPosting","dateModified":"2026-03-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-24 00:00:00 +0000">03-24</time>
+  </p>
+  
+  <h1>Multi-dimensional Mortality: Sex-Age-Specific Model Life Tables, Fitting, Prediction from Summary Mortality Indicators, and Forecasting</h1>
+  <br>Samuel J. Clark</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Demographers rely on a variety of tools and methods to work with mortality schedules - model life tables, fitting methods, summary-indicator prediction, and forecasting - largely developed independently and not providing structurally coherent sex-specific outputs. The multi-dimensional mortality model (MDMx) unifies all four within one Tucker tensor decomposition demonstrated using the Human Mortality Database.
+  Period life tables from the Human Mortality Database are organized as a four-way tensor of logit(1qx) indexed by sex, age, country, and year. Shared factor matrices for sex and age make every output schedule structurally coherent by construction. From this decomposition four capabilities emerge: model life tables via clustering and smooth within-regime trajectories; life table fitting via a three-stage algorithm with Bayes-factor disruption detection; summary-indicator prediction mapping child or adult mortality to complete schedules, reformulating SVD-Comp in tensor coordinates; and forecasting via a damped local linear trend Kalman filter on PCA-reduced core matrices with hierarchical drift.</p>
+
+<p><a href="https://arxiv.org/abs/2603.20518">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

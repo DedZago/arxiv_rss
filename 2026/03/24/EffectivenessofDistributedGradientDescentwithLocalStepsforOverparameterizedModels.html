@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Effectiveness of Distributed Gradient Descent with Local Steps for Overparameterized Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Effectiveness of Distributed Gradient Descent with Local Steps for Overparameterized Models" />
+<meta name="author" content="Heng Zhu, Harsh Vardhan, Arya Mazumdar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In distributed training of machine learning models, gradient descent with local iterative steps, commonly known as Local (Stochastic) Gradient Descent (Local-(S)GD) or Federated averaging (FedAvg), is a very popular method to mitigate communication burden. In this method, gradient steps based on local datasets are taken independently in distributed compute nodes to update the local models, which are then aggregated intermittently. In the interpolation regime, Local-GD can converge to zero training loss. However, with many potential solutions corresponding to zero training loss, it is not known which solution Local-GD converges to. In this work we answer this question by analyzing implicit bias of Local-GD for classification tasks with linearly separable data. For the interpolation regime, our analysis shows that the aggregated global model obtained from Local-GD, with arbitrary number of local steps, converges exactly to the model that would be obtained if all data were in one place (centralized model) ‘‘in direction’’. Our result gives the exact rate of convergence to the centralized model with respect to the number of local steps. We also obtain the same implicit bias with a learning rate independent of number of local steps with a modified version of the Local-GD algorithm. Our analysis provides a new view to understand why Local-GD can still perform well with a very large number of local steps even for heterogeneous data. Lastly, we also discuss the extension of our results to Local-SGD and non-separable data." />
+<meta property="og:description" content="In distributed training of machine learning models, gradient descent with local iterative steps, commonly known as Local (Stochastic) Gradient Descent (Local-(S)GD) or Federated averaging (FedAvg), is a very popular method to mitigate communication burden. In this method, gradient steps based on local datasets are taken independently in distributed compute nodes to update the local models, which are then aggregated intermittently. In the interpolation regime, Local-GD can converge to zero training loss. However, with many potential solutions corresponding to zero training loss, it is not known which solution Local-GD converges to. In this work we answer this question by analyzing implicit bias of Local-GD for classification tasks with linearly separable data. For the interpolation regime, our analysis shows that the aggregated global model obtained from Local-GD, with arbitrary number of local steps, converges exactly to the model that would be obtained if all data were in one place (centralized model) ‘‘in direction’’. Our result gives the exact rate of convergence to the centralized model with respect to the number of local steps. We also obtain the same implicit bias with a learning rate independent of number of local steps with a modified version of the Local-GD algorithm. Our analysis provides a new view to understand why Local-GD can still perform well with a very large number of local steps even for heterogeneous data. Lastly, we also discuss the extension of our results to Local-SGD and non-separable data." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/24/EffectivenessofDistributedGradientDescentwithLocalStepsforOverparameterizedModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/24/EffectivenessofDistributedGradientDescentwithLocalStepsforOverparameterizedModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Effectiveness of Distributed Gradient Descent with Local Steps for Overparameterized Models" />
+<script type="application/ld+json">
+{"description":"In distributed training of machine learning models, gradient descent with local iterative steps, commonly known as Local (Stochastic) Gradient Descent (Local-(S)GD) or Federated averaging (FedAvg), is a very popular method to mitigate communication burden. In this method, gradient steps based on local datasets are taken independently in distributed compute nodes to update the local models, which are then aggregated intermittently. In the interpolation regime, Local-GD can converge to zero training loss. However, with many potential solutions corresponding to zero training loss, it is not known which solution Local-GD converges to. In this work we answer this question by analyzing implicit bias of Local-GD for classification tasks with linearly separable data. For the interpolation regime, our analysis shows that the aggregated global model obtained from Local-GD, with arbitrary number of local steps, converges exactly to the model that would be obtained if all data were in one place (centralized model) ‘‘in direction’’. Our result gives the exact rate of convergence to the centralized model with respect to the number of local steps. We also obtain the same implicit bias with a learning rate independent of number of local steps with a modified version of the Local-GD algorithm. Our analysis provides a new view to understand why Local-GD can still perform well with a very large number of local steps even for heterogeneous data. Lastly, we also discuss the extension of our results to Local-SGD and non-separable data.","author":{"@type":"Person","name":"Heng Zhu, Harsh Vardhan, Arya Mazumdar"},"datePublished":"2026-03-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/24/EffectivenessofDistributedGradientDescentwithLocalStepsforOverparameterizedModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/24/EffectivenessofDistributedGradientDescentwithLocalStepsforOverparameterizedModels.html","headline":"Effectiveness of Distributed Gradient Descent with Local Steps for Overparameterized Models","@type":"BlogPosting","dateModified":"2026-03-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-24 00:00:00 +0000">03-24</time>
+  </p>
+  
+  <h1>Effectiveness of Distributed Gradient Descent with Local Steps for Overparameterized Models</h1>
+  <br>Heng Zhu, Harsh Vardhan, Arya Mazumdar</h3>
+  <br> [stat.ML]
+
+  <p>In distributed training of machine learning models, gradient descent with local iterative steps, commonly known as Local (Stochastic) Gradient Descent (Local-(S)GD) or Federated averaging (FedAvg), is a very popular method to mitigate communication burden. In this method, gradient steps based on local datasets are taken independently in distributed compute nodes to update the local models, which are then aggregated intermittently. In the interpolation regime, Local-GD can converge to zero training loss. However, with many potential solutions corresponding to zero training loss, it is not known which solution Local-GD converges to. In this work we answer this question by analyzing implicit bias of Local-GD for classification tasks with linearly separable data. For the interpolation regime, our analysis shows that the aggregated global model obtained from Local-GD, with arbitrary number of local steps, converges exactly to the model that would be obtained if all data were in one place (centralized model) ‘‘in direction’’. Our result gives the exact rate of convergence to the centralized model with respect to the number of local steps. We also obtain the same implicit bias with a learning rate independent of number of local steps with a modified version of the Local-GD algorithm. Our analysis provides a new view to understand why Local-GD can still perform well with a very large number of local steps even for heterogeneous data. Lastly, we also discuss the extension of our results to Local-SGD and non-separable data.</p>
+
+<p><a href="https://arxiv.org/abs/2412.07971">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
