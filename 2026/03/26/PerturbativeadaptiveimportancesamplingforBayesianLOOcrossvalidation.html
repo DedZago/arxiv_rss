@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Perturbative adaptive importance sampling for Bayesian LOO cross-validation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Perturbative adaptive importance sampling for Bayesian LOO cross-validation" />
+<meta name="author" content="Joshua C Chang, Xiangting Li, Tianyi Su, Shixin Xu, Hao-Ren Yao, Julia Porcino, Carson Chow" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Importance sampling (IS) is an efficient stand-in for model refitting in performing (LOO) cross-validation (CV) on a Bayesian model. IS inverts the Bayesian update for a single observation by reweighting posterior samples. The so-called importance weights have high variance – we resolve this issue through adaptation by transformation. We observe that removing a single observation perturbs the posterior by $\mathcal{O}(1/n)$, motivating bijective transformations of the form $T(\theta)=\theta + h Q(\theta)$ for $0&lt;h\ll 1.$ We introduce several such transformations: partial moment matching, which generalizes prior work on affine moment-matching with a tunable step size; log-likelihood descent, which partially invert the Bayesian update for an observation; and gradient flow steps that minimize the KL divergence or IS variance. The gradient flow and likelihood descent transformations require Jacobian determinants, which are available via auto-differentiation; we additionally derive closed-form expressions for logistic regression and shallow ReLU networks. We tested the methodology on classification ($n\ll p$), count regression (Poisson and zero-inflated negative binomial), and survival analysis problems, finding that no single transformation dominates but their combination nearly eliminates the need to refit." />
+<meta property="og:description" content="Importance sampling (IS) is an efficient stand-in for model refitting in performing (LOO) cross-validation (CV) on a Bayesian model. IS inverts the Bayesian update for a single observation by reweighting posterior samples. The so-called importance weights have high variance – we resolve this issue through adaptation by transformation. We observe that removing a single observation perturbs the posterior by $\mathcal{O}(1/n)$, motivating bijective transformations of the form $T(\theta)=\theta + h Q(\theta)$ for $0&lt;h\ll 1.$ We introduce several such transformations: partial moment matching, which generalizes prior work on affine moment-matching with a tunable step size; log-likelihood descent, which partially invert the Bayesian update for an observation; and gradient flow steps that minimize the KL divergence or IS variance. The gradient flow and likelihood descent transformations require Jacobian determinants, which are available via auto-differentiation; we additionally derive closed-form expressions for logistic regression and shallow ReLU networks. We tested the methodology on classification ($n\ll p$), count regression (Poisson and zero-inflated negative binomial), and survival analysis problems, finding that no single transformation dominates but their combination nearly eliminates the need to refit." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/26/PerturbativeadaptiveimportancesamplingforBayesianLOOcrossvalidation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/26/PerturbativeadaptiveimportancesamplingforBayesianLOOcrossvalidation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Perturbative adaptive importance sampling for Bayesian LOO cross-validation" />
+<script type="application/ld+json">
+{"description":"Importance sampling (IS) is an efficient stand-in for model refitting in performing (LOO) cross-validation (CV) on a Bayesian model. IS inverts the Bayesian update for a single observation by reweighting posterior samples. The so-called importance weights have high variance – we resolve this issue through adaptation by transformation. We observe that removing a single observation perturbs the posterior by $\\mathcal{O}(1/n)$, motivating bijective transformations of the form $T(\\theta)=\\theta + h Q(\\theta)$ for $0&lt;h\\ll 1.$ We introduce several such transformations: partial moment matching, which generalizes prior work on affine moment-matching with a tunable step size; log-likelihood descent, which partially invert the Bayesian update for an observation; and gradient flow steps that minimize the KL divergence or IS variance. The gradient flow and likelihood descent transformations require Jacobian determinants, which are available via auto-differentiation; we additionally derive closed-form expressions for logistic regression and shallow ReLU networks. We tested the methodology on classification ($n\\ll p$), count regression (Poisson and zero-inflated negative binomial), and survival analysis problems, finding that no single transformation dominates but their combination nearly eliminates the need to refit.","author":{"@type":"Person","name":"Joshua C Chang, Xiangting Li, Tianyi Su, Shixin Xu, Hao-Ren Yao, Julia Porcino, Carson Chow"},"datePublished":"2026-03-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/26/PerturbativeadaptiveimportancesamplingforBayesianLOOcrossvalidation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/26/PerturbativeadaptiveimportancesamplingforBayesianLOOcrossvalidation.html","headline":"Perturbative adaptive importance sampling for Bayesian LOO cross-validation","@type":"BlogPosting","dateModified":"2026-03-26T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-26 00:00:00 +0000">03-26</time>
+  </p>
+  
+  <h1>Perturbative adaptive importance sampling for Bayesian LOO cross-validation</h1>
+  <br>Joshua C Chang, Xiangting Li, Tianyi Su, Shixin Xu, Hao-Ren Yao, Julia Porcino, Carson Chow</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Importance sampling (IS) is an efficient stand-in for model refitting in performing (LOO) cross-validation (CV) on a Bayesian model. IS inverts the Bayesian update for a single observation by reweighting posterior samples. The so-called importance weights have high variance – we resolve this issue through adaptation by transformation. We observe that removing a single observation perturbs the posterior by $\mathcal{O}(1/n)$, motivating bijective transformations of the form $T(\theta)=\theta + h Q(\theta)$ for $0&lt;h\ll 1.$ We introduce several such transformations: partial moment matching, which generalizes prior work on affine moment-matching with a tunable step size; log-likelihood descent, which partially invert the Bayesian update for an observation; and gradient flow steps that minimize the KL divergence or IS variance. The gradient flow and likelihood descent transformations require Jacobian determinants, which are available via auto-differentiation; we additionally derive closed-form expressions for logistic regression and shallow ReLU networks. We tested the methodology on classification ($n\ll p$), count regression (Poisson and zero-inflated negative binomial), and survival analysis problems, finding that no single transformation dominates but their combination nearly eliminates the need to refit.</p>
+
+<p><a href="https://arxiv.org/abs/2402.08151">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
