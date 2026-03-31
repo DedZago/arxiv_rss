@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Greedy Is a Strong Default: Agents as Iterative Optimizers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Greedy Is a Strong Default: Agents as Iterative Optimizers" />
+<meta name="author" content="Yitao Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Classical optimization algorithms–hill climbing, simulated annealing, population-based methods–generate candidate solutions via random perturbations. We replace the random proposal generator with an LLM agent that reasons about evaluation diagnostics to propose informed candidates, and ask: does the classical optimization machinery still help when the proposer is no longer random? We evaluate on four tasks spanning discrete, mixed, and continuous search spaces (all replicated across 3 independent runs): rule-based classification on Breast Cancer (test accuracy 86.0% to 96.5%), mixed hyperparameter optimization for MobileNetV3-Small on STL-10 (84.5% to 85.8%, zero catastrophic failures vs. 60% for random search), LoRA fine-tuning of Qwen2.5-0.5B on SST-2 (89.5% to 92.7%, matching Optuna TPE with 2x efficiency), and XGBoost on Adult Census (AUC 0.9297 to 0.9317, tying CMA-ES with 3x fewer evaluations). Empirically, on these tasks: a cross-task ablation shows that simulated annealing, parallel investigators, and even a second LLM model (OpenAI Codex) provide no benefit over greedy hill climbing while requiring 2-3x more evaluations. In our setting, the LLM’s learned prior appears strong enough that acceptance-rule sophistication has limited impact–round 1 alone delivers the majority of improvement, and variants converge to similar configurations across strategies. The practical implication is surprising simplicity: greedy hill climbing with early stopping is a strong default. Beyond accuracy, the framework produces human-interpretable artifacts–the discovered cancer classification rules independently recapitulate established cytopathology principles." />
+<meta property="og:description" content="Classical optimization algorithms–hill climbing, simulated annealing, population-based methods–generate candidate solutions via random perturbations. We replace the random proposal generator with an LLM agent that reasons about evaluation diagnostics to propose informed candidates, and ask: does the classical optimization machinery still help when the proposer is no longer random? We evaluate on four tasks spanning discrete, mixed, and continuous search spaces (all replicated across 3 independent runs): rule-based classification on Breast Cancer (test accuracy 86.0% to 96.5%), mixed hyperparameter optimization for MobileNetV3-Small on STL-10 (84.5% to 85.8%, zero catastrophic failures vs. 60% for random search), LoRA fine-tuning of Qwen2.5-0.5B on SST-2 (89.5% to 92.7%, matching Optuna TPE with 2x efficiency), and XGBoost on Adult Census (AUC 0.9297 to 0.9317, tying CMA-ES with 3x fewer evaluations). Empirically, on these tasks: a cross-task ablation shows that simulated annealing, parallel investigators, and even a second LLM model (OpenAI Codex) provide no benefit over greedy hill climbing while requiring 2-3x more evaluations. In our setting, the LLM’s learned prior appears strong enough that acceptance-rule sophistication has limited impact–round 1 alone delivers the majority of improvement, and variants converge to similar configurations across strategies. The practical implication is surprising simplicity: greedy hill climbing with early stopping is a strong default. Beyond accuracy, the framework produces human-interpretable artifacts–the discovered cancer classification rules independently recapitulate established cytopathology principles." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/31/GreedyIsaStrongDefaultAgentsasIterativeOptimizers.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/31/GreedyIsaStrongDefaultAgentsasIterativeOptimizers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Greedy Is a Strong Default: Agents as Iterative Optimizers" />
+<script type="application/ld+json">
+{"description":"Classical optimization algorithms–hill climbing, simulated annealing, population-based methods–generate candidate solutions via random perturbations. We replace the random proposal generator with an LLM agent that reasons about evaluation diagnostics to propose informed candidates, and ask: does the classical optimization machinery still help when the proposer is no longer random? We evaluate on four tasks spanning discrete, mixed, and continuous search spaces (all replicated across 3 independent runs): rule-based classification on Breast Cancer (test accuracy 86.0% to 96.5%), mixed hyperparameter optimization for MobileNetV3-Small on STL-10 (84.5% to 85.8%, zero catastrophic failures vs. 60% for random search), LoRA fine-tuning of Qwen2.5-0.5B on SST-2 (89.5% to 92.7%, matching Optuna TPE with 2x efficiency), and XGBoost on Adult Census (AUC 0.9297 to 0.9317, tying CMA-ES with 3x fewer evaluations). Empirically, on these tasks: a cross-task ablation shows that simulated annealing, parallel investigators, and even a second LLM model (OpenAI Codex) provide no benefit over greedy hill climbing while requiring 2-3x more evaluations. In our setting, the LLM’s learned prior appears strong enough that acceptance-rule sophistication has limited impact–round 1 alone delivers the majority of improvement, and variants converge to similar configurations across strategies. The practical implication is surprising simplicity: greedy hill climbing with early stopping is a strong default. Beyond accuracy, the framework produces human-interpretable artifacts–the discovered cancer classification rules independently recapitulate established cytopathology principles.","author":{"@type":"Person","name":"Yitao Li"},"datePublished":"2026-03-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/31/GreedyIsaStrongDefaultAgentsasIterativeOptimizers.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/31/GreedyIsaStrongDefaultAgentsasIterativeOptimizers.html","headline":"Greedy Is a Strong Default: Agents as Iterative Optimizers","@type":"BlogPosting","dateModified":"2026-03-31T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-31 00:00:00 +0000">03-31</time>
+  </p>
+  
+  <h1>Greedy Is a Strong Default: Agents as Iterative Optimizers</h1>
+  <br>Yitao Li</h3>
+  <br> [stat.CO]
+
+  <p>Classical optimization algorithms–hill climbing, simulated annealing, population-based methods–generate candidate solutions via random perturbations. We replace the random proposal generator with an LLM agent that reasons about evaluation diagnostics to propose informed candidates, and ask: does the classical optimization machinery still help when the proposer is no longer random? We evaluate on four tasks spanning discrete, mixed, and continuous search spaces (all replicated across 3 independent runs): rule-based classification on Breast Cancer (test accuracy 86.0% to 96.5%), mixed hyperparameter optimization for MobileNetV3-Small on STL-10 (84.5% to 85.8%, zero catastrophic failures vs. 60% for random search), LoRA fine-tuning of Qwen2.5-0.5B on SST-2 (89.5% to 92.7%, matching Optuna TPE with 2x efficiency), and XGBoost on Adult Census (AUC 0.9297 to 0.9317, tying CMA-ES with 3x fewer evaluations). Empirically, on these tasks: a cross-task ablation shows that simulated annealing, parallel investigators, and even a second LLM model (OpenAI Codex) provide no benefit over greedy hill climbing while requiring 2-3x more evaluations. In our setting, the LLM’s learned prior appears strong enough that acceptance-rule sophistication has limited impact–round 1 alone delivers the majority of improvement, and variants converge to similar configurations across strategies. The practical implication is surprising simplicity: greedy hill climbing with early stopping is a strong default. Beyond accuracy, the framework produces human-interpretable artifacts–the discovered cancer classification rules independently recapitulate established cytopathology principles.</p>
+
+<p><a href="https://arxiv.org/abs/2603.27415">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

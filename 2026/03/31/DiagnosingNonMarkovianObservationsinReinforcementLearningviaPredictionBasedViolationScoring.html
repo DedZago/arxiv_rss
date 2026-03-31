@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diagnosing Non-Markovian Observations in Reinforcement Learning via Prediction-Based Violation Scoring</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Diagnosing Non-Markovian Observations in Reinforcement Learning via Prediction-Based Violation Scoring" />
+<meta name="author" content="Naveen Mysore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reinforcement learning algorithms assume that observations satisfy the Markov property, yet real-world sensors frequently violate this assumption through correlated noise, latency, or partial observability. Standard performance metrics conflate Markov breakdowns with other sources of suboptimality, leaving practitioners without diagnostic tools for such violations. This paper introduces a prediction-based scoring method that quantifies non-Markovian structure in observation trajectories. A random forest first removes nonlinear Markov-compliant dynamics; ridge regression then tests whether historical observations reduce prediction error on the residuals beyond what the current observation provides. The resulting score is bounded in [0, 1] and requires no causal graph construction. Evaluation spans six environments (CartPole, Pendulum, Acrobot, HalfCheetah, Hopper, Walker2d), three algorithms (PPO, A2C, SAC), controlled AR(1) noise at six intensity levels, and 10 seeds per condition. In post-hoc detection, 7 of 16 environment-algorithm pairs, primarily high-dimensional locomotion tasks, show significant positive monotonicity between noise intensity and the violation score (Spearman rho up to 0.78, confirmed under repeated-measures analysis); under training-time noise, 13 of 16 pairs exhibit statistically significant reward degradation. An inversion phenomenon is documented in low-dimensional environments where the random forest absorbs the noise signal, causing the score to decrease as true violations grow, a failure mode analyzed in detail. A practical utility experiment demonstrates that the proposed score correctly identifies partial observability and guides architecture selection, fully recovering performance lost to non-Markovian observations. Source code to reproduce all results is provided at https://github.com/NAVEENMN/Markovianes." />
+<meta property="og:description" content="Reinforcement learning algorithms assume that observations satisfy the Markov property, yet real-world sensors frequently violate this assumption through correlated noise, latency, or partial observability. Standard performance metrics conflate Markov breakdowns with other sources of suboptimality, leaving practitioners without diagnostic tools for such violations. This paper introduces a prediction-based scoring method that quantifies non-Markovian structure in observation trajectories. A random forest first removes nonlinear Markov-compliant dynamics; ridge regression then tests whether historical observations reduce prediction error on the residuals beyond what the current observation provides. The resulting score is bounded in [0, 1] and requires no causal graph construction. Evaluation spans six environments (CartPole, Pendulum, Acrobot, HalfCheetah, Hopper, Walker2d), three algorithms (PPO, A2C, SAC), controlled AR(1) noise at six intensity levels, and 10 seeds per condition. In post-hoc detection, 7 of 16 environment-algorithm pairs, primarily high-dimensional locomotion tasks, show significant positive monotonicity between noise intensity and the violation score (Spearman rho up to 0.78, confirmed under repeated-measures analysis); under training-time noise, 13 of 16 pairs exhibit statistically significant reward degradation. An inversion phenomenon is documented in low-dimensional environments where the random forest absorbs the noise signal, causing the score to decrease as true violations grow, a failure mode analyzed in detail. A practical utility experiment demonstrates that the proposed score correctly identifies partial observability and guides architecture selection, fully recovering performance lost to non-Markovian observations. Source code to reproduce all results is provided at https://github.com/NAVEENMN/Markovianes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/03/31/DiagnosingNonMarkovianObservationsinReinforcementLearningviaPredictionBasedViolationScoring.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/03/31/DiagnosingNonMarkovianObservationsinReinforcementLearningviaPredictionBasedViolationScoring.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Diagnosing Non-Markovian Observations in Reinforcement Learning via Prediction-Based Violation Scoring" />
+<script type="application/ld+json">
+{"description":"Reinforcement learning algorithms assume that observations satisfy the Markov property, yet real-world sensors frequently violate this assumption through correlated noise, latency, or partial observability. Standard performance metrics conflate Markov breakdowns with other sources of suboptimality, leaving practitioners without diagnostic tools for such violations. This paper introduces a prediction-based scoring method that quantifies non-Markovian structure in observation trajectories. A random forest first removes nonlinear Markov-compliant dynamics; ridge regression then tests whether historical observations reduce prediction error on the residuals beyond what the current observation provides. The resulting score is bounded in [0, 1] and requires no causal graph construction. Evaluation spans six environments (CartPole, Pendulum, Acrobot, HalfCheetah, Hopper, Walker2d), three algorithms (PPO, A2C, SAC), controlled AR(1) noise at six intensity levels, and 10 seeds per condition. In post-hoc detection, 7 of 16 environment-algorithm pairs, primarily high-dimensional locomotion tasks, show significant positive monotonicity between noise intensity and the violation score (Spearman rho up to 0.78, confirmed under repeated-measures analysis); under training-time noise, 13 of 16 pairs exhibit statistically significant reward degradation. An inversion phenomenon is documented in low-dimensional environments where the random forest absorbs the noise signal, causing the score to decrease as true violations grow, a failure mode analyzed in detail. A practical utility experiment demonstrates that the proposed score correctly identifies partial observability and guides architecture selection, fully recovering performance lost to non-Markovian observations. Source code to reproduce all results is provided at https://github.com/NAVEENMN/Markovianes.","author":{"@type":"Person","name":"Naveen Mysore"},"datePublished":"2026-03-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/03/31/DiagnosingNonMarkovianObservationsinReinforcementLearningviaPredictionBasedViolationScoring.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/03/31/DiagnosingNonMarkovianObservationsinReinforcementLearningviaPredictionBasedViolationScoring.html","headline":"Diagnosing Non-Markovian Observations in Reinforcement Learning via Prediction-Based Violation Scoring","@type":"BlogPosting","dateModified":"2026-03-31T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-03-31 00:00:00 +0000">03-31</time>
+  </p>
+  
+  <h1>Diagnosing Non-Markovian Observations in Reinforcement Learning via Prediction-Based Violation Scoring</h1>
+  <br>Naveen Mysore</h3>
+  <br> [stat.ML]
+
+  <p>Reinforcement learning algorithms assume that observations satisfy the Markov property, yet real-world sensors frequently violate this assumption through correlated noise, latency, or partial observability. Standard performance metrics conflate Markov breakdowns with other sources of suboptimality, leaving practitioners without diagnostic tools for such violations. This paper introduces a prediction-based scoring method that quantifies non-Markovian structure in observation trajectories. A random forest first removes nonlinear Markov-compliant dynamics; ridge regression then tests whether historical observations reduce prediction error on the residuals beyond what the current observation provides. The resulting score is bounded in [0, 1] and requires no causal graph construction. Evaluation spans six environments (CartPole, Pendulum, Acrobot, HalfCheetah, Hopper, Walker2d), three algorithms (PPO, A2C, SAC), controlled AR(1) noise at six intensity levels, and 10 seeds per condition. In post-hoc detection, 7 of 16 environment-algorithm pairs, primarily high-dimensional locomotion tasks, show significant positive monotonicity between noise intensity and the violation score (Spearman rho up to 0.78, confirmed under repeated-measures analysis); under training-time noise, 13 of 16 pairs exhibit statistically significant reward degradation. An inversion phenomenon is documented in low-dimensional environments where the random forest absorbs the noise signal, causing the score to decrease as true violations grow, a failure mode analyzed in detail. A practical utility experiment demonstrates that the proposed score correctly identifies partial observability and guides architecture selection, fully recovering performance lost to non-Markovian observations. Source code to reproduce all results is provided at https://github.com/NAVEENMN/Markovianes.</p>
+
+<p><a href="https://arxiv.org/abs/2603.27389">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
