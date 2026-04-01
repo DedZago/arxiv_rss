@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Bayes goes bad: Weakly-regularized covariate adjustment leads to a biased estimate of prevalence</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When Bayes goes bad: Weakly-regularized covariate adjustment leads to a biased estimate of prevalence" />
+<meta name="author" content="Swen Kuh, Lauren Kennedy, Qixuan Chen, Andrew Gelman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When estimating population prevalence from a non-random sample, it is important to adjust for differences between sample and population. However, adjustment for multiple factors requires analysis that can be difficult to understand and validate. In this manuscript, we explore an unexpected downward trend of estimates when covariates are added sequentially to a Bayesian hierarchical model for the estimation of the prevalence of SARS-CoV-2 specific antibodies in an Australian city in late 2020. We compare our data analysis to results from a simulation study to understand four potential contributors to this effect: (i) correction for differences between sample and population, (ii) rare-events bias in logistic regression, (iii) inclusion of the uncertainty of test sensitivity and specificity in a multilevel model, and (iv) increasing model dimensionality. We find that weak prior distributions on the logistic regression coefficients lead to a systematic increase in the amount of partial pooling across adjustment cells-the prior becomes stronger as model dimensionality increases-which in turn feeds through to the estimated assay specificity, which then feeds back to the model and results in lowering the estimated prevalence. Our paper contributes three elements: (i) immediate and longer-term recommendations for using these types of models, (ii) simulation studies to explore the impact of the contributors to this effect, and (iii) a worked example of investigation of unexpected results in a model with multiple adjustment factors." />
+<meta property="og:description" content="When estimating population prevalence from a non-random sample, it is important to adjust for differences between sample and population. However, adjustment for multiple factors requires analysis that can be difficult to understand and validate. In this manuscript, we explore an unexpected downward trend of estimates when covariates are added sequentially to a Bayesian hierarchical model for the estimation of the prevalence of SARS-CoV-2 specific antibodies in an Australian city in late 2020. We compare our data analysis to results from a simulation study to understand four potential contributors to this effect: (i) correction for differences between sample and population, (ii) rare-events bias in logistic regression, (iii) inclusion of the uncertainty of test sensitivity and specificity in a multilevel model, and (iv) increasing model dimensionality. We find that weak prior distributions on the logistic regression coefficients lead to a systematic increase in the amount of partial pooling across adjustment cells-the prior becomes stronger as model dimensionality increases-which in turn feeds through to the estimated assay specificity, which then feeds back to the model and results in lowering the estimated prevalence. Our paper contributes three elements: (i) immediate and longer-term recommendations for using these types of models, (ii) simulation studies to explore the impact of the contributors to this effect, and (iii) a worked example of investigation of unexpected results in a model with multiple adjustment factors." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/01/WhenBayesgoesbadWeaklyregularizedcovariateadjustmentleadstoabiasedestimateofprevalence.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/01/WhenBayesgoesbadWeaklyregularizedcovariateadjustmentleadstoabiasedestimateofprevalence.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When Bayes goes bad: Weakly-regularized covariate adjustment leads to a biased estimate of prevalence" />
+<script type="application/ld+json">
+{"description":"When estimating population prevalence from a non-random sample, it is important to adjust for differences between sample and population. However, adjustment for multiple factors requires analysis that can be difficult to understand and validate. In this manuscript, we explore an unexpected downward trend of estimates when covariates are added sequentially to a Bayesian hierarchical model for the estimation of the prevalence of SARS-CoV-2 specific antibodies in an Australian city in late 2020. We compare our data analysis to results from a simulation study to understand four potential contributors to this effect: (i) correction for differences between sample and population, (ii) rare-events bias in logistic regression, (iii) inclusion of the uncertainty of test sensitivity and specificity in a multilevel model, and (iv) increasing model dimensionality. We find that weak prior distributions on the logistic regression coefficients lead to a systematic increase in the amount of partial pooling across adjustment cells-the prior becomes stronger as model dimensionality increases-which in turn feeds through to the estimated assay specificity, which then feeds back to the model and results in lowering the estimated prevalence. Our paper contributes three elements: (i) immediate and longer-term recommendations for using these types of models, (ii) simulation studies to explore the impact of the contributors to this effect, and (iii) a worked example of investigation of unexpected results in a model with multiple adjustment factors.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/01/WhenBayesgoesbadWeaklyregularizedcovariateadjustmentleadstoabiasedestimateofprevalence.html"},"author":{"@type":"Person","name":"Swen Kuh, Lauren Kennedy, Qixuan Chen, Andrew Gelman"},"dateModified":"2026-04-01T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/04/01/WhenBayesgoesbadWeaklyregularizedcovariateadjustmentleadstoabiasedestimateofprevalence.html","headline":"When Bayes goes bad: Weakly-regularized covariate adjustment leads to a biased estimate of prevalence","@type":"BlogPosting","datePublished":"2026-04-01T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-01 00:00:00 +0000">04-01</time>
+  </p>
+  
+  <h1>When Bayes goes bad: Weakly-regularized covariate adjustment leads to a biased estimate of prevalence</h1>
+  <br>Swen Kuh, Lauren Kennedy, Qixuan Chen, Andrew Gelman</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>When estimating population prevalence from a non-random sample, it is important to adjust for differences between sample and population. However, adjustment for multiple factors requires analysis that can be difficult to understand and validate. In this manuscript, we explore an unexpected downward trend of estimates when covariates are added sequentially to a Bayesian hierarchical model for the estimation of the prevalence of SARS-CoV-2 specific antibodies in an Australian city in late 2020.
+  We compare our data analysis to results from a simulation study to understand four potential contributors to this effect: (i) correction for differences between sample and population, (ii) rare-events bias in logistic regression, (iii) inclusion of the uncertainty of test sensitivity and specificity in a multilevel model, and (iv) increasing model dimensionality. We find that weak prior distributions on the logistic regression coefficients lead to a systematic increase in the amount of partial pooling across adjustment cells-the prior becomes stronger as model dimensionality increases-which in turn feeds through to the estimated assay specificity, which then feeds back to the model and results in lowering the estimated prevalence.
+  Our paper contributes three elements: (i) immediate and longer-term recommendations for using these types of models, (ii) simulation studies to explore the impact of the contributors to this effect, and (iii) a worked example of investigation of unexpected results in a model with multiple adjustment factors.</p>
+
+<p><a href="https://arxiv.org/abs/2603.29134">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

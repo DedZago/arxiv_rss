@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Amortized Bayesian Inference for Markov Random Fields via Gradient-Informed Grid Selection</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Amortized Bayesian Inference for Markov Random Fields via Gradient-Informed Grid Selection" />
+<meta name="author" content="Laura Bazahica, Alejandra Avalos-Pacheco, Matthew Moores, Lassi Roininen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian inference for models with intractable likelihoods, such as Markov random fields, poses a fundamental computational challenge due to the tradeoff between inferential accuracy and computational cost. Various MCMC methods have been developed to address this challenge. The exchange algorithm targets the exact posterior, but requires an expensive perfect sampling step at each iteration, which is often infeasible in practice. In contrast, path sampling approximates the Metropolis acceptance ratio using a precomputed grid of likelihood values, but may introduce bias when the grid is poorly chosen. We introduce a novel amortized MCMC framework that retains the theoretical validity of exact methods while substantially reducing the computational burden. The proposed approach employs a gradient-informed grid selection procedure and constructs a surrogate likelihood via Hermite interpolation, yielding a smooth approximation with low error. A simulation study characterizes the rate at which inferential accuracy improves as the number of grid points increases. We further demonstrate the practical performance of the method through applications to a hidden Potts model for satellite imagery and an autologistic model for Arctic ice floes." />
+<meta property="og:description" content="Bayesian inference for models with intractable likelihoods, such as Markov random fields, poses a fundamental computational challenge due to the tradeoff between inferential accuracy and computational cost. Various MCMC methods have been developed to address this challenge. The exchange algorithm targets the exact posterior, but requires an expensive perfect sampling step at each iteration, which is often infeasible in practice. In contrast, path sampling approximates the Metropolis acceptance ratio using a precomputed grid of likelihood values, but may introduce bias when the grid is poorly chosen. We introduce a novel amortized MCMC framework that retains the theoretical validity of exact methods while substantially reducing the computational burden. The proposed approach employs a gradient-informed grid selection procedure and constructs a surrogate likelihood via Hermite interpolation, yielding a smooth approximation with low error. A simulation study characterizes the rate at which inferential accuracy improves as the number of grid points increases. We further demonstrate the practical performance of the method through applications to a hidden Potts model for satellite imagery and an autologistic model for Arctic ice floes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/01/EfficientAmortizedBayesianInferenceforMarkovRandomFieldsviaGradientInformedGridSelection.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/01/EfficientAmortizedBayesianInferenceforMarkovRandomFieldsviaGradientInformedGridSelection.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Amortized Bayesian Inference for Markov Random Fields via Gradient-Informed Grid Selection" />
+<script type="application/ld+json">
+{"description":"Bayesian inference for models with intractable likelihoods, such as Markov random fields, poses a fundamental computational challenge due to the tradeoff between inferential accuracy and computational cost. Various MCMC methods have been developed to address this challenge. The exchange algorithm targets the exact posterior, but requires an expensive perfect sampling step at each iteration, which is often infeasible in practice. In contrast, path sampling approximates the Metropolis acceptance ratio using a precomputed grid of likelihood values, but may introduce bias when the grid is poorly chosen. We introduce a novel amortized MCMC framework that retains the theoretical validity of exact methods while substantially reducing the computational burden. The proposed approach employs a gradient-informed grid selection procedure and constructs a surrogate likelihood via Hermite interpolation, yielding a smooth approximation with low error. A simulation study characterizes the rate at which inferential accuracy improves as the number of grid points increases. We further demonstrate the practical performance of the method through applications to a hidden Potts model for satellite imagery and an autologistic model for Arctic ice floes.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/01/EfficientAmortizedBayesianInferenceforMarkovRandomFieldsviaGradientInformedGridSelection.html"},"author":{"@type":"Person","name":"Laura Bazahica, Alejandra Avalos-Pacheco, Matthew Moores, Lassi Roininen"},"dateModified":"2026-04-01T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/04/01/EfficientAmortizedBayesianInferenceforMarkovRandomFieldsviaGradientInformedGridSelection.html","headline":"Efficient Amortized Bayesian Inference for Markov Random Fields via Gradient-Informed Grid Selection","@type":"BlogPosting","datePublished":"2026-04-01T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-01 00:00:00 +0000">04-01</time>
+  </p>
+  
+  <h1>Efficient Amortized Bayesian Inference for Markov Random Fields via Gradient-Informed Grid Selection</h1>
+  <br>Laura Bazahica, Alejandra Avalos-Pacheco, Matthew Moores, Lassi Roininen</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Bayesian inference for models with intractable likelihoods, such as Markov random fields, poses a fundamental computational challenge due to the tradeoff between inferential accuracy and computational cost. Various MCMC methods have been developed to address this challenge. The exchange algorithm targets the exact posterior, but requires an expensive perfect sampling step at each iteration, which is often infeasible in practice. In contrast, path sampling approximates the Metropolis acceptance ratio using a precomputed grid of likelihood values, but may introduce bias when the grid is poorly chosen. We introduce a novel amortized MCMC framework that retains the theoretical validity of exact methods while substantially reducing the computational burden. The proposed approach employs a gradient-informed grid selection procedure and constructs a surrogate likelihood via Hermite interpolation, yielding a smooth approximation with low error. A simulation study characterizes the rate at which inferential accuracy improves as the number of grid points increases. We further demonstrate the practical performance of the method through applications to a hidden Potts model for satellite imagery and an autologistic model for Arctic ice floes.</p>
+
+<p><a href="https://arxiv.org/abs/2603.29436">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

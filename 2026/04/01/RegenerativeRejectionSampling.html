@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Regenerative Rejection Sampling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Regenerative Rejection Sampling" />
+<meta name="author" content="Tommaso Bozzi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This thesis presents Regenerative Rejection Sampling (RRS), a novel approximate sampling algorithm inspired by classical Rejection Sampling and Markov Chain Monte Carlo methods. The method constructs a continuous-time regenerative process whose stationary distribution coincides with a target density known only up to a normalizing constant. Unlike standard Rejection Sampling, RRS does not require the existence of a finite constant that upper-bounds the likelihood ratio. As a result, its total variation convergence rate remains exponential for a larger class of scenarios compared to, for example, the Independent Metropolis-Hastings sampler, which requires a finite bounding constant. To explain the workings of the method, we first present a detailed review of renewal and regenerative processes, including their limit theorems, stationary versions, and convergence properties under standard conditions. We explain a coupling proof for exponential convergence of regenerative processes, under the assumption of a spread-out cycle length distribution. We then introduce the RRS algorithm, and derive its convergence rate. Its performance is compared theoretically and empirically with classical MCMC methods. Numerical experiments demonstrate that RRS can exhibit lower autocorrelations and faster effective mixing, both in synthetic examples and in a Bayesian probit regression model applied to a real medical dataset. Moreover, if the algorithm is run until time t, we show that the usual order $O(1/t)$ results for the bias of the time-average estimators, is improved to a bias of $O(1/t^2)$ for the estimator constructed from the RRS method, and provide easy-to-estimate non-asymptotic bounds for this bias." />
+<meta property="og:description" content="This thesis presents Regenerative Rejection Sampling (RRS), a novel approximate sampling algorithm inspired by classical Rejection Sampling and Markov Chain Monte Carlo methods. The method constructs a continuous-time regenerative process whose stationary distribution coincides with a target density known only up to a normalizing constant. Unlike standard Rejection Sampling, RRS does not require the existence of a finite constant that upper-bounds the likelihood ratio. As a result, its total variation convergence rate remains exponential for a larger class of scenarios compared to, for example, the Independent Metropolis-Hastings sampler, which requires a finite bounding constant. To explain the workings of the method, we first present a detailed review of renewal and regenerative processes, including their limit theorems, stationary versions, and convergence properties under standard conditions. We explain a coupling proof for exponential convergence of regenerative processes, under the assumption of a spread-out cycle length distribution. We then introduce the RRS algorithm, and derive its convergence rate. Its performance is compared theoretically and empirically with classical MCMC methods. Numerical experiments demonstrate that RRS can exhibit lower autocorrelations and faster effective mixing, both in synthetic examples and in a Bayesian probit regression model applied to a real medical dataset. Moreover, if the algorithm is run until time t, we show that the usual order $O(1/t)$ results for the bias of the time-average estimators, is improved to a bias of $O(1/t^2)$ for the estimator constructed from the RRS method, and provide easy-to-estimate non-asymptotic bounds for this bias." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/01/RegenerativeRejectionSampling.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/01/RegenerativeRejectionSampling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Regenerative Rejection Sampling" />
+<script type="application/ld+json">
+{"description":"This thesis presents Regenerative Rejection Sampling (RRS), a novel approximate sampling algorithm inspired by classical Rejection Sampling and Markov Chain Monte Carlo methods. The method constructs a continuous-time regenerative process whose stationary distribution coincides with a target density known only up to a normalizing constant. Unlike standard Rejection Sampling, RRS does not require the existence of a finite constant that upper-bounds the likelihood ratio. As a result, its total variation convergence rate remains exponential for a larger class of scenarios compared to, for example, the Independent Metropolis-Hastings sampler, which requires a finite bounding constant. To explain the workings of the method, we first present a detailed review of renewal and regenerative processes, including their limit theorems, stationary versions, and convergence properties under standard conditions. We explain a coupling proof for exponential convergence of regenerative processes, under the assumption of a spread-out cycle length distribution. We then introduce the RRS algorithm, and derive its convergence rate. Its performance is compared theoretically and empirically with classical MCMC methods. Numerical experiments demonstrate that RRS can exhibit lower autocorrelations and faster effective mixing, both in synthetic examples and in a Bayesian probit regression model applied to a real medical dataset. Moreover, if the algorithm is run until time t, we show that the usual order $O(1/t)$ results for the bias of the time-average estimators, is improved to a bias of $O(1/t^2)$ for the estimator constructed from the RRS method, and provide easy-to-estimate non-asymptotic bounds for this bias.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/01/RegenerativeRejectionSampling.html"},"author":{"@type":"Person","name":"Tommaso Bozzi"},"dateModified":"2026-04-01T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/04/01/RegenerativeRejectionSampling.html","headline":"Regenerative Rejection Sampling","@type":"BlogPosting","datePublished":"2026-04-01T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-01 00:00:00 +0000">04-01</time>
+  </p>
+  
+  <h1>Regenerative Rejection Sampling</h1>
+  <br>Tommaso Bozzi</h3>
+  <br> [stat.CO]
+
+  <p>This thesis presents Regenerative Rejection Sampling (RRS), a novel approximate sampling algorithm inspired by classical Rejection Sampling and Markov Chain Monte Carlo methods. The method constructs a continuous-time regenerative process whose stationary distribution coincides with a target density known only up to a normalizing constant. Unlike standard Rejection Sampling, RRS does not require the existence of a finite constant that upper-bounds the likelihood ratio. As a result, its total variation convergence rate remains exponential for a larger class of scenarios compared to, for example, the Independent Metropolis-Hastings sampler, which requires a finite bounding constant.
+  To explain the workings of the method, we first present a detailed review of renewal and regenerative processes, including their limit theorems, stationary versions, and convergence properties under standard conditions. We explain a coupling proof for exponential convergence of regenerative processes, under the assumption of a spread-out cycle length distribution.
+  We then introduce the RRS algorithm, and derive its convergence rate. Its performance is compared theoretically and empirically with classical MCMC methods. Numerical experiments demonstrate that RRS can exhibit lower autocorrelations and faster effective mixing, both in synthetic examples and in a Bayesian probit regression model applied to a real medical dataset. Moreover, if the algorithm is run until time t, we show that the usual order $O(1/t)$ results for the bias of the time-average estimators, is improved to a bias of $O(1/t^2)$ for the estimator constructed from the RRS method, and provide easy-to-estimate non-asymptotic bounds for this bias.</p>
+
+<p><a href="https://arxiv.org/abs/2603.12299">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
