@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Low-Rank Compression of Pretrained Models via Randomized Subspace Iteration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Low-Rank Compression of Pretrained Models via Randomized Subspace Iteration" />
+<meta name="author" content="Farhad Pourkamali-Anaraki" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The massive scale of pretrained models has made efficient compression essential for practical deployment. Low-rank decomposition based on the singular value decomposition (SVD) provides a principled approach for model reduction, but its exact computation is expensive for large weight matrices. Randomized alternatives such as randomized SVD (RSVD) improve efficiency, yet they can suffer from poor approximation quality when the singular value spectrum decays slowly, a regime commonly observed in modern pretrained models. In this work, we address this limitation from both theoretical and empirical perspectives. First, we establish a connection between low-rank approximation error and predictive performance by analyzing softmax perturbations, showing that deviations in class probabilities are controlled by the spectral error of the compressed weights. Second, we demonstrate that RSVD is inadequate, and we propose randomized subspace iteration (RSI) as a more effective alternative. By incorporating multiple power iterations, RSI improves spectral separation and provides a controllable mechanism for enhancing approximation quality. We evaluate our approach on both convolutional networks and transformer-based architectures. Our results show that RSI achieves near-optimal approximation quality while outperforming RSVD in predictive accuracy under aggressive compression, enabling efficient model compression." />
+<meta property="og:description" content="The massive scale of pretrained models has made efficient compression essential for practical deployment. Low-rank decomposition based on the singular value decomposition (SVD) provides a principled approach for model reduction, but its exact computation is expensive for large weight matrices. Randomized alternatives such as randomized SVD (RSVD) improve efficiency, yet they can suffer from poor approximation quality when the singular value spectrum decays slowly, a regime commonly observed in modern pretrained models. In this work, we address this limitation from both theoretical and empirical perspectives. First, we establish a connection between low-rank approximation error and predictive performance by analyzing softmax perturbations, showing that deviations in class probabilities are controlled by the spectral error of the compressed weights. Second, we demonstrate that RSVD is inadequate, and we propose randomized subspace iteration (RSI) as a more effective alternative. By incorporating multiple power iterations, RSI improves spectral separation and provides a controllable mechanism for enhancing approximation quality. We evaluate our approach on both convolutional networks and transformer-based architectures. Our results show that RSI achieves near-optimal approximation quality while outperforming RSVD in predictive accuracy under aggressive compression, enabling efficient model compression." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/06/LowRankCompressionofPretrainedModelsviaRandomizedSubspaceIteration.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/06/LowRankCompressionofPretrainedModelsviaRandomizedSubspaceIteration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Low-Rank Compression of Pretrained Models via Randomized Subspace Iteration" />
+<script type="application/ld+json">
+{"description":"The massive scale of pretrained models has made efficient compression essential for practical deployment. Low-rank decomposition based on the singular value decomposition (SVD) provides a principled approach for model reduction, but its exact computation is expensive for large weight matrices. Randomized alternatives such as randomized SVD (RSVD) improve efficiency, yet they can suffer from poor approximation quality when the singular value spectrum decays slowly, a regime commonly observed in modern pretrained models. In this work, we address this limitation from both theoretical and empirical perspectives. First, we establish a connection between low-rank approximation error and predictive performance by analyzing softmax perturbations, showing that deviations in class probabilities are controlled by the spectral error of the compressed weights. Second, we demonstrate that RSVD is inadequate, and we propose randomized subspace iteration (RSI) as a more effective alternative. By incorporating multiple power iterations, RSI improves spectral separation and provides a controllable mechanism for enhancing approximation quality. We evaluate our approach on both convolutional networks and transformer-based architectures. Our results show that RSI achieves near-optimal approximation quality while outperforming RSVD in predictive accuracy under aggressive compression, enabling efficient model compression.","author":{"@type":"Person","name":"Farhad Pourkamali-Anaraki"},"datePublished":"2026-04-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/06/LowRankCompressionofPretrainedModelsviaRandomizedSubspaceIteration.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/06/LowRankCompressionofPretrainedModelsviaRandomizedSubspaceIteration.html","headline":"Low-Rank Compression of Pretrained Models via Randomized Subspace Iteration","@type":"BlogPosting","dateModified":"2026-04-06T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-06 00:00:00 +0000">04-06</time>
+  </p>
+  
+  <h1>Low-Rank Compression of Pretrained Models via Randomized Subspace Iteration</h1>
+  <br>Farhad Pourkamali-Anaraki</h3>
+  <br> [stat.ML]
+
+  <p>The massive scale of pretrained models has made efficient compression essential for practical deployment. Low-rank decomposition based on the singular value decomposition (SVD) provides a principled approach for model reduction, but its exact computation is expensive for large weight matrices. Randomized alternatives such as randomized SVD (RSVD) improve efficiency, yet they can suffer from poor approximation quality when the singular value spectrum decays slowly, a regime commonly observed in modern pretrained models. In this work, we address this limitation from both theoretical and empirical perspectives. First, we establish a connection between low-rank approximation error and predictive performance by analyzing softmax perturbations, showing that deviations in class probabilities are controlled by the spectral error of the compressed weights. Second, we demonstrate that RSVD is inadequate, and we propose randomized subspace iteration (RSI) as a more effective alternative. By incorporating multiple power iterations, RSI improves spectral separation and provides a controllable mechanism for enhancing approximation quality. We evaluate our approach on both convolutional networks and transformer-based architectures. Our results show that RSI achieves near-optimal approximation quality while outperforming RSVD in predictive accuracy under aggressive compression, enabling efficient model compression.</p>
+
+<p><a href="https://arxiv.org/abs/2604.02659">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
