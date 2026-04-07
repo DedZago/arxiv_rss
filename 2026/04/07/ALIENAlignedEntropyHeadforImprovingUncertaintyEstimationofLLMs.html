@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ALIEN: Aligned Entropy Head for Improving Uncertainty Estimation of LLMs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ALIEN: Aligned Entropy Head for Improving Uncertainty Estimation of LLMs" />
+<meta name="author" content="Artem Zabolotnyi, Roman Makarov, Mile Mitrovic, Polina Proskura, Oleg Travkin, Roman Alferov, Alexey Zaytsev" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Uncertainty estimation remains a key challenge when adapting pre-trained language models to downstream classification tasks, with overconfidence often observed for difficult inputs. While predictive entropy provides a strong baseline for uncertainty estimation, it considers mainly aleatoric uncertainty and has limited capacity to capture effects, such as class overlap or ambiguous linguistic cues. We introduce Aligned Entropy - ALIEN, a lightweight method that refines entropy-based uncertainty by aligning it with prediction reliability. ALIEN trains a small uncertainty head initialized to produce the model’s original entropy and subsequently fine-tuned with two regularization mechanisms. Experiments across seven classification datasets and two NER benchmarks, evaluated on five language models (RoBERTa, ELECTRA, LLaMA-2, Qwen2.5, and Qwen3), show that ALIEN consistently outperforms strong baselines across all considered scenarios in detecting incorrect predictions, while achieving the lowest calibration error. The proposed method introduces only a small inference overhead (in the order of milliseconds per batch on CPU) and increases the model’s parameter count by just 0.002% for decoder models and 0.5% for encoder models, without requiring storage of intermediate states. It improves uncertainty estimation while preserving the original model architecture, making the approach practical for large-scale deployment with modern language models. Our results demonstrate that entropy can be effectively refined through lightweight supervised alignment, producing more reliable uncertainty estimates without modifying the backbone model. The code is available at 4." />
+<meta property="og:description" content="Uncertainty estimation remains a key challenge when adapting pre-trained language models to downstream classification tasks, with overconfidence often observed for difficult inputs. While predictive entropy provides a strong baseline for uncertainty estimation, it considers mainly aleatoric uncertainty and has limited capacity to capture effects, such as class overlap or ambiguous linguistic cues. We introduce Aligned Entropy - ALIEN, a lightweight method that refines entropy-based uncertainty by aligning it with prediction reliability. ALIEN trains a small uncertainty head initialized to produce the model’s original entropy and subsequently fine-tuned with two regularization mechanisms. Experiments across seven classification datasets and two NER benchmarks, evaluated on five language models (RoBERTa, ELECTRA, LLaMA-2, Qwen2.5, and Qwen3), show that ALIEN consistently outperforms strong baselines across all considered scenarios in detecting incorrect predictions, while achieving the lowest calibration error. The proposed method introduces only a small inference overhead (in the order of milliseconds per batch on CPU) and increases the model’s parameter count by just 0.002% for decoder models and 0.5% for encoder models, without requiring storage of intermediate states. It improves uncertainty estimation while preserving the original model architecture, making the approach practical for large-scale deployment with modern language models. Our results demonstrate that entropy can be effectively refined through lightweight supervised alignment, producing more reliable uncertainty estimates without modifying the backbone model. The code is available at 4." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/07/ALIENAlignedEntropyHeadforImprovingUncertaintyEstimationofLLMs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/07/ALIENAlignedEntropyHeadforImprovingUncertaintyEstimationofLLMs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ALIEN: Aligned Entropy Head for Improving Uncertainty Estimation of LLMs" />
+<script type="application/ld+json">
+{"description":"Uncertainty estimation remains a key challenge when adapting pre-trained language models to downstream classification tasks, with overconfidence often observed for difficult inputs. While predictive entropy provides a strong baseline for uncertainty estimation, it considers mainly aleatoric uncertainty and has limited capacity to capture effects, such as class overlap or ambiguous linguistic cues. We introduce Aligned Entropy - ALIEN, a lightweight method that refines entropy-based uncertainty by aligning it with prediction reliability. ALIEN trains a small uncertainty head initialized to produce the model’s original entropy and subsequently fine-tuned with two regularization mechanisms. Experiments across seven classification datasets and two NER benchmarks, evaluated on five language models (RoBERTa, ELECTRA, LLaMA-2, Qwen2.5, and Qwen3), show that ALIEN consistently outperforms strong baselines across all considered scenarios in detecting incorrect predictions, while achieving the lowest calibration error. The proposed method introduces only a small inference overhead (in the order of milliseconds per batch on CPU) and increases the model’s parameter count by just 0.002% for decoder models and 0.5% for encoder models, without requiring storage of intermediate states. It improves uncertainty estimation while preserving the original model architecture, making the approach practical for large-scale deployment with modern language models. Our results demonstrate that entropy can be effectively refined through lightweight supervised alignment, producing more reliable uncertainty estimates without modifying the backbone model. The code is available at 4.","author":{"@type":"Person","name":"Artem Zabolotnyi, Roman Makarov, Mile Mitrovic, Polina Proskura, Oleg Travkin, Roman Alferov, Alexey Zaytsev"},"datePublished":"2026-04-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/07/ALIENAlignedEntropyHeadforImprovingUncertaintyEstimationofLLMs.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/07/ALIENAlignedEntropyHeadforImprovingUncertaintyEstimationofLLMs.html","headline":"ALIEN: Aligned Entropy Head for Improving Uncertainty Estimation of LLMs","@type":"BlogPosting","dateModified":"2026-04-07T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-07 00:00:00 +0000">04-07</time>
+  </p>
+  
+  <h1>ALIEN: Aligned Entropy Head for Improving Uncertainty Estimation of LLMs</h1>
+  <br>Artem Zabolotnyi, Roman Makarov, Mile Mitrovic, Polina Proskura, Oleg Travkin, Roman Alferov, Alexey Zaytsev</h3>
+  <br> [stat.ML]
+
+  <p>Uncertainty estimation remains a key challenge when adapting pre-trained language models to downstream classification tasks, with overconfidence often observed for difficult inputs. While predictive entropy provides a strong baseline for uncertainty estimation, it considers mainly aleatoric uncertainty and has limited capacity to capture effects, such as class overlap or ambiguous linguistic cues. We introduce Aligned Entropy - ALIEN, a lightweight method that refines entropy-based uncertainty by aligning it with prediction reliability. ALIEN trains a small uncertainty head initialized to produce the model’s original entropy and subsequently fine-tuned with two regularization mechanisms. Experiments across seven classification datasets and two NER benchmarks, evaluated on five language models (RoBERTa, ELECTRA, LLaMA-2, Qwen2.5, and Qwen3), show that ALIEN consistently outperforms strong baselines across all considered scenarios in detecting incorrect predictions, while achieving the lowest calibration error. The proposed method introduces only a small inference overhead (in the order of milliseconds per batch on CPU) and increases the model’s parameter count by just 0.002% for decoder models and 0.5% for encoder models, without requiring storage of intermediate states. It improves uncertainty estimation while preserving the original model architecture, making the approach practical for large-scale deployment with modern language models. Our results demonstrate that entropy can be effectively refined through lightweight supervised alignment, producing more reliable uncertainty estimates without modifying the backbone model. The code is available at 4.</p>
+
+<p><a href="https://arxiv.org/abs/2505.15443">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

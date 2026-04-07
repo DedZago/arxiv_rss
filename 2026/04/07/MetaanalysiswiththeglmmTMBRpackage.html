@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Meta-analysis with the glmmTMB R package</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Meta-analysis with the glmmTMB R package" />
+<meta name="author" content="Coralie Williams, Maeve McGillycuddy, Mollie Brooks, Benjamin M. Bolker, Ayumi Mizuno, Yefeng Yang, Wolfgang Viechtbauer, David I. Warton, Shinichi Nakagawa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Meta-analytical models are typically formulated as a mixed-effects model where the sampling variances of the effect sizes are treated as known. In principle, such models could be fitted with standard mixed-modelling software such as the glmmTMB R package. This general-purpose package for generalized linear mixed models (GLMMs) provides flexibility in distributions and random effect covariance structures through the Template Model Builder (TMB). However, incorporating known sampling variances in the conventional inverse-variance formulation of meta-analysis was previously not easily accomplished in glmmTMB. Here, we introduce equalto, a new covariance structure in glmmTMB that allows users to supply a known sampling error variance-covariance matrix when fitting meta-analytic models. This enables explicit modelling of heteroscedasticity and dependence among sampling errors. The new implementation provides an alternative way to fit meta-analytic models, convenient for users already familiar with glmmTMB. Using simulations, we show that the new implementation produces model estimates identical to those from the established metafor package and illustrate its applicability with published meta-analyses in medicine, evolutionary ecology, and the social sciences. Further, this novel implementation in glmmTMB supports more flexible modelling of meta-analytical data, expanding the R toolkit available for evidence synthesis." />
+<meta property="og:description" content="Meta-analytical models are typically formulated as a mixed-effects model where the sampling variances of the effect sizes are treated as known. In principle, such models could be fitted with standard mixed-modelling software such as the glmmTMB R package. This general-purpose package for generalized linear mixed models (GLMMs) provides flexibility in distributions and random effect covariance structures through the Template Model Builder (TMB). However, incorporating known sampling variances in the conventional inverse-variance formulation of meta-analysis was previously not easily accomplished in glmmTMB. Here, we introduce equalto, a new covariance structure in glmmTMB that allows users to supply a known sampling error variance-covariance matrix when fitting meta-analytic models. This enables explicit modelling of heteroscedasticity and dependence among sampling errors. The new implementation provides an alternative way to fit meta-analytic models, convenient for users already familiar with glmmTMB. Using simulations, we show that the new implementation produces model estimates identical to those from the established metafor package and illustrate its applicability with published meta-analyses in medicine, evolutionary ecology, and the social sciences. Further, this novel implementation in glmmTMB supports more flexible modelling of meta-analytical data, expanding the R toolkit available for evidence synthesis." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/07/MetaanalysiswiththeglmmTMBRpackage.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/07/MetaanalysiswiththeglmmTMBRpackage.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Meta-analysis with the glmmTMB R package" />
+<script type="application/ld+json">
+{"description":"Meta-analytical models are typically formulated as a mixed-effects model where the sampling variances of the effect sizes are treated as known. In principle, such models could be fitted with standard mixed-modelling software such as the glmmTMB R package. This general-purpose package for generalized linear mixed models (GLMMs) provides flexibility in distributions and random effect covariance structures through the Template Model Builder (TMB). However, incorporating known sampling variances in the conventional inverse-variance formulation of meta-analysis was previously not easily accomplished in glmmTMB. Here, we introduce equalto, a new covariance structure in glmmTMB that allows users to supply a known sampling error variance-covariance matrix when fitting meta-analytic models. This enables explicit modelling of heteroscedasticity and dependence among sampling errors. The new implementation provides an alternative way to fit meta-analytic models, convenient for users already familiar with glmmTMB. Using simulations, we show that the new implementation produces model estimates identical to those from the established metafor package and illustrate its applicability with published meta-analyses in medicine, evolutionary ecology, and the social sciences. Further, this novel implementation in glmmTMB supports more flexible modelling of meta-analytical data, expanding the R toolkit available for evidence synthesis.","author":{"@type":"Person","name":"Coralie Williams, Maeve McGillycuddy, Mollie Brooks, Benjamin M. Bolker, Ayumi Mizuno, Yefeng Yang, Wolfgang Viechtbauer, David I. Warton, Shinichi Nakagawa"},"datePublished":"2026-04-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/07/MetaanalysiswiththeglmmTMBRpackage.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/07/MetaanalysiswiththeglmmTMBRpackage.html","headline":"Meta-analysis with the glmmTMB R package","@type":"BlogPosting","dateModified":"2026-04-07T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-07 00:00:00 +0000">04-07</time>
+  </p>
+  
+  <h1>Meta-analysis with the glmmTMB R package</h1>
+  <br>Coralie Williams, Maeve McGillycuddy, Mollie Brooks, Benjamin M. Bolker, Ayumi Mizuno, Yefeng Yang, Wolfgang Viechtbauer, David I. Warton, Shinichi Nakagawa</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>Meta-analytical models are typically formulated as a mixed-effects model where the sampling variances of the effect sizes are treated as known. In principle, such models could be fitted with standard mixed-modelling software such as the glmmTMB R package. This general-purpose package for generalized linear mixed models (GLMMs) provides flexibility in distributions and random effect covariance structures through the Template Model Builder (TMB). However, incorporating known sampling variances in the conventional inverse-variance formulation of meta-analysis was previously not easily accomplished in glmmTMB. Here, we introduce equalto, a new covariance structure in glmmTMB that allows users to supply a known sampling error variance-covariance matrix when fitting meta-analytic models. This enables explicit modelling of heteroscedasticity and dependence among sampling errors. The new implementation provides an alternative way to fit meta-analytic models, convenient for users already familiar with glmmTMB. Using simulations, we show that the new implementation produces model estimates identical to those from the established metafor package and illustrate its applicability with published meta-analyses in medicine, evolutionary ecology, and the social sciences. Further, this novel implementation in glmmTMB supports more flexible modelling of meta-analytical data, expanding the R toolkit available for evidence synthesis.</p>
+
+<p><a href="https://arxiv.org/abs/2604.04084">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
