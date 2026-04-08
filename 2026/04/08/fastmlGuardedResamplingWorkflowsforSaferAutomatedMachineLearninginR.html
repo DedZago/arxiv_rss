@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>fastml: Guarded Resampling Workflows for Safer Automated Machine Learning in R</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="fastml: Guarded Resampling Workflows for Safer Automated Machine Learning in R" />
+<meta name="author" content="Selcuk Korkmaz, Dincer Goksuluk, Eda Karaismailoglu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Preprocessing leakage arises when scaling, imputation, or other data-dependent transformations are estimated before resampling, inflating apparent performance while remaining hard to detect. We present fastml, an R package that provides a single-call interface for leakage-aware machine learning through guarded resampling, where preprocessing is re-estimated inside each resample and applied to the corresponding assessment data. The package supports grouped and time-ordered resampling, blocks high-risk configurations, audits recipes for external dependencies, and includes sandboxed execution and integrated model explanation. We evaluate fastml with a Monte Carlo simulation contrasting global and fold-local normalization, a usability comparison with tidymodels under matched specifications, and survival benchmarks across datasets of different sizes. The simulation demonstrates that global preprocessing substantially inflates apparent performance relative to guarded resampling. fastml matched held-out performance obtained with tidymodels while reducing workflow orchestration, and it supported consistent benchmarking of multiple survival model classes through a unified interface." />
+<meta property="og:description" content="Preprocessing leakage arises when scaling, imputation, or other data-dependent transformations are estimated before resampling, inflating apparent performance while remaining hard to detect. We present fastml, an R package that provides a single-call interface for leakage-aware machine learning through guarded resampling, where preprocessing is re-estimated inside each resample and applied to the corresponding assessment data. The package supports grouped and time-ordered resampling, blocks high-risk configurations, audits recipes for external dependencies, and includes sandboxed execution and integrated model explanation. We evaluate fastml with a Monte Carlo simulation contrasting global and fold-local normalization, a usability comparison with tidymodels under matched specifications, and survival benchmarks across datasets of different sizes. The simulation demonstrates that global preprocessing substantially inflates apparent performance relative to guarded resampling. fastml matched held-out performance obtained with tidymodels while reducing workflow orchestration, and it supported consistent benchmarking of multiple survival model classes through a unified interface." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/08/fastmlGuardedResamplingWorkflowsforSaferAutomatedMachineLearninginR.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/08/fastmlGuardedResamplingWorkflowsforSaferAutomatedMachineLearninginR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="fastml: Guarded Resampling Workflows for Safer Automated Machine Learning in R" />
+<script type="application/ld+json">
+{"description":"Preprocessing leakage arises when scaling, imputation, or other data-dependent transformations are estimated before resampling, inflating apparent performance while remaining hard to detect. We present fastml, an R package that provides a single-call interface for leakage-aware machine learning through guarded resampling, where preprocessing is re-estimated inside each resample and applied to the corresponding assessment data. The package supports grouped and time-ordered resampling, blocks high-risk configurations, audits recipes for external dependencies, and includes sandboxed execution and integrated model explanation. We evaluate fastml with a Monte Carlo simulation contrasting global and fold-local normalization, a usability comparison with tidymodels under matched specifications, and survival benchmarks across datasets of different sizes. The simulation demonstrates that global preprocessing substantially inflates apparent performance relative to guarded resampling. fastml matched held-out performance obtained with tidymodels while reducing workflow orchestration, and it supported consistent benchmarking of multiple survival model classes through a unified interface.","author":{"@type":"Person","name":"Selcuk Korkmaz, Dincer Goksuluk, Eda Karaismailoglu"},"datePublished":"2026-04-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/08/fastmlGuardedResamplingWorkflowsforSaferAutomatedMachineLearninginR.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/08/fastmlGuardedResamplingWorkflowsforSaferAutomatedMachineLearninginR.html","headline":"fastml: Guarded Resampling Workflows for Safer Automated Machine Learning in R","@type":"BlogPosting","dateModified":"2026-04-08T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-08 00:00:00 +0000">04-08</time>
+  </p>
+  
+  <h1>fastml: Guarded Resampling Workflows for Safer Automated Machine Learning in R</h1>
+  <br>Selcuk Korkmaz, Dincer Goksuluk, Eda Karaismailoglu</h3>
+  <br> [stat.CO,stat.AP,stat.ML]
+
+  <p>Preprocessing leakage arises when scaling, imputation, or other data-dependent transformations are estimated before resampling, inflating apparent performance while remaining hard to detect. We present fastml, an R package that provides a single-call interface for leakage-aware machine learning through guarded resampling, where preprocessing is re-estimated inside each resample and applied to the corresponding assessment data. The package supports grouped and time-ordered resampling, blocks high-risk configurations, audits recipes for external dependencies, and includes sandboxed execution and integrated model explanation. We evaluate fastml with a Monte Carlo simulation contrasting global and fold-local normalization, a usability comparison with tidymodels under matched specifications, and survival benchmarks across datasets of different sizes. The simulation demonstrates that global preprocessing substantially inflates apparent performance relative to guarded resampling. fastml matched held-out performance obtained with tidymodels while reducing workflow orchestration, and it supported consistent benchmarking of multiple survival model classes through a unified interface.</p>
+
+<p><a href="https://arxiv.org/abs/2604.05225">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
