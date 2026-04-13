@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models" />
+<meta name="author" content="Toby Kettlewell, Yiyi Cheng, Thomas D. Otto, Vincent Macaulay, Mayetri Gupta" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Single-cell transcriptomic data approximates the abundance of proteins at a high resolution, but its noisiness necessitates transformation by a pipeline of methods before analysis and inference. In the absence of robust validation of these pipelines and methods, it remains unclear how best to process any particular dataset. To compensate for this, popular visualisation methods, e.g., t-SNE and UMAP, are commonly used to produce descriptions of datasets. Such visualisations are incomplete and provide subjective descriptions of samples rather than statistically meaningful statements about technical noise or biology. In this paper, we introduce the Zero-Inflated Negative-Binomial with Geometric Tail (ZINBGT), a mixture-model-based strategy for producing interpretable visualisations of each gene’s expression across cells, along with diagnostic summaries that use Wasserstein distance to highlight outlier genes. These diagnostics are used to reveal an outlier gene within a T. brucei sample. This method is applied to a human immune-cell dataset, highlighting the relationship between sparsity, mean, and spread across genes, as well as revealing an issue with the use of zero-inflated negative-binomial distributions to model single-cell RNA data. An investigation of simulated datasets intended to replicate the immune-cell data revealed discrepancies with the ground truth, establishing purposes for which these simulated datasets are unsuitable. Finally, we list a number of different domains to which this method can be applied." />
+<meta property="og:description" content="Single-cell transcriptomic data approximates the abundance of proteins at a high resolution, but its noisiness necessitates transformation by a pipeline of methods before analysis and inference. In the absence of robust validation of these pipelines and methods, it remains unclear how best to process any particular dataset. To compensate for this, popular visualisation methods, e.g., t-SNE and UMAP, are commonly used to produce descriptions of datasets. Such visualisations are incomplete and provide subjective descriptions of samples rather than statistically meaningful statements about technical noise or biology. In this paper, we introduce the Zero-Inflated Negative-Binomial with Geometric Tail (ZINBGT), a mixture-model-based strategy for producing interpretable visualisations of each gene’s expression across cells, along with diagnostic summaries that use Wasserstein distance to highlight outlier genes. These diagnostics are used to reveal an outlier gene within a T. brucei sample. This method is applied to a human immune-cell dataset, highlighting the relationship between sparsity, mean, and spread across genes, as well as revealing an issue with the use of zero-inflated negative-binomial distributions to model single-cell RNA data. An investigation of simulated datasets intended to replicate the immune-cell data revealed discrepancies with the ground truth, establishing purposes for which these simulated datasets are unsuitable. Finally, we list a number of different domains to which this method can be applied." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/13/ZINBGTExploratoryDataAnalysisofSingleCellTranscriptomicExpressionUsingMixtureModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/13/ZINBGTExploratoryDataAnalysisofSingleCellTranscriptomicExpressionUsingMixtureModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models" />
+<script type="application/ld+json">
+{"description":"Single-cell transcriptomic data approximates the abundance of proteins at a high resolution, but its noisiness necessitates transformation by a pipeline of methods before analysis and inference. In the absence of robust validation of these pipelines and methods, it remains unclear how best to process any particular dataset. To compensate for this, popular visualisation methods, e.g., t-SNE and UMAP, are commonly used to produce descriptions of datasets. Such visualisations are incomplete and provide subjective descriptions of samples rather than statistically meaningful statements about technical noise or biology. In this paper, we introduce the Zero-Inflated Negative-Binomial with Geometric Tail (ZINBGT), a mixture-model-based strategy for producing interpretable visualisations of each gene’s expression across cells, along with diagnostic summaries that use Wasserstein distance to highlight outlier genes. These diagnostics are used to reveal an outlier gene within a T. brucei sample. This method is applied to a human immune-cell dataset, highlighting the relationship between sparsity, mean, and spread across genes, as well as revealing an issue with the use of zero-inflated negative-binomial distributions to model single-cell RNA data. An investigation of simulated datasets intended to replicate the immune-cell data revealed discrepancies with the ground truth, establishing purposes for which these simulated datasets are unsuitable. Finally, we list a number of different domains to which this method can be applied.","author":{"@type":"Person","name":"Toby Kettlewell, Yiyi Cheng, Thomas D. Otto, Vincent Macaulay, Mayetri Gupta"},"datePublished":"2026-04-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/13/ZINBGTExploratoryDataAnalysisofSingleCellTranscriptomicExpressionUsingMixtureModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/13/ZINBGTExploratoryDataAnalysisofSingleCellTranscriptomicExpressionUsingMixtureModels.html","headline":"ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models","@type":"BlogPosting","dateModified":"2026-04-13T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-13 00:00:00 +0000">04-13</time>
+  </p>
+  
+  <h1>ZINBGT: Exploratory Data Analysis of Single-Cell Transcriptomic Expression Using Mixture Models</h1>
+  <br>Toby Kettlewell, Yiyi Cheng, Thomas D. Otto, Vincent Macaulay, Mayetri Gupta</h3>
+  <br> [stat.AP]
+
+  <p>Single-cell transcriptomic data approximates the abundance of proteins at a high resolution, but its noisiness necessitates transformation by a pipeline of methods before analysis and inference. In the absence of robust validation of these pipelines and methods, it remains unclear how best to process any particular dataset. To compensate for this, popular visualisation methods, e.g., t-SNE and UMAP, are commonly used to produce descriptions of datasets. Such visualisations are incomplete and provide subjective descriptions of samples rather than statistically meaningful statements about technical noise or biology.
+  In this paper, we introduce the Zero-Inflated Negative-Binomial with Geometric Tail (ZINBGT), a mixture-model-based strategy for producing interpretable visualisations of each gene’s expression across cells, along with diagnostic summaries that use Wasserstein distance to highlight outlier genes. These diagnostics are used to reveal an outlier gene within a T. brucei sample. This method is applied to a human immune-cell dataset, highlighting the relationship between sparsity, mean, and spread across genes, as well as revealing an issue with the use of zero-inflated negative-binomial distributions to model single-cell RNA data. An investigation of simulated datasets intended to replicate the immune-cell data revealed discrepancies with the ground truth, establishing purposes for which these simulated datasets are unsuitable. Finally, we list a number of different domains to which this method can be applied.</p>
+
+<p><a href="https://arxiv.org/abs/2604.09319">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
