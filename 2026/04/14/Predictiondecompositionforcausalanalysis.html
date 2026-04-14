@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Prediction decomposition for causal analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Prediction decomposition for causal analysis" />
+<meta name="author" content="Ofir Reich" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There is rising interest in using Machine Learning (ML) model predictions as outcomes in causal analysis. However, these methods have faced challenges in finding the true treatment effects. It is also challenging to make choices about which prediction models to choose, since we are interested not only in the accuracy of the prediction but in its ability to produce the correct causal effect in the analysis. In this paper I propose a decomposition of the prediction into between-unit prediction ($\eta_\mu$), within-unit-across-time prediction ($\eta_\epsilon$), and counterfactual-treatment-effect prediction ($\eta_T$). I show that the counterfactual-treatment-effect component is the one that determines whether the model recovers the true treatment effect, but only the first two components can be estimated from non-experimental data. I argue that within-unit-across-time prediction accuracy ($\eta_\epsilon$) is a structurally better proxy for the counterfactual-treatment-effect component ($\eta_T$) than overall prediction accuracy, and propose a metric to estimate it from panel data with at least two time periods. This metric serves as a diagnostic and model-selection tool for choosing ML models for causal analysis. Under the stronger assumption that $\eta_T \approx \eta_\epsilon$, it also enables constructing an approximately unbiased estimate of the treatment effect. I develop the theoretical framework and illustrate it with simulations of synthetic data." />
+<meta property="og:description" content="There is rising interest in using Machine Learning (ML) model predictions as outcomes in causal analysis. However, these methods have faced challenges in finding the true treatment effects. It is also challenging to make choices about which prediction models to choose, since we are interested not only in the accuracy of the prediction but in its ability to produce the correct causal effect in the analysis. In this paper I propose a decomposition of the prediction into between-unit prediction ($\eta_\mu$), within-unit-across-time prediction ($\eta_\epsilon$), and counterfactual-treatment-effect prediction ($\eta_T$). I show that the counterfactual-treatment-effect component is the one that determines whether the model recovers the true treatment effect, but only the first two components can be estimated from non-experimental data. I argue that within-unit-across-time prediction accuracy ($\eta_\epsilon$) is a structurally better proxy for the counterfactual-treatment-effect component ($\eta_T$) than overall prediction accuracy, and propose a metric to estimate it from panel data with at least two time periods. This metric serves as a diagnostic and model-selection tool for choosing ML models for causal analysis. Under the stronger assumption that $\eta_T \approx \eta_\epsilon$, it also enables constructing an approximately unbiased estimate of the treatment effect. I develop the theoretical framework and illustrate it with simulations of synthetic data." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/14/Predictiondecompositionforcausalanalysis.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/14/Predictiondecompositionforcausalanalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Prediction decomposition for causal analysis" />
+<script type="application/ld+json">
+{"description":"There is rising interest in using Machine Learning (ML) model predictions as outcomes in causal analysis. However, these methods have faced challenges in finding the true treatment effects. It is also challenging to make choices about which prediction models to choose, since we are interested not only in the accuracy of the prediction but in its ability to produce the correct causal effect in the analysis. In this paper I propose a decomposition of the prediction into between-unit prediction ($\\eta_\\mu$), within-unit-across-time prediction ($\\eta_\\epsilon$), and counterfactual-treatment-effect prediction ($\\eta_T$). I show that the counterfactual-treatment-effect component is the one that determines whether the model recovers the true treatment effect, but only the first two components can be estimated from non-experimental data. I argue that within-unit-across-time prediction accuracy ($\\eta_\\epsilon$) is a structurally better proxy for the counterfactual-treatment-effect component ($\\eta_T$) than overall prediction accuracy, and propose a metric to estimate it from panel data with at least two time periods. This metric serves as a diagnostic and model-selection tool for choosing ML models for causal analysis. Under the stronger assumption that $\\eta_T \\approx \\eta_\\epsilon$, it also enables constructing an approximately unbiased estimate of the treatment effect. I develop the theoretical framework and illustrate it with simulations of synthetic data.","author":{"@type":"Person","name":"Ofir Reich"},"datePublished":"2026-04-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/14/Predictiondecompositionforcausalanalysis.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/14/Predictiondecompositionforcausalanalysis.html","headline":"Prediction decomposition for causal analysis","@type":"BlogPosting","dateModified":"2026-04-14T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-14 00:00:00 +0000">04-14</time>
+  </p>
+  
+  <h1>Prediction decomposition for causal analysis</h1>
+  <br>Ofir Reich</h3>
+  <br> [stat.ME]
+
+  <p>There is rising interest in using Machine Learning (ML) model predictions as outcomes in causal analysis. However, these methods have faced challenges in finding the true treatment effects. It is also challenging to make choices about which prediction models to choose, since we are interested not only in the accuracy of the prediction but in its ability to produce the correct causal effect in the analysis. In this paper I propose a decomposition of the prediction into between-unit prediction ($\eta_\mu$), within-unit-across-time prediction ($\eta_\epsilon$), and counterfactual-treatment-effect prediction ($\eta_T$). I show that the counterfactual-treatment-effect component is the one that determines whether the model recovers the true treatment effect, but only the first two components can be estimated from non-experimental data. I argue that within-unit-across-time prediction accuracy ($\eta_\epsilon$) is a structurally better proxy for the counterfactual-treatment-effect component ($\eta_T$) than overall prediction accuracy, and propose a metric to estimate it from panel data with at least two time periods. This metric serves as a diagnostic and model-selection tool for choosing ML models for causal analysis. Under the stronger assumption that $\eta_T \approx \eta_\epsilon$, it also enables constructing an approximately unbiased estimate of the treatment effect. I develop the theoretical framework and illustrate it with simulations of synthetic data.</p>
+
+<p><a href="https://arxiv.org/abs/2604.11168">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

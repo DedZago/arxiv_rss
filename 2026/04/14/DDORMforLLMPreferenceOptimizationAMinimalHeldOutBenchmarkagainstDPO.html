@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DDO-RM for LLM Preference Optimization: A Minimal Held-Out Benchmark against DPO</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="DDO-RM for LLM Preference Optimization: A Minimal Held-Out Benchmark against DPO" />
+<meta name="author" content="Tiantian Zhang, Jierui Zuo, Wenping Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper reorganizes the current manuscript around the DPO versus DDO-RM preference-optimization project and focuses on two parts: the algorithmic view and the preliminary held-out benchmark. The benchmark asks a narrow question: even in a minimal pairwise chosen-versus-rejected setting, can a reward-guided decision-distribution update outperform a direct pairwise objective? We compare Direct Preference Optimization (DPO) against DDO-RM on EleutherAI/pythia-410m using HuggingFaceH4/ultrafeedback_binarized, evaluate on the held-out test_prefs split, and report results for seeds 42, 13, and 3407. Algorithmically, DDO-RM treats each prompt as a finite decision problem over candidate responses. Instead of optimizing only a binary chosen-rejected relation, it forms a policy distribution over candidates, centers reward-model scores under that distribution, and distills a reward-guided target distribution back into the policy. In the current public benchmark, DDO-RM improves mean pair accuracy from 0.5238 to 0.5602, AUC from 0.5315 to 0.5382, and mean margin from 0.1377 to 0.5353 relative to DPO. These are encouraging but still preliminary results: the study covers one model family, one dataset, one held-out evaluation split, and three seeds." />
+<meta property="og:description" content="This paper reorganizes the current manuscript around the DPO versus DDO-RM preference-optimization project and focuses on two parts: the algorithmic view and the preliminary held-out benchmark. The benchmark asks a narrow question: even in a minimal pairwise chosen-versus-rejected setting, can a reward-guided decision-distribution update outperform a direct pairwise objective? We compare Direct Preference Optimization (DPO) against DDO-RM on EleutherAI/pythia-410m using HuggingFaceH4/ultrafeedback_binarized, evaluate on the held-out test_prefs split, and report results for seeds 42, 13, and 3407. Algorithmically, DDO-RM treats each prompt as a finite decision problem over candidate responses. Instead of optimizing only a binary chosen-rejected relation, it forms a policy distribution over candidates, centers reward-model scores under that distribution, and distills a reward-guided target distribution back into the policy. In the current public benchmark, DDO-RM improves mean pair accuracy from 0.5238 to 0.5602, AUC from 0.5315 to 0.5382, and mean margin from 0.1377 to 0.5353 relative to DPO. These are encouraging but still preliminary results: the study covers one model family, one dataset, one held-out evaluation split, and three seeds." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/14/DDORMforLLMPreferenceOptimizationAMinimalHeldOutBenchmarkagainstDPO.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/14/DDORMforLLMPreferenceOptimizationAMinimalHeldOutBenchmarkagainstDPO.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DDO-RM for LLM Preference Optimization: A Minimal Held-Out Benchmark against DPO" />
+<script type="application/ld+json">
+{"description":"This paper reorganizes the current manuscript around the DPO versus DDO-RM preference-optimization project and focuses on two parts: the algorithmic view and the preliminary held-out benchmark. The benchmark asks a narrow question: even in a minimal pairwise chosen-versus-rejected setting, can a reward-guided decision-distribution update outperform a direct pairwise objective? We compare Direct Preference Optimization (DPO) against DDO-RM on EleutherAI/pythia-410m using HuggingFaceH4/ultrafeedback_binarized, evaluate on the held-out test_prefs split, and report results for seeds 42, 13, and 3407. Algorithmically, DDO-RM treats each prompt as a finite decision problem over candidate responses. Instead of optimizing only a binary chosen-rejected relation, it forms a policy distribution over candidates, centers reward-model scores under that distribution, and distills a reward-guided target distribution back into the policy. In the current public benchmark, DDO-RM improves mean pair accuracy from 0.5238 to 0.5602, AUC from 0.5315 to 0.5382, and mean margin from 0.1377 to 0.5353 relative to DPO. These are encouraging but still preliminary results: the study covers one model family, one dataset, one held-out evaluation split, and three seeds.","author":{"@type":"Person","name":"Tiantian Zhang, Jierui Zuo, Wenping Wang"},"datePublished":"2026-04-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/14/DDORMforLLMPreferenceOptimizationAMinimalHeldOutBenchmarkagainstDPO.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/14/DDORMforLLMPreferenceOptimizationAMinimalHeldOutBenchmarkagainstDPO.html","headline":"DDO-RM for LLM Preference Optimization: A Minimal Held-Out Benchmark against DPO","@type":"BlogPosting","dateModified":"2026-04-14T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-14 00:00:00 +0000">04-14</time>
+  </p>
+  
+  <h1>DDO-RM for LLM Preference Optimization: A Minimal Held-Out Benchmark against DPO</h1>
+  <br>Tiantian Zhang, Jierui Zuo, Wenping Wang</h3>
+  <br> [stat.ML]
+
+  <p>This paper reorganizes the current manuscript around the DPO versus DDO-RM preference-optimization project and focuses on two parts: the algorithmic view and the preliminary held-out benchmark. The benchmark asks a narrow question: even in a minimal pairwise chosen-versus-rejected setting, can a reward-guided decision-distribution update outperform a direct pairwise objective? We compare Direct Preference Optimization (DPO) against DDO-RM on EleutherAI/pythia-410m using HuggingFaceH4/ultrafeedback_binarized, evaluate on the held-out test_prefs split, and report results for seeds 42, 13, and 3407.
+  Algorithmically, DDO-RM treats each prompt as a finite decision problem over candidate responses. Instead of optimizing only a binary chosen-rejected relation, it forms a policy distribution over candidates, centers reward-model scores under that distribution, and distills a reward-guided target distribution back into the policy. In the current public benchmark, DDO-RM improves mean pair accuracy from 0.5238 to 0.5602, AUC from 0.5315 to 0.5382, and mean margin from 0.1377 to 0.5353 relative to DPO. These are encouraging but still preliminary results: the study covers one model family, one dataset, one held-out evaluation split, and three seeds.</p>
+
+<p><a href="https://arxiv.org/abs/2604.11119">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
