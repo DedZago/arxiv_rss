@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios" />
+<meta name="author" content="Haley Rosso, Talea Mayo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For complex simulation problems, inferring parameters often precludes the use of classical likelihood-based techniques due to intractable likelihoods. Simulation-based inference (SBI) methods offer a likelihood-free approach to directly learn posterior distributions $p(\bftheta \mid \xobs)$ from simulator outputs. Recently, diffusion models have emerged as promising tools for SBI, addressing limitations of earlier neural methods such as neural likelihood/posterior estimation and normalizing flows. This review examines diffusion-based SBI from first principles to applications, emphasizing robustness in three non-ideal data scenarios common to scientific computing: model misspecification (simulator-reality mismatch), unstructured or infinite-dimensional observations, and missing data. We synthesize mathematical foundations and survey eight methods addressing these challenges, such as conditional diffusion for irregular data, guided diffusion for prior adaptation, sequential and factorized approaches for efficiency, and consistency models for fast sampling. Throughout, we maintain consistent notation and emphasize conditions required for accurate posteriors. We conclude with open problems and applications to geophysical uncertainty quantification, where these challenges are acute." />
+<meta property="og:description" content="For complex simulation problems, inferring parameters often precludes the use of classical likelihood-based techniques due to intractable likelihoods. Simulation-based inference (SBI) methods offer a likelihood-free approach to directly learn posterior distributions $p(\bftheta \mid \xobs)$ from simulator outputs. Recently, diffusion models have emerged as promising tools for SBI, addressing limitations of earlier neural methods such as neural likelihood/posterior estimation and normalizing flows. This review examines diffusion-based SBI from first principles to applications, emphasizing robustness in three non-ideal data scenarios common to scientific computing: model misspecification (simulator-reality mismatch), unstructured or infinite-dimensional observations, and missing data. We synthesize mathematical foundations and survey eight methods addressing these challenges, such as conditional diffusion for irregular data, guided diffusion for prior adaptation, sequential and factorized approaches for efficiency, and consistency models for fast sampling. Throughout, we maintain consistent notation and emphasize conditions required for accurate posteriors. We conclude with open problems and applications to geophysical uncertainty quantification, where these challenges are acute." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/16/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/16/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios" />
+<script type="application/ld+json">
+{"description":"For complex simulation problems, inferring parameters often precludes the use of classical likelihood-based techniques due to intractable likelihoods. Simulation-based inference (SBI) methods offer a likelihood-free approach to directly learn posterior distributions $p(\\bftheta \\mid \\xobs)$ from simulator outputs. Recently, diffusion models have emerged as promising tools for SBI, addressing limitations of earlier neural methods such as neural likelihood/posterior estimation and normalizing flows. This review examines diffusion-based SBI from first principles to applications, emphasizing robustness in three non-ideal data scenarios common to scientific computing: model misspecification (simulator-reality mismatch), unstructured or infinite-dimensional observations, and missing data. We synthesize mathematical foundations and survey eight methods addressing these challenges, such as conditional diffusion for irregular data, guided diffusion for prior adaptation, sequential and factorized approaches for efficiency, and consistency models for fast sampling. Throughout, we maintain consistent notation and emphasize conditions required for accurate posteriors. We conclude with open problems and applications to geophysical uncertainty quantification, where these challenges are acute.","author":{"@type":"Person","name":"Haley Rosso, Talea Mayo"},"datePublished":"2026-04-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/16/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/16/AReviewofDiffusionbasedSimulationBasedInferenceFoundationsandApplicationsinNonIdealDataScenarios.html","headline":"A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios","@type":"BlogPosting","dateModified":"2026-04-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-16 00:00:00 +0000">04-16</time>
+  </p>
+  
+  <h1>A Review of Diffusion-based Simulation-Based Inference: Foundations and Applications in Non-Ideal Data Scenarios</h1>
+  <br>Haley Rosso, Talea Mayo</h3>
+  <br> [stat.ML]
+
+  <p>For complex simulation problems, inferring parameters often precludes the use of classical likelihood-based techniques due to intractable likelihoods. Simulation-based inference (SBI) methods offer a likelihood-free approach to directly learn posterior distributions $p(\bftheta \mid \xobs)$ from simulator outputs. Recently, diffusion models have emerged as promising tools for SBI, addressing limitations of earlier neural methods such as neural likelihood/posterior estimation and normalizing flows. This review examines diffusion-based SBI from first principles to applications, emphasizing robustness in three non-ideal data scenarios common to scientific computing: model misspecification (simulator-reality mismatch), unstructured or infinite-dimensional observations, and missing data. We synthesize mathematical foundations and survey eight methods addressing these challenges, such as conditional diffusion for irregular data, guided diffusion for prior adaptation, sequential and factorized approaches for efficiency, and consistency models for fast sampling. Throughout, we maintain consistent notation and emphasize conditions required for accurate posteriors. We conclude with open problems and applications to geophysical uncertainty quantification, where these challenges are acute.</p>
+
+<p><a href="https://arxiv.org/abs/2512.23748">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

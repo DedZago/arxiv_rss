@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptive Sample Size Simulations with R package adsasi</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adaptive Sample Size Simulations with R package adsasi" />
+<meta name="author" content="Skerdi Haviari" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Planning empirical experiments such as clinical trials or A/B tests requires sample size determination, which in many interesting cases has no closed-form solution (e.g. factorial or adaptive designs). adsasi is a new R package that enables simulations-first sample size calculations for any trial that can be simulated in short compute time. First, the user specifies as a function that takes a sample size as argument, simulates the experiment, and returns a boolean for success/failure. Then, adsasi functions adsasi_0d and adsasi_1d iteratively call it on different sample sizes and progressively home in on the one with nominal success rate (power), assuming that increasing sample size increases power. adsasi_1d can also draw, purely empirically, the relationship between a design parameter and sample size. The implementation uses a modified probit regression (with success/failure as the dependent variable), informed by simulations conducted around the target size, and provides standard errors at each stage using the Cram&#39;er-Rao bound derived from a custom analytical Hessian matrix. Simple examples are first presented, yielding results within Monte Carlo variance of their closed-form expressions, then intractable ones (including bootstrapping from an existing medical cohort). adsasi will hopefully facilitate the funding and conduct of interesting, highly complex experimental designs by making their sizing straightforward." />
+<meta property="og:description" content="Planning empirical experiments such as clinical trials or A/B tests requires sample size determination, which in many interesting cases has no closed-form solution (e.g. factorial or adaptive designs). adsasi is a new R package that enables simulations-first sample size calculations for any trial that can be simulated in short compute time. First, the user specifies as a function that takes a sample size as argument, simulates the experiment, and returns a boolean for success/failure. Then, adsasi functions adsasi_0d and adsasi_1d iteratively call it on different sample sizes and progressively home in on the one with nominal success rate (power), assuming that increasing sample size increases power. adsasi_1d can also draw, purely empirically, the relationship between a design parameter and sample size. The implementation uses a modified probit regression (with success/failure as the dependent variable), informed by simulations conducted around the target size, and provides standard errors at each stage using the Cram&#39;er-Rao bound derived from a custom analytical Hessian matrix. Simple examples are first presented, yielding results within Monte Carlo variance of their closed-form expressions, then intractable ones (including bootstrapping from an existing medical cohort). adsasi will hopefully facilitate the funding and conduct of interesting, highly complex experimental designs by making their sizing straightforward." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/16/AdaptiveSampleSizeSimulationswithRpackageadsasi.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/16/AdaptiveSampleSizeSimulationswithRpackageadsasi.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adaptive Sample Size Simulations with R package adsasi" />
+<script type="application/ld+json">
+{"description":"Planning empirical experiments such as clinical trials or A/B tests requires sample size determination, which in many interesting cases has no closed-form solution (e.g. factorial or adaptive designs). adsasi is a new R package that enables simulations-first sample size calculations for any trial that can be simulated in short compute time. First, the user specifies as a function that takes a sample size as argument, simulates the experiment, and returns a boolean for success/failure. Then, adsasi functions adsasi_0d and adsasi_1d iteratively call it on different sample sizes and progressively home in on the one with nominal success rate (power), assuming that increasing sample size increases power. adsasi_1d can also draw, purely empirically, the relationship between a design parameter and sample size. The implementation uses a modified probit regression (with success/failure as the dependent variable), informed by simulations conducted around the target size, and provides standard errors at each stage using the Cram&#39;er-Rao bound derived from a custom analytical Hessian matrix. Simple examples are first presented, yielding results within Monte Carlo variance of their closed-form expressions, then intractable ones (including bootstrapping from an existing medical cohort). adsasi will hopefully facilitate the funding and conduct of interesting, highly complex experimental designs by making their sizing straightforward.","author":{"@type":"Person","name":"Skerdi Haviari"},"datePublished":"2026-04-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/16/AdaptiveSampleSizeSimulationswithRpackageadsasi.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/16/AdaptiveSampleSizeSimulationswithRpackageadsasi.html","headline":"Adaptive Sample Size Simulations with R package adsasi","@type":"BlogPosting","dateModified":"2026-04-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-16 00:00:00 +0000">04-16</time>
+  </p>
+  
+  <h1>Adaptive Sample Size Simulations with R package adsasi</h1>
+  <br>Skerdi Haviari</h3>
+  <br> [stat.ME]
+
+  <p>Planning empirical experiments such as clinical trials or A/B tests requires sample size determination, which in many interesting cases has no closed-form solution (e.g. factorial or adaptive designs). adsasi is a new R package that enables simulations-first sample size calculations for any trial that can be simulated in short compute time. First, the user specifies as a function that takes a sample size as argument, simulates the experiment, and returns a boolean for success/failure. Then, adsasi functions adsasi_0d and adsasi_1d iteratively call it on different sample sizes and progressively home in on the one with nominal success rate (power), assuming that increasing sample size increases power. adsasi_1d can also draw, purely empirically, the relationship between a design parameter and sample size. The implementation uses a modified probit regression (with success/failure as the dependent variable), informed by simulations conducted around the target size, and provides standard errors at each stage using the Cram'er-Rao bound derived from a custom analytical Hessian matrix. Simple examples are first presented, yielding results within Monte Carlo variance of their closed-form expressions, then intractable ones (including bootstrapping from an existing medical cohort). adsasi will hopefully facilitate the funding and conduct of interesting, highly complex experimental designs by making their sizing straightforward.</p>
+
+<p><a href="https://arxiv.org/abs/2604.13709">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
