@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Propensity Score Weighting to Ensure Balance in Key Subgroups or Strata: A Practical Guide</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Propensity Score Weighting to Ensure Balance in Key Subgroups or Strata: A Practical Guide" />
+<meta name="author" content="Emma K. Mackay, Amol A. Verma, Fahad Razak, Surain B. Roberts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Propensity score weighting approaches have been widely implemented in clinical research to estimate the effects of a treatment or exposure while mitigating the risk of confounding in the absence of random assignment. In practice, when working with large electronic health records (EHR) or administrative datasets to evaluate health quality outcomes at the institutional level, or evaluate supportive care interventions for a wide range of hospitalized patients, it may be advisable to stratify the propensity score weighting approach by indication, reason for admission, or other clinical risk factors due to the potential for substantial heterogeneity across subgroups of patients with complex care needs. A stratified approach may be appropriate if (i) prognosis differs substantially between patient subgroups such that achieving balance in the composition of these strata between exposure/treatment groups should be prioritized, (ii) likelihood of exposure differs substantially across clinical subgroups, or (iii) the covariate-exposure associations are expected to differ substantially between subgroups (i.e. there are covariate-subgroup interactions in the exposure/treatment propensity model). For example, we may want to evaluate the impact of prophylactic anticoagulant use for venous thromboembolism prevention in elderly patients admitted to hospital for a wide array of conditions. The purpose of this article is to outline an approach to implementing propensity score weighting with stratification by clinical groups. We also provide guidance on best practices with particular focus on EHR and administrative medical data, and population health settings." />
+<meta property="og:description" content="Propensity score weighting approaches have been widely implemented in clinical research to estimate the effects of a treatment or exposure while mitigating the risk of confounding in the absence of random assignment. In practice, when working with large electronic health records (EHR) or administrative datasets to evaluate health quality outcomes at the institutional level, or evaluate supportive care interventions for a wide range of hospitalized patients, it may be advisable to stratify the propensity score weighting approach by indication, reason for admission, or other clinical risk factors due to the potential for substantial heterogeneity across subgroups of patients with complex care needs. A stratified approach may be appropriate if (i) prognosis differs substantially between patient subgroups such that achieving balance in the composition of these strata between exposure/treatment groups should be prioritized, (ii) likelihood of exposure differs substantially across clinical subgroups, or (iii) the covariate-exposure associations are expected to differ substantially between subgroups (i.e. there are covariate-subgroup interactions in the exposure/treatment propensity model). For example, we may want to evaluate the impact of prophylactic anticoagulant use for venous thromboembolism prevention in elderly patients admitted to hospital for a wide array of conditions. The purpose of this article is to outline an approach to implementing propensity score weighting with stratification by clinical groups. We also provide guidance on best practices with particular focus on EHR and administrative medical data, and population health settings." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/17/PropensityScoreWeightingtoEnsureBalanceinKeySubgroupsorStrataAPracticalGuide.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/17/PropensityScoreWeightingtoEnsureBalanceinKeySubgroupsorStrataAPracticalGuide.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Propensity Score Weighting to Ensure Balance in Key Subgroups or Strata: A Practical Guide" />
+<script type="application/ld+json">
+{"description":"Propensity score weighting approaches have been widely implemented in clinical research to estimate the effects of a treatment or exposure while mitigating the risk of confounding in the absence of random assignment. In practice, when working with large electronic health records (EHR) or administrative datasets to evaluate health quality outcomes at the institutional level, or evaluate supportive care interventions for a wide range of hospitalized patients, it may be advisable to stratify the propensity score weighting approach by indication, reason for admission, or other clinical risk factors due to the potential for substantial heterogeneity across subgroups of patients with complex care needs. A stratified approach may be appropriate if (i) prognosis differs substantially between patient subgroups such that achieving balance in the composition of these strata between exposure/treatment groups should be prioritized, (ii) likelihood of exposure differs substantially across clinical subgroups, or (iii) the covariate-exposure associations are expected to differ substantially between subgroups (i.e. there are covariate-subgroup interactions in the exposure/treatment propensity model). For example, we may want to evaluate the impact of prophylactic anticoagulant use for venous thromboembolism prevention in elderly patients admitted to hospital for a wide array of conditions. The purpose of this article is to outline an approach to implementing propensity score weighting with stratification by clinical groups. We also provide guidance on best practices with particular focus on EHR and administrative medical data, and population health settings.","author":{"@type":"Person","name":"Emma K. Mackay, Amol A. Verma, Fahad Razak, Surain B. Roberts"},"datePublished":"2026-04-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/17/PropensityScoreWeightingtoEnsureBalanceinKeySubgroupsorStrataAPracticalGuide.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/17/PropensityScoreWeightingtoEnsureBalanceinKeySubgroupsorStrataAPracticalGuide.html","headline":"Propensity Score Weighting to Ensure Balance in Key Subgroups or Strata: A Practical Guide","@type":"BlogPosting","dateModified":"2026-04-17T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-17 00:00:00 +0000">04-17</time>
+  </p>
+  
+  <h1>Propensity Score Weighting to Ensure Balance in Key Subgroups or Strata: A Practical Guide</h1>
+  <br>Emma K. Mackay, Amol A. Verma, Fahad Razak, Surain B. Roberts</h3>
+  <br> [stat.ME]
+
+  <p>Propensity score weighting approaches have been widely implemented in clinical research to estimate the effects of a treatment or exposure while mitigating the risk of confounding in the absence of random assignment. In practice, when working with large electronic health records (EHR) or administrative datasets to evaluate health quality outcomes at the institutional level, or evaluate supportive care interventions for a wide range of hospitalized patients, it may be advisable to stratify the propensity score weighting approach by indication, reason for admission, or other clinical risk factors due to the potential for substantial heterogeneity across subgroups of patients with complex care needs.
+  A stratified approach may be appropriate if (i) prognosis differs substantially between patient subgroups such that achieving balance in the composition of these strata between exposure/treatment groups should be prioritized, (ii) likelihood of exposure differs substantially across clinical subgroups, or (iii) the covariate-exposure associations are expected to differ substantially between subgroups (i.e. there are covariate-subgroup interactions in the exposure/treatment propensity model). For example, we may want to evaluate the impact of prophylactic anticoagulant use for venous thromboembolism prevention in elderly patients admitted to hospital for a wide array of conditions.
+  The purpose of this article is to outline an approach to implementing propensity score weighting with stratification by clinical groups. We also provide guidance on best practices with particular focus on EHR and administrative medical data, and population health settings.</p>
+
+<p><a href="https://arxiv.org/abs/2604.14407">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
