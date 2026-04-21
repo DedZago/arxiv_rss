@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>mlr3torch: A Deep Learning Framework in R based on mlr3 and torch</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="mlr3torch: A Deep Learning Framework in R based on mlr3 and torch" />
+<meta name="author" content="Sebastian Fischer, Lukas Burk, Carson Zhang, Bernd Bischl, Martin Binder" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Deep learning (DL) has become a cornerstone of modern machine learning (ML) praxis. We introduce the R package mlr3torch, which is an extensible DL framework for the mlr3 ecosystem. It is built upon the torch package, and simplifies the definition, training, and evaluation of neural networks for both tabular data and generic tensors (e.g., images) for classification and regression. The package implements predefined architectures, and torch models can easily be converted to mlr3 learners. It also allows users to define neural networks as graphs. This representation is based on the graph language defined in mlr3pipelines and allows users to define the entire modeling workflow, including preprocessing, data augmentation, and network architecture, in a single graph. Through its integration into the mlr3 ecosystem, the package allows for convenient resampling, benchmarking, preprocessing, and more. We explain the package’s design and features and show how to customize and extend it to new problems. Furthermore, we demonstrate the package’s capabilities using three use cases, namely hyperparameter tuning, fine-tuning, and defining architectures for multimodal data. Finally, we present some runtime benchmarks." />
+<meta property="og:description" content="Deep learning (DL) has become a cornerstone of modern machine learning (ML) praxis. We introduce the R package mlr3torch, which is an extensible DL framework for the mlr3 ecosystem. It is built upon the torch package, and simplifies the definition, training, and evaluation of neural networks for both tabular data and generic tensors (e.g., images) for classification and regression. The package implements predefined architectures, and torch models can easily be converted to mlr3 learners. It also allows users to define neural networks as graphs. This representation is based on the graph language defined in mlr3pipelines and allows users to define the entire modeling workflow, including preprocessing, data augmentation, and network architecture, in a single graph. Through its integration into the mlr3 ecosystem, the package allows for convenient resampling, benchmarking, preprocessing, and more. We explain the package’s design and features and show how to customize and extend it to new problems. Furthermore, we demonstrate the package’s capabilities using three use cases, namely hyperparameter tuning, fine-tuning, and defining architectures for multimodal data. Finally, we present some runtime benchmarks." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/21/mlr3torchADeepLearningFrameworkinRbasedonmlr3andtorch.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/21/mlr3torchADeepLearningFrameworkinRbasedonmlr3andtorch.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="mlr3torch: A Deep Learning Framework in R based on mlr3 and torch" />
+<script type="application/ld+json">
+{"description":"Deep learning (DL) has become a cornerstone of modern machine learning (ML) praxis. We introduce the R package mlr3torch, which is an extensible DL framework for the mlr3 ecosystem. It is built upon the torch package, and simplifies the definition, training, and evaluation of neural networks for both tabular data and generic tensors (e.g., images) for classification and regression. The package implements predefined architectures, and torch models can easily be converted to mlr3 learners. It also allows users to define neural networks as graphs. This representation is based on the graph language defined in mlr3pipelines and allows users to define the entire modeling workflow, including preprocessing, data augmentation, and network architecture, in a single graph. Through its integration into the mlr3 ecosystem, the package allows for convenient resampling, benchmarking, preprocessing, and more. We explain the package’s design and features and show how to customize and extend it to new problems. Furthermore, we demonstrate the package’s capabilities using three use cases, namely hyperparameter tuning, fine-tuning, and defining architectures for multimodal data. Finally, we present some runtime benchmarks.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/21/mlr3torchADeepLearningFrameworkinRbasedonmlr3andtorch.html"},"author":{"@type":"Person","name":"Sebastian Fischer, Lukas Burk, Carson Zhang, Bernd Bischl, Martin Binder"},"dateModified":"2026-04-21T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/04/21/mlr3torchADeepLearningFrameworkinRbasedonmlr3andtorch.html","headline":"mlr3torch: A Deep Learning Framework in R based on mlr3 and torch","@type":"BlogPosting","datePublished":"2026-04-21T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-21 00:00:00 +0000">04-21</time>
+  </p>
+  
+  <h1>mlr3torch: A Deep Learning Framework in R based on mlr3 and torch</h1>
+  <br>Sebastian Fischer, Lukas Burk, Carson Zhang, Bernd Bischl, Martin Binder</h3>
+  <br> [stat.ML]
+
+  <p>Deep learning (DL) has become a cornerstone of modern machine learning (ML) praxis. We introduce the R package mlr3torch, which is an extensible DL framework for the mlr3 ecosystem. It is built upon the torch package, and simplifies the definition, training, and evaluation of neural networks for both tabular data and generic tensors (e.g., images) for classification and regression. The package implements predefined architectures, and torch models can easily be converted to mlr3 learners. It also allows users to define neural networks as graphs. This representation is based on the graph language defined in mlr3pipelines and allows users to define the entire modeling workflow, including preprocessing, data augmentation, and network architecture, in a single graph. Through its integration into the mlr3 ecosystem, the package allows for convenient resampling, benchmarking, preprocessing, and more. We explain the package’s design and features and show how to customize and extend it to new problems. Furthermore, we demonstrate the package’s capabilities using three use cases, namely hyperparameter tuning, fine-tuning, and defining architectures for multimodal data. Finally, we present some runtime benchmarks.</p>
+
+<p><a href="https://arxiv.org/abs/2604.18152">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
