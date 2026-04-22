@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Autoregressive Inference for Transformer Probabilistic Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Autoregressive Inference for Transformer Probabilistic Models" />
+<meta name="author" content="Conor Hassan, Nasrulloh Loka, Cen-You Li, Daolang Huang, Paul E. Chang, Yang Yang, Francesco Silvestrin, Samuel Kaski, Luigi Acerbi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Set-based transformer models for amortized probabilistic inference and meta-learning, such as neural processes, prior-fitted networks, and tabular foundation models, excel at single-pass marginal prediction. However, many applications require joint distributions over multiple predictions. Purely autoregressive architectures generate these efficiently but sacrifice flexible set-conditioning. Obtaining joint distributions from set-based models requires re-encoding the entire context at each autoregressive step, which scales poorly. We introduce a causal autoregressive buffer that combines the strengths of both paradigms. The model encodes the context once and caches it; a lightweight causal buffer captures dependencies among generated targets, with each new prediction attending to both the cached context and all previously predicted targets added to the buffer. This enables efficient batched autoregressive sampling and joint predictive density evaluation. Training integrates set-based and autoregressive modes through masked attention at minimal overhead. Across synthetic functions, EEG time series, a Bayesian model comparison task, and tabular regression, our method closely matches the performance of full context re-encoding while delivering up to $20\times$ faster joint sampling and density evaluation, and up to $7\times$ lower memory usage." />
+<meta property="og:description" content="Set-based transformer models for amortized probabilistic inference and meta-learning, such as neural processes, prior-fitted networks, and tabular foundation models, excel at single-pass marginal prediction. However, many applications require joint distributions over multiple predictions. Purely autoregressive architectures generate these efficiently but sacrifice flexible set-conditioning. Obtaining joint distributions from set-based models requires re-encoding the entire context at each autoregressive step, which scales poorly. We introduce a causal autoregressive buffer that combines the strengths of both paradigms. The model encodes the context once and caches it; a lightweight causal buffer captures dependencies among generated targets, with each new prediction attending to both the cached context and all previously predicted targets added to the buffer. This enables efficient batched autoregressive sampling and joint predictive density evaluation. Training integrates set-based and autoregressive modes through masked attention at minimal overhead. Across synthetic functions, EEG time series, a Bayesian model comparison task, and tabular regression, our method closely matches the performance of full context re-encoding while delivering up to $20\times$ faster joint sampling and density evaluation, and up to $7\times$ lower memory usage." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/22/EfficientAutoregressiveInferenceforTransformerProbabilisticModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/22/EfficientAutoregressiveInferenceforTransformerProbabilisticModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Autoregressive Inference for Transformer Probabilistic Models" />
+<script type="application/ld+json">
+{"description":"Set-based transformer models for amortized probabilistic inference and meta-learning, such as neural processes, prior-fitted networks, and tabular foundation models, excel at single-pass marginal prediction. However, many applications require joint distributions over multiple predictions. Purely autoregressive architectures generate these efficiently but sacrifice flexible set-conditioning. Obtaining joint distributions from set-based models requires re-encoding the entire context at each autoregressive step, which scales poorly. We introduce a causal autoregressive buffer that combines the strengths of both paradigms. The model encodes the context once and caches it; a lightweight causal buffer captures dependencies among generated targets, with each new prediction attending to both the cached context and all previously predicted targets added to the buffer. This enables efficient batched autoregressive sampling and joint predictive density evaluation. Training integrates set-based and autoregressive modes through masked attention at minimal overhead. Across synthetic functions, EEG time series, a Bayesian model comparison task, and tabular regression, our method closely matches the performance of full context re-encoding while delivering up to $20\\times$ faster joint sampling and density evaluation, and up to $7\\times$ lower memory usage.","author":{"@type":"Person","name":"Conor Hassan, Nasrulloh Loka, Cen-You Li, Daolang Huang, Paul E. Chang, Yang Yang, Francesco Silvestrin, Samuel Kaski, Luigi Acerbi"},"datePublished":"2026-04-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/22/EfficientAutoregressiveInferenceforTransformerProbabilisticModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/22/EfficientAutoregressiveInferenceforTransformerProbabilisticModels.html","headline":"Efficient Autoregressive Inference for Transformer Probabilistic Models","@type":"BlogPosting","dateModified":"2026-04-22T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-22 00:00:00 +0000">04-22</time>
+  </p>
+  
+  <h1>Efficient Autoregressive Inference for Transformer Probabilistic Models</h1>
+  <br>Conor Hassan, Nasrulloh Loka, Cen-You Li, Daolang Huang, Paul E. Chang, Yang Yang, Francesco Silvestrin, Samuel Kaski, Luigi Acerbi</h3>
+  <br> [stat.ML]
+
+  <p>Set-based transformer models for amortized probabilistic inference and meta-learning, such as neural processes, prior-fitted networks, and tabular foundation models, excel at single-pass marginal prediction. However, many applications require joint distributions over multiple predictions. Purely autoregressive architectures generate these efficiently but sacrifice flexible set-conditioning. Obtaining joint distributions from set-based models requires re-encoding the entire context at each autoregressive step, which scales poorly. We introduce a causal autoregressive buffer that combines the strengths of both paradigms. The model encodes the context once and caches it; a lightweight causal buffer captures dependencies among generated targets, with each new prediction attending to both the cached context and all previously predicted targets added to the buffer. This enables efficient batched autoregressive sampling and joint predictive density evaluation. Training integrates set-based and autoregressive modes through masked attention at minimal overhead. Across synthetic functions, EEG time series, a Bayesian model comparison task, and tabular regression, our method closely matches the performance of full context re-encoding while delivering up to $20\times$ faster joint sampling and density evaluation, and up to $7\times$ lower memory usage.</p>
+
+<p><a href="https://arxiv.org/abs/2510.09477">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
