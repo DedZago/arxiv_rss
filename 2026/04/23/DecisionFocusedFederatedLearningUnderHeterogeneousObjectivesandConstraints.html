@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Decision-Focused Federated Learning Under Heterogeneous Objectives and Constraints</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Decision-Focused Federated Learning Under Heterogeneous Objectives and Constraints" />
+<meta name="author" content="Konstantinos Ziliaskopoulos, Alexander Vinel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We consider what we refer to as {Decision-Focused Federated Learning (DFFL)} framework, i.e., a predict-then-optimize approach employed by a collection of agents, where each agent’s predictive model is an input to a downstream linear optimization problem, and no direct exchange of raw data is allowed. Importantly, clients can differ both in objective functions and in feasibility constraints. We build on the well-known SPO+ approach and develop heterogeneity bounds for the SPO+ surrogate loss in this case. This is accomplished by employing a support function representation of the feasible region, separating (i) objective shift via norm distances between the cost vectors and (ii) feasible-set shift via shape distances between the constraint sets. In the case of strongly convex feasible regions, sharper bounds are derived due to the optimizer stability. Building on these results, we define a heuristic local-versus-federated excess risk decision rule which, under SPO+ risk, gives a condition for when federation can be expected to improve decision quality: the heterogeneity penalty must be smaller than the statistical advantage of pooling data. We implement a FedAvg-style DFFL set of experiments on both polyhedral and strongly convex problems and show that federation is broadly robust in the strongly convex setting, while performance in the polyhedral setting degrades primarily with constraint heterogeneity, especially for clients with many samples. In other words, especially for the strongly convex case, an approach following a direct implementation of FedAvg and SPO+ can still yield promising performance even when the downstream optimization problems are noticeably different." />
+<meta property="og:description" content="We consider what we refer to as {Decision-Focused Federated Learning (DFFL)} framework, i.e., a predict-then-optimize approach employed by a collection of agents, where each agent’s predictive model is an input to a downstream linear optimization problem, and no direct exchange of raw data is allowed. Importantly, clients can differ both in objective functions and in feasibility constraints. We build on the well-known SPO+ approach and develop heterogeneity bounds for the SPO+ surrogate loss in this case. This is accomplished by employing a support function representation of the feasible region, separating (i) objective shift via norm distances between the cost vectors and (ii) feasible-set shift via shape distances between the constraint sets. In the case of strongly convex feasible regions, sharper bounds are derived due to the optimizer stability. Building on these results, we define a heuristic local-versus-federated excess risk decision rule which, under SPO+ risk, gives a condition for when federation can be expected to improve decision quality: the heterogeneity penalty must be smaller than the statistical advantage of pooling data. We implement a FedAvg-style DFFL set of experiments on both polyhedral and strongly convex problems and show that federation is broadly robust in the strongly convex setting, while performance in the polyhedral setting degrades primarily with constraint heterogeneity, especially for clients with many samples. In other words, especially for the strongly convex case, an approach following a direct implementation of FedAvg and SPO+ can still yield promising performance even when the downstream optimization problems are noticeably different." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/23/DecisionFocusedFederatedLearningUnderHeterogeneousObjectivesandConstraints.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/23/DecisionFocusedFederatedLearningUnderHeterogeneousObjectivesandConstraints.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Decision-Focused Federated Learning Under Heterogeneous Objectives and Constraints" />
+<script type="application/ld+json">
+{"description":"We consider what we refer to as {Decision-Focused Federated Learning (DFFL)} framework, i.e., a predict-then-optimize approach employed by a collection of agents, where each agent’s predictive model is an input to a downstream linear optimization problem, and no direct exchange of raw data is allowed. Importantly, clients can differ both in objective functions and in feasibility constraints. We build on the well-known SPO+ approach and develop heterogeneity bounds for the SPO+ surrogate loss in this case. This is accomplished by employing a support function representation of the feasible region, separating (i) objective shift via norm distances between the cost vectors and (ii) feasible-set shift via shape distances between the constraint sets. In the case of strongly convex feasible regions, sharper bounds are derived due to the optimizer stability. Building on these results, we define a heuristic local-versus-federated excess risk decision rule which, under SPO+ risk, gives a condition for when federation can be expected to improve decision quality: the heterogeneity penalty must be smaller than the statistical advantage of pooling data. We implement a FedAvg-style DFFL set of experiments on both polyhedral and strongly convex problems and show that federation is broadly robust in the strongly convex setting, while performance in the polyhedral setting degrades primarily with constraint heterogeneity, especially for clients with many samples. In other words, especially for the strongly convex case, an approach following a direct implementation of FedAvg and SPO+ can still yield promising performance even when the downstream optimization problems are noticeably different.","author":{"@type":"Person","name":"Konstantinos Ziliaskopoulos, Alexander Vinel"},"datePublished":"2026-04-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/23/DecisionFocusedFederatedLearningUnderHeterogeneousObjectivesandConstraints.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/23/DecisionFocusedFederatedLearningUnderHeterogeneousObjectivesandConstraints.html","headline":"Decision-Focused Federated Learning Under Heterogeneous Objectives and Constraints","@type":"BlogPosting","dateModified":"2026-04-23T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-23 00:00:00 +0000">04-23</time>
+  </p>
+  
+  <h1>Decision-Focused Federated Learning Under Heterogeneous Objectives and Constraints</h1>
+  <br>Konstantinos Ziliaskopoulos, Alexander Vinel</h3>
+  <br> [stat.ML]
+
+  <p>We consider what we refer to as {Decision-Focused Federated Learning (DFFL)} framework, i.e., a predict-then-optimize approach employed by a collection of agents, where each agent’s predictive model is an input to a downstream linear optimization problem, and no direct exchange of raw data is allowed. Importantly, clients can differ both in objective functions and in feasibility constraints. We build on the well-known SPO+ approach and develop heterogeneity bounds for the SPO+ surrogate loss in this case. This is accomplished by employing a support function representation of the feasible region, separating (i) objective shift via norm distances between the cost vectors and (ii) feasible-set shift via shape distances between the constraint sets. In the case of strongly convex feasible regions, sharper bounds are derived due to the optimizer stability. Building on these results, we define a heuristic local-versus-federated excess risk decision rule which, under SPO+ risk, gives a condition for when federation can be expected to improve decision quality: the heterogeneity penalty must be smaller than the statistical advantage of pooling data. We implement a FedAvg-style DFFL set of experiments on both polyhedral and strongly convex problems and show that federation is broadly robust in the strongly convex setting, while performance in the polyhedral setting degrades primarily with constraint heterogeneity, especially for clients with many samples. In other words, especially for the strongly convex case, an approach following a direct implementation of FedAvg and SPO+ can still yield promising performance even when the downstream optimization problems are noticeably different.</p>
+
+<p><a href="https://arxiv.org/abs/2604.20031">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
