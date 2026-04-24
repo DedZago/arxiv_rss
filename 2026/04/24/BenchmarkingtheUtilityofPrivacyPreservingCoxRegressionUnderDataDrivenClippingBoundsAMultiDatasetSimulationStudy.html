@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Benchmarking the Utility of Privacy-Preserving Cox Regression Under Data-Driven Clipping Bounds: A Multi-Dataset Simulation Study</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Benchmarking the Utility of Privacy-Preserving Cox Regression Under Data-Driven Clipping Bounds: A Multi-Dataset Simulation Study" />
+<meta name="author" content="Keita Fukuyama, Yukiko Mori, Tomohiro Kuroda, Hiroaki Kikuchi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Differential privacy (DP) is a mathematical framework that guarantees individual privacy; however, systematic evaluation of its impact on statistical utility in survival analyses remains limited. In this study, we systematically evaluated the impact of DP mechanisms (Laplace mechanism and Randomized Response) with data-driven clipping bounds on the Cox proportional hazards model, using 5 clinical datasets ($n = 168$–$6{,}524$), 15 levels of $\varepsilon$ (0.1–1000), and $B = 1{,}000$ Monte Carlo iterations. The data-driven clipping bounds used here are observed min/max and therefore do not provide formal $\varepsilon$-DP guarantees; the results represent an optimistic lower bound on utility degradation under formal DP. We compared three types of input perturbations (covariates only, all inputs, and the discrete-time model) with output perturbations (dfbeta-based sensitivity), using loss of significance rate (LSR), C-index, and coefficient bias as metrics. At standard DP levels ($\varepsilon \leq 1$), approximately 90% (90–94%) of the significant covariates lost significance, even in the largest dataset ($n = 6{,}524$), and the predictive performance approached random levels (test C-index $\approx 0.5$) under many conditions. Among the input perturbation approaches, perturbing only covariates preserved the risk-set structure and achieved the best recovery, whereas output perturbation (dfbeta-based sensitivity) maintained near-baseline performance at $\varepsilon \geq 5$. At $n \approx 3{,}000$, the significance recovered rapidly at $\varepsilon = 3$–10; however, in practice, $\varepsilon \geq 10$ (for predictive performance) to $\varepsilon \geq 30$–60 (for significance preservation) is required. In the moderate-to-high $\varepsilon$ range, false-positive rates increased for variables whose baseline $p$-values were near the significance threshold." />
+<meta property="og:description" content="Differential privacy (DP) is a mathematical framework that guarantees individual privacy; however, systematic evaluation of its impact on statistical utility in survival analyses remains limited. In this study, we systematically evaluated the impact of DP mechanisms (Laplace mechanism and Randomized Response) with data-driven clipping bounds on the Cox proportional hazards model, using 5 clinical datasets ($n = 168$–$6{,}524$), 15 levels of $\varepsilon$ (0.1–1000), and $B = 1{,}000$ Monte Carlo iterations. The data-driven clipping bounds used here are observed min/max and therefore do not provide formal $\varepsilon$-DP guarantees; the results represent an optimistic lower bound on utility degradation under formal DP. We compared three types of input perturbations (covariates only, all inputs, and the discrete-time model) with output perturbations (dfbeta-based sensitivity), using loss of significance rate (LSR), C-index, and coefficient bias as metrics. At standard DP levels ($\varepsilon \leq 1$), approximately 90% (90–94%) of the significant covariates lost significance, even in the largest dataset ($n = 6{,}524$), and the predictive performance approached random levels (test C-index $\approx 0.5$) under many conditions. Among the input perturbation approaches, perturbing only covariates preserved the risk-set structure and achieved the best recovery, whereas output perturbation (dfbeta-based sensitivity) maintained near-baseline performance at $\varepsilon \geq 5$. At $n \approx 3{,}000$, the significance recovered rapidly at $\varepsilon = 3$–10; however, in practice, $\varepsilon \geq 10$ (for predictive performance) to $\varepsilon \geq 30$–60 (for significance preservation) is required. In the moderate-to-high $\varepsilon$ range, false-positive rates increased for variables whose baseline $p$-values were near the significance threshold." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/24/BenchmarkingtheUtilityofPrivacyPreservingCoxRegressionUnderDataDrivenClippingBoundsAMultiDatasetSimulationStudy.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/24/BenchmarkingtheUtilityofPrivacyPreservingCoxRegressionUnderDataDrivenClippingBoundsAMultiDatasetSimulationStudy.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Benchmarking the Utility of Privacy-Preserving Cox Regression Under Data-Driven Clipping Bounds: A Multi-Dataset Simulation Study" />
+<script type="application/ld+json">
+{"description":"Differential privacy (DP) is a mathematical framework that guarantees individual privacy; however, systematic evaluation of its impact on statistical utility in survival analyses remains limited. In this study, we systematically evaluated the impact of DP mechanisms (Laplace mechanism and Randomized Response) with data-driven clipping bounds on the Cox proportional hazards model, using 5 clinical datasets ($n = 168$–$6{,}524$), 15 levels of $\\varepsilon$ (0.1–1000), and $B = 1{,}000$ Monte Carlo iterations. The data-driven clipping bounds used here are observed min/max and therefore do not provide formal $\\varepsilon$-DP guarantees; the results represent an optimistic lower bound on utility degradation under formal DP. We compared three types of input perturbations (covariates only, all inputs, and the discrete-time model) with output perturbations (dfbeta-based sensitivity), using loss of significance rate (LSR), C-index, and coefficient bias as metrics. At standard DP levels ($\\varepsilon \\leq 1$), approximately 90% (90–94%) of the significant covariates lost significance, even in the largest dataset ($n = 6{,}524$), and the predictive performance approached random levels (test C-index $\\approx 0.5$) under many conditions. Among the input perturbation approaches, perturbing only covariates preserved the risk-set structure and achieved the best recovery, whereas output perturbation (dfbeta-based sensitivity) maintained near-baseline performance at $\\varepsilon \\geq 5$. At $n \\approx 3{,}000$, the significance recovered rapidly at $\\varepsilon = 3$–10; however, in practice, $\\varepsilon \\geq 10$ (for predictive performance) to $\\varepsilon \\geq 30$–60 (for significance preservation) is required. In the moderate-to-high $\\varepsilon$ range, false-positive rates increased for variables whose baseline $p$-values were near the significance threshold.","author":{"@type":"Person","name":"Keita Fukuyama, Yukiko Mori, Tomohiro Kuroda, Hiroaki Kikuchi"},"datePublished":"2026-04-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/24/BenchmarkingtheUtilityofPrivacyPreservingCoxRegressionUnderDataDrivenClippingBoundsAMultiDatasetSimulationStudy.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/24/BenchmarkingtheUtilityofPrivacyPreservingCoxRegressionUnderDataDrivenClippingBoundsAMultiDatasetSimulationStudy.html","headline":"Benchmarking the Utility of Privacy-Preserving Cox Regression Under Data-Driven Clipping Bounds: A Multi-Dataset Simulation Study","@type":"BlogPosting","dateModified":"2026-04-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-24 00:00:00 +0000">04-24</time>
+  </p>
+  
+  <h1>Benchmarking the Utility of Privacy-Preserving Cox Regression Under Data-Driven Clipping Bounds: A Multi-Dataset Simulation Study</h1>
+  <br>Keita Fukuyama, Yukiko Mori, Tomohiro Kuroda, Hiroaki Kikuchi</h3>
+  <br> [stat.AP,stat.ME]
+
+  <p>Differential privacy (DP) is a mathematical framework that guarantees individual privacy; however, systematic evaluation of its impact on statistical utility in survival analyses remains limited. In this study, we systematically evaluated the impact of DP mechanisms (Laplace mechanism and Randomized Response) with data-driven clipping bounds on the Cox proportional hazards model, using 5 clinical datasets ($n = 168$–$6{,}524$), 15 levels of $\varepsilon$ (0.1–1000), and $B = 1{,}000$ Monte Carlo iterations. The data-driven clipping bounds used here are observed min/max and therefore do not provide formal $\varepsilon$-DP guarantees; the results represent an optimistic lower bound on utility degradation under formal DP. We compared three types of input perturbations (covariates only, all inputs, and the discrete-time model) with output perturbations (dfbeta-based sensitivity), using loss of significance rate (LSR), C-index, and coefficient bias as metrics. At standard DP levels ($\varepsilon \leq 1$), approximately 90% (90–94%) of the significant covariates lost significance, even in the largest dataset ($n = 6{,}524$), and the predictive performance approached random levels (test C-index $\approx 0.5$) under many conditions. Among the input perturbation approaches, perturbing only covariates preserved the risk-set structure and achieved the best recovery, whereas output perturbation (dfbeta-based sensitivity) maintained near-baseline performance at $\varepsilon \geq 5$. At $n \approx 3{,}000$, the significance recovered rapidly at $\varepsilon = 3$–10; however, in practice, $\varepsilon \geq 10$ (for predictive performance) to $\varepsilon \geq 30$–60 (for significance preservation) is required. In the moderate-to-high $\varepsilon$ range, false-positive rates increased for variables whose baseline $p$-values were near the significance threshold.</p>
+
+<p><a href="https://arxiv.org/abs/2604.21491">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

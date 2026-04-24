@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios" />
+<meta name="author" content="František Bartoš, Eric-Jan Wagenmakers, Maarten Marsman, Don van den Bergh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayes factor sensitivity analysis examines how the evidence for one hypothesis over another depends on the prior distribution. In complex models, the standard approach refits the model at each hyper-parameter value, and the total computational cost scales linearly in the grid size. We propose a method that recovers the entire sensitivity curve from a single additional model fit. The key identity decomposes the Bayes factor at any hyper-parameter value $\gamma_x$ into an ``anchor’’ Bayes factor at a fixed reference $\gamma_0$ and a Savage–Dickey density ratio in an extended model that places a hyper-prior on $\gamma$. Once this extended model is fit, the Bayes factor at any $\gamma_x$ follows from the anchor value and a ratio of two posterior density ordinates. To approximate this ratio, we employ the importance-weighted marginal density estimator (IWMDE). Because the sensitivity parameter enters the model only through the prior distribution on the model parameters, the data likelihood cancels in the IWMDE, reducing it to a simple ratio of prior density evaluations on the MCMC draws, without any additional likelihood computation. The resulting estimator is fast, remains accurate even with small MCMC samples, and substantially outperforms kernel density estimation across the full sensitivity range. The method extends naturally to simultaneous sensitivity over multiple hyper-parameters and to Bayesian model averaging. We illustrate it on a univariate Bayesian $t$-test with exact Bayes factors for validation, a bivariate informed $t$-test, and a Bayesian model-averaged meta-analysis, obtaining accurate sensitivity curves at a fraction of the brute-force cost." />
+<meta property="og:description" content="Bayes factor sensitivity analysis examines how the evidence for one hypothesis over another depends on the prior distribution. In complex models, the standard approach refits the model at each hyper-parameter value, and the total computational cost scales linearly in the grid size. We propose a method that recovers the entire sensitivity curve from a single additional model fit. The key identity decomposes the Bayes factor at any hyper-parameter value $\gamma_x$ into an ``anchor’’ Bayes factor at a fixed reference $\gamma_0$ and a Savage–Dickey density ratio in an extended model that places a hyper-prior on $\gamma$. Once this extended model is fit, the Bayes factor at any $\gamma_x$ follows from the anchor value and a ratio of two posterior density ordinates. To approximate this ratio, we employ the importance-weighted marginal density estimator (IWMDE). Because the sensitivity parameter enters the model only through the prior distribution on the model parameters, the data likelihood cancels in the IWMDE, reducing it to a simple ratio of prior density evaluations on the MCMC draws, without any additional likelihood computation. The resulting estimator is fast, remains accurate even with small MCMC samples, and substantially outperforms kernel density estimation across the full sensitivity range. The method extends naturally to simultaneous sensitivity over multiple hyper-parameters and to Bayesian model averaging. We illustrate it on a univariate Bayesian $t$-test with exact Bayes factors for validation, a bivariate informed $t$-test, and a Bayesian model-averaged meta-analysis, obtaining accurate sensitivity curves at a fraction of the brute-force cost." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/24/EfficientBayesFactorSensitivityAnalysisviaPosteriorDensityRatios.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/24/EfficientBayesFactorSensitivityAnalysisviaPosteriorDensityRatios.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios" />
+<script type="application/ld+json">
+{"description":"Bayes factor sensitivity analysis examines how the evidence for one hypothesis over another depends on the prior distribution. In complex models, the standard approach refits the model at each hyper-parameter value, and the total computational cost scales linearly in the grid size. We propose a method that recovers the entire sensitivity curve from a single additional model fit. The key identity decomposes the Bayes factor at any hyper-parameter value $\\gamma_x$ into an ``anchor’’ Bayes factor at a fixed reference $\\gamma_0$ and a Savage–Dickey density ratio in an extended model that places a hyper-prior on $\\gamma$. Once this extended model is fit, the Bayes factor at any $\\gamma_x$ follows from the anchor value and a ratio of two posterior density ordinates. To approximate this ratio, we employ the importance-weighted marginal density estimator (IWMDE). Because the sensitivity parameter enters the model only through the prior distribution on the model parameters, the data likelihood cancels in the IWMDE, reducing it to a simple ratio of prior density evaluations on the MCMC draws, without any additional likelihood computation. The resulting estimator is fast, remains accurate even with small MCMC samples, and substantially outperforms kernel density estimation across the full sensitivity range. The method extends naturally to simultaneous sensitivity over multiple hyper-parameters and to Bayesian model averaging. We illustrate it on a univariate Bayesian $t$-test with exact Bayes factors for validation, a bivariate informed $t$-test, and a Bayesian model-averaged meta-analysis, obtaining accurate sensitivity curves at a fraction of the brute-force cost.","author":{"@type":"Person","name":"František Bartoš, Eric-Jan Wagenmakers, Maarten Marsman, Don van den Bergh"},"datePublished":"2026-04-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/24/EfficientBayesFactorSensitivityAnalysisviaPosteriorDensityRatios.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/24/EfficientBayesFactorSensitivityAnalysisviaPosteriorDensityRatios.html","headline":"Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios","@type":"BlogPosting","dateModified":"2026-04-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-24 00:00:00 +0000">04-24</time>
+  </p>
+  
+  <h1>Efficient Bayes Factor Sensitivity Analysis via Posterior Density Ratios</h1>
+  <br>František Bartoš, Eric-Jan Wagenmakers, Maarten Marsman, Don van den Bergh</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Bayes factor sensitivity analysis examines how the evidence for one hypothesis over another depends on the prior distribution. In complex models, the standard approach refits the model at each hyper-parameter value, and the total computational cost scales linearly in the grid size. We propose a method that recovers the entire sensitivity curve from a single additional model fit. The key identity decomposes the Bayes factor at any hyper-parameter value $\gamma_x$ into an ``anchor’’ Bayes factor at a fixed reference $\gamma_0$ and a Savage–Dickey density ratio in an extended model that places a hyper-prior on $\gamma$. Once this extended model is fit, the Bayes factor at any $\gamma_x$ follows from the anchor value and a ratio of two posterior density ordinates. To approximate this ratio, we employ the importance-weighted marginal density estimator (IWMDE). Because the sensitivity parameter enters the model only through the prior distribution on the model parameters, the data likelihood cancels in the IWMDE, reducing it to a simple ratio of prior density evaluations on the MCMC draws, without any additional likelihood computation. The resulting estimator is fast, remains accurate even with small MCMC samples, and substantially outperforms kernel density estimation across the full sensitivity range. The method extends naturally to simultaneous sensitivity over multiple hyper-parameters and to Bayesian model averaging. We illustrate it on a univariate Bayesian $t$-test with exact Bayes factors for validation, a bivariate informed $t$-test, and a Bayesian model-averaged meta-analysis, obtaining accurate sensitivity curves at a fraction of the brute-force cost.</p>
+
+<p><a href="https://arxiv.org/abs/2604.21596">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

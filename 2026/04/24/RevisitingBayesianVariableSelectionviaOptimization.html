@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Revisiting Bayesian Variable Selection via Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Revisiting Bayesian Variable Selection via Optimization" />
+<meta name="author" content="Leo L Duan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Variable selection in linear regression has been a central topic in statistical research for decades. Bayesian variable selection methods, which account for uncertainty in both the regression coefficients and the noise variance, have achieved broad success through the use of discrete or continuous shrinkage priors and efficient collapsed Gibbs samplers. Despite their popularity and strong empirical performance, an enigma remains: the marginal likelihood, obtained by integrating out the regression coefficients and noise variance, is not log-concave; therefore, there is no guarantee of reliably finding its global optimum. In this article, we study this problem from an optimization perspective. Taking the negative log-marginal likelihood as a loss function of the latent precision parameters, we can rewrite it as a difference of convex functions (DC), and then optimize it via a simple iterative algorithm. Under mild compact set conditions, the DC algorithm converges to the global optimum at a linear rate. The positive finding applies to type-II maximum likelihood and extends to maximum marginal posterior under suitable priors, indicating that the problem of mode finding in Bayesian variable selection is much more benign than the lack of log-concavity might suggest. Besides the theoretical insight, the proposed algorithm is easy to implement, free of tuning, and extensible to structured sparsity, and thus can serve as an efficient alternative or warm-start for traditional Markov chain Monte Carlo solutions. The method is illustrated through numerical studies and a spatial data application for quantifying the aftershock risk following the 2019 Ridgecrest earthquakes. The source code for the algorithm is publicly available at https://github.com/leoduan/dca_optimization_variable_selection." />
+<meta property="og:description" content="Variable selection in linear regression has been a central topic in statistical research for decades. Bayesian variable selection methods, which account for uncertainty in both the regression coefficients and the noise variance, have achieved broad success through the use of discrete or continuous shrinkage priors and efficient collapsed Gibbs samplers. Despite their popularity and strong empirical performance, an enigma remains: the marginal likelihood, obtained by integrating out the regression coefficients and noise variance, is not log-concave; therefore, there is no guarantee of reliably finding its global optimum. In this article, we study this problem from an optimization perspective. Taking the negative log-marginal likelihood as a loss function of the latent precision parameters, we can rewrite it as a difference of convex functions (DC), and then optimize it via a simple iterative algorithm. Under mild compact set conditions, the DC algorithm converges to the global optimum at a linear rate. The positive finding applies to type-II maximum likelihood and extends to maximum marginal posterior under suitable priors, indicating that the problem of mode finding in Bayesian variable selection is much more benign than the lack of log-concavity might suggest. Besides the theoretical insight, the proposed algorithm is easy to implement, free of tuning, and extensible to structured sparsity, and thus can serve as an efficient alternative or warm-start for traditional Markov chain Monte Carlo solutions. The method is illustrated through numerical studies and a spatial data application for quantifying the aftershock risk following the 2019 Ridgecrest earthquakes. The source code for the algorithm is publicly available at https://github.com/leoduan/dca_optimization_variable_selection." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/24/RevisitingBayesianVariableSelectionviaOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/24/RevisitingBayesianVariableSelectionviaOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Revisiting Bayesian Variable Selection via Optimization" />
+<script type="application/ld+json">
+{"description":"Variable selection in linear regression has been a central topic in statistical research for decades. Bayesian variable selection methods, which account for uncertainty in both the regression coefficients and the noise variance, have achieved broad success through the use of discrete or continuous shrinkage priors and efficient collapsed Gibbs samplers. Despite their popularity and strong empirical performance, an enigma remains: the marginal likelihood, obtained by integrating out the regression coefficients and noise variance, is not log-concave; therefore, there is no guarantee of reliably finding its global optimum. In this article, we study this problem from an optimization perspective. Taking the negative log-marginal likelihood as a loss function of the latent precision parameters, we can rewrite it as a difference of convex functions (DC), and then optimize it via a simple iterative algorithm. Under mild compact set conditions, the DC algorithm converges to the global optimum at a linear rate. The positive finding applies to type-II maximum likelihood and extends to maximum marginal posterior under suitable priors, indicating that the problem of mode finding in Bayesian variable selection is much more benign than the lack of log-concavity might suggest. Besides the theoretical insight, the proposed algorithm is easy to implement, free of tuning, and extensible to structured sparsity, and thus can serve as an efficient alternative or warm-start for traditional Markov chain Monte Carlo solutions. The method is illustrated through numerical studies and a spatial data application for quantifying the aftershock risk following the 2019 Ridgecrest earthquakes. The source code for the algorithm is publicly available at https://github.com/leoduan/dca_optimization_variable_selection.","author":{"@type":"Person","name":"Leo L Duan"},"datePublished":"2026-04-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/24/RevisitingBayesianVariableSelectionviaOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/24/RevisitingBayesianVariableSelectionviaOptimization.html","headline":"Revisiting Bayesian Variable Selection via Optimization","@type":"BlogPosting","dateModified":"2026-04-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-24 00:00:00 +0000">04-24</time>
+  </p>
+  
+  <h1>Revisiting Bayesian Variable Selection via Optimization</h1>
+  <br>Leo L Duan</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Variable selection in linear regression has been a central topic in statistical research for decades. Bayesian variable selection methods, which account for uncertainty in both the regression coefficients and the noise variance, have achieved broad success through the use of discrete or continuous shrinkage priors and efficient collapsed Gibbs samplers. Despite their popularity and strong empirical performance, an enigma remains: the marginal likelihood, obtained by integrating out the regression coefficients and noise variance, is not log-concave; therefore, there is no guarantee of reliably finding its global optimum. In this article, we study this problem from an optimization perspective. Taking the negative log-marginal likelihood as a loss function of the latent precision parameters, we can rewrite it as a difference of convex functions (DC), and then optimize it via a simple iterative algorithm. Under mild compact set conditions, the DC algorithm converges to the global optimum at a linear rate. The positive finding applies to type-II maximum likelihood and extends to maximum marginal posterior under suitable priors, indicating that the problem of mode finding in Bayesian variable selection is much more benign than the lack of log-concavity might suggest. Besides the theoretical insight, the proposed algorithm is easy to implement, free of tuning, and extensible to structured sparsity, and thus can serve as an efficient alternative or warm-start for traditional Markov chain Monte Carlo solutions. The method is illustrated through numerical studies and a spatial data application for quantifying the aftershock risk following the 2019 Ridgecrest earthquakes.
+  The source code for the algorithm is publicly available at https://github.com/leoduan/dca_optimization_variable_selection.</p>
+
+<p><a href="https://arxiv.org/abs/2604.21009">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

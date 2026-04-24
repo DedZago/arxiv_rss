@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Convergence Rates for Non-Log-Concave Sampling and Log-Partition Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Convergence Rates for Non-Log-Concave Sampling and Log-Partition Estimation" />
+<meta name="author" content="David Holzmüller, Francis Bach" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sampling from Gibbs distributions and computing their log-partition function are fundamental tasks in statistics, machine learning, and statistical physics. While efficient algorithms are known for log-concave densities, the worst-case non-log-concave setting necessarily suffers from the curse of dimensionality. For many numerical problems, the curse of dimensionality can be alleviated when the target function is smooth, allowing the exponent in the rate to improve linearly with the number of available derivatives. Recently, it has been shown that similarly fast convergence rates can be achieved by efficient optimization algorithms. Since optimization can be seen as the low-temperature limit of sampling from Gibbs distributions, we pose the question of whether similarly fast convergence rates can be achieved for non-log-concave sampling. We first study the information-based complexity of the sampling and log-partition estimation problems and show that the optimal rates for sampling and log-partition computation are sometimes equal and sometimes faster than for optimization. We then analyze various polynomial-time sampling algorithms, including an extension of a recent promising optimization approach, and find that they sometimes exhibit interesting behavior but no near-optimal rates. Our results also give further insights into the relation between sampling, log-partition, and optimization problems." />
+<meta property="og:description" content="Sampling from Gibbs distributions and computing their log-partition function are fundamental tasks in statistics, machine learning, and statistical physics. While efficient algorithms are known for log-concave densities, the worst-case non-log-concave setting necessarily suffers from the curse of dimensionality. For many numerical problems, the curse of dimensionality can be alleviated when the target function is smooth, allowing the exponent in the rate to improve linearly with the number of available derivatives. Recently, it has been shown that similarly fast convergence rates can be achieved by efficient optimization algorithms. Since optimization can be seen as the low-temperature limit of sampling from Gibbs distributions, we pose the question of whether similarly fast convergence rates can be achieved for non-log-concave sampling. We first study the information-based complexity of the sampling and log-partition estimation problems and show that the optimal rates for sampling and log-partition computation are sometimes equal and sometimes faster than for optimization. We then analyze various polynomial-time sampling algorithms, including an extension of a recent promising optimization approach, and find that they sometimes exhibit interesting behavior but no near-optimal rates. Our results also give further insights into the relation between sampling, log-partition, and optimization problems." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/24/ConvergenceRatesforNonLogConcaveSamplingandLogPartitionEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/24/ConvergenceRatesforNonLogConcaveSamplingandLogPartitionEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Convergence Rates for Non-Log-Concave Sampling and Log-Partition Estimation" />
+<script type="application/ld+json">
+{"description":"Sampling from Gibbs distributions and computing their log-partition function are fundamental tasks in statistics, machine learning, and statistical physics. While efficient algorithms are known for log-concave densities, the worst-case non-log-concave setting necessarily suffers from the curse of dimensionality. For many numerical problems, the curse of dimensionality can be alleviated when the target function is smooth, allowing the exponent in the rate to improve linearly with the number of available derivatives. Recently, it has been shown that similarly fast convergence rates can be achieved by efficient optimization algorithms. Since optimization can be seen as the low-temperature limit of sampling from Gibbs distributions, we pose the question of whether similarly fast convergence rates can be achieved for non-log-concave sampling. We first study the information-based complexity of the sampling and log-partition estimation problems and show that the optimal rates for sampling and log-partition computation are sometimes equal and sometimes faster than for optimization. We then analyze various polynomial-time sampling algorithms, including an extension of a recent promising optimization approach, and find that they sometimes exhibit interesting behavior but no near-optimal rates. Our results also give further insights into the relation between sampling, log-partition, and optimization problems.","author":{"@type":"Person","name":"David Holzmüller, Francis Bach"},"datePublished":"2026-04-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/24/ConvergenceRatesforNonLogConcaveSamplingandLogPartitionEstimation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/04/24/ConvergenceRatesforNonLogConcaveSamplingandLogPartitionEstimation.html","headline":"Convergence Rates for Non-Log-Concave Sampling and Log-Partition Estimation","@type":"BlogPosting","dateModified":"2026-04-24T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-24 00:00:00 +0000">04-24</time>
+  </p>
+  
+  <h1>Convergence Rates for Non-Log-Concave Sampling and Log-Partition Estimation</h1>
+  <br>David Holzmüller, Francis Bach</h3>
+  <br> [stat.ML,stat.CO,stat.TH]
+
+  <p>Sampling from Gibbs distributions and computing their log-partition function are fundamental tasks in statistics, machine learning, and statistical physics. While efficient algorithms are known for log-concave densities, the worst-case non-log-concave setting necessarily suffers from the curse of dimensionality. For many numerical problems, the curse of dimensionality can be alleviated when the target function is smooth, allowing the exponent in the rate to improve linearly with the number of available derivatives. Recently, it has been shown that similarly fast convergence rates can be achieved by efficient optimization algorithms. Since optimization can be seen as the low-temperature limit of sampling from Gibbs distributions, we pose the question of whether similarly fast convergence rates can be achieved for non-log-concave sampling. We first study the information-based complexity of the sampling and log-partition estimation problems and show that the optimal rates for sampling and log-partition computation are sometimes equal and sometimes faster than for optimization. We then analyze various polynomial-time sampling algorithms, including an extension of a recent promising optimization approach, and find that they sometimes exhibit interesting behavior but no near-optimal rates. Our results also give further insights into the relation between sampling, log-partition, and optimization problems.</p>
+
+<p><a href="https://arxiv.org/abs/2303.03237">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
