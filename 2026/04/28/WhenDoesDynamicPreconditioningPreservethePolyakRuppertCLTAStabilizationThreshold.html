@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Does Dynamic Preconditioning Preserve the Polyak-Ruppert CLT? A Stabilization Threshold</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When Does Dynamic Preconditioning Preserve the Polyak-Ruppert CLT? A Stabilization Threshold" />
+<meta name="author" content="Sunyoung An, Xiaoming Huo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Polyak-Ruppert averaging yields an asymptotically normal estimator with sandwich covariance $H^{-1}SH^{-1}$, the foundation of online inference. When the gradient step is preconditioned by a data-driven matrix $P_t$, we ask how fast $P_t$ must stabilize for the central limit theorem (CLT) to remain valid. We resolve this via an exact preconditioner-isolating decomposition of the averaged error that confines $P_t$ to a dynamic remainder $R_n$, leaving the martingale and Taylor terms preconditioner-free. Let $M_t = (P_t H)^{-1}$ denote the effective inverse drift matrix, with $|M_t - M_{t-1}|_{\mathrm{op}} \lesssim t^{-\beta}$ and step-size exponent $\alpha \in (1/2, 1)$. We identify a stabilization-rate threshold $\beta &gt; (\alpha+1)/2$ and prove that, within the class of polynomial rate hypotheses used in our upper bound, it cannot be weakened: the dynamic remainder $\sqrt{n}\,R_n$ vanishes in $L^2$ whenever $\beta &gt; (\alpha+1)/2$, and we exhibit sequences satisfying those hypotheses for which it does not vanish when $\beta \le (\alpha+1)/2$. A single stabilization argument certifies three SA variants - SA-AdaGrad, SA-RMSProp, and SA-ONS - with gain $\rho_t = c/t$, each delivering one-step $L^2(\mathrm{op})$ stabilization of order $t^{-1}$, yielding the CLT $\sqrt{n}(\bar{x}_n - x^) \to N(0, H^{-1}SH^{-1})$; under bounded inputs the pathwise rate $\beta = 1$ further preserves the $n^{-1/6}$ Wasserstein rate at $\alpha^ = 2/3$. Under standard regularity conditions, Wald-type online inference remains valid for dynamically preconditioned averaged SGD whose stabilization rate exceeds the threshold." />
+<meta property="og:description" content="Polyak-Ruppert averaging yields an asymptotically normal estimator with sandwich covariance $H^{-1}SH^{-1}$, the foundation of online inference. When the gradient step is preconditioned by a data-driven matrix $P_t$, we ask how fast $P_t$ must stabilize for the central limit theorem (CLT) to remain valid. We resolve this via an exact preconditioner-isolating decomposition of the averaged error that confines $P_t$ to a dynamic remainder $R_n$, leaving the martingale and Taylor terms preconditioner-free. Let $M_t = (P_t H)^{-1}$ denote the effective inverse drift matrix, with $|M_t - M_{t-1}|_{\mathrm{op}} \lesssim t^{-\beta}$ and step-size exponent $\alpha \in (1/2, 1)$. We identify a stabilization-rate threshold $\beta &gt; (\alpha+1)/2$ and prove that, within the class of polynomial rate hypotheses used in our upper bound, it cannot be weakened: the dynamic remainder $\sqrt{n}\,R_n$ vanishes in $L^2$ whenever $\beta &gt; (\alpha+1)/2$, and we exhibit sequences satisfying those hypotheses for which it does not vanish when $\beta \le (\alpha+1)/2$. A single stabilization argument certifies three SA variants - SA-AdaGrad, SA-RMSProp, and SA-ONS - with gain $\rho_t = c/t$, each delivering one-step $L^2(\mathrm{op})$ stabilization of order $t^{-1}$, yielding the CLT $\sqrt{n}(\bar{x}_n - x^) \to N(0, H^{-1}SH^{-1})$; under bounded inputs the pathwise rate $\beta = 1$ further preserves the $n^{-1/6}$ Wasserstein rate at $\alpha^ = 2/3$. Under standard regularity conditions, Wald-type online inference remains valid for dynamically preconditioned averaged SGD whose stabilization rate exceeds the threshold." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/28/WhenDoesDynamicPreconditioningPreservethePolyakRuppertCLTAStabilizationThreshold.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/28/WhenDoesDynamicPreconditioningPreservethePolyakRuppertCLTAStabilizationThreshold.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When Does Dynamic Preconditioning Preserve the Polyak-Ruppert CLT? A Stabilization Threshold" />
+<script type="application/ld+json">
+{"description":"Polyak-Ruppert averaging yields an asymptotically normal estimator with sandwich covariance $H^{-1}SH^{-1}$, the foundation of online inference. When the gradient step is preconditioned by a data-driven matrix $P_t$, we ask how fast $P_t$ must stabilize for the central limit theorem (CLT) to remain valid. We resolve this via an exact preconditioner-isolating decomposition of the averaged error that confines $P_t$ to a dynamic remainder $R_n$, leaving the martingale and Taylor terms preconditioner-free. Let $M_t = (P_t H)^{-1}$ denote the effective inverse drift matrix, with $|M_t - M_{t-1}|_{\\mathrm{op}} \\lesssim t^{-\\beta}$ and step-size exponent $\\alpha \\in (1/2, 1)$. We identify a stabilization-rate threshold $\\beta &gt; (\\alpha+1)/2$ and prove that, within the class of polynomial rate hypotheses used in our upper bound, it cannot be weakened: the dynamic remainder $\\sqrt{n}\\,R_n$ vanishes in $L^2$ whenever $\\beta &gt; (\\alpha+1)/2$, and we exhibit sequences satisfying those hypotheses for which it does not vanish when $\\beta \\le (\\alpha+1)/2$. A single stabilization argument certifies three SA variants - SA-AdaGrad, SA-RMSProp, and SA-ONS - with gain $\\rho_t = c/t$, each delivering one-step $L^2(\\mathrm{op})$ stabilization of order $t^{-1}$, yielding the CLT $\\sqrt{n}(\\bar{x}_n - x^) \\to N(0, H^{-1}SH^{-1})$; under bounded inputs the pathwise rate $\\beta = 1$ further preserves the $n^{-1/6}$ Wasserstein rate at $\\alpha^ = 2/3$. Under standard regularity conditions, Wald-type online inference remains valid for dynamically preconditioned averaged SGD whose stabilization rate exceeds the threshold.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/28/WhenDoesDynamicPreconditioningPreservethePolyakRuppertCLTAStabilizationThreshold.html"},"author":{"@type":"Person","name":"Sunyoung An, Xiaoming Huo"},"dateModified":"2026-04-28T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/04/28/WhenDoesDynamicPreconditioningPreservethePolyakRuppertCLTAStabilizationThreshold.html","headline":"When Does Dynamic Preconditioning Preserve the Polyak-Ruppert CLT? A Stabilization Threshold","@type":"BlogPosting","datePublished":"2026-04-28T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-28 00:00:00 +0000">04-28</time>
+  </p>
+  
+  <h1>When Does Dynamic Preconditioning Preserve the Polyak-Ruppert CLT? A Stabilization Threshold</h1>
+  <br>Sunyoung An, Xiaoming Huo</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Polyak-Ruppert averaging yields an asymptotically normal estimator with sandwich covariance $H^{-1}SH^{-1}$, the foundation of online inference. When the gradient step is preconditioned by a data-driven matrix $P_t$, we ask how fast $P_t$ must stabilize for the central limit theorem (CLT) to remain valid.
+  We resolve this via an exact preconditioner-isolating decomposition of the averaged error that confines $P_t$ to a dynamic remainder $R_n$, leaving the martingale and Taylor terms preconditioner-free. Let $M_t = (P_t H)^{-1}$ denote the effective inverse drift matrix, with $|M_t - M_{t-1}|_{\mathrm{op}} \lesssim t^{-\beta}$ and step-size exponent $\alpha \in (1/2, 1)$. We identify a stabilization-rate threshold $\beta &gt; (\alpha+1)/2$ and prove that, within the class of polynomial rate hypotheses used in our upper bound, it cannot be weakened: the dynamic remainder $\sqrt{n}\,R_n$ vanishes in $L^2$ whenever $\beta &gt; (\alpha+1)/2$, and we exhibit sequences satisfying those hypotheses for which it does not vanish when $\beta \le (\alpha+1)/2$.
+  A single stabilization argument certifies three SA variants - SA-AdaGrad, SA-RMSProp, and SA-ONS - with gain $\rho_t = c/t$, each delivering one-step $L^2(\mathrm{op})$ stabilization of order $t^{-1}$, yielding the CLT $\sqrt{n}(\bar{x}_n - x^<em>) \to N(0, H^{-1}SH^{-1})$; under bounded inputs the pathwise rate $\beta = 1$ further preserves the $n^{-1/6}$ Wasserstein rate at $\alpha^</em> = 2/3$. Under standard regularity conditions, Wald-type online inference remains valid for dynamically preconditioned averaged SGD whose stabilization rate exceeds the threshold.</p>
+
+<p><a href="https://arxiv.org/abs/2604.23498">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

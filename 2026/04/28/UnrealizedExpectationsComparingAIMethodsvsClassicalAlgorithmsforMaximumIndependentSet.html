@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Unrealized Expectations: Comparing AI Methods vs Classical Algorithms for Maximum Independent Set</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Unrealized Expectations: Comparing AI Methods vs Classical Algorithms for Maximum Independent Set" />
+<meta name="author" content="Yikai Wu, Haoyu Zhao, Sanjeev Arora" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AI methods, such as generative models and reinforcement learning, have recently been applied to combinatorial optimization (CO) problems, especially NP-hard ones. This paper compares such GPU-based methods with classical CPU-based methods on the Maximum Independent Set (MIS) problem. Strikingly, even on in-distribution random graphs, leading AI-inspired methods are consistently outperformed by the state-of-the-art classical solver KaMIS running on a single CPU, and some AI-inspired methods frequently fail to surpass even the simplest degree-based greedy heuristic. Even with post-processing techniques like local search, AI-inspired methods still perform worse than CPU-based solvers. To better understand the source of these failures, we introduce a novel analysis, serialization, which reveals that non-backtracking AI-inspired methods, e.g. LTFT (which is based on GFlowNets), end up reasoning similarly to the simplest degree-based greedy, and thus worse than KaMIS. More generally, our findings suggest a need for a rethinking of current approaches in AI for CO, advocating for more rigorous benchmarking and the principled integration of classical heuristics. Additionally, we also find that CPU-based algorithm KaMIS have strong performance on sparse random graphs, which appears to show that the shattering threshold conjecture for large independent sets proposed by Coja-Oghlan &amp; Efthymiou (2015) does not apply for real-life sizes (such as 10^6 nodes)." />
+<meta property="og:description" content="AI methods, such as generative models and reinforcement learning, have recently been applied to combinatorial optimization (CO) problems, especially NP-hard ones. This paper compares such GPU-based methods with classical CPU-based methods on the Maximum Independent Set (MIS) problem. Strikingly, even on in-distribution random graphs, leading AI-inspired methods are consistently outperformed by the state-of-the-art classical solver KaMIS running on a single CPU, and some AI-inspired methods frequently fail to surpass even the simplest degree-based greedy heuristic. Even with post-processing techniques like local search, AI-inspired methods still perform worse than CPU-based solvers. To better understand the source of these failures, we introduce a novel analysis, serialization, which reveals that non-backtracking AI-inspired methods, e.g. LTFT (which is based on GFlowNets), end up reasoning similarly to the simplest degree-based greedy, and thus worse than KaMIS. More generally, our findings suggest a need for a rethinking of current approaches in AI for CO, advocating for more rigorous benchmarking and the principled integration of classical heuristics. Additionally, we also find that CPU-based algorithm KaMIS have strong performance on sparse random graphs, which appears to show that the shattering threshold conjecture for large independent sets proposed by Coja-Oghlan &amp; Efthymiou (2015) does not apply for real-life sizes (such as 10^6 nodes)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/04/28/UnrealizedExpectationsComparingAIMethodsvsClassicalAlgorithmsforMaximumIndependentSet.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/04/28/UnrealizedExpectationsComparingAIMethodsvsClassicalAlgorithmsforMaximumIndependentSet.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unrealized Expectations: Comparing AI Methods vs Classical Algorithms for Maximum Independent Set" />
+<script type="application/ld+json">
+{"description":"AI methods, such as generative models and reinforcement learning, have recently been applied to combinatorial optimization (CO) problems, especially NP-hard ones. This paper compares such GPU-based methods with classical CPU-based methods on the Maximum Independent Set (MIS) problem. Strikingly, even on in-distribution random graphs, leading AI-inspired methods are consistently outperformed by the state-of-the-art classical solver KaMIS running on a single CPU, and some AI-inspired methods frequently fail to surpass even the simplest degree-based greedy heuristic. Even with post-processing techniques like local search, AI-inspired methods still perform worse than CPU-based solvers. To better understand the source of these failures, we introduce a novel analysis, serialization, which reveals that non-backtracking AI-inspired methods, e.g. LTFT (which is based on GFlowNets), end up reasoning similarly to the simplest degree-based greedy, and thus worse than KaMIS. More generally, our findings suggest a need for a rethinking of current approaches in AI for CO, advocating for more rigorous benchmarking and the principled integration of classical heuristics. Additionally, we also find that CPU-based algorithm KaMIS have strong performance on sparse random graphs, which appears to show that the shattering threshold conjecture for large independent sets proposed by Coja-Oghlan &amp; Efthymiou (2015) does not apply for real-life sizes (such as 10^6 nodes).","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/04/28/UnrealizedExpectationsComparingAIMethodsvsClassicalAlgorithmsforMaximumIndependentSet.html"},"author":{"@type":"Person","name":"Yikai Wu, Haoyu Zhao, Sanjeev Arora"},"dateModified":"2026-04-28T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/04/28/UnrealizedExpectationsComparingAIMethodsvsClassicalAlgorithmsforMaximumIndependentSet.html","headline":"Unrealized Expectations: Comparing AI Methods vs Classical Algorithms for Maximum Independent Set","@type":"BlogPosting","datePublished":"2026-04-28T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-04-28 00:00:00 +0000">04-28</time>
+  </p>
+  
+  <h1>Unrealized Expectations: Comparing AI Methods vs Classical Algorithms for Maximum Independent Set</h1>
+  <br>Yikai Wu, Haoyu Zhao, Sanjeev Arora</h3>
+  <br> [stat.ML]
+
+  <p>AI methods, such as generative models and reinforcement learning, have recently been applied to combinatorial optimization (CO) problems, especially NP-hard ones. This paper compares such GPU-based methods with classical CPU-based methods on the Maximum Independent Set (MIS) problem. Strikingly, even on in-distribution random graphs, leading AI-inspired methods are consistently outperformed by the state-of-the-art classical solver KaMIS running on a single CPU, and some AI-inspired methods frequently fail to surpass even the simplest degree-based greedy heuristic. Even with post-processing techniques like local search, AI-inspired methods still perform worse than CPU-based solvers. To better understand the source of these failures, we introduce a novel analysis, serialization, which reveals that non-backtracking AI-inspired methods, e.g. LTFT (which is based on GFlowNets), end up reasoning similarly to the simplest degree-based greedy, and thus worse than KaMIS. More generally, our findings suggest a need for a rethinking of current approaches in AI for CO, advocating for more rigorous benchmarking and the principled integration of classical heuristics. Additionally, we also find that CPU-based algorithm KaMIS have strong performance on sparse random graphs, which appears to show that the shattering threshold conjecture for large independent sets proposed by Coja-Oghlan &amp; Efthymiou (2015) does not apply for real-life sizes (such as 10^6 nodes).</p>
+
+<p><a href="https://arxiv.org/abs/2502.03669">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
