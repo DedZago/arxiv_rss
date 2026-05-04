@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mean-Field Path-Integral Diffusion: From Samples to Interacting Agents</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mean-Field Path-Integral Diffusion: From Samples to Interacting Agents" />
+<meta name="author" content="Michael Chertkov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Independent sample generation is the prevailing paradigm in modern diffusion-based generative models of AI. We ask a different question: can samples \emph{coordinate} through shared population statistics to transport probability mass more efficiently? We introduce Mean-Field Path-Integral Diffusion (MF-PID), a framework in which samples are promoted to interacting agents whose drift depends self-consistently on the evolving population density. The coupling converts distribution matching into a McKean–Vlasov extension of the stochastic optimal transport problem, unifying generative modeling and multi-agent control under the same Hamilton–Jacobi–Bellman/Kolmogorov–Fokker–Planck duality. We identify two analytically tractable regimes: a Linear–Quadratic–Gaussian (LQG) benchmark in which the infinite-dimensional mean-field system reduces to a finite set of Riccati and linear ODEs, and a Gaussian-mixture regime governed by a piecewise-constant protocol that preserves closed-form solvability. For a quadratic interaction potential with schedule $\beta_t$ and zero base drift we prove that the self-consistent MF guidance is the \emph{exact} linear interpolant between initial and target global means – a result that holds for arbitrary initial and target densities and any $\beta_t$. Applied to demand-response control of energy systems, where agents aggregated into an ensemble are energy consumers (e.g.\ thermal zones within a building), MF-PID achieves 19–24\% reductions in cumulative control energy over independent-agent baselines while matching the prescribed terminal distribution exactly, and reveals how coordination redistributes actuation effort across heterogeneous sub-populations." />
+<meta property="og:description" content="Independent sample generation is the prevailing paradigm in modern diffusion-based generative models of AI. We ask a different question: can samples \emph{coordinate} through shared population statistics to transport probability mass more efficiently? We introduce Mean-Field Path-Integral Diffusion (MF-PID), a framework in which samples are promoted to interacting agents whose drift depends self-consistently on the evolving population density. The coupling converts distribution matching into a McKean–Vlasov extension of the stochastic optimal transport problem, unifying generative modeling and multi-agent control under the same Hamilton–Jacobi–Bellman/Kolmogorov–Fokker–Planck duality. We identify two analytically tractable regimes: a Linear–Quadratic–Gaussian (LQG) benchmark in which the infinite-dimensional mean-field system reduces to a finite set of Riccati and linear ODEs, and a Gaussian-mixture regime governed by a piecewise-constant protocol that preserves closed-form solvability. For a quadratic interaction potential with schedule $\beta_t$ and zero base drift we prove that the self-consistent MF guidance is the \emph{exact} linear interpolant between initial and target global means – a result that holds for arbitrary initial and target densities and any $\beta_t$. Applied to demand-response control of energy systems, where agents aggregated into an ensemble are energy consumers (e.g.\ thermal zones within a building), MF-PID achieves 19–24\% reductions in cumulative control energy over independent-agent baselines while matching the prescribed terminal distribution exactly, and reveals how coordination redistributes actuation effort across heterogeneous sub-populations." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/04/MeanFieldPathIntegralDiffusionFromSamplestoInteractingAgents.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/04/MeanFieldPathIntegralDiffusionFromSamplestoInteractingAgents.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mean-Field Path-Integral Diffusion: From Samples to Interacting Agents" />
+<script type="application/ld+json">
+{"description":"Independent sample generation is the prevailing paradigm in modern diffusion-based generative models of AI. We ask a different question: can samples \\emph{coordinate} through shared population statistics to transport probability mass more efficiently? We introduce Mean-Field Path-Integral Diffusion (MF-PID), a framework in which samples are promoted to interacting agents whose drift depends self-consistently on the evolving population density. The coupling converts distribution matching into a McKean–Vlasov extension of the stochastic optimal transport problem, unifying generative modeling and multi-agent control under the same Hamilton–Jacobi–Bellman/Kolmogorov–Fokker–Planck duality. We identify two analytically tractable regimes: a Linear–Quadratic–Gaussian (LQG) benchmark in which the infinite-dimensional mean-field system reduces to a finite set of Riccati and linear ODEs, and a Gaussian-mixture regime governed by a piecewise-constant protocol that preserves closed-form solvability. For a quadratic interaction potential with schedule $\\beta_t$ and zero base drift we prove that the self-consistent MF guidance is the \\emph{exact} linear interpolant between initial and target global means – a result that holds for arbitrary initial and target densities and any $\\beta_t$. Applied to demand-response control of energy systems, where agents aggregated into an ensemble are energy consumers (e.g.\\ thermal zones within a building), MF-PID achieves 19–24\\% reductions in cumulative control energy over independent-agent baselines while matching the prescribed terminal distribution exactly, and reveals how coordination redistributes actuation effort across heterogeneous sub-populations.","author":{"@type":"Person","name":"Michael Chertkov"},"datePublished":"2026-05-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/04/MeanFieldPathIntegralDiffusionFromSamplestoInteractingAgents.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/04/MeanFieldPathIntegralDiffusionFromSamplestoInteractingAgents.html","headline":"Mean-Field Path-Integral Diffusion: From Samples to Interacting Agents","@type":"BlogPosting","dateModified":"2026-05-04T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-04 00:00:00 +0000">05-04</time>
+  </p>
+  
+  <h1>Mean-Field Path-Integral Diffusion: From Samples to Interacting Agents</h1>
+  <br>Michael Chertkov</h3>
+  <br> [stat.ML]
+
+  <p>Independent sample generation is the prevailing paradigm in modern diffusion-based generative models of AI. We ask a different question: can samples \emph{coordinate} through shared population statistics to transport probability mass more efficiently? We introduce Mean-Field Path-Integral Diffusion (MF-PID), a framework in which samples are promoted to interacting agents whose drift depends self-consistently on the evolving population density. The coupling converts distribution matching into a McKean–Vlasov extension of the stochastic optimal transport problem, unifying generative modeling and multi-agent control under the same Hamilton–Jacobi–Bellman/Kolmogorov–Fokker–Planck duality. We identify two analytically tractable regimes: a Linear–Quadratic–Gaussian (LQG) benchmark in which the infinite-dimensional mean-field system reduces to a finite set of Riccati and linear ODEs, and a Gaussian-mixture regime governed by a piecewise-constant protocol that preserves closed-form solvability. For a quadratic interaction potential with schedule $\beta_t$ and zero base drift we prove that the self-consistent MF guidance is the \emph{exact} linear interpolant between initial and target global means – a result that holds for arbitrary initial and target densities and any $\beta_t$. Applied to demand-response control of energy systems, where agents aggregated into an ensemble are energy consumers (e.g.\ thermal zones within a building), MF-PID achieves 19–24\% reductions in cumulative control energy over independent-agent baselines while matching the prescribed terminal distribution exactly, and reveals how coordination redistributes actuation effort across heterogeneous sub-populations.</p>
+
+<p><a href="https://arxiv.org/abs/2605.00007">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
