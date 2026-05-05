@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust volatility updates for Hierarchical Gaussian Filtering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Robust volatility updates for Hierarchical Gaussian Filtering" />
+<meta name="author" content="Christoph Mathys, Nicolas Legrand, Peter Thestrup Waade, Nace Mikus, Lilian Aline Weber" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hierarchical Gaussian Filtering (HGF) networks allow for efficient updating of posterior distributions (beliefs) about hidden states of an agent’s environment. HGF parent nodes can target the mean or variance of their children. New information entering at input nodes leads to a cascade of belief updates across the network according to one-step update equations for each node’s mean and precision (inverse variance). However, the original form of the update equations for variance-targeting parents(volatility coupling) can in some regions of parameter space lead to negative posterior precision, a logical impossibility which causes the updating algorithm to terminate with an error. In this report, we introduce a modified quadratic approximation to the variational energy of volatility-coupled nodes that avoids negative posterior precision. The key idea is to interpolate between two quadratic expansions of the variational energy: one at the prior prediction and one at a second mode whose location is obtained in closed form via the Lambert W function. The resulting update equations are robust across the entire parameter space and faithfully track the variational posterior even for large prediction errors." />
+<meta property="og:description" content="Hierarchical Gaussian Filtering (HGF) networks allow for efficient updating of posterior distributions (beliefs) about hidden states of an agent’s environment. HGF parent nodes can target the mean or variance of their children. New information entering at input nodes leads to a cascade of belief updates across the network according to one-step update equations for each node’s mean and precision (inverse variance). However, the original form of the update equations for variance-targeting parents(volatility coupling) can in some regions of parameter space lead to negative posterior precision, a logical impossibility which causes the updating algorithm to terminate with an error. In this report, we introduce a modified quadratic approximation to the variational energy of volatility-coupled nodes that avoids negative posterior precision. The key idea is to interpolate between two quadratic expansions of the variational energy: one at the prior prediction and one at a second mode whose location is obtained in closed form via the Lambert W function. The resulting update equations are robust across the entire parameter space and faithfully track the variational posterior even for large prediction errors." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/05/RobustvolatilityupdatesforHierarchicalGaussianFiltering.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/05/RobustvolatilityupdatesforHierarchicalGaussianFiltering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Robust volatility updates for Hierarchical Gaussian Filtering" />
+<script type="application/ld+json">
+{"description":"Hierarchical Gaussian Filtering (HGF) networks allow for efficient updating of posterior distributions (beliefs) about hidden states of an agent’s environment. HGF parent nodes can target the mean or variance of their children. New information entering at input nodes leads to a cascade of belief updates across the network according to one-step update equations for each node’s mean and precision (inverse variance). However, the original form of the update equations for variance-targeting parents(volatility coupling) can in some regions of parameter space lead to negative posterior precision, a logical impossibility which causes the updating algorithm to terminate with an error. In this report, we introduce a modified quadratic approximation to the variational energy of volatility-coupled nodes that avoids negative posterior precision. The key idea is to interpolate between two quadratic expansions of the variational energy: one at the prior prediction and one at a second mode whose location is obtained in closed form via the Lambert W function. The resulting update equations are robust across the entire parameter space and faithfully track the variational posterior even for large prediction errors.","author":{"@type":"Person","name":"Christoph Mathys, Nicolas Legrand, Peter Thestrup Waade, Nace Mikus, Lilian Aline Weber"},"datePublished":"2026-05-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/05/RobustvolatilityupdatesforHierarchicalGaussianFiltering.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/05/RobustvolatilityupdatesforHierarchicalGaussianFiltering.html","headline":"Robust volatility updates for Hierarchical Gaussian Filtering","@type":"BlogPosting","dateModified":"2026-05-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-05 00:00:00 +0000">05-05</time>
+  </p>
+  
+  <h1>Robust volatility updates for Hierarchical Gaussian Filtering</h1>
+  <br>Christoph Mathys, Nicolas Legrand, Peter Thestrup Waade, Nace Mikus, Lilian Aline Weber</h3>
+  <br> [stat.ML]
+
+  <p>Hierarchical Gaussian Filtering (HGF) networks allow for efficient updating of posterior distributions (beliefs) about hidden states of an agent’s environment. HGF parent nodes can target the mean or variance of their children. New information entering at input nodes leads to a cascade of belief updates across the network according to one-step update equations for each node’s mean and precision (inverse variance). However, the original form of the update equations for variance-targeting parents(volatility coupling) can in some regions of parameter space lead to negative posterior precision, a logical impossibility which causes the updating algorithm to terminate with an error. In this report, we introduce a modified quadratic approximation to the variational energy of volatility-coupled nodes that avoids negative posterior precision. The key idea is to interpolate between two quadratic expansions of the variational energy: one at the prior prediction and one at a second mode whose location is obtained in closed form via the Lambert W function. The resulting update equations are robust across the entire parameter space and faithfully track the variational posterior even for large prediction errors.</p>
+
+<p><a href="https://arxiv.org/abs/2605.00966">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

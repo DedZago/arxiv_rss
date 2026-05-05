@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints" />
+<meta name="author" content="Pablo Benavides-Herrera, Riemann Ruiz-Cruz, Juan Diego Sánchez-Torres" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We derive a Sequential Minimal Optimization (SMO) algorithm for the quadratic dual problem arising from $\varepsilon$-SVR~\cite{Vapnik1995, Drucker1997, Smola2004} modified to minimize the Mean Absolute Percentage Error (MAPE)~\cite{Makridakis1993, Hyndman2006} directly in the loss function~\cite{benavides2025support}. This formulation is part of a broader family of SVR models with percentage-error losses that also includes least-squares variants~\cite{Suykens2002} and symmetric-kernel extensions~\cite{Espinoza2005}, whose unified structure is studied in~\cite{benavides2026unified}. The key structural difference from standard $\varepsilon$-SVR is that the box constraints become \emph{sample-dependent}: $\alpha_k, \alpha_k^* \in [0,\, 100C/y_k]$. We show that this modification affects only (i) the feasibility sets $\Iup$ and $\Idown$ in the working-set selection and (ii) the clipping bounds in the analytic two-variable update, while leaving the curvature formula and gradient update structurally identical to the standard SMO~\cite{Platt1998, Platt1999, Fan2005}. A shrinking heuristic adapted to the sample-dependent bounds is derived and shown to introduce an asymmetry between $\alpha$ and $\alpha^$ variables controlled by the gap $2y_k\varepsilon/100$. The same solver applies to the symmetric-kernel variant (m2) by replacing $\Omega$ with $\Omega_s = \tfrac{1}{2}(\Omega + a\Omega^)$~\cite{Espinoza2005}. An implementation is available in the open-source \texttt{psvr} R package~\cite{BenavidesHerrera2026Rpsvr}." />
+<meta property="og:description" content="We derive a Sequential Minimal Optimization (SMO) algorithm for the quadratic dual problem arising from $\varepsilon$-SVR~\cite{Vapnik1995, Drucker1997, Smola2004} modified to minimize the Mean Absolute Percentage Error (MAPE)~\cite{Makridakis1993, Hyndman2006} directly in the loss function~\cite{benavides2025support}. This formulation is part of a broader family of SVR models with percentage-error losses that also includes least-squares variants~\cite{Suykens2002} and symmetric-kernel extensions~\cite{Espinoza2005}, whose unified structure is studied in~\cite{benavides2026unified}. The key structural difference from standard $\varepsilon$-SVR is that the box constraints become \emph{sample-dependent}: $\alpha_k, \alpha_k^* \in [0,\, 100C/y_k]$. We show that this modification affects only (i) the feasibility sets $\Iup$ and $\Idown$ in the working-set selection and (ii) the clipping bounds in the analytic two-variable update, while leaving the curvature formula and gradient update structurally identical to the standard SMO~\cite{Platt1998, Platt1999, Fan2005}. A shrinking heuristic adapted to the sample-dependent bounds is derived and shown to introduce an asymmetry between $\alpha$ and $\alpha^$ variables controlled by the gap $2y_k\varepsilon/100$. The same solver applies to the symmetric-kernel variant (m2) by replacing $\Omega$ with $\Omega_s = \tfrac{1}{2}(\Omega + a\Omega^)$~\cite{Espinoza2005}. An implementation is available in the open-source \texttt{psvr} R package~\cite{BenavidesHerrera2026Rpsvr}." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/05/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/05/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints" />
+<script type="application/ld+json">
+{"description":"We derive a Sequential Minimal Optimization (SMO) algorithm for the quadratic dual problem arising from $\\varepsilon$-SVR~\\cite{Vapnik1995, Drucker1997, Smola2004} modified to minimize the Mean Absolute Percentage Error (MAPE)~\\cite{Makridakis1993, Hyndman2006} directly in the loss function~\\cite{benavides2025support}. This formulation is part of a broader family of SVR models with percentage-error losses that also includes least-squares variants~\\cite{Suykens2002} and symmetric-kernel extensions~\\cite{Espinoza2005}, whose unified structure is studied in~\\cite{benavides2026unified}. The key structural difference from standard $\\varepsilon$-SVR is that the box constraints become \\emph{sample-dependent}: $\\alpha_k, \\alpha_k^* \\in [0,\\, 100C/y_k]$. We show that this modification affects only (i) the feasibility sets $\\Iup$ and $\\Idown$ in the working-set selection and (ii) the clipping bounds in the analytic two-variable update, while leaving the curvature formula and gradient update structurally identical to the standard SMO~\\cite{Platt1998, Platt1999, Fan2005}. A shrinking heuristic adapted to the sample-dependent bounds is derived and shown to introduce an asymmetry between $\\alpha$ and $\\alpha^$ variables controlled by the gap $2y_k\\varepsilon/100$. The same solver applies to the symmetric-kernel variant (m2) by replacing $\\Omega$ with $\\Omega_s = \\tfrac{1}{2}(\\Omega + a\\Omega^)$~\\cite{Espinoza2005}. An implementation is available in the open-source \\texttt{psvr} R package~\\cite{BenavidesHerrera2026Rpsvr}.","author":{"@type":"Person","name":"Pablo Benavides-Herrera, Riemann Ruiz-Cruz, Juan Diego Sánchez-Torres"},"datePublished":"2026-05-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/05/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/05/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html","headline":"Sequential Minimal Optimization for $\\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints","@type":"BlogPosting","dateModified":"2026-05-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-05 00:00:00 +0000">05-05</time>
+  </p>
+  
+  <h1>Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints</h1>
+  <br>Pablo Benavides-Herrera, Riemann Ruiz-Cruz, Juan Diego Sánchez-Torres</h3>
+  <br> [stat.ML]
+
+  <p>We derive a Sequential Minimal Optimization (SMO) algorithm for the quadratic dual problem arising from $\varepsilon$-SVR~\cite{Vapnik1995, Drucker1997, Smola2004} modified to minimize the Mean Absolute Percentage Error (MAPE)~\cite{Makridakis1993, Hyndman2006} directly in the loss function~\cite{benavides2025support}. This formulation is part of a broader family of SVR models with percentage-error losses that also includes least-squares variants~\cite{Suykens2002} and symmetric-kernel extensions~\cite{Espinoza2005}, whose unified structure is studied in~\cite{benavides2026unified}. The key structural difference from standard $\varepsilon$-SVR is that the box constraints become \emph{sample-dependent}: $\alpha_k, \alpha_k^* \in [0,\, 100C/y_k]$. We show that this modification affects only (i) the feasibility sets $\Iup$ and $\Idown$ in the working-set selection and (ii) the clipping bounds in the analytic two-variable update, while leaving the curvature formula and gradient update structurally identical to the standard SMO~\cite{Platt1998, Platt1999, Fan2005}. A shrinking heuristic adapted to the sample-dependent bounds is derived and shown to introduce an asymmetry between $\alpha$ and $\alpha^<em>$ variables controlled by the gap $2y_k\varepsilon/100$. The same solver applies to the symmetric-kernel variant (m2) by replacing $\Omega$ with $\Omega_s = \tfrac{1}{2}(\Omega + a\Omega^</em>)$~\cite{Espinoza2005}. An implementation is available in the open-source \texttt{psvr} R package~\cite{BenavidesHerrera2026Rpsvr}.</p>
+
+<p><a href="https://arxiv.org/abs/2605.01446">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
