@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Manokhin Probability Matrix: A Diagnostic Framework for Classifier Probability Quality</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Manokhin Probability Matrix: A Diagnostic Framework for Classifier Probability Quality" />
+<meta name="author" content="Valery Manokhin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Brier score conflates two distinct properties of probabilistic predictions: reliability (calibration error) and resolution (discriminatory power). We introduce the Manokhin Probability Matrix, a BCG-style two-dimensional diagnostic framework that separates them. Classifiers are placed on a 2x2 grid by Spiegelhalter Z-statistic and AUC-ROC expected rank, then assigned to one of four archetypes: Eagle (good on both axes), Bull (strong discrimination, poor calibration), Sloth (well-calibrated, weak discriminator), and Mole (poor on both). Each archetype carries a distinct prescription. We populate the matrix from a large-scale empirical study spanning 21 classifiers, 5 post-hoc calibrators, and 30 real-world binary classification tasks from the TabArena-v0.1 suite. The assignment is unambiguous. CatBoost, TabICL, EBM, TabPFN, GBC, and Random Forest are Eagles. XGBoost, LightGBM, and HGB are Bulls; Venn-Abers calibration cuts log-loss by 6.5 to 12.6% on Bulls but degrades Eagles by 2.1%. SVM, LR, LDA, and the empirical base-rate predictor are Sloths. MLP, KNN, Naive Bayes, and ExtraTrees are Moles. A theoretical asymmetry follows: no order-preserving post-hoc calibrator can add discriminatory power (Proposition 1), so calibration is the fixable part and discrimination is the hard part. The practical rule is direct: do not optimise aggregate Brier score without first decomposing it; optimise discrimination first, then fix calibration post-hoc. Code and raw experimental data are available at https://github.com/valeman/classifier_calibration." />
+<meta property="og:description" content="The Brier score conflates two distinct properties of probabilistic predictions: reliability (calibration error) and resolution (discriminatory power). We introduce the Manokhin Probability Matrix, a BCG-style two-dimensional diagnostic framework that separates them. Classifiers are placed on a 2x2 grid by Spiegelhalter Z-statistic and AUC-ROC expected rank, then assigned to one of four archetypes: Eagle (good on both axes), Bull (strong discrimination, poor calibration), Sloth (well-calibrated, weak discriminator), and Mole (poor on both). Each archetype carries a distinct prescription. We populate the matrix from a large-scale empirical study spanning 21 classifiers, 5 post-hoc calibrators, and 30 real-world binary classification tasks from the TabArena-v0.1 suite. The assignment is unambiguous. CatBoost, TabICL, EBM, TabPFN, GBC, and Random Forest are Eagles. XGBoost, LightGBM, and HGB are Bulls; Venn-Abers calibration cuts log-loss by 6.5 to 12.6% on Bulls but degrades Eagles by 2.1%. SVM, LR, LDA, and the empirical base-rate predictor are Sloths. MLP, KNN, Naive Bayes, and ExtraTrees are Moles. A theoretical asymmetry follows: no order-preserving post-hoc calibrator can add discriminatory power (Proposition 1), so calibration is the fixable part and discrimination is the hard part. The practical rule is direct: do not optimise aggregate Brier score without first decomposing it; optimise discrimination first, then fix calibration post-hoc. Code and raw experimental data are available at https://github.com/valeman/classifier_calibration." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/06/TheManokhinProbabilityMatrixADiagnosticFrameworkforClassifierProbabilityQuality.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/06/TheManokhinProbabilityMatrixADiagnosticFrameworkforClassifierProbabilityQuality.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Manokhin Probability Matrix: A Diagnostic Framework for Classifier Probability Quality" />
+<script type="application/ld+json">
+{"description":"The Brier score conflates two distinct properties of probabilistic predictions: reliability (calibration error) and resolution (discriminatory power). We introduce the Manokhin Probability Matrix, a BCG-style two-dimensional diagnostic framework that separates them. Classifiers are placed on a 2x2 grid by Spiegelhalter Z-statistic and AUC-ROC expected rank, then assigned to one of four archetypes: Eagle (good on both axes), Bull (strong discrimination, poor calibration), Sloth (well-calibrated, weak discriminator), and Mole (poor on both). Each archetype carries a distinct prescription. We populate the matrix from a large-scale empirical study spanning 21 classifiers, 5 post-hoc calibrators, and 30 real-world binary classification tasks from the TabArena-v0.1 suite. The assignment is unambiguous. CatBoost, TabICL, EBM, TabPFN, GBC, and Random Forest are Eagles. XGBoost, LightGBM, and HGB are Bulls; Venn-Abers calibration cuts log-loss by 6.5 to 12.6% on Bulls but degrades Eagles by 2.1%. SVM, LR, LDA, and the empirical base-rate predictor are Sloths. MLP, KNN, Naive Bayes, and ExtraTrees are Moles. A theoretical asymmetry follows: no order-preserving post-hoc calibrator can add discriminatory power (Proposition 1), so calibration is the fixable part and discrimination is the hard part. The practical rule is direct: do not optimise aggregate Brier score without first decomposing it; optimise discrimination first, then fix calibration post-hoc. Code and raw experimental data are available at https://github.com/valeman/classifier_calibration.","author":{"@type":"Person","name":"Valery Manokhin"},"datePublished":"2026-05-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/06/TheManokhinProbabilityMatrixADiagnosticFrameworkforClassifierProbabilityQuality.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/06/TheManokhinProbabilityMatrixADiagnosticFrameworkforClassifierProbabilityQuality.html","headline":"The Manokhin Probability Matrix: A Diagnostic Framework for Classifier Probability Quality","@type":"BlogPosting","dateModified":"2026-05-06T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-06 00:00:00 +0000">05-06</time>
+  </p>
+  
+  <h1>The Manokhin Probability Matrix: A Diagnostic Framework for Classifier Probability Quality</h1>
+  <br>Valery Manokhin</h3>
+  <br> [stat.ML]
+
+  <p>The Brier score conflates two distinct properties of probabilistic predictions: reliability (calibration error) and resolution (discriminatory power). We introduce the Manokhin Probability Matrix, a BCG-style two-dimensional diagnostic framework that separates them. Classifiers are placed on a 2x2 grid by Spiegelhalter Z-statistic and AUC-ROC expected rank, then assigned to one of four archetypes: Eagle (good on both axes), Bull (strong discrimination, poor calibration), Sloth (well-calibrated, weak discriminator), and Mole (poor on both). Each archetype carries a distinct prescription. We populate the matrix from a large-scale empirical study spanning 21 classifiers, 5 post-hoc calibrators, and 30 real-world binary classification tasks from the TabArena-v0.1 suite. The assignment is unambiguous. CatBoost, TabICL, EBM, TabPFN, GBC, and Random Forest are Eagles. XGBoost, LightGBM, and HGB are Bulls; Venn-Abers calibration cuts log-loss by 6.5 to 12.6% on Bulls but degrades Eagles by 2.1%. SVM, LR, LDA, and the empirical base-rate predictor are Sloths. MLP, KNN, Naive Bayes, and ExtraTrees are Moles. A theoretical asymmetry follows: no order-preserving post-hoc calibrator can add discriminatory power (Proposition 1), so calibration is the fixable part and discrimination is the hard part. The practical rule is direct: do not optimise aggregate Brier score without first decomposing it; optimise discrimination first, then fix calibration post-hoc. Code and raw experimental data are available at https://github.com/valeman/classifier_calibration.</p>
+
+<p><a href="https://arxiv.org/abs/2605.03816">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
