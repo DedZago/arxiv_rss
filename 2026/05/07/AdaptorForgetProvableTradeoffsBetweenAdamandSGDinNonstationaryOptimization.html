@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adapt or Forget: Provable Tradeoffs Between Adam and SGD in Nonstationary Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adapt or Forget: Provable Tradeoffs Between Adam and SGD in Nonstationary Optimization" />
+<meta name="author" content="Sharan Sahu, Abir Sarkar, Cameron J. Hogan, Martin T. Wells" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We provide a theoretical analysis of Adam under non-stationary stochastic objectives, separating two regimes: Euclidean tracking under adaptive strong monotonicity of the Adam-preconditioned mean-gradient operator, and high-probability projected stationarity guarantees under general $L$-smooth objectives. In the tracking regime, we derive finite-time expected and high-probability bounds that decompose sharply into four components: initialization, objective drift, a first-moment tracking error governed by $\beta_1$, and a preconditioner perturbation governed by $\beta_2$. We characterize the burn-in time to reach Adam’s irreducible tracking floor under constant and step-decay schedules. We also prove a high-probability bound on the average projected stationarity gap for Adam under distribution shift. Across both analyses, our bounds reveal a noise–drift tradeoff: in noise-dominated regimes, first-moment averaging and adaptive preconditioning can improve the high-probability error, whereas in drift-dominated regimes, stale first-moment information and preconditioner perturbations can compound the cost of nonstationarity, allowing vanilla SGD to achieve a smaller tracking floor. Our explicit $(\beta_1,\beta_2,\epsilon)$-dependent bounds delineate when adaptive step-sizing is beneficial versus harmful, and provide a theoretical mechanism for Adam’s empirical instability and stabilization under distribution shift." />
+<meta property="og:description" content="We provide a theoretical analysis of Adam under non-stationary stochastic objectives, separating two regimes: Euclidean tracking under adaptive strong monotonicity of the Adam-preconditioned mean-gradient operator, and high-probability projected stationarity guarantees under general $L$-smooth objectives. In the tracking regime, we derive finite-time expected and high-probability bounds that decompose sharply into four components: initialization, objective drift, a first-moment tracking error governed by $\beta_1$, and a preconditioner perturbation governed by $\beta_2$. We characterize the burn-in time to reach Adam’s irreducible tracking floor under constant and step-decay schedules. We also prove a high-probability bound on the average projected stationarity gap for Adam under distribution shift. Across both analyses, our bounds reveal a noise–drift tradeoff: in noise-dominated regimes, first-moment averaging and adaptive preconditioning can improve the high-probability error, whereas in drift-dominated regimes, stale first-moment information and preconditioner perturbations can compound the cost of nonstationarity, allowing vanilla SGD to achieve a smaller tracking floor. Our explicit $(\beta_1,\beta_2,\epsilon)$-dependent bounds delineate when adaptive step-sizing is beneficial versus harmful, and provide a theoretical mechanism for Adam’s empirical instability and stabilization under distribution shift." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/07/AdaptorForgetProvableTradeoffsBetweenAdamandSGDinNonstationaryOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/07/AdaptorForgetProvableTradeoffsBetweenAdamandSGDinNonstationaryOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adapt or Forget: Provable Tradeoffs Between Adam and SGD in Nonstationary Optimization" />
+<script type="application/ld+json">
+{"description":"We provide a theoretical analysis of Adam under non-stationary stochastic objectives, separating two regimes: Euclidean tracking under adaptive strong monotonicity of the Adam-preconditioned mean-gradient operator, and high-probability projected stationarity guarantees under general $L$-smooth objectives. In the tracking regime, we derive finite-time expected and high-probability bounds that decompose sharply into four components: initialization, objective drift, a first-moment tracking error governed by $\\beta_1$, and a preconditioner perturbation governed by $\\beta_2$. We characterize the burn-in time to reach Adam’s irreducible tracking floor under constant and step-decay schedules. We also prove a high-probability bound on the average projected stationarity gap for Adam under distribution shift. Across both analyses, our bounds reveal a noise–drift tradeoff: in noise-dominated regimes, first-moment averaging and adaptive preconditioning can improve the high-probability error, whereas in drift-dominated regimes, stale first-moment information and preconditioner perturbations can compound the cost of nonstationarity, allowing vanilla SGD to achieve a smaller tracking floor. Our explicit $(\\beta_1,\\beta_2,\\epsilon)$-dependent bounds delineate when adaptive step-sizing is beneficial versus harmful, and provide a theoretical mechanism for Adam’s empirical instability and stabilization under distribution shift.","author":{"@type":"Person","name":"Sharan Sahu, Abir Sarkar, Cameron J. Hogan, Martin T. Wells"},"datePublished":"2026-05-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/07/AdaptorForgetProvableTradeoffsBetweenAdamandSGDinNonstationaryOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/07/AdaptorForgetProvableTradeoffsBetweenAdamandSGDinNonstationaryOptimization.html","headline":"Adapt or Forget: Provable Tradeoffs Between Adam and SGD in Nonstationary Optimization","@type":"BlogPosting","dateModified":"2026-05-07T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-07 00:00:00 +0000">05-07</time>
+  </p>
+  
+  <h1>Adapt or Forget: Provable Tradeoffs Between Adam and SGD in Nonstationary Optimization</h1>
+  <br>Sharan Sahu, Abir Sarkar, Cameron J. Hogan, Martin T. Wells</h3>
+  <br> [stat.ML]
+
+  <p>We provide a theoretical analysis of Adam under non-stationary stochastic objectives, separating two regimes: Euclidean tracking under adaptive strong monotonicity of the Adam-preconditioned mean-gradient operator, and high-probability projected stationarity guarantees under general $L$-smooth objectives. In the tracking regime, we derive finite-time expected and high-probability bounds that decompose sharply into four components: initialization, objective drift, a first-moment tracking error governed by $\beta_1$, and a preconditioner perturbation governed by $\beta_2$. We characterize the burn-in time to reach Adam’s irreducible tracking floor under constant and step-decay schedules. We also prove a high-probability bound on the average projected stationarity gap for Adam under distribution shift. Across both analyses, our bounds reveal a noise–drift tradeoff: in noise-dominated regimes, first-moment averaging and adaptive preconditioning can improve the high-probability error, whereas in drift-dominated regimes, stale first-moment information and preconditioner perturbations can compound the cost of nonstationarity, allowing vanilla SGD to achieve a smaller tracking floor. Our explicit $(\beta_1,\beta_2,\epsilon)$-dependent bounds delineate when adaptive step-sizing is beneficial versus harmful, and provide a theoretical mechanism for Adam’s empirical instability and stabilization under distribution shift.</p>
+
+<p><a href="https://arxiv.org/abs/2605.04269">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

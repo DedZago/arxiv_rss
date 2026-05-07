@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Explaining and Preventing Alignment Collapse in Iterative RLHF</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Explaining and Preventing Alignment Collapse in Iterative RLHF" />
+<meta name="author" content="Etienne Gauthier, Francis Bach, Michael I. Jordan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reinforcement learning from human feedback (RLHF) typically assumes a static or non-strategic reward model (RM). In iterative deployment, however, the policy generates the data on which the RM is retrained, creating a feedback loop. Building on the Stackelberg game formulation of this interaction, we derive an analytical decomposition of the policy’s true optimization gradient into a standard policy gradient and a parameter-steering term that captures the policy’s influence on the RM’s future parameters. We show that standard iterative RLHF, which drops this steering term entirely, suffers from alignment collapse: the policy systematically exploits the RM’s blind spots, producing low-quality, high-reward outputs whose feedback reinforces the very errors it exploits. To mitigate this, we propose foresighted policy optimization (FPO), a mechanism-design intervention that restores the missing steering term by regularizing the policy’s parameter-steering effect on RM updates. We instantiate FPO via a scalable first-order approximation and demonstrate that it prevents alignment collapse on both controlled environments and an LLM alignment pipeline using Llama-3.2-1B." />
+<meta property="og:description" content="Reinforcement learning from human feedback (RLHF) typically assumes a static or non-strategic reward model (RM). In iterative deployment, however, the policy generates the data on which the RM is retrained, creating a feedback loop. Building on the Stackelberg game formulation of this interaction, we derive an analytical decomposition of the policy’s true optimization gradient into a standard policy gradient and a parameter-steering term that captures the policy’s influence on the RM’s future parameters. We show that standard iterative RLHF, which drops this steering term entirely, suffers from alignment collapse: the policy systematically exploits the RM’s blind spots, producing low-quality, high-reward outputs whose feedback reinforces the very errors it exploits. To mitigate this, we propose foresighted policy optimization (FPO), a mechanism-design intervention that restores the missing steering term by regularizing the policy’s parameter-steering effect on RM updates. We instantiate FPO via a scalable first-order approximation and demonstrate that it prevents alignment collapse on both controlled environments and an LLM alignment pipeline using Llama-3.2-1B." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/07/ExplainingandPreventingAlignmentCollapseinIterativeRLHF.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/07/ExplainingandPreventingAlignmentCollapseinIterativeRLHF.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Explaining and Preventing Alignment Collapse in Iterative RLHF" />
+<script type="application/ld+json">
+{"description":"Reinforcement learning from human feedback (RLHF) typically assumes a static or non-strategic reward model (RM). In iterative deployment, however, the policy generates the data on which the RM is retrained, creating a feedback loop. Building on the Stackelberg game formulation of this interaction, we derive an analytical decomposition of the policy’s true optimization gradient into a standard policy gradient and a parameter-steering term that captures the policy’s influence on the RM’s future parameters. We show that standard iterative RLHF, which drops this steering term entirely, suffers from alignment collapse: the policy systematically exploits the RM’s blind spots, producing low-quality, high-reward outputs whose feedback reinforces the very errors it exploits. To mitigate this, we propose foresighted policy optimization (FPO), a mechanism-design intervention that restores the missing steering term by regularizing the policy’s parameter-steering effect on RM updates. We instantiate FPO via a scalable first-order approximation and demonstrate that it prevents alignment collapse on both controlled environments and an LLM alignment pipeline using Llama-3.2-1B.","author":{"@type":"Person","name":"Etienne Gauthier, Francis Bach, Michael I. Jordan"},"datePublished":"2026-05-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/07/ExplainingandPreventingAlignmentCollapseinIterativeRLHF.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/07/ExplainingandPreventingAlignmentCollapseinIterativeRLHF.html","headline":"Explaining and Preventing Alignment Collapse in Iterative RLHF","@type":"BlogPosting","dateModified":"2026-05-07T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-07 00:00:00 +0000">05-07</time>
+  </p>
+  
+  <h1>Explaining and Preventing Alignment Collapse in Iterative RLHF</h1>
+  <br>Etienne Gauthier, Francis Bach, Michael I. Jordan</h3>
+  <br> [stat.ML]
+
+  <p>Reinforcement learning from human feedback (RLHF) typically assumes a static or non-strategic reward model (RM). In iterative deployment, however, the policy generates the data on which the RM is retrained, creating a feedback loop. Building on the Stackelberg game formulation of this interaction, we derive an analytical decomposition of the policy’s true optimization gradient into a standard policy gradient and a parameter-steering term that captures the policy’s influence on the RM’s future parameters. We show that standard iterative RLHF, which drops this steering term entirely, suffers from alignment collapse: the policy systematically exploits the RM’s blind spots, producing low-quality, high-reward outputs whose feedback reinforces the very errors it exploits. To mitigate this, we propose foresighted policy optimization (FPO), a mechanism-design intervention that restores the missing steering term by regularizing the policy’s parameter-steering effect on RM updates. We instantiate FPO via a scalable first-order approximation and demonstrate that it prevents alignment collapse on both controlled environments and an LLM alignment pipeline using Llama-3.2-1B.</p>
+
+<p><a href="https://arxiv.org/abs/2605.04266">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
