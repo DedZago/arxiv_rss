@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Maximizing Rollout Informativeness under a Fixed Budget: A Submodular View of Tree Search for Tool-Use Agentic Reinforcement Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Maximizing Rollout Informativeness under a Fixed Budget: A Submodular View of Tree Search for Tool-Use Agentic Reinforcement Learning" />
+<meta name="author" content="Yuelin Hu, Zhenbo Yu, Zhengxue Cheng, Wei Liu, Li Song" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We formalize Rollout Informativeness under a Fixed Budget (RIFB) as the expected non-vanishing policy-gradient mass that a tool-use rollout set injects into Group Relative Policy Optimization (GRPO). We prove that any budget-agnostic independent sampler suffers a collapse rate bounded away from zero for hard prompts regardless of the budget. Motivated by this, we recast intermediate state selection as a monotone submodular maximization problem, where a greedy one-step selector enjoys a 1 minus 1/e approximation guarantee. Our Uncertainty-aware Upper Confidence Bound (UUCB) terms arise as closed-form marginal gains of this objective. This turns the token-level entropy bonus from an empirical trick into an analytic consequence of the formulation. We present InfoTree, a training-time tree-search framework coupling UUCB with a learned Adaptive Budget Allocator (ABA) and an asynchronous Speculative Expansion scheme. ABA rescues prompts whose initial tree is wasted on uniform outcomes, lifting the mixed-outcome ratio from 58.1 percent to 76.3 percent with less than 5 percent budget overhead. Speculative Expansion reduces wall-clock overhead from 14.3 percent to 4.8 percent by tolerating bounded staleness in UUCB scores. Across nine benchmarks spanning math reasoning (AIME 2024 and 2025, MATH-500, OlympiadBench, USAMO), web-search agents (GAIA, HLE-100, BrowseComp-lite), and tool-rich coding and OS agents (APPS-verified, AgentBench-OS), InfoTree outperforms flat GRPO, DeepSearch, Tree-GRPO, AT2PO, CW-GRPO, and RC-GRPO. Head-to-head compositions with Tree-GRPO prefix sharing and CW-GRPO contribution weights deliver further gains, confirming that our selector operates orthogonally to rollout reuse and trajectory re-weighting. A 5 by 5 by 5 robustness grid reveals that over three quarters of the hyperparameter space lies on a performance plateau, confirming UUCB robustness." />
+<meta property="og:description" content="We formalize Rollout Informativeness under a Fixed Budget (RIFB) as the expected non-vanishing policy-gradient mass that a tool-use rollout set injects into Group Relative Policy Optimization (GRPO). We prove that any budget-agnostic independent sampler suffers a collapse rate bounded away from zero for hard prompts regardless of the budget. Motivated by this, we recast intermediate state selection as a monotone submodular maximization problem, where a greedy one-step selector enjoys a 1 minus 1/e approximation guarantee. Our Uncertainty-aware Upper Confidence Bound (UUCB) terms arise as closed-form marginal gains of this objective. This turns the token-level entropy bonus from an empirical trick into an analytic consequence of the formulation. We present InfoTree, a training-time tree-search framework coupling UUCB with a learned Adaptive Budget Allocator (ABA) and an asynchronous Speculative Expansion scheme. ABA rescues prompts whose initial tree is wasted on uniform outcomes, lifting the mixed-outcome ratio from 58.1 percent to 76.3 percent with less than 5 percent budget overhead. Speculative Expansion reduces wall-clock overhead from 14.3 percent to 4.8 percent by tolerating bounded staleness in UUCB scores. Across nine benchmarks spanning math reasoning (AIME 2024 and 2025, MATH-500, OlympiadBench, USAMO), web-search agents (GAIA, HLE-100, BrowseComp-lite), and tool-rich coding and OS agents (APPS-verified, AgentBench-OS), InfoTree outperforms flat GRPO, DeepSearch, Tree-GRPO, AT2PO, CW-GRPO, and RC-GRPO. Head-to-head compositions with Tree-GRPO prefix sharing and CW-GRPO contribution weights deliver further gains, confirming that our selector operates orthogonally to rollout reuse and trajectory re-weighting. A 5 by 5 by 5 robustness grid reveals that over three quarters of the hyperparameter space lies on a performance plateau, confirming UUCB robustness." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/08/MaximizingRolloutInformativenessunderaFixedBudgetASubmodularViewofTreeSearchforToolUseAgenticReinforcementLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/08/MaximizingRolloutInformativenessunderaFixedBudgetASubmodularViewofTreeSearchforToolUseAgenticReinforcementLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Maximizing Rollout Informativeness under a Fixed Budget: A Submodular View of Tree Search for Tool-Use Agentic Reinforcement Learning" />
+<script type="application/ld+json">
+{"description":"We formalize Rollout Informativeness under a Fixed Budget (RIFB) as the expected non-vanishing policy-gradient mass that a tool-use rollout set injects into Group Relative Policy Optimization (GRPO). We prove that any budget-agnostic independent sampler suffers a collapse rate bounded away from zero for hard prompts regardless of the budget. Motivated by this, we recast intermediate state selection as a monotone submodular maximization problem, where a greedy one-step selector enjoys a 1 minus 1/e approximation guarantee. Our Uncertainty-aware Upper Confidence Bound (UUCB) terms arise as closed-form marginal gains of this objective. This turns the token-level entropy bonus from an empirical trick into an analytic consequence of the formulation. We present InfoTree, a training-time tree-search framework coupling UUCB with a learned Adaptive Budget Allocator (ABA) and an asynchronous Speculative Expansion scheme. ABA rescues prompts whose initial tree is wasted on uniform outcomes, lifting the mixed-outcome ratio from 58.1 percent to 76.3 percent with less than 5 percent budget overhead. Speculative Expansion reduces wall-clock overhead from 14.3 percent to 4.8 percent by tolerating bounded staleness in UUCB scores. Across nine benchmarks spanning math reasoning (AIME 2024 and 2025, MATH-500, OlympiadBench, USAMO), web-search agents (GAIA, HLE-100, BrowseComp-lite), and tool-rich coding and OS agents (APPS-verified, AgentBench-OS), InfoTree outperforms flat GRPO, DeepSearch, Tree-GRPO, AT2PO, CW-GRPO, and RC-GRPO. Head-to-head compositions with Tree-GRPO prefix sharing and CW-GRPO contribution weights deliver further gains, confirming that our selector operates orthogonally to rollout reuse and trajectory re-weighting. A 5 by 5 by 5 robustness grid reveals that over three quarters of the hyperparameter space lies on a performance plateau, confirming UUCB robustness.","author":{"@type":"Person","name":"Yuelin Hu, Zhenbo Yu, Zhengxue Cheng, Wei Liu, Li Song"},"datePublished":"2026-05-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/08/MaximizingRolloutInformativenessunderaFixedBudgetASubmodularViewofTreeSearchforToolUseAgenticReinforcementLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/08/MaximizingRolloutInformativenessunderaFixedBudgetASubmodularViewofTreeSearchforToolUseAgenticReinforcementLearning.html","headline":"Maximizing Rollout Informativeness under a Fixed Budget: A Submodular View of Tree Search for Tool-Use Agentic Reinforcement Learning","@type":"BlogPosting","dateModified":"2026-05-08T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-08 00:00:00 +0000">05-08</time>
+  </p>
+  
+  <h1>Maximizing Rollout Informativeness under a Fixed Budget: A Submodular View of Tree Search for Tool-Use Agentic Reinforcement Learning</h1>
+  <br>Yuelin Hu, Zhenbo Yu, Zhengxue Cheng, Wei Liu, Li Song</h3>
+  <br> [stat.ML]
+
+  <p>We formalize Rollout Informativeness under a Fixed Budget (RIFB) as the expected non-vanishing policy-gradient mass that a tool-use rollout set injects into Group Relative Policy Optimization (GRPO). We prove that any budget-agnostic independent sampler suffers a collapse rate bounded away from zero for hard prompts regardless of the budget. Motivated by this, we recast intermediate state selection as a monotone submodular maximization problem, where a greedy one-step selector enjoys a 1 minus 1/e approximation guarantee.
+  Our Uncertainty-aware Upper Confidence Bound (UUCB) terms arise as closed-form marginal gains of this objective. This turns the token-level entropy bonus from an empirical trick into an analytic consequence of the formulation. We present InfoTree, a training-time tree-search framework coupling UUCB with a learned Adaptive Budget Allocator (ABA) and an asynchronous Speculative Expansion scheme.
+  ABA rescues prompts whose initial tree is wasted on uniform outcomes, lifting the mixed-outcome ratio from 58.1 percent to 76.3 percent with less than 5 percent budget overhead. Speculative Expansion reduces wall-clock overhead from 14.3 percent to 4.8 percent by tolerating bounded staleness in UUCB scores.
+  Across nine benchmarks spanning math reasoning (AIME 2024 and 2025, MATH-500, OlympiadBench, USAMO), web-search agents (GAIA, HLE-100, BrowseComp-lite), and tool-rich coding and OS agents (APPS-verified, AgentBench-OS), InfoTree outperforms flat GRPO, DeepSearch, Tree-GRPO, AT2PO, CW-GRPO, and RC-GRPO. Head-to-head compositions with Tree-GRPO prefix sharing and CW-GRPO contribution weights deliver further gains, confirming that our selector operates orthogonally to rollout reuse and trajectory re-weighting. A 5 by 5 by 5 robustness grid reveals that over three quarters of the hyperparameter space lies on a performance plateau, confirming UUCB robustness.</p>
+
+<p><a href="https://arxiv.org/abs/2605.05262">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
