@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bellman Calibration for $V$-Learning in Offline Reinforcement Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Bellman Calibration for $V$-Learning in Offline Reinforcement Learning" />
+<meta name="author" content="Lars van der Laan, Nathan Kallus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reliable long-horizon value prediction is difficult in offline reinforcement learning because fitted value methods combine bootstrapping, function approximation, and distribution shift, while standard guarantees often require Bellman completeness or realizability. We introduce Bellman calibration, a weak reliability criterion requiring that states assigned similar predicted values have average Bellman targets that agree with those predictions. This criterion yields a scalar calibration error for diagnosing systematic numerical miscalibration, which we estimate from off-policy data using doubly robust Bellman target estimates. We then propose Iterated Bellman Calibration, a model-agnostic post-hoc procedure that recalibrates any learned value predictor by fitting a one-dimensional map of its original prediction, with histogram and isotonic variants. We prove finite-sample guarantees showing that Bellman calibration error is controlled at one-dimensional nonparametric rates without Bellman completeness or value-function realizability. Our value-error bounds separate statistical estimation, finite-iteration, and approximation errors, clarifying when calibration improves value prediction and when its gains are limited by the information in the original predictor or insufficient coverage." />
+<meta property="og:description" content="Reliable long-horizon value prediction is difficult in offline reinforcement learning because fitted value methods combine bootstrapping, function approximation, and distribution shift, while standard guarantees often require Bellman completeness or realizability. We introduce Bellman calibration, a weak reliability criterion requiring that states assigned similar predicted values have average Bellman targets that agree with those predictions. This criterion yields a scalar calibration error for diagnosing systematic numerical miscalibration, which we estimate from off-policy data using doubly robust Bellman target estimates. We then propose Iterated Bellman Calibration, a model-agnostic post-hoc procedure that recalibrates any learned value predictor by fitting a one-dimensional map of its original prediction, with histogram and isotonic variants. We prove finite-sample guarantees showing that Bellman calibration error is controlled at one-dimensional nonparametric rates without Bellman completeness or value-function realizability. Our value-error bounds separate statistical estimation, finite-iteration, and approximation errors, clarifying when calibration improves value prediction and when its gains are limited by the information in the original predictor or insufficient coverage." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/11/BellmanCalibrationforVLearninginOfflineReinforcementLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/11/BellmanCalibrationforVLearninginOfflineReinforcementLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bellman Calibration for $V$-Learning in Offline Reinforcement Learning" />
+<script type="application/ld+json">
+{"description":"Reliable long-horizon value prediction is difficult in offline reinforcement learning because fitted value methods combine bootstrapping, function approximation, and distribution shift, while standard guarantees often require Bellman completeness or realizability. We introduce Bellman calibration, a weak reliability criterion requiring that states assigned similar predicted values have average Bellman targets that agree with those predictions. This criterion yields a scalar calibration error for diagnosing systematic numerical miscalibration, which we estimate from off-policy data using doubly robust Bellman target estimates. We then propose Iterated Bellman Calibration, a model-agnostic post-hoc procedure that recalibrates any learned value predictor by fitting a one-dimensional map of its original prediction, with histogram and isotonic variants. We prove finite-sample guarantees showing that Bellman calibration error is controlled at one-dimensional nonparametric rates without Bellman completeness or value-function realizability. Our value-error bounds separate statistical estimation, finite-iteration, and approximation errors, clarifying when calibration improves value prediction and when its gains are limited by the information in the original predictor or insufficient coverage.","author":{"@type":"Person","name":"Lars van der Laan, Nathan Kallus"},"datePublished":"2026-05-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/11/BellmanCalibrationforVLearninginOfflineReinforcementLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/11/BellmanCalibrationforVLearninginOfflineReinforcementLearning.html","headline":"Bellman Calibration for $V$-Learning in Offline Reinforcement Learning","@type":"BlogPosting","dateModified":"2026-05-11T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-11 00:00:00 +0000">05-11</time>
+  </p>
+  
+  <h1>Bellman Calibration for $V$-Learning in Offline Reinforcement Learning</h1>
+  <br>Lars van der Laan, Nathan Kallus</h3>
+  <br> [stat.ML]
+
+  <p>Reliable long-horizon value prediction is difficult in offline reinforcement learning because fitted value methods combine bootstrapping, function approximation, and distribution shift, while standard guarantees often require Bellman completeness or realizability. We introduce Bellman calibration, a weak reliability criterion requiring that states assigned similar predicted values have average Bellman targets that agree with those predictions. This criterion yields a scalar calibration error for diagnosing systematic numerical miscalibration, which we estimate from off-policy data using doubly robust Bellman target estimates. We then propose Iterated Bellman Calibration, a model-agnostic post-hoc procedure that recalibrates any learned value predictor by fitting a one-dimensional map of its original prediction, with histogram and isotonic variants. We prove finite-sample guarantees showing that Bellman calibration error is controlled at one-dimensional nonparametric rates without Bellman completeness or value-function realizability. Our value-error bounds separate statistical estimation, finite-iteration, and approximation errors, clarifying when calibration improves value prediction and when its gains are limited by the information in the original predictor or insufficient coverage.</p>
+
+<p><a href="https://arxiv.org/abs/2512.23694">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
