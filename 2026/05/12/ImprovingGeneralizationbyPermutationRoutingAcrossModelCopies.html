@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Improving Generalization by Permutation Routing Across Model Copies</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Improving Generalization by Permutation Routing Across Model Copies" />
+<meta name="author" content="Shuhei Kashiwamura, Timothee Leleu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a use of the (M)-cover (or (M)-layer) transform for machine learning. The method replicates a model (M) times, but instead of coupling the copies through parameter averaging or an explicit attractive force, as in replicated SGD or Elastic SGD, it rewires the contexts in which local learning messages are computed. Each local loss is evaluated on a routed model whose parameters are drawn from different copies according to permutations sampled from a structured mixing kernel (Q). Training then uses the original local update rule, while the resulting learning messages are redistributed across the copies through these routed computational paths. Thus (Q) defines a topology for message transport and controls the long-loop structure of the lifted factor graph. We formulate this construction for perceptrons, committee machines, and multilayer perceptrons, showing that the same principle applies from discrete models to differentiable neural networks. The resulting framework provides a mechanism for improving generalization through structured message sharing rather than replica collapse or parameter-space coupling." />
+<meta property="og:description" content="We introduce a use of the (M)-cover (or (M)-layer) transform for machine learning. The method replicates a model (M) times, but instead of coupling the copies through parameter averaging or an explicit attractive force, as in replicated SGD or Elastic SGD, it rewires the contexts in which local learning messages are computed. Each local loss is evaluated on a routed model whose parameters are drawn from different copies according to permutations sampled from a structured mixing kernel (Q). Training then uses the original local update rule, while the resulting learning messages are redistributed across the copies through these routed computational paths. Thus (Q) defines a topology for message transport and controls the long-loop structure of the lifted factor graph. We formulate this construction for perceptrons, committee machines, and multilayer perceptrons, showing that the same principle applies from discrete models to differentiable neural networks. The resulting framework provides a mechanism for improving generalization through structured message sharing rather than replica collapse or parameter-space coupling." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/ImprovingGeneralizationbyPermutationRoutingAcrossModelCopies.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/ImprovingGeneralizationbyPermutationRoutingAcrossModelCopies.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improving Generalization by Permutation Routing Across Model Copies" />
+<script type="application/ld+json">
+{"description":"We introduce a use of the (M)-cover (or (M)-layer) transform for machine learning. The method replicates a model (M) times, but instead of coupling the copies through parameter averaging or an explicit attractive force, as in replicated SGD or Elastic SGD, it rewires the contexts in which local learning messages are computed. Each local loss is evaluated on a routed model whose parameters are drawn from different copies according to permutations sampled from a structured mixing kernel (Q). Training then uses the original local update rule, while the resulting learning messages are redistributed across the copies through these routed computational paths. Thus (Q) defines a topology for message transport and controls the long-loop structure of the lifted factor graph. We formulate this construction for perceptrons, committee machines, and multilayer perceptrons, showing that the same principle applies from discrete models to differentiable neural networks. The resulting framework provides a mechanism for improving generalization through structured message sharing rather than replica collapse or parameter-space coupling.","author":{"@type":"Person","name":"Shuhei Kashiwamura, Timothee Leleu"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/ImprovingGeneralizationbyPermutationRoutingAcrossModelCopies.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/ImprovingGeneralizationbyPermutationRoutingAcrossModelCopies.html","headline":"Improving Generalization by Permutation Routing Across Model Copies","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Improving Generalization by Permutation Routing Across Model Copies</h1>
+  <br>Shuhei Kashiwamura, Timothee Leleu</h3>
+  <br> [stat.ML]
+
+  <p>We introduce a use of the (M)-cover (or (M)-layer) transform for machine learning. The method replicates a model (M) times, but instead of coupling the copies through parameter averaging or an explicit attractive force, as in replicated SGD or Elastic SGD, it rewires the contexts in which local learning messages are computed. Each local loss is evaluated on a routed model whose parameters are drawn from different copies according to permutations sampled from a structured mixing kernel (Q). Training then uses the original local update rule, while the resulting learning messages are redistributed across the copies through these routed computational paths. Thus (Q) defines a topology for message transport and controls the long-loop structure of the lifted factor graph. We formulate this construction for perceptrons, committee machines, and multilayer perceptrons, showing that the same principle applies from discrete models to differentiable neural networks. The resulting framework provides a mechanism for improving generalization through structured message sharing rather than replica collapse or parameter-space coupling.</p>
+
+<p><a href="https://arxiv.org/abs/2605.09256">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

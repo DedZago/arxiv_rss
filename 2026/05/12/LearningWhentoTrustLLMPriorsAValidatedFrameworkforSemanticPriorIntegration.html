@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning When to Trust LLM Priors: A Validated Framework for Semantic Prior Integration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning When to Trust LLM Priors: A Validated Framework for Semantic Prior Integration" />
+<meta name="author" content="Erica Zhang, Naomi Sagan, Danny Tse, Fangzhao Zhang, Mert Pilanci, Jose Blanchet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language models (LLMs) encode rich semantic knowledge that can be useful for supervised learning, but their outputs are unreliable as statistical priors: they may be noisy, misspecified, or hallucinated. Existing LLM-informed learning methods either trust such signals directly, leaving predictions vulnerable to unreliable LLM guidance, or restrict semantic integration to a single model class. We introduce Statsformer, a validated framework for learning when to trust LLM-derived semantic priors in supervised statistical learning. Statsformer maps LLM-derived feature scores into a family of learner-specific prior-injection mechanisms across a heterogeneous library of linear and nonlinear predictors. It then uses out-of-fold validation to adaptively calibrate the influence of each prior-informed learner, allowing useful semantic information to improve prediction while attenuating weak, misspecified, or adversarial priors. This yields a guardrailed statistical learning system with an oracle-style guarantee: up to statistical error, the final predictor performs no worse than the best convex combination of its in-library candidates, including prior-free learners. Across diverse prediction tasks, informative LLM priors improve performance, while unreliable priors are automatically downweighted. These results position Statsformer as a reliability-oriented approach to LLM-informed statistical learning: rather than trusting LLM knowledge directly, it validates semantic priors against data before allowing them to influence the final predictor." />
+<meta property="og:description" content="Large language models (LLMs) encode rich semantic knowledge that can be useful for supervised learning, but their outputs are unreliable as statistical priors: they may be noisy, misspecified, or hallucinated. Existing LLM-informed learning methods either trust such signals directly, leaving predictions vulnerable to unreliable LLM guidance, or restrict semantic integration to a single model class. We introduce Statsformer, a validated framework for learning when to trust LLM-derived semantic priors in supervised statistical learning. Statsformer maps LLM-derived feature scores into a family of learner-specific prior-injection mechanisms across a heterogeneous library of linear and nonlinear predictors. It then uses out-of-fold validation to adaptively calibrate the influence of each prior-informed learner, allowing useful semantic information to improve prediction while attenuating weak, misspecified, or adversarial priors. This yields a guardrailed statistical learning system with an oracle-style guarantee: up to statistical error, the final predictor performs no worse than the best convex combination of its in-library candidates, including prior-free learners. Across diverse prediction tasks, informative LLM priors improve performance, while unreliable priors are automatically downweighted. These results position Statsformer as a reliability-oriented approach to LLM-informed statistical learning: rather than trusting LLM knowledge directly, it validates semantic priors against data before allowing them to influence the final predictor." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/LearningWhentoTrustLLMPriorsAValidatedFrameworkforSemanticPriorIntegration.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/LearningWhentoTrustLLMPriorsAValidatedFrameworkforSemanticPriorIntegration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning When to Trust LLM Priors: A Validated Framework for Semantic Prior Integration" />
+<script type="application/ld+json">
+{"description":"Large language models (LLMs) encode rich semantic knowledge that can be useful for supervised learning, but their outputs are unreliable as statistical priors: they may be noisy, misspecified, or hallucinated. Existing LLM-informed learning methods either trust such signals directly, leaving predictions vulnerable to unreliable LLM guidance, or restrict semantic integration to a single model class. We introduce Statsformer, a validated framework for learning when to trust LLM-derived semantic priors in supervised statistical learning. Statsformer maps LLM-derived feature scores into a family of learner-specific prior-injection mechanisms across a heterogeneous library of linear and nonlinear predictors. It then uses out-of-fold validation to adaptively calibrate the influence of each prior-informed learner, allowing useful semantic information to improve prediction while attenuating weak, misspecified, or adversarial priors. This yields a guardrailed statistical learning system with an oracle-style guarantee: up to statistical error, the final predictor performs no worse than the best convex combination of its in-library candidates, including prior-free learners. Across diverse prediction tasks, informative LLM priors improve performance, while unreliable priors are automatically downweighted. These results position Statsformer as a reliability-oriented approach to LLM-informed statistical learning: rather than trusting LLM knowledge directly, it validates semantic priors against data before allowing them to influence the final predictor.","author":{"@type":"Person","name":"Erica Zhang, Naomi Sagan, Danny Tse, Fangzhao Zhang, Mert Pilanci, Jose Blanchet"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/LearningWhentoTrustLLMPriorsAValidatedFrameworkforSemanticPriorIntegration.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/LearningWhentoTrustLLMPriorsAValidatedFrameworkforSemanticPriorIntegration.html","headline":"Learning When to Trust LLM Priors: A Validated Framework for Semantic Prior Integration","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Learning When to Trust LLM Priors: A Validated Framework for Semantic Prior Integration</h1>
+  <br>Erica Zhang, Naomi Sagan, Danny Tse, Fangzhao Zhang, Mert Pilanci, Jose Blanchet</h3>
+  <br> [stat.ML]
+
+  <p>Large language models (LLMs) encode rich semantic knowledge that can be useful for supervised learning, but their outputs are unreliable as statistical priors: they may be noisy, misspecified, or hallucinated. Existing LLM-informed learning methods either trust such signals directly, leaving predictions vulnerable to unreliable LLM guidance, or restrict semantic integration to a single model class. We introduce Statsformer, a validated framework for learning when to trust LLM-derived semantic priors in supervised statistical learning. Statsformer maps LLM-derived feature scores into a family of learner-specific prior-injection mechanisms across a heterogeneous library of linear and nonlinear predictors. It then uses out-of-fold validation to adaptively calibrate the influence of each prior-informed learner, allowing useful semantic information to improve prediction while attenuating weak, misspecified, or adversarial priors. This yields a guardrailed statistical learning system with an oracle-style guarantee: up to statistical error, the final predictor performs no worse than the best convex combination of its in-library candidates, including prior-free learners. Across diverse prediction tasks, informative LLM priors improve performance, while unreliable priors are automatically downweighted. These results position Statsformer as a reliability-oriented approach to LLM-informed statistical learning: rather than trusting LLM knowledge directly, it validates semantic priors against data before allowing them to influence the final predictor.</p>
+
+<p><a href="https://arxiv.org/abs/2601.21410">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Measuring and Decomposing Mode Separation via the Canonical Diffusion</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Measuring and Decomposing Mode Separation via the Canonical Diffusion" />
+<meta name="author" content="Shaul Tolkovsky, Ori Meidler, Or Zuk" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mode separation, namely how sharply a distribution fragments into barrier-separated clusters, is a fundamental geometric property of densities, difficult to quantify in high dimensions. It is structurally distinct from dispersion, yet existing tools fall short: differential entropy rises with spread regardless of fragmentation, PCA orders directions by variance regardless of barriers, and mutual information requires a mixture decomposition one usually does not have. We measure mode separation through a single stochastic process intrinsic to the density: a unique reversible diffusion with $f$ as its stationary distribution and constant scalar diffusion coefficient. We extract two readouts from its autocovariance matrix: SSA (Sum of Squared Autocorrelations), a scalar barrier-sensitive measure; and DA (Dominant Autocorrelation directions), linear projections ordered by metastability rather than variance. Under an isotropic-Gaussian null, we derive a closed-form spectrum for the empirical autocovariance that generalizes Marchenko–Pastur, with an analytic upper edge that selects the lag at which DA is read off. Both readouts use only samples and a score function, scaling to high dimensions through pretrained score-based generative models via Tweedie’s identity. We apply our framework to three settings: (i) synthetic Gaussian mixtures, where SSA tracks mutual information; (ii) SDXL text-to-image generations, where SSA and DA capture structure that entropy and PCA miss; and (iii) molecular dynamics of alanine dipeptide, where DA recovers the known slow backbone dihedrals from static samples alone." />
+<meta property="og:description" content="Mode separation, namely how sharply a distribution fragments into barrier-separated clusters, is a fundamental geometric property of densities, difficult to quantify in high dimensions. It is structurally distinct from dispersion, yet existing tools fall short: differential entropy rises with spread regardless of fragmentation, PCA orders directions by variance regardless of barriers, and mutual information requires a mixture decomposition one usually does not have. We measure mode separation through a single stochastic process intrinsic to the density: a unique reversible diffusion with $f$ as its stationary distribution and constant scalar diffusion coefficient. We extract two readouts from its autocovariance matrix: SSA (Sum of Squared Autocorrelations), a scalar barrier-sensitive measure; and DA (Dominant Autocorrelation directions), linear projections ordered by metastability rather than variance. Under an isotropic-Gaussian null, we derive a closed-form spectrum for the empirical autocovariance that generalizes Marchenko–Pastur, with an analytic upper edge that selects the lag at which DA is read off. Both readouts use only samples and a score function, scaling to high dimensions through pretrained score-based generative models via Tweedie’s identity. We apply our framework to three settings: (i) synthetic Gaussian mixtures, where SSA tracks mutual information; (ii) SDXL text-to-image generations, where SSA and DA capture structure that entropy and PCA miss; and (iii) molecular dynamics of alanine dipeptide, where DA recovers the known slow backbone dihedrals from static samples alone." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/MeasuringandDecomposingModeSeparationviatheCanonicalDiffusion.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/MeasuringandDecomposingModeSeparationviatheCanonicalDiffusion.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Measuring and Decomposing Mode Separation via the Canonical Diffusion" />
+<script type="application/ld+json">
+{"description":"Mode separation, namely how sharply a distribution fragments into barrier-separated clusters, is a fundamental geometric property of densities, difficult to quantify in high dimensions. It is structurally distinct from dispersion, yet existing tools fall short: differential entropy rises with spread regardless of fragmentation, PCA orders directions by variance regardless of barriers, and mutual information requires a mixture decomposition one usually does not have. We measure mode separation through a single stochastic process intrinsic to the density: a unique reversible diffusion with $f$ as its stationary distribution and constant scalar diffusion coefficient. We extract two readouts from its autocovariance matrix: SSA (Sum of Squared Autocorrelations), a scalar barrier-sensitive measure; and DA (Dominant Autocorrelation directions), linear projections ordered by metastability rather than variance. Under an isotropic-Gaussian null, we derive a closed-form spectrum for the empirical autocovariance that generalizes Marchenko–Pastur, with an analytic upper edge that selects the lag at which DA is read off. Both readouts use only samples and a score function, scaling to high dimensions through pretrained score-based generative models via Tweedie’s identity. We apply our framework to three settings: (i) synthetic Gaussian mixtures, where SSA tracks mutual information; (ii) SDXL text-to-image generations, where SSA and DA capture structure that entropy and PCA miss; and (iii) molecular dynamics of alanine dipeptide, where DA recovers the known slow backbone dihedrals from static samples alone.","author":{"@type":"Person","name":"Shaul Tolkovsky, Ori Meidler, Or Zuk"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/MeasuringandDecomposingModeSeparationviatheCanonicalDiffusion.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/MeasuringandDecomposingModeSeparationviatheCanonicalDiffusion.html","headline":"Measuring and Decomposing Mode Separation via the Canonical Diffusion","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Measuring and Decomposing Mode Separation via the Canonical Diffusion</h1>
+  <br>Shaul Tolkovsky, Ori Meidler, Or Zuk</h3>
+  <br> [stat.ML]
+
+  <p>Mode separation, namely how sharply a distribution fragments into barrier-separated clusters, is a fundamental geometric property of densities, difficult to quantify in high dimensions. It is structurally distinct from dispersion, yet existing tools fall short: differential entropy rises with spread regardless of fragmentation, PCA orders directions by variance regardless of barriers, and mutual information requires a mixture decomposition one usually does not have. We measure mode separation through a single stochastic process intrinsic to the density: a unique reversible diffusion with $f$ as its stationary distribution and constant scalar diffusion coefficient. We extract two readouts from its autocovariance matrix: SSA (Sum of Squared Autocorrelations), a scalar barrier-sensitive measure; and DA (Dominant Autocorrelation directions), linear projections ordered by metastability rather than variance. Under an isotropic-Gaussian null, we derive a closed-form spectrum for the empirical autocovariance that generalizes Marchenko–Pastur, with an analytic upper edge that selects the lag at which DA is read off. Both readouts use only samples and a score function, scaling to high dimensions through pretrained score-based generative models via Tweedie’s identity. We apply our framework to three settings: (i) synthetic Gaussian mixtures, where SSA tracks mutual information; (ii) SDXL text-to-image generations, where SSA and DA capture structure that entropy and PCA miss; and (iii) molecular dynamics of alanine dipeptide, where DA recovers the known slow backbone dihedrals from static samples alone.</p>
+
+<p><a href="https://arxiv.org/abs/2605.08777">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

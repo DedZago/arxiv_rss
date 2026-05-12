@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Supervised Dimensionality Reduction Revisited: Why LDA on Frozen CNN Features Deserves a Second Look</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Supervised Dimensionality Reduction Revisited: Why LDA on Frozen CNN Features Deserves a Second Look" />
+<meta name="author" content="Indar Kumar, Girish Karhana, Sai Krishna Jasti, Ankit Hemant Lade" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Frozen pretrained image representations are widely used for transfer learning: a backbone is kept fixed, feature vectors are extracted, and a lightweight classifier is trained on top. This pipeline usually feeds the full feature vector to the classifier, even when the target task has far fewer classes than the pretraining task. We revisit a classical alternative: supervised dimensionality reduction with Linear Discriminant Analysis (LDA) before linear probing. We evaluate ten dimensionality-reduction strategies on frozen features from six backbones – ResNet-18, ResNet-50, MobileNetV3-Small, EfficientNet-B0, ViT-B/16, and DINOv2-ViT-S/14 – across CIFAR-100, Tiny ImageNet, and CUB-200-2011. Under a fixed logistic-regression protocol, LDA improves accuracy over full features in 11 of 12 coarse-grained configurations, with gains up to 4.5 percentage points while reducing feature dimensionality by 48-87%. The same projection consistently hurts on fine-grained CUB-200, where full features win across all six backbones. This establishes a practical boundary condition: LDA is useful when class-level structure is coarse enough to be captured by mean-separating directions, but it can discard subtle cues needed for fine-grained recognition. We also compare LDA with PCA, PCA+LDA, regularized LDA, Local Fisher Discriminant Analysis, Neighbourhood Components Analysis, and three lightweight LDA extensions. The results show that plain LDA offers the best accuracy-cost tradeoff for most coarse-grained settings, while more complex supervised reduction methods rarely justify their additional cost. Overall, the study provides concrete guidance for when post-hoc supervised projection should, and should not, be inserted into frozen-feature image classification pipelines." />
+<meta property="og:description" content="Frozen pretrained image representations are widely used for transfer learning: a backbone is kept fixed, feature vectors are extracted, and a lightweight classifier is trained on top. This pipeline usually feeds the full feature vector to the classifier, even when the target task has far fewer classes than the pretraining task. We revisit a classical alternative: supervised dimensionality reduction with Linear Discriminant Analysis (LDA) before linear probing. We evaluate ten dimensionality-reduction strategies on frozen features from six backbones – ResNet-18, ResNet-50, MobileNetV3-Small, EfficientNet-B0, ViT-B/16, and DINOv2-ViT-S/14 – across CIFAR-100, Tiny ImageNet, and CUB-200-2011. Under a fixed logistic-regression protocol, LDA improves accuracy over full features in 11 of 12 coarse-grained configurations, with gains up to 4.5 percentage points while reducing feature dimensionality by 48-87%. The same projection consistently hurts on fine-grained CUB-200, where full features win across all six backbones. This establishes a practical boundary condition: LDA is useful when class-level structure is coarse enough to be captured by mean-separating directions, but it can discard subtle cues needed for fine-grained recognition. We also compare LDA with PCA, PCA+LDA, regularized LDA, Local Fisher Discriminant Analysis, Neighbourhood Components Analysis, and three lightweight LDA extensions. The results show that plain LDA offers the best accuracy-cost tradeoff for most coarse-grained settings, while more complex supervised reduction methods rarely justify their additional cost. Overall, the study provides concrete guidance for when post-hoc supervised projection should, and should not, be inserted into frozen-feature image classification pipelines." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/SupervisedDimensionalityReductionRevisitedWhyLDAonFrozenCNNFeaturesDeservesaSecondLook.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/SupervisedDimensionalityReductionRevisitedWhyLDAonFrozenCNNFeaturesDeservesaSecondLook.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Supervised Dimensionality Reduction Revisited: Why LDA on Frozen CNN Features Deserves a Second Look" />
+<script type="application/ld+json">
+{"description":"Frozen pretrained image representations are widely used for transfer learning: a backbone is kept fixed, feature vectors are extracted, and a lightweight classifier is trained on top. This pipeline usually feeds the full feature vector to the classifier, even when the target task has far fewer classes than the pretraining task. We revisit a classical alternative: supervised dimensionality reduction with Linear Discriminant Analysis (LDA) before linear probing. We evaluate ten dimensionality-reduction strategies on frozen features from six backbones – ResNet-18, ResNet-50, MobileNetV3-Small, EfficientNet-B0, ViT-B/16, and DINOv2-ViT-S/14 – across CIFAR-100, Tiny ImageNet, and CUB-200-2011. Under a fixed logistic-regression protocol, LDA improves accuracy over full features in 11 of 12 coarse-grained configurations, with gains up to 4.5 percentage points while reducing feature dimensionality by 48-87%. The same projection consistently hurts on fine-grained CUB-200, where full features win across all six backbones. This establishes a practical boundary condition: LDA is useful when class-level structure is coarse enough to be captured by mean-separating directions, but it can discard subtle cues needed for fine-grained recognition. We also compare LDA with PCA, PCA+LDA, regularized LDA, Local Fisher Discriminant Analysis, Neighbourhood Components Analysis, and three lightweight LDA extensions. The results show that plain LDA offers the best accuracy-cost tradeoff for most coarse-grained settings, while more complex supervised reduction methods rarely justify their additional cost. Overall, the study provides concrete guidance for when post-hoc supervised projection should, and should not, be inserted into frozen-feature image classification pipelines.","author":{"@type":"Person","name":"Indar Kumar, Girish Karhana, Sai Krishna Jasti, Ankit Hemant Lade"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/SupervisedDimensionalityReductionRevisitedWhyLDAonFrozenCNNFeaturesDeservesaSecondLook.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/SupervisedDimensionalityReductionRevisitedWhyLDAonFrozenCNNFeaturesDeservesaSecondLook.html","headline":"Supervised Dimensionality Reduction Revisited: Why LDA on Frozen CNN Features Deserves a Second Look","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Supervised Dimensionality Reduction Revisited: Why LDA on Frozen CNN Features Deserves a Second Look</h1>
+  <br>Indar Kumar, Girish Karhana, Sai Krishna Jasti, Ankit Hemant Lade</h3>
+  <br> [stat.ML]
+
+  <p>Frozen pretrained image representations are widely used for transfer learning: a backbone is kept fixed, feature vectors are extracted, and a lightweight classifier is trained on top. This pipeline usually feeds the full feature vector to the classifier, even when the target task has far fewer classes than the pretraining task. We revisit a classical alternative: supervised dimensionality reduction with Linear Discriminant Analysis (LDA) before linear probing.
+  We evaluate ten dimensionality-reduction strategies on frozen features from six backbones – ResNet-18, ResNet-50, MobileNetV3-Small, EfficientNet-B0, ViT-B/16, and DINOv2-ViT-S/14 – across CIFAR-100, Tiny ImageNet, and CUB-200-2011. Under a fixed logistic-regression protocol, LDA improves accuracy over full features in 11 of 12 coarse-grained configurations, with gains up to 4.5 percentage points while reducing feature dimensionality by 48-87%. The same projection consistently hurts on fine-grained CUB-200, where full features win across all six backbones. This establishes a practical boundary condition: LDA is useful when class-level structure is coarse enough to be captured by mean-separating directions, but it can discard subtle cues needed for fine-grained recognition.
+  We also compare LDA with PCA, PCA+LDA, regularized LDA, Local Fisher Discriminant Analysis, Neighbourhood Components Analysis, and three lightweight LDA extensions. The results show that plain LDA offers the best accuracy-cost tradeoff for most coarse-grained settings, while more complex supervised reduction methods rarely justify their additional cost. Overall, the study provides concrete guidance for when post-hoc supervised projection should, and should not, be inserted into frozen-feature image classification pipelines.</p>
+
+<p><a href="https://arxiv.org/abs/2604.03928">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

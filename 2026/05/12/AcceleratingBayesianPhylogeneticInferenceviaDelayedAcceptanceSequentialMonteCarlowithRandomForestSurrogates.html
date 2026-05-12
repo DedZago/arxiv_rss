@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Accelerating Bayesian Phylogenetic Inference via Delayed Acceptance Sequential Monte Carlo with Random Forest Surrogates</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Accelerating Bayesian Phylogenetic Inference via Delayed Acceptance Sequential Monte Carlo with Random Forest Surrogates" />
+<meta name="author" content="Wentao Yu, Shijia Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In Bayesian phylogenetics, our goal is to estimate the posterior distribution over phylogenetic trees. Markov chain Monte Carlo methods are widely used to approximate the phylogenetic posterior distributions. For large-scale sequence data, repeated evaluation of the likelihood function incurs a high computational cost. In this article, we propose a machine-learning algorithm with over 35 topological and branch-length features to predict the changes in the likelihood function caused by tree moves (\eg,~eSPR, stNNI) used in standard MCMC approaches. This algorithm is then used to design a delayed acceptance MCMC kernel, which utilized the predicted surrogate function for preliminary rejection, to accelerate tree space searches. Furthermore, we integrate our proposed MCMC kernel into the sequential Monte Carlo sampler framework. We validate the proposed delayed-acceptance sequential Monte Carlo approach (DA-SMC) on simulation and real data sets. Our delayed acceptance kernel can maintain robust estimation while reduces the number of likelihood evaluations significantly, yielding substantial computational time savings. We develop a Python package that is available at https://github.com/wentYu/DAphyloSMC." />
+<meta property="og:description" content="In Bayesian phylogenetics, our goal is to estimate the posterior distribution over phylogenetic trees. Markov chain Monte Carlo methods are widely used to approximate the phylogenetic posterior distributions. For large-scale sequence data, repeated evaluation of the likelihood function incurs a high computational cost. In this article, we propose a machine-learning algorithm with over 35 topological and branch-length features to predict the changes in the likelihood function caused by tree moves (\eg,~eSPR, stNNI) used in standard MCMC approaches. This algorithm is then used to design a delayed acceptance MCMC kernel, which utilized the predicted surrogate function for preliminary rejection, to accelerate tree space searches. Furthermore, we integrate our proposed MCMC kernel into the sequential Monte Carlo sampler framework. We validate the proposed delayed-acceptance sequential Monte Carlo approach (DA-SMC) on simulation and real data sets. Our delayed acceptance kernel can maintain robust estimation while reduces the number of likelihood evaluations significantly, yielding substantial computational time savings. We develop a Python package that is available at https://github.com/wentYu/DAphyloSMC." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/AcceleratingBayesianPhylogeneticInferenceviaDelayedAcceptanceSequentialMonteCarlowithRandomForestSurrogates.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/AcceleratingBayesianPhylogeneticInferenceviaDelayedAcceptanceSequentialMonteCarlowithRandomForestSurrogates.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Accelerating Bayesian Phylogenetic Inference via Delayed Acceptance Sequential Monte Carlo with Random Forest Surrogates" />
+<script type="application/ld+json">
+{"description":"In Bayesian phylogenetics, our goal is to estimate the posterior distribution over phylogenetic trees. Markov chain Monte Carlo methods are widely used to approximate the phylogenetic posterior distributions. For large-scale sequence data, repeated evaluation of the likelihood function incurs a high computational cost. In this article, we propose a machine-learning algorithm with over 35 topological and branch-length features to predict the changes in the likelihood function caused by tree moves (\\eg,~eSPR, stNNI) used in standard MCMC approaches. This algorithm is then used to design a delayed acceptance MCMC kernel, which utilized the predicted surrogate function for preliminary rejection, to accelerate tree space searches. Furthermore, we integrate our proposed MCMC kernel into the sequential Monte Carlo sampler framework. We validate the proposed delayed-acceptance sequential Monte Carlo approach (DA-SMC) on simulation and real data sets. Our delayed acceptance kernel can maintain robust estimation while reduces the number of likelihood evaluations significantly, yielding substantial computational time savings. We develop a Python package that is available at https://github.com/wentYu/DAphyloSMC.","author":{"@type":"Person","name":"Wentao Yu, Shijia Wang"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/AcceleratingBayesianPhylogeneticInferenceviaDelayedAcceptanceSequentialMonteCarlowithRandomForestSurrogates.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/AcceleratingBayesianPhylogeneticInferenceviaDelayedAcceptanceSequentialMonteCarlowithRandomForestSurrogates.html","headline":"Accelerating Bayesian Phylogenetic Inference via Delayed Acceptance Sequential Monte Carlo with Random Forest Surrogates","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Accelerating Bayesian Phylogenetic Inference via Delayed Acceptance Sequential Monte Carlo with Random Forest Surrogates</h1>
+  <br>Wentao Yu, Shijia Wang</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>In Bayesian phylogenetics, our goal is to estimate the posterior distribution over phylogenetic trees. Markov chain Monte Carlo methods are widely used to approximate the phylogenetic posterior distributions. For large-scale sequence data, repeated evaluation of the likelihood function incurs a high computational cost. In this article, we propose a machine-learning algorithm with over 35 topological and branch-length features to predict the changes in the likelihood function caused by tree moves (\eg,~eSPR, stNNI) used in standard MCMC approaches. This algorithm is then used to design a delayed acceptance MCMC kernel, which utilized the predicted surrogate function for preliminary rejection, to accelerate tree space searches. Furthermore, we integrate our proposed MCMC kernel into the sequential Monte Carlo sampler framework. We validate the proposed delayed-acceptance sequential Monte Carlo approach (DA-SMC) on simulation and real data sets. Our delayed acceptance kernel can maintain robust estimation while reduces the number of likelihood evaluations significantly, yielding substantial computational time savings. We develop a Python package that is available at https://github.com/wentYu/DAphyloSMC.</p>
+
+<p><a href="https://arxiv.org/abs/2605.09506">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

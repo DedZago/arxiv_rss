@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>gemlib.mcmc: composable kernels for Metropolis-within-Gibbs sampling schemes</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="gemlib.mcmc: composable kernels for Metropolis-within-Gibbs sampling schemes" />
+<meta name="author" content="Alin Morariu, Jess Bridgen, Chris Jewell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="State-transition models are essential across epidemiology and ecology, but statistical inference remains challenging owing to high-dimensional latent state spaces, temporal dependence, and intractable likelihood functions. Bayesian inference via Markov Chain Monte Carlo (MCMC) enables joint estimation of model parameters and missing event times through data augmentation, but Metropolis-within-Gibbs (MWG) schemes that combine multiple specialised kernels are notoriously difficult to implement. Current probabilistic programming frameworks face a trade-off: automation sacrifices extensibility, whilst flexibility demands substantial implementation overhead. This divide has created a software landscape characterised by tightly coupled, model-specific implementations that resist reuse and extension. We introduce gemlib.mcmc, an MCMC module designed to bridge methodological and applied communities through principled, composable kernel abstractions. The framework employs writer monads from category theory to formalise kernel composition, enabling seamless integration of parameter-estimation and data-augmentation kernels without manual state management. Built on JAX and TensorFlow Probability for high-performance computation, gemlib.mcmc provides an ergonomic interface – leveraging Python’s right-shift operator for intuitive kernel chaining – whilst maintaining statistical rigour and transparency. Developers can extend the library by implementing only two methods; composition and hardware acceleration are automated. We demonstrate the framework through parameter inference on partially observed epidemic models, showing how complex inference algorithms can be expressed concisely and reused across applications. By reducing implementation burden we provide access to sophisticated MCMC methods and enable applied researchers to employ state-of-the-art algorithms without reimplementation overhead." />
+<meta property="og:description" content="State-transition models are essential across epidemiology and ecology, but statistical inference remains challenging owing to high-dimensional latent state spaces, temporal dependence, and intractable likelihood functions. Bayesian inference via Markov Chain Monte Carlo (MCMC) enables joint estimation of model parameters and missing event times through data augmentation, but Metropolis-within-Gibbs (MWG) schemes that combine multiple specialised kernels are notoriously difficult to implement. Current probabilistic programming frameworks face a trade-off: automation sacrifices extensibility, whilst flexibility demands substantial implementation overhead. This divide has created a software landscape characterised by tightly coupled, model-specific implementations that resist reuse and extension. We introduce gemlib.mcmc, an MCMC module designed to bridge methodological and applied communities through principled, composable kernel abstractions. The framework employs writer monads from category theory to formalise kernel composition, enabling seamless integration of parameter-estimation and data-augmentation kernels without manual state management. Built on JAX and TensorFlow Probability for high-performance computation, gemlib.mcmc provides an ergonomic interface – leveraging Python’s right-shift operator for intuitive kernel chaining – whilst maintaining statistical rigour and transparency. Developers can extend the library by implementing only two methods; composition and hardware acceleration are automated. We demonstrate the framework through parameter inference on partially observed epidemic models, showing how complex inference algorithms can be expressed concisely and reused across applications. By reducing implementation burden we provide access to sophisticated MCMC methods and enable applied researchers to employ state-of-the-art algorithms without reimplementation overhead." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/gemlibmcmccomposablekernelsforMetropoliswithinGibbssamplingschemes.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/gemlibmcmccomposablekernelsforMetropoliswithinGibbssamplingschemes.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="gemlib.mcmc: composable kernels for Metropolis-within-Gibbs sampling schemes" />
+<script type="application/ld+json">
+{"description":"State-transition models are essential across epidemiology and ecology, but statistical inference remains challenging owing to high-dimensional latent state spaces, temporal dependence, and intractable likelihood functions. Bayesian inference via Markov Chain Monte Carlo (MCMC) enables joint estimation of model parameters and missing event times through data augmentation, but Metropolis-within-Gibbs (MWG) schemes that combine multiple specialised kernels are notoriously difficult to implement. Current probabilistic programming frameworks face a trade-off: automation sacrifices extensibility, whilst flexibility demands substantial implementation overhead. This divide has created a software landscape characterised by tightly coupled, model-specific implementations that resist reuse and extension. We introduce gemlib.mcmc, an MCMC module designed to bridge methodological and applied communities through principled, composable kernel abstractions. The framework employs writer monads from category theory to formalise kernel composition, enabling seamless integration of parameter-estimation and data-augmentation kernels without manual state management. Built on JAX and TensorFlow Probability for high-performance computation, gemlib.mcmc provides an ergonomic interface – leveraging Python’s right-shift operator for intuitive kernel chaining – whilst maintaining statistical rigour and transparency. Developers can extend the library by implementing only two methods; composition and hardware acceleration are automated. We demonstrate the framework through parameter inference on partially observed epidemic models, showing how complex inference algorithms can be expressed concisely and reused across applications. By reducing implementation burden we provide access to sophisticated MCMC methods and enable applied researchers to employ state-of-the-art algorithms without reimplementation overhead.","author":{"@type":"Person","name":"Alin Morariu, Jess Bridgen, Chris Jewell"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/gemlibmcmccomposablekernelsforMetropoliswithinGibbssamplingschemes.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/gemlibmcmccomposablekernelsforMetropoliswithinGibbssamplingschemes.html","headline":"gemlib.mcmc: composable kernels for Metropolis-within-Gibbs sampling schemes","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>gemlib.mcmc: composable kernels for Metropolis-within-Gibbs sampling schemes</h1>
+  <br>Alin Morariu, Jess Bridgen, Chris Jewell</h3>
+  <br> [stat.CO]
+
+  <p>State-transition models are essential across epidemiology and ecology, but statistical inference remains challenging owing to high-dimensional latent state spaces, temporal dependence, and intractable likelihood functions. Bayesian inference via Markov Chain Monte Carlo (MCMC) enables joint estimation of model parameters and missing event times through data augmentation, but Metropolis-within-Gibbs (MWG) schemes that combine multiple specialised kernels are notoriously difficult to implement. Current probabilistic programming frameworks face a trade-off: automation sacrifices extensibility, whilst flexibility demands substantial implementation overhead. This divide has created a software landscape characterised by tightly coupled, model-specific implementations that resist reuse and extension. We introduce gemlib.mcmc, an MCMC module designed to bridge methodological and applied communities through principled, composable kernel abstractions. The framework employs writer monads from category theory to formalise kernel composition, enabling seamless integration of parameter-estimation and data-augmentation kernels without manual state management. Built on JAX and TensorFlow Probability for high-performance computation, gemlib.mcmc provides an ergonomic interface – leveraging Python’s right-shift operator for intuitive kernel chaining – whilst maintaining statistical rigour and transparency. Developers can extend the library by implementing only two methods; composition and hardware acceleration are automated. We demonstrate the framework through parameter inference on partially observed epidemic models, showing how complex inference algorithms can be expressed concisely and reused across applications. By reducing implementation burden we provide access to sophisticated MCMC methods and enable applied researchers to employ state-of-the-art algorithms without reimplementation overhead.</p>
+
+<p><a href="https://arxiv.org/abs/2605.10914">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

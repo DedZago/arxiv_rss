@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Fast, Closed-Form Bandwidth Selector for the Beta Kernel Density Estimator</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Fast, Closed-Form Bandwidth Selector for the Beta Kernel Density Estimator" />
+<meta name="author" content="Johan Hallberg Szabadváry" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Beta kernel estimator offers a theoretically superior alternative to the Gaussian kernel for unit interval data, eliminating boundary bias without requiring reflection or transformation. However, its adoption remains limited by the lack of a reliable bandwidth selector; practitioners currently rely on iterative optimization methods that are computationally expensive and prone to instability. We derive the Beta Reference Rule,&#39;&#39; a fast, closed-form bandwidth selector based on the unweighted Asymptotic Mean Integrated Squared Error (AMISE) of a beta reference distribution. To address boundary integrability issues, we introduce a principled heuristic for U-shaped and J-shaped distributions. By employing a method-of-moments approximation, we reduce the bandwidth selection complexity from iterative optimization to $\mathcal{O}(1)$. Extensive Monte Carlo simulations demonstrate that our rule matches the accuracy of numerical optimization while delivering a speedup of over 35,000 times. Real-world validation on socioeconomic data shows that it avoids thevanishing boundary’’ and ``shoulder’’ artifacts common to Gaussian-based methods. We provide a comprehensive, open-source Python package to facilitate the immediate adoption of the Beta kernel as a drop-in replacement for standard density estimation tools." />
+<meta property="og:description" content="The Beta kernel estimator offers a theoretically superior alternative to the Gaussian kernel for unit interval data, eliminating boundary bias without requiring reflection or transformation. However, its adoption remains limited by the lack of a reliable bandwidth selector; practitioners currently rely on iterative optimization methods that are computationally expensive and prone to instability. We derive the Beta Reference Rule,&#39;&#39; a fast, closed-form bandwidth selector based on the unweighted Asymptotic Mean Integrated Squared Error (AMISE) of a beta reference distribution. To address boundary integrability issues, we introduce a principled heuristic for U-shaped and J-shaped distributions. By employing a method-of-moments approximation, we reduce the bandwidth selection complexity from iterative optimization to $\mathcal{O}(1)$. Extensive Monte Carlo simulations demonstrate that our rule matches the accuracy of numerical optimization while delivering a speedup of over 35,000 times. Real-world validation on socioeconomic data shows that it avoids thevanishing boundary’’ and ``shoulder’’ artifacts common to Gaussian-based methods. We provide a comprehensive, open-source Python package to facilitate the immediate adoption of the Beta kernel as a drop-in replacement for standard density estimation tools." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/AFastClosedFormBandwidthSelectorfortheBetaKernelDensityEstimator.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/AFastClosedFormBandwidthSelectorfortheBetaKernelDensityEstimator.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Fast, Closed-Form Bandwidth Selector for the Beta Kernel Density Estimator" />
+<script type="application/ld+json">
+{"description":"The Beta kernel estimator offers a theoretically superior alternative to the Gaussian kernel for unit interval data, eliminating boundary bias without requiring reflection or transformation. However, its adoption remains limited by the lack of a reliable bandwidth selector; practitioners currently rely on iterative optimization methods that are computationally expensive and prone to instability. We derive the Beta Reference Rule,&#39;&#39; a fast, closed-form bandwidth selector based on the unweighted Asymptotic Mean Integrated Squared Error (AMISE) of a beta reference distribution. To address boundary integrability issues, we introduce a principled heuristic for U-shaped and J-shaped distributions. By employing a method-of-moments approximation, we reduce the bandwidth selection complexity from iterative optimization to $\\mathcal{O}(1)$. Extensive Monte Carlo simulations demonstrate that our rule matches the accuracy of numerical optimization while delivering a speedup of over 35,000 times. Real-world validation on socioeconomic data shows that it avoids thevanishing boundary’’ and ``shoulder’’ artifacts common to Gaussian-based methods. We provide a comprehensive, open-source Python package to facilitate the immediate adoption of the Beta kernel as a drop-in replacement for standard density estimation tools.","author":{"@type":"Person","name":"Johan Hallberg Szabadváry"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/AFastClosedFormBandwidthSelectorfortheBetaKernelDensityEstimator.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/AFastClosedFormBandwidthSelectorfortheBetaKernelDensityEstimator.html","headline":"A Fast, Closed-Form Bandwidth Selector for the Beta Kernel Density Estimator","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>A Fast, Closed-Form Bandwidth Selector for the Beta Kernel Density Estimator</h1>
+  <br>Johan Hallberg Szabadváry</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>The Beta kernel estimator offers a theoretically superior alternative to the Gaussian kernel for unit interval data, eliminating boundary bias without requiring reflection or transformation. However, its adoption remains limited by the lack of a reliable bandwidth selector; practitioners currently rely on iterative optimization methods that are computationally expensive and prone to instability. We derive the <code class="language-plaintext highlighter-rouge">Beta Reference Rule,'' a fast, closed-form bandwidth selector based on the unweighted Asymptotic Mean Integrated Squared Error (AMISE) of a beta reference distribution. To address boundary integrability issues, we introduce a principled heuristic for U-shaped and J-shaped distributions. By employing a method-of-moments approximation, we reduce the bandwidth selection complexity from iterative optimization to $\mathcal{O}(1)$. Extensive Monte Carlo simulations demonstrate that our rule matches the accuracy of numerical optimization while delivering a speedup of over 35,000 times. Real-world validation on socioeconomic data shows that it avoids the</code>vanishing boundary’’ and ``shoulder’’ artifacts common to Gaussian-based methods. We provide a comprehensive, open-source Python package to facilitate the immediate adoption of the Beta kernel as a drop-in replacement for standard density estimation tools.</p>
+
+<p><a href="https://arxiv.org/abs/2601.19553">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

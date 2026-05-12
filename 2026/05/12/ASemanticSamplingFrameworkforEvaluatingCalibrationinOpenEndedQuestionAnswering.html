@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Semantic-Sampling Framework for Evaluating Calibration in Open-Ended Question Answering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Semantic-Sampling Framework for Evaluating Calibration in Open-Ended Question Answering" />
+<meta name="author" content="Zhanliang Wang, Jiancong Xiao, Ruochen Jin, Shu Yang, Bojian Hou, Li Shen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Calibration measures whether a model’s predicted confidence aligns with its empirical accuracy, and is central to the reliable deployment of large language models (LLMs) in high-stakes domains such as medicine and law. While much recent work focuses on improving LLM calibration, the equally important question of how to evaluate it in realistic settings remains underdeveloped. Open-ended question answering (QA), the most common deployment setting for modern LLMs, is where existing evaluation methods fall short: logit-based metrics need restricted output formats and internal probabilities; verbalized confidence is self-reported and often overconfident; and sampling-based methods rely on task-specific extraction rules without a clear finite-sample target. We introduce Sem-ECE (Semantic-Sampling Expected Calibration Error), a calibration evaluation framework for open-ended QA that samples answers from the model, groups them into semantic classes, and uses the resulting frequencies as confidence. We study two estimators within this framework: Sem$_1$-ECE, the same-sample self-consistency score, and Sem$_2$-ECE, a held-out variant that separates answer selection from confidence evaluation. We prove both are asymptotically unbiased, and further show that they agree on easy questions but diverge on hard ones with Sem$_2$ achieving strictly smaller calibration error, so their gap also serves as a diagnostic for question difficulty. Experiments on three open-ended QA benchmarks across five leading commercial LLMs match our theoretical predictions and show that Sem-ECE outperforms verbalized confidence and existing sampling-based methods, while complementing logit-based evaluation when internal probabilities are unavailable." />
+<meta property="og:description" content="Calibration measures whether a model’s predicted confidence aligns with its empirical accuracy, and is central to the reliable deployment of large language models (LLMs) in high-stakes domains such as medicine and law. While much recent work focuses on improving LLM calibration, the equally important question of how to evaluate it in realistic settings remains underdeveloped. Open-ended question answering (QA), the most common deployment setting for modern LLMs, is where existing evaluation methods fall short: logit-based metrics need restricted output formats and internal probabilities; verbalized confidence is self-reported and often overconfident; and sampling-based methods rely on task-specific extraction rules without a clear finite-sample target. We introduce Sem-ECE (Semantic-Sampling Expected Calibration Error), a calibration evaluation framework for open-ended QA that samples answers from the model, groups them into semantic classes, and uses the resulting frequencies as confidence. We study two estimators within this framework: Sem$_1$-ECE, the same-sample self-consistency score, and Sem$_2$-ECE, a held-out variant that separates answer selection from confidence evaluation. We prove both are asymptotically unbiased, and further show that they agree on easy questions but diverge on hard ones with Sem$_2$ achieving strictly smaller calibration error, so their gap also serves as a diagnostic for question difficulty. Experiments on three open-ended QA benchmarks across five leading commercial LLMs match our theoretical predictions and show that Sem-ECE outperforms verbalized confidence and existing sampling-based methods, while complementing logit-based evaluation when internal probabilities are unavailable." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/ASemanticSamplingFrameworkforEvaluatingCalibrationinOpenEndedQuestionAnswering.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/ASemanticSamplingFrameworkforEvaluatingCalibrationinOpenEndedQuestionAnswering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Semantic-Sampling Framework for Evaluating Calibration in Open-Ended Question Answering" />
+<script type="application/ld+json">
+{"description":"Calibration measures whether a model’s predicted confidence aligns with its empirical accuracy, and is central to the reliable deployment of large language models (LLMs) in high-stakes domains such as medicine and law. While much recent work focuses on improving LLM calibration, the equally important question of how to evaluate it in realistic settings remains underdeveloped. Open-ended question answering (QA), the most common deployment setting for modern LLMs, is where existing evaluation methods fall short: logit-based metrics need restricted output formats and internal probabilities; verbalized confidence is self-reported and often overconfident; and sampling-based methods rely on task-specific extraction rules without a clear finite-sample target. We introduce Sem-ECE (Semantic-Sampling Expected Calibration Error), a calibration evaluation framework for open-ended QA that samples answers from the model, groups them into semantic classes, and uses the resulting frequencies as confidence. We study two estimators within this framework: Sem$_1$-ECE, the same-sample self-consistency score, and Sem$_2$-ECE, a held-out variant that separates answer selection from confidence evaluation. We prove both are asymptotically unbiased, and further show that they agree on easy questions but diverge on hard ones with Sem$_2$ achieving strictly smaller calibration error, so their gap also serves as a diagnostic for question difficulty. Experiments on three open-ended QA benchmarks across five leading commercial LLMs match our theoretical predictions and show that Sem-ECE outperforms verbalized confidence and existing sampling-based methods, while complementing logit-based evaluation when internal probabilities are unavailable.","author":{"@type":"Person","name":"Zhanliang Wang, Jiancong Xiao, Ruochen Jin, Shu Yang, Bojian Hou, Li Shen"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/ASemanticSamplingFrameworkforEvaluatingCalibrationinOpenEndedQuestionAnswering.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/ASemanticSamplingFrameworkforEvaluatingCalibrationinOpenEndedQuestionAnswering.html","headline":"A Semantic-Sampling Framework for Evaluating Calibration in Open-Ended Question Answering","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>A Semantic-Sampling Framework for Evaluating Calibration in Open-Ended Question Answering</h1>
+  <br>Zhanliang Wang, Jiancong Xiao, Ruochen Jin, Shu Yang, Bojian Hou, Li Shen</h3>
+  <br> [stat.ML]
+
+  <p>Calibration measures whether a model’s predicted confidence aligns with its empirical accuracy, and is central to the reliable deployment of large language models (LLMs) in high-stakes domains such as medicine and law. While much recent work focuses on improving LLM calibration, the equally important question of how to evaluate it in realistic settings remains underdeveloped. Open-ended question answering (QA), the most common deployment setting for modern LLMs, is where existing evaluation methods fall short: logit-based metrics need restricted output formats and internal probabilities; verbalized confidence is self-reported and often overconfident; and sampling-based methods rely on task-specific extraction rules without a clear finite-sample target. We introduce Sem-ECE (Semantic-Sampling Expected Calibration Error), a calibration evaluation framework for open-ended QA that samples answers from the model, groups them into semantic classes, and uses the resulting frequencies as confidence. We study two estimators within this framework: Sem$_1$-ECE, the same-sample self-consistency score, and Sem$_2$-ECE, a held-out variant that separates answer selection from confidence evaluation. We prove both are asymptotically unbiased, and further show that they agree on easy questions but diverge on hard ones with Sem$_2$ achieving strictly smaller calibration error, so their gap also serves as a diagnostic for question difficulty. Experiments on three open-ended QA benchmarks across five leading commercial LLMs match our theoretical predictions and show that Sem-ECE outperforms verbalized confidence and existing sampling-based methods, while complementing logit-based evaluation when internal probabilities are unavailable.</p>
+
+<p><a href="https://arxiv.org/abs/2605.08432">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

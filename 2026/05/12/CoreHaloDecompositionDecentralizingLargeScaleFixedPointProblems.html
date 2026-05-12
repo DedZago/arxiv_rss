@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems" />
+<meta name="author" content="Haixiang, Yang Xu, Jiefu Zhang, Xudong Wu, Zihan Zhou, Jun He, Jiayu Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study solving large-scale fixed-point equation (x^\star=\bar F(x^\star)) with decomposition. Standard strict decomposition assigns each agent a disjoint block and evaluates updates using only owned coordinates. For most operators, however, a block update may depend on variables outside the block. Truncating these dependencies by strict decomposition changes the mean operator and creates structural bias that cannot be removed by more samples, smaller stepsizes, or additional consensus. We therefore propose Core-Halo decomposition, which separates write ownership from read-only evaluation context: each agent updates its own core and reads from an overlapping halo. By aligning the Core-Halo decomposition with the block-dependence structure of $\bar F$, the original fixed-point problem can be implemented faithfully in a decentralized multi-agent system. We further characterize the fundamental obstruction faced by strict decomposition through a Bellman closure condition and a blockwise bias lower bound, showing that local-only updates can alter the original fixed-point operator. Finally, we conduct extensive experiments across a range of application settings, and demonstrate that Core-Halo achieves near-centralized performance while retaining the parallelism benefits of decentralization." />
+<meta property="og:description" content="We study solving large-scale fixed-point equation (x^\star=\bar F(x^\star)) with decomposition. Standard strict decomposition assigns each agent a disjoint block and evaluates updates using only owned coordinates. For most operators, however, a block update may depend on variables outside the block. Truncating these dependencies by strict decomposition changes the mean operator and creates structural bias that cannot be removed by more samples, smaller stepsizes, or additional consensus. We therefore propose Core-Halo decomposition, which separates write ownership from read-only evaluation context: each agent updates its own core and reads from an overlapping halo. By aligning the Core-Halo decomposition with the block-dependence structure of $\bar F$, the original fixed-point problem can be implemented faithfully in a decentralized multi-agent system. We further characterize the fundamental obstruction faced by strict decomposition through a Bellman closure condition and a blockwise bias lower bound, showing that local-only updates can alter the original fixed-point operator. Finally, we conduct extensive experiments across a range of application settings, and demonstrate that Core-Halo achieves near-centralized performance while retaining the parallelism benefits of decentralization." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/CoreHaloDecompositionDecentralizingLargeScaleFixedPointProblems.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/CoreHaloDecompositionDecentralizingLargeScaleFixedPointProblems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems" />
+<script type="application/ld+json">
+{"description":"We study solving large-scale fixed-point equation (x^\\star=\\bar F(x^\\star)) with decomposition. Standard strict decomposition assigns each agent a disjoint block and evaluates updates using only owned coordinates. For most operators, however, a block update may depend on variables outside the block. Truncating these dependencies by strict decomposition changes the mean operator and creates structural bias that cannot be removed by more samples, smaller stepsizes, or additional consensus. We therefore propose Core-Halo decomposition, which separates write ownership from read-only evaluation context: each agent updates its own core and reads from an overlapping halo. By aligning the Core-Halo decomposition with the block-dependence structure of $\\bar F$, the original fixed-point problem can be implemented faithfully in a decentralized multi-agent system. We further characterize the fundamental obstruction faced by strict decomposition through a Bellman closure condition and a blockwise bias lower bound, showing that local-only updates can alter the original fixed-point operator. Finally, we conduct extensive experiments across a range of application settings, and demonstrate that Core-Halo achieves near-centralized performance while retaining the parallelism benefits of decentralization.","author":{"@type":"Person","name":"Haixiang, Yang Xu, Jiefu Zhang, Xudong Wu, Zihan Zhou, Jun He, Jiayu Chen"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/CoreHaloDecompositionDecentralizingLargeScaleFixedPointProblems.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/CoreHaloDecompositionDecentralizingLargeScaleFixedPointProblems.html","headline":"Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems</h1>
+  <br>Haixiang, Yang Xu, Jiefu Zhang, Xudong Wu, Zihan Zhou, Jun He, Jiayu Chen</h3>
+  <br> [stat.ML]
+
+  <p>We study solving large-scale fixed-point equation (x^\star=\bar F(x^\star)) with decomposition. Standard strict decomposition assigns each agent a disjoint block and evaluates updates using only owned coordinates. For most operators, however, a block update may depend on variables outside the block. Truncating these dependencies by strict decomposition changes the mean operator and creates structural bias that cannot be removed by more samples, smaller stepsizes, or additional consensus. We therefore propose Core-Halo decomposition, which separates write ownership from read-only evaluation context: each agent updates its own core and reads from an overlapping halo. By aligning the Core-Halo decomposition with the block-dependence structure of $\bar F$, the original fixed-point problem can be implemented faithfully in a decentralized multi-agent system. We further characterize the fundamental obstruction faced by strict decomposition through a Bellman closure condition and a blockwise bias lower bound, showing that local-only updates can alter the original fixed-point operator. Finally, we conduct extensive experiments across a range of application settings, and demonstrate that Core-Halo achieves near-centralized performance while retaining the parallelism benefits of decentralization.</p>
+
+<p><a href="https://arxiv.org/abs/2605.08681">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

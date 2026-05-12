@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond Accuracy: Evaluating Posterior Fidelity of Diffusion Inverse Solvers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Beyond Accuracy: Evaluating Posterior Fidelity of Diffusion Inverse Solvers" />
+<meta name="author" content="Xiaoyu Qiu, Taewon Yang, Zhanhao Liu, Guanyang Wang, Liyue Shen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Uncertainty evaluation is critical in scientific and engineering inverse problems. However, existing benchmarks on Diffusion Inverse Solvers (DIS) primarily focus on reconstruction accuracy but overlook uncertainty and distributional behavior. Since stochastic inverse solvers represent uncertainty through diffusion-based posterior samples, evaluating how well their generated samples capture the target posterior distribution becomes an important aspect of uncertainty quantification. To address this limitation and better understand the distributional behavior of diffusion samplers, we conduct a systematic study to investigate the posterior fidelity of a broad range of existing DIS methods in controlled simulation settings with a known analytical true posterior. Furthermore, to enable posterior-aware evaluation on real-world inverse problems where ground-truth posterior is unavailable, we propose score-based Kernel Stein Discrepancy (score-KSD), a theoretically-grounded and ground-truth-free metric that measures the consistency of the distribution of generated samples from a DIS method with the target posterior score field, induced by the forward model and learned diffusion prior. Through both simulation experiments and real-world inverse problem solving, we validate the effectiveness of the proposed score-KSD and demonstrate that it provides meaningful posterior fidelity diagnostics beyond reconstruction accuracy, revealing that higher reconstruction accuracy does not necessarily imply better posterior consistency." />
+<meta property="og:description" content="Uncertainty evaluation is critical in scientific and engineering inverse problems. However, existing benchmarks on Diffusion Inverse Solvers (DIS) primarily focus on reconstruction accuracy but overlook uncertainty and distributional behavior. Since stochastic inverse solvers represent uncertainty through diffusion-based posterior samples, evaluating how well their generated samples capture the target posterior distribution becomes an important aspect of uncertainty quantification. To address this limitation and better understand the distributional behavior of diffusion samplers, we conduct a systematic study to investigate the posterior fidelity of a broad range of existing DIS methods in controlled simulation settings with a known analytical true posterior. Furthermore, to enable posterior-aware evaluation on real-world inverse problems where ground-truth posterior is unavailable, we propose score-based Kernel Stein Discrepancy (score-KSD), a theoretically-grounded and ground-truth-free metric that measures the consistency of the distribution of generated samples from a DIS method with the target posterior score field, induced by the forward model and learned diffusion prior. Through both simulation experiments and real-world inverse problem solving, we validate the effectiveness of the proposed score-KSD and demonstrate that it provides meaningful posterior fidelity diagnostics beyond reconstruction accuracy, revealing that higher reconstruction accuracy does not necessarily imply better posterior consistency." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/BeyondAccuracyEvaluatingPosteriorFidelityofDiffusionInverseSolvers.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/BeyondAccuracyEvaluatingPosteriorFidelityofDiffusionInverseSolvers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond Accuracy: Evaluating Posterior Fidelity of Diffusion Inverse Solvers" />
+<script type="application/ld+json">
+{"description":"Uncertainty evaluation is critical in scientific and engineering inverse problems. However, existing benchmarks on Diffusion Inverse Solvers (DIS) primarily focus on reconstruction accuracy but overlook uncertainty and distributional behavior. Since stochastic inverse solvers represent uncertainty through diffusion-based posterior samples, evaluating how well their generated samples capture the target posterior distribution becomes an important aspect of uncertainty quantification. To address this limitation and better understand the distributional behavior of diffusion samplers, we conduct a systematic study to investigate the posterior fidelity of a broad range of existing DIS methods in controlled simulation settings with a known analytical true posterior. Furthermore, to enable posterior-aware evaluation on real-world inverse problems where ground-truth posterior is unavailable, we propose score-based Kernel Stein Discrepancy (score-KSD), a theoretically-grounded and ground-truth-free metric that measures the consistency of the distribution of generated samples from a DIS method with the target posterior score field, induced by the forward model and learned diffusion prior. Through both simulation experiments and real-world inverse problem solving, we validate the effectiveness of the proposed score-KSD and demonstrate that it provides meaningful posterior fidelity diagnostics beyond reconstruction accuracy, revealing that higher reconstruction accuracy does not necessarily imply better posterior consistency.","author":{"@type":"Person","name":"Xiaoyu Qiu, Taewon Yang, Zhanhao Liu, Guanyang Wang, Liyue Shen"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/BeyondAccuracyEvaluatingPosteriorFidelityofDiffusionInverseSolvers.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/BeyondAccuracyEvaluatingPosteriorFidelityofDiffusionInverseSolvers.html","headline":"Beyond Accuracy: Evaluating Posterior Fidelity of Diffusion Inverse Solvers","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Beyond Accuracy: Evaluating Posterior Fidelity of Diffusion Inverse Solvers</h1>
+  <br>Xiaoyu Qiu, Taewon Yang, Zhanhao Liu, Guanyang Wang, Liyue Shen</h3>
+  <br> [stat.CO]
+
+  <p>Uncertainty evaluation is critical in scientific and engineering inverse problems. However, existing benchmarks on Diffusion Inverse Solvers (DIS) primarily focus on reconstruction accuracy but overlook uncertainty and distributional behavior. Since stochastic inverse solvers represent uncertainty through diffusion-based posterior samples, evaluating how well their generated samples capture the target posterior distribution becomes an important aspect of uncertainty quantification. To address this limitation and better understand the distributional behavior of diffusion samplers, we conduct a systematic study to investigate the posterior fidelity of a broad range of existing DIS methods in controlled simulation settings with a known analytical true posterior. Furthermore, to enable posterior-aware evaluation on real-world inverse problems where ground-truth posterior is unavailable, we propose score-based Kernel Stein Discrepancy (score-KSD), a theoretically-grounded and ground-truth-free metric that measures the consistency of the distribution of generated samples from a DIS method with the target posterior score field, induced by the forward model and learned diffusion prior. Through both simulation experiments and real-world inverse problem solving, we validate the effectiveness of the proposed score-KSD and demonstrate that it provides meaningful posterior fidelity diagnostics beyond reconstruction accuracy, revealing that higher reconstruction accuracy does not necessarily imply better posterior consistency.</p>
+
+<p><a href="https://arxiv.org/abs/2602.04189">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

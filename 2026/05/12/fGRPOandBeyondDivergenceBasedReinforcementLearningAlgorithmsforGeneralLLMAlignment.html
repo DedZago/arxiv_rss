@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>f-GRPO and Beyond: Divergence-Based Reinforcement Learning Algorithms for General LLM Alignment</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="f-GRPO and Beyond: Divergence-Based Reinforcement Learning Algorithms for General LLM Alignment" />
+<meta name="author" content="Rajdeep Haldar, Lantao Mei, Guang Lin, Yue Xing, Qifan Song" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent work shows that preference alignment objectives can be interpreted as divergence estimators between aligned (preferred) &amp; unaligned (less-preferred) distributions, yielding a principled recipe for designing alignment losses. However, this view has so far been limited to preference-based supervision. We extend it to general LLM alignment, including reinforcement learning with verifiable rewards (RLVR), where alignment feedback is given only as scalar rewards. We introduce $f$-Group Relative Policy Optimization ($f$-GRPO), a class of on-policy RL objectives, and $f$-Hybrid Alignment Loss ($f$-HAL), which combines on-policy reward optimization with off-policy preference supervision. We show that these objectives estimate $f$-divergences between reward-aligned &amp; reward-unaligned distributions induced by above- &amp; below-average reward responses, and prove expected reward improvement after alignment. Empirically, $f$-GRPO improves over GRPO on math-reasoning RLVR tasks, while hybrid $f$-HAL mitigates reward hacking in on-policy safety alignment when verifiable rewards are unavailable and learned reward models must be used." />
+<meta property="og:description" content="Recent work shows that preference alignment objectives can be interpreted as divergence estimators between aligned (preferred) &amp; unaligned (less-preferred) distributions, yielding a principled recipe for designing alignment losses. However, this view has so far been limited to preference-based supervision. We extend it to general LLM alignment, including reinforcement learning with verifiable rewards (RLVR), where alignment feedback is given only as scalar rewards. We introduce $f$-Group Relative Policy Optimization ($f$-GRPO), a class of on-policy RL objectives, and $f$-Hybrid Alignment Loss ($f$-HAL), which combines on-policy reward optimization with off-policy preference supervision. We show that these objectives estimate $f$-divergences between reward-aligned &amp; reward-unaligned distributions induced by above- &amp; below-average reward responses, and prove expected reward improvement after alignment. Empirically, $f$-GRPO improves over GRPO on math-reasoning RLVR tasks, while hybrid $f$-HAL mitigates reward hacking in on-policy safety alignment when verifiable rewards are unavailable and learned reward models must be used." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/fGRPOandBeyondDivergenceBasedReinforcementLearningAlgorithmsforGeneralLLMAlignment.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/fGRPOandBeyondDivergenceBasedReinforcementLearningAlgorithmsforGeneralLLMAlignment.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="f-GRPO and Beyond: Divergence-Based Reinforcement Learning Algorithms for General LLM Alignment" />
+<script type="application/ld+json">
+{"description":"Recent work shows that preference alignment objectives can be interpreted as divergence estimators between aligned (preferred) &amp; unaligned (less-preferred) distributions, yielding a principled recipe for designing alignment losses. However, this view has so far been limited to preference-based supervision. We extend it to general LLM alignment, including reinforcement learning with verifiable rewards (RLVR), where alignment feedback is given only as scalar rewards. We introduce $f$-Group Relative Policy Optimization ($f$-GRPO), a class of on-policy RL objectives, and $f$-Hybrid Alignment Loss ($f$-HAL), which combines on-policy reward optimization with off-policy preference supervision. We show that these objectives estimate $f$-divergences between reward-aligned &amp; reward-unaligned distributions induced by above- &amp; below-average reward responses, and prove expected reward improvement after alignment. Empirically, $f$-GRPO improves over GRPO on math-reasoning RLVR tasks, while hybrid $f$-HAL mitigates reward hacking in on-policy safety alignment when verifiable rewards are unavailable and learned reward models must be used.","author":{"@type":"Person","name":"Rajdeep Haldar, Lantao Mei, Guang Lin, Yue Xing, Qifan Song"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/fGRPOandBeyondDivergenceBasedReinforcementLearningAlgorithmsforGeneralLLMAlignment.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/fGRPOandBeyondDivergenceBasedReinforcementLearningAlgorithmsforGeneralLLMAlignment.html","headline":"f-GRPO and Beyond: Divergence-Based Reinforcement Learning Algorithms for General LLM Alignment","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>f-GRPO and Beyond: Divergence-Based Reinforcement Learning Algorithms for General LLM Alignment</h1>
+  <br>Rajdeep Haldar, Lantao Mei, Guang Lin, Yue Xing, Qifan Song</h3>
+  <br> [stat.ML]
+
+  <p>Recent work shows that preference alignment objectives can be interpreted as divergence estimators between aligned (preferred) &amp; unaligned (less-preferred) distributions, yielding a principled recipe for designing alignment losses. However, this view has so far been limited to preference-based supervision. We extend it to general LLM alignment, including reinforcement learning with verifiable rewards (RLVR), where alignment feedback is given only as scalar rewards. We introduce $f$-Group Relative Policy Optimization ($f$-GRPO), a class of on-policy RL objectives, and $f$-Hybrid Alignment Loss ($f$-HAL), which combines on-policy reward optimization with off-policy preference supervision. We show that these objectives estimate $f$-divergences between reward-aligned &amp; reward-unaligned distributions induced by above- &amp; below-average reward responses, and prove expected reward improvement after alignment. Empirically, $f$-GRPO improves over GRPO on math-reasoning RLVR tasks, while hybrid $f$-HAL mitigates reward hacking in on-policy safety alignment when verifiable rewards are unavailable and learned reward models must be used.</p>
+
+<p><a href="https://arxiv.org/abs/2602.05946">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

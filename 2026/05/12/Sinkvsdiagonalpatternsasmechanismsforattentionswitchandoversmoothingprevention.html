@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sink vs. diagonal patterns as mechanisms for attention switch and oversmoothing prevention</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sink vs. diagonal patterns as mechanisms for attention switch and oversmoothing prevention" />
+<meta name="author" content="Peter Súkeník, Cristina López Amado, Christoph H. Lampert, Marco Mondelli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper studies the role of sinks and diagonal patterns as attention switch and anti-oversmoothing mechanisms. We analyze geometric conditions under which sinks can be represented, showing a necessary alignment between the embedding of the sink and all other embeddings. Next, we refine the current understanding of the role of sinks in oversmoothing prevention: we specify the conditions under which dense attention provably smooths more than sparse attention, and empirically verify that such conditions are often satisfied in practice. We further prove an equivalence between sinks and hard attention switch, in which the output of the attention is identically 0. Finally, we relax the hard attention switch by allowing token self-communication: we provide a quantitative comparison of the costs of representing sinks vs.\ diagonal patterns, showing why sinks are favored in pretrained transformers. The introduction and analysis of diagonal patterns and the generalization of the attention switch close the gap between what oversmoothing prevention requires and what sinks provide, while also establishing when and why attention layers act like MLPs if token communication is not necessary." />
+<meta property="og:description" content="This paper studies the role of sinks and diagonal patterns as attention switch and anti-oversmoothing mechanisms. We analyze geometric conditions under which sinks can be represented, showing a necessary alignment between the embedding of the sink and all other embeddings. Next, we refine the current understanding of the role of sinks in oversmoothing prevention: we specify the conditions under which dense attention provably smooths more than sparse attention, and empirically verify that such conditions are often satisfied in practice. We further prove an equivalence between sinks and hard attention switch, in which the output of the attention is identically 0. Finally, we relax the hard attention switch by allowing token self-communication: we provide a quantitative comparison of the costs of representing sinks vs.\ diagonal patterns, showing why sinks are favored in pretrained transformers. The introduction and analysis of diagonal patterns and the generalization of the attention switch close the gap between what oversmoothing prevention requires and what sinks provide, while also establishing when and why attention layers act like MLPs if token communication is not necessary." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/Sinkvsdiagonalpatternsasmechanismsforattentionswitchandoversmoothingprevention.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/Sinkvsdiagonalpatternsasmechanismsforattentionswitchandoversmoothingprevention.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sink vs. diagonal patterns as mechanisms for attention switch and oversmoothing prevention" />
+<script type="application/ld+json">
+{"description":"This paper studies the role of sinks and diagonal patterns as attention switch and anti-oversmoothing mechanisms. We analyze geometric conditions under which sinks can be represented, showing a necessary alignment between the embedding of the sink and all other embeddings. Next, we refine the current understanding of the role of sinks in oversmoothing prevention: we specify the conditions under which dense attention provably smooths more than sparse attention, and empirically verify that such conditions are often satisfied in practice. We further prove an equivalence between sinks and hard attention switch, in which the output of the attention is identically 0. Finally, we relax the hard attention switch by allowing token self-communication: we provide a quantitative comparison of the costs of representing sinks vs.\\ diagonal patterns, showing why sinks are favored in pretrained transformers. The introduction and analysis of diagonal patterns and the generalization of the attention switch close the gap between what oversmoothing prevention requires and what sinks provide, while also establishing when and why attention layers act like MLPs if token communication is not necessary.","author":{"@type":"Person","name":"Peter Súkeník, Cristina López Amado, Christoph H. Lampert, Marco Mondelli"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/Sinkvsdiagonalpatternsasmechanismsforattentionswitchandoversmoothingprevention.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/Sinkvsdiagonalpatternsasmechanismsforattentionswitchandoversmoothingprevention.html","headline":"Sink vs. diagonal patterns as mechanisms for attention switch and oversmoothing prevention","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Sink vs. diagonal patterns as mechanisms for attention switch and oversmoothing prevention</h1>
+  <br>Peter Súkeník, Cristina López Amado, Christoph H. Lampert, Marco Mondelli</h3>
+  <br> [stat.ML]
+
+  <p>This paper studies the role of sinks and diagonal patterns as attention switch and anti-oversmoothing mechanisms. We analyze geometric conditions under which sinks can be represented, showing a necessary alignment between the embedding of the sink and all other embeddings. Next, we refine the current understanding of the role of sinks in oversmoothing prevention: we specify the conditions under which dense attention provably smooths more than sparse attention, and empirically verify that such conditions are often satisfied in practice. We further prove an equivalence between sinks and hard attention switch, in which the output of the attention is identically 0. Finally, we relax the hard attention switch by allowing token self-communication: we provide a quantitative comparison of the costs of representing sinks vs.\ diagonal patterns, showing why sinks are favored in pretrained transformers. The introduction and analysis of diagonal patterns and the generalization of the attention switch close the gap between what oversmoothing prevention requires and what sinks provide, while also establishing when and why attention layers act like MLPs if token communication is not necessary.</p>
+
+<p><a href="https://arxiv.org/abs/2605.08453">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

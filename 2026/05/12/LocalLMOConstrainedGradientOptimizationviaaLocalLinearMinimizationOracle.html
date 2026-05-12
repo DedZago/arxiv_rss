@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Local LMO: Constrained Gradient Optimization via a Local Linear Minimization Oracle</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Local LMO: Constrained Gradient Optimization via a Local Linear Minimization Oracle" />
+<meta name="author" content="Peter Richtárik, Kaja Gruntkowska, Hanmin Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We design Local LMO - a new projection-free gradient-type method for constrained optimization. The key algorithmic idea is to replace the global linear minimization oracle over the constraint set used by Frank-Wolfe (FW) with a local linear minimization oracle over the intersection of the constraint set and a “small” ball centered at the current iterate. In particular, when minimizing $f:\mathbb{R}^d\to \mathbb{R}$ over a constraint $\emptyset\neq\mathcal{X}\subseteq\mathbb{R}^d$, Local LMO performs the iteration [x_{k+1}\in \arg\min_{z\in\mathcal{X}\cap\mathcal{B}(x_{k},t_k)}\langle\nabla f(x_{k}), z \rangle,] where $x_0\in\mathcal{X}$, and $t_k&gt;0$ is a suitably chosen radius which can be interpreted as an effective stepsize. While designed as an alternative to FW, Local LMO is perhaps best viewed as a generalization of Gradient Descent (GD) rather than a modification of FW. Indeed, it is easy to see that Local LMO reduces to GD in the unconstrained setting and, more generally, to GD restricted to an affine subspace if the constraint $\mathcal{X}$ is affine. We prove that this simple algorithmic scheme transfers the known (unaccelerated) convergence rates of Projected Gradient Descent (PGD) to the projection-free world in several important regimes, some of which are beyond the reach of FW. In contrast to FW theory, i) our guarantees hold without requiring the feasible set $\mathcal{X}$ to be bounded, ii) our theory does not require the “curvature” assumption, which allows us to establish a standard sublinear rate for convex functions with bounded gradients, iii) we obtain a linear rate in the smooth strongly convex regime. Furthermore, we obtain sharp sublinear rates in the smooth convex and non-convex regimes, in the $(L_0,L_1)$-smooth convex regime, and in stochastic and non-differentiable settings." />
+<meta property="og:description" content="We design Local LMO - a new projection-free gradient-type method for constrained optimization. The key algorithmic idea is to replace the global linear minimization oracle over the constraint set used by Frank-Wolfe (FW) with a local linear minimization oracle over the intersection of the constraint set and a “small” ball centered at the current iterate. In particular, when minimizing $f:\mathbb{R}^d\to \mathbb{R}$ over a constraint $\emptyset\neq\mathcal{X}\subseteq\mathbb{R}^d$, Local LMO performs the iteration [x_{k+1}\in \arg\min_{z\in\mathcal{X}\cap\mathcal{B}(x_{k},t_k)}\langle\nabla f(x_{k}), z \rangle,] where $x_0\in\mathcal{X}$, and $t_k&gt;0$ is a suitably chosen radius which can be interpreted as an effective stepsize. While designed as an alternative to FW, Local LMO is perhaps best viewed as a generalization of Gradient Descent (GD) rather than a modification of FW. Indeed, it is easy to see that Local LMO reduces to GD in the unconstrained setting and, more generally, to GD restricted to an affine subspace if the constraint $\mathcal{X}$ is affine. We prove that this simple algorithmic scheme transfers the known (unaccelerated) convergence rates of Projected Gradient Descent (PGD) to the projection-free world in several important regimes, some of which are beyond the reach of FW. In contrast to FW theory, i) our guarantees hold without requiring the feasible set $\mathcal{X}$ to be bounded, ii) our theory does not require the “curvature” assumption, which allows us to establish a standard sublinear rate for convex functions with bounded gradients, iii) we obtain a linear rate in the smooth strongly convex regime. Furthermore, we obtain sharp sublinear rates in the smooth convex and non-convex regimes, in the $(L_0,L_1)$-smooth convex regime, and in stochastic and non-differentiable settings." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/12/LocalLMOConstrainedGradientOptimizationviaaLocalLinearMinimizationOracle.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/12/LocalLMOConstrainedGradientOptimizationviaaLocalLinearMinimizationOracle.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Local LMO: Constrained Gradient Optimization via a Local Linear Minimization Oracle" />
+<script type="application/ld+json">
+{"description":"We design Local LMO - a new projection-free gradient-type method for constrained optimization. The key algorithmic idea is to replace the global linear minimization oracle over the constraint set used by Frank-Wolfe (FW) with a local linear minimization oracle over the intersection of the constraint set and a “small” ball centered at the current iterate. In particular, when minimizing $f:\\mathbb{R}^d\\to \\mathbb{R}$ over a constraint $\\emptyset\\neq\\mathcal{X}\\subseteq\\mathbb{R}^d$, Local LMO performs the iteration [x_{k+1}\\in \\arg\\min_{z\\in\\mathcal{X}\\cap\\mathcal{B}(x_{k},t_k)}\\langle\\nabla f(x_{k}), z \\rangle,] where $x_0\\in\\mathcal{X}$, and $t_k&gt;0$ is a suitably chosen radius which can be interpreted as an effective stepsize. While designed as an alternative to FW, Local LMO is perhaps best viewed as a generalization of Gradient Descent (GD) rather than a modification of FW. Indeed, it is easy to see that Local LMO reduces to GD in the unconstrained setting and, more generally, to GD restricted to an affine subspace if the constraint $\\mathcal{X}$ is affine. We prove that this simple algorithmic scheme transfers the known (unaccelerated) convergence rates of Projected Gradient Descent (PGD) to the projection-free world in several important regimes, some of which are beyond the reach of FW. In contrast to FW theory, i) our guarantees hold without requiring the feasible set $\\mathcal{X}$ to be bounded, ii) our theory does not require the “curvature” assumption, which allows us to establish a standard sublinear rate for convex functions with bounded gradients, iii) we obtain a linear rate in the smooth strongly convex regime. Furthermore, we obtain sharp sublinear rates in the smooth convex and non-convex regimes, in the $(L_0,L_1)$-smooth convex regime, and in stochastic and non-differentiable settings.","author":{"@type":"Person","name":"Peter Richtárik, Kaja Gruntkowska, Hanmin Li"},"datePublished":"2026-05-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/12/LocalLMOConstrainedGradientOptimizationviaaLocalLinearMinimizationOracle.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/12/LocalLMOConstrainedGradientOptimizationviaaLocalLinearMinimizationOracle.html","headline":"Local LMO: Constrained Gradient Optimization via a Local Linear Minimization Oracle","@type":"BlogPosting","dateModified":"2026-05-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-12 00:00:00 +0000">05-12</time>
+  </p>
+  
+  <h1>Local LMO: Constrained Gradient Optimization via a Local Linear Minimization Oracle</h1>
+  <br>Peter Richtárik, Kaja Gruntkowska, Hanmin Li</h3>
+  <br> [stat.ML]
+
+  <p>We design Local LMO - a new projection-free gradient-type method for constrained optimization. The key algorithmic idea is to replace the global linear minimization oracle over the constraint set used by Frank-Wolfe (FW) with a local linear minimization oracle over the intersection of the constraint set and a “small” ball centered at the current iterate. In particular, when minimizing $f:\mathbb{R}^d\to \mathbb{R}$ over a constraint $\emptyset\neq\mathcal{X}\subseteq\mathbb{R}^d$, Local LMO performs the iteration [x_{k+1}\in \arg\min_{z\in\mathcal{X}\cap\mathcal{B}(x_{k},t_k)}\langle\nabla f(x_{k}), z \rangle,] where $x_0\in\mathcal{X}$, and $t_k&gt;0$ is a suitably chosen radius which can be interpreted as an effective stepsize. While designed as an alternative to FW, Local LMO is perhaps best viewed as a generalization of Gradient Descent (GD) rather than a modification of FW. Indeed, it is easy to see that Local LMO reduces to GD in the unconstrained setting and, more generally, to GD restricted to an affine subspace if the constraint $\mathcal{X}$ is affine. We prove that this simple algorithmic scheme transfers the known (unaccelerated) convergence rates of Projected Gradient Descent (PGD) to the projection-free world in several important regimes, some of which are beyond the reach of FW. In contrast to FW theory, i) our guarantees hold without requiring the feasible set $\mathcal{X}$ to be bounded, ii) our theory does not require the “curvature” assumption, which allows us to establish a standard sublinear rate for convex functions with bounded gradients, iii) we obtain a linear rate in the smooth strongly convex regime. Furthermore, we obtain sharp sublinear rates in the smooth convex and non-convex regimes, in the $(L_0,L_1)$-smooth convex regime, and in stochastic and non-differentiable settings.</p>
+
+<p><a href="https://arxiv.org/abs/2605.08850">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
