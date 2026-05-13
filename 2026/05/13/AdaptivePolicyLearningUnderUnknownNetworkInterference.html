@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptive Policy Learning Under Unknown Network Interference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adaptive Policy Learning Under Unknown Network Interference" />
+<meta name="author" content="Aidan Gleich, Eric Laber, Alexander Volfovsky" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Adaptive experimentation under unknown network interference requires solving two coupled problems: (i) learning the underlying dynamics of interference among units and (ii) using these dynamics to inform treatment allocation in order to maximize a cumulative outcome of interest (e.g. revenue). Existing adaptive experimentation methods either assume the interference network is fully known or bypass the network by operating on coarse cluster-level randomizations. We develop a Thompson sampling algorithm that jointly learns the interference network and adaptively optimizes individual-level treatment allocations via a Gibbs sampler. The algorithm returns both an optimized treatment policy and an estimate of the interference network; the latter supports downstream causal analyses such as estimation of direct, indirect, and total treatment effects. For additive spillover models, we show that total reward is linear in the treatment vector with coefficients given by an $n$-dimensional latent score. We prove a Bayesian regret bound of order $\sqrt{nT \cdot B \log(en/B)}$ for exact posterior sampling; empirically, our Gibbs-based approximate sampler achieves regret consistent with this rate and remains sublinear when the additive spillovers assumption is violated. For general Neighborhood Interference, where this reduction is unavailable, we analyze an explore-then-commit variant with $O(n^2 \log T)$ graph-discovery cost. An information-theoretic $\Omega(n \log T)$ lower bound complements both results. Empirically, our method achieves more than an order-of-magnitude reduction in regret in head-to-head comparisons. On two real-world networks, the algorithm achieves sublinear regret and yields downstream effect estimates with small RMSE relative to the truth." />
+<meta property="og:description" content="Adaptive experimentation under unknown network interference requires solving two coupled problems: (i) learning the underlying dynamics of interference among units and (ii) using these dynamics to inform treatment allocation in order to maximize a cumulative outcome of interest (e.g. revenue). Existing adaptive experimentation methods either assume the interference network is fully known or bypass the network by operating on coarse cluster-level randomizations. We develop a Thompson sampling algorithm that jointly learns the interference network and adaptively optimizes individual-level treatment allocations via a Gibbs sampler. The algorithm returns both an optimized treatment policy and an estimate of the interference network; the latter supports downstream causal analyses such as estimation of direct, indirect, and total treatment effects. For additive spillover models, we show that total reward is linear in the treatment vector with coefficients given by an $n$-dimensional latent score. We prove a Bayesian regret bound of order $\sqrt{nT \cdot B \log(en/B)}$ for exact posterior sampling; empirically, our Gibbs-based approximate sampler achieves regret consistent with this rate and remains sublinear when the additive spillovers assumption is violated. For general Neighborhood Interference, where this reduction is unavailable, we analyze an explore-then-commit variant with $O(n^2 \log T)$ graph-discovery cost. An information-theoretic $\Omega(n \log T)$ lower bound complements both results. Empirically, our method achieves more than an order-of-magnitude reduction in regret in head-to-head comparisons. On two real-world networks, the algorithm achieves sublinear regret and yields downstream effect estimates with small RMSE relative to the truth." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/13/AdaptivePolicyLearningUnderUnknownNetworkInterference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/13/AdaptivePolicyLearningUnderUnknownNetworkInterference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adaptive Policy Learning Under Unknown Network Interference" />
+<script type="application/ld+json">
+{"description":"Adaptive experimentation under unknown network interference requires solving two coupled problems: (i) learning the underlying dynamics of interference among units and (ii) using these dynamics to inform treatment allocation in order to maximize a cumulative outcome of interest (e.g. revenue). Existing adaptive experimentation methods either assume the interference network is fully known or bypass the network by operating on coarse cluster-level randomizations. We develop a Thompson sampling algorithm that jointly learns the interference network and adaptively optimizes individual-level treatment allocations via a Gibbs sampler. The algorithm returns both an optimized treatment policy and an estimate of the interference network; the latter supports downstream causal analyses such as estimation of direct, indirect, and total treatment effects. For additive spillover models, we show that total reward is linear in the treatment vector with coefficients given by an $n$-dimensional latent score. We prove a Bayesian regret bound of order $\\sqrt{nT \\cdot B \\log(en/B)}$ for exact posterior sampling; empirically, our Gibbs-based approximate sampler achieves regret consistent with this rate and remains sublinear when the additive spillovers assumption is violated. For general Neighborhood Interference, where this reduction is unavailable, we analyze an explore-then-commit variant with $O(n^2 \\log T)$ graph-discovery cost. An information-theoretic $\\Omega(n \\log T)$ lower bound complements both results. Empirically, our method achieves more than an order-of-magnitude reduction in regret in head-to-head comparisons. On two real-world networks, the algorithm achieves sublinear regret and yields downstream effect estimates with small RMSE relative to the truth.","author":{"@type":"Person","name":"Aidan Gleich, Eric Laber, Alexander Volfovsky"},"datePublished":"2026-05-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/13/AdaptivePolicyLearningUnderUnknownNetworkInterference.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/13/AdaptivePolicyLearningUnderUnknownNetworkInterference.html","headline":"Adaptive Policy Learning Under Unknown Network Interference","@type":"BlogPosting","dateModified":"2026-05-13T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-13 00:00:00 +0000">05-13</time>
+  </p>
+  
+  <h1>Adaptive Policy Learning Under Unknown Network Interference</h1>
+  <br>Aidan Gleich, Eric Laber, Alexander Volfovsky</h3>
+  <br> [stat.ML]
+
+  <p>Adaptive experimentation under unknown network interference requires solving two coupled problems: (i) learning the underlying dynamics of interference among units and (ii) using these dynamics to inform treatment allocation in order to maximize a cumulative outcome of interest (e.g. revenue). Existing adaptive experimentation methods either assume the interference network is fully known or bypass the network by operating on coarse cluster-level randomizations. We develop a Thompson sampling algorithm that jointly learns the interference network and adaptively optimizes individual-level treatment allocations via a Gibbs sampler. The algorithm returns both an optimized treatment policy and an estimate of the interference network; the latter supports downstream causal analyses such as estimation of direct, indirect, and total treatment effects. For additive spillover models, we show that total reward is linear in the treatment vector with coefficients given by an $n$-dimensional latent score. We prove a Bayesian regret bound of order $\sqrt{nT \cdot B \log(en/B)}$ for exact posterior sampling; empirically, our Gibbs-based approximate sampler achieves regret consistent with this rate and remains sublinear when the additive spillovers assumption is violated. For general Neighborhood Interference, where this reduction is unavailable, we analyze an explore-then-commit variant with $O(n^2 \log T)$ graph-discovery cost. An information-theoretic $\Omega(n \log T)$ lower bound complements both results. Empirically, our method achieves more than an order-of-magnitude reduction in regret in head-to-head comparisons. On two real-world networks, the algorithm achieves sublinear regret and yields downstream effect estimates with small RMSE relative to the truth.</p>
+
+<p><a href="https://arxiv.org/abs/2605.11191">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

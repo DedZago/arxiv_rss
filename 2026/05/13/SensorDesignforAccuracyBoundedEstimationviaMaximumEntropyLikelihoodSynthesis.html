@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sensor Design for Accuracy-Bounded Estimation via Maximum-Entropy Likelihood Synthesis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sensor Design for Accuracy-Bounded Estimation via Maximum-Entropy Likelihood Synthesis" />
+<meta name="author" content="Raktim Bhattacharya" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Designing the sensing architecture for large-scale spatio-temporal systems is hard when accuracy requirements are specified but sensor models are uncertain or unavailable. Classical design treats sensor placement and estimation sequentially, requiring valid forward models for each sensing modality. This paper inverts the design flow: given an error budget, synthesize the measurement likelihood that enforces it while injecting minimal information beyond the dynamical prior. The likelihood is constructed by constrained optimization: among all posteriors satisfying a prescribed accuracy bound relative to a target, select the one minimizing Kullback-Leibler divergence from the prior. The solution is a maximum-entropy posterior in relative-entropy form, and the induced likelihood is the Radon-Nikodym derivative. The framework accommodates arbitrary discrepancies and is instantiated for Wasserstein distance, maximum mean discrepancy, $f$-divergences, moment constraints, and hybrid metrics. For each, we derive the discrete particle-level problem, analyze its convex or convex-relaxed structure, and present solvers with complexity scaling. A closed-form solution exists for the symmetric exponential-tilt case, and a distillation procedure converts nonparametric likelihood samples into parametric forms. A two-layer sensor design architecture embeds the synthesized likelihood in the recursive predict-update loop, connecting accuracy budgets to physical sensor placement, precision, and configuration. Numerical experiments comparing four metrics on unimodal and multimodal scenarios confirm the accuracy constraints are reliably enforced and reveal how metric choice determines the amount and spatial distribution of injected information." />
+<meta property="og:description" content="Designing the sensing architecture for large-scale spatio-temporal systems is hard when accuracy requirements are specified but sensor models are uncertain or unavailable. Classical design treats sensor placement and estimation sequentially, requiring valid forward models for each sensing modality. This paper inverts the design flow: given an error budget, synthesize the measurement likelihood that enforces it while injecting minimal information beyond the dynamical prior. The likelihood is constructed by constrained optimization: among all posteriors satisfying a prescribed accuracy bound relative to a target, select the one minimizing Kullback-Leibler divergence from the prior. The solution is a maximum-entropy posterior in relative-entropy form, and the induced likelihood is the Radon-Nikodym derivative. The framework accommodates arbitrary discrepancies and is instantiated for Wasserstein distance, maximum mean discrepancy, $f$-divergences, moment constraints, and hybrid metrics. For each, we derive the discrete particle-level problem, analyze its convex or convex-relaxed structure, and present solvers with complexity scaling. A closed-form solution exists for the symmetric exponential-tilt case, and a distillation procedure converts nonparametric likelihood samples into parametric forms. A two-layer sensor design architecture embeds the synthesized likelihood in the recursive predict-update loop, connecting accuracy budgets to physical sensor placement, precision, and configuration. Numerical experiments comparing four metrics on unimodal and multimodal scenarios confirm the accuracy constraints are reliably enforced and reveal how metric choice determines the amount and spatial distribution of injected information." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/13/SensorDesignforAccuracyBoundedEstimationviaMaximumEntropyLikelihoodSynthesis.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/13/SensorDesignforAccuracyBoundedEstimationviaMaximumEntropyLikelihoodSynthesis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sensor Design for Accuracy-Bounded Estimation via Maximum-Entropy Likelihood Synthesis" />
+<script type="application/ld+json">
+{"description":"Designing the sensing architecture for large-scale spatio-temporal systems is hard when accuracy requirements are specified but sensor models are uncertain or unavailable. Classical design treats sensor placement and estimation sequentially, requiring valid forward models for each sensing modality. This paper inverts the design flow: given an error budget, synthesize the measurement likelihood that enforces it while injecting minimal information beyond the dynamical prior. The likelihood is constructed by constrained optimization: among all posteriors satisfying a prescribed accuracy bound relative to a target, select the one minimizing Kullback-Leibler divergence from the prior. The solution is a maximum-entropy posterior in relative-entropy form, and the induced likelihood is the Radon-Nikodym derivative. The framework accommodates arbitrary discrepancies and is instantiated for Wasserstein distance, maximum mean discrepancy, $f$-divergences, moment constraints, and hybrid metrics. For each, we derive the discrete particle-level problem, analyze its convex or convex-relaxed structure, and present solvers with complexity scaling. A closed-form solution exists for the symmetric exponential-tilt case, and a distillation procedure converts nonparametric likelihood samples into parametric forms. A two-layer sensor design architecture embeds the synthesized likelihood in the recursive predict-update loop, connecting accuracy budgets to physical sensor placement, precision, and configuration. Numerical experiments comparing four metrics on unimodal and multimodal scenarios confirm the accuracy constraints are reliably enforced and reveal how metric choice determines the amount and spatial distribution of injected information.","author":{"@type":"Person","name":"Raktim Bhattacharya"},"datePublished":"2026-05-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/13/SensorDesignforAccuracyBoundedEstimationviaMaximumEntropyLikelihoodSynthesis.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/13/SensorDesignforAccuracyBoundedEstimationviaMaximumEntropyLikelihoodSynthesis.html","headline":"Sensor Design for Accuracy-Bounded Estimation via Maximum-Entropy Likelihood Synthesis","@type":"BlogPosting","dateModified":"2026-05-13T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-13 00:00:00 +0000">05-13</time>
+  </p>
+  
+  <h1>Sensor Design for Accuracy-Bounded Estimation via Maximum-Entropy Likelihood Synthesis</h1>
+  <br>Raktim Bhattacharya</h3>
+  <br> [stat.ML]
+
+  <p>Designing the sensing architecture for large-scale spatio-temporal systems is hard when accuracy requirements are specified but sensor models are uncertain or unavailable. Classical design treats sensor placement and estimation sequentially, requiring valid forward models for each sensing modality. This paper inverts the design flow: given an error budget, synthesize the measurement likelihood that enforces it while injecting minimal information beyond the dynamical prior. The likelihood is constructed by constrained optimization: among all posteriors satisfying a prescribed accuracy bound relative to a target, select the one minimizing Kullback-Leibler divergence from the prior.
+  The solution is a maximum-entropy posterior in relative-entropy form, and the induced likelihood is the Radon-Nikodym derivative. The framework accommodates arbitrary discrepancies and is instantiated for Wasserstein distance, maximum mean discrepancy, $f$-divergences, moment constraints, and hybrid metrics. For each, we derive the discrete particle-level problem, analyze its convex or convex-relaxed structure, and present solvers with complexity scaling. A closed-form solution exists for the symmetric exponential-tilt case, and a distillation procedure converts nonparametric likelihood samples into parametric forms. A two-layer sensor design architecture embeds the synthesized likelihood in the recursive predict-update loop, connecting accuracy budgets to physical sensor placement, precision, and configuration. Numerical experiments comparing four metrics on unimodal and multimodal scenarios confirm the accuracy constraints are reliably enforced and reveal how metric choice determines the amount and spatial distribution of injected information.</p>
+
+<p><a href="https://arxiv.org/abs/2605.11120">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
