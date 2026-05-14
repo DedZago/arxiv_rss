@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>LLM Flow Processes for Text-Conditioned Regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="LLM Flow Processes for Text-Conditioned Regression" />
+<meta name="author" content="Felix Biggs, Samuel Willis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent work has demonstrated surprisingly good performance of pre-trained LLMs on regression tasks (for example, time-series prediction), with the ability to incorporate expert prior knowledge and the information contained in textual metadata. However we observe major error cascades even in short sequences &lt; ~100 points; these models are also computationally intensive and difficult to parallelise. Marginal LLM predictions do not suffer this issue and are trivially parallelised, but can predict over-broad densities. To address this, we propose combining these densities with a lightweight (diffusion-based) neural process. We show that this combination leads to better-calibrated predictions overall, outputs locally consistent trajectories, and leads to text-conditioned function space selection in the meta-learner. As part of this work we propose a gradient-free (and non-Monte Carlo) method for sampling from a product-of-experts of a score model and an ‘expert’ (here the LLM predictive densities). We believe this general method is of independent interest as it is applicable whenever an expert can be convolved with a Gaussian in closed form." />
+<meta property="og:description" content="Recent work has demonstrated surprisingly good performance of pre-trained LLMs on regression tasks (for example, time-series prediction), with the ability to incorporate expert prior knowledge and the information contained in textual metadata. However we observe major error cascades even in short sequences &lt; ~100 points; these models are also computationally intensive and difficult to parallelise. Marginal LLM predictions do not suffer this issue and are trivially parallelised, but can predict over-broad densities. To address this, we propose combining these densities with a lightweight (diffusion-based) neural process. We show that this combination leads to better-calibrated predictions overall, outputs locally consistent trajectories, and leads to text-conditioned function space selection in the meta-learner. As part of this work we propose a gradient-free (and non-Monte Carlo) method for sampling from a product-of-experts of a score model and an ‘expert’ (here the LLM predictive densities). We believe this general method is of independent interest as it is applicable whenever an expert can be convolved with a Gaussian in closed form." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/14/LLMFlowProcessesforTextConditionedRegression.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/14/LLMFlowProcessesforTextConditionedRegression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LLM Flow Processes for Text-Conditioned Regression" />
+<script type="application/ld+json">
+{"description":"Recent work has demonstrated surprisingly good performance of pre-trained LLMs on regression tasks (for example, time-series prediction), with the ability to incorporate expert prior knowledge and the information contained in textual metadata. However we observe major error cascades even in short sequences &lt; ~100 points; these models are also computationally intensive and difficult to parallelise. Marginal LLM predictions do not suffer this issue and are trivially parallelised, but can predict over-broad densities. To address this, we propose combining these densities with a lightweight (diffusion-based) neural process. We show that this combination leads to better-calibrated predictions overall, outputs locally consistent trajectories, and leads to text-conditioned function space selection in the meta-learner. As part of this work we propose a gradient-free (and non-Monte Carlo) method for sampling from a product-of-experts of a score model and an ‘expert’ (here the LLM predictive densities). We believe this general method is of independent interest as it is applicable whenever an expert can be convolved with a Gaussian in closed form.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/14/LLMFlowProcessesforTextConditionedRegression.html"},"author":{"@type":"Person","name":"Felix Biggs, Samuel Willis"},"dateModified":"2026-05-14T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/14/LLMFlowProcessesforTextConditionedRegression.html","headline":"LLM Flow Processes for Text-Conditioned Regression","@type":"BlogPosting","datePublished":"2026-05-14T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>LLM Flow Processes for Text-Conditioned Regression</h1>
+  <br>Felix Biggs, Samuel Willis</h3>
+  <br> [stat.ML]
+
+  <p>Recent work has demonstrated surprisingly good performance of pre-trained LLMs on regression tasks (for example, time-series prediction), with the ability to incorporate expert prior knowledge and the information contained in textual metadata. However we observe major error cascades even in short sequences &lt; ~100 points; these models are also computationally intensive and difficult to parallelise. Marginal LLM predictions do not suffer this issue and are trivially parallelised, but can predict over-broad densities. To address this, we propose combining these densities with a lightweight (diffusion-based) neural process. We show that this combination leads to better-calibrated predictions overall, outputs locally consistent trajectories, and leads to text-conditioned function space selection in the meta-learner. As part of this work we propose a gradient-free (and non-Monte Carlo) method for sampling from a product-of-experts of a score model and an ‘expert’ (here the LLM predictive densities). We believe this general method is of independent interest as it is applicable whenever an expert can be convolved with a Gaussian in closed form.</p>
+
+<p><a href="https://arxiv.org/abs/2601.06147">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

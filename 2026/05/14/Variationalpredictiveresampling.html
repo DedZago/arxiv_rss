@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Variational predictive resampling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Variational predictive resampling" />
+<meta name="author" content="Laura Battaglia, Stefano Cortinovis, Chris Holmes, David T. Frazier, Jack Jewson" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian inference provides principled uncertainty quantification, but accurate posterior sampling with MCMC can be computationally prohibitive for modern applications. Variational inference (VI) offers a scalable alternative and often yields accurate predictive distributions, but cheap variational families such as mean-field (MF) can produce over-concentrated approximations that miss posterior dependence. We propose variational predictive resampling (VPR), a scalable posterior sampling method that exploits VI’s predictive strength within a predictive-resampling framework to better approximate the Bayesian posterior. Given a prior-likelihood pair, VPR repeatedly imputes future observations from the current variational predictive, updates the variational approximation after each imputation, and records the parameter value implied by the completed sample. We establish conditions under which the law of the parameter returned by VPR is well defined and show that its finite-horizon approximation converges to this limit. In a tractable Gaussian location model, we show that VPR with MF variational predictives converges to the exact Bayesian posterior, whereas the optimal MF-VI approximation retains a non-vanishing asymptotic gap. Experiments on linear regression, logistic regression, and hierarchical linear mixed-effects models demonstrate that VPR substantially improves posterior uncertainty quantification and recovers posterior dependence missed by MF-VI, while remaining computationally competitive with, and often more efficient than, MCMC." />
+<meta property="og:description" content="Bayesian inference provides principled uncertainty quantification, but accurate posterior sampling with MCMC can be computationally prohibitive for modern applications. Variational inference (VI) offers a scalable alternative and often yields accurate predictive distributions, but cheap variational families such as mean-field (MF) can produce over-concentrated approximations that miss posterior dependence. We propose variational predictive resampling (VPR), a scalable posterior sampling method that exploits VI’s predictive strength within a predictive-resampling framework to better approximate the Bayesian posterior. Given a prior-likelihood pair, VPR repeatedly imputes future observations from the current variational predictive, updates the variational approximation after each imputation, and records the parameter value implied by the completed sample. We establish conditions under which the law of the parameter returned by VPR is well defined and show that its finite-horizon approximation converges to this limit. In a tractable Gaussian location model, we show that VPR with MF variational predictives converges to the exact Bayesian posterior, whereas the optimal MF-VI approximation retains a non-vanishing asymptotic gap. Experiments on linear regression, logistic regression, and hierarchical linear mixed-effects models demonstrate that VPR substantially improves posterior uncertainty quantification and recovers posterior dependence missed by MF-VI, while remaining computationally competitive with, and often more efficient than, MCMC." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/14/Variationalpredictiveresampling.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/14/Variationalpredictiveresampling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Variational predictive resampling" />
+<script type="application/ld+json">
+{"description":"Bayesian inference provides principled uncertainty quantification, but accurate posterior sampling with MCMC can be computationally prohibitive for modern applications. Variational inference (VI) offers a scalable alternative and often yields accurate predictive distributions, but cheap variational families such as mean-field (MF) can produce over-concentrated approximations that miss posterior dependence. We propose variational predictive resampling (VPR), a scalable posterior sampling method that exploits VI’s predictive strength within a predictive-resampling framework to better approximate the Bayesian posterior. Given a prior-likelihood pair, VPR repeatedly imputes future observations from the current variational predictive, updates the variational approximation after each imputation, and records the parameter value implied by the completed sample. We establish conditions under which the law of the parameter returned by VPR is well defined and show that its finite-horizon approximation converges to this limit. In a tractable Gaussian location model, we show that VPR with MF variational predictives converges to the exact Bayesian posterior, whereas the optimal MF-VI approximation retains a non-vanishing asymptotic gap. Experiments on linear regression, logistic regression, and hierarchical linear mixed-effects models demonstrate that VPR substantially improves posterior uncertainty quantification and recovers posterior dependence missed by MF-VI, while remaining computationally competitive with, and often more efficient than, MCMC.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/14/Variationalpredictiveresampling.html"},"author":{"@type":"Person","name":"Laura Battaglia, Stefano Cortinovis, Chris Holmes, David T. Frazier, Jack Jewson"},"dateModified":"2026-05-14T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/14/Variationalpredictiveresampling.html","headline":"Variational predictive resampling","@type":"BlogPosting","datePublished":"2026-05-14T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>Variational predictive resampling</h1>
+  <br>Laura Battaglia, Stefano Cortinovis, Chris Holmes, David T. Frazier, Jack Jewson</h3>
+  <br> [stat.ME,stat.CO,stat.ML]
+
+  <p>Bayesian inference provides principled uncertainty quantification, but accurate posterior sampling with MCMC can be computationally prohibitive for modern applications. Variational inference (VI) offers a scalable alternative and often yields accurate predictive distributions, but cheap variational families such as mean-field (MF) can produce over-concentrated approximations that miss posterior dependence. We propose variational predictive resampling (VPR), a scalable posterior sampling method that exploits VI’s predictive strength within a predictive-resampling framework to better approximate the Bayesian posterior. Given a prior-likelihood pair, VPR repeatedly imputes future observations from the current variational predictive, updates the variational approximation after each imputation, and records the parameter value implied by the completed sample. We establish conditions under which the law of the parameter returned by VPR is well defined and show that its finite-horizon approximation converges to this limit. In a tractable Gaussian location model, we show that VPR with MF variational predictives converges to the exact Bayesian posterior, whereas the optimal MF-VI approximation retains a non-vanishing asymptotic gap. Experiments on linear regression, logistic regression, and hierarchical linear mixed-effects models demonstrate that VPR substantially improves posterior uncertainty quantification and recovers posterior dependence missed by MF-VI, while remaining computationally competitive with, and often more efficient than, MCMC.</p>
+
+<p><a href="https://arxiv.org/abs/2605.11168">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

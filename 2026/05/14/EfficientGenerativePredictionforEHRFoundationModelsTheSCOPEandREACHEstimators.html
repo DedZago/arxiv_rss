@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Generative Prediction for EHR Foundation Models: The SCOPE and REACH Estimators</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Generative Prediction for EHR Foundation Models: The SCOPE and REACH Estimators" />
+<meta name="author" content="Luke Solo, Matthew B. A. McDermott, William F. Parker, Bashar Ramadan, Michael C. Burkhart, Brett K. Beaulieu-Jones" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generative foundation models trained on tokenized electronic health record (EHR) timelines show promise for clinical outcome prediction via Monte Carlo sampling of simulated future trajectories. However, this approach suffers from three coupled limitations: sparse estimate distributions that poorly differentiate patient risk levels, extreme computational cost, and high sampling variance. We propose two new estimators that leverage next-token probability distributions underutilized by standard Monte Carlo: the Sum of Conditional Outcome Probability Estimator (SCOPE) and Risk Estimation from Anticipated Conditional Hazards (REACH). We prove both are unbiased, that REACH guarantees variance reduction over Monte Carlo for any model and outcome, and that REACH is a Rao-Blackwellization of any naive importance sampling scheme that preserves the non-outcome token distribution. Empirically, across $11$ clinically important outcomes in MIMIC-IV and the UChicago health system, SCOPE and REACH match $100$-sample Monte Carlo accuracy with median token reductions of $2.5\times$ to $3.4\times$ and reductions exceeding $80\times$ for the rarest outcomes, with calibration preserved throughout. Because SCOPE reuses a single sampled pool across an arbitrary number of outcomes at no marginal generation cost while REACH provides a per-task variance guarantee, the two estimators are complementary in deployment and together meaningfully reduce the inference budget required for generative EHR foundation models, particularly for rare, high-impact outcomes in healthcare." />
+<meta property="og:description" content="Generative foundation models trained on tokenized electronic health record (EHR) timelines show promise for clinical outcome prediction via Monte Carlo sampling of simulated future trajectories. However, this approach suffers from three coupled limitations: sparse estimate distributions that poorly differentiate patient risk levels, extreme computational cost, and high sampling variance. We propose two new estimators that leverage next-token probability distributions underutilized by standard Monte Carlo: the Sum of Conditional Outcome Probability Estimator (SCOPE) and Risk Estimation from Anticipated Conditional Hazards (REACH). We prove both are unbiased, that REACH guarantees variance reduction over Monte Carlo for any model and outcome, and that REACH is a Rao-Blackwellization of any naive importance sampling scheme that preserves the non-outcome token distribution. Empirically, across $11$ clinically important outcomes in MIMIC-IV and the UChicago health system, SCOPE and REACH match $100$-sample Monte Carlo accuracy with median token reductions of $2.5\times$ to $3.4\times$ and reductions exceeding $80\times$ for the rarest outcomes, with calibration preserved throughout. Because SCOPE reuses a single sampled pool across an arbitrary number of outcomes at no marginal generation cost while REACH provides a per-task variance guarantee, the two estimators are complementary in deployment and together meaningfully reduce the inference budget required for generative EHR foundation models, particularly for rare, high-impact outcomes in healthcare." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/14/EfficientGenerativePredictionforEHRFoundationModelsTheSCOPEandREACHEstimators.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/14/EfficientGenerativePredictionforEHRFoundationModelsTheSCOPEandREACHEstimators.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Generative Prediction for EHR Foundation Models: The SCOPE and REACH Estimators" />
+<script type="application/ld+json">
+{"description":"Generative foundation models trained on tokenized electronic health record (EHR) timelines show promise for clinical outcome prediction via Monte Carlo sampling of simulated future trajectories. However, this approach suffers from three coupled limitations: sparse estimate distributions that poorly differentiate patient risk levels, extreme computational cost, and high sampling variance. We propose two new estimators that leverage next-token probability distributions underutilized by standard Monte Carlo: the Sum of Conditional Outcome Probability Estimator (SCOPE) and Risk Estimation from Anticipated Conditional Hazards (REACH). We prove both are unbiased, that REACH guarantees variance reduction over Monte Carlo for any model and outcome, and that REACH is a Rao-Blackwellization of any naive importance sampling scheme that preserves the non-outcome token distribution. Empirically, across $11$ clinically important outcomes in MIMIC-IV and the UChicago health system, SCOPE and REACH match $100$-sample Monte Carlo accuracy with median token reductions of $2.5\\times$ to $3.4\\times$ and reductions exceeding $80\\times$ for the rarest outcomes, with calibration preserved throughout. Because SCOPE reuses a single sampled pool across an arbitrary number of outcomes at no marginal generation cost while REACH provides a per-task variance guarantee, the two estimators are complementary in deployment and together meaningfully reduce the inference budget required for generative EHR foundation models, particularly for rare, high-impact outcomes in healthcare.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/14/EfficientGenerativePredictionforEHRFoundationModelsTheSCOPEandREACHEstimators.html"},"author":{"@type":"Person","name":"Luke Solo, Matthew B. A. McDermott, William F. Parker, Bashar Ramadan, Michael C. Burkhart, Brett K. Beaulieu-Jones"},"dateModified":"2026-05-14T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/14/EfficientGenerativePredictionforEHRFoundationModelsTheSCOPEandREACHEstimators.html","headline":"Efficient Generative Prediction for EHR Foundation Models: The SCOPE and REACH Estimators","@type":"BlogPosting","datePublished":"2026-05-14T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>Efficient Generative Prediction for EHR Foundation Models: The SCOPE and REACH Estimators</h1>
+  <br>Luke Solo, Matthew B. A. McDermott, William F. Parker, Bashar Ramadan, Michael C. Burkhart, Brett K. Beaulieu-Jones</h3>
+  <br> [stat.ML]
+
+  <p>Generative foundation models trained on tokenized electronic health record (EHR) timelines show promise for clinical outcome prediction via Monte Carlo sampling of simulated future trajectories. However, this approach suffers from three coupled limitations: sparse estimate distributions that poorly differentiate patient risk levels, extreme computational cost, and high sampling variance. We propose two new estimators that leverage next-token probability distributions underutilized by standard Monte Carlo: the Sum of Conditional Outcome Probability Estimator (SCOPE) and Risk Estimation from Anticipated Conditional Hazards (REACH). We prove both are unbiased, that REACH guarantees variance reduction over Monte Carlo for any model and outcome, and that REACH is a Rao-Blackwellization of any naive importance sampling scheme that preserves the non-outcome token distribution. Empirically, across $11$ clinically important outcomes in MIMIC-IV and the UChicago health system, SCOPE and REACH match $100$-sample Monte Carlo accuracy with median token reductions of $2.5\times$ to $3.4\times$ and reductions exceeding $80\times$ for the rarest outcomes, with calibration preserved throughout. Because SCOPE reuses a single sampled pool across an arbitrary number of outcomes at no marginal generation cost while REACH provides a per-task variance guarantee, the two estimators are complementary in deployment and together meaningfully reduce the inference budget required for generative EHR foundation models, particularly for rare, high-impact outcomes in healthcare.</p>
+
+<p><a href="https://arxiv.org/abs/2602.03730">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

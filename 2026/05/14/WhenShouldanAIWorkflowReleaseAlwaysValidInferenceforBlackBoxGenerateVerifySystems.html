@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Should an AI Workflow Release? Always-Valid Inference for Black-Box Generate-Verify Systems</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When Should an AI Workflow Release? Always-Valid Inference for Black-Box Generate-Verify Systems" />
+<meta name="author" content="Young Hyun Cho, Will Wei Sun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="LLM-enabled AI workflows increasingly produce outputs through iterative generate-evaluate-revise loops. Each iteration can improve the candidate, but it also creates a release decision: when to stop and output the current result? This raises a statistical challenge because deployment-time evaluator scores are adaptively generated and repeatedly monitored, yet the likelihood models or exchangeability assumptions typically used for calibration are unavailable. We propose an always-valid release wrapper for existing generator-evaluator pipelines. The wrapper builds a hard-negative reference pool of high-scoring failures, calibrates deployment-time evaluator scores against this pool, and accumulates the resulting evidence with an e-process. This separates two roles: the reference pool turns black-box scores into conservative evidence, while the e-process provides validity under optional stopping. In theory, we show that a conservative reference pool yields finite-sample control of the probability of releasing on infeasible tasks, that is, tasks for which the given workflow is not capable of producing a reliable solution. We also characterize conditions under which the same conservative rule still achieves nontrivial release on feasible tasks. In an MBPP+ coding-agent case study, the wrapper reduces premature incorrect release relative to baseline stopping rules while still releasing on tasks for which the workflow repeatedly accumulates moderate supporting evidence." />
+<meta property="og:description" content="LLM-enabled AI workflows increasingly produce outputs through iterative generate-evaluate-revise loops. Each iteration can improve the candidate, but it also creates a release decision: when to stop and output the current result? This raises a statistical challenge because deployment-time evaluator scores are adaptively generated and repeatedly monitored, yet the likelihood models or exchangeability assumptions typically used for calibration are unavailable. We propose an always-valid release wrapper for existing generator-evaluator pipelines. The wrapper builds a hard-negative reference pool of high-scoring failures, calibrates deployment-time evaluator scores against this pool, and accumulates the resulting evidence with an e-process. This separates two roles: the reference pool turns black-box scores into conservative evidence, while the e-process provides validity under optional stopping. In theory, we show that a conservative reference pool yields finite-sample control of the probability of releasing on infeasible tasks, that is, tasks for which the given workflow is not capable of producing a reliable solution. We also characterize conditions under which the same conservative rule still achieves nontrivial release on feasible tasks. In an MBPP+ coding-agent case study, the wrapper reduces premature incorrect release relative to baseline stopping rules while still releasing on tasks for which the workflow repeatedly accumulates moderate supporting evidence." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/14/WhenShouldanAIWorkflowReleaseAlwaysValidInferenceforBlackBoxGenerateVerifySystems.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/14/WhenShouldanAIWorkflowReleaseAlwaysValidInferenceforBlackBoxGenerateVerifySystems.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When Should an AI Workflow Release? Always-Valid Inference for Black-Box Generate-Verify Systems" />
+<script type="application/ld+json">
+{"description":"LLM-enabled AI workflows increasingly produce outputs through iterative generate-evaluate-revise loops. Each iteration can improve the candidate, but it also creates a release decision: when to stop and output the current result? This raises a statistical challenge because deployment-time evaluator scores are adaptively generated and repeatedly monitored, yet the likelihood models or exchangeability assumptions typically used for calibration are unavailable. We propose an always-valid release wrapper for existing generator-evaluator pipelines. The wrapper builds a hard-negative reference pool of high-scoring failures, calibrates deployment-time evaluator scores against this pool, and accumulates the resulting evidence with an e-process. This separates two roles: the reference pool turns black-box scores into conservative evidence, while the e-process provides validity under optional stopping. In theory, we show that a conservative reference pool yields finite-sample control of the probability of releasing on infeasible tasks, that is, tasks for which the given workflow is not capable of producing a reliable solution. We also characterize conditions under which the same conservative rule still achieves nontrivial release on feasible tasks. In an MBPP+ coding-agent case study, the wrapper reduces premature incorrect release relative to baseline stopping rules while still releasing on tasks for which the workflow repeatedly accumulates moderate supporting evidence.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/14/WhenShouldanAIWorkflowReleaseAlwaysValidInferenceforBlackBoxGenerateVerifySystems.html"},"author":{"@type":"Person","name":"Young Hyun Cho, Will Wei Sun"},"dateModified":"2026-05-14T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/14/WhenShouldanAIWorkflowReleaseAlwaysValidInferenceforBlackBoxGenerateVerifySystems.html","headline":"When Should an AI Workflow Release? Always-Valid Inference for Black-Box Generate-Verify Systems","@type":"BlogPosting","datePublished":"2026-05-14T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-14 00:00:00 +0000">05-14</time>
+  </p>
+  
+  <h1>When Should an AI Workflow Release? Always-Valid Inference for Black-Box Generate-Verify Systems</h1>
+  <br>Young Hyun Cho, Will Wei Sun</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>LLM-enabled AI workflows increasingly produce outputs through iterative generate-evaluate-revise loops. Each iteration can improve the candidate, but it also creates a release decision: when to stop and output the current result? This raises a statistical challenge because deployment-time evaluator scores are adaptively generated and repeatedly monitored, yet the likelihood models or exchangeability assumptions typically used for calibration are unavailable. We propose an always-valid release wrapper for existing generator-evaluator pipelines. The wrapper builds a hard-negative reference pool of high-scoring failures, calibrates deployment-time evaluator scores against this pool, and accumulates the resulting evidence with an e-process. This separates two roles: the reference pool turns black-box scores into conservative evidence, while the e-process provides validity under optional stopping. In theory, we show that a conservative reference pool yields finite-sample control of the probability of releasing on infeasible tasks, that is, tasks for which the given workflow is not capable of producing a reliable solution. We also characterize conditions under which the same conservative rule still achieves nontrivial release on feasible tasks. In an MBPP+ coding-agent case study, the wrapper reduces premature incorrect release relative to baseline stopping rules while still releasing on tasks for which the workflow repeatedly accumulates moderate supporting evidence.</p>
+
+<p><a href="https://arxiv.org/abs/2605.12947">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
