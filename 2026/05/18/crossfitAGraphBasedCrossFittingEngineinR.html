@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>crossfit: A Graph-Based Cross-Fitting Engine in R</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="crossfit: A Graph-Based Cross-Fitting Engine in R" />
+<meta name="author" content="Etienne Peyrot, François Petit" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cross-fitting is a key ingredient in many semiparametric estimation procedures, such as double/debiased machine learning (DML), enabling valid estimation of low-dimensional targets in the presence of high-dimensional nuisance functions by enforcing out-of-sample use of nuisance predictions. crossfit is an R package that provides a general-purpose, estimator-agnostic cross-fitting engine. Users specify (i) a target functional and (ii) a directed acyclic graph (DAG) of nuisance models, with node-specific training fold widths and target-specific evaluation windows. The engine executes a reproducible schedule over folds, panels, and repetitions, returning either a scalar estimate (mode=”estimate”) or a cross-fitted predictor function for application to new data (mode=”predict”). Beyond standard cross-fitting, crossfit implements fold-allocation modes that control how training data are shared across nuisance components, including disjoint and independence-enforcing allocations that duplicate reused nodes to reduce dependence between nuisance branches. The implementation targets simulation-heavy benchmarking and method development, with explicit and auditable schedules, defensive validation of specifications and nuisance dependencies, reuse-aware caching to avoid redundant refits, and failure isolation policies for large experiment grids. The crossfit package is available on CRAN, openly developed on GitHub under GPL-3, and is intended as a lightweight, tested foundation to prototype and empirically evaluate cross-fitted estimators with explicit control over fold geometry, dependence, and computation." />
+<meta property="og:description" content="Cross-fitting is a key ingredient in many semiparametric estimation procedures, such as double/debiased machine learning (DML), enabling valid estimation of low-dimensional targets in the presence of high-dimensional nuisance functions by enforcing out-of-sample use of nuisance predictions. crossfit is an R package that provides a general-purpose, estimator-agnostic cross-fitting engine. Users specify (i) a target functional and (ii) a directed acyclic graph (DAG) of nuisance models, with node-specific training fold widths and target-specific evaluation windows. The engine executes a reproducible schedule over folds, panels, and repetitions, returning either a scalar estimate (mode=”estimate”) or a cross-fitted predictor function for application to new data (mode=”predict”). Beyond standard cross-fitting, crossfit implements fold-allocation modes that control how training data are shared across nuisance components, including disjoint and independence-enforcing allocations that duplicate reused nodes to reduce dependence between nuisance branches. The implementation targets simulation-heavy benchmarking and method development, with explicit and auditable schedules, defensive validation of specifications and nuisance dependencies, reuse-aware caching to avoid redundant refits, and failure isolation policies for large experiment grids. The crossfit package is available on CRAN, openly developed on GitHub under GPL-3, and is intended as a lightweight, tested foundation to prototype and empirically evaluate cross-fitted estimators with explicit control over fold geometry, dependence, and computation." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/18/crossfitAGraphBasedCrossFittingEngineinR.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/18/crossfitAGraphBasedCrossFittingEngineinR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="crossfit: A Graph-Based Cross-Fitting Engine in R" />
+<script type="application/ld+json">
+{"description":"Cross-fitting is a key ingredient in many semiparametric estimation procedures, such as double/debiased machine learning (DML), enabling valid estimation of low-dimensional targets in the presence of high-dimensional nuisance functions by enforcing out-of-sample use of nuisance predictions. crossfit is an R package that provides a general-purpose, estimator-agnostic cross-fitting engine. Users specify (i) a target functional and (ii) a directed acyclic graph (DAG) of nuisance models, with node-specific training fold widths and target-specific evaluation windows. The engine executes a reproducible schedule over folds, panels, and repetitions, returning either a scalar estimate (mode=”estimate”) or a cross-fitted predictor function for application to new data (mode=”predict”). Beyond standard cross-fitting, crossfit implements fold-allocation modes that control how training data are shared across nuisance components, including disjoint and independence-enforcing allocations that duplicate reused nodes to reduce dependence between nuisance branches. The implementation targets simulation-heavy benchmarking and method development, with explicit and auditable schedules, defensive validation of specifications and nuisance dependencies, reuse-aware caching to avoid redundant refits, and failure isolation policies for large experiment grids. The crossfit package is available on CRAN, openly developed on GitHub under GPL-3, and is intended as a lightweight, tested foundation to prototype and empirically evaluate cross-fitted estimators with explicit control over fold geometry, dependence, and computation.","author":{"@type":"Person","name":"Etienne Peyrot, François Petit"},"datePublished":"2026-05-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/18/crossfitAGraphBasedCrossFittingEngineinR.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/18/crossfitAGraphBasedCrossFittingEngineinR.html","headline":"crossfit: A Graph-Based Cross-Fitting Engine in R","@type":"BlogPosting","dateModified":"2026-05-18T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-18 00:00:00 +0000">05-18</time>
+  </p>
+  
+  <h1>crossfit: A Graph-Based Cross-Fitting Engine in R</h1>
+  <br>Etienne Peyrot, François Petit</h3>
+  <br> [stat.CO]
+
+  <p>Cross-fitting is a key ingredient in many semiparametric estimation procedures, such as double/debiased machine learning (DML), enabling valid estimation of low-dimensional targets in the presence of high-dimensional nuisance functions by enforcing out-of-sample use of nuisance predictions. crossfit is an R package that provides a general-purpose, estimator-agnostic cross-fitting engine. Users specify (i) a target functional and (ii) a directed acyclic graph (DAG) of nuisance models, with node-specific training fold widths and target-specific evaluation windows. The engine executes a reproducible schedule over folds, panels, and repetitions, returning either a scalar estimate (mode=”estimate”) or a cross-fitted predictor function for application to new data (mode=”predict”).
+  Beyond standard cross-fitting, crossfit implements fold-allocation modes that control how training data are shared across nuisance components, including disjoint and independence-enforcing allocations that duplicate reused nodes to reduce dependence between nuisance branches. The implementation targets simulation-heavy benchmarking and method development, with explicit and auditable schedules, defensive validation of specifications and nuisance dependencies, reuse-aware caching to avoid redundant refits, and failure isolation policies for large experiment grids. The crossfit package is available on CRAN, openly developed on GitHub under GPL-3, and is intended as a lightweight, tested foundation to prototype and empirically evaluate cross-fitted estimators with explicit control over fold geometry, dependence, and computation.</p>
+
+<p><a href="https://arxiv.org/abs/2605.15856">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
