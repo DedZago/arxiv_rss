@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Stein Diffusion Guidance: Training-Free Posterior Correction for Sampling Beyond High-Density Regions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Stein Diffusion Guidance: Training-Free Posterior Correction for Sampling Beyond High-Density Regions" />
+<meta name="author" content="Van Khoa Nguyen, Lionel Blondé, Alexandros Kalousis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Training-free diffusion guidance offers a flexible framework for leveraging off-the-shelf classifiers without additional training. Yet, current approaches hinge on posterior approximations via Tweedie’s formula, which often yield unreliable guidance, particularly in low-density regions. Stochastic optimal control (SOC), in contrast, enables principled posterior sampling but remains computationally prohibitive for efficient inference. In this work, we reconcile the strengths of these paradigms by introducing Stein Diffusion Guidance (SDG), a novel training-free framework grounded in a surrogate SOC objective. We establish a new theoretical bound on the SOC value function, revealing the necessity of correcting approximate posteriors to reflect true diffusion dynamics. Building on Stein variational inference, SDG computes the steepest descent direction that minimizes the Kullback-Leibler divergence between approximate and true posteriors. By integrating a principled Stein correction mechanism along with a novel running cost functional, SDG enables effective guidance in low-density regions. Our experiments on diverse image-guidance tasks and on challenging small-ligand sampling for protein docking suggest that SDG consistently outperforms standard training-free guidance methods and highlights its potential for broader posterior sampling problems beyond high-density regimes." />
+<meta property="og:description" content="Training-free diffusion guidance offers a flexible framework for leveraging off-the-shelf classifiers without additional training. Yet, current approaches hinge on posterior approximations via Tweedie’s formula, which often yield unreliable guidance, particularly in low-density regions. Stochastic optimal control (SOC), in contrast, enables principled posterior sampling but remains computationally prohibitive for efficient inference. In this work, we reconcile the strengths of these paradigms by introducing Stein Diffusion Guidance (SDG), a novel training-free framework grounded in a surrogate SOC objective. We establish a new theoretical bound on the SOC value function, revealing the necessity of correcting approximate posteriors to reflect true diffusion dynamics. Building on Stein variational inference, SDG computes the steepest descent direction that minimizes the Kullback-Leibler divergence between approximate and true posteriors. By integrating a principled Stein correction mechanism along with a novel running cost functional, SDG enables effective guidance in low-density regions. Our experiments on diverse image-guidance tasks and on challenging small-ligand sampling for protein docking suggest that SDG consistently outperforms standard training-free guidance methods and highlights its potential for broader posterior sampling problems beyond high-density regimes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/19/SteinDiffusionGuidanceTrainingFreePosteriorCorrectionforSamplingBeyondHighDensityRegions.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/19/SteinDiffusionGuidanceTrainingFreePosteriorCorrectionforSamplingBeyondHighDensityRegions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stein Diffusion Guidance: Training-Free Posterior Correction for Sampling Beyond High-Density Regions" />
+<script type="application/ld+json">
+{"description":"Training-free diffusion guidance offers a flexible framework for leveraging off-the-shelf classifiers without additional training. Yet, current approaches hinge on posterior approximations via Tweedie’s formula, which often yield unreliable guidance, particularly in low-density regions. Stochastic optimal control (SOC), in contrast, enables principled posterior sampling but remains computationally prohibitive for efficient inference. In this work, we reconcile the strengths of these paradigms by introducing Stein Diffusion Guidance (SDG), a novel training-free framework grounded in a surrogate SOC objective. We establish a new theoretical bound on the SOC value function, revealing the necessity of correcting approximate posteriors to reflect true diffusion dynamics. Building on Stein variational inference, SDG computes the steepest descent direction that minimizes the Kullback-Leibler divergence between approximate and true posteriors. By integrating a principled Stein correction mechanism along with a novel running cost functional, SDG enables effective guidance in low-density regions. Our experiments on diverse image-guidance tasks and on challenging small-ligand sampling for protein docking suggest that SDG consistently outperforms standard training-free guidance methods and highlights its potential for broader posterior sampling problems beyond high-density regimes.","author":{"@type":"Person","name":"Van Khoa Nguyen, Lionel Blondé, Alexandros Kalousis"},"datePublished":"2026-05-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/19/SteinDiffusionGuidanceTrainingFreePosteriorCorrectionforSamplingBeyondHighDensityRegions.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/19/SteinDiffusionGuidanceTrainingFreePosteriorCorrectionforSamplingBeyondHighDensityRegions.html","headline":"Stein Diffusion Guidance: Training-Free Posterior Correction for Sampling Beyond High-Density Regions","@type":"BlogPosting","dateModified":"2026-05-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-19 00:00:00 +0000">05-19</time>
+  </p>
+  
+  <h1>Stein Diffusion Guidance: Training-Free Posterior Correction for Sampling Beyond High-Density Regions</h1>
+  <br>Van Khoa Nguyen, Lionel Blondé, Alexandros Kalousis</h3>
+  <br> [stat.ML]
+
+  <p>Training-free diffusion guidance offers a flexible framework for leveraging off-the-shelf classifiers without additional training. Yet, current approaches hinge on posterior approximations via Tweedie’s formula, which often yield unreliable guidance, particularly in low-density regions. Stochastic optimal control (SOC), in contrast, enables principled posterior sampling but remains computationally prohibitive for efficient inference. In this work, we reconcile the strengths of these paradigms by introducing Stein Diffusion Guidance (SDG), a novel training-free framework grounded in a surrogate SOC objective. We establish a new theoretical bound on the SOC value function, revealing the necessity of correcting approximate posteriors to reflect true diffusion dynamics. Building on Stein variational inference, SDG computes the steepest descent direction that minimizes the Kullback-Leibler divergence between approximate and true posteriors. By integrating a principled Stein correction mechanism along with a novel running cost functional, SDG enables effective guidance in low-density regions. Our experiments on diverse image-guidance tasks and on challenging small-ligand sampling for protein docking suggest that SDG consistently outperforms standard training-free guidance methods and highlights its potential for broader posterior sampling problems beyond high-density regimes.</p>
+
+<p><a href="https://arxiv.org/abs/2507.05482">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

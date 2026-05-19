@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reframing preprocessing selection as model-internal calibration in near-infrared spectroscopy: A large-scale benchmark of operator-adaptive PLS and Ridge models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Reframing preprocessing selection as model-internal calibration in near-infrared spectroscopy: A large-scale benchmark of operator-adaptive PLS and Ridge models" />
+<meta name="author" content="Gregory Beurier, Robin Reiter, Camille Noûs, Lauriane Rouan, Denis Cornet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Preprocessing screening is often the most expensive part of a near-infrared spectroscopy calibration workflow. It works because smoothing, derivatives, detrending and related filters change the spectral directions seen by PLS or Ridge regression, but a full external search repeatedly refits nearly the same linear model. This paper studies the case where that search can be collapsed into one calibration step. For strict linear preprocessing operators, the transformed PLS cross-covariance satisfies (X A^T)^T Y = A X^T Y, and Ridge regression depends on the operator-induced kernel X A^T A X^T. These identities allow a finite operator bank to be screened inside the model while retaining original-wavelength coefficients. Sample-adaptive or fitted corrections such as SNV, MSC, EMSC and ASLS remain fold-local branches, not absorbed into the algebra. The study uses the AOM benchmark cohort: 61 regression rows and 17 classification rows in the manifest. On the main regression denominator (N=32), plain compact-bank AOM-PLS records median RMSEP ratios of 0.991 against PLS-default and 0.990 against PLS-HPO; the selected ASLS-AOM-compact-cv5 branch records 0.985 and 1.002 on the same two references. The plain AOMRidge-global-compact-none baseline records 0.974 against Ridge-default and 0.984 against Ridge-HPO, while the selected AOMRidge-Blender-headline-spxy3 records 0.918 and 0.966. The selected classifier, AOM-PLS-DA-global-simpls-covariance, improves balanced accuracy by 0.159 on N=13 datasets with 12/13 wins. The runtime gap is the practical result: PLS-HPO takes a median total time of 710.81 s per run, whereas the selected AOM-PLS branch takes 1.63 s. Linear operator-adaptive calibration therefore gives comparable prediction quality to exhaustive preprocessing screening, with orders-of-magnitude less fitting time for PLS." />
+<meta property="og:description" content="Preprocessing screening is often the most expensive part of a near-infrared spectroscopy calibration workflow. It works because smoothing, derivatives, detrending and related filters change the spectral directions seen by PLS or Ridge regression, but a full external search repeatedly refits nearly the same linear model. This paper studies the case where that search can be collapsed into one calibration step. For strict linear preprocessing operators, the transformed PLS cross-covariance satisfies (X A^T)^T Y = A X^T Y, and Ridge regression depends on the operator-induced kernel X A^T A X^T. These identities allow a finite operator bank to be screened inside the model while retaining original-wavelength coefficients. Sample-adaptive or fitted corrections such as SNV, MSC, EMSC and ASLS remain fold-local branches, not absorbed into the algebra. The study uses the AOM benchmark cohort: 61 regression rows and 17 classification rows in the manifest. On the main regression denominator (N=32), plain compact-bank AOM-PLS records median RMSEP ratios of 0.991 against PLS-default and 0.990 against PLS-HPO; the selected ASLS-AOM-compact-cv5 branch records 0.985 and 1.002 on the same two references. The plain AOMRidge-global-compact-none baseline records 0.974 against Ridge-default and 0.984 against Ridge-HPO, while the selected AOMRidge-Blender-headline-spxy3 records 0.918 and 0.966. The selected classifier, AOM-PLS-DA-global-simpls-covariance, improves balanced accuracy by 0.159 on N=13 datasets with 12/13 wins. The runtime gap is the practical result: PLS-HPO takes a median total time of 710.81 s per run, whereas the selected AOM-PLS branch takes 1.63 s. Linear operator-adaptive calibration therefore gives comparable prediction quality to exhaustive preprocessing screening, with orders-of-magnitude less fitting time for PLS." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/19/ReframingpreprocessingselectionasmodelinternalcalibrationinnearinfraredspectroscopyAlargescalebenchmarkofoperatoradaptivePLSandRidgemodels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/19/ReframingpreprocessingselectionasmodelinternalcalibrationinnearinfraredspectroscopyAlargescalebenchmarkofoperatoradaptivePLSandRidgemodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reframing preprocessing selection as model-internal calibration in near-infrared spectroscopy: A large-scale benchmark of operator-adaptive PLS and Ridge models" />
+<script type="application/ld+json">
+{"description":"Preprocessing screening is often the most expensive part of a near-infrared spectroscopy calibration workflow. It works because smoothing, derivatives, detrending and related filters change the spectral directions seen by PLS or Ridge regression, but a full external search repeatedly refits nearly the same linear model. This paper studies the case where that search can be collapsed into one calibration step. For strict linear preprocessing operators, the transformed PLS cross-covariance satisfies (X A^T)^T Y = A X^T Y, and Ridge regression depends on the operator-induced kernel X A^T A X^T. These identities allow a finite operator bank to be screened inside the model while retaining original-wavelength coefficients. Sample-adaptive or fitted corrections such as SNV, MSC, EMSC and ASLS remain fold-local branches, not absorbed into the algebra. The study uses the AOM benchmark cohort: 61 regression rows and 17 classification rows in the manifest. On the main regression denominator (N=32), plain compact-bank AOM-PLS records median RMSEP ratios of 0.991 against PLS-default and 0.990 against PLS-HPO; the selected ASLS-AOM-compact-cv5 branch records 0.985 and 1.002 on the same two references. The plain AOMRidge-global-compact-none baseline records 0.974 against Ridge-default and 0.984 against Ridge-HPO, while the selected AOMRidge-Blender-headline-spxy3 records 0.918 and 0.966. The selected classifier, AOM-PLS-DA-global-simpls-covariance, improves balanced accuracy by 0.159 on N=13 datasets with 12/13 wins. The runtime gap is the practical result: PLS-HPO takes a median total time of 710.81 s per run, whereas the selected AOM-PLS branch takes 1.63 s. Linear operator-adaptive calibration therefore gives comparable prediction quality to exhaustive preprocessing screening, with orders-of-magnitude less fitting time for PLS.","author":{"@type":"Person","name":"Gregory Beurier, Robin Reiter, Camille Noûs, Lauriane Rouan, Denis Cornet"},"datePublished":"2026-05-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/19/ReframingpreprocessingselectionasmodelinternalcalibrationinnearinfraredspectroscopyAlargescalebenchmarkofoperatoradaptivePLSandRidgemodels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/19/ReframingpreprocessingselectionasmodelinternalcalibrationinnearinfraredspectroscopyAlargescalebenchmarkofoperatoradaptivePLSandRidgemodels.html","headline":"Reframing preprocessing selection as model-internal calibration in near-infrared spectroscopy: A large-scale benchmark of operator-adaptive PLS and Ridge models","@type":"BlogPosting","dateModified":"2026-05-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-19 00:00:00 +0000">05-19</time>
+  </p>
+  
+  <h1>Reframing preprocessing selection as model-internal calibration in near-infrared spectroscopy: A large-scale benchmark of operator-adaptive PLS and Ridge models</h1>
+  <br>Gregory Beurier, Robin Reiter, Camille Noûs, Lauriane Rouan, Denis Cornet</h3>
+  <br> [stat.ML]
+
+  <p>Preprocessing screening is often the most expensive part of a near-infrared spectroscopy calibration workflow. It works because smoothing, derivatives, detrending and related filters change the spectral directions seen by PLS or Ridge regression, but a full external search repeatedly refits nearly the same linear model. This paper studies the case where that search can be collapsed into one calibration step.
+  For strict linear preprocessing operators, the transformed PLS cross-covariance satisfies (X A^T)^T Y = A X^T Y, and Ridge regression depends on the operator-induced kernel X A^T A X^T. These identities allow a finite operator bank to be screened inside the model while retaining original-wavelength coefficients. Sample-adaptive or fitted corrections such as SNV, MSC, EMSC and ASLS remain fold-local branches, not absorbed into the algebra.
+  The study uses the AOM benchmark cohort: 61 regression rows and 17 classification rows in the manifest. On the main regression denominator (N=32), plain compact-bank AOM-PLS records median RMSEP ratios of 0.991 against PLS-default and 0.990 against PLS-HPO; the selected ASLS-AOM-compact-cv5 branch records 0.985 and 1.002 on the same two references. The plain AOMRidge-global-compact-none baseline records 0.974 against Ridge-default and 0.984 against Ridge-HPO, while the selected AOMRidge-Blender-headline-spxy3 records 0.918 and 0.966. The selected classifier, AOM-PLS-DA-global-simpls-covariance, improves balanced accuracy by 0.159 on N=13 datasets with 12/13 wins. The runtime gap is the practical result: PLS-HPO takes a median total time of 710.81 s per run, whereas the selected AOM-PLS branch takes 1.63 s. Linear operator-adaptive calibration therefore gives comparable prediction quality to exhaustive preprocessing screening, with orders-of-magnitude less fitting time for PLS.</p>
+
+<p><a href="https://arxiv.org/abs/2605.13587">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Marginals Match but Structure Fails: Covariance Fidelity in Generative Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When Marginals Match but Structure Fails: Covariance Fidelity in Generative Models" />
+<meta name="author" content="Nazia Riasat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Generative models are increasingly deployed as substitutes for real data in downstream scientific workflows, yet standard evaluation criteria remain focused on marginal distribution matching. We argue that this represents a fundamental gap: downstream inference is rarely a marginal operation, and a model that passes every univariate diagnostic can still produce structurally unreliable synthetic data. We introduce covariance-level dependence fidelity, measured by D_Sigma(P,Q) =   Sigma_P - Sigma_Q   _F, as a principled, computable criterion for evaluating whether a generative model preserves the joint structure of data beyond its univariate marginals. Three results formalise this criterion. First, marginal fidelity provides no constraint on dependence structure: D_Sigma can be made arbitrarily large while all univariate marginals match exactly. Second, covariance divergence induces quantifiable downstream instability, including sign reversals in population regression coefficients. Third, bounding D_Sigma provides positive stability guarantees for dependence-sensitive procedures such as PCA via Davis-Kahan-type bounds. Empirical validation across three domains, image data (Fashion-MNIST VAE, n = 60,000), bulk RNA-seq (TCGA-BRCA, n = 1,111), and a small-sample stress test (Alzheimer’s gene expression, n = 113), shows that D_Sigma/delta consistently distinguishes structure-discarding from structure-preserving generators in cases where standard marginal diagnostics show little separation, confirming that covariance-level fidelity provides information orthogonal to existing evaluation metrics across domains and sample sizes." />
+<meta property="og:description" content="Generative models are increasingly deployed as substitutes for real data in downstream scientific workflows, yet standard evaluation criteria remain focused on marginal distribution matching. We argue that this represents a fundamental gap: downstream inference is rarely a marginal operation, and a model that passes every univariate diagnostic can still produce structurally unreliable synthetic data. We introduce covariance-level dependence fidelity, measured by D_Sigma(P,Q) =   Sigma_P - Sigma_Q   _F, as a principled, computable criterion for evaluating whether a generative model preserves the joint structure of data beyond its univariate marginals. Three results formalise this criterion. First, marginal fidelity provides no constraint on dependence structure: D_Sigma can be made arbitrarily large while all univariate marginals match exactly. Second, covariance divergence induces quantifiable downstream instability, including sign reversals in population regression coefficients. Third, bounding D_Sigma provides positive stability guarantees for dependence-sensitive procedures such as PCA via Davis-Kahan-type bounds. Empirical validation across three domains, image data (Fashion-MNIST VAE, n = 60,000), bulk RNA-seq (TCGA-BRCA, n = 1,111), and a small-sample stress test (Alzheimer’s gene expression, n = 113), shows that D_Sigma/delta consistently distinguishes structure-discarding from structure-preserving generators in cases where standard marginal diagnostics show little separation, confirming that covariance-level fidelity provides information orthogonal to existing evaluation metrics across domains and sample sizes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/19/WhenMarginalsMatchbutStructureFailsCovarianceFidelityinGenerativeModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/19/WhenMarginalsMatchbutStructureFailsCovarianceFidelityinGenerativeModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When Marginals Match but Structure Fails: Covariance Fidelity in Generative Models" />
+<script type="application/ld+json">
+{"description":"Generative models are increasingly deployed as substitutes for real data in downstream scientific workflows, yet standard evaluation criteria remain focused on marginal distribution matching. We argue that this represents a fundamental gap: downstream inference is rarely a marginal operation, and a model that passes every univariate diagnostic can still produce structurally unreliable synthetic data. We introduce covariance-level dependence fidelity, measured by D_Sigma(P,Q) =   Sigma_P - Sigma_Q   _F, as a principled, computable criterion for evaluating whether a generative model preserves the joint structure of data beyond its univariate marginals. Three results formalise this criterion. First, marginal fidelity provides no constraint on dependence structure: D_Sigma can be made arbitrarily large while all univariate marginals match exactly. Second, covariance divergence induces quantifiable downstream instability, including sign reversals in population regression coefficients. Third, bounding D_Sigma provides positive stability guarantees for dependence-sensitive procedures such as PCA via Davis-Kahan-type bounds. Empirical validation across three domains, image data (Fashion-MNIST VAE, n = 60,000), bulk RNA-seq (TCGA-BRCA, n = 1,111), and a small-sample stress test (Alzheimer’s gene expression, n = 113), shows that D_Sigma/delta consistently distinguishes structure-discarding from structure-preserving generators in cases where standard marginal diagnostics show little separation, confirming that covariance-level fidelity provides information orthogonal to existing evaluation metrics across domains and sample sizes.","author":{"@type":"Person","name":"Nazia Riasat"},"datePublished":"2026-05-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/19/WhenMarginalsMatchbutStructureFailsCovarianceFidelityinGenerativeModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/19/WhenMarginalsMatchbutStructureFailsCovarianceFidelityinGenerativeModels.html","headline":"When Marginals Match but Structure Fails: Covariance Fidelity in Generative Models","@type":"BlogPosting","dateModified":"2026-05-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-19 00:00:00 +0000">05-19</time>
+  </p>
+  
+  <h1>When Marginals Match but Structure Fails: Covariance Fidelity in Generative Models</h1>
+  <br>Nazia Riasat</h3>
+  <br> [stat.ML,stat.ME]
+
+  <table>
+  <tbody>
+    <tr>
+      <td>Generative models are increasingly deployed as substitutes for real data in downstream scientific workflows, yet standard evaluation criteria remain focused on marginal distribution matching. We argue that this represents a fundamental gap: downstream inference is rarely a marginal operation, and a model that passes every univariate diagnostic can still produce structurally unreliable synthetic data. We introduce covariance-level dependence fidelity, measured by D_Sigma(P,Q) =</td>
+      <td> </td>
+      <td>Sigma_P - Sigma_Q</td>
+      <td> </td>
+      <td>_F, as a principled, computable criterion for evaluating whether a generative model preserves the joint structure of data beyond its univariate marginals. Three results formalise this criterion. First, marginal fidelity provides no constraint on dependence structure: D_Sigma can be made arbitrarily large while all univariate marginals match exactly. Second, covariance divergence induces quantifiable downstream instability, including sign reversals in population regression coefficients. Third, bounding D_Sigma provides positive stability guarantees for dependence-sensitive procedures such as PCA via Davis-Kahan-type bounds. Empirical validation across three domains, image data (Fashion-MNIST VAE, n = 60,000), bulk RNA-seq (TCGA-BRCA, n = 1,111), and a small-sample stress test (Alzheimer’s gene expression, n = 113), shows that D_Sigma/delta consistently distinguishes structure-discarding from structure-preserving generators in cases where standard marginal diagnostics show little separation, confirming that covariance-level fidelity provides information orthogonal to existing evaluation metrics across domains and sample sizes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://arxiv.org/abs/2603.17041">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

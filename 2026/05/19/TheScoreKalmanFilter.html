@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Score Kalman Filter</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Score Kalman Filter" />
+<meta name="author" content="Kaito Iwasaki, Anthony Bloch, Taeyoung Lee, Maani Ghaffari" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A central obstacle in nonlinear Bayesian filtering is representing the belief distribution. Moment-based filters address this by propagating polynomial moments and reconstructing a density from them. Recent work completes the predict-update loop via the maximum-entropy (MaxEnt) principle, but each step requires the partition function and its gradient, both $n$-dimensional integrals whose cost scales exponentially, restricting the demonstrated MaxEnt moment filtering to $n \le 4$. We avoid the partition function entirely by combining score matching with Stein’s identity. In our setting, score matching reduces the density fit to a single linear solve whose coefficients are assembled directly from the propagated moments. The same parameters then drive Stein’s identity to close the moment hierarchy during prediction and to recover posterior moments after each Bayesian update, keeping the full predict-update loop free of partition function evaluation. The resulting Score Kalman Filter (SKF) reduces to the classical information-form Kalman filter as a special case and performs every step through linear algebra. On nonlinear coupled-oscillator networks, the SKF runs through $n=20$ and reports lower RMSE than the EKF, UKF, EnKF, and particle-filter baselines on the tested synthetic benchmarks." />
+<meta property="og:description" content="A central obstacle in nonlinear Bayesian filtering is representing the belief distribution. Moment-based filters address this by propagating polynomial moments and reconstructing a density from them. Recent work completes the predict-update loop via the maximum-entropy (MaxEnt) principle, but each step requires the partition function and its gradient, both $n$-dimensional integrals whose cost scales exponentially, restricting the demonstrated MaxEnt moment filtering to $n \le 4$. We avoid the partition function entirely by combining score matching with Stein’s identity. In our setting, score matching reduces the density fit to a single linear solve whose coefficients are assembled directly from the propagated moments. The same parameters then drive Stein’s identity to close the moment hierarchy during prediction and to recover posterior moments after each Bayesian update, keeping the full predict-update loop free of partition function evaluation. The resulting Score Kalman Filter (SKF) reduces to the classical information-form Kalman filter as a special case and performs every step through linear algebra. On nonlinear coupled-oscillator networks, the SKF runs through $n=20$ and reports lower RMSE than the EKF, UKF, EnKF, and particle-filter baselines on the tested synthetic benchmarks." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/19/TheScoreKalmanFilter.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/19/TheScoreKalmanFilter.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Score Kalman Filter" />
+<script type="application/ld+json">
+{"description":"A central obstacle in nonlinear Bayesian filtering is representing the belief distribution. Moment-based filters address this by propagating polynomial moments and reconstructing a density from them. Recent work completes the predict-update loop via the maximum-entropy (MaxEnt) principle, but each step requires the partition function and its gradient, both $n$-dimensional integrals whose cost scales exponentially, restricting the demonstrated MaxEnt moment filtering to $n \\le 4$. We avoid the partition function entirely by combining score matching with Stein’s identity. In our setting, score matching reduces the density fit to a single linear solve whose coefficients are assembled directly from the propagated moments. The same parameters then drive Stein’s identity to close the moment hierarchy during prediction and to recover posterior moments after each Bayesian update, keeping the full predict-update loop free of partition function evaluation. The resulting Score Kalman Filter (SKF) reduces to the classical information-form Kalman filter as a special case and performs every step through linear algebra. On nonlinear coupled-oscillator networks, the SKF runs through $n=20$ and reports lower RMSE than the EKF, UKF, EnKF, and particle-filter baselines on the tested synthetic benchmarks.","author":{"@type":"Person","name":"Kaito Iwasaki, Anthony Bloch, Taeyoung Lee, Maani Ghaffari"},"datePublished":"2026-05-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/19/TheScoreKalmanFilter.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/19/TheScoreKalmanFilter.html","headline":"The Score Kalman Filter","@type":"BlogPosting","dateModified":"2026-05-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-19 00:00:00 +0000">05-19</time>
+  </p>
+  
+  <h1>The Score Kalman Filter</h1>
+  <br>Kaito Iwasaki, Anthony Bloch, Taeyoung Lee, Maani Ghaffari</h3>
+  <br> [stat.ML]
+
+  <p>A central obstacle in nonlinear Bayesian filtering is representing the belief distribution. Moment-based filters address this by propagating polynomial moments and reconstructing a density from them. Recent work completes the predict-update loop via the maximum-entropy (MaxEnt) principle, but each step requires the partition function and its gradient, both $n$-dimensional integrals whose cost scales exponentially, restricting the demonstrated MaxEnt moment filtering to $n \le 4$. We avoid the partition function entirely by combining score matching with Stein’s identity. In our setting, score matching reduces the density fit to a single linear solve whose coefficients are assembled directly from the propagated moments. The same parameters then drive Stein’s identity to close the moment hierarchy during prediction and to recover posterior moments after each Bayesian update, keeping the full predict-update loop free of partition function evaluation. The resulting Score Kalman Filter (SKF) reduces to the classical information-form Kalman filter as a special case and performs every step through linear algebra. On nonlinear coupled-oscillator networks, the SKF runs through $n=20$ and reports lower RMSE than the EKF, UKF, EnKF, and particle-filter baselines on the tested synthetic benchmarks.</p>
+
+<p><a href="https://arxiv.org/abs/2605.16644">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

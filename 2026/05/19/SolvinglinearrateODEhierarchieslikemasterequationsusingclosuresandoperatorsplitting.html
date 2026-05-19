@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Solving linear-rate ODE hierarchies (like master equations) using closures and operator splitting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Solving linear-rate ODE hierarchies (like master equations) using closures and operator splitting" />
+<meta name="author" content="Joshua C Chang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Countably infinite systems of linear ODEs arise as forward equations for many continuous-time Markov processes. The standard recipe – truncate to a finite cap N and exponentiate – pays cubic cost in N and a time-growing boundary-feedback bias. We identify a structural condition on the rates, L_{n+r,n} = alpha_r n + beta_r (“linear-rate”), under which the generating function G(z,t) = sum_n x_n(t) z^n satisfies a first-order linear PDE in z, and the method of characteristics yields a composition-multiplier representation G(z,t) = K_t(z) G(Phi_t(z), 0). The Taylor coefficients of Phi_t and K_t on any output window {0,…,N} are determined exactly by a closed lower-triangular polynomial ODE on R^{2(N+1)}, independent of any coefficients above N. Truncation enters only through the support M_0 of the initial law, set independently of N. For binary birth-death the closure collapses to the geometric tail p_n(t) = p_1(t) rho(t)^{n-1} with rho(t) = lambda(1 - e^{-(mu-lambda)t})/(mu - lambda e^{-(mu-lambda)t}). The linear-rate class spans Markov branching with immigration, multi-type branching, matrix-valued telegraph and G/R elongation, and signed or non-stochastic hierarchies. When the generator decomposes as L = A + B with A linear-rate and B non-affine (Schlogl bistable, predator-prey, lattice reaction-diffusion), we pair the closure with Strang splitting on B; Richardson extrapolation lifts the time order to Delta-t^4 at ~3x wall clock. On the Schlogl problem at V=500, N=8,000, the split runs 6.3x faster than dense Pade and 20x faster than sparse Krylov expv. For the stationary regime, a closure-Strang power iteration extends the same machinery to multi-dimensional product-state-space generators where sparse LU hits OOM/OOT or boundary-projection bias at usable caps. Numerical experiments locate where each route wins and where it is dominated by standard tools." />
+<meta property="og:description" content="Countably infinite systems of linear ODEs arise as forward equations for many continuous-time Markov processes. The standard recipe – truncate to a finite cap N and exponentiate – pays cubic cost in N and a time-growing boundary-feedback bias. We identify a structural condition on the rates, L_{n+r,n} = alpha_r n + beta_r (“linear-rate”), under which the generating function G(z,t) = sum_n x_n(t) z^n satisfies a first-order linear PDE in z, and the method of characteristics yields a composition-multiplier representation G(z,t) = K_t(z) G(Phi_t(z), 0). The Taylor coefficients of Phi_t and K_t on any output window {0,…,N} are determined exactly by a closed lower-triangular polynomial ODE on R^{2(N+1)}, independent of any coefficients above N. Truncation enters only through the support M_0 of the initial law, set independently of N. For binary birth-death the closure collapses to the geometric tail p_n(t) = p_1(t) rho(t)^{n-1} with rho(t) = lambda(1 - e^{-(mu-lambda)t})/(mu - lambda e^{-(mu-lambda)t}). The linear-rate class spans Markov branching with immigration, multi-type branching, matrix-valued telegraph and G/R elongation, and signed or non-stochastic hierarchies. When the generator decomposes as L = A + B with A linear-rate and B non-affine (Schlogl bistable, predator-prey, lattice reaction-diffusion), we pair the closure with Strang splitting on B; Richardson extrapolation lifts the time order to Delta-t^4 at ~3x wall clock. On the Schlogl problem at V=500, N=8,000, the split runs 6.3x faster than dense Pade and 20x faster than sparse Krylov expv. For the stationary regime, a closure-Strang power iteration extends the same machinery to multi-dimensional product-state-space generators where sparse LU hits OOM/OOT or boundary-projection bias at usable caps. Numerical experiments locate where each route wins and where it is dominated by standard tools." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/19/SolvinglinearrateODEhierarchieslikemasterequationsusingclosuresandoperatorsplitting.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/19/SolvinglinearrateODEhierarchieslikemasterequationsusingclosuresandoperatorsplitting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Solving linear-rate ODE hierarchies (like master equations) using closures and operator splitting" />
+<script type="application/ld+json">
+{"description":"Countably infinite systems of linear ODEs arise as forward equations for many continuous-time Markov processes. The standard recipe – truncate to a finite cap N and exponentiate – pays cubic cost in N and a time-growing boundary-feedback bias. We identify a structural condition on the rates, L_{n+r,n} = alpha_r n + beta_r (“linear-rate”), under which the generating function G(z,t) = sum_n x_n(t) z^n satisfies a first-order linear PDE in z, and the method of characteristics yields a composition-multiplier representation G(z,t) = K_t(z) G(Phi_t(z), 0). The Taylor coefficients of Phi_t and K_t on any output window {0,…,N} are determined exactly by a closed lower-triangular polynomial ODE on R^{2(N+1)}, independent of any coefficients above N. Truncation enters only through the support M_0 of the initial law, set independently of N. For binary birth-death the closure collapses to the geometric tail p_n(t) = p_1(t) rho(t)^{n-1} with rho(t) = lambda(1 - e^{-(mu-lambda)t})/(mu - lambda e^{-(mu-lambda)t}). The linear-rate class spans Markov branching with immigration, multi-type branching, matrix-valued telegraph and G/R elongation, and signed or non-stochastic hierarchies. When the generator decomposes as L = A + B with A linear-rate and B non-affine (Schlogl bistable, predator-prey, lattice reaction-diffusion), we pair the closure with Strang splitting on B; Richardson extrapolation lifts the time order to Delta-t^4 at ~3x wall clock. On the Schlogl problem at V=500, N=8,000, the split runs 6.3x faster than dense Pade and 20x faster than sparse Krylov expv. For the stationary regime, a closure-Strang power iteration extends the same machinery to multi-dimensional product-state-space generators where sparse LU hits OOM/OOT or boundary-projection bias at usable caps. Numerical experiments locate where each route wins and where it is dominated by standard tools.","author":{"@type":"Person","name":"Joshua C Chang"},"datePublished":"2026-05-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/19/SolvinglinearrateODEhierarchieslikemasterequationsusingclosuresandoperatorsplitting.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/19/SolvinglinearrateODEhierarchieslikemasterequationsusingclosuresandoperatorsplitting.html","headline":"Solving linear-rate ODE hierarchies (like master equations) using closures and operator splitting","@type":"BlogPosting","dateModified":"2026-05-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-19 00:00:00 +0000">05-19</time>
+  </p>
+  
+  <h1>Solving linear-rate ODE hierarchies (like master equations) using closures and operator splitting</h1>
+  <br>Joshua C Chang</h3>
+  <br> [stat.CO]
+
+  <p>Countably infinite systems of linear ODEs arise as forward equations for many continuous-time Markov processes. The standard recipe – truncate to a finite cap N and exponentiate – pays cubic cost in N and a time-growing boundary-feedback bias. We identify a structural condition on the rates, L_{n+r,n} = alpha_r n + beta_r (“linear-rate”), under which the generating function G(z,t) = sum_n x_n(t) z^n satisfies a first-order linear PDE in z, and the method of characteristics yields a composition-multiplier representation G(z,t) = K_t(z) G(Phi_t(z), 0). The Taylor coefficients of Phi_t and K_t on any output window {0,…,N} are determined exactly by a closed lower-triangular polynomial ODE on R^{2(N+1)}, independent of any coefficients above N. Truncation enters only through the support M_0 of the initial law, set independently of N. For binary birth-death the closure collapses to the geometric tail p_n(t) = p_1(t) rho(t)^{n-1} with rho(t) = lambda(1 - e^{-(mu-lambda)t})/(mu - lambda e^{-(mu-lambda)t}). The linear-rate class spans Markov branching with immigration, multi-type branching, matrix-valued telegraph and G/R elongation, and signed or non-stochastic hierarchies. When the generator decomposes as L = A + B with A linear-rate and B non-affine (Schlogl bistable, predator-prey, lattice reaction-diffusion), we pair the closure with Strang splitting on B; Richardson extrapolation lifts the time order to Delta-t^4 at ~3x wall clock. On the Schlogl problem at V=500, N=8,000, the split runs 6.3x faster than dense Pade and 20x faster than sparse Krylov expv. For the stationary regime, a closure-Strang power iteration extends the same machinery to multi-dimensional product-state-space generators where sparse LU hits OOM/OOT or boundary-projection bias at usable caps. Numerical experiments locate where each route wins and where it is dominated by standard tools.</p>
+
+<p><a href="https://arxiv.org/abs/2605.17186">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Geometry of Projection Heads: Conditioning, Invariance, and Collapse</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Geometry of Projection Heads: Conditioning, Invariance, and Collapse" />
+<meta name="author" content="Faris Chaudhry" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a geometric theory of projection heads in self-supervised learning by modeling the head as a trainable Riemannian metric on the backbone representation manifold. We show that linear heads perform implicit subspace whitening, while nonlinear heads adapt local metrics to satisfy the specific topological constraints of the loss, with head depth empirically dictating this capacity. Analyzing dimensional collapse, we prove that smooth nonlinear heads natively induce negative eigenvalues in the Hessian at collapsed equilibria, making them unstable. We empirically validate this by continuously tracking the optimization geometry during training, which reveals that smooth activations like Swish can generate explicit negative curvature to escape collapse, whereas linear and ReLU heads under continuous-time gradient flow cannot, relying instead on discrete-time optimization dynamics and BatchNorm. Finally, we geometrically characterize how metric degeneracy governs the information-invariance trade-off, explaining why the head must be discarded. Evaluated across contrastive and decorrelation-based objectives on foundation models, our results demonstrate that the projection head acts as a universal geometric buffer, decoupling the semantic backbone from the rigid, destructive constraints of the pretraining objective." />
+<meta property="og:description" content="We develop a geometric theory of projection heads in self-supervised learning by modeling the head as a trainable Riemannian metric on the backbone representation manifold. We show that linear heads perform implicit subspace whitening, while nonlinear heads adapt local metrics to satisfy the specific topological constraints of the loss, with head depth empirically dictating this capacity. Analyzing dimensional collapse, we prove that smooth nonlinear heads natively induce negative eigenvalues in the Hessian at collapsed equilibria, making them unstable. We empirically validate this by continuously tracking the optimization geometry during training, which reveals that smooth activations like Swish can generate explicit negative curvature to escape collapse, whereas linear and ReLU heads under continuous-time gradient flow cannot, relying instead on discrete-time optimization dynamics and BatchNorm. Finally, we geometrically characterize how metric degeneracy governs the information-invariance trade-off, explaining why the head must be discarded. Evaluated across contrastive and decorrelation-based objectives on foundation models, our results demonstrate that the projection head acts as a universal geometric buffer, decoupling the semantic backbone from the rigid, destructive constraints of the pretraining objective." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/19/TheGeometryofProjectionHeadsConditioningInvarianceandCollapse.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/19/TheGeometryofProjectionHeadsConditioningInvarianceandCollapse.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Geometry of Projection Heads: Conditioning, Invariance, and Collapse" />
+<script type="application/ld+json">
+{"description":"We develop a geometric theory of projection heads in self-supervised learning by modeling the head as a trainable Riemannian metric on the backbone representation manifold. We show that linear heads perform implicit subspace whitening, while nonlinear heads adapt local metrics to satisfy the specific topological constraints of the loss, with head depth empirically dictating this capacity. Analyzing dimensional collapse, we prove that smooth nonlinear heads natively induce negative eigenvalues in the Hessian at collapsed equilibria, making them unstable. We empirically validate this by continuously tracking the optimization geometry during training, which reveals that smooth activations like Swish can generate explicit negative curvature to escape collapse, whereas linear and ReLU heads under continuous-time gradient flow cannot, relying instead on discrete-time optimization dynamics and BatchNorm. Finally, we geometrically characterize how metric degeneracy governs the information-invariance trade-off, explaining why the head must be discarded. Evaluated across contrastive and decorrelation-based objectives on foundation models, our results demonstrate that the projection head acts as a universal geometric buffer, decoupling the semantic backbone from the rigid, destructive constraints of the pretraining objective.","author":{"@type":"Person","name":"Faris Chaudhry"},"datePublished":"2026-05-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/19/TheGeometryofProjectionHeadsConditioningInvarianceandCollapse.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/19/TheGeometryofProjectionHeadsConditioningInvarianceandCollapse.html","headline":"The Geometry of Projection Heads: Conditioning, Invariance, and Collapse","@type":"BlogPosting","dateModified":"2026-05-19T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-19 00:00:00 +0000">05-19</time>
+  </p>
+  
+  <h1>The Geometry of Projection Heads: Conditioning, Invariance, and Collapse</h1>
+  <br>Faris Chaudhry</h3>
+  <br> [stat.ML]
+
+  <p>We develop a geometric theory of projection heads in self-supervised learning by modeling the head as a trainable Riemannian metric on the backbone representation manifold. We show that linear heads perform implicit subspace whitening, while nonlinear heads adapt local metrics to satisfy the specific topological constraints of the loss, with head depth empirically dictating this capacity. Analyzing dimensional collapse, we prove that smooth nonlinear heads natively induce negative eigenvalues in the Hessian at collapsed equilibria, making them unstable. We empirically validate this by continuously tracking the optimization geometry during training, which reveals that smooth activations like Swish can generate explicit negative curvature to escape collapse, whereas linear and ReLU heads under continuous-time gradient flow cannot, relying instead on discrete-time optimization dynamics and BatchNorm. Finally, we geometrically characterize how metric degeneracy governs the information-invariance trade-off, explaining why the head must be discarded. Evaluated across contrastive and decorrelation-based objectives on foundation models, our results demonstrate that the projection head acts as a universal geometric buffer, decoupling the semantic backbone from the rigid, destructive constraints of the pretraining objective.</p>
+
+<p><a href="https://arxiv.org/abs/2605.17180">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
