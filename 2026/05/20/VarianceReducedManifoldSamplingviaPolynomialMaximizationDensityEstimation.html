@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Variance-Reduced Manifold Sampling via Polynomial-Maximization Density Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Variance-Reduced Manifold Sampling via Polynomial-Maximization Density Estimation" />
+<meta name="author" content="Serhii Zabolotnii" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Uniform sampling on implicitly defined manifolds is a core primitive in motion planning, constrained simulation, and probabilistic machine learning. MASEM addresses this problem by entropy-maximizing resampling, but its resampling weights depend on a local k-nearest-neighbour density estimate whose errors can be amplified by aggressive resampling temperatures. We ask whether a polynomial-maximization moment estimator can replace the plug-in density rule without changing the surrounding MASEM architecture. The proposed PMM-MASEM module computes shell spacings from nested k-nearest-neighbour radii, estimates their standardized cumulants, and uses a gated PMM2/PMM3 estimator only when the spacing distribution departs from the flat Exp(1) regime; otherwise it falls back to the plug-in/MLE rule. This fallback is essential: on a flat homogeneous manifold the plug-in estimator is already the MLE, so PMM should not outperform it. A local Known-DGP Monte Carlo experiment confirms this gate: the selector returns MLE on flat Exp(1) spacings and reduces density MSE by 22–36% on asymmetric gamma and boundary-spacing regimes. The evidence is not uniformly positive: PMM3 worsens a platykurtic uniform spacing law, and a lightweight resampling-proxy experiment improves seven-lobes coverage but degrades the sine and swiss-roll proxies. The current evidence therefore supports an applicability-boundary result rather than a general MASEM improvement claim." />
+<meta property="og:description" content="Uniform sampling on implicitly defined manifolds is a core primitive in motion planning, constrained simulation, and probabilistic machine learning. MASEM addresses this problem by entropy-maximizing resampling, but its resampling weights depend on a local k-nearest-neighbour density estimate whose errors can be amplified by aggressive resampling temperatures. We ask whether a polynomial-maximization moment estimator can replace the plug-in density rule without changing the surrounding MASEM architecture. The proposed PMM-MASEM module computes shell spacings from nested k-nearest-neighbour radii, estimates their standardized cumulants, and uses a gated PMM2/PMM3 estimator only when the spacing distribution departs from the flat Exp(1) regime; otherwise it falls back to the plug-in/MLE rule. This fallback is essential: on a flat homogeneous manifold the plug-in estimator is already the MLE, so PMM should not outperform it. A local Known-DGP Monte Carlo experiment confirms this gate: the selector returns MLE on flat Exp(1) spacings and reduces density MSE by 22–36% on asymmetric gamma and boundary-spacing regimes. The evidence is not uniformly positive: PMM3 worsens a platykurtic uniform spacing law, and a lightweight resampling-proxy experiment improves seven-lobes coverage but degrades the sine and swiss-roll proxies. The current evidence therefore supports an applicability-boundary result rather than a general MASEM improvement claim." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/20/VarianceReducedManifoldSamplingviaPolynomialMaximizationDensityEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/20/VarianceReducedManifoldSamplingviaPolynomialMaximizationDensityEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Variance-Reduced Manifold Sampling via Polynomial-Maximization Density Estimation" />
+<script type="application/ld+json">
+{"description":"Uniform sampling on implicitly defined manifolds is a core primitive in motion planning, constrained simulation, and probabilistic machine learning. MASEM addresses this problem by entropy-maximizing resampling, but its resampling weights depend on a local k-nearest-neighbour density estimate whose errors can be amplified by aggressive resampling temperatures. We ask whether a polynomial-maximization moment estimator can replace the plug-in density rule without changing the surrounding MASEM architecture. The proposed PMM-MASEM module computes shell spacings from nested k-nearest-neighbour radii, estimates their standardized cumulants, and uses a gated PMM2/PMM3 estimator only when the spacing distribution departs from the flat Exp(1) regime; otherwise it falls back to the plug-in/MLE rule. This fallback is essential: on a flat homogeneous manifold the plug-in estimator is already the MLE, so PMM should not outperform it. A local Known-DGP Monte Carlo experiment confirms this gate: the selector returns MLE on flat Exp(1) spacings and reduces density MSE by 22–36% on asymmetric gamma and boundary-spacing regimes. The evidence is not uniformly positive: PMM3 worsens a platykurtic uniform spacing law, and a lightweight resampling-proxy experiment improves seven-lobes coverage but degrades the sine and swiss-roll proxies. The current evidence therefore supports an applicability-boundary result rather than a general MASEM improvement claim.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/20/VarianceReducedManifoldSamplingviaPolynomialMaximizationDensityEstimation.html"},"author":{"@type":"Person","name":"Serhii Zabolotnii"},"dateModified":"2026-05-20T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/20/VarianceReducedManifoldSamplingviaPolynomialMaximizationDensityEstimation.html","headline":"Variance-Reduced Manifold Sampling via Polynomial-Maximization Density Estimation","@type":"BlogPosting","datePublished":"2026-05-20T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-20 00:00:00 +0000">05-20</time>
+  </p>
+  
+  <h1>Variance-Reduced Manifold Sampling via Polynomial-Maximization Density Estimation</h1>
+  <br>Serhii Zabolotnii</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Uniform sampling on implicitly defined manifolds is a core primitive in motion planning, constrained simulation, and probabilistic machine learning. MASEM addresses this problem by entropy-maximizing resampling, but its resampling weights depend on a local k-nearest-neighbour density estimate whose errors can be amplified by aggressive resampling temperatures. We ask whether a polynomial-maximization moment estimator can replace the plug-in density rule without changing the surrounding MASEM architecture. The proposed PMM-MASEM module computes shell spacings from nested k-nearest-neighbour radii, estimates their standardized cumulants, and uses a gated PMM2/PMM3 estimator only when the spacing distribution departs from the flat Exp(1) regime; otherwise it falls back to the plug-in/MLE rule. This fallback is essential: on a flat homogeneous manifold the plug-in estimator is already the MLE, so PMM should not outperform it. A local Known-DGP Monte Carlo experiment confirms this gate: the selector returns MLE on flat Exp(1) spacings and reduces density MSE by 22–36% on asymmetric gamma and boundary-spacing regimes. The evidence is not uniformly positive: PMM3 worsens a platykurtic uniform spacing law, and a lightweight resampling-proxy experiment improves seven-lobes coverage but degrades the sine and swiss-roll proxies. The current evidence therefore supports an applicability-boundary result rather than a general MASEM improvement claim.</p>
+
+<p><a href="https://arxiv.org/abs/2605.19938">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

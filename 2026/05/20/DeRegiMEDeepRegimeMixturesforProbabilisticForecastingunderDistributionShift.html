@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DeRegiME: Deep Regime Mixtures for Probabilistic Forecasting under Distribution Shift</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="DeRegiME: Deep Regime Mixtures for Probabilistic Forecasting under Distribution Shift" />
+<meta name="author" content="Kieran Wood, Stefan Zohren, Stephen J. Roberts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce DeRegiME – Deep Regime Mixture of Experts – a direct multi-horizon probabilistic forecaster that separates latent uncertainty regimes from the underlying signal and softly assigns each forecast location to learned recurring regimes using a sparse variational Gaussian process (GP) whose nonstationary regime-mixing kernel and Student-t likelihood combine per-regime sub-kernels and noise processes via a shared gate. This yields a single sparse-GP posterior, not a mixture of GP experts. DeRegiME addresses a key limitation of neural forecasters: point forecasts discard residual uncertainty, and probabilistic heads – whether single marginals, uninterpreted mixtures, quantile sets, or diffusion samples – rarely expose the regime structure of the residual. Yet distribution shift in noisy heteroskedastic time series may be abrupt, gradual, or horizon-dependent and often appears in residual uncertainty rather than the conditional mean. DeRegiME yields an interpretable mean-residual-noise decomposition with a direct-sum feature-space representation that anchors regimes as clusters of residual similarity whose transitions surface as implicit changepoints. The effective number of regimes is pruned by the stick-breaking gate. We prove kernel validity and predictive-density propriety, and across ten benchmarks and three encoder grids DeRegiME improves negative log predictive density (NLPD) by 20.3% over the strongest encoder-matched baseline, a DeepAR/GluonTS-style dynamic Student-t head, with parallel gains on CRPS (3.0%) and MSE (4.7%). Improvements are consistent across all datasets, which span abrupt, gradual, and seasonal shifts." />
+<meta property="og:description" content="We introduce DeRegiME – Deep Regime Mixture of Experts – a direct multi-horizon probabilistic forecaster that separates latent uncertainty regimes from the underlying signal and softly assigns each forecast location to learned recurring regimes using a sparse variational Gaussian process (GP) whose nonstationary regime-mixing kernel and Student-t likelihood combine per-regime sub-kernels and noise processes via a shared gate. This yields a single sparse-GP posterior, not a mixture of GP experts. DeRegiME addresses a key limitation of neural forecasters: point forecasts discard residual uncertainty, and probabilistic heads – whether single marginals, uninterpreted mixtures, quantile sets, or diffusion samples – rarely expose the regime structure of the residual. Yet distribution shift in noisy heteroskedastic time series may be abrupt, gradual, or horizon-dependent and often appears in residual uncertainty rather than the conditional mean. DeRegiME yields an interpretable mean-residual-noise decomposition with a direct-sum feature-space representation that anchors regimes as clusters of residual similarity whose transitions surface as implicit changepoints. The effective number of regimes is pruned by the stick-breaking gate. We prove kernel validity and predictive-density propriety, and across ten benchmarks and three encoder grids DeRegiME improves negative log predictive density (NLPD) by 20.3% over the strongest encoder-matched baseline, a DeepAR/GluonTS-style dynamic Student-t head, with parallel gains on CRPS (3.0%) and MSE (4.7%). Improvements are consistent across all datasets, which span abrupt, gradual, and seasonal shifts." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/20/DeRegiMEDeepRegimeMixturesforProbabilisticForecastingunderDistributionShift.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/20/DeRegiMEDeepRegimeMixturesforProbabilisticForecastingunderDistributionShift.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DeRegiME: Deep Regime Mixtures for Probabilistic Forecasting under Distribution Shift" />
+<script type="application/ld+json">
+{"description":"We introduce DeRegiME – Deep Regime Mixture of Experts – a direct multi-horizon probabilistic forecaster that separates latent uncertainty regimes from the underlying signal and softly assigns each forecast location to learned recurring regimes using a sparse variational Gaussian process (GP) whose nonstationary regime-mixing kernel and Student-t likelihood combine per-regime sub-kernels and noise processes via a shared gate. This yields a single sparse-GP posterior, not a mixture of GP experts. DeRegiME addresses a key limitation of neural forecasters: point forecasts discard residual uncertainty, and probabilistic heads – whether single marginals, uninterpreted mixtures, quantile sets, or diffusion samples – rarely expose the regime structure of the residual. Yet distribution shift in noisy heteroskedastic time series may be abrupt, gradual, or horizon-dependent and often appears in residual uncertainty rather than the conditional mean. DeRegiME yields an interpretable mean-residual-noise decomposition with a direct-sum feature-space representation that anchors regimes as clusters of residual similarity whose transitions surface as implicit changepoints. The effective number of regimes is pruned by the stick-breaking gate. We prove kernel validity and predictive-density propriety, and across ten benchmarks and three encoder grids DeRegiME improves negative log predictive density (NLPD) by 20.3% over the strongest encoder-matched baseline, a DeepAR/GluonTS-style dynamic Student-t head, with parallel gains on CRPS (3.0%) and MSE (4.7%). Improvements are consistent across all datasets, which span abrupt, gradual, and seasonal shifts.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/20/DeRegiMEDeepRegimeMixturesforProbabilisticForecastingunderDistributionShift.html"},"author":{"@type":"Person","name":"Kieran Wood, Stefan Zohren, Stephen J. Roberts"},"dateModified":"2026-05-20T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/20/DeRegiMEDeepRegimeMixturesforProbabilisticForecastingunderDistributionShift.html","headline":"DeRegiME: Deep Regime Mixtures for Probabilistic Forecasting under Distribution Shift","@type":"BlogPosting","datePublished":"2026-05-20T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-20 00:00:00 +0000">05-20</time>
+  </p>
+  
+  <h1>DeRegiME: Deep Regime Mixtures for Probabilistic Forecasting under Distribution Shift</h1>
+  <br>Kieran Wood, Stefan Zohren, Stephen J. Roberts</h3>
+  <br> [stat.ML]
+
+  <p>We introduce DeRegiME – Deep Regime Mixture of Experts – a direct multi-horizon probabilistic forecaster that separates latent uncertainty regimes from the underlying signal and softly assigns each forecast location to learned recurring regimes using a sparse variational Gaussian process (GP) whose nonstationary regime-mixing kernel and Student-t likelihood combine per-regime sub-kernels and noise processes via a shared gate. This yields a single sparse-GP posterior, not a mixture of GP experts. DeRegiME addresses a key limitation of neural forecasters: point forecasts discard residual uncertainty, and probabilistic heads – whether single marginals, uninterpreted mixtures, quantile sets, or diffusion samples – rarely expose the regime structure of the residual. Yet distribution shift in noisy heteroskedastic time series may be abrupt, gradual, or horizon-dependent and often appears in residual uncertainty rather than the conditional mean. DeRegiME yields an interpretable mean-residual-noise decomposition with a direct-sum feature-space representation that anchors regimes as clusters of residual similarity whose transitions surface as implicit changepoints. The effective number of regimes is pruned by the stick-breaking gate. We prove kernel validity and predictive-density propriety, and across ten benchmarks and three encoder grids DeRegiME improves negative log predictive density (NLPD) by 20.3% over the strongest encoder-matched baseline, a DeepAR/GluonTS-style dynamic Student-t head, with parallel gains on CRPS (3.0%) and MSE (4.7%). Improvements are consistent across all datasets, which span abrupt, gradual, and seasonal shifts.</p>
+
+<p><a href="https://arxiv.org/abs/2605.19231">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Density-Ratio Losses for Post-Hoc Learning to Defer</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Density-Ratio Losses for Post-Hoc Learning to Defer" />
+<meta name="author" content="Alexander Soen, Ragnar Thobaben, Joakim Jaldén, Richard Nock" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study post-hoc Learning to Defer (L2D) through the lens of ideal distributions: divergence-regularized reweightings of the data distribution under which a model attains low loss. We define deferral via the density-ratio between a model’s and an expert’s ideals. Using the reduction from density-ratio estimation to class-probability estimation, we derive the DR CPE losses for post-hoc L2D scorers. Deferral decisions are then made by thresholding the scorer, allowing deferral rates to be adjusted without retraining. For KL-based ideal distributions, our deferral rules recovers Chow’s rule under the original distribution and a connection to an expert-tilted Bayes posterior – which incorporates the expert’s performance – depending on if the ideal distributions are joint or marginal distributions. Experimentally, our approach is competitive compared to common baselines and more robust across dataset settings. More broadly, our results cast post-hoc L2D as density-ratio learning between ideal distributions, bridging Chow-style rules, expert comparison, and elucidating connections to related learning settings including anomaly detection." />
+<meta property="og:description" content="We study post-hoc Learning to Defer (L2D) through the lens of ideal distributions: divergence-regularized reweightings of the data distribution under which a model attains low loss. We define deferral via the density-ratio between a model’s and an expert’s ideals. Using the reduction from density-ratio estimation to class-probability estimation, we derive the DR CPE losses for post-hoc L2D scorers. Deferral decisions are then made by thresholding the scorer, allowing deferral rates to be adjusted without retraining. For KL-based ideal distributions, our deferral rules recovers Chow’s rule under the original distribution and a connection to an expert-tilted Bayes posterior – which incorporates the expert’s performance – depending on if the ideal distributions are joint or marginal distributions. Experimentally, our approach is competitive compared to common baselines and more robust across dataset settings. More broadly, our results cast post-hoc L2D as density-ratio learning between ideal distributions, bridging Chow-style rules, expert comparison, and elucidating connections to related learning settings including anomaly detection." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/20/DensityRatioLossesforPostHocLearningtoDefer.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/20/DensityRatioLossesforPostHocLearningtoDefer.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Density-Ratio Losses for Post-Hoc Learning to Defer" />
+<script type="application/ld+json">
+{"description":"We study post-hoc Learning to Defer (L2D) through the lens of ideal distributions: divergence-regularized reweightings of the data distribution under which a model attains low loss. We define deferral via the density-ratio between a model’s and an expert’s ideals. Using the reduction from density-ratio estimation to class-probability estimation, we derive the DR CPE losses for post-hoc L2D scorers. Deferral decisions are then made by thresholding the scorer, allowing deferral rates to be adjusted without retraining. For KL-based ideal distributions, our deferral rules recovers Chow’s rule under the original distribution and a connection to an expert-tilted Bayes posterior – which incorporates the expert’s performance – depending on if the ideal distributions are joint or marginal distributions. Experimentally, our approach is competitive compared to common baselines and more robust across dataset settings. More broadly, our results cast post-hoc L2D as density-ratio learning between ideal distributions, bridging Chow-style rules, expert comparison, and elucidating connections to related learning settings including anomaly detection.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/20/DensityRatioLossesforPostHocLearningtoDefer.html"},"author":{"@type":"Person","name":"Alexander Soen, Ragnar Thobaben, Joakim Jaldén, Richard Nock"},"dateModified":"2026-05-20T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/20/DensityRatioLossesforPostHocLearningtoDefer.html","headline":"Density-Ratio Losses for Post-Hoc Learning to Defer","@type":"BlogPosting","datePublished":"2026-05-20T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-20 00:00:00 +0000">05-20</time>
+  </p>
+  
+  <h1>Density-Ratio Losses for Post-Hoc Learning to Defer</h1>
+  <br>Alexander Soen, Ragnar Thobaben, Joakim Jaldén, Richard Nock</h3>
+  <br> [stat.ML]
+
+  <p>We study post-hoc Learning to Defer (L2D) through the lens of ideal distributions: divergence-regularized reweightings of the data distribution under which a model attains low loss. We define deferral via the density-ratio between a model’s and an expert’s ideals. Using the reduction from density-ratio estimation to class-probability estimation, we derive the DR CPE losses for post-hoc L2D scorers. Deferral decisions are then made by thresholding the scorer, allowing deferral rates to be adjusted without retraining. For KL-based ideal distributions, our deferral rules recovers Chow’s rule under the original distribution and a connection to an expert-tilted Bayes posterior – which incorporates the expert’s performance – depending on if the ideal distributions are joint or marginal distributions. Experimentally, our approach is competitive compared to common baselines and more robust across dataset settings. More broadly, our results cast post-hoc L2D as density-ratio learning between ideal distributions, bridging Chow-style rules, expert comparison, and elucidating connections to related learning settings including anomaly detection.</p>
+
+<p><a href="https://arxiv.org/abs/2605.19557">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
