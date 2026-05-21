@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How does limma-trend work? An empirical partially Bayes perspective</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How does limma-trend work? An empirical partially Bayes perspective" />
+<meta name="author" content="Sagnik Nandy, Wanyi Ling, Nikolaos Ignatiadis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In high-throughput biology, it is common to fit thousands of linear regressions – one per gene, protein, or other unit – with very few samples per unit. Limma-trend, one of the most widely used methods in this setting, improves power by shrinking variance estimates parametrically toward a fitted curve (the trend) relating variance to a unit-level summary (e.g., average intensity, peptide count), before computing p-values and applying the Benjamini-Hochberg procedure to control the false discovery rate (FDR). We study limma-trend through the lens of empirical partially Bayes inference, a paradigm in which a prior is posited and estimated for the nuisance parameters while parameters of interest remain fixed. From this perspective, limma-trend computes approximate partially Bayes p-values that condition on the residual sample variance and the unit-level summary. The same framework explains why MAnorm2, a popular variant for ChIP-seq, can sometimes fail to control FDR. We then derive a nonparametric generalization of limma-trend that estimates the residual variance prior using nonparametric maximum likelihood. Under dense signals, this procedure asymptotically controls the FDR – even when the trend is misspecified or inconsistently estimated. To allow the full shape of the conditional variance distribution to depend on the unit-level summary, we develop a second procedure that learns it directly." />
+<meta property="og:description" content="In high-throughput biology, it is common to fit thousands of linear regressions – one per gene, protein, or other unit – with very few samples per unit. Limma-trend, one of the most widely used methods in this setting, improves power by shrinking variance estimates parametrically toward a fitted curve (the trend) relating variance to a unit-level summary (e.g., average intensity, peptide count), before computing p-values and applying the Benjamini-Hochberg procedure to control the false discovery rate (FDR). We study limma-trend through the lens of empirical partially Bayes inference, a paradigm in which a prior is posited and estimated for the nuisance parameters while parameters of interest remain fixed. From this perspective, limma-trend computes approximate partially Bayes p-values that condition on the residual sample variance and the unit-level summary. The same framework explains why MAnorm2, a popular variant for ChIP-seq, can sometimes fail to control FDR. We then derive a nonparametric generalization of limma-trend that estimates the residual variance prior using nonparametric maximum likelihood. Under dense signals, this procedure asymptotically controls the FDR – even when the trend is misspecified or inconsistently estimated. To allow the full shape of the conditional variance distribution to depend on the unit-level summary, we develop a second procedure that learns it directly." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/21/HowdoeslimmatrendworkAnempiricalpartiallyBayesperspective.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/21/HowdoeslimmatrendworkAnempiricalpartiallyBayesperspective.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How does limma-trend work? An empirical partially Bayes perspective" />
+<script type="application/ld+json">
+{"description":"In high-throughput biology, it is common to fit thousands of linear regressions – one per gene, protein, or other unit – with very few samples per unit. Limma-trend, one of the most widely used methods in this setting, improves power by shrinking variance estimates parametrically toward a fitted curve (the trend) relating variance to a unit-level summary (e.g., average intensity, peptide count), before computing p-values and applying the Benjamini-Hochberg procedure to control the false discovery rate (FDR). We study limma-trend through the lens of empirical partially Bayes inference, a paradigm in which a prior is posited and estimated for the nuisance parameters while parameters of interest remain fixed. From this perspective, limma-trend computes approximate partially Bayes p-values that condition on the residual sample variance and the unit-level summary. The same framework explains why MAnorm2, a popular variant for ChIP-seq, can sometimes fail to control FDR. We then derive a nonparametric generalization of limma-trend that estimates the residual variance prior using nonparametric maximum likelihood. Under dense signals, this procedure asymptotically controls the FDR – even when the trend is misspecified or inconsistently estimated. To allow the full shape of the conditional variance distribution to depend on the unit-level summary, we develop a second procedure that learns it directly.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/21/HowdoeslimmatrendworkAnempiricalpartiallyBayesperspective.html"},"author":{"@type":"Person","name":"Sagnik Nandy, Wanyi Ling, Nikolaos Ignatiadis"},"dateModified":"2026-05-21T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/21/HowdoeslimmatrendworkAnempiricalpartiallyBayesperspective.html","headline":"How does limma-trend work? An empirical partially Bayes perspective","@type":"BlogPosting","datePublished":"2026-05-21T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-21 00:00:00 +0000">05-21</time>
+  </p>
+  
+  <h1>How does limma-trend work? An empirical partially Bayes perspective</h1>
+  <br>Sagnik Nandy, Wanyi Ling, Nikolaos Ignatiadis</h3>
+  <br> [stat.ME]
+
+  <p>In high-throughput biology, it is common to fit thousands of linear regressions – one per gene, protein, or other unit – with very few samples per unit. Limma-trend, one of the most widely used methods in this setting, improves power by shrinking variance estimates parametrically toward a fitted curve (the trend) relating variance to a unit-level summary (e.g., average intensity, peptide count), before computing p-values and applying the Benjamini-Hochberg procedure to control the false discovery rate (FDR). We study limma-trend through the lens of empirical partially Bayes inference, a paradigm in which a prior is posited and estimated for the nuisance parameters while parameters of interest remain fixed. From this perspective, limma-trend computes approximate partially Bayes p-values that condition on the residual sample variance and the unit-level summary. The same framework explains why MAnorm2, a popular variant for ChIP-seq, can sometimes fail to control FDR. We then derive a nonparametric generalization of limma-trend that estimates the residual variance prior using nonparametric maximum likelihood. Under dense signals, this procedure asymptotically controls the FDR – even when the trend is misspecified or inconsistently estimated. To allow the full shape of the conditional variance distribution to depend on the unit-level summary, we develop a second procedure that learns it directly.</p>
+
+<p><a href="https://arxiv.org/abs/2605.21304">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

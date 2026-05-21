@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Corrected Integrated Laplace Approximation for Bayesian Inference in Latent Gaussian Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Corrected Integrated Laplace Approximation for Bayesian Inference in Latent Gaussian Models" />
+<meta name="author" content="Jinlin Lai, Charles C. Margossian, Daniel R. Sheldon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Latent Gaussian models (LGMs) are a popular class of Bayesian hierarchical models that include Gaussian processes, as well as certain spatial models and mixed-effect models. Efficient Bayesian inference of LGMs often requires marginalizing out the latent variables. For LGMs with a non-Gaussian likelihood, exact marginalization is not possible and a popular approach is to do approximate marginalization with an integrated Laplace approximation (ILA). Using ILA produces an approximate posterior which, in some settings, can differ significantly from the correct posterior, which impacts downstream applications. We propose an importance sampling scheme to correct the error introduced by ILA. By increasing the number of samples in importance sampling, the posterior with ILA converges to the correct posterior. This idea is realized with various techniques, including pseudo-marginalization, quasi-Monte Carlo and randomized quasi-Monte Carlo. We implement our methods in an automatic differentiation framework to support gradient-based algorithms when doing inference on the hyperparameters. For the latter, we specifically consider the use of Hamiltonian Monte Carlo. We demonstrate the benefits of reduced error in various applied models." />
+<meta property="og:description" content="Latent Gaussian models (LGMs) are a popular class of Bayesian hierarchical models that include Gaussian processes, as well as certain spatial models and mixed-effect models. Efficient Bayesian inference of LGMs often requires marginalizing out the latent variables. For LGMs with a non-Gaussian likelihood, exact marginalization is not possible and a popular approach is to do approximate marginalization with an integrated Laplace approximation (ILA). Using ILA produces an approximate posterior which, in some settings, can differ significantly from the correct posterior, which impacts downstream applications. We propose an importance sampling scheme to correct the error introduced by ILA. By increasing the number of samples in importance sampling, the posterior with ILA converges to the correct posterior. This idea is realized with various techniques, including pseudo-marginalization, quasi-Monte Carlo and randomized quasi-Monte Carlo. We implement our methods in an automatic differentiation framework to support gradient-based algorithms when doing inference on the hyperparameters. For the latter, we specifically consider the use of Hamiltonian Monte Carlo. We demonstrate the benefits of reduced error in various applied models." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/21/CorrectedIntegratedLaplaceApproximationforBayesianInferenceinLatentGaussianModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/21/CorrectedIntegratedLaplaceApproximationforBayesianInferenceinLatentGaussianModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Corrected Integrated Laplace Approximation for Bayesian Inference in Latent Gaussian Models" />
+<script type="application/ld+json">
+{"description":"Latent Gaussian models (LGMs) are a popular class of Bayesian hierarchical models that include Gaussian processes, as well as certain spatial models and mixed-effect models. Efficient Bayesian inference of LGMs often requires marginalizing out the latent variables. For LGMs with a non-Gaussian likelihood, exact marginalization is not possible and a popular approach is to do approximate marginalization with an integrated Laplace approximation (ILA). Using ILA produces an approximate posterior which, in some settings, can differ significantly from the correct posterior, which impacts downstream applications. We propose an importance sampling scheme to correct the error introduced by ILA. By increasing the number of samples in importance sampling, the posterior with ILA converges to the correct posterior. This idea is realized with various techniques, including pseudo-marginalization, quasi-Monte Carlo and randomized quasi-Monte Carlo. We implement our methods in an automatic differentiation framework to support gradient-based algorithms when doing inference on the hyperparameters. For the latter, we specifically consider the use of Hamiltonian Monte Carlo. We demonstrate the benefits of reduced error in various applied models.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/21/CorrectedIntegratedLaplaceApproximationforBayesianInferenceinLatentGaussianModels.html"},"author":{"@type":"Person","name":"Jinlin Lai, Charles C. Margossian, Daniel R. Sheldon"},"dateModified":"2026-05-21T00:00:00+00:00","url":"https://dedzago.github.io/arxiv_rss/2026/05/21/CorrectedIntegratedLaplaceApproximationforBayesianInferenceinLatentGaussianModels.html","headline":"Corrected Integrated Laplace Approximation for Bayesian Inference in Latent Gaussian Models","@type":"BlogPosting","datePublished":"2026-05-21T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-21 00:00:00 +0000">05-21</time>
+  </p>
+  
+  <h1>Corrected Integrated Laplace Approximation for Bayesian Inference in Latent Gaussian Models</h1>
+  <br>Jinlin Lai, Charles C. Margossian, Daniel R. Sheldon</h3>
+  <br> [stat.ML]
+
+  <p>Latent Gaussian models (LGMs) are a popular class of Bayesian hierarchical models that include Gaussian processes, as well as certain spatial models and mixed-effect models. Efficient Bayesian inference of LGMs often requires marginalizing out the latent variables. For LGMs with a non-Gaussian likelihood, exact marginalization is not possible and a popular approach is to do approximate marginalization with an integrated Laplace approximation (ILA). Using ILA produces an approximate posterior which, in some settings, can differ significantly from the correct posterior, which impacts downstream applications. We propose an importance sampling scheme to correct the error introduced by ILA. By increasing the number of samples in importance sampling, the posterior with ILA converges to the correct posterior. This idea is realized with various techniques, including pseudo-marginalization, quasi-Monte Carlo and randomized quasi-Monte Carlo. We implement our methods in an automatic differentiation framework to support gradient-based algorithms when doing inference on the hyperparameters. For the latter, we specifically consider the use of Hamiltonian Monte Carlo. We demonstrate the benefits of reduced error in various applied models.</p>
+
+<p><a href="https://arxiv.org/abs/2605.20345">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
