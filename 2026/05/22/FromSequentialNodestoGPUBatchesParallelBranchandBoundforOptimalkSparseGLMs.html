@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs" />
+<meta name="author" content="Jiachang Liu, Andrea Lodi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="GPUs have significantly accelerated first-order methods for large-scale optimization, especially in continuous optimization. However, this success has not transferred cleanly to problems with discrete variables, combinatorial structure, and nonlinear objectives, such as certifying optimal solutions for cardinality-constrained generalized linear models. Major challenges include the sequential processing of heterogeneous nodes in branch and bound (BnB) and frequent data movement between the CPU and GPU. We propose a simple, generic, and modular CPU–GPU framework that processes multiple BnB nodes in batches on GPUs. The framework is built around a small set of GPU-efficient routines and uses padding together with lightweight custom kernels to handle irregular node data structures. Experiments show one to two orders of magnitude speedups and zero optimality gap on challenging instances. The framework can also be extended to collect the entire Rashomon set, enabling downstream statistical analysis such as variable-importance analysis and model selection under secondary user-specific measures (e.g., AUC in classification)." />
+<meta property="og:description" content="GPUs have significantly accelerated first-order methods for large-scale optimization, especially in continuous optimization. However, this success has not transferred cleanly to problems with discrete variables, combinatorial structure, and nonlinear objectives, such as certifying optimal solutions for cardinality-constrained generalized linear models. Major challenges include the sequential processing of heterogeneous nodes in branch and bound (BnB) and frequent data movement between the CPU and GPU. We propose a simple, generic, and modular CPU–GPU framework that processes multiple BnB nodes in batches on GPUs. The framework is built around a small set of GPU-efficient routines and uses padding together with lightweight custom kernels to handle irregular node data structures. Experiments show one to two orders of magnitude speedups and zero optimality gap on challenging instances. The framework can also be extended to collect the entire Rashomon set, enabling downstream statistical analysis such as variable-importance analysis and model selection under secondary user-specific measures (e.g., AUC in classification)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/22/FromSequentialNodestoGPUBatchesParallelBranchandBoundforOptimalkSparseGLMs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/22/FromSequentialNodestoGPUBatchesParallelBranchandBoundforOptimalkSparseGLMs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs" />
+<script type="application/ld+json">
+{"description":"GPUs have significantly accelerated first-order methods for large-scale optimization, especially in continuous optimization. However, this success has not transferred cleanly to problems with discrete variables, combinatorial structure, and nonlinear objectives, such as certifying optimal solutions for cardinality-constrained generalized linear models. Major challenges include the sequential processing of heterogeneous nodes in branch and bound (BnB) and frequent data movement between the CPU and GPU. We propose a simple, generic, and modular CPU–GPU framework that processes multiple BnB nodes in batches on GPUs. The framework is built around a small set of GPU-efficient routines and uses padding together with lightweight custom kernels to handle irregular node data structures. Experiments show one to two orders of magnitude speedups and zero optimality gap on challenging instances. The framework can also be extended to collect the entire Rashomon set, enabling downstream statistical analysis such as variable-importance analysis and model selection under secondary user-specific measures (e.g., AUC in classification).","author":{"@type":"Person","name":"Jiachang Liu, Andrea Lodi"},"datePublished":"2026-05-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/22/FromSequentialNodestoGPUBatchesParallelBranchandBoundforOptimalkSparseGLMs.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/22/FromSequentialNodestoGPUBatchesParallelBranchandBoundforOptimalkSparseGLMs.html","headline":"From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs","@type":"BlogPosting","dateModified":"2026-05-22T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-22 00:00:00 +0000">05-22</time>
+  </p>
+  
+  <h1>From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs</h1>
+  <br>Jiachang Liu, Andrea Lodi</h3>
+  <br> [stat.ML]
+
+  <p>GPUs have significantly accelerated first-order methods for large-scale optimization, especially in continuous optimization. However, this success has not transferred cleanly to problems with discrete variables, combinatorial structure, and nonlinear objectives, such as certifying optimal solutions for cardinality-constrained generalized linear models. Major challenges include the sequential processing of heterogeneous nodes in branch and bound (BnB) and frequent data movement between the CPU and GPU. We propose a simple, generic, and modular CPU–GPU framework that processes multiple BnB nodes in batches on GPUs. The framework is built around a small set of GPU-efficient routines and uses padding together with lightweight custom kernels to handle irregular node data structures. Experiments show one to two orders of magnitude speedups and zero optimality gap on challenging instances. The framework can also be extended to collect the entire Rashomon set, enabling downstream statistical analysis such as variable-importance analysis and model selection under secondary user-specific measures (e.g., AUC in classification).</p>
+
+<p><a href="https://arxiv.org/abs/2605.22188">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

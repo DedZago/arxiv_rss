@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dropout Universality: Scaling Laws and Optimal Scheduling at the Edge-of-Chaos</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Dropout Universality: Scaling Laws and Optimal Scheduling at the Edge-of-Chaos" />
+<meta name="author" content="Lucas Fernandez Sarmiento" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a mean-field theory of dropout as a perturbation of critical signal propagation at the edge of chaos. Dropout shifts the perfect-alignment fixed point, making the depth scale for information propagation finite even at critical initialization. We derive critical and crossover scaling laws for correlation decay and establish that smooth activations and kinked, ReLU-like activations constitute distinct universality classes, with different critical exponents and a universal two-parameter scaling collapse in detuning and dropout strength. The distinction traces to the analytic structure of the correlation map: smooth activations admit a Taylor expansion near perfect alignment, while kinked activations develop a branch point with universal non-analyticity. As a corollary, the framework yields saturated dropout profiles under fixed budget; a rank-flow tie-breaker then selects front-loaded schedules, substantially reducing held-out test loss at no extra computational cost, with accuracy gains as a consistent secondary effect. We test the predictions in MLPs and Vision Transformers and discuss CNN/ResNet extensions." />
+<meta property="og:description" content="We develop a mean-field theory of dropout as a perturbation of critical signal propagation at the edge of chaos. Dropout shifts the perfect-alignment fixed point, making the depth scale for information propagation finite even at critical initialization. We derive critical and crossover scaling laws for correlation decay and establish that smooth activations and kinked, ReLU-like activations constitute distinct universality classes, with different critical exponents and a universal two-parameter scaling collapse in detuning and dropout strength. The distinction traces to the analytic structure of the correlation map: smooth activations admit a Taylor expansion near perfect alignment, while kinked activations develop a branch point with universal non-analyticity. As a corollary, the framework yields saturated dropout profiles under fixed budget; a rank-flow tie-breaker then selects front-loaded schedules, substantially reducing held-out test loss at no extra computational cost, with accuracy gains as a consistent secondary effect. We test the predictions in MLPs and Vision Transformers and discuss CNN/ResNet extensions." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/22/DropoutUniversalityScalingLawsandOptimalSchedulingattheEdgeofChaos.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/22/DropoutUniversalityScalingLawsandOptimalSchedulingattheEdgeofChaos.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dropout Universality: Scaling Laws and Optimal Scheduling at the Edge-of-Chaos" />
+<script type="application/ld+json">
+{"description":"We develop a mean-field theory of dropout as a perturbation of critical signal propagation at the edge of chaos. Dropout shifts the perfect-alignment fixed point, making the depth scale for information propagation finite even at critical initialization. We derive critical and crossover scaling laws for correlation decay and establish that smooth activations and kinked, ReLU-like activations constitute distinct universality classes, with different critical exponents and a universal two-parameter scaling collapse in detuning and dropout strength. The distinction traces to the analytic structure of the correlation map: smooth activations admit a Taylor expansion near perfect alignment, while kinked activations develop a branch point with universal non-analyticity. As a corollary, the framework yields saturated dropout profiles under fixed budget; a rank-flow tie-breaker then selects front-loaded schedules, substantially reducing held-out test loss at no extra computational cost, with accuracy gains as a consistent secondary effect. We test the predictions in MLPs and Vision Transformers and discuss CNN/ResNet extensions.","author":{"@type":"Person","name":"Lucas Fernandez Sarmiento"},"datePublished":"2026-05-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/22/DropoutUniversalityScalingLawsandOptimalSchedulingattheEdgeofChaos.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/22/DropoutUniversalityScalingLawsandOptimalSchedulingattheEdgeofChaos.html","headline":"Dropout Universality: Scaling Laws and Optimal Scheduling at the Edge-of-Chaos","@type":"BlogPosting","dateModified":"2026-05-22T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-22 00:00:00 +0000">05-22</time>
+  </p>
+  
+  <h1>Dropout Universality: Scaling Laws and Optimal Scheduling at the Edge-of-Chaos</h1>
+  <br>Lucas Fernandez Sarmiento</h3>
+  <br> [stat.ML]
+
+  <p>We develop a mean-field theory of dropout as a perturbation of critical signal propagation at the edge of chaos. Dropout shifts the perfect-alignment fixed point, making the depth scale for information propagation finite even at critical initialization. We derive critical and crossover scaling laws for correlation decay and establish that smooth activations and kinked, ReLU-like activations constitute distinct universality classes, with different critical exponents and a universal two-parameter scaling collapse in detuning and dropout strength. The distinction traces to the analytic structure of the correlation map: smooth activations admit a Taylor expansion near perfect alignment, while kinked activations develop a branch point with universal non-analyticity. As a corollary, the framework yields saturated dropout profiles under fixed budget; a rank-flow tie-breaker then selects front-loaded schedules, substantially reducing held-out test loss at no extra computational cost, with accuracy gains as a consistent secondary effect. We test the predictions in MLPs and Vision Transformers and discuss CNN/ResNet extensions.</p>
+
+<p><a href="https://arxiv.org/abs/2605.21648">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

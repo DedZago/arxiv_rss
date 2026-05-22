@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Decision-Path Patterns as Tree Reliability Signals: Path-based Adaptive Weighting for Random Forest Classification</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Decision-Path Patterns as Tree Reliability Signals: Path-based Adaptive Weighting for Random Forest Classification" />
+<meta name="author" content="Youngjoon Park" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Random forests aggregate trees by averaging leaf class distributions with uniform per-tree weight, which flattens local tree expertise into a globally averaged boundary. To refine this boundary locally, we look for signals in how individual trees navigate the feature space around each sample. We observe that the structural pattern of each tree’s root-to-leaf decision path – where and how often the dominant class label flips along it – carries such a signal, conditional on the tree’s final decision and the regional context where the sample lies. We propose a class-conditional ratio weighting that exploits this signal while guaranteeing zero expected class bias by construction, refining the ensemble decision near the boundary without trading one class against another. On 30 binary classification benchmarks (30 repeats), the proposed method yields a statistically significant accuracy improvement over RF (Wilcoxon p = 0.007), while weighted RF and the KNORA family do not reach significance (all p &gt; 0.5). The gain is small ({\Delta}acc = +0.0011) but consistent across forest sizes from 100 to 1,000 trees, and regresses neither class (majority 0/30, minority 2/30) – unlike KNORA-Eliminate, which lifts minority recall at the cost of majority regressions on 8/30 datasets." />
+<meta property="og:description" content="Random forests aggregate trees by averaging leaf class distributions with uniform per-tree weight, which flattens local tree expertise into a globally averaged boundary. To refine this boundary locally, we look for signals in how individual trees navigate the feature space around each sample. We observe that the structural pattern of each tree’s root-to-leaf decision path – where and how often the dominant class label flips along it – carries such a signal, conditional on the tree’s final decision and the regional context where the sample lies. We propose a class-conditional ratio weighting that exploits this signal while guaranteeing zero expected class bias by construction, refining the ensemble decision near the boundary without trading one class against another. On 30 binary classification benchmarks (30 repeats), the proposed method yields a statistically significant accuracy improvement over RF (Wilcoxon p = 0.007), while weighted RF and the KNORA family do not reach significance (all p &gt; 0.5). The gain is small ({\Delta}acc = +0.0011) but consistent across forest sizes from 100 to 1,000 trees, and regresses neither class (majority 0/30, minority 2/30) – unlike KNORA-Eliminate, which lifts minority recall at the cost of majority regressions on 8/30 datasets." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/22/DecisionPathPatternsasTreeReliabilitySignalsPathbasedAdaptiveWeightingforRandomForestClassification.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/22/DecisionPathPatternsasTreeReliabilitySignalsPathbasedAdaptiveWeightingforRandomForestClassification.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Decision-Path Patterns as Tree Reliability Signals: Path-based Adaptive Weighting for Random Forest Classification" />
+<script type="application/ld+json">
+{"description":"Random forests aggregate trees by averaging leaf class distributions with uniform per-tree weight, which flattens local tree expertise into a globally averaged boundary. To refine this boundary locally, we look for signals in how individual trees navigate the feature space around each sample. We observe that the structural pattern of each tree’s root-to-leaf decision path – where and how often the dominant class label flips along it – carries such a signal, conditional on the tree’s final decision and the regional context where the sample lies. We propose a class-conditional ratio weighting that exploits this signal while guaranteeing zero expected class bias by construction, refining the ensemble decision near the boundary without trading one class against another. On 30 binary classification benchmarks (30 repeats), the proposed method yields a statistically significant accuracy improvement over RF (Wilcoxon p = 0.007), while weighted RF and the KNORA family do not reach significance (all p &gt; 0.5). The gain is small ({\\Delta}acc = +0.0011) but consistent across forest sizes from 100 to 1,000 trees, and regresses neither class (majority 0/30, minority 2/30) – unlike KNORA-Eliminate, which lifts minority recall at the cost of majority regressions on 8/30 datasets.","author":{"@type":"Person","name":"Youngjoon Park"},"datePublished":"2026-05-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/22/DecisionPathPatternsasTreeReliabilitySignalsPathbasedAdaptiveWeightingforRandomForestClassification.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/22/DecisionPathPatternsasTreeReliabilitySignalsPathbasedAdaptiveWeightingforRandomForestClassification.html","headline":"Decision-Path Patterns as Tree Reliability Signals: Path-based Adaptive Weighting for Random Forest Classification","@type":"BlogPosting","dateModified":"2026-05-22T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-22 00:00:00 +0000">05-22</time>
+  </p>
+  
+  <h1>Decision-Path Patterns as Tree Reliability Signals: Path-based Adaptive Weighting for Random Forest Classification</h1>
+  <br>Youngjoon Park</h3>
+  <br> [stat.ML]
+
+  <p>Random forests aggregate trees by averaging leaf class distributions with uniform per-tree weight, which flattens local tree expertise into a globally averaged boundary. To refine this boundary locally, we look for signals in how individual trees navigate the feature space around each sample. We observe that the structural pattern of each tree’s root-to-leaf decision path – where and how often the dominant class label flips along it – carries such a signal, conditional on the tree’s final decision and the regional context where the sample lies. We propose a class-conditional ratio weighting that exploits this signal while guaranteeing zero expected class bias by construction, refining the ensemble decision near the boundary without trading one class against another. On 30 binary classification benchmarks (30 repeats), the proposed method yields a statistically significant accuracy improvement over RF (Wilcoxon p = 0.007), while weighted RF and the KNORA family do not reach significance (all p &gt; 0.5). The gain is small ({\Delta}acc = +0.0011) but consistent across forest sizes from 100 to 1,000 trees, and regresses neither class (majority 0/30, minority 2/30) – unlike KNORA-Eliminate, which lifts minority recall at the cost of majority regressions on 8/30 datasets.</p>
+
+<p><a href="https://arxiv.org/abs/2605.20716">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

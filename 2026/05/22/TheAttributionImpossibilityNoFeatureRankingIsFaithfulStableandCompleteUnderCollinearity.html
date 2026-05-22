@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Attribution Impossibility: No Feature Ranking Is Faithful, Stable, and Complete Under Collinearity</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Attribution Impossibility: No Feature Ranking Is Faithful, Stable, and Complete Under Collinearity" />
+<meta name="author" content="Drake Caraker, Bryan Arnold, David Rhoads" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="No feature ranking can be simultaneously faithful, stable, and complete when features are collinear. For collinear pairs, ranking reduces to a coin flip. We prove this impossibility, quantify it for four model classes, resolve it via ensemble averaging (DASH), and machine-verify it with 305 Lean 4 theorems. We characterize the complete attribution design space: exactly two families of methods exist – faithful-complete methods (unstable, with rankings that flip up to 50% of the time) and ensemble methods like DASH (stable, reporting ties for symmetric features) – and no method lies outside this dichotomy. The impossibility is quantitative: the attribution ratio diverges as 1/(1-rho^2) for gradient boosting, is infinite for Lasso, and converges for random forests. DASH (Diversified Aggregation of SHAP) is provably Pareto-optimal among unbiased aggregations, achieving the Cramer-Rao variance bound with a tight ensemble size formula. In a survey of 77 public datasets, 68% exhibit attribution instability. Switching to conditional SHAP does not escape the impossibility when features have equal causal effects. The framework includes practical diagnostics – a Z-test workflow and single-model screening tool – and has direct consequences for fairness auditing: SHAP-based proxy discrimination audits are provably unreliable under collinearity. The design space theorem, diagnostics, and impossibility are mechanically verified in Lean 4 (305 theorems from 16 axioms, 0 sorry) – to our knowledge, the first formally verified impossibility in explainable AI." />
+<meta property="og:description" content="No feature ranking can be simultaneously faithful, stable, and complete when features are collinear. For collinear pairs, ranking reduces to a coin flip. We prove this impossibility, quantify it for four model classes, resolve it via ensemble averaging (DASH), and machine-verify it with 305 Lean 4 theorems. We characterize the complete attribution design space: exactly two families of methods exist – faithful-complete methods (unstable, with rankings that flip up to 50% of the time) and ensemble methods like DASH (stable, reporting ties for symmetric features) – and no method lies outside this dichotomy. The impossibility is quantitative: the attribution ratio diverges as 1/(1-rho^2) for gradient boosting, is infinite for Lasso, and converges for random forests. DASH (Diversified Aggregation of SHAP) is provably Pareto-optimal among unbiased aggregations, achieving the Cramer-Rao variance bound with a tight ensemble size formula. In a survey of 77 public datasets, 68% exhibit attribution instability. Switching to conditional SHAP does not escape the impossibility when features have equal causal effects. The framework includes practical diagnostics – a Z-test workflow and single-model screening tool – and has direct consequences for fairness auditing: SHAP-based proxy discrimination audits are provably unreliable under collinearity. The design space theorem, diagnostics, and impossibility are mechanically verified in Lean 4 (305 theorems from 16 axioms, 0 sorry) – to our knowledge, the first formally verified impossibility in explainable AI." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/22/TheAttributionImpossibilityNoFeatureRankingIsFaithfulStableandCompleteUnderCollinearity.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/22/TheAttributionImpossibilityNoFeatureRankingIsFaithfulStableandCompleteUnderCollinearity.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Attribution Impossibility: No Feature Ranking Is Faithful, Stable, and Complete Under Collinearity" />
+<script type="application/ld+json">
+{"description":"No feature ranking can be simultaneously faithful, stable, and complete when features are collinear. For collinear pairs, ranking reduces to a coin flip. We prove this impossibility, quantify it for four model classes, resolve it via ensemble averaging (DASH), and machine-verify it with 305 Lean 4 theorems. We characterize the complete attribution design space: exactly two families of methods exist – faithful-complete methods (unstable, with rankings that flip up to 50% of the time) and ensemble methods like DASH (stable, reporting ties for symmetric features) – and no method lies outside this dichotomy. The impossibility is quantitative: the attribution ratio diverges as 1/(1-rho^2) for gradient boosting, is infinite for Lasso, and converges for random forests. DASH (Diversified Aggregation of SHAP) is provably Pareto-optimal among unbiased aggregations, achieving the Cramer-Rao variance bound with a tight ensemble size formula. In a survey of 77 public datasets, 68% exhibit attribution instability. Switching to conditional SHAP does not escape the impossibility when features have equal causal effects. The framework includes practical diagnostics – a Z-test workflow and single-model screening tool – and has direct consequences for fairness auditing: SHAP-based proxy discrimination audits are provably unreliable under collinearity. The design space theorem, diagnostics, and impossibility are mechanically verified in Lean 4 (305 theorems from 16 axioms, 0 sorry) – to our knowledge, the first formally verified impossibility in explainable AI.","author":{"@type":"Person","name":"Drake Caraker, Bryan Arnold, David Rhoads"},"datePublished":"2026-05-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/22/TheAttributionImpossibilityNoFeatureRankingIsFaithfulStableandCompleteUnderCollinearity.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/22/TheAttributionImpossibilityNoFeatureRankingIsFaithfulStableandCompleteUnderCollinearity.html","headline":"The Attribution Impossibility: No Feature Ranking Is Faithful, Stable, and Complete Under Collinearity","@type":"BlogPosting","dateModified":"2026-05-22T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-22 00:00:00 +0000">05-22</time>
+  </p>
+  
+  <h1>The Attribution Impossibility: No Feature Ranking Is Faithful, Stable, and Complete Under Collinearity</h1>
+  <br>Drake Caraker, Bryan Arnold, David Rhoads</h3>
+  <br> [stat.ML]
+
+  <p>No feature ranking can be simultaneously faithful, stable, and complete when features are collinear. For collinear pairs, ranking reduces to a coin flip. We prove this impossibility, quantify it for four model classes, resolve it via ensemble averaging (DASH), and machine-verify it with 305 Lean 4 theorems. We characterize the complete attribution design space: exactly two families of methods exist – faithful-complete methods (unstable, with rankings that flip up to 50% of the time) and ensemble methods like DASH (stable, reporting ties for symmetric features) – and no method lies outside this dichotomy. The impossibility is quantitative: the attribution ratio diverges as 1/(1-rho^2) for gradient boosting, is infinite for Lasso, and converges for random forests. DASH (Diversified Aggregation of SHAP) is provably Pareto-optimal among unbiased aggregations, achieving the Cramer-Rao variance bound with a tight ensemble size formula. In a survey of 77 public datasets, 68% exhibit attribution instability. Switching to conditional SHAP does not escape the impossibility when features have equal causal effects. The framework includes practical diagnostics – a Z-test workflow and single-model screening tool – and has direct consequences for fairness auditing: SHAP-based proxy discrimination audits are provably unreliable under collinearity. The design space theorem, diagnostics, and impossibility are mechanically verified in Lean 4 (305 theorems from 16 axioms, 0 sorry) – to our knowledge, the first formally verified impossibility in explainable AI.</p>
+
+<p><a href="https://arxiv.org/abs/2605.21492">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
