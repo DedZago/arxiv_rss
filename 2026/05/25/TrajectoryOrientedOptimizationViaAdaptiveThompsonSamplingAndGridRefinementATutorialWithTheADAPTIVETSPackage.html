@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Trajectory-Oriented Optimization Via Adaptive Thompson Sampling And Grid Refinement: A Tutorial With The ADAPTIVE\_TS Package</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Trajectory-Oriented Optimization Via Adaptive Thompson Sampling And Grid Refinement: A Tutorial With The ADAPTIVE_TS Package" />
+<meta name="author" content="David O'Gara, Arindam Fadikar, Mickaël Binois, Nicholson Collier, Jonathan Ozik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stochastic simulators are increasingly used to expand the frontier of scientific knowledge and inform decision-making across real-world contexts. Simulator calibration, a process by which internal model inputs are tuned to match some external criteria, usually in the form of observed data, is a key step in model design and validation. Epidemiological simulators present an especially compelling use case, as evidenced by the recent COVID-19 pandemic. Among several calibration paradigms, trajectory-oriented optimization is an emerging approach that does not require assumptions on the stochastic behavior of the simulator replicates and is particularly effective at identifying trajectories through the lens of errors between the simulator and observed data, especially when combined with Bayesian optimization. We present a tutorial on trajectory-oriented optimization with \texttt{adaptive_ts}, an open-source Python package. We also provide a series of worked examples on an accompanying webpage." />
+<meta property="og:description" content="Stochastic simulators are increasingly used to expand the frontier of scientific knowledge and inform decision-making across real-world contexts. Simulator calibration, a process by which internal model inputs are tuned to match some external criteria, usually in the form of observed data, is a key step in model design and validation. Epidemiological simulators present an especially compelling use case, as evidenced by the recent COVID-19 pandemic. Among several calibration paradigms, trajectory-oriented optimization is an emerging approach that does not require assumptions on the stochastic behavior of the simulator replicates and is particularly effective at identifying trajectories through the lens of errors between the simulator and observed data, especially when combined with Bayesian optimization. We present a tutorial on trajectory-oriented optimization with \texttt{adaptive_ts}, an open-source Python package. We also provide a series of worked examples on an accompanying webpage." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/25/TrajectoryOrientedOptimizationViaAdaptiveThompsonSamplingAndGridRefinementATutorialWithTheADAPTIVETSPackage.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/25/TrajectoryOrientedOptimizationViaAdaptiveThompsonSamplingAndGridRefinementATutorialWithTheADAPTIVETSPackage.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Trajectory-Oriented Optimization Via Adaptive Thompson Sampling And Grid Refinement: A Tutorial With The ADAPTIVE_TS Package" />
+<script type="application/ld+json">
+{"description":"Stochastic simulators are increasingly used to expand the frontier of scientific knowledge and inform decision-making across real-world contexts. Simulator calibration, a process by which internal model inputs are tuned to match some external criteria, usually in the form of observed data, is a key step in model design and validation. Epidemiological simulators present an especially compelling use case, as evidenced by the recent COVID-19 pandemic. Among several calibration paradigms, trajectory-oriented optimization is an emerging approach that does not require assumptions on the stochastic behavior of the simulator replicates and is particularly effective at identifying trajectories through the lens of errors between the simulator and observed data, especially when combined with Bayesian optimization. We present a tutorial on trajectory-oriented optimization with \\texttt{adaptive_ts}, an open-source Python package. We also provide a series of worked examples on an accompanying webpage.","author":{"@type":"Person","name":"David O'Gara, Arindam Fadikar, Mickaël Binois, Nicholson Collier, Jonathan Ozik"},"datePublished":"2026-05-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/25/TrajectoryOrientedOptimizationViaAdaptiveThompsonSamplingAndGridRefinementATutorialWithTheADAPTIVETSPackage.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/25/TrajectoryOrientedOptimizationViaAdaptiveThompsonSamplingAndGridRefinementATutorialWithTheADAPTIVETSPackage.html","headline":"Trajectory-Oriented Optimization Via Adaptive Thompson Sampling And Grid Refinement: A Tutorial With The ADAPTIVE_TS Package","@type":"BlogPosting","dateModified":"2026-05-25T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-25 00:00:00 +0000">05-25</time>
+  </p>
+  
+  <h1>Trajectory-Oriented Optimization Via Adaptive Thompson Sampling And Grid Refinement: A Tutorial With The ADAPTIVE\_TS Package</h1>
+  <br>David O'Gara, Arindam Fadikar, Mickaël Binois, Nicholson Collier, Jonathan Ozik</h3>
+  <br> [stat.CO,stat.AP]
+
+  <p>Stochastic simulators are increasingly used to expand the frontier of scientific knowledge and inform decision-making across real-world contexts. Simulator calibration, a process by which internal model inputs are tuned to match some external criteria, usually in the form of observed data, is a key step in model design and validation. Epidemiological simulators present an especially compelling use case, as evidenced by the recent COVID-19 pandemic. Among several calibration paradigms, trajectory-oriented optimization is an emerging approach that does not require assumptions on the stochastic behavior of the simulator replicates and is particularly effective at identifying trajectories through the lens of errors between the simulator and observed data, especially when combined with Bayesian optimization. We present a tutorial on trajectory-oriented optimization with \texttt{adaptive_ts}, an open-source Python package. We also provide a series of worked examples on an accompanying webpage.</p>
+
+<p><a href="https://arxiv.org/abs/2605.23692">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Partial Fusion of Neural Networks: Efficient Tradeoffs Between Ensembles and Weight Aggregation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Partial Fusion of Neural Networks: Efficient Tradeoffs Between Ensembles and Weight Aggregation" />
+<meta name="author" content="Fabian Morelli, Stephan Eckstein" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ensembles of neural networks typically outperform individual networks but incur large computational costs, whereas weight aggregation produces less costly, yet also less accurate, aggregate models. We introduce partial fusion of networks, which interpolates between ensembles and weight aggregation and thus allows for a flexible tradeoff between computational cost and performance. A direct way to achieve this is to extend existing weight aggregation methods based on neuron-level similarity between different networks, where partial fusion then only aggregates weights of neurons which are most similar. We showcase one particular method to jointly identify which neurons are most similar and match them via partial optimal transport. Further, we consider the more general perspective of weight aggregation and partial fusion as generalized pruning of ensemble models, where neurons cannot just be deleted, but also linearly combined. Finally, we show that generalized pruning applied to a single network yields similar benefits as partial fusion by allowing for a tradeoff between isolating, deleting, and linearly combining neurons based on similarity. Our code is available at https://github.com/Fabian-Mor/partial_fusion_nn." />
+<meta property="og:description" content="Ensembles of neural networks typically outperform individual networks but incur large computational costs, whereas weight aggregation produces less costly, yet also less accurate, aggregate models. We introduce partial fusion of networks, which interpolates between ensembles and weight aggregation and thus allows for a flexible tradeoff between computational cost and performance. A direct way to achieve this is to extend existing weight aggregation methods based on neuron-level similarity between different networks, where partial fusion then only aggregates weights of neurons which are most similar. We showcase one particular method to jointly identify which neurons are most similar and match them via partial optimal transport. Further, we consider the more general perspective of weight aggregation and partial fusion as generalized pruning of ensemble models, where neurons cannot just be deleted, but also linearly combined. Finally, we show that generalized pruning applied to a single network yields similar benefits as partial fusion by allowing for a tradeoff between isolating, deleting, and linearly combining neurons based on similarity. Our code is available at https://github.com/Fabian-Mor/partial_fusion_nn." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/25/PartialFusionofNeuralNetworksEfficientTradeoffsBetweenEnsemblesandWeightAggregation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/25/PartialFusionofNeuralNetworksEfficientTradeoffsBetweenEnsemblesandWeightAggregation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Partial Fusion of Neural Networks: Efficient Tradeoffs Between Ensembles and Weight Aggregation" />
+<script type="application/ld+json">
+{"description":"Ensembles of neural networks typically outperform individual networks but incur large computational costs, whereas weight aggregation produces less costly, yet also less accurate, aggregate models. We introduce partial fusion of networks, which interpolates between ensembles and weight aggregation and thus allows for a flexible tradeoff between computational cost and performance. A direct way to achieve this is to extend existing weight aggregation methods based on neuron-level similarity between different networks, where partial fusion then only aggregates weights of neurons which are most similar. We showcase one particular method to jointly identify which neurons are most similar and match them via partial optimal transport. Further, we consider the more general perspective of weight aggregation and partial fusion as generalized pruning of ensemble models, where neurons cannot just be deleted, but also linearly combined. Finally, we show that generalized pruning applied to a single network yields similar benefits as partial fusion by allowing for a tradeoff between isolating, deleting, and linearly combining neurons based on similarity. Our code is available at https://github.com/Fabian-Mor/partial_fusion_nn.","author":{"@type":"Person","name":"Fabian Morelli, Stephan Eckstein"},"datePublished":"2026-05-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/25/PartialFusionofNeuralNetworksEfficientTradeoffsBetweenEnsemblesandWeightAggregation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/25/PartialFusionofNeuralNetworksEfficientTradeoffsBetweenEnsemblesandWeightAggregation.html","headline":"Partial Fusion of Neural Networks: Efficient Tradeoffs Between Ensembles and Weight Aggregation","@type":"BlogPosting","dateModified":"2026-05-25T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-25 00:00:00 +0000">05-25</time>
+  </p>
+  
+  <h1>Partial Fusion of Neural Networks: Efficient Tradeoffs Between Ensembles and Weight Aggregation</h1>
+  <br>Fabian Morelli, Stephan Eckstein</h3>
+  <br> [stat.ML]
+
+  <p>Ensembles of neural networks typically outperform individual networks but incur large computational costs, whereas weight aggregation produces less costly, yet also less accurate, aggregate models. We introduce partial fusion of networks, which interpolates between ensembles and weight aggregation and thus allows for a flexible tradeoff between computational cost and performance. A direct way to achieve this is to extend existing weight aggregation methods based on neuron-level similarity between different networks, where partial fusion then only aggregates weights of neurons which are most similar. We showcase one particular method to jointly identify which neurons are most similar and match them via partial optimal transport. Further, we consider the more general perspective of weight aggregation and partial fusion as generalized pruning of ensemble models, where neurons cannot just be deleted, but also linearly combined. Finally, we show that generalized pruning applied to a single network yields similar benefits as partial fusion by allowing for a tradeoff between isolating, deleting, and linearly combining neurons based on similarity. Our code is available at https://github.com/Fabian-Mor/partial_fusion_nn.</p>
+
+<p><a href="https://arxiv.org/abs/2605.22350">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
