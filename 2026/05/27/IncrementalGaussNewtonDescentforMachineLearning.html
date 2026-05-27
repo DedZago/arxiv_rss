@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Incremental Gauss-Newton Descent for Machine Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Incremental Gauss-Newton Descent for Machine Learning" />
+<meta name="author" content="Mikalai Korbit, Mario Zanon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stochastic gradient updates are widely used for their efficiency and scalability, but their effective step sizes can depend strongly on feature scaling and local model sensitivity. Gauss-Newton methods address such scale effects through curvature information, but in their standard mini-batch form they require matrix-vector products, linear solves, or structured approximations. This paper studies the special case of scalar-output losses evaluated one sample at a time. In this setting, the generalized Gauss-Newton matrix has rank at most one, and its only possible nonzero curvature direction is aligned with the stochastic gradient. As a result, the damped Gauss-Newton direction reduces to a closed-form scalar normalization of the sample gradient. The resulting update, Incremental Gauss-Newton Descent (IGND), requires no curvature matrix storage, factorization, or iterative linear solve. We derive the update, characterize its behavior, and relate it to normalized gradient descent, adaptive first-order methods, stochastic Polyak step sizes, and mini-batch Gauss-Newton updates. Under explicit smoothness, alignment, and stochastic approximation assumptions, we prove a stationarity result for the IGND update. Experiments on supervised learning, a controlled test of scale robustness, and a linear-quadratic control case study show that IGND improves robustness to sensitivity scaling and can be competitive with, or complementary to, common stochastic optimizers while retaining a simple incremental update." />
+<meta property="og:description" content="Stochastic gradient updates are widely used for their efficiency and scalability, but their effective step sizes can depend strongly on feature scaling and local model sensitivity. Gauss-Newton methods address such scale effects through curvature information, but in their standard mini-batch form they require matrix-vector products, linear solves, or structured approximations. This paper studies the special case of scalar-output losses evaluated one sample at a time. In this setting, the generalized Gauss-Newton matrix has rank at most one, and its only possible nonzero curvature direction is aligned with the stochastic gradient. As a result, the damped Gauss-Newton direction reduces to a closed-form scalar normalization of the sample gradient. The resulting update, Incremental Gauss-Newton Descent (IGND), requires no curvature matrix storage, factorization, or iterative linear solve. We derive the update, characterize its behavior, and relate it to normalized gradient descent, adaptive first-order methods, stochastic Polyak step sizes, and mini-batch Gauss-Newton updates. Under explicit smoothness, alignment, and stochastic approximation assumptions, we prove a stationarity result for the IGND update. Experiments on supervised learning, a controlled test of scale robustness, and a linear-quadratic control case study show that IGND improves robustness to sensitivity scaling and can be competitive with, or complementary to, common stochastic optimizers while retaining a simple incremental update." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/27/IncrementalGaussNewtonDescentforMachineLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/27/IncrementalGaussNewtonDescentforMachineLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Incremental Gauss-Newton Descent for Machine Learning" />
+<script type="application/ld+json">
+{"description":"Stochastic gradient updates are widely used for their efficiency and scalability, but their effective step sizes can depend strongly on feature scaling and local model sensitivity. Gauss-Newton methods address such scale effects through curvature information, but in their standard mini-batch form they require matrix-vector products, linear solves, or structured approximations. This paper studies the special case of scalar-output losses evaluated one sample at a time. In this setting, the generalized Gauss-Newton matrix has rank at most one, and its only possible nonzero curvature direction is aligned with the stochastic gradient. As a result, the damped Gauss-Newton direction reduces to a closed-form scalar normalization of the sample gradient. The resulting update, Incremental Gauss-Newton Descent (IGND), requires no curvature matrix storage, factorization, or iterative linear solve. We derive the update, characterize its behavior, and relate it to normalized gradient descent, adaptive first-order methods, stochastic Polyak step sizes, and mini-batch Gauss-Newton updates. Under explicit smoothness, alignment, and stochastic approximation assumptions, we prove a stationarity result for the IGND update. Experiments on supervised learning, a controlled test of scale robustness, and a linear-quadratic control case study show that IGND improves robustness to sensitivity scaling and can be competitive with, or complementary to, common stochastic optimizers while retaining a simple incremental update.","author":{"@type":"Person","name":"Mikalai Korbit, Mario Zanon"},"datePublished":"2026-05-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/27/IncrementalGaussNewtonDescentforMachineLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/27/IncrementalGaussNewtonDescentforMachineLearning.html","headline":"Incremental Gauss-Newton Descent for Machine Learning","@type":"BlogPosting","dateModified":"2026-05-27T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-27 00:00:00 +0000">05-27</time>
+  </p>
+  
+  <h1>Incremental Gauss-Newton Descent for Machine Learning</h1>
+  <br>Mikalai Korbit, Mario Zanon</h3>
+  <br> [stat.ML]
+
+  <p>Stochastic gradient updates are widely used for their efficiency and scalability, but their effective step sizes can depend strongly on feature scaling and local model sensitivity. Gauss-Newton methods address such scale effects through curvature information, but in their standard mini-batch form they require matrix-vector products, linear solves, or structured approximations. This paper studies the special case of scalar-output losses evaluated one sample at a time. In this setting, the generalized Gauss-Newton matrix has rank at most one, and its only possible nonzero curvature direction is aligned with the stochastic gradient. As a result, the damped Gauss-Newton direction reduces to a closed-form scalar normalization of the sample gradient. The resulting update, Incremental Gauss-Newton Descent (IGND), requires no curvature matrix storage, factorization, or iterative linear solve. We derive the update, characterize its behavior, and relate it to normalized gradient descent, adaptive first-order methods, stochastic Polyak step sizes, and mini-batch Gauss-Newton updates. Under explicit smoothness, alignment, and stochastic approximation assumptions, we prove a stationarity result for the IGND update. Experiments on supervised learning, a controlled test of scale robustness, and a linear-quadratic control case study show that IGND improves robustness to sensitivity scaling and can be competitive with, or complementary to, common stochastic optimizers while retaining a simple incremental update.</p>
+
+<p><a href="https://arxiv.org/abs/2408.05560">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
