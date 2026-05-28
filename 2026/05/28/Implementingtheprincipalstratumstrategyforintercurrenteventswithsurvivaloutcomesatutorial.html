@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Implementing the principal stratum strategy for intercurrent events with survival outcomes: a tutorial</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Implementing the principal stratum strategy for intercurrent events with survival outcomes: a tutorial" />
+<meta name="author" content="Xiaoxiao Zhou, Joyce Chen, Pallavi Mishra-Kalyani, Xiaoxue Li, Yuan Li Shen, Shu Wang, Susan Halabi, Fan Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The International Council for Harmonization (ICH) E9 (R1) addendum provides the estimand framework to formulate treatment effects in a clinical trial. One of the attributes of an estimand the framework describes is intercurrent events. Among the five strategies to intercurrent events the guidance lists, the principal stratum strategy is the most conceptually and technically challenging because it defines treatment effects on unobserved strata. Its application to survival outcomes is particularly inaccessible to practitioners. This tutorial reviews the methodology and implementation of the estimand framework with the principal stratum strategy to address intercurrent events with survival outcomes. We illustrate using a clinical trial in oncology and focus on a simple case with binary treatment and a single binary intercurrent event of discontinuation of the assigned treatment. We define the causal effects and review two main methods for estimating the effects: the mixture model method and the weighting method. For each method, we elaborate the associated assumptions, models, sensitivity analysis, software and provide example R code. We conduct simulation studies that mimic the real study to study the operation characteristics of these methods." />
+<meta property="og:description" content="The International Council for Harmonization (ICH) E9 (R1) addendum provides the estimand framework to formulate treatment effects in a clinical trial. One of the attributes of an estimand the framework describes is intercurrent events. Among the five strategies to intercurrent events the guidance lists, the principal stratum strategy is the most conceptually and technically challenging because it defines treatment effects on unobserved strata. Its application to survival outcomes is particularly inaccessible to practitioners. This tutorial reviews the methodology and implementation of the estimand framework with the principal stratum strategy to address intercurrent events with survival outcomes. We illustrate using a clinical trial in oncology and focus on a simple case with binary treatment and a single binary intercurrent event of discontinuation of the assigned treatment. We define the causal effects and review two main methods for estimating the effects: the mixture model method and the weighting method. For each method, we elaborate the associated assumptions, models, sensitivity analysis, software and provide example R code. We conduct simulation studies that mimic the real study to study the operation characteristics of these methods." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/28/Implementingtheprincipalstratumstrategyforintercurrenteventswithsurvivaloutcomesatutorial.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/28/Implementingtheprincipalstratumstrategyforintercurrenteventswithsurvivaloutcomesatutorial.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Implementing the principal stratum strategy for intercurrent events with survival outcomes: a tutorial" />
+<script type="application/ld+json">
+{"description":"The International Council for Harmonization (ICH) E9 (R1) addendum provides the estimand framework to formulate treatment effects in a clinical trial. One of the attributes of an estimand the framework describes is intercurrent events. Among the five strategies to intercurrent events the guidance lists, the principal stratum strategy is the most conceptually and technically challenging because it defines treatment effects on unobserved strata. Its application to survival outcomes is particularly inaccessible to practitioners. This tutorial reviews the methodology and implementation of the estimand framework with the principal stratum strategy to address intercurrent events with survival outcomes. We illustrate using a clinical trial in oncology and focus on a simple case with binary treatment and a single binary intercurrent event of discontinuation of the assigned treatment. We define the causal effects and review two main methods for estimating the effects: the mixture model method and the weighting method. For each method, we elaborate the associated assumptions, models, sensitivity analysis, software and provide example R code. We conduct simulation studies that mimic the real study to study the operation characteristics of these methods.","author":{"@type":"Person","name":"Xiaoxiao Zhou, Joyce Chen, Pallavi Mishra-Kalyani, Xiaoxue Li, Yuan Li Shen, Shu Wang, Susan Halabi, Fan Li"},"datePublished":"2026-05-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/28/Implementingtheprincipalstratumstrategyforintercurrenteventswithsurvivaloutcomesatutorial.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/28/Implementingtheprincipalstratumstrategyforintercurrenteventswithsurvivaloutcomesatutorial.html","headline":"Implementing the principal stratum strategy for intercurrent events with survival outcomes: a tutorial","@type":"BlogPosting","dateModified":"2026-05-28T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-28 00:00:00 +0000">05-28</time>
+  </p>
+  
+  <h1>Implementing the principal stratum strategy for intercurrent events with survival outcomes: a tutorial</h1>
+  <br>Xiaoxiao Zhou, Joyce Chen, Pallavi Mishra-Kalyani, Xiaoxue Li, Yuan Li Shen, Shu Wang, Susan Halabi, Fan Li</h3>
+  <br> [stat.ME]
+
+  <p>The International Council for Harmonization (ICH) E9 (R1) addendum provides the estimand framework to formulate treatment effects in a clinical trial. One of the attributes of an estimand the framework describes is intercurrent events. Among the five strategies to intercurrent events the guidance lists, the principal stratum strategy is the most conceptually and technically challenging because it defines treatment effects on unobserved strata. Its application to survival outcomes is particularly inaccessible to practitioners. This tutorial reviews the methodology and implementation of the estimand framework with the principal stratum strategy to address intercurrent events with survival outcomes. We illustrate using a clinical trial in oncology and focus on a simple case with binary treatment and a single binary intercurrent event of discontinuation of the assigned treatment. We define the causal effects and review two main methods for estimating the effects: the mixture model method and the weighting method. For each method, we elaborate the associated assumptions, models, sensitivity analysis, software and provide example R code. We conduct simulation studies that mimic the real study to study the operation characteristics of these methods.</p>
+
+<p><a href="https://arxiv.org/abs/2605.27655">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
