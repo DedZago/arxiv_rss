@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Do Deep Networks Forget Initialization? A Forgetting-Time View of Practical Inductive Bias</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Do Deep Networks Forget Initialization? A Forgetting-Time View of Practical Inductive Bias" />
+<meta name="author" content="Mohua Das, Pierfrancesco Beneventano, Shibshankar Dey, Gareth H. McKinkey, Tomaso Poggio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Randomly initialized neural networks induce a prior over functions, but the predictor used in practice is produced only after training. We ask how much of this initial bias survives the training pipeline. To make the question measurable, we introduce initialization memory: the dependence of the validation-selected predictor on the scale of the random initialization. We perform controlled CIFAR-10 experiments on ResNets where initialization memory already sharply separates training regimes. Low-learning-rate SGD can interpolate while still remembering its initialization: on ResNet-9 with batch size $b=128$, test accuracy varies by $26.5$ percentage points across initialization scales despite $\ge99.5\%$ training accuracy. This is not undertraining: extending the same low-learning-rate regime to $5{,}000$ epochs leaves the spread essentially unchanged. In contrast, Adam-family methods largely erase the dependence. SGD can also be made to forget when larger learning rates are paired with explicit $L_2$ norm control. We interpret these findings in terms of the time scale of forgetting: gradient-flow-like dynamics can preserve initialization memory, whereas stochastic finite-step effects, explicit norm decay, and adaptive preconditioning erase it on scales governed by the size of explicit or implicit regularization. The practical inductive bias of a trained network is therefore not the architectural prior alone, but the architectural prior after being filtered by the forgetting dynamics of the training pipeline; and the same regularizers that improve generalization are precisely those that erase memory of initialization." />
+<meta property="og:description" content="Randomly initialized neural networks induce a prior over functions, but the predictor used in practice is produced only after training. We ask how much of this initial bias survives the training pipeline. To make the question measurable, we introduce initialization memory: the dependence of the validation-selected predictor on the scale of the random initialization. We perform controlled CIFAR-10 experiments on ResNets where initialization memory already sharply separates training regimes. Low-learning-rate SGD can interpolate while still remembering its initialization: on ResNet-9 with batch size $b=128$, test accuracy varies by $26.5$ percentage points across initialization scales despite $\ge99.5\%$ training accuracy. This is not undertraining: extending the same low-learning-rate regime to $5{,}000$ epochs leaves the spread essentially unchanged. In contrast, Adam-family methods largely erase the dependence. SGD can also be made to forget when larger learning rates are paired with explicit $L_2$ norm control. We interpret these findings in terms of the time scale of forgetting: gradient-flow-like dynamics can preserve initialization memory, whereas stochastic finite-step effects, explicit norm decay, and adaptive preconditioning erase it on scales governed by the size of explicit or implicit regularization. The practical inductive bias of a trained network is therefore not the architectural prior alone, but the architectural prior after being filtered by the forgetting dynamics of the training pipeline; and the same regularizers that improve generalization are precisely those that erase memory of initialization." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/29/DoDeepNetworksForgetInitializationAForgettingTimeViewofPracticalInductiveBias.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/29/DoDeepNetworksForgetInitializationAForgettingTimeViewofPracticalInductiveBias.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Do Deep Networks Forget Initialization? A Forgetting-Time View of Practical Inductive Bias" />
+<script type="application/ld+json">
+{"description":"Randomly initialized neural networks induce a prior over functions, but the predictor used in practice is produced only after training. We ask how much of this initial bias survives the training pipeline. To make the question measurable, we introduce initialization memory: the dependence of the validation-selected predictor on the scale of the random initialization. We perform controlled CIFAR-10 experiments on ResNets where initialization memory already sharply separates training regimes. Low-learning-rate SGD can interpolate while still remembering its initialization: on ResNet-9 with batch size $b=128$, test accuracy varies by $26.5$ percentage points across initialization scales despite $\\ge99.5\\%$ training accuracy. This is not undertraining: extending the same low-learning-rate regime to $5{,}000$ epochs leaves the spread essentially unchanged. In contrast, Adam-family methods largely erase the dependence. SGD can also be made to forget when larger learning rates are paired with explicit $L_2$ norm control. We interpret these findings in terms of the time scale of forgetting: gradient-flow-like dynamics can preserve initialization memory, whereas stochastic finite-step effects, explicit norm decay, and adaptive preconditioning erase it on scales governed by the size of explicit or implicit regularization. The practical inductive bias of a trained network is therefore not the architectural prior alone, but the architectural prior after being filtered by the forgetting dynamics of the training pipeline; and the same regularizers that improve generalization are precisely those that erase memory of initialization.","author":{"@type":"Person","name":"Mohua Das, Pierfrancesco Beneventano, Shibshankar Dey, Gareth H. McKinkey, Tomaso Poggio"},"datePublished":"2026-05-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/29/DoDeepNetworksForgetInitializationAForgettingTimeViewofPracticalInductiveBias.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/29/DoDeepNetworksForgetInitializationAForgettingTimeViewofPracticalInductiveBias.html","headline":"Do Deep Networks Forget Initialization? A Forgetting-Time View of Practical Inductive Bias","@type":"BlogPosting","dateModified":"2026-05-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-29 00:00:00 +0000">05-29</time>
+  </p>
+  
+  <h1>Do Deep Networks Forget Initialization? A Forgetting-Time View of Practical Inductive Bias</h1>
+  <br>Mohua Das, Pierfrancesco Beneventano, Shibshankar Dey, Gareth H. McKinkey, Tomaso Poggio</h3>
+  <br> [stat.ML]
+
+  <p>Randomly initialized neural networks induce a prior over functions, but the predictor used in practice is produced only after training. We ask how much of this initial bias survives the training pipeline. To make the question measurable, we introduce initialization memory: the dependence of the validation-selected predictor on the scale of the random initialization. We perform controlled CIFAR-10 experiments on ResNets where initialization memory already sharply separates training regimes. Low-learning-rate SGD can interpolate while still remembering its initialization: on ResNet-9 with batch size $b=128$, test accuracy varies by $26.5$ percentage points across initialization scales despite $\ge99.5\%$ training accuracy. This is not undertraining: extending the same low-learning-rate regime to $5{,}000$ epochs leaves the spread essentially unchanged. In contrast, Adam-family methods largely erase the dependence. SGD can also be made to forget when larger learning rates are paired with explicit $L_2$ norm control. We interpret these findings in terms of the time scale of forgetting: gradient-flow-like dynamics can preserve initialization memory, whereas stochastic finite-step effects, explicit norm decay, and adaptive preconditioning erase it on scales governed by the size of explicit or implicit regularization. The practical inductive bias of a trained network is therefore not the architectural prior alone, but the architectural prior after being filtered by the forgetting dynamics of the training pipeline; and the same regularizers that improve generalization are precisely those that erase memory of initialization.</p>
+
+<p><a href="https://arxiv.org/abs/2605.29152">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

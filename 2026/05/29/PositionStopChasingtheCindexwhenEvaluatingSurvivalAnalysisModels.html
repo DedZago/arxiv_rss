@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Position: Stop Chasing the C-index when Evaluating Survival Analysis Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Position: Stop Chasing the C-index when Evaluating Survival Analysis Models" />
+<meta name="author" content="Christian Marius Lillelund, Shi-ang Qi, Russell Greiner, Christian Fischer Pedersen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The current state of evaluation in survival analysis is plagued by the persistent use of evaluation metrics in ways that are misaligned with the stated modeling objective. In addition, many such evaluations are based on censoring assumptions that are left implicit or unjustified. This means that the reported performance can be misleading and may fail to answer the scientific or modeling question the evaluation was intended to address. In this position paper, we critically examine evaluation practices in survival analysis and highlight how censoring makes evaluation fundamentally different from standard regression or classification. We place particular focus on concordance-based measures, such as the C-index, which we show are heavily overused in the literature. To help identify appropriate metrics, we propose a set of key desiderata and introduce a double-helix ladder, in which valid evaluation requires alignment between metric and modeling assumptions. Through controlled experiments, we show that violations of this alignment can lead to misleading model comparisons. We conclude by providing practical guidance on how to evaluate a survival model." />
+<meta property="og:description" content="The current state of evaluation in survival analysis is plagued by the persistent use of evaluation metrics in ways that are misaligned with the stated modeling objective. In addition, many such evaluations are based on censoring assumptions that are left implicit or unjustified. This means that the reported performance can be misleading and may fail to answer the scientific or modeling question the evaluation was intended to address. In this position paper, we critically examine evaluation practices in survival analysis and highlight how censoring makes evaluation fundamentally different from standard regression or classification. We place particular focus on concordance-based measures, such as the C-index, which we show are heavily overused in the literature. To help identify appropriate metrics, we propose a set of key desiderata and introduce a double-helix ladder, in which valid evaluation requires alignment between metric and modeling assumptions. Through controlled experiments, we show that violations of this alignment can lead to misleading model comparisons. We conclude by providing practical guidance on how to evaluate a survival model." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/29/PositionStopChasingtheCindexwhenEvaluatingSurvivalAnalysisModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/29/PositionStopChasingtheCindexwhenEvaluatingSurvivalAnalysisModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Position: Stop Chasing the C-index when Evaluating Survival Analysis Models" />
+<script type="application/ld+json">
+{"description":"The current state of evaluation in survival analysis is plagued by the persistent use of evaluation metrics in ways that are misaligned with the stated modeling objective. In addition, many such evaluations are based on censoring assumptions that are left implicit or unjustified. This means that the reported performance can be misleading and may fail to answer the scientific or modeling question the evaluation was intended to address. In this position paper, we critically examine evaluation practices in survival analysis and highlight how censoring makes evaluation fundamentally different from standard regression or classification. We place particular focus on concordance-based measures, such as the C-index, which we show are heavily overused in the literature. To help identify appropriate metrics, we propose a set of key desiderata and introduce a double-helix ladder, in which valid evaluation requires alignment between metric and modeling assumptions. Through controlled experiments, we show that violations of this alignment can lead to misleading model comparisons. We conclude by providing practical guidance on how to evaluate a survival model.","author":{"@type":"Person","name":"Christian Marius Lillelund, Shi-ang Qi, Russell Greiner, Christian Fischer Pedersen"},"datePublished":"2026-05-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/29/PositionStopChasingtheCindexwhenEvaluatingSurvivalAnalysisModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/29/PositionStopChasingtheCindexwhenEvaluatingSurvivalAnalysisModels.html","headline":"Position: Stop Chasing the C-index when Evaluating Survival Analysis Models","@type":"BlogPosting","dateModified":"2026-05-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-29 00:00:00 +0000">05-29</time>
+  </p>
+  
+  <h1>Position: Stop Chasing the C-index when Evaluating Survival Analysis Models</h1>
+  <br>Christian Marius Lillelund, Shi-ang Qi, Russell Greiner, Christian Fischer Pedersen</h3>
+  <br> [stat.ME]
+
+  <p>The current state of evaluation in survival analysis is plagued by the persistent use of evaluation metrics in ways that are misaligned with the stated modeling objective. In addition, many such evaluations are based on censoring assumptions that are left implicit or unjustified. This means that the reported performance can be misleading and may fail to answer the scientific or modeling question the evaluation was intended to address. In this position paper, we critically examine evaluation practices in survival analysis and highlight how censoring makes evaluation fundamentally different from standard regression or classification. We place particular focus on concordance-based measures, such as the C-index, which we show are heavily overused in the literature. To help identify appropriate metrics, we propose a set of key desiderata and introduce a double-helix ladder, in which valid evaluation requires alignment between metric and modeling assumptions. Through controlled experiments, we show that violations of this alignment can lead to misleading model comparisons. We conclude by providing practical guidance on how to evaluate a survival model.</p>
+
+<p><a href="https://arxiv.org/abs/2506.02075">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

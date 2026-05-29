@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Neural Posterior Estimation for Spatial Individual-Level Epidemic Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Neural Posterior Estimation for Spatial Individual-Level Epidemic Models" />
+<meta name="author" content="Yicheng Mao, Rob Deardon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Spatial individual-level models (ILMs) provide a flexible framework for modelling infectious disease transmission across populations with known locations. Bayesian inference for these models relies on Markov chain Monte Carlo (MCMC), which requires repeated likelihood evaluation and, when parts of the epidemic trajectory are unobserved, data-augmented sampling over high-dimensional latent variables. This computational cost limits the applicability of MCMC to large populations and to settings requiring inference across multiple outbreaks. We propose using neural posterior estimation (NPE) for amortised Bayesian inference in spatial ILMs. NPE trains a conditional normalising flow on simulated data to approximate the posterior directly, bypassing likelihood evaluation at inference time. We compare two embedding architectures: a convolutional neural network (CNN) operating on the population-level incidence curve and a graph neural network (GNN) operating on individual-level infection and location data. In a simulation study under full observation, stochastic removals, and partial observation, both variants produce well-calibrated posteriors, with the GNN embedding yielding lower error and narrower credible intervals for the spatial transmission parameters. We apply the framework to a spatial SEIR model on 1,177 farm locations from the 2001 UK foot-and-mouth disease outbreak. GNN-NPE maintains calibrated coverage and is substantially faster than MCMC on a per-epidemic basis." />
+<meta property="og:description" content="Spatial individual-level models (ILMs) provide a flexible framework for modelling infectious disease transmission across populations with known locations. Bayesian inference for these models relies on Markov chain Monte Carlo (MCMC), which requires repeated likelihood evaluation and, when parts of the epidemic trajectory are unobserved, data-augmented sampling over high-dimensional latent variables. This computational cost limits the applicability of MCMC to large populations and to settings requiring inference across multiple outbreaks. We propose using neural posterior estimation (NPE) for amortised Bayesian inference in spatial ILMs. NPE trains a conditional normalising flow on simulated data to approximate the posterior directly, bypassing likelihood evaluation at inference time. We compare two embedding architectures: a convolutional neural network (CNN) operating on the population-level incidence curve and a graph neural network (GNN) operating on individual-level infection and location data. In a simulation study under full observation, stochastic removals, and partial observation, both variants produce well-calibrated posteriors, with the GNN embedding yielding lower error and narrower credible intervals for the spatial transmission parameters. We apply the framework to a spatial SEIR model on 1,177 farm locations from the 2001 UK foot-and-mouth disease outbreak. GNN-NPE maintains calibrated coverage and is substantially faster than MCMC on a per-epidemic basis." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/05/29/NeuralPosteriorEstimationforSpatialIndividualLevelEpidemicModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/05/29/NeuralPosteriorEstimationforSpatialIndividualLevelEpidemicModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-05-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Neural Posterior Estimation for Spatial Individual-Level Epidemic Models" />
+<script type="application/ld+json">
+{"description":"Spatial individual-level models (ILMs) provide a flexible framework for modelling infectious disease transmission across populations with known locations. Bayesian inference for these models relies on Markov chain Monte Carlo (MCMC), which requires repeated likelihood evaluation and, when parts of the epidemic trajectory are unobserved, data-augmented sampling over high-dimensional latent variables. This computational cost limits the applicability of MCMC to large populations and to settings requiring inference across multiple outbreaks. We propose using neural posterior estimation (NPE) for amortised Bayesian inference in spatial ILMs. NPE trains a conditional normalising flow on simulated data to approximate the posterior directly, bypassing likelihood evaluation at inference time. We compare two embedding architectures: a convolutional neural network (CNN) operating on the population-level incidence curve and a graph neural network (GNN) operating on individual-level infection and location data. In a simulation study under full observation, stochastic removals, and partial observation, both variants produce well-calibrated posteriors, with the GNN embedding yielding lower error and narrower credible intervals for the spatial transmission parameters. We apply the framework to a spatial SEIR model on 1,177 farm locations from the 2001 UK foot-and-mouth disease outbreak. GNN-NPE maintains calibrated coverage and is substantially faster than MCMC on a per-epidemic basis.","author":{"@type":"Person","name":"Yicheng Mao, Rob Deardon"},"datePublished":"2026-05-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/05/29/NeuralPosteriorEstimationforSpatialIndividualLevelEpidemicModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/05/29/NeuralPosteriorEstimationforSpatialIndividualLevelEpidemicModels.html","headline":"Neural Posterior Estimation for Spatial Individual-Level Epidemic Models","@type":"BlogPosting","dateModified":"2026-05-29T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-05-29 00:00:00 +0000">05-29</time>
+  </p>
+  
+  <h1>Neural Posterior Estimation for Spatial Individual-Level Epidemic Models</h1>
+  <br>Yicheng Mao, Rob Deardon</h3>
+  <br> [stat.CO]
+
+  <p>Spatial individual-level models (ILMs) provide a flexible framework for modelling infectious disease transmission across populations with known locations. Bayesian inference for these models relies on Markov chain Monte Carlo (MCMC), which requires repeated likelihood evaluation and, when parts of the epidemic trajectory are unobserved, data-augmented sampling over high-dimensional latent variables. This computational cost limits the applicability of MCMC to large populations and to settings requiring inference across multiple outbreaks. We propose using neural posterior estimation (NPE) for amortised Bayesian inference in spatial ILMs. NPE trains a conditional normalising flow on simulated data to approximate the posterior directly, bypassing likelihood evaluation at inference time. We compare two embedding architectures: a convolutional neural network (CNN) operating on the population-level incidence curve and a graph neural network (GNN) operating on individual-level infection and location data. In a simulation study under full observation, stochastic removals, and partial observation, both variants produce well-calibrated posteriors, with the GNN embedding yielding lower error and narrower credible intervals for the spatial transmission parameters. We apply the framework to a spatial SEIR model on 1,177 farm locations from the 2001 UK foot-and-mouth disease outbreak. GNN-NPE maintains calibrated coverage and is substantially faster than MCMC on a per-epidemic basis.</p>
+
+<p><a href="https://arxiv.org/abs/2605.29180">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
