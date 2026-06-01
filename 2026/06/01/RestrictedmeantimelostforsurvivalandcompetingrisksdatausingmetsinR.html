@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Restricted mean time lost for survival and competing risks data using mets in R</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Restricted mean time lost for survival and competing risks data using mets in R" />
+<meta name="author" content="Thomas Harder Scheike, Klaus Kähler Holst" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper introduces software implemented in the mets R-package for calculating non-parametric and regression estimates of Restricted Mean Survival Time (RMST) and Restricted Mean Time Lost (RMTL), including RMTL due to specific causes. A unique feature is the ability to compute the non-parametric estimates of RMST and RMTL, as well as their standard errors, for all time horizons simultaneously. Regression modeling in mets is based on Inverse Probability of Censoring Weighting (IPCW) methods. The package implements different versions of IPCW adjusted estimating equations. A critical technical contribution is the provision of influence functions for all models, which enables the computation of standard errors and allows the estimates to be used as building blocks for more complex statistics, such as the while-alive estimate in recurrent events settings. To expand capabilities in causal inference, the mets package also implements methods for standardization estimates (G-computation) and the estimation of Average Treatment Effects (ATE) for both RMST and RMTL in the competing risks setting. Importantly, the computations scale linearly with the number of observations, making the software efficient for use with large datasets." />
+<meta property="og:description" content="This paper introduces software implemented in the mets R-package for calculating non-parametric and regression estimates of Restricted Mean Survival Time (RMST) and Restricted Mean Time Lost (RMTL), including RMTL due to specific causes. A unique feature is the ability to compute the non-parametric estimates of RMST and RMTL, as well as their standard errors, for all time horizons simultaneously. Regression modeling in mets is based on Inverse Probability of Censoring Weighting (IPCW) methods. The package implements different versions of IPCW adjusted estimating equations. A critical technical contribution is the provision of influence functions for all models, which enables the computation of standard errors and allows the estimates to be used as building blocks for more complex statistics, such as the while-alive estimate in recurrent events settings. To expand capabilities in causal inference, the mets package also implements methods for standardization estimates (G-computation) and the estimation of Average Treatment Effects (ATE) for both RMST and RMTL in the competing risks setting. Importantly, the computations scale linearly with the number of observations, making the software efficient for use with large datasets." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/01/RestrictedmeantimelostforsurvivalandcompetingrisksdatausingmetsinR.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/01/RestrictedmeantimelostforsurvivalandcompetingrisksdatausingmetsinR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Restricted mean time lost for survival and competing risks data using mets in R" />
+<script type="application/ld+json">
+{"description":"This paper introduces software implemented in the mets R-package for calculating non-parametric and regression estimates of Restricted Mean Survival Time (RMST) and Restricted Mean Time Lost (RMTL), including RMTL due to specific causes. A unique feature is the ability to compute the non-parametric estimates of RMST and RMTL, as well as their standard errors, for all time horizons simultaneously. Regression modeling in mets is based on Inverse Probability of Censoring Weighting (IPCW) methods. The package implements different versions of IPCW adjusted estimating equations. A critical technical contribution is the provision of influence functions for all models, which enables the computation of standard errors and allows the estimates to be used as building blocks for more complex statistics, such as the while-alive estimate in recurrent events settings. To expand capabilities in causal inference, the mets package also implements methods for standardization estimates (G-computation) and the estimation of Average Treatment Effects (ATE) for both RMST and RMTL in the competing risks setting. Importantly, the computations scale linearly with the number of observations, making the software efficient for use with large datasets.","author":{"@type":"Person","name":"Thomas Harder Scheike, Klaus Kähler Holst"},"datePublished":"2026-06-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/01/RestrictedmeantimelostforsurvivalandcompetingrisksdatausingmetsinR.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/01/RestrictedmeantimelostforsurvivalandcompetingrisksdatausingmetsinR.html","headline":"Restricted mean time lost for survival and competing risks data using mets in R","@type":"BlogPosting","dateModified":"2026-06-01T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-01 00:00:00 +0000">06-01</time>
+  </p>
+  
+  <h1>Restricted mean time lost for survival and competing risks data using mets in R</h1>
+  <br>Thomas Harder Scheike, Klaus Kähler Holst</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>This paper introduces software implemented in the mets R-package for calculating non-parametric and regression estimates of Restricted Mean Survival Time (RMST) and Restricted Mean Time Lost (RMTL), including RMTL due to specific causes. A unique feature is the ability to compute the non-parametric estimates of RMST and RMTL, as well as their standard errors, for all time horizons simultaneously. Regression modeling in mets is based on Inverse Probability of Censoring Weighting (IPCW) methods. The package implements different versions of IPCW adjusted estimating equations. A critical technical contribution is the provision of influence functions for all models, which enables the computation of standard errors and allows the estimates to be used as building blocks for more complex statistics, such as the while-alive estimate in recurrent events settings. To expand capabilities in causal inference, the mets package also implements methods for standardization estimates (G-computation) and the estimation of Average Treatment Effects (ATE) for both RMST and RMTL in the competing risks setting. Importantly, the computations scale linearly with the number of observations, making the software efficient for use with large datasets.</p>
+
+<p><a href="https://arxiv.org/abs/2605.30517">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

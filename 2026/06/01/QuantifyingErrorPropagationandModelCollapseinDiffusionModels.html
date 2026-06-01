@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quantifying Error Propagation and Model Collapse in Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Quantifying Error Propagation and Model Collapse in Diffusion Models" />
+<meta name="author" content="Nail B. Khelifa, Richard E. Turner, Ramji Venkataramanan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Machine learning models are increasingly trained or fine-tuned on synthetic data. Recursively training on such data has been observed to significantly degrade performance in a wide range of tasks, often characterized by a progressive drift away from the target distribution. In this work, we theoretically analyze this phenomenon in the setting of score-based diffusion models. For a realistic pipeline where each training round uses a combination of synthetic data and fresh samples from the target distribution, we obtain upper and lower bounds on the accumulated divergence between the generated and target distributions. Notably, to the best of our knowledge, this is the first lower bound on the divergence between the learned and target distributions, even for standard diffusion models. Our results allow us to characterize different regimes of drift, depending on the score estimation error and the proportion of fresh data used in each generation. In a certain regime, the accumulated divergence after several retraining rounds can be expressed as a discounted sum of score estimation errors made at each generation. We also provide empirical results on synthetic data and images to illustrate the theory." />
+<meta property="og:description" content="Machine learning models are increasingly trained or fine-tuned on synthetic data. Recursively training on such data has been observed to significantly degrade performance in a wide range of tasks, often characterized by a progressive drift away from the target distribution. In this work, we theoretically analyze this phenomenon in the setting of score-based diffusion models. For a realistic pipeline where each training round uses a combination of synthetic data and fresh samples from the target distribution, we obtain upper and lower bounds on the accumulated divergence between the generated and target distributions. Notably, to the best of our knowledge, this is the first lower bound on the divergence between the learned and target distributions, even for standard diffusion models. Our results allow us to characterize different regimes of drift, depending on the score estimation error and the proportion of fresh data used in each generation. In a certain regime, the accumulated divergence after several retraining rounds can be expressed as a discounted sum of score estimation errors made at each generation. We also provide empirical results on synthetic data and images to illustrate the theory." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/01/QuantifyingErrorPropagationandModelCollapseinDiffusionModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/01/QuantifyingErrorPropagationandModelCollapseinDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quantifying Error Propagation and Model Collapse in Diffusion Models" />
+<script type="application/ld+json">
+{"description":"Machine learning models are increasingly trained or fine-tuned on synthetic data. Recursively training on such data has been observed to significantly degrade performance in a wide range of tasks, often characterized by a progressive drift away from the target distribution. In this work, we theoretically analyze this phenomenon in the setting of score-based diffusion models. For a realistic pipeline where each training round uses a combination of synthetic data and fresh samples from the target distribution, we obtain upper and lower bounds on the accumulated divergence between the generated and target distributions. Notably, to the best of our knowledge, this is the first lower bound on the divergence between the learned and target distributions, even for standard diffusion models. Our results allow us to characterize different regimes of drift, depending on the score estimation error and the proportion of fresh data used in each generation. In a certain regime, the accumulated divergence after several retraining rounds can be expressed as a discounted sum of score estimation errors made at each generation. We also provide empirical results on synthetic data and images to illustrate the theory.","author":{"@type":"Person","name":"Nail B. Khelifa, Richard E. Turner, Ramji Venkataramanan"},"datePublished":"2026-06-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/01/QuantifyingErrorPropagationandModelCollapseinDiffusionModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/01/QuantifyingErrorPropagationandModelCollapseinDiffusionModels.html","headline":"Quantifying Error Propagation and Model Collapse in Diffusion Models","@type":"BlogPosting","dateModified":"2026-06-01T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-01 00:00:00 +0000">06-01</time>
+  </p>
+  
+  <h1>Quantifying Error Propagation and Model Collapse in Diffusion Models</h1>
+  <br>Nail B. Khelifa, Richard E. Turner, Ramji Venkataramanan</h3>
+  <br> [stat.ML]
+
+  <p>Machine learning models are increasingly trained or fine-tuned on synthetic data. Recursively training on such data has been observed to significantly degrade performance in a wide range of tasks, often characterized by a progressive drift away from the target distribution. In this work, we theoretically analyze this phenomenon in the setting of score-based diffusion models. For a realistic pipeline where each training round uses a combination of synthetic data and fresh samples from the target distribution, we obtain upper and lower bounds on the accumulated divergence between the generated and target distributions. Notably, to the best of our knowledge, this is the first lower bound on the divergence between the learned and target distributions, even for standard diffusion models. Our results allow us to characterize different regimes of drift, depending on the score estimation error and the proportion of fresh data used in each generation. In a certain regime, the accumulated divergence after several retraining rounds can be expressed as a discounted sum of score estimation errors made at each generation. We also provide empirical results on synthetic data and images to illustrate the theory.</p>
+
+<p><a href="https://arxiv.org/abs/2602.16601">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
