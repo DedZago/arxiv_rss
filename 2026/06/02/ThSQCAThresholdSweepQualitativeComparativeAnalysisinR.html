@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ThSQCA: Threshold-Sweep Qualitative Comparative Analysis in R</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ThSQCA: Threshold-Sweep Qualitative Comparative Analysis in R" />
+<meta name="author" content="Yuki Toyoda" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Qualitative Comparative Analysis (QCA) requires researchers to choose calibration and dichotomization thresholds, and these choices can substantially affect truth tables, minimization, and resulting solution formulas. Despite this dependency, threshold sensitivity is often examined only in an ad hoc manner because repeated analyses are time-intensive and error-prone. We present ThSQCA, an R package that automates threshold-sweep analyses by treating thresholds as explicit analytical variables. It provides four sweep functions (otSweep, ctSweepS, ctSweepM, dtSweep) to explore outcome thresholds, single-condition thresholds, multi-condition threshold grids, and joint outcome-condition threshold spaces, respectively. ThSQCA integrates with the established CRAN package QCA for truth table construction and Boolean minimization, while returning structured S3 objects with consistent print/summary methods and optional detailed results. The package also supports automated Markdown report generation and configuration-chart output to facilitate reproducible documentation of cross-threshold results." />
+<meta property="og:description" content="Qualitative Comparative Analysis (QCA) requires researchers to choose calibration and dichotomization thresholds, and these choices can substantially affect truth tables, minimization, and resulting solution formulas. Despite this dependency, threshold sensitivity is often examined only in an ad hoc manner because repeated analyses are time-intensive and error-prone. We present ThSQCA, an R package that automates threshold-sweep analyses by treating thresholds as explicit analytical variables. It provides four sweep functions (otSweep, ctSweepS, ctSweepM, dtSweep) to explore outcome thresholds, single-condition thresholds, multi-condition threshold grids, and joint outcome-condition threshold spaces, respectively. ThSQCA integrates with the established CRAN package QCA for truth table construction and Boolean minimization, while returning structured S3 objects with consistent print/summary methods and optional detailed results. The package also supports automated Markdown report generation and configuration-chart output to facilitate reproducible documentation of cross-threshold results." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/02/ThSQCAThresholdSweepQualitativeComparativeAnalysisinR.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/02/ThSQCAThresholdSweepQualitativeComparativeAnalysisinR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ThSQCA: Threshold-Sweep Qualitative Comparative Analysis in R" />
+<script type="application/ld+json">
+{"description":"Qualitative Comparative Analysis (QCA) requires researchers to choose calibration and dichotomization thresholds, and these choices can substantially affect truth tables, minimization, and resulting solution formulas. Despite this dependency, threshold sensitivity is often examined only in an ad hoc manner because repeated analyses are time-intensive and error-prone. We present ThSQCA, an R package that automates threshold-sweep analyses by treating thresholds as explicit analytical variables. It provides four sweep functions (otSweep, ctSweepS, ctSweepM, dtSweep) to explore outcome thresholds, single-condition thresholds, multi-condition threshold grids, and joint outcome-condition threshold spaces, respectively. ThSQCA integrates with the established CRAN package QCA for truth table construction and Boolean minimization, while returning structured S3 objects with consistent print/summary methods and optional detailed results. The package also supports automated Markdown report generation and configuration-chart output to facilitate reproducible documentation of cross-threshold results.","author":{"@type":"Person","name":"Yuki Toyoda"},"datePublished":"2026-06-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/02/ThSQCAThresholdSweepQualitativeComparativeAnalysisinR.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/02/ThSQCAThresholdSweepQualitativeComparativeAnalysisinR.html","headline":"ThSQCA: Threshold-Sweep Qualitative Comparative Analysis in R","@type":"BlogPosting","dateModified":"2026-06-02T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-02 00:00:00 +0000">06-02</time>
+  </p>
+  
+  <h1>ThSQCA: Threshold-Sweep Qualitative Comparative Analysis in R</h1>
+  <br>Yuki Toyoda</h3>
+  <br> [stat.ME]
+
+  <p>Qualitative Comparative Analysis (QCA) requires researchers to choose calibration and dichotomization thresholds, and these choices can substantially affect truth tables, minimization, and resulting solution formulas. Despite this dependency, threshold sensitivity is often examined only in an ad hoc manner because repeated analyses are time-intensive and error-prone. We present ThSQCA, an R package that automates threshold-sweep analyses by treating thresholds as explicit analytical variables. It provides four sweep functions (otSweep, ctSweepS, ctSweepM, dtSweep) to explore outcome thresholds, single-condition thresholds, multi-condition threshold grids, and joint outcome-condition threshold spaces, respectively. ThSQCA integrates with the established CRAN package QCA for truth table construction and Boolean minimization, while returning structured S3 objects with consistent print/summary methods and optional detailed results. The package also supports automated Markdown report generation and configuration-chart output to facilitate reproducible documentation of cross-threshold results.</p>
+
+<p><a href="https://arxiv.org/abs/2601.11229">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
