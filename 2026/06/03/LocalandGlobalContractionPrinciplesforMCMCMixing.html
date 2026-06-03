@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Local and Global Contraction Principles for MCMC Mixing</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Local and Global Contraction Principles for MCMC Mixing" />
+<meta name="author" content="Alireza Daeijavad, Shahab Asoodeh" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a contraction-based framework for proving mixing-time bounds for Markov chain Monte Carlo algorithms. The framework is built around global and local contraction coefficients of Markov kernels under the $\mathsf E_\gamma$-divergence with $\gamma\ge1$. For projected Langevin Monte Carlo on a compact convex domain, we show that Gaussian smoothing yields an explicit global contraction coefficient for the $\mathsf E_\gamma$-divergence. This gives a direct proof of exponential convergence to the discretized stationary distribution for general smooth, possibly non-convex potentials. The rate is explicit, accommodates arbitrary random-batch sampling schemes, and yields convergence guarantees for several divergences, including KL, $\chi^2$, and R&#39;enyi divergences. For independent Metropolis–Hastings with target $\pi$, proposal $q$, and unbounded importance weight $w=d\pi/dq$, global contraction coefficients are typically trivial. We therefore introduce a local contraction coefficient on the core $C_R={w\le R}$ and prove that it controls the rejection profile on the core. This yields warm-start convergence bounds governed by the local contraction coefficient and the tail profile $H_R=\pi(w&gt;R)$, recovering sharp existing moment-based convergence rates when $\mathbb E_q[w^p]&lt;\infty$ for some $p&gt;1$, while remaining effective in heavy-tailed regimes where no finite moment of order $p&gt;1$ exists." />
+<meta property="og:description" content="We develop a contraction-based framework for proving mixing-time bounds for Markov chain Monte Carlo algorithms. The framework is built around global and local contraction coefficients of Markov kernels under the $\mathsf E_\gamma$-divergence with $\gamma\ge1$. For projected Langevin Monte Carlo on a compact convex domain, we show that Gaussian smoothing yields an explicit global contraction coefficient for the $\mathsf E_\gamma$-divergence. This gives a direct proof of exponential convergence to the discretized stationary distribution for general smooth, possibly non-convex potentials. The rate is explicit, accommodates arbitrary random-batch sampling schemes, and yields convergence guarantees for several divergences, including KL, $\chi^2$, and R&#39;enyi divergences. For independent Metropolis–Hastings with target $\pi$, proposal $q$, and unbounded importance weight $w=d\pi/dq$, global contraction coefficients are typically trivial. We therefore introduce a local contraction coefficient on the core $C_R={w\le R}$ and prove that it controls the rejection profile on the core. This yields warm-start convergence bounds governed by the local contraction coefficient and the tail profile $H_R=\pi(w&gt;R)$, recovering sharp existing moment-based convergence rates when $\mathbb E_q[w^p]&lt;\infty$ for some $p&gt;1$, while remaining effective in heavy-tailed regimes where no finite moment of order $p&gt;1$ exists." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/03/LocalandGlobalContractionPrinciplesforMCMCMixing.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/03/LocalandGlobalContractionPrinciplesforMCMCMixing.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Local and Global Contraction Principles for MCMC Mixing" />
+<script type="application/ld+json">
+{"description":"We develop a contraction-based framework for proving mixing-time bounds for Markov chain Monte Carlo algorithms. The framework is built around global and local contraction coefficients of Markov kernels under the $\\mathsf E_\\gamma$-divergence with $\\gamma\\ge1$. For projected Langevin Monte Carlo on a compact convex domain, we show that Gaussian smoothing yields an explicit global contraction coefficient for the $\\mathsf E_\\gamma$-divergence. This gives a direct proof of exponential convergence to the discretized stationary distribution for general smooth, possibly non-convex potentials. The rate is explicit, accommodates arbitrary random-batch sampling schemes, and yields convergence guarantees for several divergences, including KL, $\\chi^2$, and R&#39;enyi divergences. For independent Metropolis–Hastings with target $\\pi$, proposal $q$, and unbounded importance weight $w=d\\pi/dq$, global contraction coefficients are typically trivial. We therefore introduce a local contraction coefficient on the core $C_R={w\\le R}$ and prove that it controls the rejection profile on the core. This yields warm-start convergence bounds governed by the local contraction coefficient and the tail profile $H_R=\\pi(w&gt;R)$, recovering sharp existing moment-based convergence rates when $\\mathbb E_q[w^p]&lt;\\infty$ for some $p&gt;1$, while remaining effective in heavy-tailed regimes where no finite moment of order $p&gt;1$ exists.","author":{"@type":"Person","name":"Alireza Daeijavad, Shahab Asoodeh"},"datePublished":"2026-06-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/03/LocalandGlobalContractionPrinciplesforMCMCMixing.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/03/LocalandGlobalContractionPrinciplesforMCMCMixing.html","headline":"Local and Global Contraction Principles for MCMC Mixing","@type":"BlogPosting","dateModified":"2026-06-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-03 00:00:00 +0000">06-03</time>
+  </p>
+  
+  <h1>Local and Global Contraction Principles for MCMC Mixing</h1>
+  <br>Alireza Daeijavad, Shahab Asoodeh</h3>
+  <br> [stat.CO,stat.ML,stat.TH]
+
+  <p>We develop a contraction-based framework for proving mixing-time bounds for Markov chain Monte Carlo algorithms. The framework is built around global and local contraction coefficients of Markov kernels under the $\mathsf E_\gamma$-divergence with $\gamma\ge1$. For projected Langevin Monte Carlo on a compact convex domain, we show that Gaussian smoothing yields an explicit global contraction coefficient for the $\mathsf E_\gamma$-divergence. This gives a direct proof of exponential convergence to the discretized stationary distribution for general smooth, possibly non-convex potentials. The rate is explicit, accommodates arbitrary random-batch sampling schemes, and yields convergence guarantees for several divergences, including KL, $\chi^2$, and R'enyi divergences. For independent Metropolis–Hastings with target $\pi$, proposal $q$, and unbounded importance weight $w=d\pi/dq$, global contraction coefficients are typically trivial. We therefore introduce a local contraction coefficient on the core $C_R={w\le R}$ and prove that it controls the rejection profile on the core. This yields warm-start convergence bounds governed by the local contraction coefficient and the tail profile $H_R=\pi(w&gt;R)$, recovering sharp existing moment-based convergence rates when $\mathbb E_q[w^p]&lt;\infty$ for some $p&gt;1$, while remaining effective in heavy-tailed regimes where no finite moment of order $p&gt;1$ exists.</p>
+
+<p><a href="https://arxiv.org/abs/2606.03033">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

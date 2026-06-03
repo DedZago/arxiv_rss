@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Quantitative Approximation Framework for Flow Distillation in Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Quantitative Approximation Framework for Flow Distillation in Diffusion Models" />
+<meta name="author" content="Weiguo Gao, Ming Li, Lei Shi, Hanfei Zhou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We develop a quantitative approximation framework for diffusion distillation, viewing few-step sampling as error propagation under compositions of learned flow maps. Focusing on trajectory distillation for the probability-flow ODE, we show that local approximation errors can be strongly amplified in low-noise multimodal regimes, where the underlying dynamics become stiff. In an analytically tractable Gaussian-mixture Ornstein–Uhlenbeck setting, we separate two core difficulties: approximating the time-dependent score field and controlling the dynamical amplification governed by the time-integrated Jacobian bound of the probability-flow ODE. On the approximation side, we prove constructive L^p(p_t) guarantees showing that ReLU–ReQU networks approximate the Gaussian-mixture score uniformly over time, with depth and width scaling polylogarithmically in the target accuracy and explicitly with the mixture geometry. On the stability side, we derive an explicit bound L(t) for the spatial Lipschitz constant of the probability-flow velocity and convert it into a flow map stability estimate governed by \int_s^t L(u)\,du, making late-time amplification in stiff regimes computable. Building on these estimates, we prove that deep residual compositions efficiently approximate the long-horizon transport, with global error controlled by the stability amplification factor, and identify a Lipschitz-mismatch regime in which one-step distillation is structurally unfavorable. The resulting theory yields a stability-balanced non-uniform time grid obtained by uniform partitioning in the cumulative stability coordinate. Experiments support the prediction and reduce end-to-end relative MSE by up to 51.9\% with 8 segments compared with uniform grids." />
+<meta property="og:description" content="We develop a quantitative approximation framework for diffusion distillation, viewing few-step sampling as error propagation under compositions of learned flow maps. Focusing on trajectory distillation for the probability-flow ODE, we show that local approximation errors can be strongly amplified in low-noise multimodal regimes, where the underlying dynamics become stiff. In an analytically tractable Gaussian-mixture Ornstein–Uhlenbeck setting, we separate two core difficulties: approximating the time-dependent score field and controlling the dynamical amplification governed by the time-integrated Jacobian bound of the probability-flow ODE. On the approximation side, we prove constructive L^p(p_t) guarantees showing that ReLU–ReQU networks approximate the Gaussian-mixture score uniformly over time, with depth and width scaling polylogarithmically in the target accuracy and explicitly with the mixture geometry. On the stability side, we derive an explicit bound L(t) for the spatial Lipschitz constant of the probability-flow velocity and convert it into a flow map stability estimate governed by \int_s^t L(u)\,du, making late-time amplification in stiff regimes computable. Building on these estimates, we prove that deep residual compositions efficiently approximate the long-horizon transport, with global error controlled by the stability amplification factor, and identify a Lipschitz-mismatch regime in which one-step distillation is structurally unfavorable. The resulting theory yields a stability-balanced non-uniform time grid obtained by uniform partitioning in the cumulative stability coordinate. Experiments support the prediction and reduce end-to-end relative MSE by up to 51.9\% with 8 segments compared with uniform grids." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/03/AQuantitativeApproximationFrameworkforFlowDistillationinDiffusionModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/03/AQuantitativeApproximationFrameworkforFlowDistillationinDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Quantitative Approximation Framework for Flow Distillation in Diffusion Models" />
+<script type="application/ld+json">
+{"description":"We develop a quantitative approximation framework for diffusion distillation, viewing few-step sampling as error propagation under compositions of learned flow maps. Focusing on trajectory distillation for the probability-flow ODE, we show that local approximation errors can be strongly amplified in low-noise multimodal regimes, where the underlying dynamics become stiff. In an analytically tractable Gaussian-mixture Ornstein–Uhlenbeck setting, we separate two core difficulties: approximating the time-dependent score field and controlling the dynamical amplification governed by the time-integrated Jacobian bound of the probability-flow ODE. On the approximation side, we prove constructive L^p(p_t) guarantees showing that ReLU–ReQU networks approximate the Gaussian-mixture score uniformly over time, with depth and width scaling polylogarithmically in the target accuracy and explicitly with the mixture geometry. On the stability side, we derive an explicit bound L(t) for the spatial Lipschitz constant of the probability-flow velocity and convert it into a flow map stability estimate governed by \\int_s^t L(u)\\,du, making late-time amplification in stiff regimes computable. Building on these estimates, we prove that deep residual compositions efficiently approximate the long-horizon transport, with global error controlled by the stability amplification factor, and identify a Lipschitz-mismatch regime in which one-step distillation is structurally unfavorable. The resulting theory yields a stability-balanced non-uniform time grid obtained by uniform partitioning in the cumulative stability coordinate. Experiments support the prediction and reduce end-to-end relative MSE by up to 51.9\\% with 8 segments compared with uniform grids.","author":{"@type":"Person","name":"Weiguo Gao, Ming Li, Lei Shi, Hanfei Zhou"},"datePublished":"2026-06-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/03/AQuantitativeApproximationFrameworkforFlowDistillationinDiffusionModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/03/AQuantitativeApproximationFrameworkforFlowDistillationinDiffusionModels.html","headline":"A Quantitative Approximation Framework for Flow Distillation in Diffusion Models","@type":"BlogPosting","dateModified":"2026-06-03T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-03 00:00:00 +0000">06-03</time>
+  </p>
+  
+  <h1>A Quantitative Approximation Framework for Flow Distillation in Diffusion Models</h1>
+  <br>Weiguo Gao, Ming Li, Lei Shi, Hanfei Zhou</h3>
+  <br> [stat.ML]
+
+  <p>We develop a quantitative approximation framework for diffusion distillation, viewing few-step sampling as error propagation under compositions of learned flow maps. Focusing on trajectory distillation for the probability-flow ODE, we show that local approximation errors can be strongly amplified in low-noise multimodal regimes, where the underlying dynamics become stiff. In an analytically tractable Gaussian-mixture Ornstein–Uhlenbeck setting, we separate two core difficulties: approximating the time-dependent score field and controlling the dynamical amplification governed by the time-integrated Jacobian bound of the probability-flow ODE. On the approximation side, we prove constructive L^p(p_t) guarantees showing that ReLU–ReQU networks approximate the Gaussian-mixture score uniformly over time, with depth and width scaling polylogarithmically in the target accuracy and explicitly with the mixture geometry. On the stability side, we derive an explicit bound L(t) for the spatial Lipschitz constant of the probability-flow velocity and convert it into a flow map stability estimate governed by \int_s^t L(u)\,du, making late-time amplification in stiff regimes computable. Building on these estimates, we prove that deep residual compositions efficiently approximate the long-horizon transport, with global error controlled by the stability amplification factor, and identify a Lipschitz-mismatch regime in which one-step distillation is structurally unfavorable. The resulting theory yields a stability-balanced non-uniform time grid obtained by uniform partitioning in the cumulative stability coordinate. Experiments support the prediction and reduce end-to-end relative MSE by up to 51.9\% with 8 segments compared with uniform grids.</p>
+
+<p><a href="https://arxiv.org/abs/2606.03820">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
