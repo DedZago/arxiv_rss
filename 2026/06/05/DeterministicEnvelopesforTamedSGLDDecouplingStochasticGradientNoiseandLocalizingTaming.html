@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deterministic Envelopes for Tamed SGLD: Decoupling Stochastic-Gradient Noise and Localizing Taming</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Deterministic Envelopes for Tamed SGLD: Decoupling Stochastic-Gradient Noise and Localizing Taming" />
+<meta name="author" content="Yiwei Zhou, Ziheng Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stochastic-gradient Langevin algorithms often use tamed denominators to stabilize non-globally Lipschitz drifts. This paper shows that when the denominator depends on the same stochastic-gradient realization as the numerator, the taming step changes the stochastic oracle itself and can create a stationary bias even if the original stochastic gradient is unbiased. We propose a structure-preserving framework for designing tamed denominators. It fixes the denominator before the oracle noise is sampled and uses localized deterministic envelopes to avoid unnecessary taming in typical regions. These kernels keep the stabilizing effect of taming while avoiding the bias introduced by a gradient-dependent denominator. Our theory explains how the stationary error splits into the bias caused by oracle-dependent taming and the remaining error introduced by deterministic stabilization. Within this deterministic-envelope family, the analysis identifies a far-tail condition that explains the limitation of local soft envelopes and motivates a hybrid member: soft in the typical region, but protected by hard-tail control on rare excursions. Experiments confirm the predicted stationary distortions of random denominators, the bias reduction of deterministic-envelope designs, and the stabilizing effect of the hybrid construction." />
+<meta property="og:description" content="Stochastic-gradient Langevin algorithms often use tamed denominators to stabilize non-globally Lipschitz drifts. This paper shows that when the denominator depends on the same stochastic-gradient realization as the numerator, the taming step changes the stochastic oracle itself and can create a stationary bias even if the original stochastic gradient is unbiased. We propose a structure-preserving framework for designing tamed denominators. It fixes the denominator before the oracle noise is sampled and uses localized deterministic envelopes to avoid unnecessary taming in typical regions. These kernels keep the stabilizing effect of taming while avoiding the bias introduced by a gradient-dependent denominator. Our theory explains how the stationary error splits into the bias caused by oracle-dependent taming and the remaining error introduced by deterministic stabilization. Within this deterministic-envelope family, the analysis identifies a far-tail condition that explains the limitation of local soft envelopes and motivates a hybrid member: soft in the typical region, but protected by hard-tail control on rare excursions. Experiments confirm the predicted stationary distortions of random denominators, the bias reduction of deterministic-envelope designs, and the stabilizing effect of the hybrid construction." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/05/DeterministicEnvelopesforTamedSGLDDecouplingStochasticGradientNoiseandLocalizingTaming.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/05/DeterministicEnvelopesforTamedSGLDDecouplingStochasticGradientNoiseandLocalizingTaming.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Deterministic Envelopes for Tamed SGLD: Decoupling Stochastic-Gradient Noise and Localizing Taming" />
+<script type="application/ld+json">
+{"description":"Stochastic-gradient Langevin algorithms often use tamed denominators to stabilize non-globally Lipschitz drifts. This paper shows that when the denominator depends on the same stochastic-gradient realization as the numerator, the taming step changes the stochastic oracle itself and can create a stationary bias even if the original stochastic gradient is unbiased. We propose a structure-preserving framework for designing tamed denominators. It fixes the denominator before the oracle noise is sampled and uses localized deterministic envelopes to avoid unnecessary taming in typical regions. These kernels keep the stabilizing effect of taming while avoiding the bias introduced by a gradient-dependent denominator. Our theory explains how the stationary error splits into the bias caused by oracle-dependent taming and the remaining error introduced by deterministic stabilization. Within this deterministic-envelope family, the analysis identifies a far-tail condition that explains the limitation of local soft envelopes and motivates a hybrid member: soft in the typical region, but protected by hard-tail control on rare excursions. Experiments confirm the predicted stationary distortions of random denominators, the bias reduction of deterministic-envelope designs, and the stabilizing effect of the hybrid construction.","author":{"@type":"Person","name":"Yiwei Zhou, Ziheng Chen"},"datePublished":"2026-06-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/05/DeterministicEnvelopesforTamedSGLDDecouplingStochasticGradientNoiseandLocalizingTaming.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/05/DeterministicEnvelopesforTamedSGLDDecouplingStochasticGradientNoiseandLocalizingTaming.html","headline":"Deterministic Envelopes for Tamed SGLD: Decoupling Stochastic-Gradient Noise and Localizing Taming","@type":"BlogPosting","dateModified":"2026-06-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>Deterministic Envelopes for Tamed SGLD: Decoupling Stochastic-Gradient Noise and Localizing Taming</h1>
+  <br>Yiwei Zhou, Ziheng Chen</h3>
+  <br> [stat.ML]
+
+  <p>Stochastic-gradient Langevin algorithms often use tamed denominators to stabilize non-globally Lipschitz drifts. This paper shows that when the denominator depends on the same stochastic-gradient realization as the numerator, the taming step changes the stochastic oracle itself and can create a stationary bias even if the original stochastic gradient is unbiased. We propose a structure-preserving framework for designing tamed denominators. It fixes the denominator before the oracle noise is sampled and uses localized deterministic envelopes to avoid unnecessary taming in typical regions. These kernels keep the stabilizing effect of taming while avoiding the bias introduced by a gradient-dependent denominator. Our theory explains how the stationary error splits into the bias caused by oracle-dependent taming and the remaining error introduced by deterministic stabilization. Within this deterministic-envelope family, the analysis identifies a far-tail condition that explains the limitation of local soft envelopes and motivates a hybrid member: soft in the typical region, but protected by hard-tail control on rare excursions. Experiments confirm the predicted stationary distortions of random denominators, the bias reduction of deterministic-envelope designs, and the stabilizing effect of the hybrid construction.</p>
+
+<p><a href="https://arxiv.org/abs/2606.05242">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

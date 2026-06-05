@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Mean Curvature Computation on High-Dimensional Data Manifolds</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Mean Curvature Computation on High-Dimensional Data Manifolds" />
+<meta name="author" content="Alexandre L. M. Levada" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimating local mean curvature at each point of a high-dimensional dataset is a key ingredient of geometry-aware machine learning algorithms, such as the Mean Curvature Boundary Points (MCBP) method. The naive implementation of this computation, based on a local shape operator approximated from k-nearest neighbor patches, involves an explicit construction of a matrix $H$ whose trace form yields an $O(m^4)$ cost per point, rendering the approach intractable for datasets with more than a few dozen features. This paper introduces two complementary contributions that together reduce this cost by several orders of magnitude. The first contribution is an exact algebraic identity. This identity, derived from the orthogonality of the eigenvectors of the covariance matrix and the cyclicity of the trace operator, eliminates $H$ entirely and reduces the per-point cost to $O(m^2)$ after the eigendecomposition. The second contribution addresses the remaining $O(m^3)$ bottleneck of the full eigendecomposition. Since the local covariance matrix has rank at most $k-1 \ll m$, we replace it with a truncated SVD of the $k \times m$ centered data matrix, an $O(k^2 m)$ operation, and derive an analytical approximation for the contribution of the null-space eigenvectors based on the expected value of their outer product under the Haar measure. The resulting estimator has total cost $O(k^2 m + k m p^2)$, where $p = k-1$. Experiments on real-world datasets confirm speedups of 50 to 300 times relative to the original implementation, with negligible loss when the fast estimator is used to replace the original version. By providing a scalable and data-driven estimate of local curvature, the proposed method establishes curvature as a practical geometric feature for a broad range of machine learning tasks, from classical to modern deep learning pipelines." />
+<meta property="og:description" content="Estimating local mean curvature at each point of a high-dimensional dataset is a key ingredient of geometry-aware machine learning algorithms, such as the Mean Curvature Boundary Points (MCBP) method. The naive implementation of this computation, based on a local shape operator approximated from k-nearest neighbor patches, involves an explicit construction of a matrix $H$ whose trace form yields an $O(m^4)$ cost per point, rendering the approach intractable for datasets with more than a few dozen features. This paper introduces two complementary contributions that together reduce this cost by several orders of magnitude. The first contribution is an exact algebraic identity. This identity, derived from the orthogonality of the eigenvectors of the covariance matrix and the cyclicity of the trace operator, eliminates $H$ entirely and reduces the per-point cost to $O(m^2)$ after the eigendecomposition. The second contribution addresses the remaining $O(m^3)$ bottleneck of the full eigendecomposition. Since the local covariance matrix has rank at most $k-1 \ll m$, we replace it with a truncated SVD of the $k \times m$ centered data matrix, an $O(k^2 m)$ operation, and derive an analytical approximation for the contribution of the null-space eigenvectors based on the expected value of their outer product under the Haar measure. The resulting estimator has total cost $O(k^2 m + k m p^2)$, where $p = k-1$. Experiments on real-world datasets confirm speedups of 50 to 300 times relative to the original implementation, with negligible loss when the fast estimator is used to replace the original version. By providing a scalable and data-driven estimate of local curvature, the proposed method establishes curvature as a practical geometric feature for a broad range of machine learning tasks, from classical to modern deep learning pipelines." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientMeanCurvatureComputationonHighDimensionalDataManifolds.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientMeanCurvatureComputationonHighDimensionalDataManifolds.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Mean Curvature Computation on High-Dimensional Data Manifolds" />
+<script type="application/ld+json">
+{"description":"Estimating local mean curvature at each point of a high-dimensional dataset is a key ingredient of geometry-aware machine learning algorithms, such as the Mean Curvature Boundary Points (MCBP) method. The naive implementation of this computation, based on a local shape operator approximated from k-nearest neighbor patches, involves an explicit construction of a matrix $H$ whose trace form yields an $O(m^4)$ cost per point, rendering the approach intractable for datasets with more than a few dozen features. This paper introduces two complementary contributions that together reduce this cost by several orders of magnitude. The first contribution is an exact algebraic identity. This identity, derived from the orthogonality of the eigenvectors of the covariance matrix and the cyclicity of the trace operator, eliminates $H$ entirely and reduces the per-point cost to $O(m^2)$ after the eigendecomposition. The second contribution addresses the remaining $O(m^3)$ bottleneck of the full eigendecomposition. Since the local covariance matrix has rank at most $k-1 \\ll m$, we replace it with a truncated SVD of the $k \\times m$ centered data matrix, an $O(k^2 m)$ operation, and derive an analytical approximation for the contribution of the null-space eigenvectors based on the expected value of their outer product under the Haar measure. The resulting estimator has total cost $O(k^2 m + k m p^2)$, where $p = k-1$. Experiments on real-world datasets confirm speedups of 50 to 300 times relative to the original implementation, with negligible loss when the fast estimator is used to replace the original version. By providing a scalable and data-driven estimate of local curvature, the proposed method establishes curvature as a practical geometric feature for a broad range of machine learning tasks, from classical to modern deep learning pipelines.","author":{"@type":"Person","name":"Alexandre L. M. Levada"},"datePublished":"2026-06-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientMeanCurvatureComputationonHighDimensionalDataManifolds.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientMeanCurvatureComputationonHighDimensionalDataManifolds.html","headline":"Efficient Mean Curvature Computation on High-Dimensional Data Manifolds","@type":"BlogPosting","dateModified":"2026-06-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>Efficient Mean Curvature Computation on High-Dimensional Data Manifolds</h1>
+  <br>Alexandre L. M. Levada</h3>
+  <br> [stat.ML]
+
+  <p>Estimating local mean curvature at each point of a high-dimensional dataset is a key ingredient of geometry-aware machine learning algorithms, such as the Mean Curvature Boundary Points (MCBP) method. The naive implementation of this computation, based on a local shape operator approximated from k-nearest neighbor patches, involves an explicit construction of a matrix $H$ whose trace form yields an $O(m^4)$ cost per point, rendering the approach intractable for datasets with more than a few dozen features. This paper introduces two complementary contributions that together reduce this cost by several orders of magnitude. The first contribution is an exact algebraic identity. This identity, derived from the orthogonality of the eigenvectors of the covariance matrix and the cyclicity of the trace operator, eliminates $H$ entirely and reduces the per-point cost to $O(m^2)$ after the eigendecomposition. The second contribution addresses the remaining $O(m^3)$ bottleneck of the full eigendecomposition. Since the local covariance matrix has rank at most $k-1 \ll m$, we replace it with a truncated SVD of the $k \times m$ centered data matrix, an $O(k^2 m)$ operation, and derive an analytical approximation for the contribution of the null-space eigenvectors based on the expected value of their outer product under the Haar measure. The resulting estimator has total cost $O(k^2 m + k m p^2)$, where $p = k-1$. Experiments on real-world datasets confirm speedups of 50 to 300 times relative to the original implementation, with negligible loss when the fast estimator is used to replace the original version. By providing a scalable and data-driven estimate of local curvature, the proposed method establishes curvature as a practical geometric feature for a broad range of machine learning tasks, from classical to modern deep learning pipelines.</p>
+
+<p><a href="https://arxiv.org/abs/2606.06329">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

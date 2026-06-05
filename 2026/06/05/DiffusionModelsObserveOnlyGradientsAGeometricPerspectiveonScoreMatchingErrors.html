@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diffusion Models Observe Only Gradients: A Geometric Perspective on Score Matching Errors</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Diffusion Models Observe Only Gradients: A Geometric Perspective on Score Matching Errors" />
+<meta name="author" content="Naïl B. Khelifa, Richard E. Turner, Ramji Venkataramanan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Score-based diffusion models are typically trained by minimizing the $L^2$ score matching error, and standard theoretical analyses rely on this quantity to bound the sampling discrepancy between the learned and target distributions. We show the $L^2$ score error is not the right intrinsic measure of marginal distributional quality: a learned diffusion model can incur arbitrarily large $L^2$ score error while perfectly matching the target distribution. By decomposing score errors into a gradient and a solenoidal component (a Helmholtz-Hodge decomposition), we identify the geometric reason behind this: only the gradient component enters the marginal Fokker-Planck dynamics, while the solenoidal component is structurally invisible. We make this precise in three results. First, building on the corrected geometry, we prove an impossibility result: no monotone function of the $L^2$ score error can uniformly lower bound any divergence between the learned and target distributions. Second, we derive an upper bound on the Kullback-Leibler divergence that depends only on the observable gradient component of the error, tightening the standard Girsanov bound and identifying its looseness as the cost of operating on path-space rather than marginal-space dynamics. Third, we give a tractable estimator of the gradient component via a dual Sobolev identity, which is shown to empirically correlate substantially better with sample quality than the full $L^2$ error." />
+<meta property="og:description" content="Score-based diffusion models are typically trained by minimizing the $L^2$ score matching error, and standard theoretical analyses rely on this quantity to bound the sampling discrepancy between the learned and target distributions. We show the $L^2$ score error is not the right intrinsic measure of marginal distributional quality: a learned diffusion model can incur arbitrarily large $L^2$ score error while perfectly matching the target distribution. By decomposing score errors into a gradient and a solenoidal component (a Helmholtz-Hodge decomposition), we identify the geometric reason behind this: only the gradient component enters the marginal Fokker-Planck dynamics, while the solenoidal component is structurally invisible. We make this precise in three results. First, building on the corrected geometry, we prove an impossibility result: no monotone function of the $L^2$ score error can uniformly lower bound any divergence between the learned and target distributions. Second, we derive an upper bound on the Kullback-Leibler divergence that depends only on the observable gradient component of the error, tightening the standard Girsanov bound and identifying its looseness as the cost of operating on path-space rather than marginal-space dynamics. Third, we give a tractable estimator of the gradient component via a dual Sobolev identity, which is shown to empirically correlate substantially better with sample quality than the full $L^2$ error." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/05/DiffusionModelsObserveOnlyGradientsAGeometricPerspectiveonScoreMatchingErrors.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/05/DiffusionModelsObserveOnlyGradientsAGeometricPerspectiveonScoreMatchingErrors.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Diffusion Models Observe Only Gradients: A Geometric Perspective on Score Matching Errors" />
+<script type="application/ld+json">
+{"description":"Score-based diffusion models are typically trained by minimizing the $L^2$ score matching error, and standard theoretical analyses rely on this quantity to bound the sampling discrepancy between the learned and target distributions. We show the $L^2$ score error is not the right intrinsic measure of marginal distributional quality: a learned diffusion model can incur arbitrarily large $L^2$ score error while perfectly matching the target distribution. By decomposing score errors into a gradient and a solenoidal component (a Helmholtz-Hodge decomposition), we identify the geometric reason behind this: only the gradient component enters the marginal Fokker-Planck dynamics, while the solenoidal component is structurally invisible. We make this precise in three results. First, building on the corrected geometry, we prove an impossibility result: no monotone function of the $L^2$ score error can uniformly lower bound any divergence between the learned and target distributions. Second, we derive an upper bound on the Kullback-Leibler divergence that depends only on the observable gradient component of the error, tightening the standard Girsanov bound and identifying its looseness as the cost of operating on path-space rather than marginal-space dynamics. Third, we give a tractable estimator of the gradient component via a dual Sobolev identity, which is shown to empirically correlate substantially better with sample quality than the full $L^2$ error.","author":{"@type":"Person","name":"Naïl B. Khelifa, Richard E. Turner, Ramji Venkataramanan"},"datePublished":"2026-06-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/05/DiffusionModelsObserveOnlyGradientsAGeometricPerspectiveonScoreMatchingErrors.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/05/DiffusionModelsObserveOnlyGradientsAGeometricPerspectiveonScoreMatchingErrors.html","headline":"Diffusion Models Observe Only Gradients: A Geometric Perspective on Score Matching Errors","@type":"BlogPosting","dateModified":"2026-06-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>Diffusion Models Observe Only Gradients: A Geometric Perspective on Score Matching Errors</h1>
+  <br>Naïl B. Khelifa, Richard E. Turner, Ramji Venkataramanan</h3>
+  <br> [stat.ML]
+
+  <p>Score-based diffusion models are typically trained by minimizing the $L^2$ score matching error, and standard theoretical analyses rely on this quantity to bound the sampling discrepancy between the learned and target distributions. We show the $L^2$ score error is not the right intrinsic measure of marginal distributional quality: a learned diffusion model can incur arbitrarily large $L^2$ score error while perfectly matching the target distribution. By decomposing score errors into a gradient and a solenoidal component (a Helmholtz-Hodge decomposition), we identify the geometric reason behind this: only the gradient component enters the marginal Fokker-Planck dynamics, while the solenoidal component is structurally invisible. We make this precise in three results. First, building on the corrected geometry, we prove an impossibility result: no monotone function of the $L^2$ score error can uniformly lower bound any divergence between the learned and target distributions. Second, we derive an upper bound on the Kullback-Leibler divergence that depends only on the observable gradient component of the error, tightening the standard Girsanov bound and identifying its looseness as the cost of operating on path-space rather than marginal-space dynamics. Third, we give a tractable estimator of the gradient component via a dual Sobolev identity, which is shown to empirically correlate substantially better with sample quality than the full $L^2$ error.</p>
+
+<p><a href="https://arxiv.org/abs/2606.06179">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

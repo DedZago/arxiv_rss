@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>TabSODA: Tabular Diffusion based Imputation with Skip Pattern Detection and Ordinal Awareness</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="TabSODA: Tabular Diffusion based Imputation with Skip Pattern Detection and Ordinal Awareness" />
+<meta name="author" content="Yuyu Chen, Taehyo Kim, Hai Shu, Yang Feng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Missing data imputation in large-scale surveys faces two challenges that are not well handled by current tabular diffusion methods. First, \emph{structural skips}, cells made inapplicable by questionnaire design, should not be imputed but are often conflated with item nonresponse. Second, \emph{ordinal} responses encode ordered categories, yet most pipelines treat them as nominal levels through one-hot or analog-bit encodings. We introduce \textbf{TabSODA} (\textbf{Tab}ular diffusion with \textbf{S}kip pattern detection and \textbf{O}r\textbf{d}inal \textbf{A}wareness), an Expectation-Maximization (EM)-based diffusion imputer built on the Elucidated Diffusion Model (EDM) framework. TabSODA propagates structural skips through the denoising loss and reverse-time sampler, and represents ordinal variables with cumulative-probit scalar latents while retaining analog-bit encodings for nominal variables. When a codebook skip mask is available, TabSODA uses it directly; otherwise, the TabSODA+SKIP variant estimates the mask from raw responses and questionnaire order using a CART-based skip-pattern miner. On Population Assessment of Tobacco and Health (PATH) study and the National Survey on Drug Use and Health (NSDUH), two nationally representative U.S.\ surveys, TabSODA reduces ordinal MACE by up to $23.7\%$ and improves categorical accuracy by up to $9\%$ over the strongest baseline across MCAR, MAR, and MNAR masking. The skip miner achieves near-perfect precision on both datasets, allowing TabSODA+SKIP to closely track the codebook-mask variant." />
+<meta property="og:description" content="Missing data imputation in large-scale surveys faces two challenges that are not well handled by current tabular diffusion methods. First, \emph{structural skips}, cells made inapplicable by questionnaire design, should not be imputed but are often conflated with item nonresponse. Second, \emph{ordinal} responses encode ordered categories, yet most pipelines treat them as nominal levels through one-hot or analog-bit encodings. We introduce \textbf{TabSODA} (\textbf{Tab}ular diffusion with \textbf{S}kip pattern detection and \textbf{O}r\textbf{d}inal \textbf{A}wareness), an Expectation-Maximization (EM)-based diffusion imputer built on the Elucidated Diffusion Model (EDM) framework. TabSODA propagates structural skips through the denoising loss and reverse-time sampler, and represents ordinal variables with cumulative-probit scalar latents while retaining analog-bit encodings for nominal variables. When a codebook skip mask is available, TabSODA uses it directly; otherwise, the TabSODA+SKIP variant estimates the mask from raw responses and questionnaire order using a CART-based skip-pattern miner. On Population Assessment of Tobacco and Health (PATH) study and the National Survey on Drug Use and Health (NSDUH), two nationally representative U.S.\ surveys, TabSODA reduces ordinal MACE by up to $23.7\%$ and improves categorical accuracy by up to $9\%$ over the strongest baseline across MCAR, MAR, and MNAR masking. The skip miner achieves near-perfect precision on both datasets, allowing TabSODA+SKIP to closely track the codebook-mask variant." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/05/TabSODATabularDiffusionbasedImputationwithSkipPatternDetectionandOrdinalAwareness.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/05/TabSODATabularDiffusionbasedImputationwithSkipPatternDetectionandOrdinalAwareness.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TabSODA: Tabular Diffusion based Imputation with Skip Pattern Detection and Ordinal Awareness" />
+<script type="application/ld+json">
+{"description":"Missing data imputation in large-scale surveys faces two challenges that are not well handled by current tabular diffusion methods. First, \\emph{structural skips}, cells made inapplicable by questionnaire design, should not be imputed but are often conflated with item nonresponse. Second, \\emph{ordinal} responses encode ordered categories, yet most pipelines treat them as nominal levels through one-hot or analog-bit encodings. We introduce \\textbf{TabSODA} (\\textbf{Tab}ular diffusion with \\textbf{S}kip pattern detection and \\textbf{O}r\\textbf{d}inal \\textbf{A}wareness), an Expectation-Maximization (EM)-based diffusion imputer built on the Elucidated Diffusion Model (EDM) framework. TabSODA propagates structural skips through the denoising loss and reverse-time sampler, and represents ordinal variables with cumulative-probit scalar latents while retaining analog-bit encodings for nominal variables. When a codebook skip mask is available, TabSODA uses it directly; otherwise, the TabSODA+SKIP variant estimates the mask from raw responses and questionnaire order using a CART-based skip-pattern miner. On Population Assessment of Tobacco and Health (PATH) study and the National Survey on Drug Use and Health (NSDUH), two nationally representative U.S.\\ surveys, TabSODA reduces ordinal MACE by up to $23.7\\%$ and improves categorical accuracy by up to $9\\%$ over the strongest baseline across MCAR, MAR, and MNAR masking. The skip miner achieves near-perfect precision on both datasets, allowing TabSODA+SKIP to closely track the codebook-mask variant.","author":{"@type":"Person","name":"Yuyu Chen, Taehyo Kim, Hai Shu, Yang Feng"},"datePublished":"2026-06-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/05/TabSODATabularDiffusionbasedImputationwithSkipPatternDetectionandOrdinalAwareness.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/05/TabSODATabularDiffusionbasedImputationwithSkipPatternDetectionandOrdinalAwareness.html","headline":"TabSODA: Tabular Diffusion based Imputation with Skip Pattern Detection and Ordinal Awareness","@type":"BlogPosting","dateModified":"2026-06-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>TabSODA: Tabular Diffusion based Imputation with Skip Pattern Detection and Ordinal Awareness</h1>
+  <br>Yuyu Chen, Taehyo Kim, Hai Shu, Yang Feng</h3>
+  <br> [stat.ML]
+
+  <p>Missing data imputation in large-scale surveys faces two challenges that are not well handled by current tabular diffusion methods. First, \emph{structural skips}, cells made inapplicable by questionnaire design, should not be imputed but are often conflated with item nonresponse. Second, \emph{ordinal} responses encode ordered categories, yet most pipelines treat them as nominal levels through one-hot or analog-bit encodings. We introduce \textbf{TabSODA} (\textbf{Tab}ular diffusion with \textbf{S}kip pattern detection and \textbf{O}r\textbf{d}inal \textbf{A}wareness), an Expectation-Maximization (EM)-based diffusion imputer built on the Elucidated Diffusion Model (EDM) framework. TabSODA propagates structural skips through the denoising loss and reverse-time sampler, and represents ordinal variables with cumulative-probit scalar latents while retaining analog-bit encodings for nominal variables. When a codebook skip mask is available, TabSODA uses it directly; otherwise, the TabSODA+SKIP variant estimates the mask from raw responses and questionnaire order using a CART-based skip-pattern miner. On Population Assessment of Tobacco and Health (PATH) study and the National Survey on Drug Use and Health (NSDUH), two nationally representative U.S.\ surveys, TabSODA reduces ordinal MACE by up to $23.7\%$ and improves categorical accuracy by up to $9\%$ over the strongest baseline across MCAR, MAR, and MNAR masking. The skip miner achieves near-perfect precision on both datasets, allowing TabSODA+SKIP to closely track the codebook-mask variant.</p>
+
+<p><a href="https://arxiv.org/abs/2606.05361">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

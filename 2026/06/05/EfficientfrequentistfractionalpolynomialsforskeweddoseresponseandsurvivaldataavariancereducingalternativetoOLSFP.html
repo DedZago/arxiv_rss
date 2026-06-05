@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient frequentist fractional polynomials for skewed dose-response and survival data: a variance-reducing alternative to OLS-FP</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient frequentist fractional polynomials for skewed dose-response and survival data: a variance-reducing alternative to OLS-FP" />
+<meta name="author" content="Serhii Zabolotnii" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fractional polynomials (FP) are a standard tool for modelling nonlinear dose-response and covariate effects, implemented in the widely used mfp package. The conventional FP fit estimates its coefficients by ordinary least squares (OLS-FP), which is statistically inefficient when the regression errors are skewed or heavy-tailed, a common situation for survival times, concentrations and biomarkers. We present a drop-in replacement that keeps the identical FP model and design but estimates the coefficients with a moment-based score tuned to the residual skewness and kurtosis, giving a closed-form efficiency factor g2 = 1 - gamma3^2/(2+gamma4) relative to OLS-FP. Across skewed error laws the method reduces slope-coefficient variance by 10-20% for mildly skewed errors and up to roughly 60% for heavy-tailed log-normal errors, at realistic sample sizes, while keeping confidence-interval coverage close to nominal, and it reverts exactly to OLS-FP under symmetry, so it is never harmful when no gain is available. On the German Breast Cancer Study Group cohort it narrows the tumour-size confidence interval by 26% (bootstrap variance ratio 0.53 against the predicted 0.56), and a primary-biliary-cirrhosis cohort reproduces the gain. The estimator is closed-form, runs in milliseconds, and is released as a reproducible R package (pmm_fp in EstemPMM) with a one-command replication bundle; its core variance identity is machine-checked in Lean 4." />
+<meta property="og:description" content="Fractional polynomials (FP) are a standard tool for modelling nonlinear dose-response and covariate effects, implemented in the widely used mfp package. The conventional FP fit estimates its coefficients by ordinary least squares (OLS-FP), which is statistically inefficient when the regression errors are skewed or heavy-tailed, a common situation for survival times, concentrations and biomarkers. We present a drop-in replacement that keeps the identical FP model and design but estimates the coefficients with a moment-based score tuned to the residual skewness and kurtosis, giving a closed-form efficiency factor g2 = 1 - gamma3^2/(2+gamma4) relative to OLS-FP. Across skewed error laws the method reduces slope-coefficient variance by 10-20% for mildly skewed errors and up to roughly 60% for heavy-tailed log-normal errors, at realistic sample sizes, while keeping confidence-interval coverage close to nominal, and it reverts exactly to OLS-FP under symmetry, so it is never harmful when no gain is available. On the German Breast Cancer Study Group cohort it narrows the tumour-size confidence interval by 26% (bootstrap variance ratio 0.53 against the predicted 0.56), and a primary-biliary-cirrhosis cohort reproduces the gain. The estimator is closed-form, runs in milliseconds, and is released as a reproducible R package (pmm_fp in EstemPMM) with a one-command replication bundle; its core variance identity is machine-checked in Lean 4." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientfrequentistfractionalpolynomialsforskeweddoseresponseandsurvivaldataavariancereducingalternativetoOLSFP.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientfrequentistfractionalpolynomialsforskeweddoseresponseandsurvivaldataavariancereducingalternativetoOLSFP.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient frequentist fractional polynomials for skewed dose-response and survival data: a variance-reducing alternative to OLS-FP" />
+<script type="application/ld+json">
+{"description":"Fractional polynomials (FP) are a standard tool for modelling nonlinear dose-response and covariate effects, implemented in the widely used mfp package. The conventional FP fit estimates its coefficients by ordinary least squares (OLS-FP), which is statistically inefficient when the regression errors are skewed or heavy-tailed, a common situation for survival times, concentrations and biomarkers. We present a drop-in replacement that keeps the identical FP model and design but estimates the coefficients with a moment-based score tuned to the residual skewness and kurtosis, giving a closed-form efficiency factor g2 = 1 - gamma3^2/(2+gamma4) relative to OLS-FP. Across skewed error laws the method reduces slope-coefficient variance by 10-20% for mildly skewed errors and up to roughly 60% for heavy-tailed log-normal errors, at realistic sample sizes, while keeping confidence-interval coverage close to nominal, and it reverts exactly to OLS-FP under symmetry, so it is never harmful when no gain is available. On the German Breast Cancer Study Group cohort it narrows the tumour-size confidence interval by 26% (bootstrap variance ratio 0.53 against the predicted 0.56), and a primary-biliary-cirrhosis cohort reproduces the gain. The estimator is closed-form, runs in milliseconds, and is released as a reproducible R package (pmm_fp in EstemPMM) with a one-command replication bundle; its core variance identity is machine-checked in Lean 4.","author":{"@type":"Person","name":"Serhii Zabolotnii"},"datePublished":"2026-06-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientfrequentistfractionalpolynomialsforskeweddoseresponseandsurvivaldataavariancereducingalternativetoOLSFP.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/05/EfficientfrequentistfractionalpolynomialsforskeweddoseresponseandsurvivaldataavariancereducingalternativetoOLSFP.html","headline":"Efficient frequentist fractional polynomials for skewed dose-response and survival data: a variance-reducing alternative to OLS-FP","@type":"BlogPosting","dateModified":"2026-06-05T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-05 00:00:00 +0000">06-05</time>
+  </p>
+  
+  <h1>Efficient frequentist fractional polynomials for skewed dose-response and survival data: a variance-reducing alternative to OLS-FP</h1>
+  <br>Serhii Zabolotnii</h3>
+  <br> [stat.ME]
+
+  <p>Fractional polynomials (FP) are a standard tool for modelling nonlinear dose-response and covariate effects, implemented in the widely used mfp package. The conventional FP fit estimates its coefficients by ordinary least squares (OLS-FP), which is statistically inefficient when the regression errors are skewed or heavy-tailed, a common situation for survival times, concentrations and biomarkers. We present a drop-in replacement that keeps the identical FP model and design but estimates the coefficients with a moment-based score tuned to the residual skewness and kurtosis, giving a closed-form efficiency factor g2 = 1 - gamma3^2/(2+gamma4) relative to OLS-FP. Across skewed error laws the method reduces slope-coefficient variance by 10-20% for mildly skewed errors and up to roughly 60% for heavy-tailed log-normal errors, at realistic sample sizes, while keeping confidence-interval coverage close to nominal, and it reverts exactly to OLS-FP under symmetry, so it is never harmful when no gain is available. On the German Breast Cancer Study Group cohort it narrows the tumour-size confidence interval by 26% (bootstrap variance ratio 0.53 against the predicted 0.56), and a primary-biliary-cirrhosis cohort reproduces the gain. The estimator is closed-form, runs in milliseconds, and is released as a reproducible R package (pmm_fp in EstemPMM) with a one-command replication bundle; its core variance identity is machine-checked in Lean 4.</p>
+
+<p><a href="https://arxiv.org/abs/2605.16846">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
