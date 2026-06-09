@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MST-Direct at Scale: Multivariate and Conditional Geostatistical Simulation via Sinkhorn Optimal Transport</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="MST-Direct at Scale: Multivariate and Conditional Geostatistical Simulation via Sinkhorn Optimal Transport" />
+<meta name="author" content="Tcharlies Bachmann Schmitz" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper extends MST-Direct, a Matching-via-Sinkhorn-Transport approach for multivariate geostatistical simulation, from the original bivariate, unconditional, small-grid formulation to multivariate, conditional, and large-grid settings. We address the three main limitations identified in the original work: (i) scalability beyond a few thousand nodes through a sparse, candidate-restricted Sinkhorn matcher with O(nC) memory complexity; (ii) extension to multiple variables by matching target value tuples onto an independent FFT-MA Gaussian backbone that reproduces a prescribed variogram; and (iii) hard-data conditioning by fixing observed data tuples at their spatial locations while conditioning the backbone through kriging. Because the transport plan remains a permutation of the target tuples, the multivariate joint distribution is preserved exactly. The method is validated using the same six-variate, heteroscedastic, strongly nonlinear reference distribution employed in Direct Multivariate Simulation (DMS), under both unconditional (200x200) and conditional (100x100, 200 hard-data samples) scenarios, and is benchmarked against the Projection Pursuit Multivariate Transform (PPMT). Results show that MST-Direct reproduces the joint distribution with zero histogram error, exactly honours hard data, and accurately reproduces the prescribed spatial correlation structure, whereas PPMT remains an approximation. Index Terms-Optimal transport, Sinkhorn algorithm, geostatistical simulation, multivariate simulation." />
+<meta property="og:description" content="This paper extends MST-Direct, a Matching-via-Sinkhorn-Transport approach for multivariate geostatistical simulation, from the original bivariate, unconditional, small-grid formulation to multivariate, conditional, and large-grid settings. We address the three main limitations identified in the original work: (i) scalability beyond a few thousand nodes through a sparse, candidate-restricted Sinkhorn matcher with O(nC) memory complexity; (ii) extension to multiple variables by matching target value tuples onto an independent FFT-MA Gaussian backbone that reproduces a prescribed variogram; and (iii) hard-data conditioning by fixing observed data tuples at their spatial locations while conditioning the backbone through kriging. Because the transport plan remains a permutation of the target tuples, the multivariate joint distribution is preserved exactly. The method is validated using the same six-variate, heteroscedastic, strongly nonlinear reference distribution employed in Direct Multivariate Simulation (DMS), under both unconditional (200x200) and conditional (100x100, 200 hard-data samples) scenarios, and is benchmarked against the Projection Pursuit Multivariate Transform (PPMT). Results show that MST-Direct reproduces the joint distribution with zero histogram error, exactly honours hard data, and accurately reproduces the prescribed spatial correlation structure, whereas PPMT remains an approximation. Index Terms-Optimal transport, Sinkhorn algorithm, geostatistical simulation, multivariate simulation." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/09/MSTDirectatScaleMultivariateandConditionalGeostatisticalSimulationviaSinkhornOptimalTransport.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/09/MSTDirectatScaleMultivariateandConditionalGeostatisticalSimulationviaSinkhornOptimalTransport.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MST-Direct at Scale: Multivariate and Conditional Geostatistical Simulation via Sinkhorn Optimal Transport" />
+<script type="application/ld+json">
+{"description":"This paper extends MST-Direct, a Matching-via-Sinkhorn-Transport approach for multivariate geostatistical simulation, from the original bivariate, unconditional, small-grid formulation to multivariate, conditional, and large-grid settings. We address the three main limitations identified in the original work: (i) scalability beyond a few thousand nodes through a sparse, candidate-restricted Sinkhorn matcher with O(nC) memory complexity; (ii) extension to multiple variables by matching target value tuples onto an independent FFT-MA Gaussian backbone that reproduces a prescribed variogram; and (iii) hard-data conditioning by fixing observed data tuples at their spatial locations while conditioning the backbone through kriging. Because the transport plan remains a permutation of the target tuples, the multivariate joint distribution is preserved exactly. The method is validated using the same six-variate, heteroscedastic, strongly nonlinear reference distribution employed in Direct Multivariate Simulation (DMS), under both unconditional (200x200) and conditional (100x100, 200 hard-data samples) scenarios, and is benchmarked against the Projection Pursuit Multivariate Transform (PPMT). Results show that MST-Direct reproduces the joint distribution with zero histogram error, exactly honours hard data, and accurately reproduces the prescribed spatial correlation structure, whereas PPMT remains an approximation. Index Terms-Optimal transport, Sinkhorn algorithm, geostatistical simulation, multivariate simulation.","author":{"@type":"Person","name":"Tcharlies Bachmann Schmitz"},"datePublished":"2026-06-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/09/MSTDirectatScaleMultivariateandConditionalGeostatisticalSimulationviaSinkhornOptimalTransport.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/09/MSTDirectatScaleMultivariateandConditionalGeostatisticalSimulationviaSinkhornOptimalTransport.html","headline":"MST-Direct at Scale: Multivariate and Conditional Geostatistical Simulation via Sinkhorn Optimal Transport","@type":"BlogPosting","dateModified":"2026-06-09T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-09 00:00:00 +0000">06-09</time>
+  </p>
+  
+  <h1>MST-Direct at Scale: Multivariate and Conditional Geostatistical Simulation via Sinkhorn Optimal Transport</h1>
+  <br>Tcharlies Bachmann Schmitz</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>This paper extends MST-Direct, a Matching-via-Sinkhorn-Transport approach for multivariate geostatistical simulation, from the original bivariate, unconditional, small-grid formulation to multivariate, conditional, and large-grid settings. We address the three main limitations identified in the original work: (i) scalability beyond a few thousand nodes through a sparse, candidate-restricted Sinkhorn matcher with O(nC) memory complexity; (ii) extension to multiple variables by matching target value tuples onto an independent FFT-MA Gaussian backbone that reproduces a prescribed variogram; and (iii) hard-data conditioning by fixing observed data tuples at their spatial locations while conditioning the backbone through kriging. Because the transport plan remains a permutation of the target tuples, the multivariate joint distribution is preserved exactly.
+  The method is validated using the same six-variate, heteroscedastic, strongly nonlinear reference distribution employed in Direct Multivariate Simulation (DMS), under both unconditional (200x200) and conditional (100x100, 200 hard-data samples) scenarios, and is benchmarked against the Projection Pursuit Multivariate Transform (PPMT). Results show that MST-Direct reproduces the joint distribution with zero histogram error, exactly honours hard data, and accurately reproduces the prescribed spatial correlation structure, whereas PPMT remains an approximation.
+  Index Terms-Optimal transport, Sinkhorn algorithm, geostatistical simulation, multivariate simulation.</p>
+
+<p><a href="https://arxiv.org/abs/2606.07578">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

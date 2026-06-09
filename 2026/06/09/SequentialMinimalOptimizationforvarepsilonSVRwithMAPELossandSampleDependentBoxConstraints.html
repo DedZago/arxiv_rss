@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints" />
+<meta name="author" content="Pablo Benavides-Herrera, Riemann Ruiz-Cruz, Juan Diego Sánchez-Torres" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Support vector regression with Mean Absolute Percentage Error (MAPE) loss is theoretically well-motivated for forecasting applications where accuracy is evaluated in relative terms, but the sample-dependent dual box constraints it induces have not been addressed in the published SMO literature. We derive a Sequential Minimal Optimization algorithm for this setting and prove a structural-invariance result: the MAPE modification affects exactly two components of the SMO iteration – working-set selection and analytic-update clipping – leaving gradient bookkeeping and curvature computation identical to classical epsilon-SVR. Building on this invariance, we establish four efficiency improvements (asymmetric freeze-counters, warm-starting, block working-set updates of size four, and per-pair tolerance scaling) and resolve a previously-open convergence problem for the odd-symmetry kernel variant via adaptive spectral regularization. Numerical validation against three reference solvers across eleven synthetic configurations certifies solution agreement within standard tolerance. Wall-time benchmarks show the present algorithm achieves the lowest median runtime on every tested configuration against OSQP, MOSEK, and Clarabel. At production scale, the algorithm converges on the California Housing benchmark while the patched LIBSVM reference implementation reaches its iteration ceiling without satisfying optimality – demonstrating the practical necessity of the theoretical efficiency mechanisms. An open-source R package and an explicit solver-adaptation recipe are provided." />
+<meta property="og:description" content="Support vector regression with Mean Absolute Percentage Error (MAPE) loss is theoretically well-motivated for forecasting applications where accuracy is evaluated in relative terms, but the sample-dependent dual box constraints it induces have not been addressed in the published SMO literature. We derive a Sequential Minimal Optimization algorithm for this setting and prove a structural-invariance result: the MAPE modification affects exactly two components of the SMO iteration – working-set selection and analytic-update clipping – leaving gradient bookkeeping and curvature computation identical to classical epsilon-SVR. Building on this invariance, we establish four efficiency improvements (asymmetric freeze-counters, warm-starting, block working-set updates of size four, and per-pair tolerance scaling) and resolve a previously-open convergence problem for the odd-symmetry kernel variant via adaptive spectral regularization. Numerical validation against three reference solvers across eleven synthetic configurations certifies solution agreement within standard tolerance. Wall-time benchmarks show the present algorithm achieves the lowest median runtime on every tested configuration against OSQP, MOSEK, and Clarabel. At production scale, the algorithm converges on the California Housing benchmark while the patched LIBSVM reference implementation reaches its iteration ceiling without satisfying optimality – demonstrating the practical necessity of the theoretical efficiency mechanisms. An open-source R package and an explicit solver-adaptation recipe are provided." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/09/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/09/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints" />
+<script type="application/ld+json">
+{"description":"Support vector regression with Mean Absolute Percentage Error (MAPE) loss is theoretically well-motivated for forecasting applications where accuracy is evaluated in relative terms, but the sample-dependent dual box constraints it induces have not been addressed in the published SMO literature. We derive a Sequential Minimal Optimization algorithm for this setting and prove a structural-invariance result: the MAPE modification affects exactly two components of the SMO iteration – working-set selection and analytic-update clipping – leaving gradient bookkeeping and curvature computation identical to classical epsilon-SVR. Building on this invariance, we establish four efficiency improvements (asymmetric freeze-counters, warm-starting, block working-set updates of size four, and per-pair tolerance scaling) and resolve a previously-open convergence problem for the odd-symmetry kernel variant via adaptive spectral regularization. Numerical validation against three reference solvers across eleven synthetic configurations certifies solution agreement within standard tolerance. Wall-time benchmarks show the present algorithm achieves the lowest median runtime on every tested configuration against OSQP, MOSEK, and Clarabel. At production scale, the algorithm converges on the California Housing benchmark while the patched LIBSVM reference implementation reaches its iteration ceiling without satisfying optimality – demonstrating the practical necessity of the theoretical efficiency mechanisms. An open-source R package and an explicit solver-adaptation recipe are provided.","author":{"@type":"Person","name":"Pablo Benavides-Herrera, Riemann Ruiz-Cruz, Juan Diego Sánchez-Torres"},"datePublished":"2026-06-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/09/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/09/SequentialMinimalOptimizationforvarepsilonSVRwithMAPELossandSampleDependentBoxConstraints.html","headline":"Sequential Minimal Optimization for $\\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints","@type":"BlogPosting","dateModified":"2026-06-09T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-09 00:00:00 +0000">06-09</time>
+  </p>
+  
+  <h1>Sequential Minimal Optimization for $\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints</h1>
+  <br>Pablo Benavides-Herrera, Riemann Ruiz-Cruz, Juan Diego Sánchez-Torres</h3>
+  <br> [stat.ML]
+
+  <p>Support vector regression with Mean Absolute Percentage Error (MAPE) loss is theoretically well-motivated for forecasting applications where accuracy is evaluated in relative terms, but the sample-dependent dual box constraints it induces have not been addressed in the published SMO literature. We derive a Sequential Minimal Optimization algorithm for this setting and prove a structural-invariance result: the MAPE modification affects exactly two components of the SMO iteration – working-set selection and analytic-update clipping – leaving gradient bookkeeping and curvature computation identical to classical epsilon-SVR. Building on this invariance, we establish four efficiency improvements (asymmetric freeze-counters, warm-starting, block working-set updates of size four, and per-pair tolerance scaling) and resolve a previously-open convergence problem for the odd-symmetry kernel variant via adaptive spectral regularization. Numerical validation against three reference solvers across eleven synthetic configurations certifies solution agreement within standard tolerance. Wall-time benchmarks show the present algorithm achieves the lowest median runtime on every tested configuration against OSQP, MOSEK, and Clarabel. At production scale, the algorithm converges on the California Housing benchmark while the patched LIBSVM reference implementation reaches its iteration ceiling without satisfying optimality – demonstrating the practical necessity of the theoretical efficiency mechanisms. An open-source R package and an explicit solver-adaptation recipe are provided.</p>
+
+<p><a href="https://arxiv.org/abs/2605.01446">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
