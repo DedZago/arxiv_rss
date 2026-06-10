@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Sketch-and-Project Analysis of Subsampled Natural Gradient Algorithms</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Sketch-and-Project Analysis of Subsampled Natural Gradient Algorithms" />
+<meta name="author" content="Gil Goldshlager, Jiang Hu, Lin Lin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Subsampled natural gradient descent (SNG) has been used to enable high-precision scientific machine learning, but standard analyses based on stochastic preconditioning fail to provide insight into realistic small-sample settings. We overcome this limitation by instead analyzing SNG as a sketch-and-project method. Motivated by this lens, we discard the usual theoretical proxy which decouples gradients and preconditioners using two independent mini-batches, and we replace it with a new proxy based on squared volume sampling. Under this new proxy we show that the expectation of the SNG direction becomes equal to a preconditioned gradient descent step even in the presence of coupling, leading to (i) global convergence guarantees when using a single mini-batch of any size, and (ii) an explicit characterization of the convergence rate in terms of quantities related to the sketch-and-project structure. These findings in turn yield new insights into small-sample settings, for example by suggesting that the advantage of SNG over SGD is that it can more effectively exploit spectral decay in the model Jacobian. We also extend these ideas to explain a popular structured momentum scheme for SNG, known as SPRING, by showing that it arises naturally from accelerated sketch-and-project methods." />
+<meta property="og:description" content="Subsampled natural gradient descent (SNG) has been used to enable high-precision scientific machine learning, but standard analyses based on stochastic preconditioning fail to provide insight into realistic small-sample settings. We overcome this limitation by instead analyzing SNG as a sketch-and-project method. Motivated by this lens, we discard the usual theoretical proxy which decouples gradients and preconditioners using two independent mini-batches, and we replace it with a new proxy based on squared volume sampling. Under this new proxy we show that the expectation of the SNG direction becomes equal to a preconditioned gradient descent step even in the presence of coupling, leading to (i) global convergence guarantees when using a single mini-batch of any size, and (ii) an explicit characterization of the convergence rate in terms of quantities related to the sketch-and-project structure. These findings in turn yield new insights into small-sample settings, for example by suggesting that the advantage of SNG over SGD is that it can more effectively exploit spectral decay in the model Jacobian. We also extend these ideas to explain a popular structured momentum scheme for SNG, known as SPRING, by showing that it arises naturally from accelerated sketch-and-project methods." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/10/ASketchandProjectAnalysisofSubsampledNaturalGradientAlgorithms.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/10/ASketchandProjectAnalysisofSubsampledNaturalGradientAlgorithms.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Sketch-and-Project Analysis of Subsampled Natural Gradient Algorithms" />
+<script type="application/ld+json">
+{"description":"Subsampled natural gradient descent (SNG) has been used to enable high-precision scientific machine learning, but standard analyses based on stochastic preconditioning fail to provide insight into realistic small-sample settings. We overcome this limitation by instead analyzing SNG as a sketch-and-project method. Motivated by this lens, we discard the usual theoretical proxy which decouples gradients and preconditioners using two independent mini-batches, and we replace it with a new proxy based on squared volume sampling. Under this new proxy we show that the expectation of the SNG direction becomes equal to a preconditioned gradient descent step even in the presence of coupling, leading to (i) global convergence guarantees when using a single mini-batch of any size, and (ii) an explicit characterization of the convergence rate in terms of quantities related to the sketch-and-project structure. These findings in turn yield new insights into small-sample settings, for example by suggesting that the advantage of SNG over SGD is that it can more effectively exploit spectral decay in the model Jacobian. We also extend these ideas to explain a popular structured momentum scheme for SNG, known as SPRING, by showing that it arises naturally from accelerated sketch-and-project methods.","author":{"@type":"Person","name":"Gil Goldshlager, Jiang Hu, Lin Lin"},"datePublished":"2026-06-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/10/ASketchandProjectAnalysisofSubsampledNaturalGradientAlgorithms.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/10/ASketchandProjectAnalysisofSubsampledNaturalGradientAlgorithms.html","headline":"A Sketch-and-Project Analysis of Subsampled Natural Gradient Algorithms","@type":"BlogPosting","dateModified":"2026-06-10T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-10 00:00:00 +0000">06-10</time>
+  </p>
+  
+  <h1>A Sketch-and-Project Analysis of Subsampled Natural Gradient Algorithms</h1>
+  <br>Gil Goldshlager, Jiang Hu, Lin Lin</h3>
+  <br> [stat.ML]
+
+  <p>Subsampled natural gradient descent (SNG) has been used to enable high-precision scientific machine learning, but standard analyses based on stochastic preconditioning fail to provide insight into realistic small-sample settings. We overcome this limitation by instead analyzing SNG as a sketch-and-project method. Motivated by this lens, we discard the usual theoretical proxy which decouples gradients and preconditioners using two independent mini-batches, and we replace it with a new proxy based on squared volume sampling. Under this new proxy we show that the expectation of the SNG direction becomes equal to a preconditioned gradient descent step even in the presence of coupling, leading to (i) global convergence guarantees when using a single mini-batch of any size, and (ii) an explicit characterization of the convergence rate in terms of quantities related to the sketch-and-project structure. These findings in turn yield new insights into small-sample settings, for example by suggesting that the advantage of SNG over SGD is that it can more effectively exploit spectral decay in the model Jacobian. We also extend these ideas to explain a popular structured momentum scheme for SNG, known as SPRING, by showing that it arises naturally from accelerated sketch-and-project methods.</p>
+
+<p><a href="https://arxiv.org/abs/2508.21022">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Deterministic Denominator Design for Localized Tamed Stochastic-Gradient Langevin Dynamics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Deterministic Denominator Design for Localized Tamed Stochastic-Gradient Langevin Dynamics" />
+<meta name="author" content="Yiwei Zhou, Ziheng Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tamed stochastic-gradient Langevin dynamics (SGLD) stabilizes large drifts by adding a denominator to the update. If this denominator uses the same stochastic-gradient sample as the update step, it can also change the conditional mean drift. We study deterministic denominators: the state-dependent envelope is fixed before the current oracle sample is drawn. The main question is how to design this envelope in practice. The design starts from an oracle score, builds a low-cost proxy score on pilot states, chooses activation thresholds by empirical quantiles, and then applies a small calibration layer. The analysis tracks three steps: proxy and threshold errors become envelope errors; envelope errors perturb one SGLD step; and the local residuals give stationary errors through a conditional perturbation bridge. Experiments show that the proxy-quantile denominators are close to oracle-score behavior, avoid the random-denominator mean-shift channel, and improve simple deterministic taming choices." />
+<meta property="og:description" content="Tamed stochastic-gradient Langevin dynamics (SGLD) stabilizes large drifts by adding a denominator to the update. If this denominator uses the same stochastic-gradient sample as the update step, it can also change the conditional mean drift. We study deterministic denominators: the state-dependent envelope is fixed before the current oracle sample is drawn. The main question is how to design this envelope in practice. The design starts from an oracle score, builds a low-cost proxy score on pilot states, chooses activation thresholds by empirical quantiles, and then applies a small calibration layer. The analysis tracks three steps: proxy and threshold errors become envelope errors; envelope errors perturb one SGLD step; and the local residuals give stationary errors through a conditional perturbation bridge. Experiments show that the proxy-quantile denominators are close to oracle-score behavior, avoid the random-denominator mean-shift channel, and improve simple deterministic taming choices." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/10/DeterministicDenominatorDesignforLocalizedTamedStochasticGradientLangevinDynamics.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/10/DeterministicDenominatorDesignforLocalizedTamedStochasticGradientLangevinDynamics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Deterministic Denominator Design for Localized Tamed Stochastic-Gradient Langevin Dynamics" />
+<script type="application/ld+json">
+{"description":"Tamed stochastic-gradient Langevin dynamics (SGLD) stabilizes large drifts by adding a denominator to the update. If this denominator uses the same stochastic-gradient sample as the update step, it can also change the conditional mean drift. We study deterministic denominators: the state-dependent envelope is fixed before the current oracle sample is drawn. The main question is how to design this envelope in practice. The design starts from an oracle score, builds a low-cost proxy score on pilot states, chooses activation thresholds by empirical quantiles, and then applies a small calibration layer. The analysis tracks three steps: proxy and threshold errors become envelope errors; envelope errors perturb one SGLD step; and the local residuals give stationary errors through a conditional perturbation bridge. Experiments show that the proxy-quantile denominators are close to oracle-score behavior, avoid the random-denominator mean-shift channel, and improve simple deterministic taming choices.","author":{"@type":"Person","name":"Yiwei Zhou, Ziheng Chen"},"datePublished":"2026-06-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/10/DeterministicDenominatorDesignforLocalizedTamedStochasticGradientLangevinDynamics.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/10/DeterministicDenominatorDesignforLocalizedTamedStochasticGradientLangevinDynamics.html","headline":"Deterministic Denominator Design for Localized Tamed Stochastic-Gradient Langevin Dynamics","@type":"BlogPosting","dateModified":"2026-06-10T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-10 00:00:00 +0000">06-10</time>
+  </p>
+  
+  <h1>Deterministic Denominator Design for Localized Tamed Stochastic-Gradient Langevin Dynamics</h1>
+  <br>Yiwei Zhou, Ziheng Chen</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Tamed stochastic-gradient Langevin dynamics (SGLD) stabilizes large drifts by adding a denominator to the update. If this denominator uses the same stochastic-gradient sample as the update step, it can also change the conditional mean drift. We study deterministic denominators: the state-dependent envelope is fixed before the current oracle sample is drawn. The main question is how to design this envelope in practice. The design starts from an oracle score, builds a low-cost proxy score on pilot states, chooses activation thresholds by empirical quantiles, and then applies a small calibration layer. The analysis tracks three steps: proxy and threshold errors become envelope errors; envelope errors perturb one SGLD step; and the local residuals give stationary errors through a conditional perturbation bridge. Experiments show that the proxy-quantile denominators are close to oracle-score behavior, avoid the random-denominator mean-shift channel, and improve simple deterministic taming choices.</p>
+
+<p><a href="https://arxiv.org/abs/2606.10559">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

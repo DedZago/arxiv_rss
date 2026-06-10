@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Integrating Local and Global Entropy for Uncertainty Quantification in LLMs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Integrating Local and Global Entropy for Uncertainty Quantification in LLMs" />
+<meta name="author" content="Johanne Medina, Tianyi Zhou, Keivin Isufaj, Aristides Gionis, Sanjay Chawla" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language models hallucinate confidently, making uncertainty quantification (UQ) essential for reliable deployment. Existing methods rely predominantly on token-level signals, leaving the geometric structure of intermediate hidden states underused. In this paper, we take the geometric complexity of hidden-state matrices as a measure of the global uncertainty of LLMs, while treating token-level uncertainty estimation as a local metric. We show that hidden-state geometric entropy (global uncertainty) and token-level entropy (local uncertainty) are statistically near-orthogonal, capturing distinct failure regimes for reliability prediction. In particular, global geometry recovers the confident-but-wrong failure mode that local signals systematically miss. Building on this, we propose Global-Local Uncertainty (GLU), an unsupervised, single-pass score that fuses the two signals via a multiplicative gate. Across three model families and six benchmarks, GLU matches or outperforms all unsupervised baselines while requiring only a single forward pass and remaining length-normalized and architecture-agnostic." />
+<meta property="og:description" content="Large language models hallucinate confidently, making uncertainty quantification (UQ) essential for reliable deployment. Existing methods rely predominantly on token-level signals, leaving the geometric structure of intermediate hidden states underused. In this paper, we take the geometric complexity of hidden-state matrices as a measure of the global uncertainty of LLMs, while treating token-level uncertainty estimation as a local metric. We show that hidden-state geometric entropy (global uncertainty) and token-level entropy (local uncertainty) are statistically near-orthogonal, capturing distinct failure regimes for reliability prediction. In particular, global geometry recovers the confident-but-wrong failure mode that local signals systematically miss. Building on this, we propose Global-Local Uncertainty (GLU), an unsupervised, single-pass score that fuses the two signals via a multiplicative gate. Across three model families and six benchmarks, GLU matches or outperforms all unsupervised baselines while requiring only a single forward pass and remaining length-normalized and architecture-agnostic." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/10/IntegratingLocalandGlobalEntropyforUncertaintyQuantificationinLLMs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/10/IntegratingLocalandGlobalEntropyforUncertaintyQuantificationinLLMs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Integrating Local and Global Entropy for Uncertainty Quantification in LLMs" />
+<script type="application/ld+json">
+{"description":"Large language models hallucinate confidently, making uncertainty quantification (UQ) essential for reliable deployment. Existing methods rely predominantly on token-level signals, leaving the geometric structure of intermediate hidden states underused. In this paper, we take the geometric complexity of hidden-state matrices as a measure of the global uncertainty of LLMs, while treating token-level uncertainty estimation as a local metric. We show that hidden-state geometric entropy (global uncertainty) and token-level entropy (local uncertainty) are statistically near-orthogonal, capturing distinct failure regimes for reliability prediction. In particular, global geometry recovers the confident-but-wrong failure mode that local signals systematically miss. Building on this, we propose Global-Local Uncertainty (GLU), an unsupervised, single-pass score that fuses the two signals via a multiplicative gate. Across three model families and six benchmarks, GLU matches or outperforms all unsupervised baselines while requiring only a single forward pass and remaining length-normalized and architecture-agnostic.","author":{"@type":"Person","name":"Johanne Medina, Tianyi Zhou, Keivin Isufaj, Aristides Gionis, Sanjay Chawla"},"datePublished":"2026-06-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/10/IntegratingLocalandGlobalEntropyforUncertaintyQuantificationinLLMs.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/10/IntegratingLocalandGlobalEntropyforUncertaintyQuantificationinLLMs.html","headline":"Integrating Local and Global Entropy for Uncertainty Quantification in LLMs","@type":"BlogPosting","dateModified":"2026-06-10T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-10 00:00:00 +0000">06-10</time>
+  </p>
+  
+  <h1>Integrating Local and Global Entropy for Uncertainty Quantification in LLMs</h1>
+  <br>Johanne Medina, Tianyi Zhou, Keivin Isufaj, Aristides Gionis, Sanjay Chawla</h3>
+  <br> [stat.ML]
+
+  <p>Large language models hallucinate confidently, making uncertainty quantification (UQ) essential for reliable deployment. Existing methods rely predominantly on token-level signals, leaving the geometric structure of intermediate hidden states underused. In this paper, we take the geometric complexity of hidden-state matrices as a measure of the global uncertainty of LLMs, while treating token-level uncertainty estimation as a local metric. We show that hidden-state geometric entropy (global uncertainty) and token-level entropy (local uncertainty) are statistically near-orthogonal, capturing distinct failure regimes for reliability prediction. In particular, global geometry recovers the confident-but-wrong failure mode that local signals systematically miss. Building on this, we propose Global-Local Uncertainty (GLU), an unsupervised, single-pass score that fuses the two signals via a multiplicative gate. Across three model families and six benchmarks, GLU matches or outperforms all unsupervised baselines while requiring only a single forward pass and remaining length-normalized and architecture-agnostic.</p>
+
+<p><a href="https://arxiv.org/abs/2606.09875">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
