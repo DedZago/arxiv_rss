@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mitigating Disparate Impact of Differentially Private Learning through Bounded Adaptive Clipping</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mitigating Disparate Impact of Differentially Private Learning through Bounded Adaptive Clipping" />
+<meta name="author" content="Linzh Zhao, Aki Rehn, Mikko A. Heikkilä, Razane Tajeddine, Antti Honkela" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Differential privacy (DP) has become an essential framework for privacy-preserving machine learning. Existing DP learning methods, however, often have disparate impacts on model predictions, e.g., for minority groups. Gradient clipping, which is often used in DP learning, can suppress larger gradients from challenging samples. We show that this problem is amplified by adaptive clipping, which will often shrink the clipping bound to tiny values to match a well-fitting majority, while significantly reducing the accuracy for others. We propose bounded adaptive clipping, which introduces a tunable lower bound to prevent excessive gradient suppression. Our method improves worst-class accuracy by over 10 percentage points on Skewed and Fashion MNIST compared to unbounded adaptive clipping, 7 points compared to Automatic clipping, and 5 points compared to constant clipping. The code is available at https://github.com/TrustworthyMLHelsinki/adaptive-clipping-fairness." />
+<meta property="og:description" content="Differential privacy (DP) has become an essential framework for privacy-preserving machine learning. Existing DP learning methods, however, often have disparate impacts on model predictions, e.g., for minority groups. Gradient clipping, which is often used in DP learning, can suppress larger gradients from challenging samples. We show that this problem is amplified by adaptive clipping, which will often shrink the clipping bound to tiny values to match a well-fitting majority, while significantly reducing the accuracy for others. We propose bounded adaptive clipping, which introduces a tunable lower bound to prevent excessive gradient suppression. Our method improves worst-class accuracy by over 10 percentage points on Skewed and Fashion MNIST compared to unbounded adaptive clipping, 7 points compared to Automatic clipping, and 5 points compared to constant clipping. The code is available at https://github.com/TrustworthyMLHelsinki/adaptive-clipping-fairness." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/11/MitigatingDisparateImpactofDifferentiallyPrivateLearningthroughBoundedAdaptiveClipping.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/11/MitigatingDisparateImpactofDifferentiallyPrivateLearningthroughBoundedAdaptiveClipping.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mitigating Disparate Impact of Differentially Private Learning through Bounded Adaptive Clipping" />
+<script type="application/ld+json">
+{"description":"Differential privacy (DP) has become an essential framework for privacy-preserving machine learning. Existing DP learning methods, however, often have disparate impacts on model predictions, e.g., for minority groups. Gradient clipping, which is often used in DP learning, can suppress larger gradients from challenging samples. We show that this problem is amplified by adaptive clipping, which will often shrink the clipping bound to tiny values to match a well-fitting majority, while significantly reducing the accuracy for others. We propose bounded adaptive clipping, which introduces a tunable lower bound to prevent excessive gradient suppression. Our method improves worst-class accuracy by over 10 percentage points on Skewed and Fashion MNIST compared to unbounded adaptive clipping, 7 points compared to Automatic clipping, and 5 points compared to constant clipping. The code is available at https://github.com/TrustworthyMLHelsinki/adaptive-clipping-fairness.","author":{"@type":"Person","name":"Linzh Zhao, Aki Rehn, Mikko A. Heikkilä, Razane Tajeddine, Antti Honkela"},"datePublished":"2026-06-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/11/MitigatingDisparateImpactofDifferentiallyPrivateLearningthroughBoundedAdaptiveClipping.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/11/MitigatingDisparateImpactofDifferentiallyPrivateLearningthroughBoundedAdaptiveClipping.html","headline":"Mitigating Disparate Impact of Differentially Private Learning through Bounded Adaptive Clipping","@type":"BlogPosting","dateModified":"2026-06-11T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-11 00:00:00 +0000">06-11</time>
+  </p>
+  
+  <h1>Mitigating Disparate Impact of Differentially Private Learning through Bounded Adaptive Clipping</h1>
+  <br>Linzh Zhao, Aki Rehn, Mikko A. Heikkilä, Razane Tajeddine, Antti Honkela</h3>
+  <br> [stat.ML]
+
+  <p>Differential privacy (DP) has become an essential framework for privacy-preserving machine learning. Existing DP learning methods, however, often have disparate impacts on model predictions, e.g., for minority groups. Gradient clipping, which is often used in DP learning, can suppress larger gradients from challenging samples. We show that this problem is amplified by adaptive clipping, which will often shrink the clipping bound to tiny values to match a well-fitting majority, while significantly reducing the accuracy for others. We propose bounded adaptive clipping, which introduces a tunable lower bound to prevent excessive gradient suppression. Our method improves worst-class accuracy by over 10 percentage points on Skewed and Fashion MNIST compared to unbounded adaptive clipping, 7 points compared to Automatic clipping, and 5 points compared to constant clipping. The code is available at https://github.com/TrustworthyMLHelsinki/adaptive-clipping-fairness.</p>
+
+<p><a href="https://arxiv.org/abs/2506.01396">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
