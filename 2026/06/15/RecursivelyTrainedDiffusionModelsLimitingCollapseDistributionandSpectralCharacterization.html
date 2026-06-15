@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Recursively Trained Diffusion Models: Limiting Collapse Distribution and Spectral Characterization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Recursively Trained Diffusion Models: Limiting Collapse Distribution and Spectral Characterization" />
+<meta name="author" content="Naïl B. Khelifa, Richard E. Turner, Ramji Venkataramanan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recursive training of generative models on their own outputs can lead to model collapse, a compounding drift away from the true data distribution. Existing theoretical works bound finite-round error accumulation in the context of diffusion models, but two questions remain open:~what distribution does the recursion converge to, and how fast? We answer both, isolating a mechanism distinct from imperfect learning: even with perfect score estimation and exact sampling, the early stopping of the reverse diffusion (required for numerical stability) drives a progressive drift away from the data distribution. We prove that this recursion converges geometrically to a unique limiting distribution, which admits a closed-form characterization as an infinite mixture of increasingly Gaussian-smoothed versions of the data distribution. A Hermite spectral decomposition of this limit reveals that recursive training acts as a low-pass filter: higher-order modes, which encode fine non-Gaussian structure, are attenuated much more strongly than coarse modes. This spectral picture motivates annealed truncation schedules that progressively shrink truncation times across retraining rounds; we prove that any schedule converging to $0$ asymptotically eliminates recursive compounding. Finally, we show our idealized characterization is robust: in the presence of discretization and score estimation errors, the learned distribution remains in a Wasserstein-2 ball around the ideal limit, with mode-dependent contraction rates that contract high-order errors faster than low-order ones. We validate the theory on synthetic Gaussian mixtures and CIFAR-10." />
+<meta property="og:description" content="Recursive training of generative models on their own outputs can lead to model collapse, a compounding drift away from the true data distribution. Existing theoretical works bound finite-round error accumulation in the context of diffusion models, but two questions remain open:~what distribution does the recursion converge to, and how fast? We answer both, isolating a mechanism distinct from imperfect learning: even with perfect score estimation and exact sampling, the early stopping of the reverse diffusion (required for numerical stability) drives a progressive drift away from the data distribution. We prove that this recursion converges geometrically to a unique limiting distribution, which admits a closed-form characterization as an infinite mixture of increasingly Gaussian-smoothed versions of the data distribution. A Hermite spectral decomposition of this limit reveals that recursive training acts as a low-pass filter: higher-order modes, which encode fine non-Gaussian structure, are attenuated much more strongly than coarse modes. This spectral picture motivates annealed truncation schedules that progressively shrink truncation times across retraining rounds; we prove that any schedule converging to $0$ asymptotically eliminates recursive compounding. Finally, we show our idealized characterization is robust: in the presence of discretization and score estimation errors, the learned distribution remains in a Wasserstein-2 ball around the ideal limit, with mode-dependent contraction rates that contract high-order errors faster than low-order ones. We validate the theory on synthetic Gaussian mixtures and CIFAR-10." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/15/RecursivelyTrainedDiffusionModelsLimitingCollapseDistributionandSpectralCharacterization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/15/RecursivelyTrainedDiffusionModelsLimitingCollapseDistributionandSpectralCharacterization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Recursively Trained Diffusion Models: Limiting Collapse Distribution and Spectral Characterization" />
+<script type="application/ld+json">
+{"description":"Recursive training of generative models on their own outputs can lead to model collapse, a compounding drift away from the true data distribution. Existing theoretical works bound finite-round error accumulation in the context of diffusion models, but two questions remain open:~what distribution does the recursion converge to, and how fast? We answer both, isolating a mechanism distinct from imperfect learning: even with perfect score estimation and exact sampling, the early stopping of the reverse diffusion (required for numerical stability) drives a progressive drift away from the data distribution. We prove that this recursion converges geometrically to a unique limiting distribution, which admits a closed-form characterization as an infinite mixture of increasingly Gaussian-smoothed versions of the data distribution. A Hermite spectral decomposition of this limit reveals that recursive training acts as a low-pass filter: higher-order modes, which encode fine non-Gaussian structure, are attenuated much more strongly than coarse modes. This spectral picture motivates annealed truncation schedules that progressively shrink truncation times across retraining rounds; we prove that any schedule converging to $0$ asymptotically eliminates recursive compounding. Finally, we show our idealized characterization is robust: in the presence of discretization and score estimation errors, the learned distribution remains in a Wasserstein-2 ball around the ideal limit, with mode-dependent contraction rates that contract high-order errors faster than low-order ones. We validate the theory on synthetic Gaussian mixtures and CIFAR-10.","author":{"@type":"Person","name":"Naïl B. Khelifa, Richard E. Turner, Ramji Venkataramanan"},"datePublished":"2026-06-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/15/RecursivelyTrainedDiffusionModelsLimitingCollapseDistributionandSpectralCharacterization.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/15/RecursivelyTrainedDiffusionModelsLimitingCollapseDistributionandSpectralCharacterization.html","headline":"Recursively Trained Diffusion Models: Limiting Collapse Distribution and Spectral Characterization","@type":"BlogPosting","dateModified":"2026-06-15T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-15 00:00:00 +0000">06-15</time>
+  </p>
+  
+  <h1>Recursively Trained Diffusion Models: Limiting Collapse Distribution and Spectral Characterization</h1>
+  <br>Naïl B. Khelifa, Richard E. Turner, Ramji Venkataramanan</h3>
+  <br> [stat.ML]
+
+  <p>Recursive training of generative models on their own outputs can lead to model collapse, a compounding drift away from the true data distribution. Existing theoretical works bound finite-round error accumulation in the context of diffusion models, but two questions remain open:~what distribution does the recursion converge to, and how fast? We answer both, isolating a mechanism distinct from imperfect learning: even with perfect score estimation and exact sampling, the early stopping of the reverse diffusion (required for numerical stability) drives a progressive drift away from the data distribution. We prove that this recursion converges geometrically to a unique limiting distribution, which admits a closed-form characterization as an infinite mixture of increasingly Gaussian-smoothed versions of the data distribution. A Hermite spectral decomposition of this limit reveals that recursive training acts as a low-pass filter: higher-order modes, which encode fine non-Gaussian structure, are attenuated much more strongly than coarse modes. This spectral picture motivates annealed truncation schedules that progressively shrink truncation times across retraining rounds; we prove that any schedule converging to $0$ asymptotically eliminates recursive compounding. Finally, we show our idealized characterization is robust: in the presence of discretization and score estimation errors, the learned distribution remains in a Wasserstein-2 ball around the ideal limit, with mode-dependent contraction rates that contract high-order errors faster than low-order ones. We validate the theory on synthetic Gaussian mixtures and CIFAR-10.</p>
+
+<p><a href="https://arxiv.org/abs/2606.13796">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

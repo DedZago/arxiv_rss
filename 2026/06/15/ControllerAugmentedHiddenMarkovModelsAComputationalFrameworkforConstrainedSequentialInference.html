@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Controller-Augmented Hidden Markov Models: A Computational Framework for Constrained Sequential Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Controller-Augmented Hidden Markov Models: A Computational Framework for Constrained Sequential Inference" />
+<meta name="author" content="Lekha Patel, Luis Damiano" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hidden Markov models are foundational for sequential inference, but their Markovian assumption fails under pathwise constraints such as precedence requirements, visitation cardinalities, or monotonic state progression, which induce long-range dependencies that invalidate standard dynamic programming algorithms. To deal with this, we present Controller-Augmented Hidden Markov Models (CHMMs), a framework that compiles each constraint into a finite-state controller tracking the minimal sufficient history, after which standard forward–backward and Viterbi recursions on the augmented chain compute exact constrained posteriors and maximum a posteriori paths in both discrete and continuous time, the latter through uniformization. We establish four theoretical guarantees: exactness of constrained inference, monotone ascent of constrained EM, inference complexity linear in the controller cardinality, and a total-variation bound under constraint misspecification. A catalog of controller encodings covering 11 constraint families across the ordering, visitation, path, and temporal categories operationalizes the framework. Empirically, we evaluate CHMMs against 6 alternative decoders on 3 real-world sequence-labeling tasks of substantively different character: gene-structure decoding in \emph{Drosophila melanogaster}, free-living activity recognition in CASAS smart-home environments, and protocol-defined human activity recognition from wearable sensors. The results reveal a clean local-versus-cumulative dichotomy in which controller augmentation is uniquely able to recover globally feasible trajectories on cumulative-constraint regimes, whilst simpler decoders are matched in validity on locally-dominated regimes. Together, theory and experiment characterize when exact controller augmentation is necessary and when simpler approaches suffice." />
+<meta property="og:description" content="Hidden Markov models are foundational for sequential inference, but their Markovian assumption fails under pathwise constraints such as precedence requirements, visitation cardinalities, or monotonic state progression, which induce long-range dependencies that invalidate standard dynamic programming algorithms. To deal with this, we present Controller-Augmented Hidden Markov Models (CHMMs), a framework that compiles each constraint into a finite-state controller tracking the minimal sufficient history, after which standard forward–backward and Viterbi recursions on the augmented chain compute exact constrained posteriors and maximum a posteriori paths in both discrete and continuous time, the latter through uniformization. We establish four theoretical guarantees: exactness of constrained inference, monotone ascent of constrained EM, inference complexity linear in the controller cardinality, and a total-variation bound under constraint misspecification. A catalog of controller encodings covering 11 constraint families across the ordering, visitation, path, and temporal categories operationalizes the framework. Empirically, we evaluate CHMMs against 6 alternative decoders on 3 real-world sequence-labeling tasks of substantively different character: gene-structure decoding in \emph{Drosophila melanogaster}, free-living activity recognition in CASAS smart-home environments, and protocol-defined human activity recognition from wearable sensors. The results reveal a clean local-versus-cumulative dichotomy in which controller augmentation is uniquely able to recover globally feasible trajectories on cumulative-constraint regimes, whilst simpler decoders are matched in validity on locally-dominated regimes. Together, theory and experiment characterize when exact controller augmentation is necessary and when simpler approaches suffice." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/15/ControllerAugmentedHiddenMarkovModelsAComputationalFrameworkforConstrainedSequentialInference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/15/ControllerAugmentedHiddenMarkovModelsAComputationalFrameworkforConstrainedSequentialInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Controller-Augmented Hidden Markov Models: A Computational Framework for Constrained Sequential Inference" />
+<script type="application/ld+json">
+{"description":"Hidden Markov models are foundational for sequential inference, but their Markovian assumption fails under pathwise constraints such as precedence requirements, visitation cardinalities, or monotonic state progression, which induce long-range dependencies that invalidate standard dynamic programming algorithms. To deal with this, we present Controller-Augmented Hidden Markov Models (CHMMs), a framework that compiles each constraint into a finite-state controller tracking the minimal sufficient history, after which standard forward–backward and Viterbi recursions on the augmented chain compute exact constrained posteriors and maximum a posteriori paths in both discrete and continuous time, the latter through uniformization. We establish four theoretical guarantees: exactness of constrained inference, monotone ascent of constrained EM, inference complexity linear in the controller cardinality, and a total-variation bound under constraint misspecification. A catalog of controller encodings covering 11 constraint families across the ordering, visitation, path, and temporal categories operationalizes the framework. Empirically, we evaluate CHMMs against 6 alternative decoders on 3 real-world sequence-labeling tasks of substantively different character: gene-structure decoding in \\emph{Drosophila melanogaster}, free-living activity recognition in CASAS smart-home environments, and protocol-defined human activity recognition from wearable sensors. The results reveal a clean local-versus-cumulative dichotomy in which controller augmentation is uniquely able to recover globally feasible trajectories on cumulative-constraint regimes, whilst simpler decoders are matched in validity on locally-dominated regimes. Together, theory and experiment characterize when exact controller augmentation is necessary and when simpler approaches suffice.","author":{"@type":"Person","name":"Lekha Patel, Luis Damiano"},"datePublished":"2026-06-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/15/ControllerAugmentedHiddenMarkovModelsAComputationalFrameworkforConstrainedSequentialInference.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/15/ControllerAugmentedHiddenMarkovModelsAComputationalFrameworkforConstrainedSequentialInference.html","headline":"Controller-Augmented Hidden Markov Models: A Computational Framework for Constrained Sequential Inference","@type":"BlogPosting","dateModified":"2026-06-15T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-15 00:00:00 +0000">06-15</time>
+  </p>
+  
+  <h1>Controller-Augmented Hidden Markov Models: A Computational Framework for Constrained Sequential Inference</h1>
+  <br>Lekha Patel, Luis Damiano</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Hidden Markov models are foundational for sequential inference, but their Markovian assumption fails under pathwise constraints such as precedence requirements, visitation cardinalities, or monotonic state progression, which induce long-range dependencies that invalidate standard dynamic programming algorithms. To deal with this, we present Controller-Augmented Hidden Markov Models (CHMMs), a framework that compiles each constraint into a finite-state controller tracking the minimal sufficient history, after which standard forward–backward and Viterbi recursions on the augmented chain compute exact constrained posteriors and maximum a posteriori paths in both discrete and continuous time, the latter through uniformization. We establish four theoretical guarantees: exactness of constrained inference, monotone ascent of constrained EM, inference complexity linear in the controller cardinality, and a total-variation bound under constraint misspecification. A catalog of controller encodings covering 11 constraint families across the ordering, visitation, path, and temporal categories operationalizes the framework. Empirically, we evaluate CHMMs against 6 alternative decoders on 3 real-world sequence-labeling tasks of substantively different character: gene-structure decoding in \emph{Drosophila melanogaster}, free-living activity recognition in CASAS smart-home environments, and protocol-defined human activity recognition from wearable sensors. The results reveal a clean local-versus-cumulative dichotomy in which controller augmentation is uniquely able to recover globally feasible trajectories on cumulative-constraint regimes, whilst simpler decoders are matched in validity on locally-dominated regimes. Together, theory and experiment characterize when exact controller augmentation is necessary and when simpler approaches suffice.</p>
+
+<p><a href="https://arxiv.org/abs/2606.13850">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

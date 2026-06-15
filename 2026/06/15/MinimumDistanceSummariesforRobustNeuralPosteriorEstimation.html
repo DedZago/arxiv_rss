@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Minimum Distance Summaries for Robust Neural Posterior Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Minimum Distance Summaries for Robust Neural Posterior Estimation" />
+<meta name="author" content="Sherman Khoo, Dennis Prangle, Song Liu, Mark Beaumont" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simulation-based inference (SBI) enables amortized Bayesian inference by first training a neural posterior estimator (NPE) on prior-simulator pairs, typically through low-dimensional summary statistics, which can then be cheaply reused for fast inference by querying it on new test observations. Because NPE is estimated under the training data distribution, it is susceptible to misspecification when observations deviate from the training distribution. Many robust SBI approaches address this by modifying NPE training or introducing error models, coupling robustness to the inference network and compromising amortization and modularity. We introduce minimum-distance summaries, a plug-in robust NPE method that adapts queried test-time summaries independently of the pretrained NPE. Leveraging the maximum mean discrepancy (MMD) as a distance between observed data and a summary-conditional predictive distribution, the adapted summary inherits strong robustness properties from the MMD. We demonstrate that the algorithm can be implemented efficiently with random Fourier feature approximations, yielding a lightweight, model-free test-time adaptation procedure. We provide theoretical guarantees for the robustness of our algorithm and empirically evaluate it on a range of synthetic and real-world tasks, demonstrating substantial robustness gains with minimal additional overhead." />
+<meta property="og:description" content="Simulation-based inference (SBI) enables amortized Bayesian inference by first training a neural posterior estimator (NPE) on prior-simulator pairs, typically through low-dimensional summary statistics, which can then be cheaply reused for fast inference by querying it on new test observations. Because NPE is estimated under the training data distribution, it is susceptible to misspecification when observations deviate from the training distribution. Many robust SBI approaches address this by modifying NPE training or introducing error models, coupling robustness to the inference network and compromising amortization and modularity. We introduce minimum-distance summaries, a plug-in robust NPE method that adapts queried test-time summaries independently of the pretrained NPE. Leveraging the maximum mean discrepancy (MMD) as a distance between observed data and a summary-conditional predictive distribution, the adapted summary inherits strong robustness properties from the MMD. We demonstrate that the algorithm can be implemented efficiently with random Fourier feature approximations, yielding a lightweight, model-free test-time adaptation procedure. We provide theoretical guarantees for the robustness of our algorithm and empirically evaluate it on a range of synthetic and real-world tasks, demonstrating substantial robustness gains with minimal additional overhead." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/15/MinimumDistanceSummariesforRobustNeuralPosteriorEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/15/MinimumDistanceSummariesforRobustNeuralPosteriorEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Minimum Distance Summaries for Robust Neural Posterior Estimation" />
+<script type="application/ld+json">
+{"description":"Simulation-based inference (SBI) enables amortized Bayesian inference by first training a neural posterior estimator (NPE) on prior-simulator pairs, typically through low-dimensional summary statistics, which can then be cheaply reused for fast inference by querying it on new test observations. Because NPE is estimated under the training data distribution, it is susceptible to misspecification when observations deviate from the training distribution. Many robust SBI approaches address this by modifying NPE training or introducing error models, coupling robustness to the inference network and compromising amortization and modularity. We introduce minimum-distance summaries, a plug-in robust NPE method that adapts queried test-time summaries independently of the pretrained NPE. Leveraging the maximum mean discrepancy (MMD) as a distance between observed data and a summary-conditional predictive distribution, the adapted summary inherits strong robustness properties from the MMD. We demonstrate that the algorithm can be implemented efficiently with random Fourier feature approximations, yielding a lightweight, model-free test-time adaptation procedure. We provide theoretical guarantees for the robustness of our algorithm and empirically evaluate it on a range of synthetic and real-world tasks, demonstrating substantial robustness gains with minimal additional overhead.","author":{"@type":"Person","name":"Sherman Khoo, Dennis Prangle, Song Liu, Mark Beaumont"},"datePublished":"2026-06-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/15/MinimumDistanceSummariesforRobustNeuralPosteriorEstimation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/15/MinimumDistanceSummariesforRobustNeuralPosteriorEstimation.html","headline":"Minimum Distance Summaries for Robust Neural Posterior Estimation","@type":"BlogPosting","dateModified":"2026-06-15T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-15 00:00:00 +0000">06-15</time>
+  </p>
+  
+  <h1>Minimum Distance Summaries for Robust Neural Posterior Estimation</h1>
+  <br>Sherman Khoo, Dennis Prangle, Song Liu, Mark Beaumont</h3>
+  <br> [stat.ML]
+
+  <p>Simulation-based inference (SBI) enables amortized Bayesian inference by first training a neural posterior estimator (NPE) on prior-simulator pairs, typically through low-dimensional summary statistics, which can then be cheaply reused for fast inference by querying it on new test observations. Because NPE is estimated under the training data distribution, it is susceptible to misspecification when observations deviate from the training distribution. Many robust SBI approaches address this by modifying NPE training or introducing error models, coupling robustness to the inference network and compromising amortization and modularity. We introduce minimum-distance summaries, a plug-in robust NPE method that adapts queried test-time summaries independently of the pretrained NPE. Leveraging the maximum mean discrepancy (MMD) as a distance between observed data and a summary-conditional predictive distribution, the adapted summary inherits strong robustness properties from the MMD. We demonstrate that the algorithm can be implemented efficiently with random Fourier feature approximations, yielding a lightweight, model-free test-time adaptation procedure. We provide theoretical guarantees for the robustness of our algorithm and empirically evaluate it on a range of synthetic and real-world tasks, demonstrating substantial robustness gains with minimal additional overhead.</p>
+
+<p><a href="https://arxiv.org/abs/2602.09161">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
