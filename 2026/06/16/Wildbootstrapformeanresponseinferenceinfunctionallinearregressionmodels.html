@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Wild bootstrap for mean response inference in functional linear regression models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wild bootstrap for mean response inference in functional linear regression models" />
+<meta name="author" content="Hyemin Yeon, Xiongtao Dai, Daniel Nordman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Functional regressors complicate inference in linear regression problems so that the bootstrap can play a useful role in quantifying uncertainty and calibrating intervals. The best bootstrap in practice, though, can depend on factors in the data as well as computational considerations and existing bootstraps can have limitations: residual bootstrap is computationally fast and simple but may fail when the errors are heterogeneous, while paired bootstrap applies more generally in functional linear regression at a cost of much higher computation. To bridge this gap, we develop a wild bootstrap method for functional linear regression, which is akin to a modified version of residual bootstrap but designed to have a wide scope of application like paired bootstrap, including to heteroscedastic errors. Its theoretical consistency is established and numerical studies suggest that wild bootstrap can provide accurate and computationally fast inference. Importantly, we also suggest a practical and effective approach of selecting truncation levels, specifically designed for mean response inference problems. The proposed bootstrap in functional linear regression is further illustrated through a weather data example, and an accompanying R package BTSinFLRM provides numerical implementations." />
+<meta property="og:description" content="Functional regressors complicate inference in linear regression problems so that the bootstrap can play a useful role in quantifying uncertainty and calibrating intervals. The best bootstrap in practice, though, can depend on factors in the data as well as computational considerations and existing bootstraps can have limitations: residual bootstrap is computationally fast and simple but may fail when the errors are heterogeneous, while paired bootstrap applies more generally in functional linear regression at a cost of much higher computation. To bridge this gap, we develop a wild bootstrap method for functional linear regression, which is akin to a modified version of residual bootstrap but designed to have a wide scope of application like paired bootstrap, including to heteroscedastic errors. Its theoretical consistency is established and numerical studies suggest that wild bootstrap can provide accurate and computationally fast inference. Importantly, we also suggest a practical and effective approach of selecting truncation levels, specifically designed for mean response inference problems. The proposed bootstrap in functional linear regression is further illustrated through a weather data example, and an accompanying R package BTSinFLRM provides numerical implementations." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/16/Wildbootstrapformeanresponseinferenceinfunctionallinearregressionmodels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/16/Wildbootstrapformeanresponseinferenceinfunctionallinearregressionmodels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wild bootstrap for mean response inference in functional linear regression models" />
+<script type="application/ld+json">
+{"description":"Functional regressors complicate inference in linear regression problems so that the bootstrap can play a useful role in quantifying uncertainty and calibrating intervals. The best bootstrap in practice, though, can depend on factors in the data as well as computational considerations and existing bootstraps can have limitations: residual bootstrap is computationally fast and simple but may fail when the errors are heterogeneous, while paired bootstrap applies more generally in functional linear regression at a cost of much higher computation. To bridge this gap, we develop a wild bootstrap method for functional linear regression, which is akin to a modified version of residual bootstrap but designed to have a wide scope of application like paired bootstrap, including to heteroscedastic errors. Its theoretical consistency is established and numerical studies suggest that wild bootstrap can provide accurate and computationally fast inference. Importantly, we also suggest a practical and effective approach of selecting truncation levels, specifically designed for mean response inference problems. The proposed bootstrap in functional linear regression is further illustrated through a weather data example, and an accompanying R package BTSinFLRM provides numerical implementations.","author":{"@type":"Person","name":"Hyemin Yeon, Xiongtao Dai, Daniel Nordman"},"datePublished":"2026-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/16/Wildbootstrapformeanresponseinferenceinfunctionallinearregressionmodels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/16/Wildbootstrapformeanresponseinferenceinfunctionallinearregressionmodels.html","headline":"Wild bootstrap for mean response inference in functional linear regression models","@type":"BlogPosting","dateModified":"2026-06-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-16 00:00:00 +0000">06-16</time>
+  </p>
+  
+  <h1>Wild bootstrap for mean response inference in functional linear regression models</h1>
+  <br>Hyemin Yeon, Xiongtao Dai, Daniel Nordman</h3>
+  <br> [stat.ME,stat.TH]
+
+  <p>Functional regressors complicate inference in linear regression problems so that the bootstrap can play a useful role in quantifying uncertainty and calibrating intervals. The best bootstrap in practice, though, can depend on factors in the data as well as computational considerations and existing bootstraps can have limitations: residual bootstrap is computationally fast and simple but may fail when the errors are heterogeneous, while paired bootstrap applies more generally in functional linear regression at a cost of much higher computation. To bridge this gap, we develop a wild bootstrap method for functional linear regression, which is akin to a modified version of residual bootstrap but designed to have a wide scope of application like paired bootstrap, including to heteroscedastic errors. Its theoretical consistency is established and numerical studies suggest that wild bootstrap can provide accurate and computationally fast inference. Importantly, we also suggest a practical and effective approach of selecting truncation levels, specifically designed for mean response inference problems. The proposed bootstrap in functional linear regression is further illustrated through a weather data example, and an accompanying R package BTSinFLRM provides numerical implementations.</p>
+
+<p><a href="https://arxiv.org/abs/2606.16089">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints" />
+<meta name="author" content="Ruicheng Ao, Gan Luo, David Simchi-Levi, Xinshang Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language models now serve millions of users daily, with providers incurring costs exceeding $700,000 per day. Each request requires token-by-token inference, making GPU scheduling central to latency, capacity, and cost. The difficulty is endogenous memory growth: generated tokens expand the Key-Value (KV) cache, and overflow can evict in-progress requests and waste prior computation. We formulate inference as a multi-stage online scheduling problem with endogenous memory growth, linear iteration times, and GPU-resident KV-cache constraints. We introduce a fluid model that characterizes equilibrium batch composition, memory requirement, and stability region. Guided by the fluid model, we design WAIT (Waiting for Accumulated Inference Threshold), a threshold-based admission rule for known output lengths, and Nested WAIT, which extends the rule to unknown output lengths by regulating how requests advance across decode-stage segments. Both algorithms approximate the fluid benchmark asymptotically under the stated memory conditions. Nested WAIT uses an additional safety buffer of moderate scale to hedge against memory-overflow-induced evictions under unknown output lengths. In Vidur simulations configured for Llama-2-7B on an A100 GPU, with supplemental real-GPU validation reported in the appendix, the policies enlarge the empirically observed stable operating range relative to widely used baseline algorithms and reduce latency especially in near-overloaded and overloaded regimes." />
+<meta property="og:description" content="Large language models now serve millions of users daily, with providers incurring costs exceeding $700,000 per day. Each request requires token-by-token inference, making GPU scheduling central to latency, capacity, and cost. The difficulty is endogenous memory growth: generated tokens expand the Key-Value (KV) cache, and overflow can evict in-progress requests and waste prior computation. We formulate inference as a multi-stage online scheduling problem with endogenous memory growth, linear iteration times, and GPU-resident KV-cache constraints. We introduce a fluid model that characterizes equilibrium batch composition, memory requirement, and stability region. Guided by the fluid model, we design WAIT (Waiting for Accumulated Inference Threshold), a threshold-based admission rule for known output lengths, and Nested WAIT, which extends the rule to unknown output lengths by regulating how requests advance across decode-stage segments. Both algorithms approximate the fluid benchmark asymptotically under the stated memory conditions. Nested WAIT uses an additional safety buffer of moderate scale to hedge against memory-overflow-induced evictions under unknown output lengths. In Vidur simulations configured for Llama-2-7B on an A100 GPU, with supplemental real-GPU validation reported in the appendix, the policies enlarge the empirically observed stable operating range relative to widely used baseline algorithms and reduce latency especially in near-overloaded and overloaded regimes." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/16/OptimizingLLMInferenceFluidGuidedOnlineSchedulingwithMemoryConstraints.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/16/OptimizingLLMInferenceFluidGuidedOnlineSchedulingwithMemoryConstraints.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints" />
+<script type="application/ld+json">
+{"description":"Large language models now serve millions of users daily, with providers incurring costs exceeding $700,000 per day. Each request requires token-by-token inference, making GPU scheduling central to latency, capacity, and cost. The difficulty is endogenous memory growth: generated tokens expand the Key-Value (KV) cache, and overflow can evict in-progress requests and waste prior computation. We formulate inference as a multi-stage online scheduling problem with endogenous memory growth, linear iteration times, and GPU-resident KV-cache constraints. We introduce a fluid model that characterizes equilibrium batch composition, memory requirement, and stability region. Guided by the fluid model, we design WAIT (Waiting for Accumulated Inference Threshold), a threshold-based admission rule for known output lengths, and Nested WAIT, which extends the rule to unknown output lengths by regulating how requests advance across decode-stage segments. Both algorithms approximate the fluid benchmark asymptotically under the stated memory conditions. Nested WAIT uses an additional safety buffer of moderate scale to hedge against memory-overflow-induced evictions under unknown output lengths. In Vidur simulations configured for Llama-2-7B on an A100 GPU, with supplemental real-GPU validation reported in the appendix, the policies enlarge the empirically observed stable operating range relative to widely used baseline algorithms and reduce latency especially in near-overloaded and overloaded regimes.","author":{"@type":"Person","name":"Ruicheng Ao, Gan Luo, David Simchi-Levi, Xinshang Wang"},"datePublished":"2026-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/16/OptimizingLLMInferenceFluidGuidedOnlineSchedulingwithMemoryConstraints.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/16/OptimizingLLMInferenceFluidGuidedOnlineSchedulingwithMemoryConstraints.html","headline":"Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints","@type":"BlogPosting","dateModified":"2026-06-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-16 00:00:00 +0000">06-16</time>
+  </p>
+  
+  <h1>Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints</h1>
+  <br>Ruicheng Ao, Gan Luo, David Simchi-Levi, Xinshang Wang</h3>
+  <br> [stat.ML]
+
+  <p>Large language models now serve millions of users daily, with providers incurring costs exceeding $700,000 per day. Each request requires token-by-token inference, making GPU scheduling central to latency, capacity, and cost. The difficulty is endogenous memory growth: generated tokens expand the Key-Value (KV) cache, and overflow can evict in-progress requests and waste prior computation. We formulate inference as a multi-stage online scheduling problem with endogenous memory growth, linear iteration times, and GPU-resident KV-cache constraints. We introduce a fluid model that characterizes equilibrium batch composition, memory requirement, and stability region. Guided by the fluid model, we design WAIT (Waiting for Accumulated Inference Threshold), a threshold-based admission rule for known output lengths, and Nested WAIT, which extends the rule to unknown output lengths by regulating how requests advance across decode-stage segments. Both algorithms approximate the fluid benchmark asymptotically under the stated memory conditions. Nested WAIT uses an additional safety buffer of moderate scale to hedge against memory-overflow-induced evictions under unknown output lengths. In Vidur simulations configured for Llama-2-7B on an A100 GPU, with supplemental real-GPU validation reported in the appendix, the policies enlarge the empirically observed stable operating range relative to widely used baseline algorithms and reduce latency especially in near-overloaded and overloaded regimes.</p>
+
+<p><a href="https://arxiv.org/abs/2504.11320">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

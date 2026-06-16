@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Matching correlated VAR time series</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Matching correlated VAR time series" />
+<meta name="author" content="Ernesto Araya, Hemant Tyagi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study the problem of matching correlated VAR time series databases, where a multivariate time series is observed along with a perturbed and permuted version, and the goal is to recover the unknown matching between them. To model this, we introduce a probabilistic framework in which two time series $(x_t){t\in[T]},(x^#_t){t\in[T]}$ are jointly generated, such that $x^#t=x{\pi^(t)}+\sigma \tilde{x}_{\pi^(t)}$, where $(x_t){t\in[T]},(\tilde{x}_t){t\in[T]}$ are independent and identically distributed vector autoregressive (VAR) time series of order $1$ with Gaussian increments, for a hidden $\pi^$. The objective is to recover $\pi^$, from the observation of $(x_t){t\in[T]},(x^#_t){t\in[T]}$. This generalizes the classical problem of matching independent point clouds to the time series setting. We derive the maximum likelihood estimator (MLE), leading to a quadratic optimization over permutations, and theoretically analyze an estimator based on linear assignment. For the latter approach, we establish recovery guarantees, identifying thresholds for $\sigma$ that allow for perfect or partial recovery. Additionally, we propose solving the MLE by considering convex relaxations of the set of permutation matrices (e.g., over the Birkhoff polytope). This allows for efficient estimation of $\pi^*$ and the VAR parameters via alternating minimization. Empirically, we find that linear assignment often matches or outperforms MLE relaxation based approaches." />
+<meta property="og:description" content="We study the problem of matching correlated VAR time series databases, where a multivariate time series is observed along with a perturbed and permuted version, and the goal is to recover the unknown matching between them. To model this, we introduce a probabilistic framework in which two time series $(x_t){t\in[T]},(x^#_t){t\in[T]}$ are jointly generated, such that $x^#t=x{\pi^(t)}+\sigma \tilde{x}_{\pi^(t)}$, where $(x_t){t\in[T]},(\tilde{x}_t){t\in[T]}$ are independent and identically distributed vector autoregressive (VAR) time series of order $1$ with Gaussian increments, for a hidden $\pi^$. The objective is to recover $\pi^$, from the observation of $(x_t){t\in[T]},(x^#_t){t\in[T]}$. This generalizes the classical problem of matching independent point clouds to the time series setting. We derive the maximum likelihood estimator (MLE), leading to a quadratic optimization over permutations, and theoretically analyze an estimator based on linear assignment. For the latter approach, we establish recovery guarantees, identifying thresholds for $\sigma$ that allow for perfect or partial recovery. Additionally, we propose solving the MLE by considering convex relaxations of the set of permutation matrices (e.g., over the Birkhoff polytope). This allows for efficient estimation of $\pi^*$ and the VAR parameters via alternating minimization. Empirically, we find that linear assignment often matches or outperforms MLE relaxation based approaches." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/16/MatchingcorrelatedVARtimeseries.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/16/MatchingcorrelatedVARtimeseries.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Matching correlated VAR time series" />
+<script type="application/ld+json">
+{"description":"We study the problem of matching correlated VAR time series databases, where a multivariate time series is observed along with a perturbed and permuted version, and the goal is to recover the unknown matching between them. To model this, we introduce a probabilistic framework in which two time series $(x_t){t\\in[T]},(x^#_t){t\\in[T]}$ are jointly generated, such that $x^#t=x{\\pi^(t)}+\\sigma \\tilde{x}_{\\pi^(t)}$, where $(x_t){t\\in[T]},(\\tilde{x}_t){t\\in[T]}$ are independent and identically distributed vector autoregressive (VAR) time series of order $1$ with Gaussian increments, for a hidden $\\pi^$. The objective is to recover $\\pi^$, from the observation of $(x_t){t\\in[T]},(x^#_t){t\\in[T]}$. This generalizes the classical problem of matching independent point clouds to the time series setting. We derive the maximum likelihood estimator (MLE), leading to a quadratic optimization over permutations, and theoretically analyze an estimator based on linear assignment. For the latter approach, we establish recovery guarantees, identifying thresholds for $\\sigma$ that allow for perfect or partial recovery. Additionally, we propose solving the MLE by considering convex relaxations of the set of permutation matrices (e.g., over the Birkhoff polytope). This allows for efficient estimation of $\\pi^*$ and the VAR parameters via alternating minimization. Empirically, we find that linear assignment often matches or outperforms MLE relaxation based approaches.","author":{"@type":"Person","name":"Ernesto Araya, Hemant Tyagi"},"datePublished":"2026-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/16/MatchingcorrelatedVARtimeseries.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/16/MatchingcorrelatedVARtimeseries.html","headline":"Matching correlated VAR time series","@type":"BlogPosting","dateModified":"2026-06-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-16 00:00:00 +0000">06-16</time>
+  </p>
+  
+  <h1>Matching correlated VAR time series</h1>
+  <br>Ernesto Araya, Hemant Tyagi</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>We study the problem of matching correlated VAR time series databases, where a multivariate time series is observed along with a perturbed and permuted version, and the goal is to recover the unknown matching between them. To model this, we introduce a probabilistic framework in which two time series $(x_t)<em>{t\in[T]},(x^#_t)</em>{t\in[T]}$ are jointly generated, such that $x^#<em>t=x</em>{\pi^<em>(t)}+\sigma \tilde{x}_{\pi^</em>(t)}$, where $(x_t)<em>{t\in[T]},(\tilde{x}_t)</em>{t\in[T]}$ are independent and identically distributed vector autoregressive (VAR) time series of order $1$ with Gaussian increments, for a hidden $\pi^<em>$. The objective is to recover $\pi^</em>$, from the observation of $(x_t)<em>{t\in[T]},(x^#_t)</em>{t\in[T]}$. This generalizes the classical problem of matching independent point clouds to the time series setting.
+  We derive the maximum likelihood estimator (MLE), leading to a quadratic optimization over permutations, and theoretically analyze an estimator based on linear assignment. For the latter approach, we establish recovery guarantees, identifying thresholds for $\sigma$ that allow for perfect or partial recovery. Additionally, we propose solving the MLE by considering convex relaxations of the set of permutation matrices (e.g., over the Birkhoff polytope). This allows for efficient estimation of $\pi^*$ and the VAR parameters via alternating minimization. Empirically, we find that linear assignment often matches or outperforms MLE relaxation based approaches.</p>
+
+<p><a href="https://arxiv.org/abs/2511.18553">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

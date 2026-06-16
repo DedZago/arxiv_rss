@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm" />
+<meta name="author" content="Bastiaan J. Braams" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based approach to DMC is described and a complete code is presented. The depth first approach, called DMCD here, can be more memory efficient than the breadth first approach, both for total memory and for use of a memory hierarchy and of co-processors. The implementation appears very natural for population control and for descendant weighting and it unifies algorithmic treatment of the eigenvalue problem (DMC) with the linear equation problem (particle transport). A concern with DMCD that is not present in the breadth first approach, and that is successfully addressed here, is the need to maintain a pool of starters for use when a new walker is required and the stack is empty. The DMCD approach appears to have the potential to become the preferred implementation for many DMC applications." />
+<meta property="og:description" content="Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based approach to DMC is described and a complete code is presented. The depth first approach, called DMCD here, can be more memory efficient than the breadth first approach, both for total memory and for use of a memory hierarchy and of co-processors. The implementation appears very natural for population control and for descendant weighting and it unifies algorithmic treatment of the eigenvalue problem (DMC) with the linear equation problem (particle transport). A concern with DMCD that is not present in the breadth first approach, and that is successfully addressed here, is the need to maintain a pool of starters for use when a new walker is required and the stack is empty. The DMCD approach appears to have the potential to become the preferred implementation for many DMC applications." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/16/ADiffusionMonteCarloalgorithmemployingdepthfirsttraversalandastackinsteadofaswarm.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/16/ADiffusionMonteCarloalgorithmemployingdepthfirsttraversalandastackinsteadofaswarm.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm" />
+<script type="application/ld+json">
+{"description":"Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based approach to DMC is described and a complete code is presented. The depth first approach, called DMCD here, can be more memory efficient than the breadth first approach, both for total memory and for use of a memory hierarchy and of co-processors. The implementation appears very natural for population control and for descendant weighting and it unifies algorithmic treatment of the eigenvalue problem (DMC) with the linear equation problem (particle transport). A concern with DMCD that is not present in the breadth first approach, and that is successfully addressed here, is the need to maintain a pool of starters for use when a new walker is required and the stack is empty. The DMCD approach appears to have the potential to become the preferred implementation for many DMC applications.","author":{"@type":"Person","name":"Bastiaan J. Braams"},"datePublished":"2026-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/16/ADiffusionMonteCarloalgorithmemployingdepthfirsttraversalandastackinsteadofaswarm.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/16/ADiffusionMonteCarloalgorithmemployingdepthfirsttraversalandastackinsteadofaswarm.html","headline":"A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm","@type":"BlogPosting","dateModified":"2026-06-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-16 00:00:00 +0000">06-16</time>
+  </p>
+  
+  <h1>A Diffusion Monte Carlo algorithm employing depth first traversal and a stack instead of a swarm</h1>
+  <br>Bastiaan J. Braams</h3>
+  <br> [stat.CO]
+
+  <p>Diffusion Monte Carlo (DMC) and Monte Carlo for particle transport with importance sampling both involve simulations of weighted walkers that undergo birth and death processes (splitting and Russian Roulette). The established implementations of these methods are quite different: Particle simulation Monte Carlo employs a stack to handle the splitting history whereas in traditional DMC one follows a swarm of walkers. The particle simulation Monte Carlo approach involves a depth first traversal of the visited configurations whereas the traditional DMC approach may be seen as a breadth first traversal. In the present work the implementation of a depth first, stack based approach to DMC is described and a complete code is presented. The depth first approach, called DMCD here, can be more memory efficient than the breadth first approach, both for total memory and for use of a memory hierarchy and of co-processors. The implementation appears very natural for population control and for descendant weighting and it unifies algorithmic treatment of the eigenvalue problem (DMC) with the linear equation problem (particle transport). A concern with DMCD that is not present in the breadth first approach, and that is successfully addressed here, is the need to maintain a pool of starters for use when a new walker is required and the stack is empty. The DMCD approach appears to have the potential to become the preferred implementation for many DMC applications.</p>
+
+<p><a href="https://arxiv.org/abs/2606.08946">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

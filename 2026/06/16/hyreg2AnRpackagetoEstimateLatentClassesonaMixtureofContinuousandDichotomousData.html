@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>hyreg2: An R package to Estimate Latent Classes on a Mixture of Continuous and Dichotomous Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="hyreg2: An R package to Estimate Latent Classes on a Mixture of Continuous and Dichotomous Data" />
+<meta name="author" content="Svenja Elkenkamp, John Grosser, Kim Rand" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The R package hyreg2 introduces a frequentist framework for estimating latent class models for mixed outcome types using a joint likelihood approach. The method combines continuous and dichotomous data under the assumption that both outcome types arise from a common underlying data-generating process. In the implemented model, continuous responses are assumed to follow a normal distribution, while dichotomous responses are modeled using a binomial distribution. Such models are used in various scientific disciplines to estimate a common set of parameters across different types of data (e.g. clinical trials, econometrics and health economics). Latent class estimation is performed using the expectation-maximization algorithm as implemented in the widely used R package flexmix. The hyreg2 package offers a user-friendly implementation of this joint likelihood framework, allowing users to estimate models without explicitly programming the likelihood function. Heteroskedasticity as well as censored data can be taken into account. In addition to model estimation, the package provides dedicated summary and visualization functions to facilitate the interpretation of results. The article presents the methodological framework underlying the package and illustrates its functionality through an example based on the estimation of an EQ-5D-5L value set." />
+<meta property="og:description" content="The R package hyreg2 introduces a frequentist framework for estimating latent class models for mixed outcome types using a joint likelihood approach. The method combines continuous and dichotomous data under the assumption that both outcome types arise from a common underlying data-generating process. In the implemented model, continuous responses are assumed to follow a normal distribution, while dichotomous responses are modeled using a binomial distribution. Such models are used in various scientific disciplines to estimate a common set of parameters across different types of data (e.g. clinical trials, econometrics and health economics). Latent class estimation is performed using the expectation-maximization algorithm as implemented in the widely used R package flexmix. The hyreg2 package offers a user-friendly implementation of this joint likelihood framework, allowing users to estimate models without explicitly programming the likelihood function. Heteroskedasticity as well as censored data can be taken into account. In addition to model estimation, the package provides dedicated summary and visualization functions to facilitate the interpretation of results. The article presents the methodological framework underlying the package and illustrates its functionality through an example based on the estimation of an EQ-5D-5L value set." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/16/hyreg2AnRpackagetoEstimateLatentClassesonaMixtureofContinuousandDichotomousData.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/16/hyreg2AnRpackagetoEstimateLatentClassesonaMixtureofContinuousandDichotomousData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="hyreg2: An R package to Estimate Latent Classes on a Mixture of Continuous and Dichotomous Data" />
+<script type="application/ld+json">
+{"description":"The R package hyreg2 introduces a frequentist framework for estimating latent class models for mixed outcome types using a joint likelihood approach. The method combines continuous and dichotomous data under the assumption that both outcome types arise from a common underlying data-generating process. In the implemented model, continuous responses are assumed to follow a normal distribution, while dichotomous responses are modeled using a binomial distribution. Such models are used in various scientific disciplines to estimate a common set of parameters across different types of data (e.g. clinical trials, econometrics and health economics). Latent class estimation is performed using the expectation-maximization algorithm as implemented in the widely used R package flexmix. The hyreg2 package offers a user-friendly implementation of this joint likelihood framework, allowing users to estimate models without explicitly programming the likelihood function. Heteroskedasticity as well as censored data can be taken into account. In addition to model estimation, the package provides dedicated summary and visualization functions to facilitate the interpretation of results. The article presents the methodological framework underlying the package and illustrates its functionality through an example based on the estimation of an EQ-5D-5L value set.","author":{"@type":"Person","name":"Svenja Elkenkamp, John Grosser, Kim Rand"},"datePublished":"2026-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/16/hyreg2AnRpackagetoEstimateLatentClassesonaMixtureofContinuousandDichotomousData.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/16/hyreg2AnRpackagetoEstimateLatentClassesonaMixtureofContinuousandDichotomousData.html","headline":"hyreg2: An R package to Estimate Latent Classes on a Mixture of Continuous and Dichotomous Data","@type":"BlogPosting","dateModified":"2026-06-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-16 00:00:00 +0000">06-16</time>
+  </p>
+  
+  <h1>hyreg2: An R package to Estimate Latent Classes on a Mixture of Continuous and Dichotomous Data</h1>
+  <br>Svenja Elkenkamp, John Grosser, Kim Rand</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>The R package hyreg2 introduces a frequentist framework for estimating latent class models for mixed outcome types using a joint likelihood approach. The method combines continuous and dichotomous data under the assumption that both outcome types arise from a common underlying data-generating process. In the implemented model, continuous responses are assumed to follow a normal distribution, while dichotomous responses are modeled using a binomial distribution. Such models are used in various scientific disciplines to estimate a common set of parameters across different types of data (e.g. clinical trials, econometrics and health economics). Latent class estimation is performed using the expectation-maximization algorithm as implemented in the widely used R package flexmix. The hyreg2 package offers a user-friendly implementation of this joint likelihood framework, allowing users to estimate models without explicitly programming the likelihood function. Heteroskedasticity as well as censored data can be taken into account. In addition to model estimation, the package provides dedicated summary and visualization functions to facilitate the interpretation of results. The article presents the methodological framework underlying the package and illustrates its functionality through an example based on the estimation of an EQ-5D-5L value set.</p>
+
+<p><a href="https://arxiv.org/abs/2606.16455">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Nonparametric Modeling of Continuous-Time Markov Chains</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Nonparametric Modeling of Continuous-Time Markov Chains" />
+<meta name="author" content="Filippo Monti, Xiang Ji, Marc A. Suchard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Inferring the infinitesimal rates of continuous-time Markov chains (CTMCs) is a central challenge in many scientific domains. This task is difficult because the number of rates grows quadratically with the state space, rates can be strongly dependent, and many transitions may be only partially observed. We introduce a Bayesian framework that models CTMC rates as flexible functions of covariates through Gaussian processes. This enables nonlinear covariate effects, improves inference by incorporating external information, and helps identify potential drivers of CTMC dynamics. For posterior inference, we use Hamiltonian Monte Carlo and develop scalable exact and approximate gradients for likelihoods involving repeated matrix exponentials. With $N$ observations and $K$ CTMC states, these gradients reduce the dominant cost of existing derivative calculations from $O(NK^3)$, with large constants, to $O(K^3+NK^2)$, with cheaper constants. We demonstrate the method in Bayesian phylogenetic and phylogeographic inference, where CTMCs are central, and show strong performance on synthetic and real datasets, including empirical quadratic scaling in $K$ even when $N&lt;K$." />
+<meta property="og:description" content="Inferring the infinitesimal rates of continuous-time Markov chains (CTMCs) is a central challenge in many scientific domains. This task is difficult because the number of rates grows quadratically with the state space, rates can be strongly dependent, and many transitions may be only partially observed. We introduce a Bayesian framework that models CTMC rates as flexible functions of covariates through Gaussian processes. This enables nonlinear covariate effects, improves inference by incorporating external information, and helps identify potential drivers of CTMC dynamics. For posterior inference, we use Hamiltonian Monte Carlo and develop scalable exact and approximate gradients for likelihoods involving repeated matrix exponentials. With $N$ observations and $K$ CTMC states, these gradients reduce the dominant cost of existing derivative calculations from $O(NK^3)$, with large constants, to $O(K^3+NK^2)$, with cheaper constants. We demonstrate the method in Bayesian phylogenetic and phylogeographic inference, where CTMCs are central, and show strong performance on synthetic and real datasets, including empirical quadratic scaling in $K$ even when $N&lt;K$." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/16/NonparametricModelingofContinuousTimeMarkovChains.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/16/NonparametricModelingofContinuousTimeMarkovChains.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Nonparametric Modeling of Continuous-Time Markov Chains" />
+<script type="application/ld+json">
+{"description":"Inferring the infinitesimal rates of continuous-time Markov chains (CTMCs) is a central challenge in many scientific domains. This task is difficult because the number of rates grows quadratically with the state space, rates can be strongly dependent, and many transitions may be only partially observed. We introduce a Bayesian framework that models CTMC rates as flexible functions of covariates through Gaussian processes. This enables nonlinear covariate effects, improves inference by incorporating external information, and helps identify potential drivers of CTMC dynamics. For posterior inference, we use Hamiltonian Monte Carlo and develop scalable exact and approximate gradients for likelihoods involving repeated matrix exponentials. With $N$ observations and $K$ CTMC states, these gradients reduce the dominant cost of existing derivative calculations from $O(NK^3)$, with large constants, to $O(K^3+NK^2)$, with cheaper constants. We demonstrate the method in Bayesian phylogenetic and phylogeographic inference, where CTMCs are central, and show strong performance on synthetic and real datasets, including empirical quadratic scaling in $K$ even when $N&lt;K$.","author":{"@type":"Person","name":"Filippo Monti, Xiang Ji, Marc A. Suchard"},"datePublished":"2026-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/16/NonparametricModelingofContinuousTimeMarkovChains.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/16/NonparametricModelingofContinuousTimeMarkovChains.html","headline":"Nonparametric Modeling of Continuous-Time Markov Chains","@type":"BlogPosting","dateModified":"2026-06-16T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-16 00:00:00 +0000">06-16</time>
+  </p>
+  
+  <h1>Nonparametric Modeling of Continuous-Time Markov Chains</h1>
+  <br>Filippo Monti, Xiang Ji, Marc A. Suchard</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Inferring the infinitesimal rates of continuous-time Markov chains (CTMCs) is a central challenge in many scientific domains. This task is difficult because the number of rates grows quadratically with the state space, rates can be strongly dependent, and many transitions may be only partially observed. We introduce a Bayesian framework that models CTMC rates as flexible functions of covariates through Gaussian processes. This enables nonlinear covariate effects, improves inference by incorporating external information, and helps identify potential drivers of CTMC dynamics. For posterior inference, we use Hamiltonian Monte Carlo and develop scalable exact and approximate gradients for likelihoods involving repeated matrix exponentials. With $N$ observations and $K$ CTMC states, these gradients reduce the dominant cost of existing derivative calculations from $O(NK^3)$, with large constants, to $O(K^3+NK^2)$, with cheaper constants. We demonstrate the method in Bayesian phylogenetic and phylogeographic inference, where CTMCs are central, and show strong performance on synthetic and real datasets, including empirical quadratic scaling in $K$ even when $N&lt;K$.</p>
+
+<p><a href="https://arxiv.org/abs/2511.03954">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
