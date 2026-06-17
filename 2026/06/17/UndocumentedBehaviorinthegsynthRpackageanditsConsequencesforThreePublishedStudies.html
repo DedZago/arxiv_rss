@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Undocumented Behavior in the gsynth R package and its Consequences for Three Published Studies</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Undocumented Behavior in the gsynth R package and its Consequences for Three Published Studies" />
+<meta name="author" content="Beniamino Green, P. M. Aronow" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prior to the version 1.3.1 update on CRAN in December 2025, gsynth, a popular R package for estimating Interactive Fixed Effects (IFE) models, could drastically and systematically underestimate standard errors. This underestimation would occur when two estimation options (inference = “parametric”, and EM = TRUE) were used together, in which case the package would apply a parametric bootstrap procedure to Gobillon and Magnac (2016)’s IFE-EM estimator. The package ceased supporting this combination in December 2025, and the latest documentation now describes the parametric bootstrap as not suitable for use with the IFE-EM estimator due to a theoretical incompatibility. Our focus is an implementation error we identified in the pre-1.3.1 versions of gsynth: the parametric bootstrap used when EM = TRUE did not match the algorithm proposed in Xu (2017), using in-sample residuals instead of out-of-sample errors. We show that this implementation error alone can cause underestimation by orders of magnitude. We conduct an empirical Monte Carlo study using randomly assigned placebo treatments on a series of state-level panel datasets, and show that gsynth could yield high false positive rates in realistic settings. We identify three papers published in the American Political Science Review that are affected by this behavior. Reanalyzing the relevant sections of these papers, we show that (i) correcting the implementation error renders most findings insignificant, and (ii) using Xu (2017)’s Generalized Synthetic Control method in place of IFE-EM renders every finding insignificant." />
+<meta property="og:description" content="Prior to the version 1.3.1 update on CRAN in December 2025, gsynth, a popular R package for estimating Interactive Fixed Effects (IFE) models, could drastically and systematically underestimate standard errors. This underestimation would occur when two estimation options (inference = “parametric”, and EM = TRUE) were used together, in which case the package would apply a parametric bootstrap procedure to Gobillon and Magnac (2016)’s IFE-EM estimator. The package ceased supporting this combination in December 2025, and the latest documentation now describes the parametric bootstrap as not suitable for use with the IFE-EM estimator due to a theoretical incompatibility. Our focus is an implementation error we identified in the pre-1.3.1 versions of gsynth: the parametric bootstrap used when EM = TRUE did not match the algorithm proposed in Xu (2017), using in-sample residuals instead of out-of-sample errors. We show that this implementation error alone can cause underestimation by orders of magnitude. We conduct an empirical Monte Carlo study using randomly assigned placebo treatments on a series of state-level panel datasets, and show that gsynth could yield high false positive rates in realistic settings. We identify three papers published in the American Political Science Review that are affected by this behavior. Reanalyzing the relevant sections of these papers, we show that (i) correcting the implementation error renders most findings insignificant, and (ii) using Xu (2017)’s Generalized Synthetic Control method in place of IFE-EM renders every finding insignificant." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/17/UndocumentedBehaviorinthegsynthRpackageanditsConsequencesforThreePublishedStudies.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/17/UndocumentedBehaviorinthegsynthRpackageanditsConsequencesforThreePublishedStudies.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Undocumented Behavior in the gsynth R package and its Consequences for Three Published Studies" />
+<script type="application/ld+json">
+{"description":"Prior to the version 1.3.1 update on CRAN in December 2025, gsynth, a popular R package for estimating Interactive Fixed Effects (IFE) models, could drastically and systematically underestimate standard errors. This underestimation would occur when two estimation options (inference = “parametric”, and EM = TRUE) were used together, in which case the package would apply a parametric bootstrap procedure to Gobillon and Magnac (2016)’s IFE-EM estimator. The package ceased supporting this combination in December 2025, and the latest documentation now describes the parametric bootstrap as not suitable for use with the IFE-EM estimator due to a theoretical incompatibility. Our focus is an implementation error we identified in the pre-1.3.1 versions of gsynth: the parametric bootstrap used when EM = TRUE did not match the algorithm proposed in Xu (2017), using in-sample residuals instead of out-of-sample errors. We show that this implementation error alone can cause underestimation by orders of magnitude. We conduct an empirical Monte Carlo study using randomly assigned placebo treatments on a series of state-level panel datasets, and show that gsynth could yield high false positive rates in realistic settings. We identify three papers published in the American Political Science Review that are affected by this behavior. Reanalyzing the relevant sections of these papers, we show that (i) correcting the implementation error renders most findings insignificant, and (ii) using Xu (2017)’s Generalized Synthetic Control method in place of IFE-EM renders every finding insignificant.","datePublished":"2026-06-17T00:00:00+00:00","dateModified":"2026-06-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/17/UndocumentedBehaviorinthegsynthRpackageanditsConsequencesforThreePublishedStudies.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/17/UndocumentedBehaviorinthegsynthRpackageanditsConsequencesforThreePublishedStudies.html","author":{"@type":"Person","name":"Beniamino Green, P. M. Aronow"},"@type":"BlogPosting","headline":"Undocumented Behavior in the gsynth R package and its Consequences for Three Published Studies","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-17 00:00:00 +0000">06-17</time>
+  </p>
+  
+  <h1>Undocumented Behavior in the gsynth R package and its Consequences for Three Published Studies</h1>
+  <br>Beniamino Green, P. M. Aronow</h3>
+  <br> [stat.ME]
+
+  <p>Prior to the version 1.3.1 update on CRAN in December 2025, gsynth, a popular R package for estimating Interactive Fixed Effects (IFE) models, could drastically and systematically underestimate standard errors. This underestimation would occur when two estimation options (inference = “parametric”, and EM = TRUE) were used together, in which case the package would apply a parametric bootstrap procedure to Gobillon and Magnac (2016)’s IFE-EM estimator. The package ceased supporting this combination in December 2025, and the latest documentation now describes the parametric bootstrap as not suitable for use with the IFE-EM estimator due to a theoretical incompatibility. Our focus is an implementation error we identified in the pre-1.3.1 versions of gsynth: the parametric bootstrap used when EM = TRUE did not match the algorithm proposed in Xu (2017), using in-sample residuals instead of out-of-sample errors. We show that this implementation error alone can cause underestimation by orders of magnitude. We conduct an empirical Monte Carlo study using randomly assigned placebo treatments on a series of state-level panel datasets, and show that gsynth could yield high false positive rates in realistic settings. We identify three papers published in the American Political Science Review that are affected by this behavior. Reanalyzing the relevant sections of these papers, we show that (i) correcting the implementation error renders most findings insignificant, and (ii) using Xu (2017)’s Generalized Synthetic Control method in place of IFE-EM renders every finding insignificant.</p>
+
+<p><a href="https://arxiv.org/abs/2606.18113">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
