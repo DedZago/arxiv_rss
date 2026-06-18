@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Effects of sparsity and superposition on loss in simple autoencoders</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Effects of sparsity and superposition on loss in simple autoencoders" />
+<meta name="author" content="Mriganka Basu Roy Chowdhury, Eric McLaughlin Weiner" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="One of the major difficulties in the mechanistic interpretability of neural networks is the occurrence of polysemanticity, which suggests that each neuron is typically responsible for multiple different tasks, impeding a clean interpretation of their function. The seminal paper of Elhage et al. (2022) argues that this occurs due to superposition, a phenomenon where the neural network represents distinct features as non-orthogonal directions in a lower-dimensional space, a strategy that allows much greater compression of the data without sacrificing fidelity due to the feature sparsity of input vectors. Elhage et al. (2022) empirically validates these hypotheses in a rather natural and simple autoencoder with sparse inputs. The contribution of the present work is to analyze the mathematical basis for the occurrence and optimality of superposition, while rigorously corroborating some of their findings. In particular, we provide upper and lower bounds for the L2 reconstruction loss, tight in the very sparse regime, for power activation functions. A short list of interesting open problems are also included at the end." />
+<meta property="og:description" content="One of the major difficulties in the mechanistic interpretability of neural networks is the occurrence of polysemanticity, which suggests that each neuron is typically responsible for multiple different tasks, impeding a clean interpretation of their function. The seminal paper of Elhage et al. (2022) argues that this occurs due to superposition, a phenomenon where the neural network represents distinct features as non-orthogonal directions in a lower-dimensional space, a strategy that allows much greater compression of the data without sacrificing fidelity due to the feature sparsity of input vectors. Elhage et al. (2022) empirically validates these hypotheses in a rather natural and simple autoencoder with sparse inputs. The contribution of the present work is to analyze the mathematical basis for the occurrence and optimality of superposition, while rigorously corroborating some of their findings. In particular, we provide upper and lower bounds for the L2 reconstruction loss, tight in the very sparse regime, for power activation functions. A short list of interesting open problems are also included at the end." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/18/Effectsofsparsityandsuperpositiononlossinsimpleautoencoders.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/18/Effectsofsparsityandsuperpositiononlossinsimpleautoencoders.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Effects of sparsity and superposition on loss in simple autoencoders" />
+<script type="application/ld+json">
+{"description":"One of the major difficulties in the mechanistic interpretability of neural networks is the occurrence of polysemanticity, which suggests that each neuron is typically responsible for multiple different tasks, impeding a clean interpretation of their function. The seminal paper of Elhage et al. (2022) argues that this occurs due to superposition, a phenomenon where the neural network represents distinct features as non-orthogonal directions in a lower-dimensional space, a strategy that allows much greater compression of the data without sacrificing fidelity due to the feature sparsity of input vectors. Elhage et al. (2022) empirically validates these hypotheses in a rather natural and simple autoencoder with sparse inputs. The contribution of the present work is to analyze the mathematical basis for the occurrence and optimality of superposition, while rigorously corroborating some of their findings. In particular, we provide upper and lower bounds for the L2 reconstruction loss, tight in the very sparse regime, for power activation functions. A short list of interesting open problems are also included at the end.","datePublished":"2026-06-18T00:00:00+00:00","dateModified":"2026-06-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/18/Effectsofsparsityandsuperpositiononlossinsimpleautoencoders.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/18/Effectsofsparsityandsuperpositiononlossinsimpleautoencoders.html","author":{"@type":"Person","name":"Mriganka Basu Roy Chowdhury, Eric McLaughlin Weiner"},"@type":"BlogPosting","headline":"Effects of sparsity and superposition on loss in simple autoencoders","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-18 00:00:00 +0000">06-18</time>
+  </p>
+  
+  <h1>Effects of sparsity and superposition on loss in simple autoencoders</h1>
+  <br>Mriganka Basu Roy Chowdhury, Eric McLaughlin Weiner</h3>
+  <br> [stat.ML]
+
+  <p>One of the major difficulties in the mechanistic interpretability of neural networks is the occurrence of polysemanticity, which suggests that each neuron is typically responsible for multiple different tasks, impeding a clean interpretation of their function. The seminal paper of Elhage et al. (2022) argues that this occurs due to superposition, a phenomenon where the neural network represents distinct features as non-orthogonal directions in a lower-dimensional space, a strategy that allows much greater compression of the data without sacrificing fidelity due to the feature sparsity of input vectors. Elhage et al. (2022) empirically validates these hypotheses in a rather natural and simple autoencoder with sparse inputs. The contribution of the present work is to analyze the mathematical basis for the occurrence and optimality of superposition, while rigorously corroborating some of their findings. In particular, we provide upper and lower bounds for the L2 reconstruction loss, tight in the very sparse regime, for power activation functions. A short list of interesting open problems are also included at the end.</p>
+
+<p><a href="https://arxiv.org/abs/2606.18538">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

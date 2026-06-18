@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Guide to Estimating Conditional Average Treatment Effects in Competing Risks Settings</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Guide to Estimating Conditional Average Treatment Effects in Competing Risks Settings" />
+<meta name="author" content="Daniel Klippert, Sarah Friedrich, Markus Pauly" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conditional average treatment effects (CATEs) are central to treatment decision-making in personalized medicine. In competing risks settings, estimating CATEs from survival data allows for patient-specific assessments of treatment effectiveness for a specific event of interest while properly accounting for alternative event types. This distinction is essential in the presence of comorbidities, where competing causes of death may otherwise confound the therapeutic benefit. Focusing on right-censored survival times with binary treatment, we examine CATEs defined as covariate-conditional differences in the absolute risk for the event of interest at a fixed time. To this end, we study meta-learners which adapt machine learning algorithms for CATE estimation in competing risks scenarios. We systematically compare six meta-learners, combining Cox regression or random survival forests for risk modeling with elastic net regression or random forests for direct CATE modeling. To provide practical guidance on model selection, we evaluate their performance in multiple simulation settings, that differ in hazard complexity, treatment heterogeneity, treatment assignment, event type distribution and censoring. To facilitate applied use, we provide the R package, crsurvlearners, which implements all considered approaches." />
+<meta property="og:description" content="Conditional average treatment effects (CATEs) are central to treatment decision-making in personalized medicine. In competing risks settings, estimating CATEs from survival data allows for patient-specific assessments of treatment effectiveness for a specific event of interest while properly accounting for alternative event types. This distinction is essential in the presence of comorbidities, where competing causes of death may otherwise confound the therapeutic benefit. Focusing on right-censored survival times with binary treatment, we examine CATEs defined as covariate-conditional differences in the absolute risk for the event of interest at a fixed time. To this end, we study meta-learners which adapt machine learning algorithms for CATE estimation in competing risks scenarios. We systematically compare six meta-learners, combining Cox regression or random survival forests for risk modeling with elastic net regression or random forests for direct CATE modeling. To provide practical guidance on model selection, we evaluate their performance in multiple simulation settings, that differ in hazard complexity, treatment heterogeneity, treatment assignment, event type distribution and censoring. To facilitate applied use, we provide the R package, crsurvlearners, which implements all considered approaches." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/18/AGuidetoEstimatingConditionalAverageTreatmentEffectsinCompetingRisksSettings.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/18/AGuidetoEstimatingConditionalAverageTreatmentEffectsinCompetingRisksSettings.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Guide to Estimating Conditional Average Treatment Effects in Competing Risks Settings" />
+<script type="application/ld+json">
+{"description":"Conditional average treatment effects (CATEs) are central to treatment decision-making in personalized medicine. In competing risks settings, estimating CATEs from survival data allows for patient-specific assessments of treatment effectiveness for a specific event of interest while properly accounting for alternative event types. This distinction is essential in the presence of comorbidities, where competing causes of death may otherwise confound the therapeutic benefit. Focusing on right-censored survival times with binary treatment, we examine CATEs defined as covariate-conditional differences in the absolute risk for the event of interest at a fixed time. To this end, we study meta-learners which adapt machine learning algorithms for CATE estimation in competing risks scenarios. We systematically compare six meta-learners, combining Cox regression or random survival forests for risk modeling with elastic net regression or random forests for direct CATE modeling. To provide practical guidance on model selection, we evaluate their performance in multiple simulation settings, that differ in hazard complexity, treatment heterogeneity, treatment assignment, event type distribution and censoring. To facilitate applied use, we provide the R package, crsurvlearners, which implements all considered approaches.","datePublished":"2026-06-18T00:00:00+00:00","dateModified":"2026-06-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/18/AGuidetoEstimatingConditionalAverageTreatmentEffectsinCompetingRisksSettings.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/18/AGuidetoEstimatingConditionalAverageTreatmentEffectsinCompetingRisksSettings.html","author":{"@type":"Person","name":"Daniel Klippert, Sarah Friedrich, Markus Pauly"},"@type":"BlogPosting","headline":"A Guide to Estimating Conditional Average Treatment Effects in Competing Risks Settings","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-18 00:00:00 +0000">06-18</time>
+  </p>
+  
+  <h1>A Guide to Estimating Conditional Average Treatment Effects in Competing Risks Settings</h1>
+  <br>Daniel Klippert, Sarah Friedrich, Markus Pauly</h3>
+  <br> [stat.AP,stat.ML]
+
+  <p>Conditional average treatment effects (CATEs) are central to treatment decision-making in personalized medicine. In competing risks settings, estimating CATEs from survival data allows for patient-specific assessments of treatment effectiveness for a specific event of interest while properly accounting for alternative event types. This distinction is essential in the presence of comorbidities, where competing causes of death may otherwise confound the therapeutic benefit. Focusing on right-censored survival times with binary treatment, we examine CATEs defined as covariate-conditional differences in the absolute risk for the event of interest at a fixed time. To this end, we study meta-learners which adapt machine learning algorithms for CATE estimation in competing risks scenarios. We systematically compare six meta-learners, combining Cox regression or random survival forests for risk modeling with elastic net regression or random forests for direct CATE modeling. To provide practical guidance on model selection, we evaluate their performance in multiple simulation settings, that differ in hazard complexity, treatment heterogeneity, treatment assignment, event type distribution and censoring. To facilitate applied use, we provide the R package, crsurvlearners, which implements all considered approaches.</p>
+
+<p><a href="https://arxiv.org/abs/2606.18281">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
