@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Variational Consensus Monte Carlo for Bayesian Mixture</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Variational Consensus Monte Carlo for Bayesian Mixture" />
+<meta name="author" content="Julie Fendler, Francesca L. Crowe, Tom Marshall, Sylvia Richardson, Paul D. W. Kirk" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Motivated by the privacy, sensitivity and sharing limitations of health data, we present a comprehensive pipeline for inference of Bayesian mixture models within a federated learning setting, i.e. when data cannot be fully shared or pooled across compute nodes. We adopt a Consensus Monte Carlo (CMC) approach, in which an MCMC algorithm is run independently within each data silo to estimate local posterior distributions, which are then aggregated to approximate the posterior over the full data. The variational CMC approach of Rabinovich, Angelino and Jordan (2015) [1] frames the aggregation step as a variational inference problem, but their application to mixtures assumes the number of clusters and key mixture parameters to be known. Our main methodological contributions are: (i) an extension of variational CMC to over-fitted Bayesian mixture models that infer the number of clusters and all model parameters, without requiring conjugacy; (ii) novel cluster-matching algorithms suitable for cross-silo settings in which not every cluster appears in each local dataset; (iii) a number of inference strategies for the aggregation step, matched to different federated learning constraints; and (iv) guidelines for choosing among these in practice. A comprehensive simulation study validates the framework and allows us to compare to state-of-the-art federated learning alternatives. Notably, we show that when the composition of local datasets reflects the underlying clustering structure in the data, our approach can recover small clusters with greater accuracy than standard MCMC applied to the pooled data. We illustrate the framework on large-scale electronic health record data, identifying multi-morbidity patterns in a British geriatric population." />
+<meta property="og:description" content="Motivated by the privacy, sensitivity and sharing limitations of health data, we present a comprehensive pipeline for inference of Bayesian mixture models within a federated learning setting, i.e. when data cannot be fully shared or pooled across compute nodes. We adopt a Consensus Monte Carlo (CMC) approach, in which an MCMC algorithm is run independently within each data silo to estimate local posterior distributions, which are then aggregated to approximate the posterior over the full data. The variational CMC approach of Rabinovich, Angelino and Jordan (2015) [1] frames the aggregation step as a variational inference problem, but their application to mixtures assumes the number of clusters and key mixture parameters to be known. Our main methodological contributions are: (i) an extension of variational CMC to over-fitted Bayesian mixture models that infer the number of clusters and all model parameters, without requiring conjugacy; (ii) novel cluster-matching algorithms suitable for cross-silo settings in which not every cluster appears in each local dataset; (iii) a number of inference strategies for the aggregation step, matched to different federated learning constraints; and (iv) guidelines for choosing among these in practice. A comprehensive simulation study validates the framework and allows us to compare to state-of-the-art federated learning alternatives. Notably, we show that when the composition of local datasets reflects the underlying clustering structure in the data, our approach can recover small clusters with greater accuracy than standard MCMC applied to the pooled data. We illustrate the framework on large-scale electronic health record data, identifying multi-morbidity patterns in a British geriatric population." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/19/VariationalConsensusMonteCarloforBayesianMixture.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/19/VariationalConsensusMonteCarloforBayesianMixture.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Variational Consensus Monte Carlo for Bayesian Mixture" />
+<script type="application/ld+json">
+{"description":"Motivated by the privacy, sensitivity and sharing limitations of health data, we present a comprehensive pipeline for inference of Bayesian mixture models within a federated learning setting, i.e. when data cannot be fully shared or pooled across compute nodes. We adopt a Consensus Monte Carlo (CMC) approach, in which an MCMC algorithm is run independently within each data silo to estimate local posterior distributions, which are then aggregated to approximate the posterior over the full data. The variational CMC approach of Rabinovich, Angelino and Jordan (2015) [1] frames the aggregation step as a variational inference problem, but their application to mixtures assumes the number of clusters and key mixture parameters to be known. Our main methodological contributions are: (i) an extension of variational CMC to over-fitted Bayesian mixture models that infer the number of clusters and all model parameters, without requiring conjugacy; (ii) novel cluster-matching algorithms suitable for cross-silo settings in which not every cluster appears in each local dataset; (iii) a number of inference strategies for the aggregation step, matched to different federated learning constraints; and (iv) guidelines for choosing among these in practice. A comprehensive simulation study validates the framework and allows us to compare to state-of-the-art federated learning alternatives. Notably, we show that when the composition of local datasets reflects the underlying clustering structure in the data, our approach can recover small clusters with greater accuracy than standard MCMC applied to the pooled data. We illustrate the framework on large-scale electronic health record data, identifying multi-morbidity patterns in a British geriatric population.","datePublished":"2026-06-19T00:00:00+00:00","dateModified":"2026-06-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/19/VariationalConsensusMonteCarloforBayesianMixture.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/19/VariationalConsensusMonteCarloforBayesianMixture.html","author":{"@type":"Person","name":"Julie Fendler, Francesca L. Crowe, Tom Marshall, Sylvia Richardson, Paul D. W. Kirk"},"@type":"BlogPosting","headline":"Variational Consensus Monte Carlo for Bayesian Mixture","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-19 00:00:00 +0000">06-19</time>
+  </p>
+  
+  <h1>Variational Consensus Monte Carlo for Bayesian Mixture</h1>
+  <br>Julie Fendler, Francesca L. Crowe, Tom Marshall, Sylvia Richardson, Paul D. W. Kirk</h3>
+  <br> [stat.ML]
+
+  <p>Motivated by the privacy, sensitivity and sharing limitations of health data, we present a comprehensive pipeline for inference of Bayesian mixture models within a federated learning setting, i.e. when data cannot be fully shared or pooled across compute nodes. We adopt a Consensus Monte Carlo (CMC) approach, in which an MCMC algorithm is run independently within each data silo to estimate local posterior distributions, which are then aggregated to approximate the posterior over the full data. The variational CMC approach of Rabinovich, Angelino and Jordan (2015) [1] frames the aggregation step as a variational inference problem, but their application to mixtures assumes the number of clusters and key mixture parameters to be known. Our main methodological contributions are: (i) an extension of variational CMC to over-fitted Bayesian mixture models that infer the number of clusters and all model parameters, without requiring conjugacy; (ii) novel cluster-matching algorithms suitable for cross-silo settings in which not every cluster appears in each local dataset; (iii) a number of inference strategies for the aggregation step, matched to different federated learning constraints; and (iv) guidelines for choosing among these in practice. A comprehensive simulation study validates the framework and allows us to compare to state-of-the-art federated learning alternatives. Notably, we show that when the composition of local datasets reflects the underlying clustering structure in the data, our approach can recover small clusters with greater accuracy than standard MCMC applied to the pooled data. We illustrate the framework on large-scale electronic health record data, identifying multi-morbidity patterns in a British geriatric population.</p>
+
+<p><a href="https://arxiv.org/abs/2606.19643">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
