@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>What Shapes Emergent Misalignment? Insights from Training Dynamics, Model Priors, and Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="What Shapes Emergent Misalignment? Insights from Training Dynamics, Model Priors, and Data" />
+<meta name="author" content="Yuchen Zhang, Anietta Weckauff, Diego Garcia-Olano, Maksym Andriushchenko" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Emergent misalignment (EM) is a phenomenon in which models generalize with narrow fine-tuning, leading to broad (yet uneven) misalignment across evaluation questions. We study EM and its variability directly through the components of fine-tuning: training dynamics, model priors, and data. (1) We first explored how in-domain training loss relates to out-of-domain alignment scores across datasets and model families. Then, we tried to induce potential alternative local minima through different learning schedules for one narrow fine-tuning, but did not find strong runs with better broad alignment scores conditioned on similar or lower training loss. (2) We found that although the mean and standard deviations of the misaligned model scores are usually statistically different from those of the pre-trained model, there are some potential signals on overall positive correlation. The evaluation prompt-only activations from both the pre-trained and the original instruct models (prior to narrow fine-tuning) could predict fine-grained alignment scores after narrow fine-tuning. (3) Finally, we compared activation deltas before and after narrow fine-tuning and found moderate-to-high subspace overlap and similarity between the resulting activation shifts for training and evaluation prompts. Subspace overlaps between training and evaluation prompt activations correlate with their shifts’ similarities when measuring with the last prompt-token activations. The train-evaluation data prompt overlap is controlled against overlap computed from random vectors and evaluation prompts activations." />
+<meta property="og:description" content="Emergent misalignment (EM) is a phenomenon in which models generalize with narrow fine-tuning, leading to broad (yet uneven) misalignment across evaluation questions. We study EM and its variability directly through the components of fine-tuning: training dynamics, model priors, and data. (1) We first explored how in-domain training loss relates to out-of-domain alignment scores across datasets and model families. Then, we tried to induce potential alternative local minima through different learning schedules for one narrow fine-tuning, but did not find strong runs with better broad alignment scores conditioned on similar or lower training loss. (2) We found that although the mean and standard deviations of the misaligned model scores are usually statistically different from those of the pre-trained model, there are some potential signals on overall positive correlation. The evaluation prompt-only activations from both the pre-trained and the original instruct models (prior to narrow fine-tuning) could predict fine-grained alignment scores after narrow fine-tuning. (3) Finally, we compared activation deltas before and after narrow fine-tuning and found moderate-to-high subspace overlap and similarity between the resulting activation shifts for training and evaluation prompts. Subspace overlaps between training and evaluation prompt activations correlate with their shifts’ similarities when measuring with the last prompt-token activations. The train-evaluation data prompt overlap is controlled against overlap computed from random vectors and evaluation prompts activations." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/23/WhatShapesEmergentMisalignmentInsightsfromTrainingDynamicsModelPriorsandData.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/23/WhatShapesEmergentMisalignmentInsightsfromTrainingDynamicsModelPriorsandData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="What Shapes Emergent Misalignment? Insights from Training Dynamics, Model Priors, and Data" />
+<script type="application/ld+json">
+{"description":"Emergent misalignment (EM) is a phenomenon in which models generalize with narrow fine-tuning, leading to broad (yet uneven) misalignment across evaluation questions. We study EM and its variability directly through the components of fine-tuning: training dynamics, model priors, and data. (1) We first explored how in-domain training loss relates to out-of-domain alignment scores across datasets and model families. Then, we tried to induce potential alternative local minima through different learning schedules for one narrow fine-tuning, but did not find strong runs with better broad alignment scores conditioned on similar or lower training loss. (2) We found that although the mean and standard deviations of the misaligned model scores are usually statistically different from those of the pre-trained model, there are some potential signals on overall positive correlation. The evaluation prompt-only activations from both the pre-trained and the original instruct models (prior to narrow fine-tuning) could predict fine-grained alignment scores after narrow fine-tuning. (3) Finally, we compared activation deltas before and after narrow fine-tuning and found moderate-to-high subspace overlap and similarity between the resulting activation shifts for training and evaluation prompts. Subspace overlaps between training and evaluation prompt activations correlate with their shifts’ similarities when measuring with the last prompt-token activations. The train-evaluation data prompt overlap is controlled against overlap computed from random vectors and evaluation prompts activations.","datePublished":"2026-06-23T00:00:00+00:00","dateModified":"2026-06-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/23/WhatShapesEmergentMisalignmentInsightsfromTrainingDynamicsModelPriorsandData.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/23/WhatShapesEmergentMisalignmentInsightsfromTrainingDynamicsModelPriorsandData.html","author":{"@type":"Person","name":"Yuchen Zhang, Anietta Weckauff, Diego Garcia-Olano, Maksym Andriushchenko"},"@type":"BlogPosting","headline":"What Shapes Emergent Misalignment? Insights from Training Dynamics, Model Priors, and Data","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-23 00:00:00 +0000">06-23</time>
+  </p>
+  
+  <h1>What Shapes Emergent Misalignment? Insights from Training Dynamics, Model Priors, and Data</h1>
+  <br>Yuchen Zhang, Anietta Weckauff, Diego Garcia-Olano, Maksym Andriushchenko</h3>
+  <br> [stat.ML]
+
+  <p>Emergent misalignment (EM) is a phenomenon in which models generalize with narrow fine-tuning, leading to broad (yet uneven) misalignment across evaluation questions. We study EM and its variability directly through the components of fine-tuning: training dynamics, model priors, and data. (1) We first explored how in-domain training loss relates to out-of-domain alignment scores across datasets and model families. Then, we tried to induce potential alternative local minima through different learning schedules for one narrow fine-tuning, but did not find strong runs with better broad alignment scores conditioned on similar or lower training loss. (2) We found that although the mean and standard deviations of the misaligned model scores are usually statistically different from those of the pre-trained model, there are some potential signals on overall positive correlation. The evaluation prompt-only activations from both the pre-trained and the original instruct models (prior to narrow fine-tuning) could predict fine-grained alignment scores after narrow fine-tuning. (3) Finally, we compared activation deltas before and after narrow fine-tuning and found moderate-to-high subspace overlap and similarity between the resulting activation shifts for training and evaluation prompts. Subspace overlaps between training and evaluation prompt activations correlate with their shifts’ similarities when measuring with the last prompt-token activations. The train-evaluation data prompt overlap is controlled against overlap computed from random vectors and evaluation prompts activations.</p>
+
+<p><a href="https://arxiv.org/abs/2606.20814">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Explore-Execute Chain: Towards an Efficient Structured Reasoning Paradigm</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Explore-Execute Chain: Towards an Efficient Structured Reasoning Paradigm" />
+<meta name="author" content="Kaisen Yang, Tinghe Zhang, Rushi Shah, Kaicheng Yang, Qinwei Ma, Dianbo Liu, Alex Lamb" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many LLMs plan before they act, yet planning and execution are often still entangled in one long generation trace, enforced only through prompts, or split across separate components. We argue that these two stages call for different computation: planning benefits from diversity and breadth, whereas execution demands precision and faithful adherence to a chosen strategy. Treating them as a single undifferentiated chain wastes tokens on routine derivation and makes it costly to explore alternative strategies at test time. We present the \textbf{Explore-Execute Chain (E\textsuperscript{2}C)}, which keeps both stages in one model but separates them structurally: a stochastic \textit{Exploration} phase drafts a concise high-level plan, and a deterministic \textit{Execution} phase carries it out. Causal SFT and RL train this split so that exploration stays informative and execution remains plan-faithful. Once plans are short yet decisive, extra inference compute can be directed to exploration rather than to repeatedly decoding full solutions. On AIME’2024 at $K{=}32$, \textbf{E\textsuperscript{2}C-ReAct Loop} reaches 53.3\% accuracy with only 12.4k tokens, outperforming Tree-of-Thoughts ($N{=}32$: 50.0\%, 71.3k). The same structure also supports lightweight domain adaptation: \textbf{Exploration-Focused SFT (EF-SFT)} updates only the planning phase, uses 3.5\% of the tokens required by standard SFT, and improves medical benchmark accuracy by up to 14.5\%." />
+<meta property="og:description" content="Many LLMs plan before they act, yet planning and execution are often still entangled in one long generation trace, enforced only through prompts, or split across separate components. We argue that these two stages call for different computation: planning benefits from diversity and breadth, whereas execution demands precision and faithful adherence to a chosen strategy. Treating them as a single undifferentiated chain wastes tokens on routine derivation and makes it costly to explore alternative strategies at test time. We present the \textbf{Explore-Execute Chain (E\textsuperscript{2}C)}, which keeps both stages in one model but separates them structurally: a stochastic \textit{Exploration} phase drafts a concise high-level plan, and a deterministic \textit{Execution} phase carries it out. Causal SFT and RL train this split so that exploration stays informative and execution remains plan-faithful. Once plans are short yet decisive, extra inference compute can be directed to exploration rather than to repeatedly decoding full solutions. On AIME’2024 at $K{=}32$, \textbf{E\textsuperscript{2}C-ReAct Loop} reaches 53.3\% accuracy with only 12.4k tokens, outperforming Tree-of-Thoughts ($N{=}32$: 50.0\%, 71.3k). The same structure also supports lightweight domain adaptation: \textbf{Exploration-Focused SFT (EF-SFT)} updates only the planning phase, uses 3.5\% of the tokens required by standard SFT, and improves medical benchmark accuracy by up to 14.5\%." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/23/ExploreExecuteChainTowardsanEfficientStructuredReasoningParadigm.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/23/ExploreExecuteChainTowardsanEfficientStructuredReasoningParadigm.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Explore-Execute Chain: Towards an Efficient Structured Reasoning Paradigm" />
+<script type="application/ld+json">
+{"description":"Many LLMs plan before they act, yet planning and execution are often still entangled in one long generation trace, enforced only through prompts, or split across separate components. We argue that these two stages call for different computation: planning benefits from diversity and breadth, whereas execution demands precision and faithful adherence to a chosen strategy. Treating them as a single undifferentiated chain wastes tokens on routine derivation and makes it costly to explore alternative strategies at test time. We present the \\textbf{Explore-Execute Chain (E\\textsuperscript{2}C)}, which keeps both stages in one model but separates them structurally: a stochastic \\textit{Exploration} phase drafts a concise high-level plan, and a deterministic \\textit{Execution} phase carries it out. Causal SFT and RL train this split so that exploration stays informative and execution remains plan-faithful. Once plans are short yet decisive, extra inference compute can be directed to exploration rather than to repeatedly decoding full solutions. On AIME’2024 at $K{=}32$, \\textbf{E\\textsuperscript{2}C-ReAct Loop} reaches 53.3\\% accuracy with only 12.4k tokens, outperforming Tree-of-Thoughts ($N{=}32$: 50.0\\%, 71.3k). The same structure also supports lightweight domain adaptation: \\textbf{Exploration-Focused SFT (EF-SFT)} updates only the planning phase, uses 3.5\\% of the tokens required by standard SFT, and improves medical benchmark accuracy by up to 14.5\\%.","datePublished":"2026-06-23T00:00:00+00:00","dateModified":"2026-06-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/23/ExploreExecuteChainTowardsanEfficientStructuredReasoningParadigm.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/23/ExploreExecuteChainTowardsanEfficientStructuredReasoningParadigm.html","author":{"@type":"Person","name":"Kaisen Yang, Tinghe Zhang, Rushi Shah, Kaicheng Yang, Qinwei Ma, Dianbo Liu, Alex Lamb"},"@type":"BlogPosting","headline":"Explore-Execute Chain: Towards an Efficient Structured Reasoning Paradigm","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-23 00:00:00 +0000">06-23</time>
+  </p>
+  
+  <h1>Explore-Execute Chain: Towards an Efficient Structured Reasoning Paradigm</h1>
+  <br>Kaisen Yang, Tinghe Zhang, Rushi Shah, Kaicheng Yang, Qinwei Ma, Dianbo Liu, Alex Lamb</h3>
+  <br> [stat.ML]
+
+  <p>Many LLMs plan before they act, yet planning and execution are often still entangled in one long generation trace, enforced only through prompts, or split across separate components. We argue that these two stages call for different computation: planning benefits from diversity and breadth, whereas execution demands precision and faithful adherence to a chosen strategy. Treating them as a single undifferentiated chain wastes tokens on routine derivation and makes it costly to explore alternative strategies at test time. We present the \textbf{Explore-Execute Chain (E\textsuperscript{2}C)}, which keeps both stages in one model but separates them structurally: a stochastic \textit{Exploration} phase drafts a concise high-level plan, and a deterministic \textit{Execution} phase carries it out. Causal SFT and RL train this split so that exploration stays informative and execution remains plan-faithful. Once plans are short yet decisive, extra inference compute can be directed to exploration rather than to repeatedly decoding full solutions. On AIME’2024 at $K{=}32$, \textbf{E\textsuperscript{2}C-ReAct Loop} reaches 53.3\% accuracy with only 12.4k tokens, outperforming Tree-of-Thoughts ($N{=}32$: 50.0\%, 71.3k). The same structure also supports lightweight domain adaptation: \textbf{Exploration-Focused SFT (EF-SFT)} updates only the planning phase, uses 3.5\% of the tokens required by standard SFT, and improves medical benchmark accuracy by up to 14.5\%.</p>
+
+<p><a href="https://arxiv.org/abs/2509.23946">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
