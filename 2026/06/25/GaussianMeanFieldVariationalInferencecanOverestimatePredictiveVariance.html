@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Gaussian Mean Field Variational Inference can Overestimate Predictive Variance</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Gaussian Mean Field Variational Inference can Overestimate Predictive Variance" />
+<meta name="author" content="James Odgers, Ben Riegler, Siddharth Swaroop, Vincent Fortuin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mean Field Variational Inference (MFVI) is widely understood to underestimate posterior variance. By analysing conjugate Bayesian Linear Regression (BLR), we show that this characterization is incomplete: while MFVI underestimates the variance in parameter space, it can overestimate the predictive variance compared to the exact posterior. We show that if the MFVI posterior underestimates predictive variances in some directions, it necessarily overestimates them in others. Crucially, this overestimation occurs in directions where the training data concentrates. This leads to the surprising result that, for a test point drawn from the training distribution, MFVI’s expected predictive variance exceeds that of the exact posterior. We demonstrate a pathological case of this effect, where the MFVI posterior fails to reduce predictive variance compared to the prior on in distribution data. We connect these results to the Cold Posterior Effect, arguing that varying the temperature can correct this overestimation, yielding predictions closer to those of the exact posterior. We validate our theory on synthetic and real-world regression tasks." />
+<meta property="og:description" content="Mean Field Variational Inference (MFVI) is widely understood to underestimate posterior variance. By analysing conjugate Bayesian Linear Regression (BLR), we show that this characterization is incomplete: while MFVI underestimates the variance in parameter space, it can overestimate the predictive variance compared to the exact posterior. We show that if the MFVI posterior underestimates predictive variances in some directions, it necessarily overestimates them in others. Crucially, this overestimation occurs in directions where the training data concentrates. This leads to the surprising result that, for a test point drawn from the training distribution, MFVI’s expected predictive variance exceeds that of the exact posterior. We demonstrate a pathological case of this effect, where the MFVI posterior fails to reduce predictive variance compared to the prior on in distribution data. We connect these results to the Cold Posterior Effect, arguing that varying the temperature can correct this overestimation, yielding predictions closer to those of the exact posterior. We validate our theory on synthetic and real-world regression tasks." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/25/GaussianMeanFieldVariationalInferencecanOverestimatePredictiveVariance.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/25/GaussianMeanFieldVariationalInferencecanOverestimatePredictiveVariance.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gaussian Mean Field Variational Inference can Overestimate Predictive Variance" />
+<script type="application/ld+json">
+{"description":"Mean Field Variational Inference (MFVI) is widely understood to underestimate posterior variance. By analysing conjugate Bayesian Linear Regression (BLR), we show that this characterization is incomplete: while MFVI underestimates the variance in parameter space, it can overestimate the predictive variance compared to the exact posterior. We show that if the MFVI posterior underestimates predictive variances in some directions, it necessarily overestimates them in others. Crucially, this overestimation occurs in directions where the training data concentrates. This leads to the surprising result that, for a test point drawn from the training distribution, MFVI’s expected predictive variance exceeds that of the exact posterior. We demonstrate a pathological case of this effect, where the MFVI posterior fails to reduce predictive variance compared to the prior on in distribution data. We connect these results to the Cold Posterior Effect, arguing that varying the temperature can correct this overestimation, yielding predictions closer to those of the exact posterior. We validate our theory on synthetic and real-world regression tasks.","datePublished":"2026-06-25T00:00:00+00:00","dateModified":"2026-06-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/25/GaussianMeanFieldVariationalInferencecanOverestimatePredictiveVariance.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/25/GaussianMeanFieldVariationalInferencecanOverestimatePredictiveVariance.html","author":{"@type":"Person","name":"James Odgers, Ben Riegler, Siddharth Swaroop, Vincent Fortuin"},"@type":"BlogPosting","headline":"Gaussian Mean Field Variational Inference can Overestimate Predictive Variance","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-25 00:00:00 +0000">06-25</time>
+  </p>
+  
+  <h1>Gaussian Mean Field Variational Inference can Overestimate Predictive Variance</h1>
+  <br>James Odgers, Ben Riegler, Siddharth Swaroop, Vincent Fortuin</h3>
+  <br> [stat.ML]
+
+  <p>Mean Field Variational Inference (MFVI) is widely understood to underestimate posterior variance. By analysing conjugate Bayesian Linear Regression (BLR), we show that this characterization is incomplete: while MFVI underestimates the variance in parameter space, it can overestimate the predictive variance compared to the exact posterior. We show that if the MFVI posterior underestimates predictive variances in some directions, it necessarily overestimates them in others. Crucially, this overestimation occurs in directions where the training data concentrates. This leads to the surprising result that, for a test point drawn from the training distribution, MFVI’s expected predictive variance exceeds that of the exact posterior. We demonstrate a pathological case of this effect, where the MFVI posterior fails to reduce predictive variance compared to the prior on in distribution data. We connect these results to the Cold Posterior Effect, arguing that varying the temperature can correct this overestimation, yielding predictions closer to those of the exact posterior. We validate our theory on synthetic and real-world regression tasks.</p>
+
+<p><a href="https://arxiv.org/abs/2606.25745">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
