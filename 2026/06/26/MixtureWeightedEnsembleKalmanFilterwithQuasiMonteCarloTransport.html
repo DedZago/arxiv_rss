@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport" />
+<meta name="author" content="Ilja Klebanov, Claudia Schillings, Dana Wrischnig" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Bootstrap Particle Filter (BPF) and the Ensemble Kalman Filter (EnKF) are two widely used methods for sequential Bayesian filtering: the BPF is asymptotically exact but can suffer from weight degeneracy, while the EnKF scales well in high dimension (typically with localization) yet is exact only in the linear-Gaussian case. We combine these approaches by retaining the EnKF transport step and adding a principled importance-sampling correction. Our first contribution is a general importance-sampling theory for mixture targets and proposals, including variance comparisons between individual- and mixture-based estimators. We then interpret the stochastic EnKF analysis as sampling from explicit Gaussian-mixture proposals obtained by conditioning on the current or previous ensemble, which leads to six self-normalized IS-EnKF schemes. We embed these updates into a broader class of ensemble-based filters and prove consistency and error bounds, including weight-variance comparisons and sufficient conditions ensuring finite-variance importance weights. As a second contribution, we construct transported quasi-Monte Carlo (TQMC) point sets for the Gaussian-mixture laws arising in prediction and analysis, yielding TQMC-enhanced variants that can substantially reduce sampling error without changing the filtering pipeline. Numerical experiments on benchmark models compare the proposed mixture-weighted and TQMC-enhanced filters, showing improved filtering accuracy relative to BPF, EnKF, and the standard weighted EnKF, and that the weighted schemes eliminate the EnKF error plateau often caused by analysis-target mismatch." />
+<meta property="og:description" content="The Bootstrap Particle Filter (BPF) and the Ensemble Kalman Filter (EnKF) are two widely used methods for sequential Bayesian filtering: the BPF is asymptotically exact but can suffer from weight degeneracy, while the EnKF scales well in high dimension (typically with localization) yet is exact only in the linear-Gaussian case. We combine these approaches by retaining the EnKF transport step and adding a principled importance-sampling correction. Our first contribution is a general importance-sampling theory for mixture targets and proposals, including variance comparisons between individual- and mixture-based estimators. We then interpret the stochastic EnKF analysis as sampling from explicit Gaussian-mixture proposals obtained by conditioning on the current or previous ensemble, which leads to six self-normalized IS-EnKF schemes. We embed these updates into a broader class of ensemble-based filters and prove consistency and error bounds, including weight-variance comparisons and sufficient conditions ensuring finite-variance importance weights. As a second contribution, we construct transported quasi-Monte Carlo (TQMC) point sets for the Gaussian-mixture laws arising in prediction and analysis, yielding TQMC-enhanced variants that can substantially reduce sampling error without changing the filtering pipeline. Numerical experiments on benchmark models compare the proposed mixture-weighted and TQMC-enhanced filters, showing improved filtering accuracy relative to BPF, EnKF, and the standard weighted EnKF, and that the weighted schemes eliminate the EnKF error plateau often caused by analysis-target mismatch." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/26/MixtureWeightedEnsembleKalmanFilterwithQuasiMonteCarloTransport.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/26/MixtureWeightedEnsembleKalmanFilterwithQuasiMonteCarloTransport.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport" />
+<script type="application/ld+json">
+{"description":"The Bootstrap Particle Filter (BPF) and the Ensemble Kalman Filter (EnKF) are two widely used methods for sequential Bayesian filtering: the BPF is asymptotically exact but can suffer from weight degeneracy, while the EnKF scales well in high dimension (typically with localization) yet is exact only in the linear-Gaussian case. We combine these approaches by retaining the EnKF transport step and adding a principled importance-sampling correction. Our first contribution is a general importance-sampling theory for mixture targets and proposals, including variance comparisons between individual- and mixture-based estimators. We then interpret the stochastic EnKF analysis as sampling from explicit Gaussian-mixture proposals obtained by conditioning on the current or previous ensemble, which leads to six self-normalized IS-EnKF schemes. We embed these updates into a broader class of ensemble-based filters and prove consistency and error bounds, including weight-variance comparisons and sufficient conditions ensuring finite-variance importance weights. As a second contribution, we construct transported quasi-Monte Carlo (TQMC) point sets for the Gaussian-mixture laws arising in prediction and analysis, yielding TQMC-enhanced variants that can substantially reduce sampling error without changing the filtering pipeline. Numerical experiments on benchmark models compare the proposed mixture-weighted and TQMC-enhanced filters, showing improved filtering accuracy relative to BPF, EnKF, and the standard weighted EnKF, and that the weighted schemes eliminate the EnKF error plateau often caused by analysis-target mismatch.","datePublished":"2026-06-26T00:00:00+00:00","dateModified":"2026-06-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/26/MixtureWeightedEnsembleKalmanFilterwithQuasiMonteCarloTransport.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/26/MixtureWeightedEnsembleKalmanFilterwithQuasiMonteCarloTransport.html","author":{"@type":"Person","name":"Ilja Klebanov, Claudia Schillings, Dana Wrischnig"},"@type":"BlogPosting","headline":"Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-26 00:00:00 +0000">06-26</time>
+  </p>
+  
+  <h1>Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport</h1>
+  <br>Ilja Klebanov, Claudia Schillings, Dana Wrischnig</h3>
+  <br> [stat.ME]
+
+  <p>The Bootstrap Particle Filter (BPF) and the Ensemble Kalman Filter (EnKF) are two widely used methods for sequential Bayesian filtering: the BPF is asymptotically exact but can suffer from weight degeneracy, while the EnKF scales well in high dimension (typically with localization) yet is exact only in the linear-Gaussian case. We combine these approaches by retaining the EnKF transport step and adding a principled importance-sampling correction. Our first contribution is a general importance-sampling theory for mixture targets and proposals, including variance comparisons between individual- and mixture-based estimators. We then interpret the stochastic EnKF analysis as sampling from explicit Gaussian-mixture proposals obtained by conditioning on the current or previous ensemble, which leads to six self-normalized IS-EnKF schemes. We embed these updates into a broader class of ensemble-based filters and prove consistency and error bounds, including weight-variance comparisons and sufficient conditions ensuring finite-variance importance weights. As a second contribution, we construct transported quasi-Monte Carlo (TQMC) point sets for the Gaussian-mixture laws arising in prediction and analysis, yielding TQMC-enhanced variants that can substantially reduce sampling error without changing the filtering pipeline. Numerical experiments on benchmark models compare the proposed mixture-weighted and TQMC-enhanced filters, showing improved filtering accuracy relative to BPF, EnKF, and the standard weighted EnKF, and that the weighted schemes eliminate the EnKF error plateau often caused by analysis-target mismatch.</p>
+
+<p><a href="https://arxiv.org/abs/2601.18992">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
