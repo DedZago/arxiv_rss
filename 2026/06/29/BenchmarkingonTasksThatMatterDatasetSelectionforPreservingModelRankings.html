@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Benchmarking on Tasks That Matter: Dataset Selection for Preserving Model Rankings</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Benchmarking on Tasks That Matter: Dataset Selection for Preserving Model Rankings" />
+<meta name="author" content="Rostislav Gusev, Alexey Zaytsev" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Benchmarks of machine learning models often include many datasets, making evaluation expensive. For efficiency, it is preferable to perform evaluations on small, representative datasets instead. The selection of such subsets typically relies on heuristics and is rarely analyzed for the robustness of the resulting model rankings. We introduce a framework to perform the task of selecting datasets subsets with an evaluation of how different selection strategies preserve the global model rankings. Our framework includes bootstrap aggregation, which provides valid confidence intervals, allowing a principled comparison of selection strategies. We consider clustering, design criteria (A/D-optimality), random baselines, and greedy farthest-first (FAFI). For the latter, we derive upper bounds on selection quality in terms of ranking errors as a function of the number of selected datasets. Empirically, in time series classification (TSC, 112 datasets) and in a supplementary natural language processing benchmark derived from MTEB (57 tasks), several selection strategies improve rank preservation compared with random subsets, including simple FAFI. In contrast, in recommender systems (30 datasets), the improvement of strategies over random selection is small and typically statistically insignificant. For TSC, our best-performing strategy achieves a Spearman correlation of 0.95 with the full benchmark model rankings using only five selected datasets. Additional experiments indicate that the effectiveness of selection approaches depends on both the quality of dataset representations and the scale of the benchmarking regime." />
+<meta property="og:description" content="Benchmarks of machine learning models often include many datasets, making evaluation expensive. For efficiency, it is preferable to perform evaluations on small, representative datasets instead. The selection of such subsets typically relies on heuristics and is rarely analyzed for the robustness of the resulting model rankings. We introduce a framework to perform the task of selecting datasets subsets with an evaluation of how different selection strategies preserve the global model rankings. Our framework includes bootstrap aggregation, which provides valid confidence intervals, allowing a principled comparison of selection strategies. We consider clustering, design criteria (A/D-optimality), random baselines, and greedy farthest-first (FAFI). For the latter, we derive upper bounds on selection quality in terms of ranking errors as a function of the number of selected datasets. Empirically, in time series classification (TSC, 112 datasets) and in a supplementary natural language processing benchmark derived from MTEB (57 tasks), several selection strategies improve rank preservation compared with random subsets, including simple FAFI. In contrast, in recommender systems (30 datasets), the improvement of strategies over random selection is small and typically statistically insignificant. For TSC, our best-performing strategy achieves a Spearman correlation of 0.95 with the full benchmark model rankings using only five selected datasets. Additional experiments indicate that the effectiveness of selection approaches depends on both the quality of dataset representations and the scale of the benchmarking regime." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/29/BenchmarkingonTasksThatMatterDatasetSelectionforPreservingModelRankings.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/29/BenchmarkingonTasksThatMatterDatasetSelectionforPreservingModelRankings.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Benchmarking on Tasks That Matter: Dataset Selection for Preserving Model Rankings" />
+<script type="application/ld+json">
+{"description":"Benchmarks of machine learning models often include many datasets, making evaluation expensive. For efficiency, it is preferable to perform evaluations on small, representative datasets instead. The selection of such subsets typically relies on heuristics and is rarely analyzed for the robustness of the resulting model rankings. We introduce a framework to perform the task of selecting datasets subsets with an evaluation of how different selection strategies preserve the global model rankings. Our framework includes bootstrap aggregation, which provides valid confidence intervals, allowing a principled comparison of selection strategies. We consider clustering, design criteria (A/D-optimality), random baselines, and greedy farthest-first (FAFI). For the latter, we derive upper bounds on selection quality in terms of ranking errors as a function of the number of selected datasets. Empirically, in time series classification (TSC, 112 datasets) and in a supplementary natural language processing benchmark derived from MTEB (57 tasks), several selection strategies improve rank preservation compared with random subsets, including simple FAFI. In contrast, in recommender systems (30 datasets), the improvement of strategies over random selection is small and typically statistically insignificant. For TSC, our best-performing strategy achieves a Spearman correlation of 0.95 with the full benchmark model rankings using only five selected datasets. Additional experiments indicate that the effectiveness of selection approaches depends on both the quality of dataset representations and the scale of the benchmarking regime.","datePublished":"2026-06-29T00:00:00+00:00","dateModified":"2026-06-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/29/BenchmarkingonTasksThatMatterDatasetSelectionforPreservingModelRankings.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/29/BenchmarkingonTasksThatMatterDatasetSelectionforPreservingModelRankings.html","author":{"@type":"Person","name":"Rostislav Gusev, Alexey Zaytsev"},"@type":"BlogPosting","headline":"Benchmarking on Tasks That Matter: Dataset Selection for Preserving Model Rankings","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-29 00:00:00 +0000">06-29</time>
+  </p>
+  
+  <h1>Benchmarking on Tasks That Matter: Dataset Selection for Preserving Model Rankings</h1>
+  <br>Rostislav Gusev, Alexey Zaytsev</h3>
+  <br> [stat.ML]
+
+  <p>Benchmarks of machine learning models often include many datasets, making evaluation expensive. For efficiency, it is preferable to perform evaluations on small, representative datasets instead. The selection of such subsets typically relies on heuristics and is rarely analyzed for the robustness of the resulting model rankings.
+  We introduce a framework to perform the task of selecting datasets subsets with an evaluation of how different selection strategies preserve the global model rankings. Our framework includes bootstrap aggregation, which provides valid confidence intervals, allowing a principled comparison of selection strategies. We consider clustering, design criteria (A/D-optimality), random baselines, and greedy farthest-first (FAFI). For the latter, we derive upper bounds on selection quality in terms of ranking errors as a function of the number of selected datasets.
+  Empirically, in time series classification (TSC, 112 datasets) and in a supplementary natural language processing benchmark derived from MTEB (57 tasks), several selection strategies improve rank preservation compared with random subsets, including simple FAFI. In contrast, in recommender systems (30 datasets), the improvement of strategies over random selection is small and typically statistically insignificant. For TSC, our best-performing strategy achieves a Spearman correlation of 0.95 with the full benchmark model rankings using only five selected datasets. Additional experiments indicate that the effectiveness of selection approaches depends on both the quality of dataset representations and the scale of the benchmarking regime.</p>
+
+<p><a href="https://arxiv.org/abs/2606.27997">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
