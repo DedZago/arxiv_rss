@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dead-Direction Conditioners: Gauge-Equivariant Preconditioning for Deep Networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Dead-Direction Conditioners: Gauge-Equivariant Preconditioning for Deep Networks" />
+<meta name="author" content="Tejas Pradeep Shirodkar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A deep network’s loss is invariant to continuous symmetries of its parameters: the logit shift, the ReLU rescaling, the LayerNorm scale, the per-head attention rotation. Adam’s per-coordinate preconditioner drifts along each symmetry orbit, which pulls the trajectory off the symmetry quotient where the optimization lives and blurs the singular-learning rate the quotient makes readable. We build DDC, a Dead-Direction Conditioner that lifts a base optimizer into a $G$-equivariant one: it conditions the optimizer’s state in the orbit decomposition of a $G$-invariant metric, so the trajectory stays a preconditioned gradient flow on the quotient $\bar\Theta = \Theta/G$. The construction carries four architectural gauges (cross-entropy shift, ReLU and SwiGLU rescaling, LayerNorm and RMSNorm scale, and a per-head $O(d_{\rm head})$ attention rotation matched to RoPE), proves exactly equivariant on an Adam base, and composes with a Muon base through a gauge-equivariant orthogonaliser. Respecting the symmetry changes both the minimum the optimizer reaches and what it leaves measurable there. On a language model trained past the point of fit, DDCAdam resists the over-training collapse AdamW falls into, holding a validation-train loss gap of 0.67 against 5.88, and reads the dead-direction rate in 32 of 65 layer-by-observable cells where AdamW reads it in 7. A vision transformer trained from scratch reaches lower validation loss (1.71 against 2.12) while compressing spare feed-forward capacity a matched AdamW leaves intact. On a Muon base, where the rotation gauge composes exactly, DDCMuon groks ten of eleven seeds at depth 24 that a plain Muon never reaches. Built into the optimizer, a network’s gauge symmetry sharpens the minimum it finds and turns that minimum’s geometry into something the trajectory can measure." />
+<meta property="og:description" content="A deep network’s loss is invariant to continuous symmetries of its parameters: the logit shift, the ReLU rescaling, the LayerNorm scale, the per-head attention rotation. Adam’s per-coordinate preconditioner drifts along each symmetry orbit, which pulls the trajectory off the symmetry quotient where the optimization lives and blurs the singular-learning rate the quotient makes readable. We build DDC, a Dead-Direction Conditioner that lifts a base optimizer into a $G$-equivariant one: it conditions the optimizer’s state in the orbit decomposition of a $G$-invariant metric, so the trajectory stays a preconditioned gradient flow on the quotient $\bar\Theta = \Theta/G$. The construction carries four architectural gauges (cross-entropy shift, ReLU and SwiGLU rescaling, LayerNorm and RMSNorm scale, and a per-head $O(d_{\rm head})$ attention rotation matched to RoPE), proves exactly equivariant on an Adam base, and composes with a Muon base through a gauge-equivariant orthogonaliser. Respecting the symmetry changes both the minimum the optimizer reaches and what it leaves measurable there. On a language model trained past the point of fit, DDCAdam resists the over-training collapse AdamW falls into, holding a validation-train loss gap of 0.67 against 5.88, and reads the dead-direction rate in 32 of 65 layer-by-observable cells where AdamW reads it in 7. A vision transformer trained from scratch reaches lower validation loss (1.71 against 2.12) while compressing spare feed-forward capacity a matched AdamW leaves intact. On a Muon base, where the rotation gauge composes exactly, DDCMuon groks ten of eleven seeds at depth 24 that a plain Muon never reaches. Built into the optimizer, a network’s gauge symmetry sharpens the minimum it finds and turns that minimum’s geometry into something the trajectory can measure." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/30/DeadDirectionConditionersGaugeEquivariantPreconditioningforDeepNetworks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/30/DeadDirectionConditionersGaugeEquivariantPreconditioningforDeepNetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dead-Direction Conditioners: Gauge-Equivariant Preconditioning for Deep Networks" />
+<script type="application/ld+json">
+{"description":"A deep network’s loss is invariant to continuous symmetries of its parameters: the logit shift, the ReLU rescaling, the LayerNorm scale, the per-head attention rotation. Adam’s per-coordinate preconditioner drifts along each symmetry orbit, which pulls the trajectory off the symmetry quotient where the optimization lives and blurs the singular-learning rate the quotient makes readable. We build DDC, a Dead-Direction Conditioner that lifts a base optimizer into a $G$-equivariant one: it conditions the optimizer’s state in the orbit decomposition of a $G$-invariant metric, so the trajectory stays a preconditioned gradient flow on the quotient $\\bar\\Theta = \\Theta/G$. The construction carries four architectural gauges (cross-entropy shift, ReLU and SwiGLU rescaling, LayerNorm and RMSNorm scale, and a per-head $O(d_{\\rm head})$ attention rotation matched to RoPE), proves exactly equivariant on an Adam base, and composes with a Muon base through a gauge-equivariant orthogonaliser. Respecting the symmetry changes both the minimum the optimizer reaches and what it leaves measurable there. On a language model trained past the point of fit, DDCAdam resists the over-training collapse AdamW falls into, holding a validation-train loss gap of 0.67 against 5.88, and reads the dead-direction rate in 32 of 65 layer-by-observable cells where AdamW reads it in 7. A vision transformer trained from scratch reaches lower validation loss (1.71 against 2.12) while compressing spare feed-forward capacity a matched AdamW leaves intact. On a Muon base, where the rotation gauge composes exactly, DDCMuon groks ten of eleven seeds at depth 24 that a plain Muon never reaches. Built into the optimizer, a network’s gauge symmetry sharpens the minimum it finds and turns that minimum’s geometry into something the trajectory can measure.","datePublished":"2026-06-30T00:00:00+00:00","dateModified":"2026-06-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/30/DeadDirectionConditionersGaugeEquivariantPreconditioningforDeepNetworks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/30/DeadDirectionConditionersGaugeEquivariantPreconditioningforDeepNetworks.html","author":{"@type":"Person","name":"Tejas Pradeep Shirodkar"},"@type":"BlogPosting","headline":"Dead-Direction Conditioners: Gauge-Equivariant Preconditioning for Deep Networks","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-30 00:00:00 +0000">06-30</time>
+  </p>
+  
+  <h1>Dead-Direction Conditioners: Gauge-Equivariant Preconditioning for Deep Networks</h1>
+  <br>Tejas Pradeep Shirodkar</h3>
+  <br> [stat.ML]
+
+  <p>A deep network’s loss is invariant to continuous symmetries of its parameters: the logit shift, the ReLU rescaling, the LayerNorm scale, the per-head attention rotation. Adam’s per-coordinate preconditioner drifts along each symmetry orbit, which pulls the trajectory off the symmetry quotient where the optimization lives and blurs the singular-learning rate the quotient makes readable. We build DDC, a Dead-Direction Conditioner that lifts a base optimizer into a $G$-equivariant one: it conditions the optimizer’s state in the orbit decomposition of a $G$-invariant metric, so the trajectory stays a preconditioned gradient flow on the quotient $\bar\Theta = \Theta/G$. The construction carries four architectural gauges (cross-entropy shift, ReLU and SwiGLU rescaling, LayerNorm and RMSNorm scale, and a per-head $O(d_{\rm head})$ attention rotation matched to RoPE), proves exactly equivariant on an Adam base, and composes with a Muon base through a gauge-equivariant orthogonaliser. Respecting the symmetry changes both the minimum the optimizer reaches and what it leaves measurable there. On a language model trained past the point of fit, DDCAdam resists the over-training collapse AdamW falls into, holding a validation-train loss gap of 0.67 against 5.88, and reads the dead-direction rate in 32 of 65 layer-by-observable cells where AdamW reads it in 7. A vision transformer trained from scratch reaches lower validation loss (1.71 against 2.12) while compressing spare feed-forward capacity a matched AdamW leaves intact. On a Muon base, where the rotation gauge composes exactly, DDCMuon groks ten of eleven seeds at depth 24 that a plain Muon never reaches. Built into the optimizer, a network’s gauge symmetry sharpens the minimum it finds and turns that minimum’s geometry into something the trajectory can measure.</p>
+
+<p><a href="https://arxiv.org/abs/2606.29176">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

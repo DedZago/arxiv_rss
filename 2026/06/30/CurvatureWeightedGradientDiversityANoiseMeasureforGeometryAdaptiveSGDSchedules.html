@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules" />
+<meta name="author" content="Muhammad Hamza , Ayush Goel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The standard convergence analysis of mini-batch stochastic gradient descent (SGD) models gradient noise using a single variance term that treats all parameter directions equally, ignoring the fact that noise in high-curvature directions has less impact because learning rates are already constrained there. We introduce Curvature-Weighted Gradient Diversity (CWGD), a geometry-aware measure that weights per-sample gradient diversity by the inverse square root of the Hessian, providing a tighter proxy for the effective optimization noise. For strongly convex quadratic objectives with diagonal Hessians and isotropic noise, we prove that a CWGD-modulated cosine learning-rate schedule can reduce the asymptotic optimization error floor by up to a factor of two compared with standard cosine annealing. We implement this idea as CWGD-Cosine using a Hutchinson-based diagonal Hessian estimator that is exact for quadratic objectives. Across a range of condition numbers, batch sizes, and noise structures, CWGD-Cosine consistently achieves approximately 20% lower final optimization error than standard cosine annealing while incurring negligible overhead in the quadratic setting. We also identify and correct a degenerate curvature estimator, analyze the robustness of the proposed estimator, and explicitly discuss the limitations of the method, including Hessian staleness in non-convex optimization. These results establish CWGD as a principled geometry-aware measure of optimization noise and motivate future extensions to more general learning problems." />
+<meta property="og:description" content="The standard convergence analysis of mini-batch stochastic gradient descent (SGD) models gradient noise using a single variance term that treats all parameter directions equally, ignoring the fact that noise in high-curvature directions has less impact because learning rates are already constrained there. We introduce Curvature-Weighted Gradient Diversity (CWGD), a geometry-aware measure that weights per-sample gradient diversity by the inverse square root of the Hessian, providing a tighter proxy for the effective optimization noise. For strongly convex quadratic objectives with diagonal Hessians and isotropic noise, we prove that a CWGD-modulated cosine learning-rate schedule can reduce the asymptotic optimization error floor by up to a factor of two compared with standard cosine annealing. We implement this idea as CWGD-Cosine using a Hutchinson-based diagonal Hessian estimator that is exact for quadratic objectives. Across a range of condition numbers, batch sizes, and noise structures, CWGD-Cosine consistently achieves approximately 20% lower final optimization error than standard cosine annealing while incurring negligible overhead in the quadratic setting. We also identify and correct a degenerate curvature estimator, analyze the robustness of the proposed estimator, and explicitly discuss the limitations of the method, including Hessian staleness in non-convex optimization. These results establish CWGD as a principled geometry-aware measure of optimization noise and motivate future extensions to more general learning problems." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/30/CurvatureWeightedGradientDiversityANoiseMeasureforGeometryAdaptiveSGDSchedules.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/30/CurvatureWeightedGradientDiversityANoiseMeasureforGeometryAdaptiveSGDSchedules.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules" />
+<script type="application/ld+json">
+{"description":"The standard convergence analysis of mini-batch stochastic gradient descent (SGD) models gradient noise using a single variance term that treats all parameter directions equally, ignoring the fact that noise in high-curvature directions has less impact because learning rates are already constrained there. We introduce Curvature-Weighted Gradient Diversity (CWGD), a geometry-aware measure that weights per-sample gradient diversity by the inverse square root of the Hessian, providing a tighter proxy for the effective optimization noise. For strongly convex quadratic objectives with diagonal Hessians and isotropic noise, we prove that a CWGD-modulated cosine learning-rate schedule can reduce the asymptotic optimization error floor by up to a factor of two compared with standard cosine annealing. We implement this idea as CWGD-Cosine using a Hutchinson-based diagonal Hessian estimator that is exact for quadratic objectives. Across a range of condition numbers, batch sizes, and noise structures, CWGD-Cosine consistently achieves approximately 20% lower final optimization error than standard cosine annealing while incurring negligible overhead in the quadratic setting. We also identify and correct a degenerate curvature estimator, analyze the robustness of the proposed estimator, and explicitly discuss the limitations of the method, including Hessian staleness in non-convex optimization. These results establish CWGD as a principled geometry-aware measure of optimization noise and motivate future extensions to more general learning problems.","datePublished":"2026-06-30T00:00:00+00:00","dateModified":"2026-06-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/30/CurvatureWeightedGradientDiversityANoiseMeasureforGeometryAdaptiveSGDSchedules.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/30/CurvatureWeightedGradientDiversityANoiseMeasureforGeometryAdaptiveSGDSchedules.html","author":{"@type":"Person","name":"Muhammad Hamza , Ayush Goel"},"@type":"BlogPosting","headline":"Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-30 00:00:00 +0000">06-30</time>
+  </p>
+  
+  <h1>Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules</h1>
+  <br>Muhammad Hamza , Ayush Goel</h3>
+  <br> [stat.ML]
+
+  <p>The standard convergence analysis of mini-batch stochastic gradient descent (SGD) models gradient noise using a single variance term that treats all parameter directions equally, ignoring the fact that noise in high-curvature directions has less impact because learning rates are already constrained there. We introduce Curvature-Weighted Gradient Diversity (CWGD), a geometry-aware measure that weights per-sample gradient diversity by the inverse square root of the Hessian, providing a tighter proxy for the effective optimization noise. For strongly convex quadratic objectives with diagonal Hessians and isotropic noise, we prove that a CWGD-modulated cosine learning-rate schedule can reduce the asymptotic optimization error floor by up to a factor of two compared with standard cosine annealing. We implement this idea as CWGD-Cosine using a Hutchinson-based diagonal Hessian estimator that is exact for quadratic objectives. Across a range of condition numbers, batch sizes, and noise structures, CWGD-Cosine consistently achieves approximately 20% lower final optimization error than standard cosine annealing while incurring negligible overhead in the quadratic setting. We also identify and correct a degenerate curvature estimator, analyze the robustness of the proposed estimator, and explicitly discuss the limitations of the method, including Hessian staleness in non-convex optimization. These results establish CWGD as a principled geometry-aware measure of optimization noise and motivate future extensions to more general learning problems.</p>
+
+<p><a href="https://arxiv.org/abs/2606.30455">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

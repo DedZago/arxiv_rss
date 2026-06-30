@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Fundamental Limits of Valid Transport Map Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Fundamental Limits of Valid Transport Map Estimation" />
+<meta name="author" content="Sivaraman Balakrishnan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many modern generative modeling methods, including diffusion models, normalizing flows, and flow matching, estimate transport maps or plans between distributions without explicitly targeting an optimal transport (OT) map. In applications like generative modeling, the transport cost itself is irrelevant, and this makes it natural to target maps which are more tractable from either a statistical or computational standpoint. In this short note, we formalize the task of estimating any valid transport map in a rigorous minimax framework. One consequence of this framing is that it yields sample complexity lower bounds for any method whose learned object is evaluated as a transport map or plan, including flow matching and diffusion-based generative models, in settings where direct analysis would be challenging due to the analytic complexity of the methods and their target maps. We observe that, under standard, though strong, stability assumptions from the OT literature, estimating any valid transport map is statistically as hard as estimating the OT map. We complement these results with some examples showing that when these stability assumptions fail, alternative transport maps can be learned substantially more accurately than the OT map. Our minimax framing provides a rigorous foundation for understanding the statistical limits of modern transport-based generative methods and clarifies when targeting sub-optimal maps can provide real statistical advantages." />
+<meta property="og:description" content="Many modern generative modeling methods, including diffusion models, normalizing flows, and flow matching, estimate transport maps or plans between distributions without explicitly targeting an optimal transport (OT) map. In applications like generative modeling, the transport cost itself is irrelevant, and this makes it natural to target maps which are more tractable from either a statistical or computational standpoint. In this short note, we formalize the task of estimating any valid transport map in a rigorous minimax framework. One consequence of this framing is that it yields sample complexity lower bounds for any method whose learned object is evaluated as a transport map or plan, including flow matching and diffusion-based generative models, in settings where direct analysis would be challenging due to the analytic complexity of the methods and their target maps. We observe that, under standard, though strong, stability assumptions from the OT literature, estimating any valid transport map is statistically as hard as estimating the OT map. We complement these results with some examples showing that when these stability assumptions fail, alternative transport maps can be learned substantially more accurately than the OT map. Our minimax framing provides a rigorous foundation for understanding the statistical limits of modern transport-based generative methods and clarifies when targeting sub-optimal maps can provide real statistical advantages." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/30/TheFundamentalLimitsofValidTransportMapEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/30/TheFundamentalLimitsofValidTransportMapEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Fundamental Limits of Valid Transport Map Estimation" />
+<script type="application/ld+json">
+{"description":"Many modern generative modeling methods, including diffusion models, normalizing flows, and flow matching, estimate transport maps or plans between distributions without explicitly targeting an optimal transport (OT) map. In applications like generative modeling, the transport cost itself is irrelevant, and this makes it natural to target maps which are more tractable from either a statistical or computational standpoint. In this short note, we formalize the task of estimating any valid transport map in a rigorous minimax framework. One consequence of this framing is that it yields sample complexity lower bounds for any method whose learned object is evaluated as a transport map or plan, including flow matching and diffusion-based generative models, in settings where direct analysis would be challenging due to the analytic complexity of the methods and their target maps. We observe that, under standard, though strong, stability assumptions from the OT literature, estimating any valid transport map is statistically as hard as estimating the OT map. We complement these results with some examples showing that when these stability assumptions fail, alternative transport maps can be learned substantially more accurately than the OT map. Our minimax framing provides a rigorous foundation for understanding the statistical limits of modern transport-based generative methods and clarifies when targeting sub-optimal maps can provide real statistical advantages.","datePublished":"2026-06-30T00:00:00+00:00","dateModified":"2026-06-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/30/TheFundamentalLimitsofValidTransportMapEstimation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/30/TheFundamentalLimitsofValidTransportMapEstimation.html","author":{"@type":"Person","name":"Sivaraman Balakrishnan"},"@type":"BlogPosting","headline":"The Fundamental Limits of Valid Transport Map Estimation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-30 00:00:00 +0000">06-30</time>
+  </p>
+  
+  <h1>The Fundamental Limits of Valid Transport Map Estimation</h1>
+  <br>Sivaraman Balakrishnan</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Many modern generative modeling methods, including diffusion models, normalizing flows, and flow matching, estimate transport maps or plans between distributions without explicitly targeting an optimal transport (OT) map. In applications like generative modeling, the transport cost itself is irrelevant, and this makes it natural to target maps which are more tractable from either a statistical or computational standpoint. In this short note, we formalize the task of estimating any valid transport map in a rigorous minimax framework. One consequence of this framing is that it yields sample complexity lower bounds for any method whose learned object is evaluated as a transport map or plan, including flow matching and diffusion-based generative models, in settings where direct analysis would be challenging due to the analytic complexity of the methods and their target maps. We observe that, under standard, though strong, stability assumptions from the OT literature, estimating any valid transport map is statistically as hard as estimating the OT map. We complement these results with some examples showing that when these stability assumptions fail, alternative transport maps can be learned substantially more accurately than the OT map. Our minimax framing provides a rigorous foundation for understanding the statistical limits of modern transport-based generative methods and clarifies when targeting sub-optimal maps can provide real statistical advantages.</p>
+
+<p><a href="https://arxiv.org/abs/2606.30574">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

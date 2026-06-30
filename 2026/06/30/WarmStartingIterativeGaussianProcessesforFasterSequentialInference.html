@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Warm-Starting Iterative Gaussian Processes for Faster Sequential Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Warm-Starting Iterative Gaussian Processes for Faster Sequential Inference" />
+<meta name="author" content="Alan Yufei Dong, Jihao Andreas Lin, José Miguel Hernández-Lobato" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Efficient Gaussian process (GP) inference is critical for sequential decision-making tasks such as active learning, online prediction, and Bayesian optimization. Iterative approaches of approximating the GP posterior using solvers like conjugate gradients, stochastic gradient descent, or alternating projections avoid cubic costs, but often require many iterations to converge, limiting their efficacy when the posterior is updated frequently with new data. To address this, we introduce three warm-start strategies that exploit solutions of smaller linear systems to substantially speed-up convergence when updating the posterior with new data. Our methods are supported by theoretical analysis showing reduced initialization error in reproducing kernel Hilbert space (RKHS) distance, and by empirical results on regression benchmarks and Bayesian optimization tasks. Across solvers, warm-starting achieves speed-ups of up to 19x when solving to tolerance, and produces more accurate posterior estimates under fixed compute budgets, directly improving optimization performance. These results establish warm-starting as a simple, effective, and broadly applicable tool for scaling Gaussian processes in sequential settings." />
+<meta property="og:description" content="Efficient Gaussian process (GP) inference is critical for sequential decision-making tasks such as active learning, online prediction, and Bayesian optimization. Iterative approaches of approximating the GP posterior using solvers like conjugate gradients, stochastic gradient descent, or alternating projections avoid cubic costs, but often require many iterations to converge, limiting their efficacy when the posterior is updated frequently with new data. To address this, we introduce three warm-start strategies that exploit solutions of smaller linear systems to substantially speed-up convergence when updating the posterior with new data. Our methods are supported by theoretical analysis showing reduced initialization error in reproducing kernel Hilbert space (RKHS) distance, and by empirical results on regression benchmarks and Bayesian optimization tasks. Across solvers, warm-starting achieves speed-ups of up to 19x when solving to tolerance, and produces more accurate posterior estimates under fixed compute budgets, directly improving optimization performance. These results establish warm-starting as a simple, effective, and broadly applicable tool for scaling Gaussian processes in sequential settings." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/06/30/WarmStartingIterativeGaussianProcessesforFasterSequentialInference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/06/30/WarmStartingIterativeGaussianProcessesforFasterSequentialInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Warm-Starting Iterative Gaussian Processes for Faster Sequential Inference" />
+<script type="application/ld+json">
+{"description":"Efficient Gaussian process (GP) inference is critical for sequential decision-making tasks such as active learning, online prediction, and Bayesian optimization. Iterative approaches of approximating the GP posterior using solvers like conjugate gradients, stochastic gradient descent, or alternating projections avoid cubic costs, but often require many iterations to converge, limiting their efficacy when the posterior is updated frequently with new data. To address this, we introduce three warm-start strategies that exploit solutions of smaller linear systems to substantially speed-up convergence when updating the posterior with new data. Our methods are supported by theoretical analysis showing reduced initialization error in reproducing kernel Hilbert space (RKHS) distance, and by empirical results on regression benchmarks and Bayesian optimization tasks. Across solvers, warm-starting achieves speed-ups of up to 19x when solving to tolerance, and produces more accurate posterior estimates under fixed compute budgets, directly improving optimization performance. These results establish warm-starting as a simple, effective, and broadly applicable tool for scaling Gaussian processes in sequential settings.","datePublished":"2026-06-30T00:00:00+00:00","dateModified":"2026-06-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/06/30/WarmStartingIterativeGaussianProcessesforFasterSequentialInference.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/06/30/WarmStartingIterativeGaussianProcessesforFasterSequentialInference.html","author":{"@type":"Person","name":"Alan Yufei Dong, Jihao Andreas Lin, José Miguel Hernández-Lobato"},"@type":"BlogPosting","headline":"Warm-Starting Iterative Gaussian Processes for Faster Sequential Inference","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-06-30 00:00:00 +0000">06-30</time>
+  </p>
+  
+  <h1>Warm-Starting Iterative Gaussian Processes for Faster Sequential Inference</h1>
+  <br>Alan Yufei Dong, Jihao Andreas Lin, José Miguel Hernández-Lobato</h3>
+  <br> [stat.ML]
+
+  <p>Efficient Gaussian process (GP) inference is critical for sequential decision-making tasks such as active learning, online prediction, and Bayesian optimization. Iterative approaches of approximating the GP posterior using solvers like conjugate gradients, stochastic gradient descent, or alternating projections avoid cubic costs, but often require many iterations to converge, limiting their efficacy when the posterior is updated frequently with new data. To address this, we introduce three warm-start strategies that exploit solutions of smaller linear systems to substantially speed-up convergence when updating the posterior with new data. Our methods are supported by theoretical analysis showing reduced initialization error in reproducing kernel Hilbert space (RKHS) distance, and by empirical results on regression benchmarks and Bayesian optimization tasks. Across solvers, warm-starting achieves speed-ups of up to 19x when solving to tolerance, and produces more accurate posterior estimates under fixed compute budgets, directly improving optimization performance. These results establish warm-starting as a simple, effective, and broadly applicable tool for scaling Gaussian processes in sequential settings.</p>
+
+<p><a href="https://arxiv.org/abs/2511.16340">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
