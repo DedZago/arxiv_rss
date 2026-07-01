@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Profiling systematic uncertainties in Simulation-Based Inference with Factorizable Normalizing Flows</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Profiling systematic uncertainties in Simulation-Based Inference with Factorizable Normalizing Flows" />
+<meta name="author" content="Davide Valsecchi, Mauro Donegà, Rainer Wallny" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Unbinned likelihood fits maximize the information extracted from experimental data, yet their application in realistic high-dimensional analyses has been fundamentally bottlenecked by the prohibitive computational cost of profiling systematic uncertainties. Furthermore, current machine learning-based inference methods typically estimate scalar parameters, discarding complex high-dimensional correlations. To address this, we propose a general Simulation-Based Inference (SBI) framework that elevates the fit target from scalar parameters to a multivariate Distribution of Interest (DoI), a learnable, invertible transformation of the feature space. We employ Factorizable Normalizing Flows to model systematic variations as parametric deformations, preserving tractability without combinatorial explosion. Crucially, we develop an amortized training strategy that learns the conditional dependence of the DoI on nuisance parameters in a single optimization process, bypassing repetitive training during likelihood scans. To capture the finite-sample statistical variance of the neural network DoI, we introduce a Poisson-bootstrap ensemble, which we marginalize through an averaged likelihood to deliver a complete statistical-plus-systematic uncertainty budget within a single unbinned likelihood. Validated on a synthetic dataset emulating a high-energy physics measurement, our method demonstrates that rigorous, fully profiled unbinned measurements can now be extended to complete differential distributions. By turning the fit into a functional measurement, this approach offers a powerful, unifying framework for a broad range of tasks conventionally treated as distinct problems, from detector calibration and differential cross-sections to unfolding and continuous parameter estimation." />
+<meta property="og:description" content="Unbinned likelihood fits maximize the information extracted from experimental data, yet their application in realistic high-dimensional analyses has been fundamentally bottlenecked by the prohibitive computational cost of profiling systematic uncertainties. Furthermore, current machine learning-based inference methods typically estimate scalar parameters, discarding complex high-dimensional correlations. To address this, we propose a general Simulation-Based Inference (SBI) framework that elevates the fit target from scalar parameters to a multivariate Distribution of Interest (DoI), a learnable, invertible transformation of the feature space. We employ Factorizable Normalizing Flows to model systematic variations as parametric deformations, preserving tractability without combinatorial explosion. Crucially, we develop an amortized training strategy that learns the conditional dependence of the DoI on nuisance parameters in a single optimization process, bypassing repetitive training during likelihood scans. To capture the finite-sample statistical variance of the neural network DoI, we introduce a Poisson-bootstrap ensemble, which we marginalize through an averaged likelihood to deliver a complete statistical-plus-systematic uncertainty budget within a single unbinned likelihood. Validated on a synthetic dataset emulating a high-energy physics measurement, our method demonstrates that rigorous, fully profiled unbinned measurements can now be extended to complete differential distributions. By turning the fit into a functional measurement, this approach offers a powerful, unifying framework for a broad range of tasks conventionally treated as distinct problems, from detector calibration and differential cross-sections to unfolding and continuous parameter estimation." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/01/ProfilingsystematicuncertaintiesinSimulationBasedInferencewithFactorizableNormalizingFlows.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/01/ProfilingsystematicuncertaintiesinSimulationBasedInferencewithFactorizableNormalizingFlows.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Profiling systematic uncertainties in Simulation-Based Inference with Factorizable Normalizing Flows" />
+<script type="application/ld+json">
+{"description":"Unbinned likelihood fits maximize the information extracted from experimental data, yet their application in realistic high-dimensional analyses has been fundamentally bottlenecked by the prohibitive computational cost of profiling systematic uncertainties. Furthermore, current machine learning-based inference methods typically estimate scalar parameters, discarding complex high-dimensional correlations. To address this, we propose a general Simulation-Based Inference (SBI) framework that elevates the fit target from scalar parameters to a multivariate Distribution of Interest (DoI), a learnable, invertible transformation of the feature space. We employ Factorizable Normalizing Flows to model systematic variations as parametric deformations, preserving tractability without combinatorial explosion. Crucially, we develop an amortized training strategy that learns the conditional dependence of the DoI on nuisance parameters in a single optimization process, bypassing repetitive training during likelihood scans. To capture the finite-sample statistical variance of the neural network DoI, we introduce a Poisson-bootstrap ensemble, which we marginalize through an averaged likelihood to deliver a complete statistical-plus-systematic uncertainty budget within a single unbinned likelihood. Validated on a synthetic dataset emulating a high-energy physics measurement, our method demonstrates that rigorous, fully profiled unbinned measurements can now be extended to complete differential distributions. By turning the fit into a functional measurement, this approach offers a powerful, unifying framework for a broad range of tasks conventionally treated as distinct problems, from detector calibration and differential cross-sections to unfolding and continuous parameter estimation.","datePublished":"2026-07-01T00:00:00+00:00","dateModified":"2026-07-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/01/ProfilingsystematicuncertaintiesinSimulationBasedInferencewithFactorizableNormalizingFlows.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/01/ProfilingsystematicuncertaintiesinSimulationBasedInferencewithFactorizableNormalizingFlows.html","author":{"@type":"Person","name":"Davide Valsecchi, Mauro Donegà, Rainer Wallny"},"@type":"BlogPosting","headline":"Profiling systematic uncertainties in Simulation-Based Inference with Factorizable Normalizing Flows","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-01 00:00:00 +0000">07-01</time>
+  </p>
+  
+  <h1>Profiling systematic uncertainties in Simulation-Based Inference with Factorizable Normalizing Flows</h1>
+  <br>Davide Valsecchi, Mauro Donegà, Rainer Wallny</h3>
+  <br> [stat.ML]
+
+  <p>Unbinned likelihood fits maximize the information extracted from experimental data, yet their application in realistic high-dimensional analyses has been fundamentally bottlenecked by the prohibitive computational cost of profiling systematic uncertainties. Furthermore, current machine learning-based inference methods typically estimate scalar parameters, discarding complex high-dimensional correlations. To address this, we propose a general Simulation-Based Inference (SBI) framework that elevates the fit target from scalar parameters to a multivariate Distribution of Interest (DoI), a learnable, invertible transformation of the feature space. We employ Factorizable Normalizing Flows to model systematic variations as parametric deformations, preserving tractability without combinatorial explosion. Crucially, we develop an amortized training strategy that learns the conditional dependence of the DoI on nuisance parameters in a single optimization process, bypassing repetitive training during likelihood scans. To capture the finite-sample statistical variance of the neural network DoI, we introduce a Poisson-bootstrap ensemble, which we marginalize through an averaged likelihood to deliver a complete statistical-plus-systematic uncertainty budget within a single unbinned likelihood. Validated on a synthetic dataset emulating a high-energy physics measurement, our method demonstrates that rigorous, fully profiled unbinned measurements can now be extended to complete differential distributions. By turning the fit into a functional measurement, this approach offers a powerful, unifying framework for a broad range of tasks conventionally treated as distinct problems, from detector calibration and differential cross-sections to unfolding and continuous parameter estimation.</p>
+
+<p><a href="https://arxiv.org/abs/2602.13184">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
