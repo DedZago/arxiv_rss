@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Amortized Maximum Inner Product Search with Learned Support Functions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Amortized Maximum Inner Product Search with Learned Support Functions" />
+<meta name="author" content="Theo X. Olausson, João Monteiro, Michal Klein, Marco Cuturi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Maximum inner product search (MIPS) is a crucial subroutine in machine learning, requiring the identification of a vector taken within a database (the keys) that best aligns with a given query. We propose amortized MIPS: a regression-based approach that trains neural networks to directly predict MIPS solutions, amortizing the cost of repeatedly solving MIPS for queries drawn from a known distribution over a fixed key database. Our key insight is that the MIPS value function is the \emph{support} function of the set of keys, a well-studied convex function whose gradient yields the optimal key. This motivates two complementary amortized models: SupportNet, an input-convex neural network trained to regress the support function, and KeyNet, a vector-valued network that directly regresses the optimal key. SupportNet can serve as a cluster router, steering queries toward relevant database partitions, while KeyNet can be used as a drop-in replacement for the original query, fed directly to off-the-shelf indexing pipelines. Our experiments on the BEIR benchmark show that, for document embeddings, learned \SupportNet{}s and \KeyNet{}s significantly improve IVF match rates when accounting for compute effort, whether measured in FLOPs, number of probes, or wall-clock time. Our code is available at: https://github.com/apple/ml-amips." />
+<meta property="og:description" content="Maximum inner product search (MIPS) is a crucial subroutine in machine learning, requiring the identification of a vector taken within a database (the keys) that best aligns with a given query. We propose amortized MIPS: a regression-based approach that trains neural networks to directly predict MIPS solutions, amortizing the cost of repeatedly solving MIPS for queries drawn from a known distribution over a fixed key database. Our key insight is that the MIPS value function is the \emph{support} function of the set of keys, a well-studied convex function whose gradient yields the optimal key. This motivates two complementary amortized models: SupportNet, an input-convex neural network trained to regress the support function, and KeyNet, a vector-valued network that directly regresses the optimal key. SupportNet can serve as a cluster router, steering queries toward relevant database partitions, while KeyNet can be used as a drop-in replacement for the original query, fed directly to off-the-shelf indexing pipelines. Our experiments on the BEIR benchmark show that, for document embeddings, learned \SupportNet{}s and \KeyNet{}s significantly improve IVF match rates when accounting for compute effort, whether measured in FLOPs, number of probes, or wall-clock time. Our code is available at: https://github.com/apple/ml-amips." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/02/AmortizedMaximumInnerProductSearchwithLearnedSupportFunctions.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/02/AmortizedMaximumInnerProductSearchwithLearnedSupportFunctions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Amortized Maximum Inner Product Search with Learned Support Functions" />
+<script type="application/ld+json">
+{"description":"Maximum inner product search (MIPS) is a crucial subroutine in machine learning, requiring the identification of a vector taken within a database (the keys) that best aligns with a given query. We propose amortized MIPS: a regression-based approach that trains neural networks to directly predict MIPS solutions, amortizing the cost of repeatedly solving MIPS for queries drawn from a known distribution over a fixed key database. Our key insight is that the MIPS value function is the \\emph{support} function of the set of keys, a well-studied convex function whose gradient yields the optimal key. This motivates two complementary amortized models: SupportNet, an input-convex neural network trained to regress the support function, and KeyNet, a vector-valued network that directly regresses the optimal key. SupportNet can serve as a cluster router, steering queries toward relevant database partitions, while KeyNet can be used as a drop-in replacement for the original query, fed directly to off-the-shelf indexing pipelines. Our experiments on the BEIR benchmark show that, for document embeddings, learned \\SupportNet{}s and \\KeyNet{}s significantly improve IVF match rates when accounting for compute effort, whether measured in FLOPs, number of probes, or wall-clock time. Our code is available at: https://github.com/apple/ml-amips.","datePublished":"2026-07-02T00:00:00+00:00","dateModified":"2026-07-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/02/AmortizedMaximumInnerProductSearchwithLearnedSupportFunctions.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/02/AmortizedMaximumInnerProductSearchwithLearnedSupportFunctions.html","author":{"@type":"Person","name":"Theo X. Olausson, João Monteiro, Michal Klein, Marco Cuturi"},"@type":"BlogPosting","headline":"Amortized Maximum Inner Product Search with Learned Support Functions","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-02 00:00:00 +0000">07-02</time>
+  </p>
+  
+  <h1>Amortized Maximum Inner Product Search with Learned Support Functions</h1>
+  <br>Theo X. Olausson, João Monteiro, Michal Klein, Marco Cuturi</h3>
+  <br> [stat.ML]
+
+  <p>Maximum inner product search (MIPS) is a crucial subroutine in machine learning, requiring the identification of a vector taken within a database (the keys) that best aligns with a given query. We propose amortized MIPS: a regression-based approach that trains neural networks to directly predict MIPS solutions, amortizing the cost of repeatedly solving MIPS for queries drawn from a known distribution over a fixed key database. Our key insight is that the MIPS value function is the \emph{support} function of the set of keys, a well-studied convex function whose gradient yields the optimal key. This motivates two complementary amortized models: SupportNet, an input-convex neural network trained to regress the support function, and KeyNet, a vector-valued network that directly regresses the optimal key. SupportNet can serve as a cluster router, steering queries toward relevant database partitions, while KeyNet can be used as a drop-in replacement for the original query, fed directly to off-the-shelf indexing pipelines. Our experiments on the BEIR benchmark show that, for document embeddings, learned \SupportNet{}s and \KeyNet{}s significantly improve IVF match rates when accounting for compute effort, whether measured in FLOPs, number of probes, or wall-clock time. Our code is available at: https://github.com/apple/ml-amips.</p>
+
+<p><a href="https://arxiv.org/abs/2603.08001">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
