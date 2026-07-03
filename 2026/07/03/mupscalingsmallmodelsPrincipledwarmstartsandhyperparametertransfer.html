@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>$\mu$pscaling small models: Principled warm starts and hyperparameter transfer</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="$\mu$pscaling small models: Principled warm starts and hyperparameter transfer" />
+<meta name="author" content="Yuxin Ma, Nan Chen, Mateo Díaz, Soufiane Hayou, Dmitriy Kunisky, Soledad Villar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern large-scale neural networks are often trained and released in multiple sizes to accommodate diverse inference budgets. To improve efficiency, recent work has explored model upscaling: initializing larger models from trained smaller ones to accelerate convergence. However, this method can be sensitive to hyperparameters that need to be tuned at the target upscaled model size, which is prohibitively costly to do directly. It remains unclear whether tuning hyperparameters on smaller models and extrapolating via scaling laws is sound in this setting. We address this with principled approaches to width-based upscaling and efficient hyperparameter tuning in this setting. Motivated by $\mu$P and any-dimensional architectures, we introduce a general upscaling method that, like Net2Net, copies and perturbs weights, but uses theoretically grounded, width-dependent scalings for the perturbation noise and optimizer hyperparameters. First, we prove that under zero perturbation, the upscaled model is functionally equivalent to the base model throughout training. Second, we extend the $\mu$P theory to enable infinite-width limit analysis and establish hyperparameter transfer for upscaled models, greatly reducing the tuning cost. We empirically demonstrate that this method is effective on realistic datasets and architectures." />
+<meta property="og:description" content="Modern large-scale neural networks are often trained and released in multiple sizes to accommodate diverse inference budgets. To improve efficiency, recent work has explored model upscaling: initializing larger models from trained smaller ones to accelerate convergence. However, this method can be sensitive to hyperparameters that need to be tuned at the target upscaled model size, which is prohibitively costly to do directly. It remains unclear whether tuning hyperparameters on smaller models and extrapolating via scaling laws is sound in this setting. We address this with principled approaches to width-based upscaling and efficient hyperparameter tuning in this setting. Motivated by $\mu$P and any-dimensional architectures, we introduce a general upscaling method that, like Net2Net, copies and perturbs weights, but uses theoretically grounded, width-dependent scalings for the perturbation noise and optimizer hyperparameters. First, we prove that under zero perturbation, the upscaled model is functionally equivalent to the base model throughout training. Second, we extend the $\mu$P theory to enable infinite-width limit analysis and establish hyperparameter transfer for upscaled models, greatly reducing the tuning cost. We empirically demonstrate that this method is effective on realistic datasets and architectures." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/03/mupscalingsmallmodelsPrincipledwarmstartsandhyperparametertransfer.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/03/mupscalingsmallmodelsPrincipledwarmstartsandhyperparametertransfer.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="$\mu$pscaling small models: Principled warm starts and hyperparameter transfer" />
+<script type="application/ld+json">
+{"description":"Modern large-scale neural networks are often trained and released in multiple sizes to accommodate diverse inference budgets. To improve efficiency, recent work has explored model upscaling: initializing larger models from trained smaller ones to accelerate convergence. However, this method can be sensitive to hyperparameters that need to be tuned at the target upscaled model size, which is prohibitively costly to do directly. It remains unclear whether tuning hyperparameters on smaller models and extrapolating via scaling laws is sound in this setting. We address this with principled approaches to width-based upscaling and efficient hyperparameter tuning in this setting. Motivated by $\\mu$P and any-dimensional architectures, we introduce a general upscaling method that, like Net2Net, copies and perturbs weights, but uses theoretically grounded, width-dependent scalings for the perturbation noise and optimizer hyperparameters. First, we prove that under zero perturbation, the upscaled model is functionally equivalent to the base model throughout training. Second, we extend the $\\mu$P theory to enable infinite-width limit analysis and establish hyperparameter transfer for upscaled models, greatly reducing the tuning cost. We empirically demonstrate that this method is effective on realistic datasets and architectures.","datePublished":"2026-07-03T00:00:00+00:00","dateModified":"2026-07-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/03/mupscalingsmallmodelsPrincipledwarmstartsandhyperparametertransfer.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/03/mupscalingsmallmodelsPrincipledwarmstartsandhyperparametertransfer.html","author":{"@type":"Person","name":"Yuxin Ma, Nan Chen, Mateo Díaz, Soufiane Hayou, Dmitriy Kunisky, Soledad Villar"},"@type":"BlogPosting","headline":"$\\mu$pscaling small models: Principled warm starts and hyperparameter transfer","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-03 00:00:00 +0000">07-03</time>
+  </p>
+  
+  <h1>$\mu$pscaling small models: Principled warm starts and hyperparameter transfer</h1>
+  <br>Yuxin Ma, Nan Chen, Mateo Díaz, Soufiane Hayou, Dmitriy Kunisky, Soledad Villar</h3>
+  <br> [stat.ML]
+
+  <p>Modern large-scale neural networks are often trained and released in multiple sizes to accommodate diverse inference budgets. To improve efficiency, recent work has explored model upscaling: initializing larger models from trained smaller ones to accelerate convergence. However, this method can be sensitive to hyperparameters that need to be tuned at the target upscaled model size, which is prohibitively costly to do directly. It remains unclear whether tuning hyperparameters on smaller models and extrapolating via scaling laws is sound in this setting. We address this with principled approaches to width-based upscaling and efficient hyperparameter tuning in this setting. Motivated by $\mu$P and any-dimensional architectures, we introduce a general upscaling method that, like Net2Net, copies and perturbs weights, but uses theoretically grounded, width-dependent scalings for the perturbation noise and optimizer hyperparameters. First, we prove that under zero perturbation, the upscaled model is functionally equivalent to the base model throughout training. Second, we extend the $\mu$P theory to enable infinite-width limit analysis and establish hyperparameter transfer for upscaled models, greatly reducing the tuning cost. We empirically demonstrate that this method is effective on realistic datasets and architectures.</p>
+
+<p><a href="https://arxiv.org/abs/2602.10545">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
