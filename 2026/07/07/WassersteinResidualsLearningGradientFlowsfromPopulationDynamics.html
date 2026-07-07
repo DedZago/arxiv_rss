@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Wasserstein Residuals: Learning Gradient Flows from Population Dynamics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wasserstein Residuals: Learning Gradient Flows from Population Dynamics" />
+<meta name="author" content="Markus Heinonen, Yair Shenfeld, Ricardo Baptista, Daniel Waxman, Dmitry Batenkov, Tim Cooijmans, Eli Bingham" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reconstructing population dynamics is a central problem in the physical and data sciences. Often, the dynamics are modeled as a Wasserstein gradient flow (WGF): a curve of distributions driven by an energy functional. Though there are multiple mathematical characterizations of a WGF, the dominant algorithmic approach relies on the Jordan–Kinderlehrer–Otto (JKO) scheme. JKO-based methods are inflexible to time discretisation and require solving costly optimal transport problems. We take a residual approach, enforcing the continuity equations via a non-negative loss function whose minimum is the WGF. Combined with a data-fitting divergence, this gives a single global objective. This perspective unifies several existing methods and leads to a new particle-based method, stitching, that is simulation-free and robust to large gaps between observations. We demonstrate that the stitching method achieves state-of-the-art performance across trajectory inference benchmarks. For code see github.com/BasisResearch/wasserstein-residuals." />
+<meta property="og:description" content="Reconstructing population dynamics is a central problem in the physical and data sciences. Often, the dynamics are modeled as a Wasserstein gradient flow (WGF): a curve of distributions driven by an energy functional. Though there are multiple mathematical characterizations of a WGF, the dominant algorithmic approach relies on the Jordan–Kinderlehrer–Otto (JKO) scheme. JKO-based methods are inflexible to time discretisation and require solving costly optimal transport problems. We take a residual approach, enforcing the continuity equations via a non-negative loss function whose minimum is the WGF. Combined with a data-fitting divergence, this gives a single global objective. This perspective unifies several existing methods and leads to a new particle-based method, stitching, that is simulation-free and robust to large gaps between observations. We demonstrate that the stitching method achieves state-of-the-art performance across trajectory inference benchmarks. For code see github.com/BasisResearch/wasserstein-residuals." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/07/WassersteinResidualsLearningGradientFlowsfromPopulationDynamics.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/07/WassersteinResidualsLearningGradientFlowsfromPopulationDynamics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wasserstein Residuals: Learning Gradient Flows from Population Dynamics" />
+<script type="application/ld+json">
+{"description":"Reconstructing population dynamics is a central problem in the physical and data sciences. Often, the dynamics are modeled as a Wasserstein gradient flow (WGF): a curve of distributions driven by an energy functional. Though there are multiple mathematical characterizations of a WGF, the dominant algorithmic approach relies on the Jordan–Kinderlehrer–Otto (JKO) scheme. JKO-based methods are inflexible to time discretisation and require solving costly optimal transport problems. We take a residual approach, enforcing the continuity equations via a non-negative loss function whose minimum is the WGF. Combined with a data-fitting divergence, this gives a single global objective. This perspective unifies several existing methods and leads to a new particle-based method, stitching, that is simulation-free and robust to large gaps between observations. We demonstrate that the stitching method achieves state-of-the-art performance across trajectory inference benchmarks. For code see github.com/BasisResearch/wasserstein-residuals.","datePublished":"2026-07-07T00:00:00+00:00","dateModified":"2026-07-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/07/WassersteinResidualsLearningGradientFlowsfromPopulationDynamics.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/07/WassersteinResidualsLearningGradientFlowsfromPopulationDynamics.html","author":{"@type":"Person","name":"Markus Heinonen, Yair Shenfeld, Ricardo Baptista, Daniel Waxman, Dmitry Batenkov, Tim Cooijmans, Eli Bingham"},"@type":"BlogPosting","headline":"Wasserstein Residuals: Learning Gradient Flows from Population Dynamics","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-07 00:00:00 +0000">07-07</time>
+  </p>
+  
+  <h1>Wasserstein Residuals: Learning Gradient Flows from Population Dynamics</h1>
+  <br>Markus Heinonen, Yair Shenfeld, Ricardo Baptista, Daniel Waxman, Dmitry Batenkov, Tim Cooijmans, Eli Bingham</h3>
+  <br> [stat.ML]
+
+  <p>Reconstructing population dynamics is a central problem in the physical and data sciences. Often, the dynamics are modeled as a Wasserstein gradient flow (WGF): a curve of distributions driven by an energy functional. Though there are multiple mathematical characterizations of a WGF, the dominant algorithmic approach relies on the Jordan–Kinderlehrer–Otto (JKO) scheme. JKO-based methods are inflexible to time discretisation and require solving costly optimal transport problems. We take a residual approach, enforcing the continuity equations via a non-negative loss function whose minimum is the WGF. Combined with a data-fitting divergence, this gives a single global objective. This perspective unifies several existing methods and leads to a new particle-based method, stitching, that is simulation-free and robust to large gaps between observations. We demonstrate that the stitching method achieves state-of-the-art performance across trajectory inference benchmarks. For code see github.com/BasisResearch/wasserstein-residuals.</p>
+
+<p><a href="https://arxiv.org/abs/2607.04738">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

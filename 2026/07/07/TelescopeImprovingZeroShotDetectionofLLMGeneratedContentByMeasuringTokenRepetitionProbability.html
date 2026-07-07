@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability" />
+<meta name="author" content="Christopher Nassif, Josh F. Cooper" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Distinguishing Large Language Model (LLM) generated text from human writing is a critical and difficult challenge. While LLMs are trained to write like humans, we hypothesize that this training leaves an indelible mark. LLMs develop a particularly strong aversion to token repetition very early in training. This bias persists as a ‘‘Vestigial Heuristic’’ (a developmental artifact) that is activated in LLM-generated text, separating LLM from human writing. To probe this phenomenon, we introduce Telescope Perplexity, a metric that evaluates the token repetition of the model, $P(s_i s_{1:i})$ . Our empirical investigation reveals that the Telescope Perplexity signature emerges early in pre-training, and Telescope Perplexity empirically enables highly effective zero-shot LLM detection. We show state-of-the-art or competitive performance across diverse datasets (including modern evaluation sets we introduce), reference models, and perturbation schemes with greater efficiency than other methods." />
+<meta property="og:description" content="Distinguishing Large Language Model (LLM) generated text from human writing is a critical and difficult challenge. While LLMs are trained to write like humans, we hypothesize that this training leaves an indelible mark. LLMs develop a particularly strong aversion to token repetition very early in training. This bias persists as a ‘‘Vestigial Heuristic’’ (a developmental artifact) that is activated in LLM-generated text, separating LLM from human writing. To probe this phenomenon, we introduce Telescope Perplexity, a metric that evaluates the token repetition of the model, $P(s_i s_{1:i})$ . Our empirical investigation reveals that the Telescope Perplexity signature emerges early in pre-training, and Telescope Perplexity empirically enables highly effective zero-shot LLM detection. We show state-of-the-art or competitive performance across diverse datasets (including modern evaluation sets we introduce), reference models, and perturbation schemes with greater efficiency than other methods." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/07/TelescopeImprovingZeroShotDetectionofLLMGeneratedContentByMeasuringTokenRepetitionProbability.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/07/TelescopeImprovingZeroShotDetectionofLLMGeneratedContentByMeasuringTokenRepetitionProbability.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability" />
+<script type="application/ld+json">
+{"description":"Distinguishing Large Language Model (LLM) generated text from human writing is a critical and difficult challenge. While LLMs are trained to write like humans, we hypothesize that this training leaves an indelible mark. LLMs develop a particularly strong aversion to token repetition very early in training. This bias persists as a ‘‘Vestigial Heuristic’’ (a developmental artifact) that is activated in LLM-generated text, separating LLM from human writing. To probe this phenomenon, we introduce Telescope Perplexity, a metric that evaluates the token repetition of the model, $P(s_i s_{1:i})$ . Our empirical investigation reveals that the Telescope Perplexity signature emerges early in pre-training, and Telescope Perplexity empirically enables highly effective zero-shot LLM detection. We show state-of-the-art or competitive performance across diverse datasets (including modern evaluation sets we introduce), reference models, and perturbation schemes with greater efficiency than other methods.","datePublished":"2026-07-07T00:00:00+00:00","dateModified":"2026-07-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/07/TelescopeImprovingZeroShotDetectionofLLMGeneratedContentByMeasuringTokenRepetitionProbability.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/07/TelescopeImprovingZeroShotDetectionofLLMGeneratedContentByMeasuringTokenRepetitionProbability.html","author":{"@type":"Person","name":"Christopher Nassif, Josh F. Cooper"},"@type":"BlogPosting","headline":"Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-07 00:00:00 +0000">07-07</time>
+  </p>
+  
+  <h1>Telescope: Improving Zero Shot Detection of LLM Generated Content By Measuring Token Repetition Probability</h1>
+  <br>Christopher Nassif, Josh F. Cooper</h3>
+  <br> [stat.ML]
+
+  <table>
+  <tbody>
+    <tr>
+      <td>Distinguishing Large Language Model (LLM) generated text from human writing is a critical and difficult challenge. While LLMs are trained to write like humans, we hypothesize that this training leaves an indelible mark. LLMs develop a particularly strong aversion to token repetition very early in training. This bias persists as a ‘‘Vestigial Heuristic’’ (a developmental artifact) that is activated in LLM-generated text, separating LLM from human writing. To probe this phenomenon, we introduce Telescope Perplexity, a metric that evaluates the token repetition of the model, $P(s_i</td>
+      <td>s_{1:i})$ . Our empirical investigation reveals that the Telescope Perplexity signature emerges early in pre-training, and Telescope Perplexity empirically enables highly effective zero-shot LLM detection. We show state-of-the-art or competitive performance across diverse datasets (including modern evaluation sets we introduce), reference models, and perturbation schemes with greater efficiency than other methods.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://arxiv.org/abs/2607.04061">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

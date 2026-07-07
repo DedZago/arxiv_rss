@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Attention is Just Another Name for Coupling? A Fast-Slow ODE Perspective on Hierarchical Pretraining</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Attention is Just Another Name for Coupling? A Fast-Slow ODE Perspective on Hierarchical Pretraining" />
+<meta name="author" content="Zhengyuan Gao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We re-interpret Transformer pretraining as a fast-slow, singularly perturbed flow along depth, with untied weights as its non-autonomous feature. The linearised dynamics is a depth-ordered product of layer maps. Along a token-homogeneous reference trajectory, the linearised layer factorises along the eigenbasis of a frozen attention kernel. Past a computable saturation depth, the flow factors through the block coarse-graining – in other words, running the layers is running the coarse variable, dually. Weight perturbations supported on the decaying bundle move neither the persistent component of the distinguished trajectory nor the frozen kernel to first order, so the framework partitions parameter space into visible and invisible directions, with the cross-block coupling of the slow path sitting entirely on the visible side. How large a gate the slow path can carry is bounded by a stability margin. On the data side: if block emissions follow an exponential family, block-mean pooling captures all the information the slow path can use; but if neighbouring blocks carry no shared structure, no cross-block channel can help the prediction, and the gate amplitude is invisible in the prediction risk. Stability delimits what the architecture may do; the data decides what it will." />
+<meta property="og:description" content="We re-interpret Transformer pretraining as a fast-slow, singularly perturbed flow along depth, with untied weights as its non-autonomous feature. The linearised dynamics is a depth-ordered product of layer maps. Along a token-homogeneous reference trajectory, the linearised layer factorises along the eigenbasis of a frozen attention kernel. Past a computable saturation depth, the flow factors through the block coarse-graining – in other words, running the layers is running the coarse variable, dually. Weight perturbations supported on the decaying bundle move neither the persistent component of the distinguished trajectory nor the frozen kernel to first order, so the framework partitions parameter space into visible and invisible directions, with the cross-block coupling of the slow path sitting entirely on the visible side. How large a gate the slow path can carry is bounded by a stability margin. On the data side: if block emissions follow an exponential family, block-mean pooling captures all the information the slow path can use; but if neighbouring blocks carry no shared structure, no cross-block channel can help the prediction, and the gate amplitude is invisible in the prediction risk. Stability delimits what the architecture may do; the data decides what it will." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/07/AttentionisJustAnotherNameforCouplingAFastSlowODEPerspectiveonHierarchicalPretraining.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/07/AttentionisJustAnotherNameforCouplingAFastSlowODEPerspectiveonHierarchicalPretraining.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Attention is Just Another Name for Coupling? A Fast-Slow ODE Perspective on Hierarchical Pretraining" />
+<script type="application/ld+json">
+{"description":"We re-interpret Transformer pretraining as a fast-slow, singularly perturbed flow along depth, with untied weights as its non-autonomous feature. The linearised dynamics is a depth-ordered product of layer maps. Along a token-homogeneous reference trajectory, the linearised layer factorises along the eigenbasis of a frozen attention kernel. Past a computable saturation depth, the flow factors through the block coarse-graining – in other words, running the layers is running the coarse variable, dually. Weight perturbations supported on the decaying bundle move neither the persistent component of the distinguished trajectory nor the frozen kernel to first order, so the framework partitions parameter space into visible and invisible directions, with the cross-block coupling of the slow path sitting entirely on the visible side. How large a gate the slow path can carry is bounded by a stability margin. On the data side: if block emissions follow an exponential family, block-mean pooling captures all the information the slow path can use; but if neighbouring blocks carry no shared structure, no cross-block channel can help the prediction, and the gate amplitude is invisible in the prediction risk. Stability delimits what the architecture may do; the data decides what it will.","datePublished":"2026-07-07T00:00:00+00:00","dateModified":"2026-07-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/07/AttentionisJustAnotherNameforCouplingAFastSlowODEPerspectiveonHierarchicalPretraining.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/07/AttentionisJustAnotherNameforCouplingAFastSlowODEPerspectiveonHierarchicalPretraining.html","author":{"@type":"Person","name":"Zhengyuan Gao"},"@type":"BlogPosting","headline":"Attention is Just Another Name for Coupling? A Fast-Slow ODE Perspective on Hierarchical Pretraining","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-07 00:00:00 +0000">07-07</time>
+  </p>
+  
+  <h1>Attention is Just Another Name for Coupling? A Fast-Slow ODE Perspective on Hierarchical Pretraining</h1>
+  <br>Zhengyuan Gao</h3>
+  <br> [stat.ML]
+
+  <p>We re-interpret Transformer pretraining as a fast-slow, singularly perturbed flow along depth, with untied weights as its non-autonomous feature. The linearised dynamics is a depth-ordered product of layer maps. Along a token-homogeneous reference trajectory, the linearised layer factorises along the eigenbasis of a frozen attention kernel. Past a computable saturation depth, the flow factors through the block coarse-graining – in other words, running the layers is running the coarse variable, dually. Weight perturbations supported on the decaying bundle move neither the persistent component of the distinguished trajectory nor the frozen kernel to first order, so the framework partitions parameter space into visible and invisible directions, with the cross-block coupling of the slow path sitting entirely on the visible side. How large a gate the slow path can carry is bounded by a stability margin. On the data side: if block emissions follow an exponential family, block-mean pooling captures all the information the slow path can use; but if neighbouring blocks carry no shared structure, no cross-block channel can help the prediction, and the gate amplitude is invisible in the prediction risk. Stability delimits what the architecture may do; the data decides what it will.</p>
+
+<p><a href="https://arxiv.org/abs/2606.16730">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

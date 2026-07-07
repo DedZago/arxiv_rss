@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Shapley-based Data Valuation for LLM Alignment via Sequential Preference Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Shapley-based Data Valuation for LLM Alignment via Sequential Preference Optimization" />
+<meta name="author" content="Mélissa Tamine, Otmane Sakhi, Benjamin Heymann, Maxime Vono, Patrick Loiseau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data valuation is a natural framework for understanding which preference datasets matter most when aligning a Large Language Model (LLM) using multiple sources. The standard game-theoretic approach assigns each dataset a contribution score via the Shapley value. In practice, however, Shapley-based valuation is computationally prohibitive because it requires fine-tuning a separate model for every possible coalition of preference datasets, i.e., an exponential number of alignments. We address this challenge for a broad family of preference-optimization objectives, including DPO and IPO, that learn directly from log-policy ratios with respect to a reference policy. We introduce Sequential Preference Optimization, an offline procedure that applies existing preference optimization methods sequentially, source by source, updating the current policy after each dataset. Under exact optimization, this procedure yields an additive composition rule in reward space and an equivalent arithmetic composition rule in policy space. This observation enables an efficient approximation of the Shapley value: we train one model per preference dataset and reconstruct coalition policies at inference time from the singleton models, reducing the required alignments from exponential to linear in the number of sources. Leveraging this property, we compute Shapley values for several real-world preference datasets and reveal how each source drives model alignment." />
+<meta property="og:description" content="Data valuation is a natural framework for understanding which preference datasets matter most when aligning a Large Language Model (LLM) using multiple sources. The standard game-theoretic approach assigns each dataset a contribution score via the Shapley value. In practice, however, Shapley-based valuation is computationally prohibitive because it requires fine-tuning a separate model for every possible coalition of preference datasets, i.e., an exponential number of alignments. We address this challenge for a broad family of preference-optimization objectives, including DPO and IPO, that learn directly from log-policy ratios with respect to a reference policy. We introduce Sequential Preference Optimization, an offline procedure that applies existing preference optimization methods sequentially, source by source, updating the current policy after each dataset. Under exact optimization, this procedure yields an additive composition rule in reward space and an equivalent arithmetic composition rule in policy space. This observation enables an efficient approximation of the Shapley value: we train one model per preference dataset and reconstruct coalition policies at inference time from the singleton models, reducing the required alignments from exponential to linear in the number of sources. Leveraging this property, we compute Shapley values for several real-world preference datasets and reveal how each source drives model alignment." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/07/ShapleybasedDataValuationforLLMAlignmentviaSequentialPreferenceOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/07/ShapleybasedDataValuationforLLMAlignmentviaSequentialPreferenceOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Shapley-based Data Valuation for LLM Alignment via Sequential Preference Optimization" />
+<script type="application/ld+json">
+{"description":"Data valuation is a natural framework for understanding which preference datasets matter most when aligning a Large Language Model (LLM) using multiple sources. The standard game-theoretic approach assigns each dataset a contribution score via the Shapley value. In practice, however, Shapley-based valuation is computationally prohibitive because it requires fine-tuning a separate model for every possible coalition of preference datasets, i.e., an exponential number of alignments. We address this challenge for a broad family of preference-optimization objectives, including DPO and IPO, that learn directly from log-policy ratios with respect to a reference policy. We introduce Sequential Preference Optimization, an offline procedure that applies existing preference optimization methods sequentially, source by source, updating the current policy after each dataset. Under exact optimization, this procedure yields an additive composition rule in reward space and an equivalent arithmetic composition rule in policy space. This observation enables an efficient approximation of the Shapley value: we train one model per preference dataset and reconstruct coalition policies at inference time from the singleton models, reducing the required alignments from exponential to linear in the number of sources. Leveraging this property, we compute Shapley values for several real-world preference datasets and reveal how each source drives model alignment.","datePublished":"2026-07-07T00:00:00+00:00","dateModified":"2026-07-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/07/ShapleybasedDataValuationforLLMAlignmentviaSequentialPreferenceOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/07/ShapleybasedDataValuationforLLMAlignmentviaSequentialPreferenceOptimization.html","author":{"@type":"Person","name":"Mélissa Tamine, Otmane Sakhi, Benjamin Heymann, Maxime Vono, Patrick Loiseau"},"@type":"BlogPosting","headline":"Shapley-based Data Valuation for LLM Alignment via Sequential Preference Optimization","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-07 00:00:00 +0000">07-07</time>
+  </p>
+  
+  <h1>Shapley-based Data Valuation for LLM Alignment via Sequential Preference Optimization</h1>
+  <br>Mélissa Tamine, Otmane Sakhi, Benjamin Heymann, Maxime Vono, Patrick Loiseau</h3>
+  <br> [stat.ML]
+
+  <p>Data valuation is a natural framework for understanding which preference datasets matter most when aligning a Large Language Model (LLM) using multiple sources. The standard game-theoretic approach assigns each dataset a contribution score via the Shapley value. In practice, however, Shapley-based valuation is computationally prohibitive because it requires fine-tuning a separate model for every possible coalition of preference datasets, i.e., an exponential number of alignments. We address this challenge for a broad family of preference-optimization objectives, including DPO and IPO, that learn directly from log-policy ratios with respect to a reference policy. We introduce Sequential Preference Optimization, an offline procedure that applies existing preference optimization methods sequentially, source by source, updating the current policy after each dataset. Under exact optimization, this procedure yields an additive composition rule in reward space and an equivalent arithmetic composition rule in policy space. This observation enables an efficient approximation of the Shapley value: we train one model per preference dataset and reconstruct coalition policies at inference time from the singleton models, reducing the required alignments from exponential to linear in the number of sources. Leveraging this property, we compute Shapley values for several real-world preference datasets and reveal how each source drives model alignment.</p>
+
+<p><a href="https://arxiv.org/abs/2512.15765">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

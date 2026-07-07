@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>kindling: A Higher-Level torch Interface for Generating, Training, and Tuning Neural Networks in R</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="kindling: A Higher-Level torch Interface for Generating, Training, and Tuning Neural Networks in R" />
+<meta name="author" content="Antoine Soetewey , Joshua Marie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="{kindling} is an R package that provides a higher-level interface to {torch}, R’s native implementation of PyTorch, for defining, training, and tuning neural networks. It supports multilayer perceptrons and recurrent architectures (RNN, LSTM, GRU) while reducing the boilerplate typically required to write {torch} model definitions and training loops by hand. The package is organized around three levels of abstraction: code-generation functions that return inspectable, unevaluated {torch::nn_module()} expressions; direct-training functions that fit a model from a formula and data frame; and {tidymodels}-registered model specifications that let neural networks be fit, tuned, and evaluated using the {tune}, {dials}, {recipes}, and {workflows} infrastructure that {tidymodels} users already rely on for other model types. This design lets analysts move from exploratory training to systematic hyperparameter search without leaving the {tidymodels} ecosystem, while retaining the ability to inspect or modify the generated model code rather than treating it as a black box." />
+<meta property="og:description" content="{kindling} is an R package that provides a higher-level interface to {torch}, R’s native implementation of PyTorch, for defining, training, and tuning neural networks. It supports multilayer perceptrons and recurrent architectures (RNN, LSTM, GRU) while reducing the boilerplate typically required to write {torch} model definitions and training loops by hand. The package is organized around three levels of abstraction: code-generation functions that return inspectable, unevaluated {torch::nn_module()} expressions; direct-training functions that fit a model from a formula and data frame; and {tidymodels}-registered model specifications that let neural networks be fit, tuned, and evaluated using the {tune}, {dials}, {recipes}, and {workflows} infrastructure that {tidymodels} users already rely on for other model types. This design lets analysts move from exploratory training to systematic hyperparameter search without leaving the {tidymodels} ecosystem, while retaining the ability to inspect or modify the generated model code rather than treating it as a black box." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/07/kindlingAHigherLeveltorchInterfaceforGeneratingTrainingandTuningNeuralNetworksinR.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/07/kindlingAHigherLeveltorchInterfaceforGeneratingTrainingandTuningNeuralNetworksinR.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="kindling: A Higher-Level torch Interface for Generating, Training, and Tuning Neural Networks in R" />
+<script type="application/ld+json">
+{"description":"{kindling} is an R package that provides a higher-level interface to {torch}, R’s native implementation of PyTorch, for defining, training, and tuning neural networks. It supports multilayer perceptrons and recurrent architectures (RNN, LSTM, GRU) while reducing the boilerplate typically required to write {torch} model definitions and training loops by hand. The package is organized around three levels of abstraction: code-generation functions that return inspectable, unevaluated {torch::nn_module()} expressions; direct-training functions that fit a model from a formula and data frame; and {tidymodels}-registered model specifications that let neural networks be fit, tuned, and evaluated using the {tune}, {dials}, {recipes}, and {workflows} infrastructure that {tidymodels} users already rely on for other model types. This design lets analysts move from exploratory training to systematic hyperparameter search without leaving the {tidymodels} ecosystem, while retaining the ability to inspect or modify the generated model code rather than treating it as a black box.","datePublished":"2026-07-07T00:00:00+00:00","dateModified":"2026-07-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/07/kindlingAHigherLeveltorchInterfaceforGeneratingTrainingandTuningNeuralNetworksinR.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/07/kindlingAHigherLeveltorchInterfaceforGeneratingTrainingandTuningNeuralNetworksinR.html","author":{"@type":"Person","name":"Antoine Soetewey , Joshua Marie"},"@type":"BlogPosting","headline":"kindling: A Higher-Level torch Interface for Generating, Training, and Tuning Neural Networks in R","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-07 00:00:00 +0000">07-07</time>
+  </p>
+  
+  <h1>kindling: A Higher-Level torch Interface for Generating, Training, and Tuning Neural Networks in R</h1>
+  <br>Antoine Soetewey , Joshua Marie</h3>
+  <br> [stat.CO]
+
+  <p>{kindling} is an R package that provides a higher-level interface to {torch}, R’s native implementation of PyTorch, for defining, training, and tuning neural networks. It supports multilayer perceptrons and recurrent architectures (RNN, LSTM, GRU) while reducing the boilerplate typically required to write {torch} model definitions and training loops by hand. The package is organized around three levels of abstraction: code-generation functions that return inspectable, unevaluated {torch::nn_module()} expressions; direct-training functions that fit a model from a formula and data frame; and {tidymodels}-registered model specifications that let neural networks be fit, tuned, and evaluated using the {tune}, {dials}, {recipes}, and {workflows} infrastructure that {tidymodels} users already rely on for other model types. This design lets analysts move from exploratory training to systematic hyperparameter search without leaving the {tidymodels} ecosystem, while retaining the ability to inspect or modify the generated model code rather than treating it as a black box.</p>
+
+<p><a href="https://arxiv.org/abs/2607.03832">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
