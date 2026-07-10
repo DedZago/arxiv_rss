@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks" />
+<meta name="author" content="Hong Zhao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Backpropagation (BP) dominates deep learning training, but its reliance on gradients brings inherent troubles – vanishing and exploding gradients. The pursuit of gradient-free methods has long been a goal in the field of artificial intelligence. This paper shows that indeed the simplest Monte Carlo algorithm implemented on a single GPU – randomly mutate a parameter, keep it if the loss decreases, otherwise retry – can practically train deep networks. This gradient-free method does not even need common techniques such as batch normalization or residual connections to directly train sufficiently deep networks. More remarkably, its flexibility extends to several nontrivial scenarios: it enables pure pruning training, supports discrete weights, accommodates unconventional transfer functions such as Gaussian, and reveals the substantial redundancy of deep networks. We have demonstrated its feasibility on deep networks with more than 20 layers, single-hidden-layer wide networks with up to 16,384 hidden neurons, and even a simple Transformer architecture trained on both image classification (MNIST) and character-level language modeling (Tiny Shakespeare). This simple gradient-free method may offer a complementary perspective for understanding the self-organization and learning mechanisms of neural networks, and also provides an alternative route for building physically inspired deep learning systems." />
+<meta property="og:description" content="Backpropagation (BP) dominates deep learning training, but its reliance on gradients brings inherent troubles – vanishing and exploding gradients. The pursuit of gradient-free methods has long been a goal in the field of artificial intelligence. This paper shows that indeed the simplest Monte Carlo algorithm implemented on a single GPU – randomly mutate a parameter, keep it if the loss decreases, otherwise retry – can practically train deep networks. This gradient-free method does not even need common techniques such as batch normalization or residual connections to directly train sufficiently deep networks. More remarkably, its flexibility extends to several nontrivial scenarios: it enables pure pruning training, supports discrete weights, accommodates unconventional transfer functions such as Gaussian, and reveals the substantial redundancy of deep networks. We have demonstrated its feasibility on deep networks with more than 20 layers, single-hidden-layer wide networks with up to 16,384 hidden neurons, and even a simple Transformer architecture trained on both image classification (MNIST) and character-level language modeling (Tiny Shakespeare). This simple gradient-free method may offer a complementary perspective for understanding the self-organization and learning mechanisms of neural networks, and also provides an alternative route for building physically inspired deep learning systems." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/10/BeyondBackpropagationMonteCarloMethodCanTrainDeepNeuralNetworks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/10/BeyondBackpropagationMonteCarloMethodCanTrainDeepNeuralNetworks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks" />
+<script type="application/ld+json">
+{"description":"Backpropagation (BP) dominates deep learning training, but its reliance on gradients brings inherent troubles – vanishing and exploding gradients. The pursuit of gradient-free methods has long been a goal in the field of artificial intelligence. This paper shows that indeed the simplest Monte Carlo algorithm implemented on a single GPU – randomly mutate a parameter, keep it if the loss decreases, otherwise retry – can practically train deep networks. This gradient-free method does not even need common techniques such as batch normalization or residual connections to directly train sufficiently deep networks. More remarkably, its flexibility extends to several nontrivial scenarios: it enables pure pruning training, supports discrete weights, accommodates unconventional transfer functions such as Gaussian, and reveals the substantial redundancy of deep networks. We have demonstrated its feasibility on deep networks with more than 20 layers, single-hidden-layer wide networks with up to 16,384 hidden neurons, and even a simple Transformer architecture trained on both image classification (MNIST) and character-level language modeling (Tiny Shakespeare). This simple gradient-free method may offer a complementary perspective for understanding the self-organization and learning mechanisms of neural networks, and also provides an alternative route for building physically inspired deep learning systems.","datePublished":"2026-07-10T00:00:00+00:00","dateModified":"2026-07-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/10/BeyondBackpropagationMonteCarloMethodCanTrainDeepNeuralNetworks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/10/BeyondBackpropagationMonteCarloMethodCanTrainDeepNeuralNetworks.html","author":{"@type":"Person","name":"Hong Zhao"},"@type":"BlogPosting","headline":"Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-10 00:00:00 +0000">07-10</time>
+  </p>
+  
+  <h1>Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks</h1>
+  <br>Hong Zhao</h3>
+  <br> [stat.ML]
+
+  <p>Backpropagation (BP) dominates deep learning training, but its reliance on gradients brings inherent troubles – vanishing and exploding gradients. The pursuit of gradient-free methods has long been a goal in the field of artificial intelligence. This paper shows that indeed the simplest Monte Carlo algorithm implemented on a single GPU – randomly mutate a parameter, keep it if the loss decreases, otherwise retry – can practically train deep networks. This gradient-free method does not even need common techniques such as batch normalization or residual connections to directly train sufficiently deep networks. More remarkably, its flexibility extends to several nontrivial scenarios: it enables pure pruning training, supports discrete weights, accommodates unconventional transfer functions such as Gaussian, and reveals the substantial redundancy of deep networks. We have demonstrated its feasibility on deep networks with more than 20 layers, single-hidden-layer wide networks with up to 16,384 hidden neurons, and even a simple Transformer architecture trained on both image classification (MNIST) and character-level language modeling (Tiny Shakespeare). This simple gradient-free method may offer a complementary perspective for understanding the self-organization and learning mechanisms of neural networks, and also provides an alternative route for building physically inspired deep learning systems.</p>
+
+<p><a href="https://arxiv.org/abs/2607.08406">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
