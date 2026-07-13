@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A censoring-aware target interface for tabular foundation models in survival prediction</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A censoring-aware target interface for tabular foundation models in survival prediction" />
+<meta name="author" content="Yue Lyu, Steven H. Lin, Xuelin Huang, Ziyi Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Time-to-event prediction from tabular patient data is central to prognosis and biomedical decision support, but right-censored follow-up prevents direct use of ordinary regression labels. Tabular foundation models offer reusable prediction machinery for modest heterogeneous datasets, yet they generally assume fully observed outcomes. We introduce SurvFM-RMST, a censoring-aware target-interface framework that converts survival outcomes into jackknife pseudo-observation targets for restricted mean survival time, enabling multiple tabular backbones to perform horizon-specific RMST regression without survival-specific fine-tuning. In controlled simulations with known conditional RMST, SurvFM-RMST recovered restricted event-free time accurately, and pseudo-RMST targets outperformed naive restricted observed-time and event-only targets. Across 36 eligible static SurvSet datasets, SurvFM backbones were competitive with established survival and RMST-regression comparators, though relative performance varied by endpoint, horizon and practical constraints. Predicted RMST further stratified held-out patients into groups with ordered observed event-free time and event enrichment. Overall, the results support pseudo-RMST target construction as a portable interface between censored survival data and tabular foundation-model prediction." />
+<meta property="og:description" content="Time-to-event prediction from tabular patient data is central to prognosis and biomedical decision support, but right-censored follow-up prevents direct use of ordinary regression labels. Tabular foundation models offer reusable prediction machinery for modest heterogeneous datasets, yet they generally assume fully observed outcomes. We introduce SurvFM-RMST, a censoring-aware target-interface framework that converts survival outcomes into jackknife pseudo-observation targets for restricted mean survival time, enabling multiple tabular backbones to perform horizon-specific RMST regression without survival-specific fine-tuning. In controlled simulations with known conditional RMST, SurvFM-RMST recovered restricted event-free time accurately, and pseudo-RMST targets outperformed naive restricted observed-time and event-only targets. Across 36 eligible static SurvSet datasets, SurvFM backbones were competitive with established survival and RMST-regression comparators, though relative performance varied by endpoint, horizon and practical constraints. Predicted RMST further stratified held-out patients into groups with ordered observed event-free time and event enrichment. Overall, the results support pseudo-RMST target construction as a portable interface between censored survival data and tabular foundation-model prediction." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/13/Acensoringawaretargetinterfacefortabularfoundationmodelsinsurvivalprediction.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/13/Acensoringawaretargetinterfacefortabularfoundationmodelsinsurvivalprediction.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A censoring-aware target interface for tabular foundation models in survival prediction" />
+<script type="application/ld+json">
+{"description":"Time-to-event prediction from tabular patient data is central to prognosis and biomedical decision support, but right-censored follow-up prevents direct use of ordinary regression labels. Tabular foundation models offer reusable prediction machinery for modest heterogeneous datasets, yet they generally assume fully observed outcomes. We introduce SurvFM-RMST, a censoring-aware target-interface framework that converts survival outcomes into jackknife pseudo-observation targets for restricted mean survival time, enabling multiple tabular backbones to perform horizon-specific RMST regression without survival-specific fine-tuning. In controlled simulations with known conditional RMST, SurvFM-RMST recovered restricted event-free time accurately, and pseudo-RMST targets outperformed naive restricted observed-time and event-only targets. Across 36 eligible static SurvSet datasets, SurvFM backbones were competitive with established survival and RMST-regression comparators, though relative performance varied by endpoint, horizon and practical constraints. Predicted RMST further stratified held-out patients into groups with ordered observed event-free time and event enrichment. Overall, the results support pseudo-RMST target construction as a portable interface between censored survival data and tabular foundation-model prediction.","datePublished":"2026-07-13T00:00:00+00:00","dateModified":"2026-07-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/13/Acensoringawaretargetinterfacefortabularfoundationmodelsinsurvivalprediction.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/13/Acensoringawaretargetinterfacefortabularfoundationmodelsinsurvivalprediction.html","author":{"@type":"Person","name":"Yue Lyu, Steven H. Lin, Xuelin Huang, Ziyi Li"},"@type":"BlogPosting","headline":"A censoring-aware target interface for tabular foundation models in survival prediction","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-13 00:00:00 +0000">07-13</time>
+  </p>
+  
+  <h1>A censoring-aware target interface for tabular foundation models in survival prediction</h1>
+  <br>Yue Lyu, Steven H. Lin, Xuelin Huang, Ziyi Li</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Time-to-event prediction from tabular patient data is central to prognosis and biomedical decision support, but right-censored follow-up prevents direct use of ordinary regression labels. Tabular foundation models offer reusable prediction machinery for modest heterogeneous datasets, yet they generally assume fully observed outcomes. We introduce SurvFM-RMST, a censoring-aware target-interface framework that converts survival outcomes into jackknife pseudo-observation targets for restricted mean survival time, enabling multiple tabular backbones to perform horizon-specific RMST regression without survival-specific fine-tuning. In controlled simulations with known conditional RMST, SurvFM-RMST recovered restricted event-free time accurately, and pseudo-RMST targets outperformed naive restricted observed-time and event-only targets. Across 36 eligible static SurvSet datasets, SurvFM backbones were competitive with established survival and RMST-regression comparators, though relative performance varied by endpoint, horizon and practical constraints. Predicted RMST further stratified held-out patients into groups with ordered observed event-free time and event enrichment. Overall, the results support pseudo-RMST target construction as a portable interface between censored survival data and tabular foundation-model prediction.</p>
+
+<p><a href="https://arxiv.org/abs/2607.09577">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

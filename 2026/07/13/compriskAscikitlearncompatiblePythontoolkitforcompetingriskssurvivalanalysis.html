@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>comprisk: A scikit-learn-compatible Python toolkit for competing-risks survival analysis</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="comprisk: A scikit-learn-compatible Python toolkit for competing-risks survival analysis" />
+<meta name="author" content="Sunny Yang, Weiyan Zhao, Wanqi Zhao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Medical time-to-event data are frequently subject to competing risks, where the occurrence of one terminal event precludes the others and standard survival methods that treat competing events as censoring yield biased absolute-risk estimates. Correct analysis instead targets the cause-specific cumulative incidence function (CIF). This methodology has been available to applied researchers almost exclusively through R packages, forcing Python-based machine-learning workflows into a Python-to-R round trip. We present comprisk, a scikit-learn-compatible Python toolkit that consolidates the canonical competing-risks methods (a scalable competing-risks random survival forest together with Fine-Gray subdistribution-hazard regression including a penalized variant, cause-specific Cox regression, the Aalen-Johansen CIF estimator, and Gray’s K-sample test) behind a single, consistent API, and adds competing-risks-aware model evaluation (inverse probability of censoring weighted time-dependent AUC and Brier score, cause-specific concordance indices with closed-form confidence intervals, and calibration curves). Every estimator is validated numerically against the established R reference implementations. The forest uses a histogram-based, numba-compiled split kernel that fits 10-22x faster than randomForestSRC at comparable discrimination on real electronic-health-record cohorts and scales to n = 10^6 on a consumer CPU. comprisk is distributed on PyPI and lets applied researchers perform correct and scalable competing-risks analysis entirely within the Python scientific stack." />
+<meta property="og:description" content="Medical time-to-event data are frequently subject to competing risks, where the occurrence of one terminal event precludes the others and standard survival methods that treat competing events as censoring yield biased absolute-risk estimates. Correct analysis instead targets the cause-specific cumulative incidence function (CIF). This methodology has been available to applied researchers almost exclusively through R packages, forcing Python-based machine-learning workflows into a Python-to-R round trip. We present comprisk, a scikit-learn-compatible Python toolkit that consolidates the canonical competing-risks methods (a scalable competing-risks random survival forest together with Fine-Gray subdistribution-hazard regression including a penalized variant, cause-specific Cox regression, the Aalen-Johansen CIF estimator, and Gray’s K-sample test) behind a single, consistent API, and adds competing-risks-aware model evaluation (inverse probability of censoring weighted time-dependent AUC and Brier score, cause-specific concordance indices with closed-form confidence intervals, and calibration curves). Every estimator is validated numerically against the established R reference implementations. The forest uses a histogram-based, numba-compiled split kernel that fits 10-22x faster than randomForestSRC at comparable discrimination on real electronic-health-record cohorts and scales to n = 10^6 on a consumer CPU. comprisk is distributed on PyPI and lets applied researchers perform correct and scalable competing-risks analysis entirely within the Python scientific stack." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/13/compriskAscikitlearncompatiblePythontoolkitforcompetingriskssurvivalanalysis.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/13/compriskAscikitlearncompatiblePythontoolkitforcompetingriskssurvivalanalysis.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="comprisk: A scikit-learn-compatible Python toolkit for competing-risks survival analysis" />
+<script type="application/ld+json">
+{"description":"Medical time-to-event data are frequently subject to competing risks, where the occurrence of one terminal event precludes the others and standard survival methods that treat competing events as censoring yield biased absolute-risk estimates. Correct analysis instead targets the cause-specific cumulative incidence function (CIF). This methodology has been available to applied researchers almost exclusively through R packages, forcing Python-based machine-learning workflows into a Python-to-R round trip. We present comprisk, a scikit-learn-compatible Python toolkit that consolidates the canonical competing-risks methods (a scalable competing-risks random survival forest together with Fine-Gray subdistribution-hazard regression including a penalized variant, cause-specific Cox regression, the Aalen-Johansen CIF estimator, and Gray’s K-sample test) behind a single, consistent API, and adds competing-risks-aware model evaluation (inverse probability of censoring weighted time-dependent AUC and Brier score, cause-specific concordance indices with closed-form confidence intervals, and calibration curves). Every estimator is validated numerically against the established R reference implementations. The forest uses a histogram-based, numba-compiled split kernel that fits 10-22x faster than randomForestSRC at comparable discrimination on real electronic-health-record cohorts and scales to n = 10^6 on a consumer CPU. comprisk is distributed on PyPI and lets applied researchers perform correct and scalable competing-risks analysis entirely within the Python scientific stack.","datePublished":"2026-07-13T00:00:00+00:00","dateModified":"2026-07-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/13/compriskAscikitlearncompatiblePythontoolkitforcompetingriskssurvivalanalysis.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/13/compriskAscikitlearncompatiblePythontoolkitforcompetingriskssurvivalanalysis.html","author":{"@type":"Person","name":"Sunny Yang, Weiyan Zhao, Wanqi Zhao"},"@type":"BlogPosting","headline":"comprisk: A scikit-learn-compatible Python toolkit for competing-risks survival analysis","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-13 00:00:00 +0000">07-13</time>
+  </p>
+  
+  <h1>comprisk: A scikit-learn-compatible Python toolkit for competing-risks survival analysis</h1>
+  <br>Sunny Yang, Weiyan Zhao, Wanqi Zhao</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>Medical time-to-event data are frequently subject to competing risks, where the occurrence of one terminal event precludes the others and standard survival methods that treat competing events as censoring yield biased absolute-risk estimates. Correct analysis instead targets the cause-specific cumulative incidence function (CIF). This methodology has been available to applied researchers almost exclusively through R packages, forcing Python-based machine-learning workflows into a Python-to-R round trip. We present comprisk, a scikit-learn-compatible Python toolkit that consolidates the canonical competing-risks methods (a scalable competing-risks random survival forest together with Fine-Gray subdistribution-hazard regression including a penalized variant, cause-specific Cox regression, the Aalen-Johansen CIF estimator, and Gray’s K-sample test) behind a single, consistent API, and adds competing-risks-aware model evaluation (inverse probability of censoring weighted time-dependent AUC and Brier score, cause-specific concordance indices with closed-form confidence intervals, and calibration curves). Every estimator is validated numerically against the established R reference implementations. The forest uses a histogram-based, numba-compiled split kernel that fits 10-22x faster than randomForestSRC at comparable discrimination on real electronic-health-record cohorts and scales to n = 10^6 on a consumer CPU. comprisk is distributed on PyPI and lets applied researchers perform correct and scalable competing-risks analysis entirely within the Python scientific stack.</p>
+
+<p><a href="https://arxiv.org/abs/2607.09431">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
