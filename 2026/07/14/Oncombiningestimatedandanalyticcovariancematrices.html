@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On combining estimated and analytic covariance matrices</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On combining estimated and analytic covariance matrices" />
+<meta name="author" content="Alan Heavens, Lorne Whiteway, Elena Sellentin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The statistical analysis of cosmological data often assumes a Gaussian sampling distribution and relies on covariance matrices estimated from simulations. In this setting, the likelihood function of the data is not Gaussian but is instead a multivariate Student-t distribution, arising from marginalisation over an inverse-Wishart distribution for the true covariance matrix. This framework, introduced by Sellentin &amp; Heavens (2016) and extended by Percival et al. (2022), provides a principled drop-in replacement to the Gaussian likelihood with Hartlap correction (Hartlap et al. 2007). The latter removes bias in the precision matrix; it is still widely used, despite failing to reproduce the heavy tails of the true distribution (thus yielding inaccurate probabilities, especially in the case of tensions between datasets). In practice, cosmological analyses frequently involve additional Gaussian error contributions, for example from instrumental noise, foregrounds, super-sample covariance, or emulator uncertainties. The resulting likelihood function is a convolution of the Sellentin-Heavens or Percival likelihoods with an extra Gaussian contribution, and does not have a simple expression. In this note, we derive an accurate approximation for the combined likelihood function, another multivariate Student-t distribution which inherits the heavy tails. The parameters of the Student-t distribution are determined by matching the covariance and multivariate kurtosis to those of the true distribution. We also include a slightly more expensive but fast sampling algorithm, based on the mixture representation of the Student-t distribution, which avoids the approximation altogether, but is not the drop-in replacement for the normal Gaussian or Hartlap likelihood function that the Student-t approximation in this paper provides. (Abridged)" />
+<meta property="og:description" content="The statistical analysis of cosmological data often assumes a Gaussian sampling distribution and relies on covariance matrices estimated from simulations. In this setting, the likelihood function of the data is not Gaussian but is instead a multivariate Student-t distribution, arising from marginalisation over an inverse-Wishart distribution for the true covariance matrix. This framework, introduced by Sellentin &amp; Heavens (2016) and extended by Percival et al. (2022), provides a principled drop-in replacement to the Gaussian likelihood with Hartlap correction (Hartlap et al. 2007). The latter removes bias in the precision matrix; it is still widely used, despite failing to reproduce the heavy tails of the true distribution (thus yielding inaccurate probabilities, especially in the case of tensions between datasets). In practice, cosmological analyses frequently involve additional Gaussian error contributions, for example from instrumental noise, foregrounds, super-sample covariance, or emulator uncertainties. The resulting likelihood function is a convolution of the Sellentin-Heavens or Percival likelihoods with an extra Gaussian contribution, and does not have a simple expression. In this note, we derive an accurate approximation for the combined likelihood function, another multivariate Student-t distribution which inherits the heavy tails. The parameters of the Student-t distribution are determined by matching the covariance and multivariate kurtosis to those of the true distribution. We also include a slightly more expensive but fast sampling algorithm, based on the mixture representation of the Student-t distribution, which avoids the approximation altogether, but is not the drop-in replacement for the normal Gaussian or Hartlap likelihood function that the Student-t approximation in this paper provides. (Abridged)" />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/14/Oncombiningestimatedandanalyticcovariancematrices.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/14/Oncombiningestimatedandanalyticcovariancematrices.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On combining estimated and analytic covariance matrices" />
+<script type="application/ld+json">
+{"description":"The statistical analysis of cosmological data often assumes a Gaussian sampling distribution and relies on covariance matrices estimated from simulations. In this setting, the likelihood function of the data is not Gaussian but is instead a multivariate Student-t distribution, arising from marginalisation over an inverse-Wishart distribution for the true covariance matrix. This framework, introduced by Sellentin &amp; Heavens (2016) and extended by Percival et al. (2022), provides a principled drop-in replacement to the Gaussian likelihood with Hartlap correction (Hartlap et al. 2007). The latter removes bias in the precision matrix; it is still widely used, despite failing to reproduce the heavy tails of the true distribution (thus yielding inaccurate probabilities, especially in the case of tensions between datasets). In practice, cosmological analyses frequently involve additional Gaussian error contributions, for example from instrumental noise, foregrounds, super-sample covariance, or emulator uncertainties. The resulting likelihood function is a convolution of the Sellentin-Heavens or Percival likelihoods with an extra Gaussian contribution, and does not have a simple expression. In this note, we derive an accurate approximation for the combined likelihood function, another multivariate Student-t distribution which inherits the heavy tails. The parameters of the Student-t distribution are determined by matching the covariance and multivariate kurtosis to those of the true distribution. We also include a slightly more expensive but fast sampling algorithm, based on the mixture representation of the Student-t distribution, which avoids the approximation altogether, but is not the drop-in replacement for the normal Gaussian or Hartlap likelihood function that the Student-t approximation in this paper provides. (Abridged)","datePublished":"2026-07-14T00:00:00+00:00","dateModified":"2026-07-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/14/Oncombiningestimatedandanalyticcovariancematrices.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/14/Oncombiningestimatedandanalyticcovariancematrices.html","author":{"@type":"Person","name":"Alan Heavens, Lorne Whiteway, Elena Sellentin"},"@type":"BlogPosting","headline":"On combining estimated and analytic covariance matrices","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-14 00:00:00 +0000">07-14</time>
+  </p>
+  
+  <h1>On combining estimated and analytic covariance matrices</h1>
+  <br>Alan Heavens, Lorne Whiteway, Elena Sellentin</h3>
+  <br> [stat.ME]
+
+  <p>The statistical analysis of cosmological data often assumes a Gaussian sampling distribution and relies on covariance matrices estimated from simulations. In this setting, the likelihood function of the data is not Gaussian but is instead a multivariate Student-t distribution, arising from marginalisation over an inverse-Wishart distribution for the true covariance matrix. This framework, introduced by Sellentin &amp; Heavens (2016) and extended by Percival et al. (2022), provides a principled drop-in replacement to the Gaussian likelihood with Hartlap correction (Hartlap et al. 2007). The latter removes bias in the precision matrix; it is still widely used, despite failing to reproduce the heavy tails of the true distribution (thus yielding inaccurate probabilities, especially in the case of tensions between datasets). In practice, cosmological analyses frequently involve additional Gaussian error contributions, for example from instrumental noise, foregrounds, super-sample covariance, or emulator uncertainties. The resulting likelihood function is a convolution of the Sellentin-Heavens or Percival likelihoods with an extra Gaussian contribution, and does not have a simple expression. In this note, we derive an accurate approximation for the combined likelihood function, another multivariate Student-t distribution which inherits the heavy tails. The parameters of the Student-t distribution are determined by matching the covariance and multivariate kurtosis to those of the true distribution. We also include a slightly more expensive but fast sampling algorithm, based on the mixture representation of the Student-t distribution, which avoids the approximation altogether, but is not the drop-in replacement for the normal Gaussian or Hartlap likelihood function that the Student-t approximation in this paper provides. (Abridged)</p>
+
+<p><a href="https://arxiv.org/abs/2604.19463">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
