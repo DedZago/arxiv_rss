@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Avoiding unsafe sets when training with Langevin Dynamics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Avoiding unsafe sets when training with Langevin Dynamics" />
+<meta name="author" content="Adam M. Oberman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Training a model with noisy gradient descent can be idealized as overdamped Langevin dynamics, and a natural safety question is to bound the probability $\nu_t(\mathcal{A}_H) = \mathbb{P}(Q_t \in \mathcal{A}_H)$ that the trajectory lies in a designated failure region $\mathcal{A}_H$. We study this for a smooth, strongly convex loss in $d$ dimensions, with $\mathcal{A}_H$ separated from the minimizer by an energy gap. At the end of training, the equilibrium mass $\pi(\mathcal{A}_H)$ is exponentially small in $d$, with a complementary energy-barrier rate when the noise is small. Along the trajectory, a shape-free bound $\nu_t(\mathcal{A}_H) \le \pi(\mathcal{A}_H)(1 + \sqrt{\chi_0^2/\pi(\mathcal{A}_H)}\,e^{-mt})$ shows the in-set probability relaxes to (twice) the static value after a burn-in of order $d$, using only the global spectral gap $m$. A worked Ornstein-Uhlenbeck example shows this burn-in is necessary: an angular slice of the equilibrium shell can transiently swell by a factor exponential in $d$, though its equilibrium mass is tiny. To rule this out we introduce a local relaxation rate, defined through the spectral measure of the region’s centered indicator rather than a Dirichlet-form Rayleigh quotient. For geometrically isolated regions this rate exceeds the global one, shrinking the burn-in, and with a maximum-principle ceiling it caps the trajectory probability uniformly in time. Strong convexity sets how fast training relaxes, but the shape of the unsafe set decides whether the trajectory bulges through it on the way to equilibrium." />
+<meta property="og:description" content="Training a model with noisy gradient descent can be idealized as overdamped Langevin dynamics, and a natural safety question is to bound the probability $\nu_t(\mathcal{A}_H) = \mathbb{P}(Q_t \in \mathcal{A}_H)$ that the trajectory lies in a designated failure region $\mathcal{A}_H$. We study this for a smooth, strongly convex loss in $d$ dimensions, with $\mathcal{A}_H$ separated from the minimizer by an energy gap. At the end of training, the equilibrium mass $\pi(\mathcal{A}_H)$ is exponentially small in $d$, with a complementary energy-barrier rate when the noise is small. Along the trajectory, a shape-free bound $\nu_t(\mathcal{A}_H) \le \pi(\mathcal{A}_H)(1 + \sqrt{\chi_0^2/\pi(\mathcal{A}_H)}\,e^{-mt})$ shows the in-set probability relaxes to (twice) the static value after a burn-in of order $d$, using only the global spectral gap $m$. A worked Ornstein-Uhlenbeck example shows this burn-in is necessary: an angular slice of the equilibrium shell can transiently swell by a factor exponential in $d$, though its equilibrium mass is tiny. To rule this out we introduce a local relaxation rate, defined through the spectral measure of the region’s centered indicator rather than a Dirichlet-form Rayleigh quotient. For geometrically isolated regions this rate exceeds the global one, shrinking the burn-in, and with a maximum-principle ceiling it caps the trajectory probability uniformly in time. Strong convexity sets how fast training relaxes, but the shape of the unsafe set decides whether the trajectory bulges through it on the way to equilibrium." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/16/AvoidingunsafesetswhentrainingwithLangevinDynamics.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/16/AvoidingunsafesetswhentrainingwithLangevinDynamics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Avoiding unsafe sets when training with Langevin Dynamics" />
+<script type="application/ld+json">
+{"description":"Training a model with noisy gradient descent can be idealized as overdamped Langevin dynamics, and a natural safety question is to bound the probability $\\nu_t(\\mathcal{A}_H) = \\mathbb{P}(Q_t \\in \\mathcal{A}_H)$ that the trajectory lies in a designated failure region $\\mathcal{A}_H$. We study this for a smooth, strongly convex loss in $d$ dimensions, with $\\mathcal{A}_H$ separated from the minimizer by an energy gap. At the end of training, the equilibrium mass $\\pi(\\mathcal{A}_H)$ is exponentially small in $d$, with a complementary energy-barrier rate when the noise is small. Along the trajectory, a shape-free bound $\\nu_t(\\mathcal{A}_H) \\le \\pi(\\mathcal{A}_H)(1 + \\sqrt{\\chi_0^2/\\pi(\\mathcal{A}_H)}\\,e^{-mt})$ shows the in-set probability relaxes to (twice) the static value after a burn-in of order $d$, using only the global spectral gap $m$. A worked Ornstein-Uhlenbeck example shows this burn-in is necessary: an angular slice of the equilibrium shell can transiently swell by a factor exponential in $d$, though its equilibrium mass is tiny. To rule this out we introduce a local relaxation rate, defined through the spectral measure of the region’s centered indicator rather than a Dirichlet-form Rayleigh quotient. For geometrically isolated regions this rate exceeds the global one, shrinking the burn-in, and with a maximum-principle ceiling it caps the trajectory probability uniformly in time. Strong convexity sets how fast training relaxes, but the shape of the unsafe set decides whether the trajectory bulges through it on the way to equilibrium.","datePublished":"2026-07-16T00:00:00+00:00","dateModified":"2026-07-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/16/AvoidingunsafesetswhentrainingwithLangevinDynamics.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/16/AvoidingunsafesetswhentrainingwithLangevinDynamics.html","author":{"@type":"Person","name":"Adam M. Oberman"},"@type":"BlogPosting","headline":"Avoiding unsafe sets when training with Langevin Dynamics","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-16 00:00:00 +0000">07-16</time>
+  </p>
+  
+  <h1>Avoiding unsafe sets when training with Langevin Dynamics</h1>
+  <br>Adam M. Oberman</h3>
+  <br> [stat.ML]
+
+  <p>Training a model with noisy gradient descent can be idealized as overdamped Langevin dynamics, and a natural safety question is to bound the probability $\nu_t(\mathcal{A}_H) = \mathbb{P}(Q_t \in \mathcal{A}_H)$ that the trajectory lies in a designated failure region $\mathcal{A}_H$. We study this for a smooth, strongly convex loss in $d$ dimensions, with $\mathcal{A}_H$ separated from the minimizer by an energy gap. At the end of training, the equilibrium mass $\pi(\mathcal{A}_H)$ is exponentially small in $d$, with a complementary energy-barrier rate when the noise is small. Along the trajectory, a shape-free bound $\nu_t(\mathcal{A}_H) \le \pi(\mathcal{A}_H)(1 + \sqrt{\chi_0^2/\pi(\mathcal{A}_H)}\,e^{-mt})$ shows the in-set probability relaxes to (twice) the static value after a burn-in of order $d$, using only the global spectral gap $m$. A worked Ornstein-Uhlenbeck example shows this burn-in is necessary: an angular slice of the equilibrium shell can transiently swell by a factor exponential in $d$, though its equilibrium mass is tiny. To rule this out we introduce a local relaxation rate, defined through the spectral measure of the region’s centered indicator rather than a Dirichlet-form Rayleigh quotient. For geometrically isolated regions this rate exceeds the global one, shrinking the burn-in, and with a maximum-principle ceiling it caps the trajectory probability uniformly in time. Strong convexity sets how fast training relaxes, but the shape of the unsafe set decides whether the trajectory bulges through it on the way to equilibrium.</p>
+
+<p><a href="https://arxiv.org/abs/2607.07538">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
