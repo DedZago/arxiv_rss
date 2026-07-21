@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dropout and Random Gradient Masking Are Asymptotically Equivalent in Large ResNets</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Dropout and Random Gradient Masking Are Asymptotically Equivalent in Large ResNets" />
+<meta name="author" content="Javier Maass, Lénaïc Chizat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Dropout and Random Gradient Masking (RaM) are two training techniques used to improve performance in deep learning. Both techniques inject randomness into the training dynamics, but in significantly different ways: dropout applies random masks to the activations in the forward pass, whereas RaM leaves the forward pass unchanged and instead masks the gradients. In particular, the noise induced by RaM in the parameter updates is unbiased, so standard explanations for the effectiveness of dropout, such as the penalization effect or the prevention of co-adaptation between neurons, do not apply to RaM. In this work, we show that the difference between the two methods disappears for ResNets in the large depth and width asymptotics: in the complete feature learning regime, they both converge to the same large-scale limiting dynamics. This asymptotic equivalence holds for several variants of dropout and RaM, including layerwise dropout as used in stochastic-depth ResNets, albeit at slower quantitative rates. In fact, we also show that several of these variants collapse to the same limit asymptotically." />
+<meta property="og:description" content="Dropout and Random Gradient Masking (RaM) are two training techniques used to improve performance in deep learning. Both techniques inject randomness into the training dynamics, but in significantly different ways: dropout applies random masks to the activations in the forward pass, whereas RaM leaves the forward pass unchanged and instead masks the gradients. In particular, the noise induced by RaM in the parameter updates is unbiased, so standard explanations for the effectiveness of dropout, such as the penalization effect or the prevention of co-adaptation between neurons, do not apply to RaM. In this work, we show that the difference between the two methods disappears for ResNets in the large depth and width asymptotics: in the complete feature learning regime, they both converge to the same large-scale limiting dynamics. This asymptotic equivalence holds for several variants of dropout and RaM, including layerwise dropout as used in stochastic-depth ResNets, albeit at slower quantitative rates. In fact, we also show that several of these variants collapse to the same limit asymptotically." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/21/DropoutandRandomGradientMaskingAreAsymptoticallyEquivalentinLargeResNets.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/21/DropoutandRandomGradientMaskingAreAsymptoticallyEquivalentinLargeResNets.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dropout and Random Gradient Masking Are Asymptotically Equivalent in Large ResNets" />
+<script type="application/ld+json">
+{"description":"Dropout and Random Gradient Masking (RaM) are two training techniques used to improve performance in deep learning. Both techniques inject randomness into the training dynamics, but in significantly different ways: dropout applies random masks to the activations in the forward pass, whereas RaM leaves the forward pass unchanged and instead masks the gradients. In particular, the noise induced by RaM in the parameter updates is unbiased, so standard explanations for the effectiveness of dropout, such as the penalization effect or the prevention of co-adaptation between neurons, do not apply to RaM. In this work, we show that the difference between the two methods disappears for ResNets in the large depth and width asymptotics: in the complete feature learning regime, they both converge to the same large-scale limiting dynamics. This asymptotic equivalence holds for several variants of dropout and RaM, including layerwise dropout as used in stochastic-depth ResNets, albeit at slower quantitative rates. In fact, we also show that several of these variants collapse to the same limit asymptotically.","datePublished":"2026-07-21T00:00:00+00:00","dateModified":"2026-07-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/21/DropoutandRandomGradientMaskingAreAsymptoticallyEquivalentinLargeResNets.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/21/DropoutandRandomGradientMaskingAreAsymptoticallyEquivalentinLargeResNets.html","author":{"@type":"Person","name":"Javier Maass, Lénaïc Chizat"},"@type":"BlogPosting","headline":"Dropout and Random Gradient Masking Are Asymptotically Equivalent in Large ResNets","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-21 00:00:00 +0000">07-21</time>
+  </p>
+  
+  <h1>Dropout and Random Gradient Masking Are Asymptotically Equivalent in Large ResNets</h1>
+  <br>Javier Maass, Lénaïc Chizat</h3>
+  <br> [stat.ML]
+
+  <p>Dropout and Random Gradient Masking (RaM) are two training techniques used to improve performance in deep learning. Both techniques inject randomness into the training dynamics, but in significantly different ways: dropout applies random masks to the activations in the forward pass, whereas RaM leaves the forward pass unchanged and instead masks the gradients. In particular, the noise induced by RaM in the parameter updates is unbiased, so standard explanations for the effectiveness of dropout, such as the penalization effect or the prevention of co-adaptation between neurons, do not apply to RaM. In this work, we show that the difference between the two methods disappears for ResNets in the large depth and width asymptotics: in the complete feature learning regime, they both converge to the same large-scale limiting dynamics. This asymptotic equivalence holds for several variants of dropout and RaM, including layerwise dropout as used in stochastic-depth ResNets, albeit at slower quantitative rates. In fact, we also show that several of these variants collapse to the same limit asymptotically.</p>
+
+<p><a href="https://arxiv.org/abs/2607.16761">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

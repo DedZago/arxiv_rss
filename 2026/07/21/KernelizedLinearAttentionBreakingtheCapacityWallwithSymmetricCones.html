@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones" />
+<meta name="author" content="Ayoub Ghriss, Sourav Chakraborty" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Linear attention promises constant-time recurrent inference but degrades sharply on associative recall. We formulate attention recall as a spherical-packing problem and introduce Kernelized Linear Attention Activations (KATA), a framework whose feature maps are derived from first principles by certifying nonnegative attention weights through a self-dual homogeneous cone. Building on this observation, we show that rank-one positive semi-definite (PSD) features offer a favorable capacity–interference tradeoff. KATA recovers a parameter-free convex output gate and characterizes associative capacity through the Welch interference floor. For tolerances above this floor, KATA enlarges the state without adding parameters and admits spherical codes with exponentially many keys in the projection dimension. We implement KATA as fused Triton kernels at two operating points: a flash-attention-style forward up to ${\sim}1.6\times$ FlashAttention-2 throughput, and an exact $O(T)$ chunked-state form that reaches ${\sim}11\times$ FlashAttention-2 forward throughput at $131$k tokens. An associative scan of the first-order feature lowers the inter-chunk recurrence depth to $O(\log(T/C))$ for chunk size $C$ and averages ${\sim}2.4\times$ the throughput of a matched sequential linear-attention baseline. On long-range MQAR and repeated-key overwrite, several KATA variants outperform Gated DeltaNet, with parameter counts and state sizes reported alongside accuracy. Induction preserves near-perfect recall, while kernel benchmarks show that the maps can be implemented efficiently. KATA retains $0.985$ MQAR at a $16\times$ out-of-distribution length, approaching the softmax with roughly one quarter of the KV-cache entries. Experiments on 340M-parameter LLMs reveal a feature-dependent fluency trade-off and clarify how positional embeddings, delta rules, and decay gates interact with feature geometry." />
+<meta property="og:description" content="Linear attention promises constant-time recurrent inference but degrades sharply on associative recall. We formulate attention recall as a spherical-packing problem and introduce Kernelized Linear Attention Activations (KATA), a framework whose feature maps are derived from first principles by certifying nonnegative attention weights through a self-dual homogeneous cone. Building on this observation, we show that rank-one positive semi-definite (PSD) features offer a favorable capacity–interference tradeoff. KATA recovers a parameter-free convex output gate and characterizes associative capacity through the Welch interference floor. For tolerances above this floor, KATA enlarges the state without adding parameters and admits spherical codes with exponentially many keys in the projection dimension. We implement KATA as fused Triton kernels at two operating points: a flash-attention-style forward up to ${\sim}1.6\times$ FlashAttention-2 throughput, and an exact $O(T)$ chunked-state form that reaches ${\sim}11\times$ FlashAttention-2 forward throughput at $131$k tokens. An associative scan of the first-order feature lowers the inter-chunk recurrence depth to $O(\log(T/C))$ for chunk size $C$ and averages ${\sim}2.4\times$ the throughput of a matched sequential linear-attention baseline. On long-range MQAR and repeated-key overwrite, several KATA variants outperform Gated DeltaNet, with parameter counts and state sizes reported alongside accuracy. Induction preserves near-perfect recall, while kernel benchmarks show that the maps can be implemented efficiently. KATA retains $0.985$ MQAR at a $16\times$ out-of-distribution length, approaching the softmax with roughly one quarter of the KV-cache entries. Experiments on 340M-parameter LLMs reveal a feature-dependent fluency trade-off and clarify how positional embeddings, delta rules, and decay gates interact with feature geometry." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/21/KernelizedLinearAttentionBreakingtheCapacityWallwithSymmetricCones.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/21/KernelizedLinearAttentionBreakingtheCapacityWallwithSymmetricCones.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones" />
+<script type="application/ld+json">
+{"description":"Linear attention promises constant-time recurrent inference but degrades sharply on associative recall. We formulate attention recall as a spherical-packing problem and introduce Kernelized Linear Attention Activations (KATA), a framework whose feature maps are derived from first principles by certifying nonnegative attention weights through a self-dual homogeneous cone. Building on this observation, we show that rank-one positive semi-definite (PSD) features offer a favorable capacity–interference tradeoff. KATA recovers a parameter-free convex output gate and characterizes associative capacity through the Welch interference floor. For tolerances above this floor, KATA enlarges the state without adding parameters and admits spherical codes with exponentially many keys in the projection dimension. We implement KATA as fused Triton kernels at two operating points: a flash-attention-style forward up to ${\\sim}1.6\\times$ FlashAttention-2 throughput, and an exact $O(T)$ chunked-state form that reaches ${\\sim}11\\times$ FlashAttention-2 forward throughput at $131$k tokens. An associative scan of the first-order feature lowers the inter-chunk recurrence depth to $O(\\log(T/C))$ for chunk size $C$ and averages ${\\sim}2.4\\times$ the throughput of a matched sequential linear-attention baseline. On long-range MQAR and repeated-key overwrite, several KATA variants outperform Gated DeltaNet, with parameter counts and state sizes reported alongside accuracy. Induction preserves near-perfect recall, while kernel benchmarks show that the maps can be implemented efficiently. KATA retains $0.985$ MQAR at a $16\\times$ out-of-distribution length, approaching the softmax with roughly one quarter of the KV-cache entries. Experiments on 340M-parameter LLMs reveal a feature-dependent fluency trade-off and clarify how positional embeddings, delta rules, and decay gates interact with feature geometry.","datePublished":"2026-07-21T00:00:00+00:00","dateModified":"2026-07-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/21/KernelizedLinearAttentionBreakingtheCapacityWallwithSymmetricCones.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/21/KernelizedLinearAttentionBreakingtheCapacityWallwithSymmetricCones.html","author":{"@type":"Person","name":"Ayoub Ghriss, Sourav Chakraborty"},"@type":"BlogPosting","headline":"Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-21 00:00:00 +0000">07-21</time>
+  </p>
+  
+  <h1>Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones</h1>
+  <br>Ayoub Ghriss, Sourav Chakraborty</h3>
+  <br> [stat.ML]
+
+  <p>Linear attention promises constant-time recurrent inference but degrades sharply on associative recall. We formulate attention recall as a spherical-packing problem and introduce Kernelized Linear Attention Activations (KATA), a framework whose feature maps are derived from first principles by certifying nonnegative attention weights through a self-dual homogeneous cone. Building on this observation, we show that rank-one positive semi-definite (PSD) features offer a favorable capacity–interference tradeoff. KATA recovers a parameter-free convex output gate and characterizes associative capacity through the Welch interference floor. For tolerances above this floor, KATA enlarges the state without adding parameters and admits spherical codes with exponentially many keys in the projection dimension. We implement KATA as fused Triton kernels at two operating points: a flash-attention-style forward up to ${\sim}1.6\times$ FlashAttention-2 throughput, and an exact $O(T)$ chunked-state form that reaches ${\sim}11\times$ FlashAttention-2 forward throughput at $131$k tokens. An associative scan of the first-order feature lowers the inter-chunk recurrence depth to $O(\log(T/C))$ for chunk size $C$ and averages ${\sim}2.4\times$ the throughput of a matched sequential linear-attention baseline. On long-range MQAR and repeated-key overwrite, several KATA variants outperform Gated DeltaNet, with parameter counts and state sizes reported alongside accuracy. Induction preserves near-perfect recall, while kernel benchmarks show that the maps can be implemented efficiently. KATA retains $0.985$ MQAR at a $16\times$ out-of-distribution length, approaching the softmax with roughly one quarter of the KV-cache entries. Experiments on 340M-parameter LLMs reveal a feature-dependent fluency trade-off and clarify how positional embeddings, delta rules, and decay gates interact with feature geometry.</p>
+
+<p><a href="https://arxiv.org/abs/2607.17419">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

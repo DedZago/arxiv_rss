@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Truncation Blind Spot: How Decoding Strategies Systematically Exclude Human-Like Token Choices</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Truncation Blind Spot: How Decoding Strategies Systematically Exclude Human-Like Token Choices" />
+<meta name="author" content="Esteban Garces Arias, Nurzhan Sapargali, Christian Heumann, Matthias A{\ss}enmacher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Why does machine-generated text remain detectable? We trace the answer to the decoding stage: standard strategies such as top-$k$ and nucleus sampling restrict generation to high-probability tokens, while human writers routinely choose words that are contextually apt yet rank low under a model’s next-token distribution. Truncation therefore renders a measurable share of human word choices unreachable; we call this set the truncation blind spot. Across five open models and three domains, 8–18\% of human-selected tokens fall outside common truncation boundaries, with content words excluded at 2.9 times the rate of function words. As a consequence, simple classifiers using two features separate 1.8 million machine generations from human text at mean AUC-ROC near 0.97, and detectability tracks truncation intensity rather than model scale, architecture, or alignment. Probability-floor samplers substantially narrow the blind spot, and generation experiments confirm the exclusion–detectability link out of sample. Code, data, and the measurement harness are released at https://github.com/EstebanGarces/human_vs_machine." />
+<meta property="og:description" content="Why does machine-generated text remain detectable? We trace the answer to the decoding stage: standard strategies such as top-$k$ and nucleus sampling restrict generation to high-probability tokens, while human writers routinely choose words that are contextually apt yet rank low under a model’s next-token distribution. Truncation therefore renders a measurable share of human word choices unreachable; we call this set the truncation blind spot. Across five open models and three domains, 8–18\% of human-selected tokens fall outside common truncation boundaries, with content words excluded at 2.9 times the rate of function words. As a consequence, simple classifiers using two features separate 1.8 million machine generations from human text at mean AUC-ROC near 0.97, and detectability tracks truncation intensity rather than model scale, architecture, or alignment. Probability-floor samplers substantially narrow the blind spot, and generation experiments confirm the exclusion–detectability link out of sample. Code, data, and the measurement harness are released at https://github.com/EstebanGarces/human_vs_machine." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/21/TheTruncationBlindSpotHowDecodingStrategiesSystematicallyExcludeHumanLikeTokenChoices.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/21/TheTruncationBlindSpotHowDecodingStrategiesSystematicallyExcludeHumanLikeTokenChoices.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Truncation Blind Spot: How Decoding Strategies Systematically Exclude Human-Like Token Choices" />
+<script type="application/ld+json">
+{"description":"Why does machine-generated text remain detectable? We trace the answer to the decoding stage: standard strategies such as top-$k$ and nucleus sampling restrict generation to high-probability tokens, while human writers routinely choose words that are contextually apt yet rank low under a model’s next-token distribution. Truncation therefore renders a measurable share of human word choices unreachable; we call this set the truncation blind spot. Across five open models and three domains, 8–18\\% of human-selected tokens fall outside common truncation boundaries, with content words excluded at 2.9 times the rate of function words. As a consequence, simple classifiers using two features separate 1.8 million machine generations from human text at mean AUC-ROC near 0.97, and detectability tracks truncation intensity rather than model scale, architecture, or alignment. Probability-floor samplers substantially narrow the blind spot, and generation experiments confirm the exclusion–detectability link out of sample. Code, data, and the measurement harness are released at https://github.com/EstebanGarces/human_vs_machine.","datePublished":"2026-07-21T00:00:00+00:00","dateModified":"2026-07-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/21/TheTruncationBlindSpotHowDecodingStrategiesSystematicallyExcludeHumanLikeTokenChoices.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/21/TheTruncationBlindSpotHowDecodingStrategiesSystematicallyExcludeHumanLikeTokenChoices.html","author":{"@type":"Person","name":"Esteban Garces Arias, Nurzhan Sapargali, Christian Heumann, Matthias A{\\ss}enmacher"},"@type":"BlogPosting","headline":"The Truncation Blind Spot: How Decoding Strategies Systematically Exclude Human-Like Token Choices","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-21 00:00:00 +0000">07-21</time>
+  </p>
+  
+  <h1>The Truncation Blind Spot: How Decoding Strategies Systematically Exclude Human-Like Token Choices</h1>
+  <br>Esteban Garces Arias, Nurzhan Sapargali, Christian Heumann, Matthias A{\ss}enmacher</h3>
+  <br> [stat.ML]
+
+  <p>Why does machine-generated text remain detectable? We trace the answer to the decoding stage: standard strategies such as top-$k$ and nucleus sampling restrict generation to high-probability tokens, while human writers routinely choose words that are contextually apt yet rank low under a model’s next-token distribution. Truncation therefore renders a measurable share of human word choices unreachable; we call this set the truncation blind spot. Across five open models and three domains, 8–18\% of human-selected tokens fall outside common truncation boundaries, with content words excluded at 2.9 times the rate of function words. As a consequence, simple classifiers using two features separate 1.8 million machine generations from human text at mean AUC-ROC near 0.97, and detectability tracks truncation intensity rather than model scale, architecture, or alignment. Probability-floor samplers substantially narrow the blind spot, and generation experiments confirm the exclusion–detectability link out of sample. Code, data, and the measurement harness are released at https://github.com/EstebanGarces/human_vs_machine.</p>
+
+<p><a href="https://arxiv.org/abs/2603.18482">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

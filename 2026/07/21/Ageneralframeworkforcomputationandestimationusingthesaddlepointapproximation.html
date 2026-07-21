@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A general framework for computation and estimation using the saddlepoint approximation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A general framework for computation and estimation using the saddlepoint approximation" />
+<meta name="author" content="Godrick Oketch, Rachel M. Fewster, Jesse Goodman" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The saddlepoint approximation provides highly accurate approximations to probability density and mass functions using only the corresponding moment generating functions (MGFs). Recent work has increasingly seen the saddlepoint approximation applied to likelihood functions, enabling likelihood-based inference in models where exact likelihoods are intractable. However, existing implementations have largely been developed on a model-by-model basis, and the methodology remains underutilized because of the conceptual and computational challenges of working with MGFs. We introduce a unified framework for model construction and computation using the saddlepoint approximation. The framework is based on a collection of model-building operations that preserve access to MGFs while allowing complex distributions to be constructed from simpler components. With these components, users need only provide a high-level specification of the model structure, from which the software automatically assembles the necessary generating functions, saddlepoints, and gradients, and performs the optimization of the saddlepoint likelihood. We also introduce a diagnostic that quantifies the difference between saddlepoint and exact likelihood estimates, even when the exact likelihood is unavailable. The framework is implemented in the R package saddlepoint and provides fast, convenient computation of parameter estimates, standard errors, and the discrepancy diagnostic. Numerous examples illustrate the scope and flexibility of the approach." />
+<meta property="og:description" content="The saddlepoint approximation provides highly accurate approximations to probability density and mass functions using only the corresponding moment generating functions (MGFs). Recent work has increasingly seen the saddlepoint approximation applied to likelihood functions, enabling likelihood-based inference in models where exact likelihoods are intractable. However, existing implementations have largely been developed on a model-by-model basis, and the methodology remains underutilized because of the conceptual and computational challenges of working with MGFs. We introduce a unified framework for model construction and computation using the saddlepoint approximation. The framework is based on a collection of model-building operations that preserve access to MGFs while allowing complex distributions to be constructed from simpler components. With these components, users need only provide a high-level specification of the model structure, from which the software automatically assembles the necessary generating functions, saddlepoints, and gradients, and performs the optimization of the saddlepoint likelihood. We also introduce a diagnostic that quantifies the difference between saddlepoint and exact likelihood estimates, even when the exact likelihood is unavailable. The framework is implemented in the R package saddlepoint and provides fast, convenient computation of parameter estimates, standard errors, and the discrepancy diagnostic. Numerous examples illustrate the scope and flexibility of the approach." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/21/Ageneralframeworkforcomputationandestimationusingthesaddlepointapproximation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/21/Ageneralframeworkforcomputationandestimationusingthesaddlepointapproximation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A general framework for computation and estimation using the saddlepoint approximation" />
+<script type="application/ld+json">
+{"description":"The saddlepoint approximation provides highly accurate approximations to probability density and mass functions using only the corresponding moment generating functions (MGFs). Recent work has increasingly seen the saddlepoint approximation applied to likelihood functions, enabling likelihood-based inference in models where exact likelihoods are intractable. However, existing implementations have largely been developed on a model-by-model basis, and the methodology remains underutilized because of the conceptual and computational challenges of working with MGFs. We introduce a unified framework for model construction and computation using the saddlepoint approximation. The framework is based on a collection of model-building operations that preserve access to MGFs while allowing complex distributions to be constructed from simpler components. With these components, users need only provide a high-level specification of the model structure, from which the software automatically assembles the necessary generating functions, saddlepoints, and gradients, and performs the optimization of the saddlepoint likelihood. We also introduce a diagnostic that quantifies the difference between saddlepoint and exact likelihood estimates, even when the exact likelihood is unavailable. The framework is implemented in the R package saddlepoint and provides fast, convenient computation of parameter estimates, standard errors, and the discrepancy diagnostic. Numerous examples illustrate the scope and flexibility of the approach.","datePublished":"2026-07-21T00:00:00+00:00","dateModified":"2026-07-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/21/Ageneralframeworkforcomputationandestimationusingthesaddlepointapproximation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/21/Ageneralframeworkforcomputationandestimationusingthesaddlepointapproximation.html","author":{"@type":"Person","name":"Godrick Oketch, Rachel M. Fewster, Jesse Goodman"},"@type":"BlogPosting","headline":"A general framework for computation and estimation using the saddlepoint approximation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-21 00:00:00 +0000">07-21</time>
+  </p>
+  
+  <h1>A general framework for computation and estimation using the saddlepoint approximation</h1>
+  <br>Godrick Oketch, Rachel M. Fewster, Jesse Goodman</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>The saddlepoint approximation provides highly accurate approximations to probability density and mass functions using only the corresponding moment generating functions (MGFs). Recent work has increasingly seen the saddlepoint approximation applied to likelihood functions, enabling likelihood-based inference in models where exact likelihoods are intractable. However, existing implementations have largely been developed on a model-by-model basis, and the methodology remains underutilized because of the conceptual and computational challenges of working with MGFs. We introduce a unified framework for model construction and computation using the saddlepoint approximation. The framework is based on a collection of model-building operations that preserve access to MGFs while allowing complex distributions to be constructed from simpler components. With these components, users need only provide a high-level specification of the model structure, from which the software automatically assembles the necessary generating functions, saddlepoints, and gradients, and performs the optimization of the saddlepoint likelihood. We also introduce a diagnostic that quantifies the difference between saddlepoint and exact likelihood estimates, even when the exact likelihood is unavailable. The framework is implemented in the R package saddlepoint and provides fast, convenient computation of parameter estimates, standard errors, and the discrepancy diagnostic. Numerous examples illustrate the scope and flexibility of the approach.</p>
+
+<p><a href="https://arxiv.org/abs/2607.17464">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
