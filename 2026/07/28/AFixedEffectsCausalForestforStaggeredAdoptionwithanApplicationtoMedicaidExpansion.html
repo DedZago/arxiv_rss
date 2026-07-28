@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Fixed-Effects Causal Forest for Staggered Adoption, with an Application to Medicaid Expansion</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Fixed-Effects Causal Forest for Staggered Adoption, with an Application to Medicaid Expansion" />
+<meta name="author" content="Harry Aytug" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Difference-in-differences with staggered adoption identifies group-time average treatment effects ATT(g,t) by comparing each cohort to units not yet treated, which avoids the “forbidden comparisons” that bias two-way fixed-effects estimators when effects are heterogeneous. This paper studies the covariate-conditional version of that object, tau_{g,t}(x), and estimates it with a fixed-effects causal forest. Within each (g,t) comparison block, the outcome and treatment are residualized on unit and period fixed effects inside each tree node, and honest causal trees split on treatment-effect heterogeneity in the covariates. The estimand is not new: Hatamyar, Kreif, Rocha and Huber (2023) introduced it using a doubly-robust R-learner, and Imai, Qin and Yanagi (2023) study it for a single continuous covariate. What we add is a different way to estimate it. Where those methods remove confounding by modeling nuisance functions, we remove it by differencing out unit and period effects within each tree node, following the fixed-effects residualization of Kattenberg, Scheer and Thiel (2023) and Gavrilova, Langorgen and Zoutman (2025) and carrying it into the Callaway-Sant’Anna group-time structure. In Monte Carlo experiments the estimator is the only forest-based method that stays unbiased and correctly covered for the overall effect under staggered timing with cohort-varying effects; two-way fixed effects and a pooled causal forest inherit large forbidden-comparison bias. We apply the method to the Callaway-Sant’Anna minimum-wage panel as a validation and to the staggered county-level rollout of the ACA Medicaid expansion, where it recovers an average 2.25 percentage-point fall in the uninsured rate and a conditional surface on which poorer and lower-income counties gained substantially more coverage – heterogeneity measured along socioeconomic covariates that are not lags of the outcome." />
+<meta property="og:description" content="Difference-in-differences with staggered adoption identifies group-time average treatment effects ATT(g,t) by comparing each cohort to units not yet treated, which avoids the “forbidden comparisons” that bias two-way fixed-effects estimators when effects are heterogeneous. This paper studies the covariate-conditional version of that object, tau_{g,t}(x), and estimates it with a fixed-effects causal forest. Within each (g,t) comparison block, the outcome and treatment are residualized on unit and period fixed effects inside each tree node, and honest causal trees split on treatment-effect heterogeneity in the covariates. The estimand is not new: Hatamyar, Kreif, Rocha and Huber (2023) introduced it using a doubly-robust R-learner, and Imai, Qin and Yanagi (2023) study it for a single continuous covariate. What we add is a different way to estimate it. Where those methods remove confounding by modeling nuisance functions, we remove it by differencing out unit and period effects within each tree node, following the fixed-effects residualization of Kattenberg, Scheer and Thiel (2023) and Gavrilova, Langorgen and Zoutman (2025) and carrying it into the Callaway-Sant’Anna group-time structure. In Monte Carlo experiments the estimator is the only forest-based method that stays unbiased and correctly covered for the overall effect under staggered timing with cohort-varying effects; two-way fixed effects and a pooled causal forest inherit large forbidden-comparison bias. We apply the method to the Callaway-Sant’Anna minimum-wage panel as a validation and to the staggered county-level rollout of the ACA Medicaid expansion, where it recovers an average 2.25 percentage-point fall in the uninsured rate and a conditional surface on which poorer and lower-income counties gained substantially more coverage – heterogeneity measured along socioeconomic covariates that are not lags of the outcome." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/28/AFixedEffectsCausalForestforStaggeredAdoptionwithanApplicationtoMedicaidExpansion.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/28/AFixedEffectsCausalForestforStaggeredAdoptionwithanApplicationtoMedicaidExpansion.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Fixed-Effects Causal Forest for Staggered Adoption, with an Application to Medicaid Expansion" />
+<script type="application/ld+json">
+{"description":"Difference-in-differences with staggered adoption identifies group-time average treatment effects ATT(g,t) by comparing each cohort to units not yet treated, which avoids the “forbidden comparisons” that bias two-way fixed-effects estimators when effects are heterogeneous. This paper studies the covariate-conditional version of that object, tau_{g,t}(x), and estimates it with a fixed-effects causal forest. Within each (g,t) comparison block, the outcome and treatment are residualized on unit and period fixed effects inside each tree node, and honest causal trees split on treatment-effect heterogeneity in the covariates. The estimand is not new: Hatamyar, Kreif, Rocha and Huber (2023) introduced it using a doubly-robust R-learner, and Imai, Qin and Yanagi (2023) study it for a single continuous covariate. What we add is a different way to estimate it. Where those methods remove confounding by modeling nuisance functions, we remove it by differencing out unit and period effects within each tree node, following the fixed-effects residualization of Kattenberg, Scheer and Thiel (2023) and Gavrilova, Langorgen and Zoutman (2025) and carrying it into the Callaway-Sant’Anna group-time structure. In Monte Carlo experiments the estimator is the only forest-based method that stays unbiased and correctly covered for the overall effect under staggered timing with cohort-varying effects; two-way fixed effects and a pooled causal forest inherit large forbidden-comparison bias. We apply the method to the Callaway-Sant’Anna minimum-wage panel as a validation and to the staggered county-level rollout of the ACA Medicaid expansion, where it recovers an average 2.25 percentage-point fall in the uninsured rate and a conditional surface on which poorer and lower-income counties gained substantially more coverage – heterogeneity measured along socioeconomic covariates that are not lags of the outcome.","datePublished":"2026-07-28T00:00:00+00:00","dateModified":"2026-07-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/28/AFixedEffectsCausalForestforStaggeredAdoptionwithanApplicationtoMedicaidExpansion.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/28/AFixedEffectsCausalForestforStaggeredAdoptionwithanApplicationtoMedicaidExpansion.html","author":{"@type":"Person","name":"Harry Aytug"},"@type":"BlogPosting","headline":"A Fixed-Effects Causal Forest for Staggered Adoption, with an Application to Medicaid Expansion","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-28 00:00:00 +0000">07-28</time>
+  </p>
+  
+  <h1>A Fixed-Effects Causal Forest for Staggered Adoption, with an Application to Medicaid Expansion</h1>
+  <br>Harry Aytug</h3>
+  <br> [stat.ML]
+
+  <p>Difference-in-differences with staggered adoption identifies group-time average treatment effects ATT(g,t) by comparing each cohort to units not yet treated, which avoids the “forbidden comparisons” that bias two-way fixed-effects estimators when effects are heterogeneous. This paper studies the covariate-conditional version of that object, tau_{g,t}(x), and estimates it with a fixed-effects causal forest. Within each (g,t) comparison block, the outcome and treatment are residualized on unit and period fixed effects inside each tree node, and honest causal trees split on treatment-effect heterogeneity in the covariates. The estimand is not new: Hatamyar, Kreif, Rocha and Huber (2023) introduced it using a doubly-robust R-learner, and Imai, Qin and Yanagi (2023) study it for a single continuous covariate. What we add is a different way to estimate it. Where those methods remove confounding by modeling nuisance functions, we remove it by differencing out unit and period effects within each tree node, following the fixed-effects residualization of Kattenberg, Scheer and Thiel (2023) and Gavrilova, Langorgen and Zoutman (2025) and carrying it into the Callaway-Sant’Anna group-time structure. In Monte Carlo experiments the estimator is the only forest-based method that stays unbiased and correctly covered for the overall effect under staggered timing with cohort-varying effects; two-way fixed effects and a pooled causal forest inherit large forbidden-comparison bias. We apply the method to the Callaway-Sant’Anna minimum-wage panel as a validation and to the staggered county-level rollout of the ACA Medicaid expansion, where it recovers an average 2.25 percentage-point fall in the uninsured rate and a conditional surface on which poorer and lower-income counties gained substantially more coverage – heterogeneity measured along socioeconomic covariates that are not lags of the outcome.</p>
+
+<p><a href="https://arxiv.org/abs/2607.19644">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
