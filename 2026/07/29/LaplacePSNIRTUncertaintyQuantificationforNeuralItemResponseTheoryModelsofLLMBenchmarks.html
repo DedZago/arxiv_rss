@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Laplace-PSN-IRT: Uncertainty Quantification for Neural Item Response Theory Models of LLM Benchmarks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Laplace-PSN-IRT: Uncertainty Quantification for Neural Item Response Theory Models of LLM Benchmarks" />
+<meta name="author" content="Juan Francisco, Mandujano Reyes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Item Response Theory (IRT) has recently been proposed as a framework for evaluating large language model (LLM) benchmarks by separating a model’s latent ability from the properties of individual benchmark items. Existing neural IRT approaches, including PSN-IRT, estimate these quantities using point estimates, limiting uncertainty quantification and downstream statistical inference. We introduce Laplace-PSN-IRT, a post-hoc last-layer Laplace approximation that augments a trained PSN-IRT model with approximate Bayesian posterior inference, recovering calibrated uncertainty over model ability and item difficulty without retraining. The resulting posterior enables credible intervals, probabilistic comparisons between models, and propagation of parameter uncertainty into Fisher-information-based item selection. We show that most pairwise comparisons among 12 models on a standard LLM benchmark leaderboard are not statistically distinguishable despite differing point-estimate ranks. We further show that point-estimate Fisher information can become nearly zero for many benchmark items because it is evaluated at a single reference ability, whereas posterior-expected Fisher information remains substantially more stable across the ability range. Finally, posterior-expected Fisher information more accurately recovers full-benchmark ability rankings from small benchmark subsets in most experimental settings while matching point-estimate performance for the smallest subsets. We validate the calibration of the approximate posterior using held-out predictive coverage and find that modeling item difficulty as random while treating item discrimination as fixed produces well-calibrated uncertainty in this architecture." />
+<meta property="og:description" content="Item Response Theory (IRT) has recently been proposed as a framework for evaluating large language model (LLM) benchmarks by separating a model’s latent ability from the properties of individual benchmark items. Existing neural IRT approaches, including PSN-IRT, estimate these quantities using point estimates, limiting uncertainty quantification and downstream statistical inference. We introduce Laplace-PSN-IRT, a post-hoc last-layer Laplace approximation that augments a trained PSN-IRT model with approximate Bayesian posterior inference, recovering calibrated uncertainty over model ability and item difficulty without retraining. The resulting posterior enables credible intervals, probabilistic comparisons between models, and propagation of parameter uncertainty into Fisher-information-based item selection. We show that most pairwise comparisons among 12 models on a standard LLM benchmark leaderboard are not statistically distinguishable despite differing point-estimate ranks. We further show that point-estimate Fisher information can become nearly zero for many benchmark items because it is evaluated at a single reference ability, whereas posterior-expected Fisher information remains substantially more stable across the ability range. Finally, posterior-expected Fisher information more accurately recovers full-benchmark ability rankings from small benchmark subsets in most experimental settings while matching point-estimate performance for the smallest subsets. We validate the calibration of the approximate posterior using held-out predictive coverage and find that modeling item difficulty as random while treating item discrimination as fixed produces well-calibrated uncertainty in this architecture." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/29/LaplacePSNIRTUncertaintyQuantificationforNeuralItemResponseTheoryModelsofLLMBenchmarks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/29/LaplacePSNIRTUncertaintyQuantificationforNeuralItemResponseTheoryModelsofLLMBenchmarks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Laplace-PSN-IRT: Uncertainty Quantification for Neural Item Response Theory Models of LLM Benchmarks" />
+<script type="application/ld+json">
+{"description":"Item Response Theory (IRT) has recently been proposed as a framework for evaluating large language model (LLM) benchmarks by separating a model’s latent ability from the properties of individual benchmark items. Existing neural IRT approaches, including PSN-IRT, estimate these quantities using point estimates, limiting uncertainty quantification and downstream statistical inference. We introduce Laplace-PSN-IRT, a post-hoc last-layer Laplace approximation that augments a trained PSN-IRT model with approximate Bayesian posterior inference, recovering calibrated uncertainty over model ability and item difficulty without retraining. The resulting posterior enables credible intervals, probabilistic comparisons between models, and propagation of parameter uncertainty into Fisher-information-based item selection. We show that most pairwise comparisons among 12 models on a standard LLM benchmark leaderboard are not statistically distinguishable despite differing point-estimate ranks. We further show that point-estimate Fisher information can become nearly zero for many benchmark items because it is evaluated at a single reference ability, whereas posterior-expected Fisher information remains substantially more stable across the ability range. Finally, posterior-expected Fisher information more accurately recovers full-benchmark ability rankings from small benchmark subsets in most experimental settings while matching point-estimate performance for the smallest subsets. We validate the calibration of the approximate posterior using held-out predictive coverage and find that modeling item difficulty as random while treating item discrimination as fixed produces well-calibrated uncertainty in this architecture.","datePublished":"2026-07-29T00:00:00+00:00","dateModified":"2026-07-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/29/LaplacePSNIRTUncertaintyQuantificationforNeuralItemResponseTheoryModelsofLLMBenchmarks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/29/LaplacePSNIRTUncertaintyQuantificationforNeuralItemResponseTheoryModelsofLLMBenchmarks.html","author":{"@type":"Person","name":"Juan Francisco, Mandujano Reyes"},"@type":"BlogPosting","headline":"Laplace-PSN-IRT: Uncertainty Quantification for Neural Item Response Theory Models of LLM Benchmarks","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-29 00:00:00 +0000">07-29</time>
+  </p>
+  
+  <h1>Laplace-PSN-IRT: Uncertainty Quantification for Neural Item Response Theory Models of LLM Benchmarks</h1>
+  <br>Juan Francisco, Mandujano Reyes</h3>
+  <br> [stat.AP]
+
+  <p>Item Response Theory (IRT) has recently been proposed as a framework for evaluating large language model (LLM) benchmarks by separating a model’s latent ability from the properties of individual benchmark items. Existing neural IRT approaches, including PSN-IRT, estimate these quantities using point estimates, limiting uncertainty quantification and downstream statistical inference. We introduce Laplace-PSN-IRT, a post-hoc last-layer Laplace approximation that augments a trained PSN-IRT model with approximate Bayesian posterior inference, recovering calibrated uncertainty over model ability and item difficulty without retraining. The resulting posterior enables credible intervals, probabilistic comparisons between models, and propagation of parameter uncertainty into Fisher-information-based item selection. We show that most pairwise comparisons among 12 models on a standard LLM benchmark leaderboard are not statistically distinguishable despite differing point-estimate ranks. We further show that point-estimate Fisher information can become nearly zero for many benchmark items because it is evaluated at a single reference ability, whereas posterior-expected Fisher information remains substantially more stable across the ability range. Finally, posterior-expected Fisher information more accurately recovers full-benchmark ability rankings from small benchmark subsets in most experimental settings while matching point-estimate performance for the smallest subsets. We validate the calibration of the approximate posterior using held-out predictive coverage and find that modeling item difficulty as random while treating item discrimination as fixed produces well-calibrated uncertainty in this architecture.</p>
+
+<p><a href="https://arxiv.org/abs/2607.25257">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
