@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Universal Warmup Path: Automatic Preconditioner Selection for HMC</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Universal Warmup Path: Automatic Preconditioner Selection for HMC" />
+<meta name="author" content="Junpeng Lao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Euclidean Hamiltonian Monte Carlo (HMC) warmup must choose a step size and constant preconditioner from limited, nonstationary draws. Standard warmup follows a fixed schedule and generally requires the preconditioner structure to be specified in advance. We present a multi-chain controller that starts diagonal and, at dimension-derived window endpoints, selects between diagonal and low-rank-plus-diagonal inverse mass matrices and chooses the retained rank, subject to dimension and sample-support caps. When evidence is inconclusive, the controller gathers another scheduled window. Persistent within-/between-chain disagreement means draws do not support treating one constant preconditioner as an adequate global description; the controller retains its within-region matrix and advises a population or tempering method for regional exploration. Poor held-out score–position linearity advises reparameterization. The controller selected low rank in every evaluated headline benchmark NUTS run ($12/12$). Geometric-mean pooled ESS-per-gradient ratios relative to the prespecified Fisher low-rank warmup and Welford diagonal warmup baselines were respectively $2.451$ and $22.572$ on the synthetic ill-conditioned Gaussian benchmark, and $1.951$ and $6.264$ on the German-credit Bayesian logistic-regression posterior; all compared runs passed the post-warmup quality check. This method unifies common HMC warmup heuristics in one evidence-driven controller, reducing manual choices and turning warning signals into actionable guidance." />
+<meta property="og:description" content="Euclidean Hamiltonian Monte Carlo (HMC) warmup must choose a step size and constant preconditioner from limited, nonstationary draws. Standard warmup follows a fixed schedule and generally requires the preconditioner structure to be specified in advance. We present a multi-chain controller that starts diagonal and, at dimension-derived window endpoints, selects between diagonal and low-rank-plus-diagonal inverse mass matrices and chooses the retained rank, subject to dimension and sample-support caps. When evidence is inconclusive, the controller gathers another scheduled window. Persistent within-/between-chain disagreement means draws do not support treating one constant preconditioner as an adequate global description; the controller retains its within-region matrix and advises a population or tempering method for regional exploration. Poor held-out score–position linearity advises reparameterization. The controller selected low rank in every evaluated headline benchmark NUTS run ($12/12$). Geometric-mean pooled ESS-per-gradient ratios relative to the prespecified Fisher low-rank warmup and Welford diagonal warmup baselines were respectively $2.451$ and $22.572$ on the synthetic ill-conditioned Gaussian benchmark, and $1.951$ and $6.264$ on the German-credit Bayesian logistic-regression posterior; all compared runs passed the post-warmup quality check. This method unifies common HMC warmup heuristics in one evidence-driven controller, reducing manual choices and turning warning signals into actionable guidance." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/30/TheUniversalWarmupPathAutomaticPreconditionerSelectionforHMC.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/30/TheUniversalWarmupPathAutomaticPreconditionerSelectionforHMC.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Universal Warmup Path: Automatic Preconditioner Selection for HMC" />
+<script type="application/ld+json">
+{"description":"Euclidean Hamiltonian Monte Carlo (HMC) warmup must choose a step size and constant preconditioner from limited, nonstationary draws. Standard warmup follows a fixed schedule and generally requires the preconditioner structure to be specified in advance. We present a multi-chain controller that starts diagonal and, at dimension-derived window endpoints, selects between diagonal and low-rank-plus-diagonal inverse mass matrices and chooses the retained rank, subject to dimension and sample-support caps. When evidence is inconclusive, the controller gathers another scheduled window. Persistent within-/between-chain disagreement means draws do not support treating one constant preconditioner as an adequate global description; the controller retains its within-region matrix and advises a population or tempering method for regional exploration. Poor held-out score–position linearity advises reparameterization. The controller selected low rank in every evaluated headline benchmark NUTS run ($12/12$). Geometric-mean pooled ESS-per-gradient ratios relative to the prespecified Fisher low-rank warmup and Welford diagonal warmup baselines were respectively $2.451$ and $22.572$ on the synthetic ill-conditioned Gaussian benchmark, and $1.951$ and $6.264$ on the German-credit Bayesian logistic-regression posterior; all compared runs passed the post-warmup quality check. This method unifies common HMC warmup heuristics in one evidence-driven controller, reducing manual choices and turning warning signals into actionable guidance.","datePublished":"2026-07-30T00:00:00+00:00","dateModified":"2026-07-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/30/TheUniversalWarmupPathAutomaticPreconditionerSelectionforHMC.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/30/TheUniversalWarmupPathAutomaticPreconditionerSelectionforHMC.html","author":{"@type":"Person","name":"Junpeng Lao"},"@type":"BlogPosting","headline":"The Universal Warmup Path: Automatic Preconditioner Selection for HMC","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-30 00:00:00 +0000">07-30</time>
+  </p>
+  
+  <h1>The Universal Warmup Path: Automatic Preconditioner Selection for HMC</h1>
+  <br>Junpeng Lao</h3>
+  <br> [stat.CO,stat.ME]
+
+  <p>Euclidean Hamiltonian Monte Carlo (HMC) warmup must choose a step size and constant preconditioner from limited, nonstationary draws. Standard warmup follows a fixed schedule and generally requires the preconditioner structure to be specified in advance. We present a multi-chain controller that starts diagonal and, at dimension-derived window endpoints, selects between diagonal and low-rank-plus-diagonal inverse mass matrices and chooses the retained rank, subject to dimension and sample-support caps. When evidence is inconclusive, the controller gathers another scheduled window. Persistent within-/between-chain disagreement means draws do not support treating one constant preconditioner as an adequate global description; the controller retains its within-region matrix and advises a population or tempering method for regional exploration. Poor held-out score–position linearity advises reparameterization. The controller selected low rank in every evaluated headline benchmark NUTS run ($12/12$). Geometric-mean pooled ESS-per-gradient ratios relative to the prespecified Fisher low-rank warmup and Welford diagonal warmup baselines were respectively $2.451$ and $22.572$ on the synthetic ill-conditioned Gaussian benchmark, and $1.951$ and $6.264$ on the German-credit Bayesian logistic-regression posterior; all compared runs passed the post-warmup quality check. This method unifies common HMC warmup heuristics in one evidence-driven controller, reducing manual choices and turning warning signals into actionable guidance.</p>
+
+<p><a href="https://arxiv.org/abs/2607.23788">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
