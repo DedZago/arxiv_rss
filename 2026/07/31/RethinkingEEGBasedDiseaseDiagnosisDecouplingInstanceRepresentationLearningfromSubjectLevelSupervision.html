@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Rethinking EEG-Based Disease Diagnosis: Decoupling Instance Representation Learning from Subject-Level Supervision</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Rethinking EEG-Based Disease Diagnosis: Decoupling Instance Representation Learning from Subject-Level Supervision" />
+<meta name="author" content="Zhiyuan Ma, Zeyuan Li, Zhiyi Lu, Jiacheng Hao, Youlang Du, Zhen Jiang, Xinche Zhang, Yuhao Sun, Sen Song" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="EEG-based disease diagnosis requires one prediction per subject, yet common pipelines segment recordings into short instances, inherit the subject label for every instance, and train instance-level classifiers. This assumes that all instances provide equally reliable diagnostic evidence. Multiple instance learning (MIL) avoids inherited labels by treating each subject as a bag. However, EEG datasets contain far fewer subjects than instances, which can limit the quality of the representations learned by end-to-end MIL. We propose BridgeMIL, a two-stage framework that decouples instance representation learning from subject-level supervision. Stage 1 pretrains the encoder without inherited instance labels by aligning temporally nearby windows and independently sampled within-subject sub-bags. Variance and covariance regularization prevent collapse and reduce redundancy without negative pairs. Stage 2 transfers the encoder to an attention-based MIL aggregator, applies supervision only to subject predictions, and limits representation drift through feature retention. Across three EEG disease datasets and five representative backbones, BridgeMIL attains the highest mean accuracy in 14 of 15 dataset-backbone settings and an overall mean accuracy of 76.57%, 4.28 percentage points higher than the strongest baseline. Further analyses reveal substantial variation in inherited-label reliability across instances, greater performance sensitivity to subject scarcity than to instance scarcity, and a more structured representation space with distinct subject-wise clusters and improved separation between diagnostic classes. Together, these findings underscore the importance of aligning supervision with the subject-level prediction objective while learning from abundant EEG instances without assigning disease labels to individual instances." />
+<meta property="og:description" content="EEG-based disease diagnosis requires one prediction per subject, yet common pipelines segment recordings into short instances, inherit the subject label for every instance, and train instance-level classifiers. This assumes that all instances provide equally reliable diagnostic evidence. Multiple instance learning (MIL) avoids inherited labels by treating each subject as a bag. However, EEG datasets contain far fewer subjects than instances, which can limit the quality of the representations learned by end-to-end MIL. We propose BridgeMIL, a two-stage framework that decouples instance representation learning from subject-level supervision. Stage 1 pretrains the encoder without inherited instance labels by aligning temporally nearby windows and independently sampled within-subject sub-bags. Variance and covariance regularization prevent collapse and reduce redundancy without negative pairs. Stage 2 transfers the encoder to an attention-based MIL aggregator, applies supervision only to subject predictions, and limits representation drift through feature retention. Across three EEG disease datasets and five representative backbones, BridgeMIL attains the highest mean accuracy in 14 of 15 dataset-backbone settings and an overall mean accuracy of 76.57%, 4.28 percentage points higher than the strongest baseline. Further analyses reveal substantial variation in inherited-label reliability across instances, greater performance sensitivity to subject scarcity than to instance scarcity, and a more structured representation space with distinct subject-wise clusters and improved separation between diagnostic classes. Together, these findings underscore the importance of aligning supervision with the subject-level prediction objective while learning from abundant EEG instances without assigning disease labels to individual instances." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/07/31/RethinkingEEGBasedDiseaseDiagnosisDecouplingInstanceRepresentationLearningfromSubjectLevelSupervision.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/07/31/RethinkingEEGBasedDiseaseDiagnosisDecouplingInstanceRepresentationLearningfromSubjectLevelSupervision.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rethinking EEG-Based Disease Diagnosis: Decoupling Instance Representation Learning from Subject-Level Supervision" />
+<script type="application/ld+json">
+{"description":"EEG-based disease diagnosis requires one prediction per subject, yet common pipelines segment recordings into short instances, inherit the subject label for every instance, and train instance-level classifiers. This assumes that all instances provide equally reliable diagnostic evidence. Multiple instance learning (MIL) avoids inherited labels by treating each subject as a bag. However, EEG datasets contain far fewer subjects than instances, which can limit the quality of the representations learned by end-to-end MIL. We propose BridgeMIL, a two-stage framework that decouples instance representation learning from subject-level supervision. Stage 1 pretrains the encoder without inherited instance labels by aligning temporally nearby windows and independently sampled within-subject sub-bags. Variance and covariance regularization prevent collapse and reduce redundancy without negative pairs. Stage 2 transfers the encoder to an attention-based MIL aggregator, applies supervision only to subject predictions, and limits representation drift through feature retention. Across three EEG disease datasets and five representative backbones, BridgeMIL attains the highest mean accuracy in 14 of 15 dataset-backbone settings and an overall mean accuracy of 76.57%, 4.28 percentage points higher than the strongest baseline. Further analyses reveal substantial variation in inherited-label reliability across instances, greater performance sensitivity to subject scarcity than to instance scarcity, and a more structured representation space with distinct subject-wise clusters and improved separation between diagnostic classes. Together, these findings underscore the importance of aligning supervision with the subject-level prediction objective while learning from abundant EEG instances without assigning disease labels to individual instances.","datePublished":"2026-07-31T00:00:00+00:00","dateModified":"2026-07-31T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/07/31/RethinkingEEGBasedDiseaseDiagnosisDecouplingInstanceRepresentationLearningfromSubjectLevelSupervision.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/07/31/RethinkingEEGBasedDiseaseDiagnosisDecouplingInstanceRepresentationLearningfromSubjectLevelSupervision.html","author":{"@type":"Person","name":"Zhiyuan Ma, Zeyuan Li, Zhiyi Lu, Jiacheng Hao, Youlang Du, Zhen Jiang, Xinche Zhang, Yuhao Sun, Sen Song"},"@type":"BlogPosting","headline":"Rethinking EEG-Based Disease Diagnosis: Decoupling Instance Representation Learning from Subject-Level Supervision","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-07-31 00:00:00 +0000">07-31</time>
+  </p>
+  
+  <h1>Rethinking EEG-Based Disease Diagnosis: Decoupling Instance Representation Learning from Subject-Level Supervision</h1>
+  <br>Zhiyuan Ma, Zeyuan Li, Zhiyi Lu, Jiacheng Hao, Youlang Du, Zhen Jiang, Xinche Zhang, Yuhao Sun, Sen Song</h3>
+  <br> [stat.ML]
+
+  <p>EEG-based disease diagnosis requires one prediction per subject, yet common pipelines segment recordings into short instances, inherit the subject label for every instance, and train instance-level classifiers. This assumes that all instances provide equally reliable diagnostic evidence. Multiple instance learning (MIL) avoids inherited labels by treating each subject as a bag. However, EEG datasets contain far fewer subjects than instances, which can limit the quality of the representations learned by end-to-end MIL. We propose BridgeMIL, a two-stage framework that decouples instance representation learning from subject-level supervision. Stage 1 pretrains the encoder without inherited instance labels by aligning temporally nearby windows and independently sampled within-subject sub-bags. Variance and covariance regularization prevent collapse and reduce redundancy without negative pairs. Stage 2 transfers the encoder to an attention-based MIL aggregator, applies supervision only to subject predictions, and limits representation drift through feature retention. Across three EEG disease datasets and five representative backbones, BridgeMIL attains the highest mean accuracy in 14 of 15 dataset-backbone settings and an overall mean accuracy of 76.57%, 4.28 percentage points higher than the strongest baseline. Further analyses reveal substantial variation in inherited-label reliability across instances, greater performance sensitivity to subject scarcity than to instance scarcity, and a more structured representation space with distinct subject-wise clusters and improved separation between diagnostic classes. Together, these findings underscore the importance of aligning supervision with the subject-level prediction objective while learning from abundant EEG instances without assigning disease labels to individual instances.</p>
+
+<p><a href="https://arxiv.org/abs/2607.27274">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
