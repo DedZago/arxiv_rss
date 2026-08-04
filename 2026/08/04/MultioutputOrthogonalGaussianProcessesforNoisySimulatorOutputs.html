@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Multi-output Orthogonal Gaussian Processes for Noisy Simulator Outputs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Multi-output Orthogonal Gaussian Processes for Noisy Simulator Outputs" />
+<meta name="author" content="Evan C. Barnett, Moses Y. -H. Chan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Computer simulations can model physical processes but are often too expensive to produce enough runs for calibration, sensitivity analysis, prediction, and uncertainty quantification. As a result, statistical surrogates are frequently used as cheaper alternatives that can be trained on a small number of simulation runs. Gaussian processes (GP) are well-suited as surrogates, as they provide flexible, nonlinear regression and closed-form uncertainty quantification. However, standard GPs are insufficient replacements for more complex simulators, such as stochastic or multi-output simulators. In addition, typical GPs also struggle to separate fitted regression coefficients from residual process variation. We introduce multi-output orthogonal Gaussian process (MOOGP) to tackle the problems mentioned above. This paper has three main contributions: (i) a definition of orthogonality for multi-output Gaussian processes, (ii) a construction that enforces orthogonality by conditioning each covariance function, and (iii) a structured likelihood formulation that significantly improves computational scaling. In a trend-recovery illustrative example, MOOGP recovers the true trend while the non-orthogonalized counterpart fails to do so, to the extent it reverses the sign of the trend. Numerical experiments and an application in heavy-ion collision simulations further demonstrate the interpretability and predictive advantage of MOOGP." />
+<meta property="og:description" content="Computer simulations can model physical processes but are often too expensive to produce enough runs for calibration, sensitivity analysis, prediction, and uncertainty quantification. As a result, statistical surrogates are frequently used as cheaper alternatives that can be trained on a small number of simulation runs. Gaussian processes (GP) are well-suited as surrogates, as they provide flexible, nonlinear regression and closed-form uncertainty quantification. However, standard GPs are insufficient replacements for more complex simulators, such as stochastic or multi-output simulators. In addition, typical GPs also struggle to separate fitted regression coefficients from residual process variation. We introduce multi-output orthogonal Gaussian process (MOOGP) to tackle the problems mentioned above. This paper has three main contributions: (i) a definition of orthogonality for multi-output Gaussian processes, (ii) a construction that enforces orthogonality by conditioning each covariance function, and (iii) a structured likelihood formulation that significantly improves computational scaling. In a trend-recovery illustrative example, MOOGP recovers the true trend while the non-orthogonalized counterpart fails to do so, to the extent it reverses the sign of the trend. Numerical experiments and an application in heavy-ion collision simulations further demonstrate the interpretability and predictive advantage of MOOGP." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/04/MultioutputOrthogonalGaussianProcessesforNoisySimulatorOutputs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/04/MultioutputOrthogonalGaussianProcessesforNoisySimulatorOutputs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Multi-output Orthogonal Gaussian Processes for Noisy Simulator Outputs" />
+<script type="application/ld+json">
+{"description":"Computer simulations can model physical processes but are often too expensive to produce enough runs for calibration, sensitivity analysis, prediction, and uncertainty quantification. As a result, statistical surrogates are frequently used as cheaper alternatives that can be trained on a small number of simulation runs. Gaussian processes (GP) are well-suited as surrogates, as they provide flexible, nonlinear regression and closed-form uncertainty quantification. However, standard GPs are insufficient replacements for more complex simulators, such as stochastic or multi-output simulators. In addition, typical GPs also struggle to separate fitted regression coefficients from residual process variation. We introduce multi-output orthogonal Gaussian process (MOOGP) to tackle the problems mentioned above. This paper has three main contributions: (i) a definition of orthogonality for multi-output Gaussian processes, (ii) a construction that enforces orthogonality by conditioning each covariance function, and (iii) a structured likelihood formulation that significantly improves computational scaling. In a trend-recovery illustrative example, MOOGP recovers the true trend while the non-orthogonalized counterpart fails to do so, to the extent it reverses the sign of the trend. Numerical experiments and an application in heavy-ion collision simulations further demonstrate the interpretability and predictive advantage of MOOGP.","datePublished":"2026-08-04T00:00:00+00:00","dateModified":"2026-08-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/04/MultioutputOrthogonalGaussianProcessesforNoisySimulatorOutputs.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/04/MultioutputOrthogonalGaussianProcessesforNoisySimulatorOutputs.html","author":{"@type":"Person","name":"Evan C. Barnett, Moses Y. -H. Chan"},"@type":"BlogPosting","headline":"Multi-output Orthogonal Gaussian Processes for Noisy Simulator Outputs","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-04 00:00:00 +0000">08-04</time>
+  </p>
+  
+  <h1>Multi-output Orthogonal Gaussian Processes for Noisy Simulator Outputs</h1>
+  <br>Evan C. Barnett, Moses Y. -H. Chan</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Computer simulations can model physical processes but are often too expensive to produce enough runs for calibration, sensitivity analysis, prediction, and uncertainty quantification. As a result, statistical surrogates are frequently used as cheaper alternatives that can be trained on a small number of simulation runs. Gaussian processes (GP) are well-suited as surrogates, as they provide flexible, nonlinear regression and closed-form uncertainty quantification. However, standard GPs are insufficient replacements for more complex simulators, such as stochastic or multi-output simulators. In addition, typical GPs also struggle to separate fitted regression coefficients from residual process variation. We introduce multi-output orthogonal Gaussian process (MOOGP) to tackle the problems mentioned above. This paper has three main contributions: (i) a definition of orthogonality for multi-output Gaussian processes, (ii) a construction that enforces orthogonality by conditioning each covariance function, and (iii) a structured likelihood formulation that significantly improves computational scaling. In a trend-recovery illustrative example, MOOGP recovers the true trend while the non-orthogonalized counterpart fails to do so, to the extent it reverses the sign of the trend. Numerical experiments and an application in heavy-ion collision simulations further demonstrate the interpretability and predictive advantage of MOOGP.</p>
+
+<p><a href="https://arxiv.org/abs/2608.00287">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

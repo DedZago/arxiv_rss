@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Stochastic Sequential Search in Very-High-Dimensional Feature Selection</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Stochastic Sequential Search in Very-High-Dimensional Feature Selection" />
+<meta name="author" content="Petr Somol, Jiř\'{\i} Grim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sequential subset search – forward selection with floating backtracking and its descendants – remains the quality reference in feature selection, but every member of the family sweeps the full pool of remaining candidate features at each step, which excludes it from very-high-dimensional problems; there, only individual-feature ranking remains practical, and it models feature interplay weakly or not at all. We introduce a budgeted sampled step operator pair that replaces the full sweeps by a fixed number of candidate evaluations per step. Candidates are drawn by temperature-controlled softmax sampling from dependency-aware per-feature statistics learned online from every criterion evaluation the search performs, guarded by a uniform exploration floor; per-step cost becomes independent of dimensionality. Substituting the operators turns any sequential method into its stochastic counterpart, defining the Stochastic Sequential Search (SSS) family; we study the stochastic counterpart of floating search, sSFFS. On 500-dimensional madelon, sSFFS retains at least 97% of the full-SFFS criterion value at every subset size at about a quarter of its evaluations, while uniform sampling at the same budget collapses on madelon’s synergistic features. On 5,000-dimensional gisette, far beyond full-SFFS reach, sSFFS exceeds the saturated criterion level of DAF and BIF ranking at matched budgets; holdout validation shows that at 500 training samples the binding constraint beyond the sequential frontier becomes the criterion, not the search. On 10,105-dimensional reuters, under a trustworthy multinomial filter criterion, sSFFS dominates BIF and DAF on the search objective and on holdout accuracy at every subset size, in about two minutes of single-core evaluation work. A verified standalone implementation accompanies the paper." />
+<meta property="og:description" content="Sequential subset search – forward selection with floating backtracking and its descendants – remains the quality reference in feature selection, but every member of the family sweeps the full pool of remaining candidate features at each step, which excludes it from very-high-dimensional problems; there, only individual-feature ranking remains practical, and it models feature interplay weakly or not at all. We introduce a budgeted sampled step operator pair that replaces the full sweeps by a fixed number of candidate evaluations per step. Candidates are drawn by temperature-controlled softmax sampling from dependency-aware per-feature statistics learned online from every criterion evaluation the search performs, guarded by a uniform exploration floor; per-step cost becomes independent of dimensionality. Substituting the operators turns any sequential method into its stochastic counterpart, defining the Stochastic Sequential Search (SSS) family; we study the stochastic counterpart of floating search, sSFFS. On 500-dimensional madelon, sSFFS retains at least 97% of the full-SFFS criterion value at every subset size at about a quarter of its evaluations, while uniform sampling at the same budget collapses on madelon’s synergistic features. On 5,000-dimensional gisette, far beyond full-SFFS reach, sSFFS exceeds the saturated criterion level of DAF and BIF ranking at matched budgets; holdout validation shows that at 500 training samples the binding constraint beyond the sequential frontier becomes the criterion, not the search. On 10,105-dimensional reuters, under a trustworthy multinomial filter criterion, sSFFS dominates BIF and DAF on the search objective and on holdout accuracy at every subset size, in about two minutes of single-core evaluation work. A verified standalone implementation accompanies the paper." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/04/StochasticSequentialSearchinVeryHighDimensionalFeatureSelection.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/04/StochasticSequentialSearchinVeryHighDimensionalFeatureSelection.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stochastic Sequential Search in Very-High-Dimensional Feature Selection" />
+<script type="application/ld+json">
+{"description":"Sequential subset search – forward selection with floating backtracking and its descendants – remains the quality reference in feature selection, but every member of the family sweeps the full pool of remaining candidate features at each step, which excludes it from very-high-dimensional problems; there, only individual-feature ranking remains practical, and it models feature interplay weakly or not at all. We introduce a budgeted sampled step operator pair that replaces the full sweeps by a fixed number of candidate evaluations per step. Candidates are drawn by temperature-controlled softmax sampling from dependency-aware per-feature statistics learned online from every criterion evaluation the search performs, guarded by a uniform exploration floor; per-step cost becomes independent of dimensionality. Substituting the operators turns any sequential method into its stochastic counterpart, defining the Stochastic Sequential Search (SSS) family; we study the stochastic counterpart of floating search, sSFFS. On 500-dimensional madelon, sSFFS retains at least 97% of the full-SFFS criterion value at every subset size at about a quarter of its evaluations, while uniform sampling at the same budget collapses on madelon’s synergistic features. On 5,000-dimensional gisette, far beyond full-SFFS reach, sSFFS exceeds the saturated criterion level of DAF and BIF ranking at matched budgets; holdout validation shows that at 500 training samples the binding constraint beyond the sequential frontier becomes the criterion, not the search. On 10,105-dimensional reuters, under a trustworthy multinomial filter criterion, sSFFS dominates BIF and DAF on the search objective and on holdout accuracy at every subset size, in about two minutes of single-core evaluation work. A verified standalone implementation accompanies the paper.","datePublished":"2026-08-04T00:00:00+00:00","dateModified":"2026-08-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/04/StochasticSequentialSearchinVeryHighDimensionalFeatureSelection.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/04/StochasticSequentialSearchinVeryHighDimensionalFeatureSelection.html","author":{"@type":"Person","name":"Petr Somol, Jiř\\'{\\i} Grim"},"@type":"BlogPosting","headline":"Stochastic Sequential Search in Very-High-Dimensional Feature Selection","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-04 00:00:00 +0000">08-04</time>
+  </p>
+  
+  <h1>Stochastic Sequential Search in Very-High-Dimensional Feature Selection</h1>
+  <br>Petr Somol, Jiř\'{\i} Grim</h3>
+  <br> [stat.ML]
+
+  <p>Sequential subset search – forward selection with floating backtracking and its descendants – remains the quality reference in feature selection, but every member of the family sweeps the full pool of remaining candidate features at each step, which excludes it from very-high-dimensional problems; there, only individual-feature ranking remains practical, and it models feature interplay weakly or not at all. We introduce a budgeted sampled step operator pair that replaces the full sweeps by a fixed number of candidate evaluations per step. Candidates are drawn by temperature-controlled softmax sampling from dependency-aware per-feature statistics learned online from every criterion evaluation the search performs, guarded by a uniform exploration floor; per-step cost becomes independent of dimensionality. Substituting the operators turns any sequential method into its stochastic counterpart, defining the Stochastic Sequential Search (SSS) family; we study the stochastic counterpart of floating search, sSFFS. On 500-dimensional madelon, sSFFS retains at least 97% of the full-SFFS criterion value at every subset size at about a quarter of its evaluations, while uniform sampling at the same budget collapses on madelon’s synergistic features. On 5,000-dimensional gisette, far beyond full-SFFS reach, sSFFS exceeds the saturated criterion level of DAF and BIF ranking at matched budgets; holdout validation shows that at 500 training samples the binding constraint beyond the sequential frontier becomes the criterion, not the search. On 10,105-dimensional reuters, under a trustworthy multinomial filter criterion, sSFFS dominates BIF and DAF on the search objective and on holdout accuracy at every subset size, in about two minutes of single-core evaluation work. A verified standalone implementation accompanies the paper.</p>
+
+<p><a href="https://arxiv.org/abs/2608.01502">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
