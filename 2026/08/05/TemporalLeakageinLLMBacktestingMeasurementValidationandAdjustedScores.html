@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Temporal Leakage in LLM Backtesting: Measurement, Validation, and Adjusted Scores</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Temporal Leakage in LLM Backtesting: Measurement, Validation, and Adjusted Scores" />
+<meta name="author" content="Zeyu Zhang, Bradly C. Stadie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The standard check for contamination in LLM backtests is simple: compare scores before and after the training cutoff. We show this check is uninformative. Four flagship models fail it on questions they cannot have memorized: every scored question resolved after their cutoffs. The reason is structural. Models legitimately know more about times near their cutoff, so recency mimics leakage, and we prove no passive backtest can separate the two from genuine skill. Measurement, not just detection, requires information from outside the backtest. We supply it in two forms. A known cutoff identifies leakage at the boundary; a matched clean control identifies it globally and yields a leakage-adjusted score. We also derive where leakage hides: it concentrates on outcomes that surprised the crowd and were well covered in training, and partial memorization is disproportionately rewarded. We validate the estimators against ground truth by planting leakage in twin models, where they recover the injected dose and return null on clean questions. Deployed on frontier models, they detect one cutoff-localized signature and, at the audit’s power floor, clear five models whose apparent advantages were recency alone. Backtests need not be discarded; they need one defensible reference." />
+<meta property="og:description" content="The standard check for contamination in LLM backtests is simple: compare scores before and after the training cutoff. We show this check is uninformative. Four flagship models fail it on questions they cannot have memorized: every scored question resolved after their cutoffs. The reason is structural. Models legitimately know more about times near their cutoff, so recency mimics leakage, and we prove no passive backtest can separate the two from genuine skill. Measurement, not just detection, requires information from outside the backtest. We supply it in two forms. A known cutoff identifies leakage at the boundary; a matched clean control identifies it globally and yields a leakage-adjusted score. We also derive where leakage hides: it concentrates on outcomes that surprised the crowd and were well covered in training, and partial memorization is disproportionately rewarded. We validate the estimators against ground truth by planting leakage in twin models, where they recover the injected dose and return null on clean questions. Deployed on frontier models, they detect one cutoff-localized signature and, at the audit’s power floor, clear five models whose apparent advantages were recency alone. Backtests need not be discarded; they need one defensible reference." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/05/TemporalLeakageinLLMBacktestingMeasurementValidationandAdjustedScores.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/05/TemporalLeakageinLLMBacktestingMeasurementValidationandAdjustedScores.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Temporal Leakage in LLM Backtesting: Measurement, Validation, and Adjusted Scores" />
+<script type="application/ld+json">
+{"description":"The standard check for contamination in LLM backtests is simple: compare scores before and after the training cutoff. We show this check is uninformative. Four flagship models fail it on questions they cannot have memorized: every scored question resolved after their cutoffs. The reason is structural. Models legitimately know more about times near their cutoff, so recency mimics leakage, and we prove no passive backtest can separate the two from genuine skill. Measurement, not just detection, requires information from outside the backtest. We supply it in two forms. A known cutoff identifies leakage at the boundary; a matched clean control identifies it globally and yields a leakage-adjusted score. We also derive where leakage hides: it concentrates on outcomes that surprised the crowd and were well covered in training, and partial memorization is disproportionately rewarded. We validate the estimators against ground truth by planting leakage in twin models, where they recover the injected dose and return null on clean questions. Deployed on frontier models, they detect one cutoff-localized signature and, at the audit’s power floor, clear five models whose apparent advantages were recency alone. Backtests need not be discarded; they need one defensible reference.","datePublished":"2026-08-05T00:00:00+00:00","dateModified":"2026-08-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/05/TemporalLeakageinLLMBacktestingMeasurementValidationandAdjustedScores.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/05/TemporalLeakageinLLMBacktestingMeasurementValidationandAdjustedScores.html","author":{"@type":"Person","name":"Zeyu Zhang, Bradly C. Stadie"},"@type":"BlogPosting","headline":"Temporal Leakage in LLM Backtesting: Measurement, Validation, and Adjusted Scores","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-05 00:00:00 +0000">08-05</time>
+  </p>
+  
+  <h1>Temporal Leakage in LLM Backtesting: Measurement, Validation, and Adjusted Scores</h1>
+  <br>Zeyu Zhang, Bradly C. Stadie</h3>
+  <br> [stat.ML]
+
+  <p>The standard check for contamination in LLM backtests is simple: compare scores before and after the training cutoff. We show this check is uninformative. Four flagship models fail it on questions they cannot have memorized: every scored question resolved after their cutoffs. The reason is structural. Models legitimately know more about times near their cutoff, so recency mimics leakage, and we prove no passive backtest can separate the two from genuine skill. Measurement, not just detection, requires information from outside the backtest. We supply it in two forms. A known cutoff identifies leakage at the boundary; a matched clean control identifies it globally and yields a leakage-adjusted score. We also derive where leakage hides: it concentrates on outcomes that surprised the crowd and were well covered in training, and partial memorization is disproportionately rewarded. We validate the estimators against ground truth by planting leakage in twin models, where they recover the injected dose and return null on clean questions. Deployed on frontier models, they detect one cutoff-localized signature and, at the audit’s power floor, clear five models whose apparent advantages were recency alone. Backtests need not be discarded; they need one defensible reference.</p>
+
+<p><a href="https://arxiv.org/abs/2608.02985">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
