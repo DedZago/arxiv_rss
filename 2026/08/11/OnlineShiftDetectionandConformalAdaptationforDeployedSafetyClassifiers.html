@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers" />
+<meta name="author" content="Jun Wen Leong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reasoning models deployed as safety monitors exhibit a systematic vulnerability: reasoning-token budget starvation. Adversarial inputs require $3.3\times$ more reasoning tokens than benign inputs to produce valid safety scores ($T_{50,\text{adv}}{=}154$ vs. $T_{50,\text{benign}}{=}46$ for o3), so low-budget deployments silently starve the monitor on exactly the inputs it must catch. This compounds the central failure mode: gradient-based evasion remains the residual threat - template jailbreaks fail at 99%, but GCG-optimized suffixes flip encoder decisions reliably. We systematize a canary construction - score-disagreement monitoring between a targeted and un-targeted classifier - and quantify its reliability under targeted evasion. We derive the exact security boundary - a confidence-gated equilibrium at which a monitor-aware attacker stalls (validated gap $= 1/(2\lambda)$, within 95% CI of theory) - and identify a failure mode in post-shift conformal adaptation. Three contributions. (1) Factorial drift benchmark. A pre-registered 800-cell evaluation ($4$ classifiers $\times$ $5$ shift types $\times$ $20$ seeds $\times$ $2$ windows) reveals detection difficulty is dominated by a classifier$\times$shift interaction ($\eta^2 = 0.185$): encoders detect paraphrase drift in 28 steps but miss adversarial suffixes for 37; decoders show the opposite. (2) Conformal collapse in generative embeddings. Weighted conformal prediction fails on decoder classifiers: logistic density-ratio estimation achieves perfect separability in 3584–4096-dimensional space, clipping all importance weights to zero. Projecting to $\leq$32 dimensions restores coverage (+33pp). (3) Adversarial canary threat model. Across 35 frontier models, a 4-tier threat model yields deployment guarantees ($\geq$71% detection, $&lt;$1.5% FPR at $N{=}1000$)." />
+<meta property="og:description" content="Reasoning models deployed as safety monitors exhibit a systematic vulnerability: reasoning-token budget starvation. Adversarial inputs require $3.3\times$ more reasoning tokens than benign inputs to produce valid safety scores ($T_{50,\text{adv}}{=}154$ vs. $T_{50,\text{benign}}{=}46$ for o3), so low-budget deployments silently starve the monitor on exactly the inputs it must catch. This compounds the central failure mode: gradient-based evasion remains the residual threat - template jailbreaks fail at 99%, but GCG-optimized suffixes flip encoder decisions reliably. We systematize a canary construction - score-disagreement monitoring between a targeted and un-targeted classifier - and quantify its reliability under targeted evasion. We derive the exact security boundary - a confidence-gated equilibrium at which a monitor-aware attacker stalls (validated gap $= 1/(2\lambda)$, within 95% CI of theory) - and identify a failure mode in post-shift conformal adaptation. Three contributions. (1) Factorial drift benchmark. A pre-registered 800-cell evaluation ($4$ classifiers $\times$ $5$ shift types $\times$ $20$ seeds $\times$ $2$ windows) reveals detection difficulty is dominated by a classifier$\times$shift interaction ($\eta^2 = 0.185$): encoders detect paraphrase drift in 28 steps but miss adversarial suffixes for 37; decoders show the opposite. (2) Conformal collapse in generative embeddings. Weighted conformal prediction fails on decoder classifiers: logistic density-ratio estimation achieves perfect separability in 3584–4096-dimensional space, clipping all importance weights to zero. Projecting to $\leq$32 dimensions restores coverage (+33pp). (3) Adversarial canary threat model. Across 35 frontier models, a 4-tier threat model yields deployment guarantees ($\geq$71% detection, $&lt;$1.5% FPR at $N{=}1000$)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/11/OnlineShiftDetectionandConformalAdaptationforDeployedSafetyClassifiers.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/11/OnlineShiftDetectionandConformalAdaptationforDeployedSafetyClassifiers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers" />
+<script type="application/ld+json">
+{"description":"Reasoning models deployed as safety monitors exhibit a systematic vulnerability: reasoning-token budget starvation. Adversarial inputs require $3.3\\times$ more reasoning tokens than benign inputs to produce valid safety scores ($T_{50,\\text{adv}}{=}154$ vs. $T_{50,\\text{benign}}{=}46$ for o3), so low-budget deployments silently starve the monitor on exactly the inputs it must catch. This compounds the central failure mode: gradient-based evasion remains the residual threat - template jailbreaks fail at 99%, but GCG-optimized suffixes flip encoder decisions reliably. We systematize a canary construction - score-disagreement monitoring between a targeted and un-targeted classifier - and quantify its reliability under targeted evasion. We derive the exact security boundary - a confidence-gated equilibrium at which a monitor-aware attacker stalls (validated gap $= 1/(2\\lambda)$, within 95% CI of theory) - and identify a failure mode in post-shift conformal adaptation. Three contributions. (1) Factorial drift benchmark. A pre-registered 800-cell evaluation ($4$ classifiers $\\times$ $5$ shift types $\\times$ $20$ seeds $\\times$ $2$ windows) reveals detection difficulty is dominated by a classifier$\\times$shift interaction ($\\eta^2 = 0.185$): encoders detect paraphrase drift in 28 steps but miss adversarial suffixes for 37; decoders show the opposite. (2) Conformal collapse in generative embeddings. Weighted conformal prediction fails on decoder classifiers: logistic density-ratio estimation achieves perfect separability in 3584–4096-dimensional space, clipping all importance weights to zero. Projecting to $\\leq$32 dimensions restores coverage (+33pp). (3) Adversarial canary threat model. Across 35 frontier models, a 4-tier threat model yields deployment guarantees ($\\geq$71% detection, $&lt;$1.5% FPR at $N{=}1000$).","datePublished":"2026-08-11T00:00:00+00:00","dateModified":"2026-08-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/11/OnlineShiftDetectionandConformalAdaptationforDeployedSafetyClassifiers.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/11/OnlineShiftDetectionandConformalAdaptationforDeployedSafetyClassifiers.html","author":{"@type":"Person","name":"Jun Wen Leong"},"@type":"BlogPosting","headline":"Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-11 00:00:00 +0000">08-11</time>
+  </p>
+  
+  <h1>Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers</h1>
+  <br>Jun Wen Leong</h3>
+  <br> [stat.ML]
+
+  <p>Reasoning models deployed as safety monitors exhibit a systematic vulnerability: reasoning-token budget starvation. Adversarial inputs require $3.3\times$ more reasoning tokens than benign inputs to produce valid safety scores ($T_{50,\text{adv}}{=}154$ vs. $T_{50,\text{benign}}{=}46$ for o3), so low-budget deployments silently starve the monitor on exactly the inputs it must catch. This compounds the central failure mode: gradient-based evasion remains the residual threat - template jailbreaks fail at 99%, but GCG-optimized suffixes flip encoder decisions reliably.
+  We systematize a canary construction - score-disagreement monitoring between a targeted and un-targeted classifier - and quantify its reliability under targeted evasion. We derive the exact security boundary - a confidence-gated equilibrium at which a monitor-aware attacker stalls (validated gap $= 1/(2\lambda)$, within 95% CI of theory) - and identify a failure mode in post-shift conformal adaptation.
+  Three contributions. (1) Factorial drift benchmark. A pre-registered 800-cell evaluation ($4$ classifiers $\times$ $5$ shift types $\times$ $20$ seeds $\times$ $2$ windows) reveals detection difficulty is dominated by a classifier$\times$shift interaction ($\eta^2 = 0.185$): encoders detect paraphrase drift in 28 steps but miss adversarial suffixes for 37; decoders show the opposite. (2) Conformal collapse in generative embeddings. Weighted conformal prediction fails on decoder classifiers: logistic density-ratio estimation achieves perfect separability in 3584–4096-dimensional space, clipping all importance weights to zero. Projecting to $\leq$32 dimensions restores coverage (+33pp). (3) Adversarial canary threat model. Across 35 frontier models, a 4-tier threat model yields deployment guarantees ($\geq$71% detection, $&lt;$1.5% FPR at $N{=}1000$).</p>
+
+<p><a href="https://arxiv.org/abs/2606.11949">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Mean-Field Framework for Inference-Time Distributional Control of Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Mean-Field Framework for Inference-Time Distributional Control of Diffusion Models" />
+<meta name="author" content="Samuel Howard, Nikolas Nüsken" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Diffusion models are increasingly used as controllable samplers, whose generations can be steered at inference time according to a chosen reward function. While such rewards are typically defined on individual samples, for many applications it is desirable to steer according to distribution-level rewards, for example to calibrate with population-level information or to encourage diversity. In both cases, simply incorporating the reward gradient into the dynamics, while often effective, comes with few theoretical guarantees on the sampled distribution. For pointwise rewards, recent work has therefore sought to develop a principled framework for targeting a prescribed tilted distribution using particle reweighting. However, an analogous theoretically-grounded approach for distributional rewards is currently lacking. In this work, we formulate inference-time distributional control as targeting a tilted measure under a mean-field framework, and derive a weighted interacting particle scheme to target it in a principled manner. Our framework recovers pointwise-reward steering as a special case, while providing a theoretical foundation for existing batch-level steering methods. Empirically, we verify that the procedure correctly targets the prescribed distribution in tractable low-dimensional settings, and investigate its behaviour in higher-dimensional protein conformation tasks." />
+<meta property="og:description" content="Diffusion models are increasingly used as controllable samplers, whose generations can be steered at inference time according to a chosen reward function. While such rewards are typically defined on individual samples, for many applications it is desirable to steer according to distribution-level rewards, for example to calibrate with population-level information or to encourage diversity. In both cases, simply incorporating the reward gradient into the dynamics, while often effective, comes with few theoretical guarantees on the sampled distribution. For pointwise rewards, recent work has therefore sought to develop a principled framework for targeting a prescribed tilted distribution using particle reweighting. However, an analogous theoretically-grounded approach for distributional rewards is currently lacking. In this work, we formulate inference-time distributional control as targeting a tilted measure under a mean-field framework, and derive a weighted interacting particle scheme to target it in a principled manner. Our framework recovers pointwise-reward steering as a special case, while providing a theoretical foundation for existing batch-level steering methods. Empirically, we verify that the procedure correctly targets the prescribed distribution in tractable low-dimensional settings, and investigate its behaviour in higher-dimensional protein conformation tasks." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/11/AMeanFieldFrameworkforInferenceTimeDistributionalControlofDiffusionModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/11/AMeanFieldFrameworkforInferenceTimeDistributionalControlofDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Mean-Field Framework for Inference-Time Distributional Control of Diffusion Models" />
+<script type="application/ld+json">
+{"description":"Diffusion models are increasingly used as controllable samplers, whose generations can be steered at inference time according to a chosen reward function. While such rewards are typically defined on individual samples, for many applications it is desirable to steer according to distribution-level rewards, for example to calibrate with population-level information or to encourage diversity. In both cases, simply incorporating the reward gradient into the dynamics, while often effective, comes with few theoretical guarantees on the sampled distribution. For pointwise rewards, recent work has therefore sought to develop a principled framework for targeting a prescribed tilted distribution using particle reweighting. However, an analogous theoretically-grounded approach for distributional rewards is currently lacking. In this work, we formulate inference-time distributional control as targeting a tilted measure under a mean-field framework, and derive a weighted interacting particle scheme to target it in a principled manner. Our framework recovers pointwise-reward steering as a special case, while providing a theoretical foundation for existing batch-level steering methods. Empirically, we verify that the procedure correctly targets the prescribed distribution in tractable low-dimensional settings, and investigate its behaviour in higher-dimensional protein conformation tasks.","datePublished":"2026-08-11T00:00:00+00:00","dateModified":"2026-08-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/11/AMeanFieldFrameworkforInferenceTimeDistributionalControlofDiffusionModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/11/AMeanFieldFrameworkforInferenceTimeDistributionalControlofDiffusionModels.html","author":{"@type":"Person","name":"Samuel Howard, Nikolas Nüsken"},"@type":"BlogPosting","headline":"A Mean-Field Framework for Inference-Time Distributional Control of Diffusion Models","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-11 00:00:00 +0000">08-11</time>
+  </p>
+  
+  <h1>A Mean-Field Framework for Inference-Time Distributional Control of Diffusion Models</h1>
+  <br>Samuel Howard, Nikolas Nüsken</h3>
+  <br> [stat.ML]
+
+  <p>Diffusion models are increasingly used as controllable samplers, whose generations can be steered at inference time according to a chosen reward function. While such rewards are typically defined on individual samples, for many applications it is desirable to steer according to distribution-level rewards, for example to calibrate with population-level information or to encourage diversity. In both cases, simply incorporating the reward gradient into the dynamics, while often effective, comes with few theoretical guarantees on the sampled distribution. For pointwise rewards, recent work has therefore sought to develop a principled framework for targeting a prescribed tilted distribution using particle reweighting. However, an analogous theoretically-grounded approach for distributional rewards is currently lacking. In this work, we formulate inference-time distributional control as targeting a tilted measure under a mean-field framework, and derive a weighted interacting particle scheme to target it in a principled manner. Our framework recovers pointwise-reward steering as a special case, while providing a theoretical foundation for existing batch-level steering methods. Empirically, we verify that the procedure correctly targets the prescribed distribution in tractable low-dimensional settings, and investigate its behaviour in higher-dimensional protein conformation tasks.</p>
+
+<p><a href="https://arxiv.org/abs/2608.08770">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

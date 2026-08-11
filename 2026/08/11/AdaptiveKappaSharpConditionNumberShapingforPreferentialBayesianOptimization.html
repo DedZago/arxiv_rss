@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization" />
+<meta name="author" content="Ketong Shao, Jialu Wang, Xuekai Pei, Ali Mesbah" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Preferential Bayesian optimization (PBO) optimizes objectives accessible only through pairwise user comparisons. The standard approach fits a Gaussian process surrogate for observed pairwise comparisons (PairwiseGP) using the Laplace approximation and selects queries with the Expected Utility of Best Option (EUBO) acquisition function. EUBO queries new candidates at each step, producing pairs that share no candidates with previous queries. Each such pair forms an isolated component in the comparison graph, removing one degree of freedom from the likelihood Hessian and making it rank-deficient. This deficiency is structural and cannot be resolved by changing the surrogate modeling approach. Existing approaches to remedy this issue either waste query budget by forcing comparisons to stay connected, or apply uniform regularization that also perturbs directions already well-constrained by the observed comparisons. We propose KappaSharp that enables a diagonal correction to the Hessian to reduce its condition number, with larger corrections where the prior uncertainty is higher. The correction is only applied in the model fitting step, not query selection. An adaptive variant of KappaSharp is also presented that activates the correction only when the surrogate is confident about recent comparisons, avoiding unnecessary corrections when the problem is well-conditioned. On 11 benchmarks (5–20 dimensions), including a 16-dimensional controller tuning problem in plasma medicine, Adaptive KappaSharp outperforms the standard PBO baseline, with up to +10.9% ($p{=}0.003$)." />
+<meta property="og:description" content="Preferential Bayesian optimization (PBO) optimizes objectives accessible only through pairwise user comparisons. The standard approach fits a Gaussian process surrogate for observed pairwise comparisons (PairwiseGP) using the Laplace approximation and selects queries with the Expected Utility of Best Option (EUBO) acquisition function. EUBO queries new candidates at each step, producing pairs that share no candidates with previous queries. Each such pair forms an isolated component in the comparison graph, removing one degree of freedom from the likelihood Hessian and making it rank-deficient. This deficiency is structural and cannot be resolved by changing the surrogate modeling approach. Existing approaches to remedy this issue either waste query budget by forcing comparisons to stay connected, or apply uniform regularization that also perturbs directions already well-constrained by the observed comparisons. We propose KappaSharp that enables a diagonal correction to the Hessian to reduce its condition number, with larger corrections where the prior uncertainty is higher. The correction is only applied in the model fitting step, not query selection. An adaptive variant of KappaSharp is also presented that activates the correction only when the surrogate is confident about recent comparisons, avoiding unnecessary corrections when the problem is well-conditioned. On 11 benchmarks (5–20 dimensions), including a 16-dimensional controller tuning problem in plasma medicine, Adaptive KappaSharp outperforms the standard PBO baseline, with up to +10.9% ($p{=}0.003$)." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/11/AdaptiveKappaSharpConditionNumberShapingforPreferentialBayesianOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/11/AdaptiveKappaSharpConditionNumberShapingforPreferentialBayesianOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization" />
+<script type="application/ld+json">
+{"description":"Preferential Bayesian optimization (PBO) optimizes objectives accessible only through pairwise user comparisons. The standard approach fits a Gaussian process surrogate for observed pairwise comparisons (PairwiseGP) using the Laplace approximation and selects queries with the Expected Utility of Best Option (EUBO) acquisition function. EUBO queries new candidates at each step, producing pairs that share no candidates with previous queries. Each such pair forms an isolated component in the comparison graph, removing one degree of freedom from the likelihood Hessian and making it rank-deficient. This deficiency is structural and cannot be resolved by changing the surrogate modeling approach. Existing approaches to remedy this issue either waste query budget by forcing comparisons to stay connected, or apply uniform regularization that also perturbs directions already well-constrained by the observed comparisons. We propose KappaSharp that enables a diagonal correction to the Hessian to reduce its condition number, with larger corrections where the prior uncertainty is higher. The correction is only applied in the model fitting step, not query selection. An adaptive variant of KappaSharp is also presented that activates the correction only when the surrogate is confident about recent comparisons, avoiding unnecessary corrections when the problem is well-conditioned. On 11 benchmarks (5–20 dimensions), including a 16-dimensional controller tuning problem in plasma medicine, Adaptive KappaSharp outperforms the standard PBO baseline, with up to +10.9% ($p{=}0.003$).","datePublished":"2026-08-11T00:00:00+00:00","dateModified":"2026-08-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/11/AdaptiveKappaSharpConditionNumberShapingforPreferentialBayesianOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/11/AdaptiveKappaSharpConditionNumberShapingforPreferentialBayesianOptimization.html","author":{"@type":"Person","name":"Ketong Shao, Jialu Wang, Xuekai Pei, Ali Mesbah"},"@type":"BlogPosting","headline":"Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-11 00:00:00 +0000">08-11</time>
+  </p>
+  
+  <h1>Adaptive KappaSharp: Condition-Number Shaping for Preferential Bayesian Optimization</h1>
+  <br>Ketong Shao, Jialu Wang, Xuekai Pei, Ali Mesbah</h3>
+  <br> [stat.ML]
+
+  <p>Preferential Bayesian optimization (PBO) optimizes objectives accessible only through pairwise user comparisons. The standard approach fits a Gaussian process surrogate for observed pairwise comparisons (PairwiseGP) using the Laplace approximation and selects queries with the Expected Utility of Best Option (EUBO) acquisition function. EUBO queries new candidates at each step, producing pairs that share no candidates with previous queries. Each such pair forms an isolated component in the comparison graph, removing one degree of freedom from the likelihood Hessian and making it rank-deficient. This deficiency is structural and cannot be resolved by changing the surrogate modeling approach. Existing approaches to remedy this issue either waste query budget by forcing comparisons to stay connected, or apply uniform regularization that also perturbs directions already well-constrained by the observed comparisons. We propose KappaSharp that enables a diagonal correction to the Hessian to reduce its condition number, with larger corrections where the prior uncertainty is higher. The correction is only applied in the model fitting step, not query selection. An adaptive variant of KappaSharp is also presented that activates the correction only when the surrogate is confident about recent comparisons, avoiding unnecessary corrections when the problem is well-conditioned. On 11 benchmarks (5–20 dimensions), including a 16-dimensional controller tuning problem in plasma medicine, Adaptive KappaSharp outperforms the standard PBO baseline, with up to +10.9% ($p{=}0.003$).</p>
+
+<p><a href="https://arxiv.org/abs/2608.07859">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
