@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>High-Dimensional Calibration from Swap Regret</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="High-Dimensional Calibration from Swap Regret" />
+<meta name="author" content="Maxwell Fishelson, Noah Golowich, Mehryar Mohri, Jon Schneider" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study online calibration of multi-dimensional forecasts over an arbitrary convex set $P \subset \mathbb{R}^d$ relative to an arbitrary norm $ \cdot $. We connect this to external regret minimization for online linear optimization (OLO): if one can guarantee $O(\sqrt{\rho T})$ worst-case regret after $T$ rounds when actions are drawn from $P$ and losses from the dual $ \cdot _*$ unit norm ball, then one can obtain $\epsilon$-calibrated forecasts after $T = \exp(\tilde O(\rho/\epsilon^2))$ rounds. When $P$ is the $d$-dimensional simplex and $ \cdot $ is the $\ell_1$-norm, the $O(\sqrt{T\log d})$ experts regret bound yields $\epsilon$-calibrated forecasts after $T = \exp(\tilde O(\log d/\epsilon^2)) = d^{\tilde O(1/\epsilon^2)}$ rounds, recovering a recent result of Peng (2025). Interestingly, our algorithm obtains this guarantee without requiring access to any online linear optimization subroutine or knowledge of the optimal rate $\rho$ – in fact, our algorithm is identical for every setting of $P$ and $ \cdot $. Instead, we show that the optimal regularizer for the above OLO problem can be used to upper bound the above calibration error by a swap regret, which we then minimize by running the recent TreeSwap algorithm (Dagan et al., 2024; Peng and Rubinstein, 2024) with Follow-The-Leader as a subroutine. The resulting algorithm is highly efficient and plays a distribution over simple averages of past observations in each round. Finally, we prove that any online calibration algorithm that guarantees $\epsilon T$ $\ell_1$-calibration error over the $d$-dimensional simplex requires $T \geq \exp(\mathrm{poly}(1/\epsilon))$ (assuming $d \geq \mathrm{poly}(1/\epsilon)$). This strengthens the corresponding $d^{\Omega(\log(1/\epsilon))}$ lower bound of Peng (2025), and shows that an exponential dependence on $1/\epsilon$ is necessary." />
+<meta property="og:description" content="We study online calibration of multi-dimensional forecasts over an arbitrary convex set $P \subset \mathbb{R}^d$ relative to an arbitrary norm $ \cdot $. We connect this to external regret minimization for online linear optimization (OLO): if one can guarantee $O(\sqrt{\rho T})$ worst-case regret after $T$ rounds when actions are drawn from $P$ and losses from the dual $ \cdot _*$ unit norm ball, then one can obtain $\epsilon$-calibrated forecasts after $T = \exp(\tilde O(\rho/\epsilon^2))$ rounds. When $P$ is the $d$-dimensional simplex and $ \cdot $ is the $\ell_1$-norm, the $O(\sqrt{T\log d})$ experts regret bound yields $\epsilon$-calibrated forecasts after $T = \exp(\tilde O(\log d/\epsilon^2)) = d^{\tilde O(1/\epsilon^2)}$ rounds, recovering a recent result of Peng (2025). Interestingly, our algorithm obtains this guarantee without requiring access to any online linear optimization subroutine or knowledge of the optimal rate $\rho$ – in fact, our algorithm is identical for every setting of $P$ and $ \cdot $. Instead, we show that the optimal regularizer for the above OLO problem can be used to upper bound the above calibration error by a swap regret, which we then minimize by running the recent TreeSwap algorithm (Dagan et al., 2024; Peng and Rubinstein, 2024) with Follow-The-Leader as a subroutine. The resulting algorithm is highly efficient and plays a distribution over simple averages of past observations in each round. Finally, we prove that any online calibration algorithm that guarantees $\epsilon T$ $\ell_1$-calibration error over the $d$-dimensional simplex requires $T \geq \exp(\mathrm{poly}(1/\epsilon))$ (assuming $d \geq \mathrm{poly}(1/\epsilon)$). This strengthens the corresponding $d^{\Omega(\log(1/\epsilon))}$ lower bound of Peng (2025), and shows that an exponential dependence on $1/\epsilon$ is necessary." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/12/HighDimensionalCalibrationfromSwapRegret.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/12/HighDimensionalCalibrationfromSwapRegret.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="High-Dimensional Calibration from Swap Regret" />
+<script type="application/ld+json">
+{"description":"We study online calibration of multi-dimensional forecasts over an arbitrary convex set $P \\subset \\mathbb{R}^d$ relative to an arbitrary norm $ \\cdot $. We connect this to external regret minimization for online linear optimization (OLO): if one can guarantee $O(\\sqrt{\\rho T})$ worst-case regret after $T$ rounds when actions are drawn from $P$ and losses from the dual $ \\cdot _*$ unit norm ball, then one can obtain $\\epsilon$-calibrated forecasts after $T = \\exp(\\tilde O(\\rho/\\epsilon^2))$ rounds. When $P$ is the $d$-dimensional simplex and $ \\cdot $ is the $\\ell_1$-norm, the $O(\\sqrt{T\\log d})$ experts regret bound yields $\\epsilon$-calibrated forecasts after $T = \\exp(\\tilde O(\\log d/\\epsilon^2)) = d^{\\tilde O(1/\\epsilon^2)}$ rounds, recovering a recent result of Peng (2025). Interestingly, our algorithm obtains this guarantee without requiring access to any online linear optimization subroutine or knowledge of the optimal rate $\\rho$ – in fact, our algorithm is identical for every setting of $P$ and $ \\cdot $. Instead, we show that the optimal regularizer for the above OLO problem can be used to upper bound the above calibration error by a swap regret, which we then minimize by running the recent TreeSwap algorithm (Dagan et al., 2024; Peng and Rubinstein, 2024) with Follow-The-Leader as a subroutine. The resulting algorithm is highly efficient and plays a distribution over simple averages of past observations in each round. Finally, we prove that any online calibration algorithm that guarantees $\\epsilon T$ $\\ell_1$-calibration error over the $d$-dimensional simplex requires $T \\geq \\exp(\\mathrm{poly}(1/\\epsilon))$ (assuming $d \\geq \\mathrm{poly}(1/\\epsilon)$). This strengthens the corresponding $d^{\\Omega(\\log(1/\\epsilon))}$ lower bound of Peng (2025), and shows that an exponential dependence on $1/\\epsilon$ is necessary.","datePublished":"2026-08-12T00:00:00+00:00","dateModified":"2026-08-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/12/HighDimensionalCalibrationfromSwapRegret.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/12/HighDimensionalCalibrationfromSwapRegret.html","author":{"@type":"Person","name":"Maxwell Fishelson, Noah Golowich, Mehryar Mohri, Jon Schneider"},"@type":"BlogPosting","headline":"High-Dimensional Calibration from Swap Regret","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-12 00:00:00 +0000">08-12</time>
+  </p>
+  
+  <h1>High-Dimensional Calibration from Swap Regret</h1>
+  <br>Maxwell Fishelson, Noah Golowich, Mehryar Mohri, Jon Schneider</h3>
+  <br> [stat.ML]
+
+  <table>
+  <tbody>
+    <tr>
+      <td>We study online calibration of multi-dimensional forecasts over an arbitrary convex set $P \subset \mathbb{R}^d$ relative to an arbitrary norm $</td>
+      <td>\cdot</td>
+      <td>$. We connect this to external regret minimization for online linear optimization (OLO): if one can guarantee $O(\sqrt{\rho T})$ worst-case regret after $T$ rounds when actions are drawn from $P$ and losses from the dual $</td>
+      <td>\cdot</td>
+      <td>_*$ unit norm ball, then one can obtain $\epsilon$-calibrated forecasts after $T = \exp(\tilde O(\rho/\epsilon^2))$ rounds. When $P$ is the $d$-dimensional simplex and $</td>
+      <td>\cdot</td>
+      <td>$ is the $\ell_1$-norm, the $O(\sqrt{T\log d})$ experts regret bound yields $\epsilon$-calibrated forecasts after $T = \exp(\tilde O(\log d/\epsilon^2)) = d^{\tilde O(1/\epsilon^2)}$ rounds, recovering a recent result of Peng (2025). Interestingly, our algorithm obtains this guarantee without requiring access to any online linear optimization subroutine or knowledge of the optimal rate $\rho$ – in fact, our algorithm is identical for every setting of $P$ and $</td>
+      <td>\cdot</td>
+      <td>$. Instead, we show that the optimal regularizer for the above OLO problem can be used to upper bound the above calibration error by a swap regret, which we then minimize by running the recent TreeSwap algorithm (Dagan et al., 2024; Peng and Rubinstein, 2024) with Follow-The-Leader as a subroutine. The resulting algorithm is highly efficient and plays a distribution over simple averages of past observations in each round. Finally, we prove that any online calibration algorithm that guarantees $\epsilon T$ $\ell_1$-calibration error over the $d$-dimensional simplex requires $T \geq \exp(\mathrm{poly}(1/\epsilon))$ (assuming $d \geq \mathrm{poly}(1/\epsilon)$). This strengthens the corresponding $d^{\Omega(\log(1/\epsilon))}$ lower bound of Peng (2025), and shows that an exponential dependence on $1/\epsilon$ is necessary.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://arxiv.org/abs/2505.21460">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
