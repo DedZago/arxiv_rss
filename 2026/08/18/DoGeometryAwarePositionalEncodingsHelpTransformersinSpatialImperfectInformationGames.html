@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Do Geometry-Aware Positional Encodings Help Transformers in Spatial Imperfect-Information Games?</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Do Geometry-Aware Positional Encodings Help Transformers in Spatial Imperfect-Information Games?" />
+<meta name="author" content="Wenji Fu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Transformers applied to spatial imperfect-information games must represent map geometry while tracking hidden entities through time. We ask whether geometry-aware positional encodings improve these capabilities, without claiming a new positional encoding. We construct a four-level benchmark on a hexagonal naval pursuit game: controlled geometry and topology probes, an exact-Bayes hidden-target tracking task, offline policy imitation at 1k and 10k games, and 7,200 fixed-seed games against three legacy opponents. Across matched Transformer backbones, HexRoPE reduces exact-belief posterior cross-entropy relative to no positional encoding by 0.278 on D6-transformed test orbits and 0.329 on a larger map; both hierarchical-bootstrap confidence intervals exclude zero, and both Holm-adjusted p-values are below 0.001. At 1k games, HexRoPE improves policy action accuracy by 4.63 percentage points over no encoding and 2.05 points over rectangular relative bias; the gains shrink to 1.55 and 0.41 points at 10k games. However, HexRoPE does not improve aggregate gameplay win rate: its paired effect over no encoding is -1.56 percentage points (95% CI [-4.50, 1.17]). Rectangular relative bias is strongest on D6 belief consistency but fails sharply when extrapolating from radius 3 to radius 4, while graph bias provides only a small blocked-edge gain. The results show that geometric inductive bias improves belief estimation and data-efficient imitation, but those representation gains do not automatically produce stronger closed-loop play." />
+<meta property="og:description" content="Transformers applied to spatial imperfect-information games must represent map geometry while tracking hidden entities through time. We ask whether geometry-aware positional encodings improve these capabilities, without claiming a new positional encoding. We construct a four-level benchmark on a hexagonal naval pursuit game: controlled geometry and topology probes, an exact-Bayes hidden-target tracking task, offline policy imitation at 1k and 10k games, and 7,200 fixed-seed games against three legacy opponents. Across matched Transformer backbones, HexRoPE reduces exact-belief posterior cross-entropy relative to no positional encoding by 0.278 on D6-transformed test orbits and 0.329 on a larger map; both hierarchical-bootstrap confidence intervals exclude zero, and both Holm-adjusted p-values are below 0.001. At 1k games, HexRoPE improves policy action accuracy by 4.63 percentage points over no encoding and 2.05 points over rectangular relative bias; the gains shrink to 1.55 and 0.41 points at 10k games. However, HexRoPE does not improve aggregate gameplay win rate: its paired effect over no encoding is -1.56 percentage points (95% CI [-4.50, 1.17]). Rectangular relative bias is strongest on D6 belief consistency but fails sharply when extrapolating from radius 3 to radius 4, while graph bias provides only a small blocked-edge gain. The results show that geometric inductive bias improves belief estimation and data-efficient imitation, but those representation gains do not automatically produce stronger closed-loop play." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/18/DoGeometryAwarePositionalEncodingsHelpTransformersinSpatialImperfectInformationGames.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/18/DoGeometryAwarePositionalEncodingsHelpTransformersinSpatialImperfectInformationGames.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Do Geometry-Aware Positional Encodings Help Transformers in Spatial Imperfect-Information Games?" />
+<script type="application/ld+json">
+{"description":"Transformers applied to spatial imperfect-information games must represent map geometry while tracking hidden entities through time. We ask whether geometry-aware positional encodings improve these capabilities, without claiming a new positional encoding. We construct a four-level benchmark on a hexagonal naval pursuit game: controlled geometry and topology probes, an exact-Bayes hidden-target tracking task, offline policy imitation at 1k and 10k games, and 7,200 fixed-seed games against three legacy opponents. Across matched Transformer backbones, HexRoPE reduces exact-belief posterior cross-entropy relative to no positional encoding by 0.278 on D6-transformed test orbits and 0.329 on a larger map; both hierarchical-bootstrap confidence intervals exclude zero, and both Holm-adjusted p-values are below 0.001. At 1k games, HexRoPE improves policy action accuracy by 4.63 percentage points over no encoding and 2.05 points over rectangular relative bias; the gains shrink to 1.55 and 0.41 points at 10k games. However, HexRoPE does not improve aggregate gameplay win rate: its paired effect over no encoding is -1.56 percentage points (95% CI [-4.50, 1.17]). Rectangular relative bias is strongest on D6 belief consistency but fails sharply when extrapolating from radius 3 to radius 4, while graph bias provides only a small blocked-edge gain. The results show that geometric inductive bias improves belief estimation and data-efficient imitation, but those representation gains do not automatically produce stronger closed-loop play.","datePublished":"2026-08-18T00:00:00+00:00","dateModified":"2026-08-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/18/DoGeometryAwarePositionalEncodingsHelpTransformersinSpatialImperfectInformationGames.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/18/DoGeometryAwarePositionalEncodingsHelpTransformersinSpatialImperfectInformationGames.html","author":{"@type":"Person","name":"Wenji Fu"},"@type":"BlogPosting","headline":"Do Geometry-Aware Positional Encodings Help Transformers in Spatial Imperfect-Information Games?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-18 00:00:00 +0000">08-18</time>
+  </p>
+  
+  <h1>Do Geometry-Aware Positional Encodings Help Transformers in Spatial Imperfect-Information Games?</h1>
+  <br>Wenji Fu</h3>
+  <br> [stat.ML]
+
+  <p>Transformers applied to spatial imperfect-information games must represent map geometry while tracking hidden entities through time. We ask whether geometry-aware positional encodings improve these capabilities, without claiming a new positional encoding. We construct a four-level benchmark on a hexagonal naval pursuit game: controlled geometry and topology probes, an exact-Bayes hidden-target tracking task, offline policy imitation at 1k and 10k games, and 7,200 fixed-seed games against three legacy opponents. Across matched Transformer backbones, HexRoPE reduces exact-belief posterior cross-entropy relative to no positional encoding by 0.278 on D6-transformed test orbits and 0.329 on a larger map; both hierarchical-bootstrap confidence intervals exclude zero, and both Holm-adjusted p-values are below 0.001. At 1k games, HexRoPE improves policy action accuracy by 4.63 percentage points over no encoding and 2.05 points over rectangular relative bias; the gains shrink to 1.55 and 0.41 points at 10k games. However, HexRoPE does not improve aggregate gameplay win rate: its paired effect over no encoding is -1.56 percentage points (95% CI [-4.50, 1.17]). Rectangular relative bias is strongest on D6 belief consistency but fails sharply when extrapolating from radius 3 to radius 4, while graph bias provides only a small blocked-edge gain. The results show that geometric inductive bias improves belief estimation and data-efficient imitation, but those representation gains do not automatically produce stronger closed-loop play.</p>
+
+<p><a href="https://arxiv.org/abs/2608.14982">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
