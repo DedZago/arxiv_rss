@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>fdWasserstein: Optimal Transport Methods for Covariance Operators of Functional Data</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="fdWasserstein: Optimal Transport Methods for Covariance Operators of Functional Data" />
+<meta name="author" content="V. Masarotto" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data increasingly arrive as collections of curves - a voice recording, a growth trajectory, a day of sensor readings - where each observation is a whole function rather than a single number. The usual question asked of such data is how the average curve differs from one group to the next. But the average is only half the picture: two populations of curves can share almost the same mean and still differ profoundly in how they fluctuate around it, and it is often this variability - the pattern of covariation within a curve - that carries the scientific signal. Comparing populations at this level means comparing their covariance operators, and statistics on covariances is impaired by their non-linearity. The fdWasserstein package equips R users with functions to make such comparisons. It is centered on the geometry of optimal transport, under which covariance operators can be meaningfully averaged, contrasted, and interpolated. It provides the Procrustes-Wasserstein distance between covariance operators, their Frechet mean (barycenter), an ANOVA-type permutation test for the equality of several covariances, principal component analysis of covariance variation, and an entropy-regularized soft clustering of curves by their covariance structure. We outline the underlying ideas, discuss the implementation and demonstrate the complete workflow on the phoneme data shipped with the package." />
+<meta property="og:description" content="Data increasingly arrive as collections of curves - a voice recording, a growth trajectory, a day of sensor readings - where each observation is a whole function rather than a single number. The usual question asked of such data is how the average curve differs from one group to the next. But the average is only half the picture: two populations of curves can share almost the same mean and still differ profoundly in how they fluctuate around it, and it is often this variability - the pattern of covariation within a curve - that carries the scientific signal. Comparing populations at this level means comparing their covariance operators, and statistics on covariances is impaired by their non-linearity. The fdWasserstein package equips R users with functions to make such comparisons. It is centered on the geometry of optimal transport, under which covariance operators can be meaningfully averaged, contrasted, and interpolated. It provides the Procrustes-Wasserstein distance between covariance operators, their Frechet mean (barycenter), an ANOVA-type permutation test for the equality of several covariances, principal component analysis of covariance variation, and an entropy-regularized soft clustering of curves by their covariance structure. We outline the underlying ideas, discuss the implementation and demonstrate the complete workflow on the phoneme data shipped with the package." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/25/fdWassersteinOptimalTransportMethodsforCovarianceOperatorsofFunctionalData.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/25/fdWassersteinOptimalTransportMethodsforCovarianceOperatorsofFunctionalData.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="fdWasserstein: Optimal Transport Methods for Covariance Operators of Functional Data" />
+<script type="application/ld+json">
+{"description":"Data increasingly arrive as collections of curves - a voice recording, a growth trajectory, a day of sensor readings - where each observation is a whole function rather than a single number. The usual question asked of such data is how the average curve differs from one group to the next. But the average is only half the picture: two populations of curves can share almost the same mean and still differ profoundly in how they fluctuate around it, and it is often this variability - the pattern of covariation within a curve - that carries the scientific signal. Comparing populations at this level means comparing their covariance operators, and statistics on covariances is impaired by their non-linearity. The fdWasserstein package equips R users with functions to make such comparisons. It is centered on the geometry of optimal transport, under which covariance operators can be meaningfully averaged, contrasted, and interpolated. It provides the Procrustes-Wasserstein distance between covariance operators, their Frechet mean (barycenter), an ANOVA-type permutation test for the equality of several covariances, principal component analysis of covariance variation, and an entropy-regularized soft clustering of curves by their covariance structure. We outline the underlying ideas, discuss the implementation and demonstrate the complete workflow on the phoneme data shipped with the package.","datePublished":"2026-08-25T00:00:00+00:00","dateModified":"2026-08-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/25/fdWassersteinOptimalTransportMethodsforCovarianceOperatorsofFunctionalData.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/25/fdWassersteinOptimalTransportMethodsforCovarianceOperatorsofFunctionalData.html","author":{"@type":"Person","name":"V. Masarotto"},"@type":"BlogPosting","headline":"fdWasserstein: Optimal Transport Methods for Covariance Operators of Functional Data","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-25 00:00:00 +0000">08-25</time>
+  </p>
+  
+  <h1>fdWasserstein: Optimal Transport Methods for Covariance Operators of Functional Data</h1>
+  <br>V. Masarotto</h3>
+  <br> [stat.CO]
+
+  <p>Data increasingly arrive as collections of curves - a voice recording, a growth trajectory, a day of sensor readings - where each observation is a whole function rather than a single number. The usual question asked of such data is how the average curve differs from one group to the next. But the average is only half the picture: two populations of curves can share almost the same mean and still differ profoundly in how they fluctuate around it, and it is often this variability - the pattern of covariation within a curve - that carries the scientific signal. Comparing populations at this level means comparing their covariance operators, and statistics on covariances is impaired by their non-linearity. The fdWasserstein package equips R users with functions to make such comparisons. It is centered on the geometry of optimal transport, under which covariance operators can be meaningfully averaged, contrasted, and interpolated. It provides the Procrustes-Wasserstein distance between covariance operators, their Frechet mean (barycenter), an ANOVA-type permutation test for the equality of several covariances, principal component analysis of covariance variation, and an entropy-regularized soft clustering of curves by their covariance structure. We outline the underlying ideas, discuss the implementation and demonstrate the complete workflow on the phoneme data shipped with the package.</p>
+
+<p><a href="https://arxiv.org/abs/2608.22921">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Distributional Sensitivity Analysis: Enabling Differentiability in Sample-Based Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Distributional Sensitivity Analysis: Enabling Differentiability in Sample-Based Inference" />
+<meta name="author" content="Pi-Yueh Chuang, Ahmed Attia, Emil Constantinescu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This work introduces a mathematical framework for estimating the space-parameter sensitivity of random samples in arbitrary dimensions. Such sensitivity effectively acts as gradients of random samples with respect to distributional parameters, which are essential in sample-based inverse problems in nuclear physics, such as inferring quantum correlation functions. We present two analytical formulae for sensitivity and gradient estimation. The first interprets sensitivity as the partial derivatives of the inverse mapping of 1-D conditional distributions. The second, suited for optimization methods that tolerate inexact gradients, applies a diagonal approximation that reduces computational cost with minimal accuracy loss. When closed forms are unavailable, four second-order numerical algorithms are provided to approximate both expressions. Verification and validation studies confirm the correctness of these algorithms and the effectiveness of the proposed formulae. A nuclear physics application demonstrates how the framework enables uncertainty quantification and parameter inference for quantum correlation functions. Unlike existing approaches, our method requires neither model fitting nor knowledge of sampling algorithms or high-dimensional integrals, making it suitable for black-box or simulation-based samplers. Moreover, it renders arbitrary sampling subroutines differentiable, facilitating integration into deep learning and automatic differentiation frameworks. Algorithmic details and open-source implementations are provided to ensure reproducibility and promote further development." />
+<meta property="og:description" content="This work introduces a mathematical framework for estimating the space-parameter sensitivity of random samples in arbitrary dimensions. Such sensitivity effectively acts as gradients of random samples with respect to distributional parameters, which are essential in sample-based inverse problems in nuclear physics, such as inferring quantum correlation functions. We present two analytical formulae for sensitivity and gradient estimation. The first interprets sensitivity as the partial derivatives of the inverse mapping of 1-D conditional distributions. The second, suited for optimization methods that tolerate inexact gradients, applies a diagonal approximation that reduces computational cost with minimal accuracy loss. When closed forms are unavailable, four second-order numerical algorithms are provided to approximate both expressions. Verification and validation studies confirm the correctness of these algorithms and the effectiveness of the proposed formulae. A nuclear physics application demonstrates how the framework enables uncertainty quantification and parameter inference for quantum correlation functions. Unlike existing approaches, our method requires neither model fitting nor knowledge of sampling algorithms or high-dimensional integrals, making it suitable for black-box or simulation-based samplers. Moreover, it renders arbitrary sampling subroutines differentiable, facilitating integration into deep learning and automatic differentiation frameworks. Algorithmic details and open-source implementations are provided to ensure reproducibility and promote further development." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/25/DistributionalSensitivityAnalysisEnablingDifferentiabilityinSampleBasedInference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/25/DistributionalSensitivityAnalysisEnablingDifferentiabilityinSampleBasedInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Distributional Sensitivity Analysis: Enabling Differentiability in Sample-Based Inference" />
+<script type="application/ld+json">
+{"description":"This work introduces a mathematical framework for estimating the space-parameter sensitivity of random samples in arbitrary dimensions. Such sensitivity effectively acts as gradients of random samples with respect to distributional parameters, which are essential in sample-based inverse problems in nuclear physics, such as inferring quantum correlation functions. We present two analytical formulae for sensitivity and gradient estimation. The first interprets sensitivity as the partial derivatives of the inverse mapping of 1-D conditional distributions. The second, suited for optimization methods that tolerate inexact gradients, applies a diagonal approximation that reduces computational cost with minimal accuracy loss. When closed forms are unavailable, four second-order numerical algorithms are provided to approximate both expressions. Verification and validation studies confirm the correctness of these algorithms and the effectiveness of the proposed formulae. A nuclear physics application demonstrates how the framework enables uncertainty quantification and parameter inference for quantum correlation functions. Unlike existing approaches, our method requires neither model fitting nor knowledge of sampling algorithms or high-dimensional integrals, making it suitable for black-box or simulation-based samplers. Moreover, it renders arbitrary sampling subroutines differentiable, facilitating integration into deep learning and automatic differentiation frameworks. Algorithmic details and open-source implementations are provided to ensure reproducibility and promote further development.","datePublished":"2026-08-25T00:00:00+00:00","dateModified":"2026-08-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/25/DistributionalSensitivityAnalysisEnablingDifferentiabilityinSampleBasedInference.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/25/DistributionalSensitivityAnalysisEnablingDifferentiabilityinSampleBasedInference.html","author":{"@type":"Person","name":"Pi-Yueh Chuang, Ahmed Attia, Emil Constantinescu"},"@type":"BlogPosting","headline":"Distributional Sensitivity Analysis: Enabling Differentiability in Sample-Based Inference","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-25 00:00:00 +0000">08-25</time>
+  </p>
+  
+  <h1>Distributional Sensitivity Analysis: Enabling Differentiability in Sample-Based Inference</h1>
+  <br>Pi-Yueh Chuang, Ahmed Attia, Emil Constantinescu</h3>
+  <br> [stat.ML]
+
+  <p>This work introduces a mathematical framework for estimating the space-parameter sensitivity of random samples in arbitrary dimensions. Such sensitivity effectively acts as gradients of random samples with respect to distributional parameters, which are essential in sample-based inverse problems in nuclear physics, such as inferring quantum correlation functions. We present two analytical formulae for sensitivity and gradient estimation. The first interprets sensitivity as the partial derivatives of the inverse mapping of 1-D conditional distributions. The second, suited for optimization methods that tolerate inexact gradients, applies a diagonal approximation that reduces computational cost with minimal accuracy loss. When closed forms are unavailable, four second-order numerical algorithms are provided to approximate both expressions. Verification and validation studies confirm the correctness of these algorithms and the effectiveness of the proposed formulae. A nuclear physics application demonstrates how the framework enables uncertainty quantification and parameter inference for quantum correlation functions. Unlike existing approaches, our method requires neither model fitting nor knowledge of sampling algorithms or high-dimensional integrals, making it suitable for black-box or simulation-based samplers. Moreover, it renders arbitrary sampling subroutines differentiable, facilitating integration into deep learning and automatic differentiation frameworks. Algorithmic details and open-source implementations are provided to ensure reproducibility and promote further development.</p>
+
+<p><a href="https://arxiv.org/abs/2508.09347">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
