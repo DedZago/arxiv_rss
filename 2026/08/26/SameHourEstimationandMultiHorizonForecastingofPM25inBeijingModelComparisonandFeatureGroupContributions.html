@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Same-Hour Estimation and Multi-Horizon Forecasting of PM2.5 in Beijing: Model Comparison and Feature-Group Contributions</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Same-Hour Estimation and Multi-Horizon Forecasting of PM2.5 in Beijing: Model Comparison and Feature-Group Contributions" />
+<meta name="author" content="Yusheng Wang, Ruiyan Du" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Accurate PM2.5 prediction depends on information available when a prediction is issued. Using 420,768 hourly observations from 12 monitoring stations in Beijing between March 2013 and February 2017, we compare same-hour estimation (h = 0) with strict one-, six-, and 24- hour-ahead forecasting. Stations are reindexed to complete hourly calendars before lagged and rolling features are constructed. Chronological train, calibration, and test blocks and expandingwindow preprocessing prevent target-time leakage. Persistence and seasonal-naive baselines are compared with Ridge, Elastic Net, and a five-seed XGBoost ensemble. Ridge attains RMSE 20.15 at one hour, XGBoost 54.13 at six hours, and Elastic Net 80.83 at 24 hours, improving on persistence by 5.7%, 11.8%, and 17.6%, respectively. Same-hour XGBoost reaches RMSE 14.03, but feature ablations attribute most of this performance to recent PM2.5 history and synchronous PM10. Moving-block intervals, repeated seeds, and leave-one-station-out evaluation quantify uncertainty and spatial transfer. The results support sensor cross-checking at h = 0, routine updates at h = 1, alert preparation at h = 6, and cautious daily planning at h = 24." />
+<meta property="og:description" content="Accurate PM2.5 prediction depends on information available when a prediction is issued. Using 420,768 hourly observations from 12 monitoring stations in Beijing between March 2013 and February 2017, we compare same-hour estimation (h = 0) with strict one-, six-, and 24- hour-ahead forecasting. Stations are reindexed to complete hourly calendars before lagged and rolling features are constructed. Chronological train, calibration, and test blocks and expandingwindow preprocessing prevent target-time leakage. Persistence and seasonal-naive baselines are compared with Ridge, Elastic Net, and a five-seed XGBoost ensemble. Ridge attains RMSE 20.15 at one hour, XGBoost 54.13 at six hours, and Elastic Net 80.83 at 24 hours, improving on persistence by 5.7%, 11.8%, and 17.6%, respectively. Same-hour XGBoost reaches RMSE 14.03, but feature ablations attribute most of this performance to recent PM2.5 history and synchronous PM10. Moving-block intervals, repeated seeds, and leave-one-station-out evaluation quantify uncertainty and spatial transfer. The results support sensor cross-checking at h = 0, routine updates at h = 1, alert preparation at h = 6, and cautious daily planning at h = 24." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/08/26/SameHourEstimationandMultiHorizonForecastingofPM25inBeijingModelComparisonandFeatureGroupContributions.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/08/26/SameHourEstimationandMultiHorizonForecastingofPM25inBeijingModelComparisonandFeatureGroupContributions.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Same-Hour Estimation and Multi-Horizon Forecasting of PM2.5 in Beijing: Model Comparison and Feature-Group Contributions" />
+<script type="application/ld+json">
+{"description":"Accurate PM2.5 prediction depends on information available when a prediction is issued. Using 420,768 hourly observations from 12 monitoring stations in Beijing between March 2013 and February 2017, we compare same-hour estimation (h = 0) with strict one-, six-, and 24- hour-ahead forecasting. Stations are reindexed to complete hourly calendars before lagged and rolling features are constructed. Chronological train, calibration, and test blocks and expandingwindow preprocessing prevent target-time leakage. Persistence and seasonal-naive baselines are compared with Ridge, Elastic Net, and a five-seed XGBoost ensemble. Ridge attains RMSE 20.15 at one hour, XGBoost 54.13 at six hours, and Elastic Net 80.83 at 24 hours, improving on persistence by 5.7%, 11.8%, and 17.6%, respectively. Same-hour XGBoost reaches RMSE 14.03, but feature ablations attribute most of this performance to recent PM2.5 history and synchronous PM10. Moving-block intervals, repeated seeds, and leave-one-station-out evaluation quantify uncertainty and spatial transfer. The results support sensor cross-checking at h = 0, routine updates at h = 1, alert preparation at h = 6, and cautious daily planning at h = 24.","datePublished":"2026-08-26T00:00:00+00:00","dateModified":"2026-08-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/08/26/SameHourEstimationandMultiHorizonForecastingofPM25inBeijingModelComparisonandFeatureGroupContributions.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/08/26/SameHourEstimationandMultiHorizonForecastingofPM25inBeijingModelComparisonandFeatureGroupContributions.html","author":{"@type":"Person","name":"Yusheng Wang, Ruiyan Du"},"@type":"BlogPosting","headline":"Same-Hour Estimation and Multi-Horizon Forecasting of PM2.5 in Beijing: Model Comparison and Feature-Group Contributions","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-08-26 00:00:00 +0000">08-26</time>
+  </p>
+  
+  <h1>Same-Hour Estimation and Multi-Horizon Forecasting of PM2.5 in Beijing: Model Comparison and Feature-Group Contributions</h1>
+  <br>Yusheng Wang, Ruiyan Du</h3>
+  <br> [stat.AP]
+
+  <p>Accurate PM2.5 prediction depends on information available when a prediction is issued. Using 420,768 hourly observations from 12 monitoring stations in Beijing between March 2013 and February 2017, we compare same-hour estimation (h = 0) with strict one-, six-, and 24- hour-ahead forecasting. Stations are reindexed to complete hourly calendars before lagged and rolling features are constructed. Chronological train, calibration, and test blocks and expandingwindow preprocessing prevent target-time leakage. Persistence and seasonal-naive baselines are compared with Ridge, Elastic Net, and a five-seed XGBoost ensemble. Ridge attains RMSE 20.15 at one hour, XGBoost 54.13 at six hours, and Elastic Net 80.83 at 24 hours, improving on persistence by 5.7%, 11.8%, and 17.6%, respectively. Same-hour XGBoost reaches RMSE 14.03, but feature ablations attribute most of this performance to recent PM2.5 history and synchronous PM10. Moving-block intervals, repeated seeds, and leave-one-station-out evaluation quantify uncertainty and spatial transfer. The results support sensor cross-checking at h = 0, routine updates at h = 1, alert preparation at h = 6, and cautious daily planning at h = 24.</p>
+
+<p><a href="https://arxiv.org/abs/2607.07279">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
