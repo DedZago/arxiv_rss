@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Robust K-means Clustering using the Density Power Divergence Measure</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Robust K-means Clustering using the Density Power Divergence Measure" />
+<meta name="author" content="Anirban Mondal, Paromita Banerjee, Abhijit Mandal" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a robust clustering method, MK-means DPD, that estimates cluster centers and covariance matrices using density power divergence (DPD) measures combined with Mahalanobis distance, making it resistant to outliers and adaptable to heterogeneous, elliptical clusters, unlike the classical K-means algorithm. Since Mahalanobis distance-based K-means lacks a general convergence guarantee, we further introduce a convergent variant, Density-Consistent MK-means DPD (DC-MK-means DPD), which redefines the cluster assignment step in terms of a pointwise DPD loss. We prove a formal theorem establishing that the resulting algorithm converges in a finite number of steps. We also propose two new robust internal evaluation indices, a Median Davies-Bouldin Index and a Trimmed Calinski-Harabasz Index, to ensure that performance comparisons are not themselves distorted by outliers. The efficacy of the proposed methods is demonstrated on simulated data, showing superiority over existing methods, and on two real datasets: Iris data, to identify similar species, and COVID-19 case fatality rate and infection rate data for countries worldwide, examining the resulting clusters’ geographic and socio-economic patterns." />
+<meta property="og:description" content="We introduce a robust clustering method, MK-means DPD, that estimates cluster centers and covariance matrices using density power divergence (DPD) measures combined with Mahalanobis distance, making it resistant to outliers and adaptable to heterogeneous, elliptical clusters, unlike the classical K-means algorithm. Since Mahalanobis distance-based K-means lacks a general convergence guarantee, we further introduce a convergent variant, Density-Consistent MK-means DPD (DC-MK-means DPD), which redefines the cluster assignment step in terms of a pointwise DPD loss. We prove a formal theorem establishing that the resulting algorithm converges in a finite number of steps. We also propose two new robust internal evaluation indices, a Median Davies-Bouldin Index and a Trimmed Calinski-Harabasz Index, to ensure that performance comparisons are not themselves distorted by outliers. The efficacy of the proposed methods is demonstrated on simulated data, showing superiority over existing methods, and on two real datasets: Iris data, to identify similar species, and COVID-19 case fatality rate and infection rate data for countries worldwide, examining the resulting clusters’ geographic and socio-economic patterns." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/01/RobustKmeansClusteringusingtheDensityPowerDivergenceMeasure.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/01/RobustKmeansClusteringusingtheDensityPowerDivergenceMeasure.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Robust K-means Clustering using the Density Power Divergence Measure" />
+<script type="application/ld+json">
+{"description":"We introduce a robust clustering method, MK-means DPD, that estimates cluster centers and covariance matrices using density power divergence (DPD) measures combined with Mahalanobis distance, making it resistant to outliers and adaptable to heterogeneous, elliptical clusters, unlike the classical K-means algorithm. Since Mahalanobis distance-based K-means lacks a general convergence guarantee, we further introduce a convergent variant, Density-Consistent MK-means DPD (DC-MK-means DPD), which redefines the cluster assignment step in terms of a pointwise DPD loss. We prove a formal theorem establishing that the resulting algorithm converges in a finite number of steps. We also propose two new robust internal evaluation indices, a Median Davies-Bouldin Index and a Trimmed Calinski-Harabasz Index, to ensure that performance comparisons are not themselves distorted by outliers. The efficacy of the proposed methods is demonstrated on simulated data, showing superiority over existing methods, and on two real datasets: Iris data, to identify similar species, and COVID-19 case fatality rate and infection rate data for countries worldwide, examining the resulting clusters’ geographic and socio-economic patterns.","datePublished":"2026-09-01T00:00:00+00:00","dateModified":"2026-09-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/01/RobustKmeansClusteringusingtheDensityPowerDivergenceMeasure.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/01/RobustKmeansClusteringusingtheDensityPowerDivergenceMeasure.html","author":{"@type":"Person","name":"Anirban Mondal, Paromita Banerjee, Abhijit Mandal"},"@type":"BlogPosting","headline":"Robust K-means Clustering using the Density Power Divergence Measure","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-01 00:00:00 +0000">09-01</time>
+  </p>
+  
+  <h1>Robust K-means Clustering using the Density Power Divergence Measure</h1>
+  <br>Anirban Mondal, Paromita Banerjee, Abhijit Mandal</h3>
+  <br> [stat.ME,stat.AP,stat.CO,stat.ML]
+
+  <p>We introduce a robust clustering method, MK-means DPD, that estimates cluster centers and covariance matrices using density power divergence (DPD) measures combined with Mahalanobis distance, making it resistant to outliers and adaptable to heterogeneous, elliptical clusters, unlike the classical K-means algorithm. Since Mahalanobis distance-based K-means lacks a general convergence guarantee, we further introduce a convergent variant, Density-Consistent MK-means DPD (DC-MK-means DPD), which redefines the cluster assignment step in terms of a pointwise DPD loss. We prove a formal theorem establishing that the resulting algorithm converges in a finite number of steps. We also propose two new robust internal evaluation indices, a Median Davies-Bouldin Index and a Trimmed Calinski-Harabasz Index, to ensure that performance comparisons are not themselves distorted by outliers. The efficacy of the proposed methods is demonstrated on simulated data, showing superiority over existing methods, and on two real datasets: Iris data, to identify similar species, and COVID-19 case fatality rate and infection rate data for countries worldwide, examining the resulting clusters’ geographic and socio-economic patterns.</p>
+
+<p><a href="https://arxiv.org/abs/2608.30093">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
