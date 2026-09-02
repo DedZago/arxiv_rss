@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Neural means and kernel corrections for operator learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Neural means and kernel corrections for operator learning" />
+<meta name="author" content="Yitzchak Shmalo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We combine neural network means with exact Mat&#39;ern kernel regressions of their residuals and of their learned features, and evaluate the pairing on two public emulation problems with published baselines: the structural-mechanics benchmark of de Hoop et al. and the OCO-2 radiative-transfer emulator of Lamminp&quot;a&quot;a et al. On structural mechanics the combination reaches 4.55% test error, matching the best published architecture, and 5.38% against a published 6.49% in the low-data regime. On OCO-2 it improves on the published Gaussian-process emulator on that problem’s own test points, outright on two of the three spectral bands; the same kernel that trails the network tenfold on the raw state overtakes it on the network’s features, and we measure why (the target’s squared native-space norm drops about fortyfold at fixed effective dimension) and prove the mechanism. Where the two families tie instead, the residuals of every architecture we train correlate above 0.86 and their shared component is flat in diversity and sample size, which reads the published plateau as a property of the data. Supporting results include a second-moment identity that predicts stacking outcomes from measured correlations, an optimal-recovery certificate, and a distribution-free coverage band, the only uncertainty signal that survives our tests." />
+<meta property="og:description" content="We combine neural network means with exact Mat&#39;ern kernel regressions of their residuals and of their learned features, and evaluate the pairing on two public emulation problems with published baselines: the structural-mechanics benchmark of de Hoop et al. and the OCO-2 radiative-transfer emulator of Lamminp&quot;a&quot;a et al. On structural mechanics the combination reaches 4.55% test error, matching the best published architecture, and 5.38% against a published 6.49% in the low-data regime. On OCO-2 it improves on the published Gaussian-process emulator on that problem’s own test points, outright on two of the three spectral bands; the same kernel that trails the network tenfold on the raw state overtakes it on the network’s features, and we measure why (the target’s squared native-space norm drops about fortyfold at fixed effective dimension) and prove the mechanism. Where the two families tie instead, the residuals of every architecture we train correlate above 0.86 and their shared component is flat in diversity and sample size, which reads the published plateau as a property of the data. Supporting results include a second-moment identity that predicts stacking outcomes from measured correlations, an optimal-recovery certificate, and a distribution-free coverage band, the only uncertainty signal that survives our tests." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/02/Neuralmeansandkernelcorrectionsforoperatorlearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/02/Neuralmeansandkernelcorrectionsforoperatorlearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Neural means and kernel corrections for operator learning" />
+<script type="application/ld+json">
+{"description":"We combine neural network means with exact Mat&#39;ern kernel regressions of their residuals and of their learned features, and evaluate the pairing on two public emulation problems with published baselines: the structural-mechanics benchmark of de Hoop et al. and the OCO-2 radiative-transfer emulator of Lamminp&quot;a&quot;a et al. On structural mechanics the combination reaches 4.55% test error, matching the best published architecture, and 5.38% against a published 6.49% in the low-data regime. On OCO-2 it improves on the published Gaussian-process emulator on that problem’s own test points, outright on two of the three spectral bands; the same kernel that trails the network tenfold on the raw state overtakes it on the network’s features, and we measure why (the target’s squared native-space norm drops about fortyfold at fixed effective dimension) and prove the mechanism. Where the two families tie instead, the residuals of every architecture we train correlate above 0.86 and their shared component is flat in diversity and sample size, which reads the published plateau as a property of the data. Supporting results include a second-moment identity that predicts stacking outcomes from measured correlations, an optimal-recovery certificate, and a distribution-free coverage band, the only uncertainty signal that survives our tests.","datePublished":"2026-09-02T00:00:00+00:00","dateModified":"2026-09-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/02/Neuralmeansandkernelcorrectionsforoperatorlearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/02/Neuralmeansandkernelcorrectionsforoperatorlearning.html","author":{"@type":"Person","name":"Yitzchak Shmalo"},"@type":"BlogPosting","headline":"Neural means and kernel corrections for operator learning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-02 00:00:00 +0000">09-02</time>
+  </p>
+  
+  <h1>Neural means and kernel corrections for operator learning</h1>
+  <br>Yitzchak Shmalo</h3>
+  <br> [stat.ML]
+
+  <p>We combine neural network means with exact Mat'ern kernel regressions of their residuals and of their learned features, and evaluate the pairing on two public emulation problems with published baselines: the structural-mechanics benchmark of de Hoop et al. and the OCO-2 radiative-transfer emulator of Lamminp"a"a et al. On structural mechanics the combination reaches 4.55% test error, matching the best published architecture, and 5.38% against a published 6.49% in the low-data regime. On OCO-2 it improves on the published Gaussian-process emulator on that problem’s own test points, outright on two of the three spectral bands; the same kernel that trails the network tenfold on the raw state overtakes it on the network’s features, and we measure why (the target’s squared native-space norm drops about fortyfold at fixed effective dimension) and prove the mechanism. Where the two families tie instead, the residuals of every architecture we train correlate above 0.86 and their shared component is flat in diversity and sample size, which reads the published plateau as a property of the data. Supporting results include a second-moment identity that predicts stacking outcomes from measured correlations, an optimal-recovery certificate, and a distribution-free coverage band, the only uncertainty signal that survives our tests.</p>
+
+<p><a href="https://arxiv.org/abs/2609.00389">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
