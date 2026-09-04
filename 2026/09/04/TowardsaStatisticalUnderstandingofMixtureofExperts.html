@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Towards a Statistical Understanding of Mixture-of-Experts</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Towards a Statistical Understanding of Mixture-of-Experts" />
+<meta name="author" content="Siyuan He, Bokai Yang, Jie Hu, Ziwen Gao, Yuhong Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mixture-of-experts (MoE) architectures increase model capacity by combining a collection of expert predictors through input-dependent routing, while often activating only a small subset of experts for each input. Despite their growing importance in modern large-scale models, the statistical roles of their design choices, especially routing, sparse activation, and shared experts, remain only partially understood, as existing theory has largely focused on parametric or correctly specified MoE models. In this paper, we view MoE as a form of localized aggregation and show how this localization reshapes the approximation-estimation-computation tradeoff. We derive oracle risk bounds for learning dense and sparse routing with evolving experts, separating approximation, expert-learning, and router-estimation errors, and characterize how sparse Top-K routing can retain the benefits of localized aggregation while controlling per-input computation. We also interpret gating through the geometry of input space, relating routing performance to regions of local expert advantage, and show how shared experts, as adopted in architectures such as DeepSeekMoE, can extract common predictive structure so that routed experts focus on residual local variation. Together, these results provide a unified statistical framework for understanding MoE through input-dependent expert aggregation, in which expert specialization and computational tradeoffs are governed by local predictive structure." />
+<meta property="og:description" content="Mixture-of-experts (MoE) architectures increase model capacity by combining a collection of expert predictors through input-dependent routing, while often activating only a small subset of experts for each input. Despite their growing importance in modern large-scale models, the statistical roles of their design choices, especially routing, sparse activation, and shared experts, remain only partially understood, as existing theory has largely focused on parametric or correctly specified MoE models. In this paper, we view MoE as a form of localized aggregation and show how this localization reshapes the approximation-estimation-computation tradeoff. We derive oracle risk bounds for learning dense and sparse routing with evolving experts, separating approximation, expert-learning, and router-estimation errors, and characterize how sparse Top-K routing can retain the benefits of localized aggregation while controlling per-input computation. We also interpret gating through the geometry of input space, relating routing performance to regions of local expert advantage, and show how shared experts, as adopted in architectures such as DeepSeekMoE, can extract common predictive structure so that routed experts focus on residual local variation. Together, these results provide a unified statistical framework for understanding MoE through input-dependent expert aggregation, in which expert specialization and computational tradeoffs are governed by local predictive structure." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/04/TowardsaStatisticalUnderstandingofMixtureofExperts.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/04/TowardsaStatisticalUnderstandingofMixtureofExperts.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Towards a Statistical Understanding of Mixture-of-Experts" />
+<script type="application/ld+json">
+{"description":"Mixture-of-experts (MoE) architectures increase model capacity by combining a collection of expert predictors through input-dependent routing, while often activating only a small subset of experts for each input. Despite their growing importance in modern large-scale models, the statistical roles of their design choices, especially routing, sparse activation, and shared experts, remain only partially understood, as existing theory has largely focused on parametric or correctly specified MoE models. In this paper, we view MoE as a form of localized aggregation and show how this localization reshapes the approximation-estimation-computation tradeoff. We derive oracle risk bounds for learning dense and sparse routing with evolving experts, separating approximation, expert-learning, and router-estimation errors, and characterize how sparse Top-K routing can retain the benefits of localized aggregation while controlling per-input computation. We also interpret gating through the geometry of input space, relating routing performance to regions of local expert advantage, and show how shared experts, as adopted in architectures such as DeepSeekMoE, can extract common predictive structure so that routed experts focus on residual local variation. Together, these results provide a unified statistical framework for understanding MoE through input-dependent expert aggregation, in which expert specialization and computational tradeoffs are governed by local predictive structure.","datePublished":"2026-09-04T00:00:00+00:00","dateModified":"2026-09-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/04/TowardsaStatisticalUnderstandingofMixtureofExperts.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/04/TowardsaStatisticalUnderstandingofMixtureofExperts.html","author":{"@type":"Person","name":"Siyuan He, Bokai Yang, Jie Hu, Ziwen Gao, Yuhong Yang"},"@type":"BlogPosting","headline":"Towards a Statistical Understanding of Mixture-of-Experts","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>Towards a Statistical Understanding of Mixture-of-Experts</h1>
+  <br>Siyuan He, Bokai Yang, Jie Hu, Ziwen Gao, Yuhong Yang</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>Mixture-of-experts (MoE) architectures increase model capacity by combining a collection of expert predictors through input-dependent routing, while often activating only a small subset of experts for each input. Despite their growing importance in modern large-scale models, the statistical roles of their design choices, especially routing, sparse activation, and shared experts, remain only partially understood, as existing theory has largely focused on parametric or correctly specified MoE models. In this paper, we view MoE as a form of localized aggregation and show how this localization reshapes the approximation-estimation-computation tradeoff. We derive oracle risk bounds for learning dense and sparse routing with evolving experts, separating approximation, expert-learning, and router-estimation errors, and characterize how sparse Top-K routing can retain the benefits of localized aggregation while controlling per-input computation. We also interpret gating through the geometry of input space, relating routing performance to regions of local expert advantage, and show how shared experts, as adopted in architectures such as DeepSeekMoE, can extract common predictive structure so that routed experts focus on residual local variation. Together, these results provide a unified statistical framework for understanding MoE through input-dependent expert aggregation, in which expert specialization and computational tradeoffs are governed by local predictive structure.</p>
+
+<p><a href="https://arxiv.org/abs/2609.03501">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

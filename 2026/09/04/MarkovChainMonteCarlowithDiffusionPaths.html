@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Markov Chain Monte Carlo with Diffusion Paths</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Markov Chain Monte Carlo with Diffusion Paths" />
+<meta name="author" content="Han Chen, Sifan Liu, Jun Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sampling from multimodal distributions is a longstanding challenge for classical local Markov chain Monte Carlo (MCMC) methods. A popular remedy is to introduce a sequence of intermediate distributions that interpolate between the target and a simpler reference. The classical choice, tempering, raises the density to a power, but distorts the relative weights of asymmetric modes and can lead to poor mixing. We instead propose interpolating along the diffusion path, the marginals of a noising diffusion process that carries the target toward a Gaussian. This path preserves the relative weights of the modes and enjoys favorable mixing properties, which we make precise through a spectral-gap analysis of the corresponding ideal transition kernel. Sampling along the path requires its intermediate scores, which can be estimated from the unnormalized target through variational approaches, yielding only an approximate sampler. To remove the resulting bias, we introduce the Metropolis-adjusted diffusion path (MAD-Path) sampler, which corrects the diffusion-path proposal in an augmented path space and leaves the target invariant regardless of the accuracy of the learned score or the discretization error. We further quantify how these two errors affect the acceptance probability, providing guidance for practical tuning. Experiments on a range of Bayesian posteriors show that MAD-Path improves global exploration and mode-weight estimation relative to tempering-based MCMC methods and unadjusted diffusion samplers." />
+<meta property="og:description" content="Sampling from multimodal distributions is a longstanding challenge for classical local Markov chain Monte Carlo (MCMC) methods. A popular remedy is to introduce a sequence of intermediate distributions that interpolate between the target and a simpler reference. The classical choice, tempering, raises the density to a power, but distorts the relative weights of asymmetric modes and can lead to poor mixing. We instead propose interpolating along the diffusion path, the marginals of a noising diffusion process that carries the target toward a Gaussian. This path preserves the relative weights of the modes and enjoys favorable mixing properties, which we make precise through a spectral-gap analysis of the corresponding ideal transition kernel. Sampling along the path requires its intermediate scores, which can be estimated from the unnormalized target through variational approaches, yielding only an approximate sampler. To remove the resulting bias, we introduce the Metropolis-adjusted diffusion path (MAD-Path) sampler, which corrects the diffusion-path proposal in an augmented path space and leaves the target invariant regardless of the accuracy of the learned score or the discretization error. We further quantify how these two errors affect the acceptance probability, providing guidance for practical tuning. Experiments on a range of Bayesian posteriors show that MAD-Path improves global exploration and mode-weight estimation relative to tempering-based MCMC methods and unadjusted diffusion samplers." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/04/MarkovChainMonteCarlowithDiffusionPaths.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/04/MarkovChainMonteCarlowithDiffusionPaths.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Markov Chain Monte Carlo with Diffusion Paths" />
+<script type="application/ld+json">
+{"description":"Sampling from multimodal distributions is a longstanding challenge for classical local Markov chain Monte Carlo (MCMC) methods. A popular remedy is to introduce a sequence of intermediate distributions that interpolate between the target and a simpler reference. The classical choice, tempering, raises the density to a power, but distorts the relative weights of asymmetric modes and can lead to poor mixing. We instead propose interpolating along the diffusion path, the marginals of a noising diffusion process that carries the target toward a Gaussian. This path preserves the relative weights of the modes and enjoys favorable mixing properties, which we make precise through a spectral-gap analysis of the corresponding ideal transition kernel. Sampling along the path requires its intermediate scores, which can be estimated from the unnormalized target through variational approaches, yielding only an approximate sampler. To remove the resulting bias, we introduce the Metropolis-adjusted diffusion path (MAD-Path) sampler, which corrects the diffusion-path proposal in an augmented path space and leaves the target invariant regardless of the accuracy of the learned score or the discretization error. We further quantify how these two errors affect the acceptance probability, providing guidance for practical tuning. Experiments on a range of Bayesian posteriors show that MAD-Path improves global exploration and mode-weight estimation relative to tempering-based MCMC methods and unadjusted diffusion samplers.","datePublished":"2026-09-04T00:00:00+00:00","dateModified":"2026-09-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/04/MarkovChainMonteCarlowithDiffusionPaths.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/04/MarkovChainMonteCarlowithDiffusionPaths.html","author":{"@type":"Person","name":"Han Chen, Sifan Liu, Jun Yang"},"@type":"BlogPosting","headline":"Markov Chain Monte Carlo with Diffusion Paths","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>Markov Chain Monte Carlo with Diffusion Paths</h1>
+  <br>Han Chen, Sifan Liu, Jun Yang</h3>
+  <br> [stat.CO,stat.ML]
+
+  <p>Sampling from multimodal distributions is a longstanding challenge for classical local Markov chain Monte Carlo (MCMC) methods. A popular remedy is to introduce a sequence of intermediate distributions that interpolate between the target and a simpler reference. The classical choice, tempering, raises the density to a power, but distorts the relative weights of asymmetric modes and can lead to poor mixing. We instead propose interpolating along the diffusion path, the marginals of a noising diffusion process that carries the target toward a Gaussian. This path preserves the relative weights of the modes and enjoys favorable mixing properties, which we make precise through a spectral-gap analysis of the corresponding ideal transition kernel. Sampling along the path requires its intermediate scores, which can be estimated from the unnormalized target through variational approaches, yielding only an approximate sampler. To remove the resulting bias, we introduce the Metropolis-adjusted diffusion path (MAD-Path) sampler, which corrects the diffusion-path proposal in an augmented path space and leaves the target invariant regardless of the accuracy of the learned score or the discretization error. We further quantify how these two errors affect the acceptance probability, providing guidance for practical tuning. Experiments on a range of Bayesian posteriors show that MAD-Path improves global exploration and mode-weight estimation relative to tempering-based MCMC methods and unadjusted diffusion samplers.</p>
+
+<p><a href="https://arxiv.org/abs/2607.11631">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

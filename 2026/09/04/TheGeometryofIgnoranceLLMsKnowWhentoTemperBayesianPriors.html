@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Geometry of Ignorance: LLMs Know When to Temper Bayesian Priors</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Geometry of Ignorance: LLMs Know When to Temper Bayesian Priors" />
+<meta name="author" content="Toni J. B. Liu, Jiajun Bao, Yizhou Liu, Gurbir Arora, Nicolas Boullé, Raphaël Sarfati, Christopher J. Earls" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What does a language model predict when it has few clues? The answer lurks in its unembedding geometry: a single direction of the unembedding matrix encodes the unigram distribution of the training corpus, which serves as the Bayesian prior the model falls back on when uncertain. This structure — which we term the \emph{direction of ignorance} — appears in all four model families examined (\texttt{Llama}, \texttt{Qwen}, \texttt{Gemma}, and \texttt{Pythia}), ranging from 0.4B to 405B parameters. Projecting the final prediction state onto this direction yields a per-token \emph{prior loading factor} $\lambda$, which, empirically, declines steadily as the context becomes more informative. Formally, the same projection decomposes the prediction state into two orthogonal vectors that correspond exactly to the two factors of a tempered Bayesian update: a unigram prior raised to the exponent $\lambda$ and a context-driven likelihood. This geometric-probabilistic interpretation calibrates $\lambda$, making it meaningfully comparable across model sizes and families, with larger models generally exhibiting lower prior reliance in the high-context limit. Finally, we show that the direction of ignorance is causally active: raising or lowering $\lambda$ at the final prediction state steers the prediction toward or away from the unigram prior in KL divergence." />
+<meta property="og:description" content="What does a language model predict when it has few clues? The answer lurks in its unembedding geometry: a single direction of the unembedding matrix encodes the unigram distribution of the training corpus, which serves as the Bayesian prior the model falls back on when uncertain. This structure — which we term the \emph{direction of ignorance} — appears in all four model families examined (\texttt{Llama}, \texttt{Qwen}, \texttt{Gemma}, and \texttt{Pythia}), ranging from 0.4B to 405B parameters. Projecting the final prediction state onto this direction yields a per-token \emph{prior loading factor} $\lambda$, which, empirically, declines steadily as the context becomes more informative. Formally, the same projection decomposes the prediction state into two orthogonal vectors that correspond exactly to the two factors of a tempered Bayesian update: a unigram prior raised to the exponent $\lambda$ and a context-driven likelihood. This geometric-probabilistic interpretation calibrates $\lambda$, making it meaningfully comparable across model sizes and families, with larger models generally exhibiting lower prior reliance in the high-context limit. Finally, we show that the direction of ignorance is causally active: raising or lowering $\lambda$ at the final prediction state steers the prediction toward or away from the unigram prior in KL divergence." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/04/TheGeometryofIgnoranceLLMsKnowWhentoTemperBayesianPriors.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/04/TheGeometryofIgnoranceLLMsKnowWhentoTemperBayesianPriors.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Geometry of Ignorance: LLMs Know When to Temper Bayesian Priors" />
+<script type="application/ld+json">
+{"description":"What does a language model predict when it has few clues? The answer lurks in its unembedding geometry: a single direction of the unembedding matrix encodes the unigram distribution of the training corpus, which serves as the Bayesian prior the model falls back on when uncertain. This structure — which we term the \\emph{direction of ignorance} — appears in all four model families examined (\\texttt{Llama}, \\texttt{Qwen}, \\texttt{Gemma}, and \\texttt{Pythia}), ranging from 0.4B to 405B parameters. Projecting the final prediction state onto this direction yields a per-token \\emph{prior loading factor} $\\lambda$, which, empirically, declines steadily as the context becomes more informative. Formally, the same projection decomposes the prediction state into two orthogonal vectors that correspond exactly to the two factors of a tempered Bayesian update: a unigram prior raised to the exponent $\\lambda$ and a context-driven likelihood. This geometric-probabilistic interpretation calibrates $\\lambda$, making it meaningfully comparable across model sizes and families, with larger models generally exhibiting lower prior reliance in the high-context limit. Finally, we show that the direction of ignorance is causally active: raising or lowering $\\lambda$ at the final prediction state steers the prediction toward or away from the unigram prior in KL divergence.","datePublished":"2026-09-04T00:00:00+00:00","dateModified":"2026-09-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/04/TheGeometryofIgnoranceLLMsKnowWhentoTemperBayesianPriors.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/04/TheGeometryofIgnoranceLLMsKnowWhentoTemperBayesianPriors.html","author":{"@type":"Person","name":"Toni J. B. Liu, Jiajun Bao, Yizhou Liu, Gurbir Arora, Nicolas Boullé, Raphaël Sarfati, Christopher J. Earls"},"@type":"BlogPosting","headline":"The Geometry of Ignorance: LLMs Know When to Temper Bayesian Priors","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>The Geometry of Ignorance: LLMs Know When to Temper Bayesian Priors</h1>
+  <br>Toni J. B. Liu, Jiajun Bao, Yizhou Liu, Gurbir Arora, Nicolas Boullé, Raphaël Sarfati, Christopher J. Earls</h3>
+  <br> [stat.ML]
+
+  <p>What does a language model predict when it has few clues? The answer lurks in its unembedding geometry: a single direction of the unembedding matrix encodes the unigram distribution of the training corpus, which serves as the Bayesian prior the model falls back on when uncertain. This structure — which we term the \emph{direction of ignorance} — appears in all four model families examined (\texttt{Llama}, \texttt{Qwen}, \texttt{Gemma}, and \texttt{Pythia}), ranging from 0.4B to 405B parameters. Projecting the final prediction state onto this direction yields a per-token \emph{prior loading factor} $\lambda$, which, empirically, declines steadily as the context becomes more informative. Formally, the same projection decomposes the prediction state into two orthogonal vectors that correspond exactly to the two factors of a tempered Bayesian update: a unigram prior raised to the exponent $\lambda$ and a context-driven likelihood. This geometric-probabilistic interpretation calibrates $\lambda$, making it meaningfully comparable across model sizes and families, with larger models generally exhibiting lower prior reliance in the high-context limit. Finally, we show that the direction of ignorance is causally active: raising or lowering $\lambda$ at the final prediction state steers the prediction toward or away from the unigram prior in KL divergence.</p>
+
+<p><a href="https://arxiv.org/abs/2609.02959">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

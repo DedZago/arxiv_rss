@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels" />
+<meta name="author" content="Edvin Ketabati Augustinsson, Robert A. Bridges" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian-process Bayesian optimization (GP-BO) excels at black-box optimization of costly functions, e.g., hyperparameter optimization (HPO) and multi-agent system (MAS) design. Convergence-rate guarantees exist for select methods, notably GP upper confidence bound (GP-UCB), but require a fixed kernel. Critically, the kernel encodes how input proximity affects objective value similarity. When raw coordinates poorly match this geometry - as with log-scaled hyperparameters or localized peaks - input warping can greatly improve sample efficiency, yet known GP-UCB proofs require a fixed kernel. We propose Finite-Library Input-Warped Bayesian Optimization (FLIWBO), which selects warps from a finite library of smooth input maps by any history-dependent rule. It adapts the input geometry to accelerate learning while retaining high-probability convergence guarantees under mild hypotheses, with an explicit $\sqrt(N_\varepsilon)$ library-size cost. Controlled diagnostics show that finite-library warping repairs planted geometry mismatches and identify FLIWBO failure cases. Across four repeated benchmarks - warped synthetic objectives, a confidence-fence trap, and Fashion-MNIST HPO - FLIWBO-UCB beats raw-coordinate GP-UCB under misspecified geometry, escapes traps that defeat even oracle-warp expected improvement, and recovers much of the gain from manual log scaling, while leading the tested methods that admit a matching regret guarantee. A 20-dimensional MAS design study further shows feasibility under costly noisy evaluations. Code for experiments is available: https://github.com/edvin-ketabati/bogp-paper-experiments." />
+<meta property="og:description" content="Gaussian-process Bayesian optimization (GP-BO) excels at black-box optimization of costly functions, e.g., hyperparameter optimization (HPO) and multi-agent system (MAS) design. Convergence-rate guarantees exist for select methods, notably GP upper confidence bound (GP-UCB), but require a fixed kernel. Critically, the kernel encodes how input proximity affects objective value similarity. When raw coordinates poorly match this geometry - as with log-scaled hyperparameters or localized peaks - input warping can greatly improve sample efficiency, yet known GP-UCB proofs require a fixed kernel. We propose Finite-Library Input-Warped Bayesian Optimization (FLIWBO), which selects warps from a finite library of smooth input maps by any history-dependent rule. It adapts the input geometry to accelerate learning while retaining high-probability convergence guarantees under mild hypotheses, with an explicit $\sqrt(N_\varepsilon)$ library-size cost. Controlled diagnostics show that finite-library warping repairs planted geometry mismatches and identify FLIWBO failure cases. Across four repeated benchmarks - warped synthetic objectives, a confidence-fence trap, and Fashion-MNIST HPO - FLIWBO-UCB beats raw-coordinate GP-UCB under misspecified geometry, escapes traps that defeat even oracle-warp expected improvement, and recovers much of the gain from manual log scaling, while leading the tested methods that admit a matching regret guarantee. A 20-dimensional MAS design study further shows feasibility under costly noisy evaluations. Code for experiments is available: https://github.com/edvin-ketabati/bogp-paper-experiments." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/04/NoRegretBayesianOptimizationwithFiniteLibraryInputWarpedKernels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/04/NoRegretBayesianOptimizationwithFiniteLibraryInputWarpedKernels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels" />
+<script type="application/ld+json">
+{"description":"Gaussian-process Bayesian optimization (GP-BO) excels at black-box optimization of costly functions, e.g., hyperparameter optimization (HPO) and multi-agent system (MAS) design. Convergence-rate guarantees exist for select methods, notably GP upper confidence bound (GP-UCB), but require a fixed kernel. Critically, the kernel encodes how input proximity affects objective value similarity. When raw coordinates poorly match this geometry - as with log-scaled hyperparameters or localized peaks - input warping can greatly improve sample efficiency, yet known GP-UCB proofs require a fixed kernel. We propose Finite-Library Input-Warped Bayesian Optimization (FLIWBO), which selects warps from a finite library of smooth input maps by any history-dependent rule. It adapts the input geometry to accelerate learning while retaining high-probability convergence guarantees under mild hypotheses, with an explicit $\\sqrt(N_\\varepsilon)$ library-size cost. Controlled diagnostics show that finite-library warping repairs planted geometry mismatches and identify FLIWBO failure cases. Across four repeated benchmarks - warped synthetic objectives, a confidence-fence trap, and Fashion-MNIST HPO - FLIWBO-UCB beats raw-coordinate GP-UCB under misspecified geometry, escapes traps that defeat even oracle-warp expected improvement, and recovers much of the gain from manual log scaling, while leading the tested methods that admit a matching regret guarantee. A 20-dimensional MAS design study further shows feasibility under costly noisy evaluations. Code for experiments is available: https://github.com/edvin-ketabati/bogp-paper-experiments.","datePublished":"2026-09-04T00:00:00+00:00","dateModified":"2026-09-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/04/NoRegretBayesianOptimizationwithFiniteLibraryInputWarpedKernels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/04/NoRegretBayesianOptimizationwithFiniteLibraryInputWarpedKernels.html","author":{"@type":"Person","name":"Edvin Ketabati Augustinsson, Robert A. Bridges"},"@type":"BlogPosting","headline":"No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>No-Regret Bayesian Optimization with Finite-Library Input-Warped Kernels</h1>
+  <br>Edvin Ketabati Augustinsson, Robert A. Bridges</h3>
+  <br> [stat.ML]
+
+  <p>Gaussian-process Bayesian optimization (GP-BO) excels at black-box optimization of costly functions, e.g., hyperparameter optimization (HPO) and multi-agent system (MAS) design. Convergence-rate guarantees exist for select methods, notably GP upper confidence bound (GP-UCB), but require a fixed kernel. Critically, the kernel encodes how input proximity affects objective value similarity. When raw coordinates poorly match this geometry - as with log-scaled hyperparameters or localized peaks - input warping can greatly improve sample efficiency, yet known GP-UCB proofs require a fixed kernel. We propose Finite-Library Input-Warped Bayesian Optimization (FLIWBO), which selects warps from a finite library of smooth input maps by any history-dependent rule. It adapts the input geometry to accelerate learning while retaining high-probability convergence guarantees under mild hypotheses, with an explicit $\sqrt(N_\varepsilon)$ library-size cost. Controlled diagnostics show that finite-library warping repairs planted geometry mismatches and identify FLIWBO failure cases. Across four repeated benchmarks - warped synthetic objectives, a confidence-fence trap, and Fashion-MNIST HPO - FLIWBO-UCB beats raw-coordinate GP-UCB under misspecified geometry, escapes traps that defeat even oracle-warp expected improvement, and recovers much of the gain from manual log scaling, while leading the tested methods that admit a matching regret guarantee. A 20-dimensional MAS design study further shows feasibility under costly noisy evaluations. Code for experiments is available: https://github.com/edvin-ketabati/bogp-paper-experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2609.02993">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contamination Inflates Scores but Rarely Reorders Large Language Model Leaderboards</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Contamination Inflates Scores but Rarely Reorders Large Language Model Leaderboards" />
+<meta name="author" content="Xingyao Xiao , Yihong Cheng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Benchmark contamination, the leakage of test items into training data, is widely described as a threat to the reliability of large language model (LLM) leaderboards. We argue that this concern conflates two distinct questions: whether contamination inflates absolute scores, and whether it reorders the ranking of models. We recast contamination as a violation of anchor-item invariance and measure it through the differential functioning of original versus semantically equivalent paraphrased items, a within-item contrast that holds the measured skill fixed and isolates memorization from capability. Using per-instance responses from 47 publicly released models and 74 models finetuned with a known dose of contamination, across four benchmarks (ARC, GSM8K, HellaSwag, MMLU), we first calibrate the measure against ground truth: it recovers injected contamination dose-responsively (a corrected effect of +0.187 accuracy points for test-set leakage) and never flags a negative-control model trained only on the legitimate training split (-0.012). We then quantify leaderboard impact: the rank correlation between a standard leaderboard and a paraphrase-controlled leaderboard is 0.997, and a sensitivity analysis shows that the observed differential contamination is far below the level needed to move rankings, with only 3 of 188 model-by-benchmark cases showing differential contamination corroborated across two references. Contamination among these public models is therefore largely uniform: it inflates absolute scores without reordering the leaderboard, and ranking distortion requires the rare case of differential contamination. We provide a calibrated invariance audit, released as a reference implementation, and recommend that leaderboards report paraphrase-controlled rankings alongside confidence intervals." />
+<meta property="og:description" content="Benchmark contamination, the leakage of test items into training data, is widely described as a threat to the reliability of large language model (LLM) leaderboards. We argue that this concern conflates two distinct questions: whether contamination inflates absolute scores, and whether it reorders the ranking of models. We recast contamination as a violation of anchor-item invariance and measure it through the differential functioning of original versus semantically equivalent paraphrased items, a within-item contrast that holds the measured skill fixed and isolates memorization from capability. Using per-instance responses from 47 publicly released models and 74 models finetuned with a known dose of contamination, across four benchmarks (ARC, GSM8K, HellaSwag, MMLU), we first calibrate the measure against ground truth: it recovers injected contamination dose-responsively (a corrected effect of +0.187 accuracy points for test-set leakage) and never flags a negative-control model trained only on the legitimate training split (-0.012). We then quantify leaderboard impact: the rank correlation between a standard leaderboard and a paraphrase-controlled leaderboard is 0.997, and a sensitivity analysis shows that the observed differential contamination is far below the level needed to move rankings, with only 3 of 188 model-by-benchmark cases showing differential contamination corroborated across two references. Contamination among these public models is therefore largely uniform: it inflates absolute scores without reordering the leaderboard, and ranking distortion requires the rare case of differential contamination. We provide a calibrated invariance audit, released as a reference implementation, and recommend that leaderboards report paraphrase-controlled rankings alongside confidence intervals." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/04/ContaminationInflatesScoresbutRarelyReordersLargeLanguageModelLeaderboards.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/04/ContaminationInflatesScoresbutRarelyReordersLargeLanguageModelLeaderboards.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contamination Inflates Scores but Rarely Reorders Large Language Model Leaderboards" />
+<script type="application/ld+json">
+{"description":"Benchmark contamination, the leakage of test items into training data, is widely described as a threat to the reliability of large language model (LLM) leaderboards. We argue that this concern conflates two distinct questions: whether contamination inflates absolute scores, and whether it reorders the ranking of models. We recast contamination as a violation of anchor-item invariance and measure it through the differential functioning of original versus semantically equivalent paraphrased items, a within-item contrast that holds the measured skill fixed and isolates memorization from capability. Using per-instance responses from 47 publicly released models and 74 models finetuned with a known dose of contamination, across four benchmarks (ARC, GSM8K, HellaSwag, MMLU), we first calibrate the measure against ground truth: it recovers injected contamination dose-responsively (a corrected effect of +0.187 accuracy points for test-set leakage) and never flags a negative-control model trained only on the legitimate training split (-0.012). We then quantify leaderboard impact: the rank correlation between a standard leaderboard and a paraphrase-controlled leaderboard is 0.997, and a sensitivity analysis shows that the observed differential contamination is far below the level needed to move rankings, with only 3 of 188 model-by-benchmark cases showing differential contamination corroborated across two references. Contamination among these public models is therefore largely uniform: it inflates absolute scores without reordering the leaderboard, and ranking distortion requires the rare case of differential contamination. We provide a calibrated invariance audit, released as a reference implementation, and recommend that leaderboards report paraphrase-controlled rankings alongside confidence intervals.","datePublished":"2026-09-04T00:00:00+00:00","dateModified":"2026-09-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/04/ContaminationInflatesScoresbutRarelyReordersLargeLanguageModelLeaderboards.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/04/ContaminationInflatesScoresbutRarelyReordersLargeLanguageModelLeaderboards.html","author":{"@type":"Person","name":"Xingyao Xiao , Yihong Cheng"},"@type":"BlogPosting","headline":"Contamination Inflates Scores but Rarely Reorders Large Language Model Leaderboards","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-04 00:00:00 +0000">09-04</time>
+  </p>
+  
+  <h1>Contamination Inflates Scores but Rarely Reorders Large Language Model Leaderboards</h1>
+  <br>Xingyao Xiao , Yihong Cheng</h3>
+  <br> [stat.AP,stat.ME]
+
+  <p>Benchmark contamination, the leakage of test items into training data, is widely described as a threat to the reliability of large language model (LLM) leaderboards. We argue that this concern conflates two distinct questions: whether contamination inflates absolute scores, and whether it reorders the ranking of models. We recast contamination as a violation of anchor-item invariance and measure it through the differential functioning of original versus semantically equivalent paraphrased items, a within-item contrast that holds the measured skill fixed and isolates memorization from capability. Using per-instance responses from 47 publicly released models and 74 models finetuned with a known dose of contamination, across four benchmarks (ARC, GSM8K, HellaSwag, MMLU), we first calibrate the measure against ground truth: it recovers injected contamination dose-responsively (a corrected effect of +0.187 accuracy points for test-set leakage) and never flags a negative-control model trained only on the legitimate training split (-0.012). We then quantify leaderboard impact: the rank correlation between a standard leaderboard and a paraphrase-controlled leaderboard is 0.997, and a sensitivity analysis shows that the observed differential contamination is far below the level needed to move rankings, with only 3 of 188 model-by-benchmark cases showing differential contamination corroborated across two references. Contamination among these public models is therefore largely uniform: it inflates absolute scores without reordering the leaderboard, and ranking distortion requires the rare case of differential contamination. We provide a calibrated invariance audit, released as a reference implementation, and recommend that leaderboards report paraphrase-controlled rankings alongside confidence intervals.</p>
+
+<p><a href="https://arxiv.org/abs/2609.02899">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
