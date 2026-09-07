@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>An Analysis of Self-supervised Pre-training with Dependent Samples</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="An Analysis of Self-supervised Pre-training with Dependent Samples" />
+<meta name="author" content="Maximilian Fleissner, Debarghya Ghoshdastidar, Samory Kpotufe" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Self-supervised learning relies on so-called data augmentations $\phi(x)$ of unlabeled datapoints $x$ — for example, masking random pixels in an image $x$ — that should leave the label of $x$ invariant and are often used to learn a lower-complexity invariant subspace $\cal V$ for downstream tasks. In practice, such augmentations ${ \phi_l(x_i) }$ are pooled together to learn $\cal V$, despite obvious inter-dependencies between different augmentations $\phi_l(x), \phi_k(x)$ of the same datapoint $x$. However, theoretical works on the subject typically consider procedures that avoid such dependencies, and are therefore limited to operate on smaller subsets of independent data. We show in this work that pooling augmentations together, despite inter-dependencies, is a better alternative than the baseline of partitioning the data into subsets of independent data. More precisely, in the context of estimating $\cal V$, the statistical estimation error bounds for pooling are never worse than the partitioning baseline, and in some cases — such as masking or noise injection-based augmentations over a shallow neural network — naive pooling leads to faster rates in terms of the number of augmentations. The benefits of pooling are particularly prominent when the correlations between different augmentations $\phi_l(x), \phi_k(x)$ have mild effects on estimation or help decrease the estimation variance. The analysis, therefore, yields new insights into the success of pooling augmented samples in self-supervised pre-training, and provides an intuition behind the practical preference towards using many augmentations." />
+<meta property="og:description" content="Self-supervised learning relies on so-called data augmentations $\phi(x)$ of unlabeled datapoints $x$ — for example, masking random pixels in an image $x$ — that should leave the label of $x$ invariant and are often used to learn a lower-complexity invariant subspace $\cal V$ for downstream tasks. In practice, such augmentations ${ \phi_l(x_i) }$ are pooled together to learn $\cal V$, despite obvious inter-dependencies between different augmentations $\phi_l(x), \phi_k(x)$ of the same datapoint $x$. However, theoretical works on the subject typically consider procedures that avoid such dependencies, and are therefore limited to operate on smaller subsets of independent data. We show in this work that pooling augmentations together, despite inter-dependencies, is a better alternative than the baseline of partitioning the data into subsets of independent data. More precisely, in the context of estimating $\cal V$, the statistical estimation error bounds for pooling are never worse than the partitioning baseline, and in some cases — such as masking or noise injection-based augmentations over a shallow neural network — naive pooling leads to faster rates in terms of the number of augmentations. The benefits of pooling are particularly prominent when the correlations between different augmentations $\phi_l(x), \phi_k(x)$ have mild effects on estimation or help decrease the estimation variance. The analysis, therefore, yields new insights into the success of pooling augmented samples in self-supervised pre-training, and provides an intuition behind the practical preference towards using many augmentations." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/07/AnAnalysisofSelfsupervisedPretrainingwithDependentSamples.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/07/AnAnalysisofSelfsupervisedPretrainingwithDependentSamples.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An Analysis of Self-supervised Pre-training with Dependent Samples" />
+<script type="application/ld+json">
+{"description":"Self-supervised learning relies on so-called data augmentations $\\phi(x)$ of unlabeled datapoints $x$ — for example, masking random pixels in an image $x$ — that should leave the label of $x$ invariant and are often used to learn a lower-complexity invariant subspace $\\cal V$ for downstream tasks. In practice, such augmentations ${ \\phi_l(x_i) }$ are pooled together to learn $\\cal V$, despite obvious inter-dependencies between different augmentations $\\phi_l(x), \\phi_k(x)$ of the same datapoint $x$. However, theoretical works on the subject typically consider procedures that avoid such dependencies, and are therefore limited to operate on smaller subsets of independent data. We show in this work that pooling augmentations together, despite inter-dependencies, is a better alternative than the baseline of partitioning the data into subsets of independent data. More precisely, in the context of estimating $\\cal V$, the statistical estimation error bounds for pooling are never worse than the partitioning baseline, and in some cases — such as masking or noise injection-based augmentations over a shallow neural network — naive pooling leads to faster rates in terms of the number of augmentations. The benefits of pooling are particularly prominent when the correlations between different augmentations $\\phi_l(x), \\phi_k(x)$ have mild effects on estimation or help decrease the estimation variance. The analysis, therefore, yields new insights into the success of pooling augmented samples in self-supervised pre-training, and provides an intuition behind the practical preference towards using many augmentations.","datePublished":"2026-09-07T00:00:00+00:00","dateModified":"2026-09-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/07/AnAnalysisofSelfsupervisedPretrainingwithDependentSamples.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/07/AnAnalysisofSelfsupervisedPretrainingwithDependentSamples.html","author":{"@type":"Person","name":"Maximilian Fleissner, Debarghya Ghoshdastidar, Samory Kpotufe"},"@type":"BlogPosting","headline":"An Analysis of Self-supervised Pre-training with Dependent Samples","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-07 00:00:00 +0000">09-07</time>
+  </p>
+  
+  <h1>An Analysis of Self-supervised Pre-training with Dependent Samples</h1>
+  <br>Maximilian Fleissner, Debarghya Ghoshdastidar, Samory Kpotufe</h3>
+  <br> [stat.ML]
+
+  <p>Self-supervised learning relies on so-called data augmentations $\phi(x)$ of unlabeled datapoints $x$ — for example, masking random pixels in an image $x$ — that should leave the label of $x$ invariant and are often used to learn a lower-complexity invariant subspace $\cal V$ for downstream tasks. In practice, such augmentations ${ \phi_l(x_i) }$ are pooled together to learn $\cal V$, despite obvious inter-dependencies between different augmentations $\phi_l(x), \phi_k(x)$ of the same datapoint $x$. However, theoretical works on the subject typically consider procedures that avoid such dependencies, and are therefore limited to operate on smaller subsets of independent data.
+  We show in this work that pooling augmentations together, despite inter-dependencies, is a better alternative than the baseline of partitioning the data into subsets of independent data. More precisely, in the context of estimating $\cal V$, the statistical estimation error bounds for pooling are never worse than the partitioning baseline, and in some cases — such as masking or noise injection-based augmentations over a shallow neural network — naive pooling leads to faster rates in terms of the number of augmentations. The benefits of pooling are particularly prominent when the correlations between different augmentations $\phi_l(x), \phi_k(x)$ have mild effects on estimation or help decrease the estimation variance. The analysis, therefore, yields new insights into the success of pooling augmented samples in self-supervised pre-training, and provides an intuition behind the practical preference towards using many augmentations.</p>
+
+<p><a href="https://arxiv.org/abs/2609.05031">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

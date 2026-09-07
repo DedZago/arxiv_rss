@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Efficient Clustering with Quality Guardrails for LLM-based Recommender Systems at Industry Scale</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Efficient Clustering with Quality Guardrails for LLM-based Recommender Systems at Industry Scale" />
+<meta name="author" content="Longshaokan Wang, Wai Tsang Keung, Punit Ghodasara, Roman Wang, Ali Dashti, Francesc Moreno-Noguer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="LLMs can be prohibitively expensive and slow to run at scale, especially for applications that invoke an LLM per sample over millions of inputs. A natural way to scale is to cluster the inputs, run the LLM only on cluster representatives, and propagate the outputs to other cluster members. However, the outputs a member receives are only as good as its match to the representative. Off-the-shelf clustering methods optimize an aggregate objective, targeting average-case quality without per-sample guardrails. As a result, members can be assigned to poorly-matched representatives, and the inherited outputs – though appropriate for the representative – may be irrelevant or even unsafe for the member. For example, a parent of a toddler grouped with parents of older children could receive age-inappropriate recommendations. Most clustering methods also scale poorly to millions of inputs in runtime and memory, limiting their use at industry scale. We propose a scalable two-stage clustering algorithm with provable per-sample guardrails: every sample is guaranteed to share a user-specified minimal embedding similarity and exact attribute match with its representative. The algorithm first generates initial clusters with Mini-batch K-Means, then greedily selects representatives within each to satisfy the guardrails. We provide theoretical guarantees, complexity analysis, and benchmarks against common methods on internal and public datasets. Our method delivers per-sample guardrails while running substantially faster and scaling to data sizes where most standard methods become intractable. We demonstrate its impact in a real-world deployment clustering 38 million customers, reducing downstream LLM cost and runtime by 50-fold while preserving personalization. This unblocked the launch of a persona-based recommender system that delivers significant gains in revenue and engagement in an A/B test." />
+<meta property="og:description" content="LLMs can be prohibitively expensive and slow to run at scale, especially for applications that invoke an LLM per sample over millions of inputs. A natural way to scale is to cluster the inputs, run the LLM only on cluster representatives, and propagate the outputs to other cluster members. However, the outputs a member receives are only as good as its match to the representative. Off-the-shelf clustering methods optimize an aggregate objective, targeting average-case quality without per-sample guardrails. As a result, members can be assigned to poorly-matched representatives, and the inherited outputs – though appropriate for the representative – may be irrelevant or even unsafe for the member. For example, a parent of a toddler grouped with parents of older children could receive age-inappropriate recommendations. Most clustering methods also scale poorly to millions of inputs in runtime and memory, limiting their use at industry scale. We propose a scalable two-stage clustering algorithm with provable per-sample guardrails: every sample is guaranteed to share a user-specified minimal embedding similarity and exact attribute match with its representative. The algorithm first generates initial clusters with Mini-batch K-Means, then greedily selects representatives within each to satisfy the guardrails. We provide theoretical guarantees, complexity analysis, and benchmarks against common methods on internal and public datasets. Our method delivers per-sample guardrails while running substantially faster and scaling to data sizes where most standard methods become intractable. We demonstrate its impact in a real-world deployment clustering 38 million customers, reducing downstream LLM cost and runtime by 50-fold while preserving personalization. This unblocked the launch of a persona-based recommender system that delivers significant gains in revenue and engagement in an A/B test." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/07/EfficientClusteringwithQualityGuardrailsforLLMbasedRecommenderSystemsatIndustryScale.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/07/EfficientClusteringwithQualityGuardrailsforLLMbasedRecommenderSystemsatIndustryScale.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Efficient Clustering with Quality Guardrails for LLM-based Recommender Systems at Industry Scale" />
+<script type="application/ld+json">
+{"description":"LLMs can be prohibitively expensive and slow to run at scale, especially for applications that invoke an LLM per sample over millions of inputs. A natural way to scale is to cluster the inputs, run the LLM only on cluster representatives, and propagate the outputs to other cluster members. However, the outputs a member receives are only as good as its match to the representative. Off-the-shelf clustering methods optimize an aggregate objective, targeting average-case quality without per-sample guardrails. As a result, members can be assigned to poorly-matched representatives, and the inherited outputs – though appropriate for the representative – may be irrelevant or even unsafe for the member. For example, a parent of a toddler grouped with parents of older children could receive age-inappropriate recommendations. Most clustering methods also scale poorly to millions of inputs in runtime and memory, limiting their use at industry scale. We propose a scalable two-stage clustering algorithm with provable per-sample guardrails: every sample is guaranteed to share a user-specified minimal embedding similarity and exact attribute match with its representative. The algorithm first generates initial clusters with Mini-batch K-Means, then greedily selects representatives within each to satisfy the guardrails. We provide theoretical guarantees, complexity analysis, and benchmarks against common methods on internal and public datasets. Our method delivers per-sample guardrails while running substantially faster and scaling to data sizes where most standard methods become intractable. We demonstrate its impact in a real-world deployment clustering 38 million customers, reducing downstream LLM cost and runtime by 50-fold while preserving personalization. This unblocked the launch of a persona-based recommender system that delivers significant gains in revenue and engagement in an A/B test.","datePublished":"2026-09-07T00:00:00+00:00","dateModified":"2026-09-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/07/EfficientClusteringwithQualityGuardrailsforLLMbasedRecommenderSystemsatIndustryScale.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/07/EfficientClusteringwithQualityGuardrailsforLLMbasedRecommenderSystemsatIndustryScale.html","author":{"@type":"Person","name":"Longshaokan Wang, Wai Tsang Keung, Punit Ghodasara, Roman Wang, Ali Dashti, Francesc Moreno-Noguer"},"@type":"BlogPosting","headline":"Efficient Clustering with Quality Guardrails for LLM-based Recommender Systems at Industry Scale","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-07 00:00:00 +0000">09-07</time>
+  </p>
+  
+  <h1>Efficient Clustering with Quality Guardrails for LLM-based Recommender Systems at Industry Scale</h1>
+  <br>Longshaokan Wang, Wai Tsang Keung, Punit Ghodasara, Roman Wang, Ali Dashti, Francesc Moreno-Noguer</h3>
+  <br> [stat.ML]
+
+  <p>LLMs can be prohibitively expensive and slow to run at scale, especially for applications that invoke an LLM per sample over millions of inputs. A natural way to scale is to cluster the inputs, run the LLM only on cluster representatives, and propagate the outputs to other cluster members. However, the outputs a member receives are only as good as its match to the representative. Off-the-shelf clustering methods optimize an aggregate objective, targeting average-case quality without per-sample guardrails. As a result, members can be assigned to poorly-matched representatives, and the inherited outputs – though appropriate for the representative – may be irrelevant or even unsafe for the member. For example, a parent of a toddler grouped with parents of older children could receive age-inappropriate recommendations. Most clustering methods also scale poorly to millions of inputs in runtime and memory, limiting their use at industry scale. We propose a scalable two-stage clustering algorithm with provable per-sample guardrails: every sample is guaranteed to share a user-specified minimal embedding similarity and exact attribute match with its representative. The algorithm first generates initial clusters with Mini-batch K-Means, then greedily selects representatives within each to satisfy the guardrails. We provide theoretical guarantees, complexity analysis, and benchmarks against common methods on internal and public datasets. Our method delivers per-sample guardrails while running substantially faster and scaling to data sizes where most standard methods become intractable. We demonstrate its impact in a real-world deployment clustering 38 million customers, reducing downstream LLM cost and runtime by 50-fold while preserving personalization. This unblocked the launch of a persona-based recommender system that delivers significant gains in revenue and engagement in an A/B test.</p>
+
+<p><a href="https://arxiv.org/abs/2607.19704">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
