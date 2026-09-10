@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Mode Coverage in Normalizing Flow Boltzmann Generators via Log-Ratio Variation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Mode Coverage in Normalizing Flow Boltzmann Generators via Log-Ratio Variation" />
+<meta name="author" content="Qi Feng, Rongjie Lai, Di Qi, Xuda Ye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Normalizing flow Boltzmann generators retain a tractable pushforward density, but training with forward KL depends on target samples that may be biased or omit modes. As a result, a flow can miss target mass while its observed importance weights give a high effective sample size. We introduce the log-ratio variation $\X_\omega$, the mean absolute pairwise difference of the target-to-pushforward log-density ratio under a weighting measure $\omega$, and use it to define KLXX, a new loss function. Two log-ratio variations are added to the forward KL (denoted by the two X’s): one weighted by the target to improve accuracy, the other by a mixture of quench and temper samples with pushforward samples to search candidate modes. We derive the Fisher–Rao gradient flow of KLXX, where both variations contribute nonpositive dissipation, and a fixed-surrogate error bound for KLXX. We use KLXX in an adaptive-staging Boltzmann generator, with importance reweighting at every stage. We bound the sampling error of its inference scheme when the stage weights are essentially bounded, and prove it asymptotically unbiased in the sample size. In the numerical tests, KLXX improves mode coverage over forward KL. It also improves the generator’s per-stage diagnostics against the loss that built the schedule. The observables the generator recovers are close to independent references. The log-ratio variations thus supply information that the forward KL loss usually omits." />
+<meta property="og:description" content="Normalizing flow Boltzmann generators retain a tractable pushforward density, but training with forward KL depends on target samples that may be biased or omit modes. As a result, a flow can miss target mass while its observed importance weights give a high effective sample size. We introduce the log-ratio variation $\X_\omega$, the mean absolute pairwise difference of the target-to-pushforward log-density ratio under a weighting measure $\omega$, and use it to define KLXX, a new loss function. Two log-ratio variations are added to the forward KL (denoted by the two X’s): one weighted by the target to improve accuracy, the other by a mixture of quench and temper samples with pushforward samples to search candidate modes. We derive the Fisher–Rao gradient flow of KLXX, where both variations contribute nonpositive dissipation, and a fixed-surrogate error bound for KLXX. We use KLXX in an adaptive-staging Boltzmann generator, with importance reweighting at every stage. We bound the sampling error of its inference scheme when the stage weights are essentially bounded, and prove it asymptotically unbiased in the sample size. In the numerical tests, KLXX improves mode coverage over forward KL. It also improves the generator’s per-stage diagnostics against the loss that built the schedule. The observables the generator recovers are close to independent references. The log-ratio variations thus supply information that the forward KL loss usually omits." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/10/ModeCoverageinNormalizingFlowBoltzmannGeneratorsviaLogRatioVariation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/10/ModeCoverageinNormalizingFlowBoltzmannGeneratorsviaLogRatioVariation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mode Coverage in Normalizing Flow Boltzmann Generators via Log-Ratio Variation" />
+<script type="application/ld+json">
+{"description":"Normalizing flow Boltzmann generators retain a tractable pushforward density, but training with forward KL depends on target samples that may be biased or omit modes. As a result, a flow can miss target mass while its observed importance weights give a high effective sample size. We introduce the log-ratio variation $\\X_\\omega$, the mean absolute pairwise difference of the target-to-pushforward log-density ratio under a weighting measure $\\omega$, and use it to define KLXX, a new loss function. Two log-ratio variations are added to the forward KL (denoted by the two X’s): one weighted by the target to improve accuracy, the other by a mixture of quench and temper samples with pushforward samples to search candidate modes. We derive the Fisher–Rao gradient flow of KLXX, where both variations contribute nonpositive dissipation, and a fixed-surrogate error bound for KLXX. We use KLXX in an adaptive-staging Boltzmann generator, with importance reweighting at every stage. We bound the sampling error of its inference scheme when the stage weights are essentially bounded, and prove it asymptotically unbiased in the sample size. In the numerical tests, KLXX improves mode coverage over forward KL. It also improves the generator’s per-stage diagnostics against the loss that built the schedule. The observables the generator recovers are close to independent references. The log-ratio variations thus supply information that the forward KL loss usually omits.","datePublished":"2026-09-10T00:00:00+00:00","dateModified":"2026-09-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/10/ModeCoverageinNormalizingFlowBoltzmannGeneratorsviaLogRatioVariation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/10/ModeCoverageinNormalizingFlowBoltzmannGeneratorsviaLogRatioVariation.html","author":{"@type":"Person","name":"Qi Feng, Rongjie Lai, Di Qi, Xuda Ye"},"@type":"BlogPosting","headline":"Mode Coverage in Normalizing Flow Boltzmann Generators via Log-Ratio Variation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-10 00:00:00 +0000">09-10</time>
+  </p>
+  
+  <h1>Mode Coverage in Normalizing Flow Boltzmann Generators via Log-Ratio Variation</h1>
+  <br>Qi Feng, Rongjie Lai, Di Qi, Xuda Ye</h3>
+  <br> [stat.ML]
+
+  <p>Normalizing flow Boltzmann generators retain a tractable pushforward density, but training with forward KL depends on target samples that may be biased or omit modes. As a result, a flow can miss target mass while its observed importance weights give a high effective sample size. We introduce the log-ratio variation $\X_\omega$, the mean absolute pairwise difference of the target-to-pushforward log-density ratio under a weighting measure $\omega$, and use it to define KLXX, a new loss function. Two log-ratio variations are added to the forward KL (denoted by the two X’s): one weighted by the target to improve accuracy, the other by a mixture of quench and temper samples with pushforward samples to search candidate modes. We derive the Fisher–Rao gradient flow of KLXX, where both variations contribute nonpositive dissipation, and a fixed-surrogate error bound for KLXX. We use KLXX in an adaptive-staging Boltzmann generator, with importance reweighting at every stage. We bound the sampling error of its inference scheme when the stage weights are essentially bounded, and prove it asymptotically unbiased in the sample size. In the numerical tests, KLXX improves mode coverage over forward KL. It also improves the generator’s per-stage diagnostics against the loss that built the schedule. The observables the generator recovers are close to independent references. The log-ratio variations thus supply information that the forward KL loss usually omits.</p>
+
+<p><a href="https://arxiv.org/abs/2609.09473">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
