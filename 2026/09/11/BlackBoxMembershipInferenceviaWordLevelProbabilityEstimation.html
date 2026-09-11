@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Black-Box Membership Inference via Word-Level Probability Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Black-Box Membership Inference via Word-Level Probability Estimation" />
+<meta name="author" content="Shengjie Niu, Yeheng Ge, Jian Huang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Membership inference attacks (MIAs) have emerged as critical tools for auditing privacy risks in large language models (LLMs), aiming to determine whether a given text was included in a model’s training corpus. However, most existing MIAs require access to per-token logits or probabilities, making them inapplicable in practice to proprietary LLMs that expose only textual continuations. To address this underexplored setting, we propose Word-level Probability MIA (WPMIA), a statistically principled MIA for strict black-box privacy auditing. WPMIA estimates word-level generation probabilities via Monte Carlo sampling with local kernel smoothing, then aggregates these estimates into a sequence-level likelihood estimator. Furthermore, WPMIA constructs the likelihood conditioned on different prefixes, thereby amplifying the distributional differences between members and non-members. We evaluate WPMIA across various open-source LLMs and find that it consistently outperforms existing black-box baselines. Importantly, we also evaluate WPMIA on modern proprietary LLMs, including GPT-5-Chat, Gemini-2.5-Flash, and Claude-4.5-Haiku, achieving an average TPR@5\%FPR of 42.0 across these models. These results offer a sound foundation for future research on strict black-box membership inference. Code is available at \href{https://github.com/niusj03/WPMIA}{https://github.com/niusj03/WPMIA}." />
+<meta property="og:description" content="Membership inference attacks (MIAs) have emerged as critical tools for auditing privacy risks in large language models (LLMs), aiming to determine whether a given text was included in a model’s training corpus. However, most existing MIAs require access to per-token logits or probabilities, making them inapplicable in practice to proprietary LLMs that expose only textual continuations. To address this underexplored setting, we propose Word-level Probability MIA (WPMIA), a statistically principled MIA for strict black-box privacy auditing. WPMIA estimates word-level generation probabilities via Monte Carlo sampling with local kernel smoothing, then aggregates these estimates into a sequence-level likelihood estimator. Furthermore, WPMIA constructs the likelihood conditioned on different prefixes, thereby amplifying the distributional differences between members and non-members. We evaluate WPMIA across various open-source LLMs and find that it consistently outperforms existing black-box baselines. Importantly, we also evaluate WPMIA on modern proprietary LLMs, including GPT-5-Chat, Gemini-2.5-Flash, and Claude-4.5-Haiku, achieving an average TPR@5\%FPR of 42.0 across these models. These results offer a sound foundation for future research on strict black-box membership inference. Code is available at \href{https://github.com/niusj03/WPMIA}{https://github.com/niusj03/WPMIA}." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/11/BlackBoxMembershipInferenceviaWordLevelProbabilityEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/11/BlackBoxMembershipInferenceviaWordLevelProbabilityEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Black-Box Membership Inference via Word-Level Probability Estimation" />
+<script type="application/ld+json">
+{"description":"Membership inference attacks (MIAs) have emerged as critical tools for auditing privacy risks in large language models (LLMs), aiming to determine whether a given text was included in a model’s training corpus. However, most existing MIAs require access to per-token logits or probabilities, making them inapplicable in practice to proprietary LLMs that expose only textual continuations. To address this underexplored setting, we propose Word-level Probability MIA (WPMIA), a statistically principled MIA for strict black-box privacy auditing. WPMIA estimates word-level generation probabilities via Monte Carlo sampling with local kernel smoothing, then aggregates these estimates into a sequence-level likelihood estimator. Furthermore, WPMIA constructs the likelihood conditioned on different prefixes, thereby amplifying the distributional differences between members and non-members. We evaluate WPMIA across various open-source LLMs and find that it consistently outperforms existing black-box baselines. Importantly, we also evaluate WPMIA on modern proprietary LLMs, including GPT-5-Chat, Gemini-2.5-Flash, and Claude-4.5-Haiku, achieving an average TPR@5\\%FPR of 42.0 across these models. These results offer a sound foundation for future research on strict black-box membership inference. Code is available at \\href{https://github.com/niusj03/WPMIA}{https://github.com/niusj03/WPMIA}.","datePublished":"2026-09-11T00:00:00+00:00","dateModified":"2026-09-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/11/BlackBoxMembershipInferenceviaWordLevelProbabilityEstimation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/11/BlackBoxMembershipInferenceviaWordLevelProbabilityEstimation.html","author":{"@type":"Person","name":"Shengjie Niu, Yeheng Ge, Jian Huang"},"@type":"BlogPosting","headline":"Black-Box Membership Inference via Word-Level Probability Estimation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-11 00:00:00 +0000">09-11</time>
+  </p>
+  
+  <h1>Black-Box Membership Inference via Word-Level Probability Estimation</h1>
+  <br>Shengjie Niu, Yeheng Ge, Jian Huang</h3>
+  <br> [stat.ML]
+
+  <p>Membership inference attacks (MIAs) have emerged as critical tools for auditing privacy risks in large language models (LLMs), aiming to determine whether a given text was included in a model’s training corpus. However, most existing MIAs require access to per-token logits or probabilities, making them inapplicable in practice to proprietary LLMs that expose only textual continuations. To address this underexplored setting, we propose Word-level Probability MIA (WPMIA), a statistically principled MIA for strict black-box privacy auditing. WPMIA estimates word-level generation probabilities via Monte Carlo sampling with local kernel smoothing, then aggregates these estimates into a sequence-level likelihood estimator. Furthermore, WPMIA constructs the likelihood conditioned on different prefixes, thereby amplifying the distributional differences between members and non-members. We evaluate WPMIA across various open-source LLMs and find that it consistently outperforms existing black-box baselines. Importantly, we also evaluate WPMIA on modern proprietary LLMs, including GPT-5-Chat, Gemini-2.5-Flash, and Claude-4.5-Haiku, achieving an average TPR@5\%FPR of 42.0 across these models. These results offer a sound foundation for future research on strict black-box membership inference. Code is available at \href{https://github.com/niusj03/WPMIA}{https://github.com/niusj03/WPMIA}.</p>
+
+<p><a href="https://arxiv.org/abs/2609.10611">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

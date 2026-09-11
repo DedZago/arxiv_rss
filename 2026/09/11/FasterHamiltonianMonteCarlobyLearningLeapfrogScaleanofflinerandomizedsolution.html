@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Faster Hamiltonian Monte Carlo by Learning Leapfrog Scale: an offline randomized solution</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Faster Hamiltonian Monte Carlo by Learning Leapfrog Scale: an offline randomized solution" />
+<meta name="author" content="Changye Wu , Pierre Pudlo , Christian P. Robert , Julien Stoehr" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a Hamiltonian Monte Carlo (HMC) methodology based on an offline empirical calibration of randomized leapfrog parameters. The approach, referred to as eHMC, where \textit{e} stands for empirical, leverages importance sampling to construct an empirical distribution on discretization parameters, thereby eliminating the need for manual burn-in diagnostics and online adaptation. The proposal distribution used in the calibration stage is obtained via a Population Monte Carlo scheme with tempering and relies on flexible parametric variational families such as normalizing flows. Once the calibration stage complete, the resulting algorithm defines a homogeneous Markov chain via a mixture of HMC kernels with a fixed mixing distribution, and hence preserves the target distribution. Numerical experiments indicate that eHMC can achieve competitive or improved sampling efficiency compared to the No-U-Turn Sampler (NUTS) in the case useful integration times can be summarized by the offline distribution. The comparison is assessed by standard efficiency metrics normalized by the number of leapfrog steps during the post-calibration sampling phase." />
+<meta property="og:description" content="We introduce a Hamiltonian Monte Carlo (HMC) methodology based on an offline empirical calibration of randomized leapfrog parameters. The approach, referred to as eHMC, where \textit{e} stands for empirical, leverages importance sampling to construct an empirical distribution on discretization parameters, thereby eliminating the need for manual burn-in diagnostics and online adaptation. The proposal distribution used in the calibration stage is obtained via a Population Monte Carlo scheme with tempering and relies on flexible parametric variational families such as normalizing flows. Once the calibration stage complete, the resulting algorithm defines a homogeneous Markov chain via a mixture of HMC kernels with a fixed mixing distribution, and hence preserves the target distribution. Numerical experiments indicate that eHMC can achieve competitive or improved sampling efficiency compared to the No-U-Turn Sampler (NUTS) in the case useful integration times can be summarized by the offline distribution. The comparison is assessed by standard efficiency metrics normalized by the number of leapfrog steps during the post-calibration sampling phase." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/11/FasterHamiltonianMonteCarlobyLearningLeapfrogScaleanofflinerandomizedsolution.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/11/FasterHamiltonianMonteCarlobyLearningLeapfrogScaleanofflinerandomizedsolution.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Faster Hamiltonian Monte Carlo by Learning Leapfrog Scale: an offline randomized solution" />
+<script type="application/ld+json">
+{"description":"We introduce a Hamiltonian Monte Carlo (HMC) methodology based on an offline empirical calibration of randomized leapfrog parameters. The approach, referred to as eHMC, where \\textit{e} stands for empirical, leverages importance sampling to construct an empirical distribution on discretization parameters, thereby eliminating the need for manual burn-in diagnostics and online adaptation. The proposal distribution used in the calibration stage is obtained via a Population Monte Carlo scheme with tempering and relies on flexible parametric variational families such as normalizing flows. Once the calibration stage complete, the resulting algorithm defines a homogeneous Markov chain via a mixture of HMC kernels with a fixed mixing distribution, and hence preserves the target distribution. Numerical experiments indicate that eHMC can achieve competitive or improved sampling efficiency compared to the No-U-Turn Sampler (NUTS) in the case useful integration times can be summarized by the offline distribution. The comparison is assessed by standard efficiency metrics normalized by the number of leapfrog steps during the post-calibration sampling phase.","datePublished":"2026-09-11T00:00:00+00:00","dateModified":"2026-09-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/11/FasterHamiltonianMonteCarlobyLearningLeapfrogScaleanofflinerandomizedsolution.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/11/FasterHamiltonianMonteCarlobyLearningLeapfrogScaleanofflinerandomizedsolution.html","author":{"@type":"Person","name":"Changye Wu , Pierre Pudlo , Christian P. Robert , Julien Stoehr"},"@type":"BlogPosting","headline":"Faster Hamiltonian Monte Carlo by Learning Leapfrog Scale: an offline randomized solution","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-11 00:00:00 +0000">09-11</time>
+  </p>
+  
+  <h1>Faster Hamiltonian Monte Carlo by Learning Leapfrog Scale: an offline randomized solution</h1>
+  <br>Changye Wu , Pierre Pudlo , Christian P. Robert , Julien Stoehr</h3>
+  <br> [stat.CO]
+
+  <p>We introduce a Hamiltonian Monte Carlo (HMC) methodology based on an offline empirical calibration of randomized leapfrog parameters. The approach, referred to as eHMC, where \textit{e} stands for empirical, leverages importance sampling to construct an empirical distribution on discretization parameters, thereby eliminating the need for manual burn-in diagnostics and online adaptation. The proposal distribution used in the calibration stage is obtained via a Population Monte Carlo scheme with tempering and relies on flexible parametric variational families such as normalizing flows. Once the calibration stage complete, the resulting algorithm defines a homogeneous Markov chain via a mixture of HMC kernels with a fixed mixing distribution, and hence preserves the target distribution. Numerical experiments indicate that eHMC can achieve competitive or improved sampling efficiency compared to the No-U-Turn Sampler (NUTS) in the case useful integration times can be summarized by the offline distribution. The comparison is assessed by standard efficiency metrics normalized by the number of leapfrog steps during the post-calibration sampling phase.</p>
+
+<p><a href="https://arxiv.org/abs/1810.04449">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

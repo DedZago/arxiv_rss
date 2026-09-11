@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>RDDMPI: Residual Denoising Diffusion Model for Probabilistic Multivariate Time Series Imputation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="RDDMPI: Residual Denoising Diffusion Model for Probabilistic Multivariate Time Series Imputation" />
+<meta name="author" content="Ramiro Valdes Jara, David Chapman, Adam Meyers" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multivariate time series imputation (MTSI) aims to recover missing values in temporal data composed of multiple interdependent variables. This problem is central to real-world applications such as healthcare monitoring, traffic networks, and energy systems. Recent diffusion-based approaches have shown strong potential for probabilistic imputation by learning to generate missing values through iterative denoising. However, most existing approaches perform diffusion directly in the original data space, requiring the denoising network to simultaneously capture global structure, temporal dynamics, and stochastic variability. This makes the generative task unnecessarily complex, especially when modern deterministic imputers can already provide accurate initial reconstructions. To address this limitation, we propose RDDMPI, a conditional residual diffusion framework that operates directly in residual space. Instead of modeling the full missing signal directly, we reformulate probabilistic imputation as a baseline-residual decomposition, where a pretrained model captures the dominant signal and a diffusion process models the residual uncertainty. To better exploit deterministic guidance, \model{} conditions the reverse denoising process on both the baseline-completed signal and its latent representation, while a reliability-aware conditioning mechanism adaptively controls the influence of baseline information during residual generation. This formulation simplifies the diffusion learning objective, enabling it to focus on structured correction terms rather than reconstructing the full signal. Experiments on multiple benchmark datasets demonstrate that RDDMPI consistently improves both reconstruction accuracy and uncertainty quantification." />
+<meta property="og:description" content="Multivariate time series imputation (MTSI) aims to recover missing values in temporal data composed of multiple interdependent variables. This problem is central to real-world applications such as healthcare monitoring, traffic networks, and energy systems. Recent diffusion-based approaches have shown strong potential for probabilistic imputation by learning to generate missing values through iterative denoising. However, most existing approaches perform diffusion directly in the original data space, requiring the denoising network to simultaneously capture global structure, temporal dynamics, and stochastic variability. This makes the generative task unnecessarily complex, especially when modern deterministic imputers can already provide accurate initial reconstructions. To address this limitation, we propose RDDMPI, a conditional residual diffusion framework that operates directly in residual space. Instead of modeling the full missing signal directly, we reformulate probabilistic imputation as a baseline-residual decomposition, where a pretrained model captures the dominant signal and a diffusion process models the residual uncertainty. To better exploit deterministic guidance, \model{} conditions the reverse denoising process on both the baseline-completed signal and its latent representation, while a reliability-aware conditioning mechanism adaptively controls the influence of baseline information during residual generation. This formulation simplifies the diffusion learning objective, enabling it to focus on structured correction terms rather than reconstructing the full signal. Experiments on multiple benchmark datasets demonstrate that RDDMPI consistently improves both reconstruction accuracy and uncertainty quantification." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/11/RDDMPIResidualDenoisingDiffusionModelforProbabilisticMultivariateTimeSeriesImputation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/11/RDDMPIResidualDenoisingDiffusionModelforProbabilisticMultivariateTimeSeriesImputation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RDDMPI: Residual Denoising Diffusion Model for Probabilistic Multivariate Time Series Imputation" />
+<script type="application/ld+json">
+{"description":"Multivariate time series imputation (MTSI) aims to recover missing values in temporal data composed of multiple interdependent variables. This problem is central to real-world applications such as healthcare monitoring, traffic networks, and energy systems. Recent diffusion-based approaches have shown strong potential for probabilistic imputation by learning to generate missing values through iterative denoising. However, most existing approaches perform diffusion directly in the original data space, requiring the denoising network to simultaneously capture global structure, temporal dynamics, and stochastic variability. This makes the generative task unnecessarily complex, especially when modern deterministic imputers can already provide accurate initial reconstructions. To address this limitation, we propose RDDMPI, a conditional residual diffusion framework that operates directly in residual space. Instead of modeling the full missing signal directly, we reformulate probabilistic imputation as a baseline-residual decomposition, where a pretrained model captures the dominant signal and a diffusion process models the residual uncertainty. To better exploit deterministic guidance, \\model{} conditions the reverse denoising process on both the baseline-completed signal and its latent representation, while a reliability-aware conditioning mechanism adaptively controls the influence of baseline information during residual generation. This formulation simplifies the diffusion learning objective, enabling it to focus on structured correction terms rather than reconstructing the full signal. Experiments on multiple benchmark datasets demonstrate that RDDMPI consistently improves both reconstruction accuracy and uncertainty quantification.","datePublished":"2026-09-11T00:00:00+00:00","dateModified":"2026-09-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/11/RDDMPIResidualDenoisingDiffusionModelforProbabilisticMultivariateTimeSeriesImputation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/11/RDDMPIResidualDenoisingDiffusionModelforProbabilisticMultivariateTimeSeriesImputation.html","author":{"@type":"Person","name":"Ramiro Valdes Jara, David Chapman, Adam Meyers"},"@type":"BlogPosting","headline":"RDDMPI: Residual Denoising Diffusion Model for Probabilistic Multivariate Time Series Imputation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-11 00:00:00 +0000">09-11</time>
+  </p>
+  
+  <h1>RDDMPI: Residual Denoising Diffusion Model for Probabilistic Multivariate Time Series Imputation</h1>
+  <br>Ramiro Valdes Jara, David Chapman, Adam Meyers</h3>
+  <br> [stat.ML]
+
+  <p>Multivariate time series imputation (MTSI) aims to recover missing values in temporal data composed of multiple interdependent variables. This problem is central to real-world applications such as healthcare monitoring, traffic networks, and energy systems. Recent diffusion-based approaches have shown strong potential for probabilistic imputation by learning to generate missing values through iterative denoising. However, most existing approaches perform diffusion directly in the original data space, requiring the denoising network to simultaneously capture global structure, temporal dynamics, and stochastic variability. This makes the generative task unnecessarily complex, especially when modern deterministic imputers can already provide accurate initial reconstructions. To address this limitation, we propose RDDMPI, a conditional residual diffusion framework that operates directly in residual space. Instead of modeling the full missing signal directly, we reformulate probabilistic imputation as a baseline-residual decomposition, where a pretrained model captures the dominant signal and a diffusion process models the residual uncertainty. To better exploit deterministic guidance, \model{} conditions the reverse denoising process on both the baseline-completed signal and its latent representation, while a reliability-aware conditioning mechanism adaptively controls the influence of baseline information during residual generation. This formulation simplifies the diffusion learning objective, enabling it to focus on structured correction terms rather than reconstructing the full signal. Experiments on multiple benchmark datasets demonstrate that RDDMPI consistently improves both reconstruction accuracy and uncertainty quantification.</p>
+
+<p><a href="https://arxiv.org/abs/2609.11648">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Label Differential Privacy via Aggregation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Label Differential Privacy via Aggregation" />
+<meta name="author" content="Anand Brahmbhatt, Rishi Saket, Shreyas Havaldar, Anshul Nasery, Yukti Makhija, Aravindan Raghuveer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This paper explores the use of linear aggregation to protect the privacy of sensitive training labels through the concept of \emph{label differential privacy} (label-DP) while maintaining regression task utility. Our key finding is that weighted linear aggregation of training instances with i.i.d. $N(0, 1)$ weights can achieve $(\varepsilon, \delta)$-label-DP with $m = O\left(n/(\log(1/\delta))\right)$. Unlike prior methods, our approach relies on the minimum linear regression loss rather than the minimum singular value of the data matrix, resulting in better practical bounds on real datasets. We also examine real-world mechanisms involving disjoint sets or \textit{bags} of instances. We demonstrate that aggregating labels from sub-sampled disjoint $k$-sized bags using i.i.d. $N(0,1)$ weights achieves $(\varepsilon,\delta)$-label-DP with $k \geq \Omega\left(\left((1/\varepsilon)\log\left(1/\delta\right)\right)^2\right)$. In both scenarios, the optimal linear mse-regressor on the aggregated data approximates the original dataset’s optimum with high probability, without needing additive label noise. Furthermore, we show that adding $N(0,1)$ noise to any constant fraction of labels allows for similar label-DP guarantees when aggregating labels over random disjoint bags, while preserving the utility of Lipschitz-bounded neural mse-regression tasks." />
+<meta property="og:description" content="This paper explores the use of linear aggregation to protect the privacy of sensitive training labels through the concept of \emph{label differential privacy} (label-DP) while maintaining regression task utility. Our key finding is that weighted linear aggregation of training instances with i.i.d. $N(0, 1)$ weights can achieve $(\varepsilon, \delta)$-label-DP with $m = O\left(n/(\log(1/\delta))\right)$. Unlike prior methods, our approach relies on the minimum linear regression loss rather than the minimum singular value of the data matrix, resulting in better practical bounds on real datasets. We also examine real-world mechanisms involving disjoint sets or \textit{bags} of instances. We demonstrate that aggregating labels from sub-sampled disjoint $k$-sized bags using i.i.d. $N(0,1)$ weights achieves $(\varepsilon,\delta)$-label-DP with $k \geq \Omega\left(\left((1/\varepsilon)\log\left(1/\delta\right)\right)^2\right)$. In both scenarios, the optimal linear mse-regressor on the aggregated data approximates the original dataset’s optimum with high probability, without needing additive label noise. Furthermore, we show that adding $N(0,1)$ noise to any constant fraction of labels allows for similar label-DP guarantees when aggregating labels over random disjoint bags, while preserving the utility of Lipschitz-bounded neural mse-regression tasks." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/11/LabelDifferentialPrivacyviaAggregation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/11/LabelDifferentialPrivacyviaAggregation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Label Differential Privacy via Aggregation" />
+<script type="application/ld+json">
+{"description":"This paper explores the use of linear aggregation to protect the privacy of sensitive training labels through the concept of \\emph{label differential privacy} (label-DP) while maintaining regression task utility. Our key finding is that weighted linear aggregation of training instances with i.i.d. $N(0, 1)$ weights can achieve $(\\varepsilon, \\delta)$-label-DP with $m = O\\left(n/(\\log(1/\\delta))\\right)$. Unlike prior methods, our approach relies on the minimum linear regression loss rather than the minimum singular value of the data matrix, resulting in better practical bounds on real datasets. We also examine real-world mechanisms involving disjoint sets or \\textit{bags} of instances. We demonstrate that aggregating labels from sub-sampled disjoint $k$-sized bags using i.i.d. $N(0,1)$ weights achieves $(\\varepsilon,\\delta)$-label-DP with $k \\geq \\Omega\\left(\\left((1/\\varepsilon)\\log\\left(1/\\delta\\right)\\right)^2\\right)$. In both scenarios, the optimal linear mse-regressor on the aggregated data approximates the original dataset’s optimum with high probability, without needing additive label noise. Furthermore, we show that adding $N(0,1)$ noise to any constant fraction of labels allows for similar label-DP guarantees when aggregating labels over random disjoint bags, while preserving the utility of Lipschitz-bounded neural mse-regression tasks.","datePublished":"2026-09-11T00:00:00+00:00","dateModified":"2026-09-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/11/LabelDifferentialPrivacyviaAggregation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/11/LabelDifferentialPrivacyviaAggregation.html","author":{"@type":"Person","name":"Anand Brahmbhatt, Rishi Saket, Shreyas Havaldar, Anshul Nasery, Yukti Makhija, Aravindan Raghuveer"},"@type":"BlogPosting","headline":"Label Differential Privacy via Aggregation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-11 00:00:00 +0000">09-11</time>
+  </p>
+  
+  <h1>Label Differential Privacy via Aggregation</h1>
+  <br>Anand Brahmbhatt, Rishi Saket, Shreyas Havaldar, Anshul Nasery, Yukti Makhija, Aravindan Raghuveer</h3>
+  <br> [stat.ML]
+
+  <p>This paper explores the use of linear aggregation to protect the privacy of sensitive training labels through the concept of \emph{label differential privacy} (label-DP) while maintaining regression task utility. Our key finding is that weighted linear aggregation of training instances with i.i.d. $N(0, 1)$ weights can achieve $(\varepsilon, \delta)$-label-DP with $m = O\left(n/(\log(1/\delta))\right)$. Unlike prior methods, our approach relies on the minimum linear regression loss rather than the minimum singular value of the data matrix, resulting in better practical bounds on real datasets.
+  We also examine real-world mechanisms involving disjoint sets or \textit{bags} of instances. We demonstrate that aggregating labels from sub-sampled disjoint $k$-sized bags using i.i.d. $N(0,1)$ weights achieves $(\varepsilon,\delta)$-label-DP with $k \geq \Omega\left(\left((1/\varepsilon)\log\left(1/\delta\right)\right)^2\right)$. In both scenarios, the optimal linear mse-regressor on the aggregated data approximates the original dataset’s optimum with high probability, without needing additive label noise.
+  Furthermore, we show that adding $N(0,1)$ noise to any constant fraction of labels allows for similar label-DP guarantees when aggregating labels over random disjoint bags, while preserving the utility of Lipschitz-bounded neural mse-regression tasks.</p>
+
+<p><a href="https://arxiv.org/abs/2310.10092">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
