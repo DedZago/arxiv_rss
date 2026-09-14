@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Operator-matched spatial regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Operator-matched spatial regression" />
+<meta name="author" content="David Bolin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A standard spatial regression model $Y = X^\top\beta + U$, with covariates $X$ and a Gaussian random field $U$ with Mat&#39;ern covariance, decouples covariate effects from spatial dependence. In several applications this is mechanistically implausible, as covariates likely drive the dynamics generating the residual covariance, and it is statistically problematic, since the generalised least-squares estimator of $\beta$ may be biased by spatial self-confounding. We propose operator-matched spatial regression, where covariates enter both pointwise and as deterministic forcings in a stochastic partial differential equation (SPDE) that generates the random effect, partitioning the apparent effect into local and operator-mediated components. The formulation arises as the steady state of a transport–relaxation equation forced by $X$, giving the parameters physical interpretations. We show that self-confounding is resolved by construction and that maximum likelihood inference for the regression coefficients, implementable through standard covariance-based methods, is calibrated when the operator parameters are known and, under expanding-domain asymptotics, when they are jointly estimated. A computationally efficient finite element implementation is introduced and justified via bounds on the discretisation error. Applications to temperature–altitude regression and air-quality monitoring show that the method matches or outperforms alternatives and produces physically meaningful results." />
+<meta property="og:description" content="A standard spatial regression model $Y = X^\top\beta + U$, with covariates $X$ and a Gaussian random field $U$ with Mat&#39;ern covariance, decouples covariate effects from spatial dependence. In several applications this is mechanistically implausible, as covariates likely drive the dynamics generating the residual covariance, and it is statistically problematic, since the generalised least-squares estimator of $\beta$ may be biased by spatial self-confounding. We propose operator-matched spatial regression, where covariates enter both pointwise and as deterministic forcings in a stochastic partial differential equation (SPDE) that generates the random effect, partitioning the apparent effect into local and operator-mediated components. The formulation arises as the steady state of a transport–relaxation equation forced by $X$, giving the parameters physical interpretations. We show that self-confounding is resolved by construction and that maximum likelihood inference for the regression coefficients, implementable through standard covariance-based methods, is calibrated when the operator parameters are known and, under expanding-domain asymptotics, when they are jointly estimated. A computationally efficient finite element implementation is introduced and justified via bounds on the discretisation error. Applications to temperature–altitude regression and air-quality monitoring show that the method matches or outperforms alternatives and produces physically meaningful results." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/14/Operatormatchedspatialregression.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/14/Operatormatchedspatialregression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Operator-matched spatial regression" />
+<script type="application/ld+json">
+{"description":"A standard spatial regression model $Y = X^\\top\\beta + U$, with covariates $X$ and a Gaussian random field $U$ with Mat&#39;ern covariance, decouples covariate effects from spatial dependence. In several applications this is mechanistically implausible, as covariates likely drive the dynamics generating the residual covariance, and it is statistically problematic, since the generalised least-squares estimator of $\\beta$ may be biased by spatial self-confounding. We propose operator-matched spatial regression, where covariates enter both pointwise and as deterministic forcings in a stochastic partial differential equation (SPDE) that generates the random effect, partitioning the apparent effect into local and operator-mediated components. The formulation arises as the steady state of a transport–relaxation equation forced by $X$, giving the parameters physical interpretations. We show that self-confounding is resolved by construction and that maximum likelihood inference for the regression coefficients, implementable through standard covariance-based methods, is calibrated when the operator parameters are known and, under expanding-domain asymptotics, when they are jointly estimated. A computationally efficient finite element implementation is introduced and justified via bounds on the discretisation error. Applications to temperature–altitude regression and air-quality monitoring show that the method matches or outperforms alternatives and produces physically meaningful results.","datePublished":"2026-09-14T00:00:00+00:00","dateModified":"2026-09-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/14/Operatormatchedspatialregression.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/14/Operatormatchedspatialregression.html","author":{"@type":"Person","name":"David Bolin"},"@type":"BlogPosting","headline":"Operator-matched spatial regression","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-14 00:00:00 +0000">09-14</time>
+  </p>
+  
+  <h1>Operator-matched spatial regression</h1>
+  <br>David Bolin</h3>
+  <br> [stat.ME]
+
+  <p>A standard spatial regression model $Y = X^\top\beta + U$, with covariates $X$ and a Gaussian random field $U$ with Mat'ern covariance, decouples covariate effects from spatial dependence. In several applications this is mechanistically implausible, as covariates likely drive the dynamics generating the residual covariance, and it is statistically problematic, since the generalised least-squares estimator of $\beta$ may be biased by spatial self-confounding. We propose operator-matched spatial regression, where covariates enter both pointwise and as deterministic forcings in a stochastic partial differential equation (SPDE) that generates the random effect, partitioning the apparent effect into local and operator-mediated components. The formulation arises as the steady state of a transport–relaxation equation forced by $X$, giving the parameters physical interpretations. We show that self-confounding is resolved by construction and that maximum likelihood inference for the regression coefficients, implementable through standard covariance-based methods, is calibrated when the operator parameters are known and, under expanding-domain asymptotics, when they are jointly estimated. A computationally efficient finite element implementation is introduced and justified via bounds on the discretisation error. Applications to temperature–altitude regression and air-quality monitoring show that the method matches or outperforms alternatives and produces physically meaningful results.</p>
+
+<p><a href="https://arxiv.org/abs/2609.12094">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
