@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Nii-MALA: A Fast Metropolis-Adjusted Langevin Sampler with Radial Velocity Benchmarks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Nii-MALA: A Fast Metropolis-Adjusted Langevin Sampler with Radial Velocity Benchmarks" />
+<meta name="author" content="Jian Jiao, Sheng Jin, Wenxin Jiang, Dong-Hong Wu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Markov chain Monte Carlo is widely used for model assessment and parameter fitting in astronomy and astrophysics, leading to numerous ready-to-use packages implementing various sampling techniques. For large-scale analyses involving many individual targets, computational efficiency becomes paramount, as it dictates the overall runtime. We introduce Nii-MALA, a high-performance C implementation of the Metropolis-Adjusted Langevin Algorithm, which leverages Message Passing Interface for parallelization and incorporates automatic differentiation backends for gradient evaluation. The code offers flexible control via a configuration file, allowing users to specify the proposal step sizes for all model parameters across parallel chains. We validate its effectiveness on 15- and 30-dimensional Gaussian distributions and a bimodal distribution, and further benchmark it against several other codes using radial velocity data from 51 Pegasi b. Our benchmarks confirm the efficiency of Langevin sampling over random-walk sampling in obtaining the effective sample size, particularly as the dimensionality of the target function increases. This algorithmic advantage can be effectively leveraged when paired with an efficient automatic differentiation library. However, for complex functions commonly encountered in astronomy—such as radial velocity orbital fitting—the derivative-dependent Langevin sampler shows lower efficiency than parallel tempering or alternative sampling approaches, as revealed by effective sample size analysis." />
+<meta property="og:description" content="Markov chain Monte Carlo is widely used for model assessment and parameter fitting in astronomy and astrophysics, leading to numerous ready-to-use packages implementing various sampling techniques. For large-scale analyses involving many individual targets, computational efficiency becomes paramount, as it dictates the overall runtime. We introduce Nii-MALA, a high-performance C implementation of the Metropolis-Adjusted Langevin Algorithm, which leverages Message Passing Interface for parallelization and incorporates automatic differentiation backends for gradient evaluation. The code offers flexible control via a configuration file, allowing users to specify the proposal step sizes for all model parameters across parallel chains. We validate its effectiveness on 15- and 30-dimensional Gaussian distributions and a bimodal distribution, and further benchmark it against several other codes using radial velocity data from 51 Pegasi b. Our benchmarks confirm the efficiency of Langevin sampling over random-walk sampling in obtaining the effective sample size, particularly as the dimensionality of the target function increases. This algorithmic advantage can be effectively leveraged when paired with an efficient automatic differentiation library. However, for complex functions commonly encountered in astronomy—such as radial velocity orbital fitting—the derivative-dependent Langevin sampler shows lower efficiency than parallel tempering or alternative sampling approaches, as revealed by effective sample size analysis." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/15/NiiMALAAFastMetropolisAdjustedLangevinSamplerwithRadialVelocityBenchmarks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/15/NiiMALAAFastMetropolisAdjustedLangevinSamplerwithRadialVelocityBenchmarks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Nii-MALA: A Fast Metropolis-Adjusted Langevin Sampler with Radial Velocity Benchmarks" />
+<script type="application/ld+json">
+{"description":"Markov chain Monte Carlo is widely used for model assessment and parameter fitting in astronomy and astrophysics, leading to numerous ready-to-use packages implementing various sampling techniques. For large-scale analyses involving many individual targets, computational efficiency becomes paramount, as it dictates the overall runtime. We introduce Nii-MALA, a high-performance C implementation of the Metropolis-Adjusted Langevin Algorithm, which leverages Message Passing Interface for parallelization and incorporates automatic differentiation backends for gradient evaluation. The code offers flexible control via a configuration file, allowing users to specify the proposal step sizes for all model parameters across parallel chains. We validate its effectiveness on 15- and 30-dimensional Gaussian distributions and a bimodal distribution, and further benchmark it against several other codes using radial velocity data from 51 Pegasi b. Our benchmarks confirm the efficiency of Langevin sampling over random-walk sampling in obtaining the effective sample size, particularly as the dimensionality of the target function increases. This algorithmic advantage can be effectively leveraged when paired with an efficient automatic differentiation library. However, for complex functions commonly encountered in astronomy—such as radial velocity orbital fitting—the derivative-dependent Langevin sampler shows lower efficiency than parallel tempering or alternative sampling approaches, as revealed by effective sample size analysis.","datePublished":"2026-09-15T00:00:00+00:00","dateModified":"2026-09-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/15/NiiMALAAFastMetropolisAdjustedLangevinSamplerwithRadialVelocityBenchmarks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/15/NiiMALAAFastMetropolisAdjustedLangevinSamplerwithRadialVelocityBenchmarks.html","author":{"@type":"Person","name":"Jian Jiao, Sheng Jin, Wenxin Jiang, Dong-Hong Wu"},"@type":"BlogPosting","headline":"Nii-MALA: A Fast Metropolis-Adjusted Langevin Sampler with Radial Velocity Benchmarks","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-15 00:00:00 +0000">09-15</time>
+  </p>
+  
+  <h1>Nii-MALA: A Fast Metropolis-Adjusted Langevin Sampler with Radial Velocity Benchmarks</h1>
+  <br>Jian Jiao, Sheng Jin, Wenxin Jiang, Dong-Hong Wu</h3>
+  <br> [stat.CO]
+
+  <p>Markov chain Monte Carlo is widely used for model assessment and parameter fitting in astronomy and astrophysics, leading to numerous ready-to-use packages implementing various sampling techniques. For large-scale analyses involving many individual targets, computational efficiency becomes paramount, as it dictates the overall runtime. We introduce Nii-MALA, a high-performance C implementation of the Metropolis-Adjusted Langevin Algorithm, which leverages Message Passing Interface for parallelization and incorporates automatic differentiation backends for gradient evaluation. The code offers flexible control via a configuration file, allowing users to specify the proposal step sizes for all model parameters across parallel chains. We validate its effectiveness on 15- and 30-dimensional Gaussian distributions and a bimodal distribution, and further benchmark it against several other codes using radial velocity data from 51 Pegasi b. Our benchmarks confirm the efficiency of Langevin sampling over random-walk sampling in obtaining the effective sample size, particularly as the dimensionality of the target function increases. This algorithmic advantage can be effectively leveraged when paired with an efficient automatic differentiation library. However, for complex functions commonly encountered in astronomy—such as radial velocity orbital fitting—the derivative-dependent Langevin sampler shows lower efficiency than parallel tempering or alternative sampling approaches, as revealed by effective sample size analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2609.15112">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

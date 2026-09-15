@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Optimal Learning Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Optimal Learning Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay" />
+<meta name="author" content="Binghui Li, Zilin Wang, Fengling Chen, Shiyang Zhao, Ruiheng Zheng, Lei Wu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study optimal learning rate (LR) schedules under the functional scaling law (FSL) framework (Li et al., 2025), which decomposes training dynamics into signal learning and noise forgetting. In power-law kernel regression, these two components are governed by a source exponent $s&gt;0$ and a capacity exponent $q&gt;1$, respectively, with smaller $s$ corresponding to harder tasks. For a fixed training horizon $N$, we characterize the schedules that minimize the final-step loss under a stability constraint and reveal a sharp phase transition. In the easy-task regime $s&gt;1-1/q$, the optimal schedule follows power decay from the beginning of training; in the hard-task regime $s&lt;1-1/q$, it becomes warmup-stable-decay (WSD)-like (Hu et al., 2024), staying at the largest admissible LR for most of training before a final decay. In both regimes, the decay exponent is $2q-1$: task difficulty determines when to decay, while model capacity determines how to decay. Beyond the exact optimum, we study fractional schedules, whose shape is defined over relative training progress. We show that precise tuning of the decay shape is often unnecessary: a broad class of profiles attains the optimal convergence rate, while overly slow terminal decay leads to schedule-induced capacity saturation. Finally, for one-pass SGD in kernel regression, FSL-motivated power-decay schedules achieve optimal last-iterate rates. Experiments support the theoretical predictions and the task-dependent transition between early and delayed decay." />
+<meta property="og:description" content="We study optimal learning rate (LR) schedules under the functional scaling law (FSL) framework (Li et al., 2025), which decomposes training dynamics into signal learning and noise forgetting. In power-law kernel regression, these two components are governed by a source exponent $s&gt;0$ and a capacity exponent $q&gt;1$, respectively, with smaller $s$ corresponding to harder tasks. For a fixed training horizon $N$, we characterize the schedules that minimize the final-step loss under a stability constraint and reveal a sharp phase transition. In the easy-task regime $s&gt;1-1/q$, the optimal schedule follows power decay from the beginning of training; in the hard-task regime $s&lt;1-1/q$, it becomes warmup-stable-decay (WSD)-like (Hu et al., 2024), staying at the largest admissible LR for most of training before a final decay. In both regimes, the decay exponent is $2q-1$: task difficulty determines when to decay, while model capacity determines how to decay. Beyond the exact optimum, we study fractional schedules, whose shape is defined over relative training progress. We show that precise tuning of the decay shape is often unnecessary: a broad class of profiles attains the optimal convergence rate, while overly slow terminal decay leads to schedule-induced capacity saturation. Finally, for one-pass SGD in kernel regression, FSL-motivated power-decay schedules achieve optimal last-iterate rates. Experiments support the theoretical predictions and the task-dependent transition between early and delayed decay." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/15/OptimalLearningRateSchedulesunderFunctionalScalingLawsPowerDecayandWarmupStableDecay.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/15/OptimalLearningRateSchedulesunderFunctionalScalingLawsPowerDecayandWarmupStableDecay.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Optimal Learning Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay" />
+<script type="application/ld+json">
+{"description":"We study optimal learning rate (LR) schedules under the functional scaling law (FSL) framework (Li et al., 2025), which decomposes training dynamics into signal learning and noise forgetting. In power-law kernel regression, these two components are governed by a source exponent $s&gt;0$ and a capacity exponent $q&gt;1$, respectively, with smaller $s$ corresponding to harder tasks. For a fixed training horizon $N$, we characterize the schedules that minimize the final-step loss under a stability constraint and reveal a sharp phase transition. In the easy-task regime $s&gt;1-1/q$, the optimal schedule follows power decay from the beginning of training; in the hard-task regime $s&lt;1-1/q$, it becomes warmup-stable-decay (WSD)-like (Hu et al., 2024), staying at the largest admissible LR for most of training before a final decay. In both regimes, the decay exponent is $2q-1$: task difficulty determines when to decay, while model capacity determines how to decay. Beyond the exact optimum, we study fractional schedules, whose shape is defined over relative training progress. We show that precise tuning of the decay shape is often unnecessary: a broad class of profiles attains the optimal convergence rate, while overly slow terminal decay leads to schedule-induced capacity saturation. Finally, for one-pass SGD in kernel regression, FSL-motivated power-decay schedules achieve optimal last-iterate rates. Experiments support the theoretical predictions and the task-dependent transition between early and delayed decay.","datePublished":"2026-09-15T00:00:00+00:00","dateModified":"2026-09-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/15/OptimalLearningRateSchedulesunderFunctionalScalingLawsPowerDecayandWarmupStableDecay.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/15/OptimalLearningRateSchedulesunderFunctionalScalingLawsPowerDecayandWarmupStableDecay.html","author":{"@type":"Person","name":"Binghui Li, Zilin Wang, Fengling Chen, Shiyang Zhao, Ruiheng Zheng, Lei Wu"},"@type":"BlogPosting","headline":"Optimal Learning Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-15 00:00:00 +0000">09-15</time>
+  </p>
+  
+  <h1>Optimal Learning Rate Schedules under Functional Scaling Laws: Power Decay and Warmup-Stable-Decay</h1>
+  <br>Binghui Li, Zilin Wang, Fengling Chen, Shiyang Zhao, Ruiheng Zheng, Lei Wu</h3>
+  <br> [stat.ML]
+
+  <p>We study optimal learning rate (LR) schedules under the functional scaling law (FSL) framework (Li et al., 2025), which decomposes training dynamics into signal learning and noise forgetting. In power-law kernel regression, these two components are governed by a source exponent $s&gt;0$ and a capacity exponent $q&gt;1$, respectively, with smaller $s$ corresponding to harder tasks. For a fixed training horizon $N$, we characterize the schedules that minimize the final-step loss under a stability constraint and reveal a sharp phase transition. In the easy-task regime $s&gt;1-1/q$, the optimal schedule follows power decay from the beginning of training; in the hard-task regime $s&lt;1-1/q$, it becomes warmup-stable-decay (WSD)-like (Hu et al., 2024), staying at the largest admissible LR for most of training before a final decay. In both regimes, the decay exponent is $2q-1$: task difficulty determines when to decay, while model capacity determines how to decay. Beyond the exact optimum, we study fractional schedules, whose shape is defined over relative training progress. We show that precise tuning of the decay shape is often unnecessary: a broad class of profiles attains the optimal convergence rate, while overly slow terminal decay leads to schedule-induced capacity saturation. Finally, for one-pass SGD in kernel regression, FSL-motivated power-decay schedules achieve optimal last-iterate rates. Experiments support the theoretical predictions and the task-dependent transition between early and delayed decay.</p>
+
+<p><a href="https://arxiv.org/abs/2602.06797">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

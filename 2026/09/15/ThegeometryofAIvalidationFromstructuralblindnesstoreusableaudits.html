@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The geometry of AI validation: From structural blindness to reusable audits</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The geometry of AI validation: From structural blindness to reusable audits" />
+<meta name="author" content="Ricardo Fitas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AI systems increasingly search among candidate answers and deploy the highest-scoring one. Increasing search changes which errors matter, so a precise evaluation at one computation budget can leave another budget unresolved. We connect this information gap to the cost of closing it. For independent best-of-n search, aggregate reliability measurements identify deployment only through the directions they observe; we derive an exact ambiguity frontier when only small search widths are audited. Retaining candidate ranks and truth labels enables a constructive alternative: one audit can estimate reliability across all widths up to N. With known score percentiles, the minimax worst-coordinate mean squared error scales as (1 + log N)/T + N/M, capped at a constant, for expected budgets of T truth labels and M candidate observations. Matching lower bounds allow adaptive label acquisition, establishing that the distinct label and candidate costs are intrinsic to this experiment. An explicit design attains this order; a complementary record-based procedure supplies simultaneous guarantees without a known score distribution. Retrospective mathematical-reasoning and code-generation analyses show why search-dependent validation matters. In held-out CodeRM pools, a shared audit reduces the 95th-percentile maximum error across 100 widths by 58% and 40% relative to uniform labeling. These results turn structural ambiguity into a quantitative prescription for reusable validation." />
+<meta property="og:description" content="AI systems increasingly search among candidate answers and deploy the highest-scoring one. Increasing search changes which errors matter, so a precise evaluation at one computation budget can leave another budget unresolved. We connect this information gap to the cost of closing it. For independent best-of-n search, aggregate reliability measurements identify deployment only through the directions they observe; we derive an exact ambiguity frontier when only small search widths are audited. Retaining candidate ranks and truth labels enables a constructive alternative: one audit can estimate reliability across all widths up to N. With known score percentiles, the minimax worst-coordinate mean squared error scales as (1 + log N)/T + N/M, capped at a constant, for expected budgets of T truth labels and M candidate observations. Matching lower bounds allow adaptive label acquisition, establishing that the distinct label and candidate costs are intrinsic to this experiment. An explicit design attains this order; a complementary record-based procedure supplies simultaneous guarantees without a known score distribution. Retrospective mathematical-reasoning and code-generation analyses show why search-dependent validation matters. In held-out CodeRM pools, a shared audit reduces the 95th-percentile maximum error across 100 widths by 58% and 40% relative to uniform labeling. These results turn structural ambiguity into a quantitative prescription for reusable validation." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/15/ThegeometryofAIvalidationFromstructuralblindnesstoreusableaudits.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/15/ThegeometryofAIvalidationFromstructuralblindnesstoreusableaudits.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The geometry of AI validation: From structural blindness to reusable audits" />
+<script type="application/ld+json">
+{"description":"AI systems increasingly search among candidate answers and deploy the highest-scoring one. Increasing search changes which errors matter, so a precise evaluation at one computation budget can leave another budget unresolved. We connect this information gap to the cost of closing it. For independent best-of-n search, aggregate reliability measurements identify deployment only through the directions they observe; we derive an exact ambiguity frontier when only small search widths are audited. Retaining candidate ranks and truth labels enables a constructive alternative: one audit can estimate reliability across all widths up to N. With known score percentiles, the minimax worst-coordinate mean squared error scales as (1 + log N)/T + N/M, capped at a constant, for expected budgets of T truth labels and M candidate observations. Matching lower bounds allow adaptive label acquisition, establishing that the distinct label and candidate costs are intrinsic to this experiment. An explicit design attains this order; a complementary record-based procedure supplies simultaneous guarantees without a known score distribution. Retrospective mathematical-reasoning and code-generation analyses show why search-dependent validation matters. In held-out CodeRM pools, a shared audit reduces the 95th-percentile maximum error across 100 widths by 58% and 40% relative to uniform labeling. These results turn structural ambiguity into a quantitative prescription for reusable validation.","datePublished":"2026-09-15T00:00:00+00:00","dateModified":"2026-09-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/15/ThegeometryofAIvalidationFromstructuralblindnesstoreusableaudits.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/15/ThegeometryofAIvalidationFromstructuralblindnesstoreusableaudits.html","author":{"@type":"Person","name":"Ricardo Fitas"},"@type":"BlogPosting","headline":"The geometry of AI validation: From structural blindness to reusable audits","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-15 00:00:00 +0000">09-15</time>
+  </p>
+  
+  <h1>The geometry of AI validation: From structural blindness to reusable audits</h1>
+  <br>Ricardo Fitas</h3>
+  <br> [stat.ML,stat.TH]
+
+  <p>AI systems increasingly search among candidate answers and deploy the highest-scoring one. Increasing search changes which errors matter, so a precise evaluation at one computation budget can leave another budget unresolved. We connect this information gap to the cost of closing it. For independent best-of-n search, aggregate reliability measurements identify deployment only through the directions they observe; we derive an exact ambiguity frontier when only small search widths are audited. Retaining candidate ranks and truth labels enables a constructive alternative: one audit can estimate reliability across all widths up to N. With known score percentiles, the minimax worst-coordinate mean squared error scales as (1 + log N)/T + N/M, capped at a constant, for expected budgets of T truth labels and M candidate observations. Matching lower bounds allow adaptive label acquisition, establishing that the distinct label and candidate costs are intrinsic to this experiment. An explicit design attains this order; a complementary record-based procedure supplies simultaneous guarantees without a known score distribution. Retrospective mathematical-reasoning and code-generation analyses show why search-dependent validation matters. In held-out CodeRM pools, a shared audit reduces the 95th-percentile maximum error across 100 widths by 58% and 40% relative to uniform labeling. These results turn structural ambiguity into a quantitative prescription for reusable validation.</p>
+
+<p><a href="https://arxiv.org/abs/2608.21496">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
