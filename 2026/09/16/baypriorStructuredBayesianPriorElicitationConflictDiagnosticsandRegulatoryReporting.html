@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>bayprior: Structured Bayesian Prior Elicitation, Conflict Diagnostics, and Regulatory Reporting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="bayprior: Structured Bayesian Prior Elicitation, Conflict Diagnostics, and Regulatory Reporting" />
+<meta name="author" content="Ndoh Penn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian clinical trials require a well-specified prior distribution, and regulators increasingly expect that specification to be documented, diagnosed for prior-data conflict, and shown to be robust to reasonable alternatives – yet few R tools connect the full workflow of prior construction, validation, and regulatory justification into a single package. We introduce bayprior, an R package and Shiny application that implements structured expert elicitation via quantile matching, moment matching, and the SHELF roulette method across six distribution families; linear and logarithmic expert opinion pooling with Bhattacharyya agreement diagnostics; prior-data conflict assessment using the Box p-value, surprise index, information divergence, Bhattacharyya overlap, and multivariate Mahalanobis distance; hyperparameter sensitivity analysis with tornado and influence heatmap visualisations; and robust, sceptical, and power prior alternatives. A regulatory reporting module generates self-contained HTML, PDF, or Word documents addressing expectations in the FDA’s 2026 draft Bayesian methods guidance and in EMA guidance on incorporating external and historical information. The package is demonstrated on a synthetic oncology Phase II trial. bayprior is available on CRAN and includes a fully modular Shiny application for interactive use." />
+<meta property="og:description" content="Bayesian clinical trials require a well-specified prior distribution, and regulators increasingly expect that specification to be documented, diagnosed for prior-data conflict, and shown to be robust to reasonable alternatives – yet few R tools connect the full workflow of prior construction, validation, and regulatory justification into a single package. We introduce bayprior, an R package and Shiny application that implements structured expert elicitation via quantile matching, moment matching, and the SHELF roulette method across six distribution families; linear and logarithmic expert opinion pooling with Bhattacharyya agreement diagnostics; prior-data conflict assessment using the Box p-value, surprise index, information divergence, Bhattacharyya overlap, and multivariate Mahalanobis distance; hyperparameter sensitivity analysis with tornado and influence heatmap visualisations; and robust, sceptical, and power prior alternatives. A regulatory reporting module generates self-contained HTML, PDF, or Word documents addressing expectations in the FDA’s 2026 draft Bayesian methods guidance and in EMA guidance on incorporating external and historical information. The package is demonstrated on a synthetic oncology Phase II trial. bayprior is available on CRAN and includes a fully modular Shiny application for interactive use." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/16/baypriorStructuredBayesianPriorElicitationConflictDiagnosticsandRegulatoryReporting.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/16/baypriorStructuredBayesianPriorElicitationConflictDiagnosticsandRegulatoryReporting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="bayprior: Structured Bayesian Prior Elicitation, Conflict Diagnostics, and Regulatory Reporting" />
+<script type="application/ld+json">
+{"description":"Bayesian clinical trials require a well-specified prior distribution, and regulators increasingly expect that specification to be documented, diagnosed for prior-data conflict, and shown to be robust to reasonable alternatives – yet few R tools connect the full workflow of prior construction, validation, and regulatory justification into a single package. We introduce bayprior, an R package and Shiny application that implements structured expert elicitation via quantile matching, moment matching, and the SHELF roulette method across six distribution families; linear and logarithmic expert opinion pooling with Bhattacharyya agreement diagnostics; prior-data conflict assessment using the Box p-value, surprise index, information divergence, Bhattacharyya overlap, and multivariate Mahalanobis distance; hyperparameter sensitivity analysis with tornado and influence heatmap visualisations; and robust, sceptical, and power prior alternatives. A regulatory reporting module generates self-contained HTML, PDF, or Word documents addressing expectations in the FDA’s 2026 draft Bayesian methods guidance and in EMA guidance on incorporating external and historical information. The package is demonstrated on a synthetic oncology Phase II trial. bayprior is available on CRAN and includes a fully modular Shiny application for interactive use.","datePublished":"2026-09-16T00:00:00+00:00","dateModified":"2026-09-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/16/baypriorStructuredBayesianPriorElicitationConflictDiagnosticsandRegulatoryReporting.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/16/baypriorStructuredBayesianPriorElicitationConflictDiagnosticsandRegulatoryReporting.html","author":{"@type":"Person","name":"Ndoh Penn"},"@type":"BlogPosting","headline":"bayprior: Structured Bayesian Prior Elicitation, Conflict Diagnostics, and Regulatory Reporting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-16 00:00:00 +0000">09-16</time>
+  </p>
+  
+  <h1>bayprior: Structured Bayesian Prior Elicitation, Conflict Diagnostics, and Regulatory Reporting</h1>
+  <br>Ndoh Penn</h3>
+  <br> [stat.CO,stat.AP,stat.ME]
+
+  <p>Bayesian clinical trials require a well-specified prior distribution, and regulators increasingly expect that specification to be documented, diagnosed for prior-data conflict, and shown to be robust to reasonable alternatives – yet few R tools connect the full workflow of prior construction, validation, and regulatory justification into a single package. We introduce bayprior, an R package and Shiny application that implements structured expert elicitation via quantile matching, moment matching, and the SHELF roulette method across six distribution families; linear and logarithmic expert opinion pooling with Bhattacharyya agreement diagnostics; prior-data conflict assessment using the Box p-value, surprise index, information divergence, Bhattacharyya overlap, and multivariate Mahalanobis distance; hyperparameter sensitivity analysis with tornado and influence heatmap visualisations; and robust, sceptical, and power prior alternatives. A regulatory reporting module generates self-contained HTML, PDF, or Word documents addressing expectations in the FDA’s 2026 draft Bayesian methods guidance and in EMA guidance on incorporating external and historical information. The package is demonstrated on a synthetic oncology Phase II trial. bayprior is available on CRAN and includes a fully modular Shiny application for interactive use.</p>
+
+<p><a href="https://arxiv.org/abs/2609.16410">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
