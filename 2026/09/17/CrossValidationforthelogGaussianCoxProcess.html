@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cross Validation for the log Gaussian Cox Process</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Cross Validation for the log Gaussian Cox Process" />
+<meta name="author" content="Hans Montcho, H{\aa}vard Rue, Finn Lindgren, David Bolin, Elias T Krainski, Daniela Castro-Camilo, Sara Martino" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The log Gaussian Cox Process (LGCP) is one of the most widely used models for the analysis of spatial point patterns. Although Bayesian methods and software for fitting LGCPs are now well established, practical tools for model criticism, predictive assessment, and model comparison remain comparatively underdeveloped. This paper develops a practical Bayesian cross-validation framework for LGCPs while placing it within a broader framework for Bayesian model assessment. Our approach is motivated by the conceptual and computational challenges that arise when defining predictive validation for point processes, including the choice of holdout data, prediction task, scoring rule, and computational strategy. We propose a leave-region-out cross-validation framework in which the fundamental unit of prediction is a bounded spatial region rather than an individual event. Predictive performance is assessed through the logarithmic scoring rule for joint probabilistic forecasts, while computational efficiency is achieved by combining a new likelihood approximation with a Bayesian unlearning strategy and Laplace approximations to obtain leave-region-out predictive distributions without repeated model refitting. We validate the proposed approximations against Monte Carlo estimates obtained via brute-force refitting, demonstrate the methodology on simulated and real spatial point pattern datasets defined on Euclidean domains and networks, and provide implementations in the R-INLA, inlabru, and MetricGraph packages." />
+<meta property="og:description" content="The log Gaussian Cox Process (LGCP) is one of the most widely used models for the analysis of spatial point patterns. Although Bayesian methods and software for fitting LGCPs are now well established, practical tools for model criticism, predictive assessment, and model comparison remain comparatively underdeveloped. This paper develops a practical Bayesian cross-validation framework for LGCPs while placing it within a broader framework for Bayesian model assessment. Our approach is motivated by the conceptual and computational challenges that arise when defining predictive validation for point processes, including the choice of holdout data, prediction task, scoring rule, and computational strategy. We propose a leave-region-out cross-validation framework in which the fundamental unit of prediction is a bounded spatial region rather than an individual event. Predictive performance is assessed through the logarithmic scoring rule for joint probabilistic forecasts, while computational efficiency is achieved by combining a new likelihood approximation with a Bayesian unlearning strategy and Laplace approximations to obtain leave-region-out predictive distributions without repeated model refitting. We validate the proposed approximations against Monte Carlo estimates obtained via brute-force refitting, demonstrate the methodology on simulated and real spatial point pattern datasets defined on Euclidean domains and networks, and provide implementations in the R-INLA, inlabru, and MetricGraph packages." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/17/CrossValidationforthelogGaussianCoxProcess.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/17/CrossValidationforthelogGaussianCoxProcess.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Cross Validation for the log Gaussian Cox Process" />
+<script type="application/ld+json">
+{"description":"The log Gaussian Cox Process (LGCP) is one of the most widely used models for the analysis of spatial point patterns. Although Bayesian methods and software for fitting LGCPs are now well established, practical tools for model criticism, predictive assessment, and model comparison remain comparatively underdeveloped. This paper develops a practical Bayesian cross-validation framework for LGCPs while placing it within a broader framework for Bayesian model assessment. Our approach is motivated by the conceptual and computational challenges that arise when defining predictive validation for point processes, including the choice of holdout data, prediction task, scoring rule, and computational strategy. We propose a leave-region-out cross-validation framework in which the fundamental unit of prediction is a bounded spatial region rather than an individual event. Predictive performance is assessed through the logarithmic scoring rule for joint probabilistic forecasts, while computational efficiency is achieved by combining a new likelihood approximation with a Bayesian unlearning strategy and Laplace approximations to obtain leave-region-out predictive distributions without repeated model refitting. We validate the proposed approximations against Monte Carlo estimates obtained via brute-force refitting, demonstrate the methodology on simulated and real spatial point pattern datasets defined on Euclidean domains and networks, and provide implementations in the R-INLA, inlabru, and MetricGraph packages.","datePublished":"2026-09-17T00:00:00+00:00","dateModified":"2026-09-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/17/CrossValidationforthelogGaussianCoxProcess.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/17/CrossValidationforthelogGaussianCoxProcess.html","author":{"@type":"Person","name":"Hans Montcho, H{\\aa}vard Rue, Finn Lindgren, David Bolin, Elias T Krainski, Daniela Castro-Camilo, Sara Martino"},"@type":"BlogPosting","headline":"Cross Validation for the log Gaussian Cox Process","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-17 00:00:00 +0000">09-17</time>
+  </p>
+  
+  <h1>Cross Validation for the log Gaussian Cox Process</h1>
+  <br>Hans Montcho, H{\aa}vard Rue, Finn Lindgren, David Bolin, Elias T Krainski, Daniela Castro-Camilo, Sara Martino</h3>
+  <br> [stat.ME]
+
+  <p>The log Gaussian Cox Process (LGCP) is one of the most widely used models for the analysis of spatial point patterns. Although Bayesian methods and software for fitting LGCPs are now well established, practical tools for model criticism, predictive assessment, and model comparison remain comparatively underdeveloped. This paper develops a practical Bayesian cross-validation framework for LGCPs while placing it within a broader framework for Bayesian model assessment. Our approach is motivated by the conceptual and computational challenges that arise when defining predictive validation for point processes, including the choice of holdout data, prediction task, scoring rule, and computational strategy. We propose a leave-region-out cross-validation framework in which the fundamental unit of prediction is a bounded spatial region rather than an individual event. Predictive performance is assessed through the logarithmic scoring rule for joint probabilistic forecasts, while computational efficiency is achieved by combining a new likelihood approximation with a Bayesian unlearning strategy and Laplace approximations to obtain leave-region-out predictive distributions without repeated model refitting. We validate the proposed approximations against Monte Carlo estimates obtained via brute-force refitting, demonstrate the methodology on simulated and real spatial point pattern datasets defined on Euclidean domains and networks, and provide implementations in the R-INLA, inlabru, and MetricGraph packages.</p>
+
+<p><a href="https://arxiv.org/abs/2609.17908">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
