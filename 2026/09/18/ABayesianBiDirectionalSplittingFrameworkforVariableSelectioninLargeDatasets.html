@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Bayesian Bi-Directional Splitting Framework for Variable Selection in Large Datasets</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Bayesian Bi-Directional Splitting Framework for Variable Selection in Large Datasets" />
+<meta name="author" content="Aaron Coats, Vinny Davies, Mayetri Gupta" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern tabular datasets are becoming increasingly large, both in the number of samples and covariates, posing significant challenges for Bayesian variable selection due to the resulting computational burden. While there is extensive literature on scaling Bayesian inference to large numbers of observations or high-dimensional covariate spaces, comparatively little work addresses scalable Bayesian variable selection when both dimensions are large simultaneously in a practical setting. This paper presents a novel Bayesian variable selection framework for efficiently analysing data with a large number of both rows and columns. The proposed framework operates via a divide-and-conquer approach, splitting data into batches along both directions and analysing each batch independently in parallel, after which the results are combined together in a two-phase consensus procedure. Experiments demonstrate the computational gains while retaining strong variable selection performance, successfully identifying relevant signals in noisy, high-dimensional settings despite the loss of information induced by data splitting. Practical guidelines are also provided, including recommendations for tuning parameter choices and effective data partitioning strategies, followed by a real application to an H3N2 influenza dataset." />
+<meta property="og:description" content="Modern tabular datasets are becoming increasingly large, both in the number of samples and covariates, posing significant challenges for Bayesian variable selection due to the resulting computational burden. While there is extensive literature on scaling Bayesian inference to large numbers of observations or high-dimensional covariate spaces, comparatively little work addresses scalable Bayesian variable selection when both dimensions are large simultaneously in a practical setting. This paper presents a novel Bayesian variable selection framework for efficiently analysing data with a large number of both rows and columns. The proposed framework operates via a divide-and-conquer approach, splitting data into batches along both directions and analysing each batch independently in parallel, after which the results are combined together in a two-phase consensus procedure. Experiments demonstrate the computational gains while retaining strong variable selection performance, successfully identifying relevant signals in noisy, high-dimensional settings despite the loss of information induced by data splitting. Practical guidelines are also provided, including recommendations for tuning parameter choices and effective data partitioning strategies, followed by a real application to an H3N2 influenza dataset." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/18/ABayesianBiDirectionalSplittingFrameworkforVariableSelectioninLargeDatasets.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/18/ABayesianBiDirectionalSplittingFrameworkforVariableSelectioninLargeDatasets.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Bayesian Bi-Directional Splitting Framework for Variable Selection in Large Datasets" />
+<script type="application/ld+json">
+{"description":"Modern tabular datasets are becoming increasingly large, both in the number of samples and covariates, posing significant challenges for Bayesian variable selection due to the resulting computational burden. While there is extensive literature on scaling Bayesian inference to large numbers of observations or high-dimensional covariate spaces, comparatively little work addresses scalable Bayesian variable selection when both dimensions are large simultaneously in a practical setting. This paper presents a novel Bayesian variable selection framework for efficiently analysing data with a large number of both rows and columns. The proposed framework operates via a divide-and-conquer approach, splitting data into batches along both directions and analysing each batch independently in parallel, after which the results are combined together in a two-phase consensus procedure. Experiments demonstrate the computational gains while retaining strong variable selection performance, successfully identifying relevant signals in noisy, high-dimensional settings despite the loss of information induced by data splitting. Practical guidelines are also provided, including recommendations for tuning parameter choices and effective data partitioning strategies, followed by a real application to an H3N2 influenza dataset.","datePublished":"2026-09-18T00:00:00+00:00","dateModified":"2026-09-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/18/ABayesianBiDirectionalSplittingFrameworkforVariableSelectioninLargeDatasets.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/18/ABayesianBiDirectionalSplittingFrameworkforVariableSelectioninLargeDatasets.html","author":{"@type":"Person","name":"Aaron Coats, Vinny Davies, Mayetri Gupta"},"@type":"BlogPosting","headline":"A Bayesian Bi-Directional Splitting Framework for Variable Selection in Large Datasets","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-18 00:00:00 +0000">09-18</time>
+  </p>
+  
+  <h1>A Bayesian Bi-Directional Splitting Framework for Variable Selection in Large Datasets</h1>
+  <br>Aaron Coats, Vinny Davies, Mayetri Gupta</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Modern tabular datasets are becoming increasingly large, both in the number of samples and covariates, posing significant challenges for Bayesian variable selection due to the resulting computational burden. While there is extensive literature on scaling Bayesian inference to large numbers of observations or high-dimensional covariate spaces, comparatively little work addresses scalable Bayesian variable selection when both dimensions are large simultaneously in a practical setting. This paper presents a novel Bayesian variable selection framework for efficiently analysing data with a large number of both rows and columns. The proposed framework operates via a divide-and-conquer approach, splitting data into batches along both directions and analysing each batch independently in parallel, after which the results are combined together in a two-phase consensus procedure. Experiments demonstrate the computational gains while retaining strong variable selection performance, successfully identifying relevant signals in noisy, high-dimensional settings despite the loss of information induced by data splitting. Practical guidelines are also provided, including recommendations for tuning parameter choices and effective data partitioning strategies, followed by a real application to an H3N2 influenza dataset.</p>
+
+<p><a href="https://arxiv.org/abs/2609.20000">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
