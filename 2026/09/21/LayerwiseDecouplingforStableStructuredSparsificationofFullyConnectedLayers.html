@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Layerwise Decoupling for Stable Structured Sparsification of Fully Connected Layers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Layerwise Decoupling for Stable Structured Sparsification of Fully Connected Layers" />
+<meta name="author" content="Charles Kulick, Armenak Petrosyan, Sui Tang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We propose a decoupled, layerwise method for structurally sparsifying the fully connected layers of pretrained neural networks. Rather than penalizing all layers jointly, our approach extracts shallow two-layer subnetworks, normalizes the inner weights, and applies a structured group penalty to the outer weight matrix of each block, processing layers sequentially to prune neurons and reduce the width of each layer. We prove that the constrained decoupled objective is equivalent at optimality to a specific joint penalty on the inner and outer weights, for any positively homogeneous activation, and thus admits a clean projected and proximal formulation. Our central finding is that this decoupled reformulation is more robust than coupled methods. In numerical experiments it provides a wider usable range of the regularization strength and a lower rate of catastrophic over-pruning than the tested joint baseline while maintaining comparable accuracy. We establish these properties in controlled classification and sparse-recovery studies, and examine their scope in a high-dimensional PINN stress test and in the feed-forward layers of OPT-1.3B." />
+<meta property="og:description" content="We propose a decoupled, layerwise method for structurally sparsifying the fully connected layers of pretrained neural networks. Rather than penalizing all layers jointly, our approach extracts shallow two-layer subnetworks, normalizes the inner weights, and applies a structured group penalty to the outer weight matrix of each block, processing layers sequentially to prune neurons and reduce the width of each layer. We prove that the constrained decoupled objective is equivalent at optimality to a specific joint penalty on the inner and outer weights, for any positively homogeneous activation, and thus admits a clean projected and proximal formulation. Our central finding is that this decoupled reformulation is more robust than coupled methods. In numerical experiments it provides a wider usable range of the regularization strength and a lower rate of catastrophic over-pruning than the tested joint baseline while maintaining comparable accuracy. We establish these properties in controlled classification and sparse-recovery studies, and examine their scope in a high-dimensional PINN stress test and in the feed-forward layers of OPT-1.3B." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/21/LayerwiseDecouplingforStableStructuredSparsificationofFullyConnectedLayers.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/21/LayerwiseDecouplingforStableStructuredSparsificationofFullyConnectedLayers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Layerwise Decoupling for Stable Structured Sparsification of Fully Connected Layers" />
+<script type="application/ld+json">
+{"description":"We propose a decoupled, layerwise method for structurally sparsifying the fully connected layers of pretrained neural networks. Rather than penalizing all layers jointly, our approach extracts shallow two-layer subnetworks, normalizes the inner weights, and applies a structured group penalty to the outer weight matrix of each block, processing layers sequentially to prune neurons and reduce the width of each layer. We prove that the constrained decoupled objective is equivalent at optimality to a specific joint penalty on the inner and outer weights, for any positively homogeneous activation, and thus admits a clean projected and proximal formulation. Our central finding is that this decoupled reformulation is more robust than coupled methods. In numerical experiments it provides a wider usable range of the regularization strength and a lower rate of catastrophic over-pruning than the tested joint baseline while maintaining comparable accuracy. We establish these properties in controlled classification and sparse-recovery studies, and examine their scope in a high-dimensional PINN stress test and in the feed-forward layers of OPT-1.3B.","datePublished":"2026-09-21T00:00:00+00:00","dateModified":"2026-09-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/21/LayerwiseDecouplingforStableStructuredSparsificationofFullyConnectedLayers.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/21/LayerwiseDecouplingforStableStructuredSparsificationofFullyConnectedLayers.html","author":{"@type":"Person","name":"Charles Kulick, Armenak Petrosyan, Sui Tang"},"@type":"BlogPosting","headline":"Layerwise Decoupling for Stable Structured Sparsification of Fully Connected Layers","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-21 00:00:00 +0000">09-21</time>
+  </p>
+  
+  <h1>Layerwise Decoupling for Stable Structured Sparsification of Fully Connected Layers</h1>
+  <br>Charles Kulick, Armenak Petrosyan, Sui Tang</h3>
+  <br> [stat.ML]
+
+  <p>We propose a decoupled, layerwise method for structurally sparsifying the fully connected layers of pretrained neural networks. Rather than penalizing all layers jointly, our approach extracts shallow two-layer subnetworks, normalizes the inner weights, and applies a structured group penalty to the outer weight matrix of each block, processing layers sequentially to prune neurons and reduce the width of each layer. We prove that the constrained decoupled objective is equivalent at optimality to a specific joint penalty on the inner and outer weights, for any positively homogeneous activation, and thus admits a clean projected and proximal formulation. Our central finding is that this decoupled reformulation is more robust than coupled methods. In numerical experiments it provides a wider usable range of the regularization strength and a lower rate of catastrophic over-pruning than the tested joint baseline while maintaining comparable accuracy. We establish these properties in controlled classification and sparse-recovery studies, and examine their scope in a high-dimensional PINN stress test and in the feed-forward layers of OPT-1.3B.</p>
+
+<p><a href="https://arxiv.org/abs/2609.21126">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
