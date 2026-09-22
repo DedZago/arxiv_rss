@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Distributional Optimisation Perspective on Combining Models in Deep Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Distributional Optimisation Perspective on Combining Models in Deep Learning" />
+<meta name="author" content="Congye Wang, Yan Lin, Zheyang Shen, Matthew A. Fisher, Chris. J. Oates" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Combining predictions from different models can improve performance at machine learning tasks, but the training of the individual models and the rule used to combine them are typically chosen separately, and by ad hoc means. Recent advances in distributional optimisation (i.e. where the optimisation occurs over the set of probability distributions) offer an opportunity for principled joint training, viewing the collection of models as a discrete distribution whose support points are to be optimised, but the potential of these methods is not well-understood. In this paper we (1) cast two standard combination strategies - ensembles and low-rank adapter averaging - as entropy-regularised distributional optimisation, observing that the resulting objective is convex in the ensemble case but not in the adapter-averaging case, so that existing convergence guarantees for mean field Langevin dynamics transfer only to the former; (2) assess existing and novel algorithms for this task, including a functional variant of variational gradient descent; and (3) report an empirical study spanning synthetic classification tasks and fine-tuning of large language models on a commonsense reasoning benchmark." />
+<meta property="og:description" content="Combining predictions from different models can improve performance at machine learning tasks, but the training of the individual models and the rule used to combine them are typically chosen separately, and by ad hoc means. Recent advances in distributional optimisation (i.e. where the optimisation occurs over the set of probability distributions) offer an opportunity for principled joint training, viewing the collection of models as a discrete distribution whose support points are to be optimised, but the potential of these methods is not well-understood. In this paper we (1) cast two standard combination strategies - ensembles and low-rank adapter averaging - as entropy-regularised distributional optimisation, observing that the resulting objective is convex in the ensemble case but not in the adapter-averaging case, so that existing convergence guarantees for mean field Langevin dynamics transfer only to the former; (2) assess existing and novel algorithms for this task, including a functional variant of variational gradient descent; and (3) report an empirical study spanning synthetic classification tasks and fine-tuning of large language models on a commonsense reasoning benchmark." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/22/ADistributionalOptimisationPerspectiveonCombiningModelsinDeepLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/22/ADistributionalOptimisationPerspectiveonCombiningModelsinDeepLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Distributional Optimisation Perspective on Combining Models in Deep Learning" />
+<script type="application/ld+json">
+{"description":"Combining predictions from different models can improve performance at machine learning tasks, but the training of the individual models and the rule used to combine them are typically chosen separately, and by ad hoc means. Recent advances in distributional optimisation (i.e. where the optimisation occurs over the set of probability distributions) offer an opportunity for principled joint training, viewing the collection of models as a discrete distribution whose support points are to be optimised, but the potential of these methods is not well-understood. In this paper we (1) cast two standard combination strategies - ensembles and low-rank adapter averaging - as entropy-regularised distributional optimisation, observing that the resulting objective is convex in the ensemble case but not in the adapter-averaging case, so that existing convergence guarantees for mean field Langevin dynamics transfer only to the former; (2) assess existing and novel algorithms for this task, including a functional variant of variational gradient descent; and (3) report an empirical study spanning synthetic classification tasks and fine-tuning of large language models on a commonsense reasoning benchmark.","datePublished":"2026-09-22T00:00:00+00:00","dateModified":"2026-09-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/22/ADistributionalOptimisationPerspectiveonCombiningModelsinDeepLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/22/ADistributionalOptimisationPerspectiveonCombiningModelsinDeepLearning.html","author":{"@type":"Person","name":"Congye Wang, Yan Lin, Zheyang Shen, Matthew A. Fisher, Chris. J. Oates"},"@type":"BlogPosting","headline":"A Distributional Optimisation Perspective on Combining Models in Deep Learning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-22 00:00:00 +0000">09-22</time>
+  </p>
+  
+  <h1>A Distributional Optimisation Perspective on Combining Models in Deep Learning</h1>
+  <br>Congye Wang, Yan Lin, Zheyang Shen, Matthew A. Fisher, Chris. J. Oates</h3>
+  <br> [stat.ML]
+
+  <p>Combining predictions from different models can improve performance at machine learning tasks, but the training of the individual models and the rule used to combine them are typically chosen separately, and by ad hoc means. Recent advances in distributional optimisation (i.e. where the optimisation occurs over the set of probability distributions) offer an opportunity for principled joint training, viewing the collection of models as a discrete distribution whose support points are to be optimised, but the potential of these methods is not well-understood. In this paper we (1) cast two standard combination strategies - ensembles and low-rank adapter averaging - as entropy-regularised distributional optimisation, observing that the resulting objective is convex in the ensemble case but not in the adapter-averaging case, so that existing convergence guarantees for mean field Langevin dynamics transfer only to the former; (2) assess existing and novel algorithms for this task, including a functional variant of variational gradient descent; and (3) report an empirical study spanning synthetic classification tasks and fine-tuning of large language models on a commonsense reasoning benchmark.</p>
+
+<p><a href="https://arxiv.org/abs/2609.24328">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

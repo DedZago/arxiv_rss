@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>TEMPER: Temporal Encoder-Masked Probabilistic Ensemble Regressor for Time-Series Forecasting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="TEMPER: Temporal Encoder-Masked Probabilistic Ensemble Regressor for Time-Series Forecasting" />
+<meta name="author" content="Giancarlo Vercellino" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Probabilistic forecasting requires accurate central predictions and calibrated uncertainty estimates. This paper presents TEMPER, the Temporal Encoder-Masked Probabilistic Ensemble Regressor, a univariate time-series forecasting algorithm that combines a temporal autoencoder, a differentiable masked neural decision forest, continuous ranked probability score (CRPS) training, and Gaussian-mixture post-processing. The R implementation is built on torch for R and returns horizon-wise density, distribution, quantile, and sampler functions. We evaluate TEMPER on three deterministic synthetic level series with trend, periodic, regime-switching, nonlinear-threshold, and heteroskedastic components. Across 96 rolling-origin forecasts at horizons t + 1, t + 5, t + 20, and t + 60, TEMPER obtains 2.824% mean CRPS normalized by origin level, 3.635% median absolute error, and 68.8% empirical 90% interval coverage after training with a 300-epoch cap and early-stopping patience of 100. A naive persistence bootstrap has the best aggregate CRPS, 2.763%, while TEMPER has the best median absolute error and the best CRPS at t+1 and t+5. The ablation study uses matched series-origin-horizon cells, horizon-wise CRPS deltas, endpoint sensitivity summaries, and a calibration-specific interval study. Relaxing the learned mask improves average CRPS by 0.472 percentage points on the ablation subset, mainly through long-horizon gains. A twofold interval inflation improves held-out coverage from 54.2% to 91.7% and gives the best 90% interval score among tested calibration rules. The results identify calibration, horizon-specific tuning, and component selection as the central research priorities." />
+<meta property="og:description" content="Probabilistic forecasting requires accurate central predictions and calibrated uncertainty estimates. This paper presents TEMPER, the Temporal Encoder-Masked Probabilistic Ensemble Regressor, a univariate time-series forecasting algorithm that combines a temporal autoencoder, a differentiable masked neural decision forest, continuous ranked probability score (CRPS) training, and Gaussian-mixture post-processing. The R implementation is built on torch for R and returns horizon-wise density, distribution, quantile, and sampler functions. We evaluate TEMPER on three deterministic synthetic level series with trend, periodic, regime-switching, nonlinear-threshold, and heteroskedastic components. Across 96 rolling-origin forecasts at horizons t + 1, t + 5, t + 20, and t + 60, TEMPER obtains 2.824% mean CRPS normalized by origin level, 3.635% median absolute error, and 68.8% empirical 90% interval coverage after training with a 300-epoch cap and early-stopping patience of 100. A naive persistence bootstrap has the best aggregate CRPS, 2.763%, while TEMPER has the best median absolute error and the best CRPS at t+1 and t+5. The ablation study uses matched series-origin-horizon cells, horizon-wise CRPS deltas, endpoint sensitivity summaries, and a calibration-specific interval study. Relaxing the learned mask improves average CRPS by 0.472 percentage points on the ablation subset, mainly through long-horizon gains. A twofold interval inflation improves held-out coverage from 54.2% to 91.7% and gives the best 90% interval score among tested calibration rules. The results identify calibration, horizon-specific tuning, and component selection as the central research priorities." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/22/TEMPERTemporalEncoderMaskedProbabilisticEnsembleRegressorforTimeSeriesForecasting.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/22/TEMPERTemporalEncoderMaskedProbabilisticEnsembleRegressorforTimeSeriesForecasting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TEMPER: Temporal Encoder-Masked Probabilistic Ensemble Regressor for Time-Series Forecasting" />
+<script type="application/ld+json">
+{"description":"Probabilistic forecasting requires accurate central predictions and calibrated uncertainty estimates. This paper presents TEMPER, the Temporal Encoder-Masked Probabilistic Ensemble Regressor, a univariate time-series forecasting algorithm that combines a temporal autoencoder, a differentiable masked neural decision forest, continuous ranked probability score (CRPS) training, and Gaussian-mixture post-processing. The R implementation is built on torch for R and returns horizon-wise density, distribution, quantile, and sampler functions. We evaluate TEMPER on three deterministic synthetic level series with trend, periodic, regime-switching, nonlinear-threshold, and heteroskedastic components. Across 96 rolling-origin forecasts at horizons t + 1, t + 5, t + 20, and t + 60, TEMPER obtains 2.824% mean CRPS normalized by origin level, 3.635% median absolute error, and 68.8% empirical 90% interval coverage after training with a 300-epoch cap and early-stopping patience of 100. A naive persistence bootstrap has the best aggregate CRPS, 2.763%, while TEMPER has the best median absolute error and the best CRPS at t+1 and t+5. The ablation study uses matched series-origin-horizon cells, horizon-wise CRPS deltas, endpoint sensitivity summaries, and a calibration-specific interval study. Relaxing the learned mask improves average CRPS by 0.472 percentage points on the ablation subset, mainly through long-horizon gains. A twofold interval inflation improves held-out coverage from 54.2% to 91.7% and gives the best 90% interval score among tested calibration rules. The results identify calibration, horizon-specific tuning, and component selection as the central research priorities.","datePublished":"2026-09-22T00:00:00+00:00","dateModified":"2026-09-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/22/TEMPERTemporalEncoderMaskedProbabilisticEnsembleRegressorforTimeSeriesForecasting.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/22/TEMPERTemporalEncoderMaskedProbabilisticEnsembleRegressorforTimeSeriesForecasting.html","author":{"@type":"Person","name":"Giancarlo Vercellino"},"@type":"BlogPosting","headline":"TEMPER: Temporal Encoder-Masked Probabilistic Ensemble Regressor for Time-Series Forecasting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-22 00:00:00 +0000">09-22</time>
+  </p>
+  
+  <h1>TEMPER: Temporal Encoder-Masked Probabilistic Ensemble Regressor for Time-Series Forecasting</h1>
+  <br>Giancarlo Vercellino</h3>
+  <br> [stat.ML]
+
+  <p>Probabilistic forecasting requires accurate central predictions and calibrated uncertainty estimates. This paper presents TEMPER, the Temporal Encoder-Masked Probabilistic Ensemble Regressor, a univariate time-series forecasting algorithm that combines a temporal autoencoder, a differentiable masked neural decision forest, continuous ranked probability score (CRPS) training, and Gaussian-mixture post-processing. The R implementation is built on torch for R and returns horizon-wise density, distribution, quantile, and sampler functions. We evaluate TEMPER on three deterministic synthetic level series with trend, periodic, regime-switching, nonlinear-threshold, and heteroskedastic components. Across 96 rolling-origin forecasts at horizons t + 1, t + 5, t + 20, and t + 60, TEMPER obtains 2.824% mean CRPS normalized by origin level, 3.635% median absolute error, and 68.8% empirical 90% interval coverage after training with a 300-epoch cap and early-stopping patience of 100. A naive persistence bootstrap has the best aggregate CRPS, 2.763%, while TEMPER has the best median absolute error and the best CRPS at t+1 and t+5. The ablation study uses matched series-origin-horizon cells, horizon-wise CRPS deltas, endpoint sensitivity summaries, and a calibration-specific interval study. Relaxing the learned mask improves average CRPS by 0.472 percentage points on the ablation subset, mainly through long-horizon gains. A twofold interval inflation improves held-out coverage from 54.2% to 91.7% and gives the best 90% interval score among tested calibration rules. The results identify calibration, horizon-specific tuning, and component selection as the central research priorities.</p>
+
+<p><a href="https://arxiv.org/abs/2609.23701">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

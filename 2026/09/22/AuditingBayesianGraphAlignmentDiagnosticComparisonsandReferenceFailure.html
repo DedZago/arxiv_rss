@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Auditing Bayesian Graph Alignment: Diagnostic Comparisons and Reference Failure</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Auditing Bayesian Graph Alignment: Diagnostic Comparisons and Reference Failure" />
+<meta name="author" content="Melika Gorgi, Kourosh Mirsohi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian graph alignment estimates correspondence probabilities, but convergence of an alignment-score trace need not imply accurate correspondence marginals. We audit this gap on 240 new exact graph pairs from four source families, 240 larger pairs with 20-100 vertices, and a separate 60-case exact implementation check. Under an explicit edge-flip likelihood, we compare three samplers and score, marginal, indicator, categorical, and classifier-based diagnostics. Marginal disagreement improves error discrimination over score R-hat for the exact informed sampler, but its improvement for vanilla local sampling is uncertain. Assignment-based R* and short indicator panels are competitive; no diagnostic dominates across samplers and endpoints. At larger sizes, diagnostics predict subsequent marginal changes, not posterior error, and classification performance depends on the drift threshold. Disjoint-window and held-out-chain checks attenuate but preserve positive associations. Only 22 of 240 original reference sets pass an agreement screen. On forty failure-selected cases, eightfold SMC particle escalation does not resolve disagreement, whereas additional rejuvenation helps. Longer informed runs remain unstable. An elementary feasible-alignment bound demonstrates severely unrepresentative SMC and informed-chain scores in concentrated 100-vertex cases, independently of approximate reference consensus. We also exhibit common-start chains with near-zero disagreement despite exact marginal error near .967. These results support assignment-sensitive auditing while identifying limits of finite budgets, diagnostic rankings, and reference agreement as evidence of accuracy." />
+<meta property="og:description" content="Bayesian graph alignment estimates correspondence probabilities, but convergence of an alignment-score trace need not imply accurate correspondence marginals. We audit this gap on 240 new exact graph pairs from four source families, 240 larger pairs with 20-100 vertices, and a separate 60-case exact implementation check. Under an explicit edge-flip likelihood, we compare three samplers and score, marginal, indicator, categorical, and classifier-based diagnostics. Marginal disagreement improves error discrimination over score R-hat for the exact informed sampler, but its improvement for vanilla local sampling is uncertain. Assignment-based R* and short indicator panels are competitive; no diagnostic dominates across samplers and endpoints. At larger sizes, diagnostics predict subsequent marginal changes, not posterior error, and classification performance depends on the drift threshold. Disjoint-window and held-out-chain checks attenuate but preserve positive associations. Only 22 of 240 original reference sets pass an agreement screen. On forty failure-selected cases, eightfold SMC particle escalation does not resolve disagreement, whereas additional rejuvenation helps. Longer informed runs remain unstable. An elementary feasible-alignment bound demonstrates severely unrepresentative SMC and informed-chain scores in concentrated 100-vertex cases, independently of approximate reference consensus. We also exhibit common-start chains with near-zero disagreement despite exact marginal error near .967. These results support assignment-sensitive auditing while identifying limits of finite budgets, diagnostic rankings, and reference agreement as evidence of accuracy." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/22/AuditingBayesianGraphAlignmentDiagnosticComparisonsandReferenceFailure.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/22/AuditingBayesianGraphAlignmentDiagnosticComparisonsandReferenceFailure.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Auditing Bayesian Graph Alignment: Diagnostic Comparisons and Reference Failure" />
+<script type="application/ld+json">
+{"description":"Bayesian graph alignment estimates correspondence probabilities, but convergence of an alignment-score trace need not imply accurate correspondence marginals. We audit this gap on 240 new exact graph pairs from four source families, 240 larger pairs with 20-100 vertices, and a separate 60-case exact implementation check. Under an explicit edge-flip likelihood, we compare three samplers and score, marginal, indicator, categorical, and classifier-based diagnostics. Marginal disagreement improves error discrimination over score R-hat for the exact informed sampler, but its improvement for vanilla local sampling is uncertain. Assignment-based R* and short indicator panels are competitive; no diagnostic dominates across samplers and endpoints. At larger sizes, diagnostics predict subsequent marginal changes, not posterior error, and classification performance depends on the drift threshold. Disjoint-window and held-out-chain checks attenuate but preserve positive associations. Only 22 of 240 original reference sets pass an agreement screen. On forty failure-selected cases, eightfold SMC particle escalation does not resolve disagreement, whereas additional rejuvenation helps. Longer informed runs remain unstable. An elementary feasible-alignment bound demonstrates severely unrepresentative SMC and informed-chain scores in concentrated 100-vertex cases, independently of approximate reference consensus. We also exhibit common-start chains with near-zero disagreement despite exact marginal error near .967. These results support assignment-sensitive auditing while identifying limits of finite budgets, diagnostic rankings, and reference agreement as evidence of accuracy.","datePublished":"2026-09-22T00:00:00+00:00","dateModified":"2026-09-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/22/AuditingBayesianGraphAlignmentDiagnosticComparisonsandReferenceFailure.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/22/AuditingBayesianGraphAlignmentDiagnosticComparisonsandReferenceFailure.html","author":{"@type":"Person","name":"Melika Gorgi, Kourosh Mirsohi"},"@type":"BlogPosting","headline":"Auditing Bayesian Graph Alignment: Diagnostic Comparisons and Reference Failure","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-22 00:00:00 +0000">09-22</time>
+  </p>
+  
+  <h1>Auditing Bayesian Graph Alignment: Diagnostic Comparisons and Reference Failure</h1>
+  <br>Melika Gorgi, Kourosh Mirsohi</h3>
+  <br> [stat.AP,stat.CO,stat.ME]
+
+  <p>Bayesian graph alignment estimates correspondence probabilities, but convergence of an alignment-score trace need not imply accurate correspondence marginals. We audit this gap on 240 new exact graph pairs from four source families, 240 larger pairs with 20-100 vertices, and a separate 60-case exact implementation check. Under an explicit edge-flip likelihood, we compare three samplers and score, marginal, indicator, categorical, and classifier-based diagnostics. Marginal disagreement improves error discrimination over score R-hat for the exact informed sampler, but its improvement for vanilla local sampling is uncertain. Assignment-based R* and short indicator panels are competitive; no diagnostic dominates across samplers and endpoints. At larger sizes, diagnostics predict subsequent marginal changes, not posterior error, and classification performance depends on the drift threshold. Disjoint-window and held-out-chain checks attenuate but preserve positive associations. Only 22 of 240 original reference sets pass an agreement screen. On forty failure-selected cases, eightfold SMC particle escalation does not resolve disagreement, whereas additional rejuvenation helps. Longer informed runs remain unstable. An elementary feasible-alignment bound demonstrates severely unrepresentative SMC and informed-chain scores in concentrated 100-vertex cases, independently of approximate reference consensus. We also exhibit common-start chains with near-zero disagreement despite exact marginal error near .967. These results support assignment-sensitive auditing while identifying limits of finite budgets, diagnostic rankings, and reference agreement as evidence of accuracy.</p>
+
+<p><a href="https://arxiv.org/abs/2609.23232">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
