@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Practical Recipe for Semi-Supervised Federated ASR: Online Pseudo-Labels with Server Update Stabilization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Practical Recipe for Semi-Supervised Federated ASR: Online Pseudo-Labels with Server Update Stabilization" />
+<meta name="author" content="Wonho Bae, Zakaria Aldeneh, Martin Pelikan, Jan "Honza" Silovsky, Tatiana Likhomanenko, Sheikh Shams Azam" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Semi-supervised federated learning (SSFL) trains models on clients’ unlabeled data using a teacher to generate pseudo-labels, with a small labeled seed dataset on the server. Automatic Speech Recognition (ASR) is particularly fragile here: pseudo-label errors compound across the output sequence and across training rounds into divergence, leaving a large gap to fully-supervised FL. We show that closing this gap turns on two coupled design axes – the teacher (which model generates the pseudo-labels) and the anchor (the server-side updates on labeled data that stabilize training). On the teacher axis, a per-client online teacher (each client’s own evolving model) diverges on its own, but once stabilized it matches or beats the broadcast global teacher (one server model, fixed within a round) – decisively in-domain and competitively under domain shift. As the seed grows stronger and the online teacher’s advantage narrows, a transitioning teacher (global $\rightarrow$ online at round $r$) matches or beats both. On the anchor axis, the server must keep training on labeled data between rounds – otherwise the online teacher drifts – and this interleaving, more than the seed model, governs convergence. The two axes are inseparable: aggressive teacher choices pay off only once the anchor stabilizes training, which is highly sensitive to data augmentation and batch size – the settings that govern how much input and gradient noise the server injects. How much stabilization is needed is domain-dependent, governed by the dispersion of the seed data and its overlap with client data. These findings yield guidelines for SSFL in ASR training, improving over the strongest prior method on 9 of 11 pairs, by $20.8\%$ on average in-domain and $10.0\%$ cross-domain, narrowing the gap to fully-supervised FL." />
+<meta property="og:description" content="Semi-supervised federated learning (SSFL) trains models on clients’ unlabeled data using a teacher to generate pseudo-labels, with a small labeled seed dataset on the server. Automatic Speech Recognition (ASR) is particularly fragile here: pseudo-label errors compound across the output sequence and across training rounds into divergence, leaving a large gap to fully-supervised FL. We show that closing this gap turns on two coupled design axes – the teacher (which model generates the pseudo-labels) and the anchor (the server-side updates on labeled data that stabilize training). On the teacher axis, a per-client online teacher (each client’s own evolving model) diverges on its own, but once stabilized it matches or beats the broadcast global teacher (one server model, fixed within a round) – decisively in-domain and competitively under domain shift. As the seed grows stronger and the online teacher’s advantage narrows, a transitioning teacher (global $\rightarrow$ online at round $r$) matches or beats both. On the anchor axis, the server must keep training on labeled data between rounds – otherwise the online teacher drifts – and this interleaving, more than the seed model, governs convergence. The two axes are inseparable: aggressive teacher choices pay off only once the anchor stabilizes training, which is highly sensitive to data augmentation and batch size – the settings that govern how much input and gradient noise the server injects. How much stabilization is needed is domain-dependent, governed by the dispersion of the seed data and its overlap with client data. These findings yield guidelines for SSFL in ASR training, improving over the strongest prior method on 9 of 11 pairs, by $20.8\%$ on average in-domain and $10.0\%$ cross-domain, narrowing the gap to fully-supervised FL." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/24/APracticalRecipeforSemiSupervisedFederatedASROnlinePseudoLabelswithServerUpdateStabilization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/24/APracticalRecipeforSemiSupervisedFederatedASROnlinePseudoLabelswithServerUpdateStabilization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Practical Recipe for Semi-Supervised Federated ASR: Online Pseudo-Labels with Server Update Stabilization" />
+<script type="application/ld+json">
+{"description":"Semi-supervised federated learning (SSFL) trains models on clients’ unlabeled data using a teacher to generate pseudo-labels, with a small labeled seed dataset on the server. Automatic Speech Recognition (ASR) is particularly fragile here: pseudo-label errors compound across the output sequence and across training rounds into divergence, leaving a large gap to fully-supervised FL. We show that closing this gap turns on two coupled design axes – the teacher (which model generates the pseudo-labels) and the anchor (the server-side updates on labeled data that stabilize training). On the teacher axis, a per-client online teacher (each client’s own evolving model) diverges on its own, but once stabilized it matches or beats the broadcast global teacher (one server model, fixed within a round) – decisively in-domain and competitively under domain shift. As the seed grows stronger and the online teacher’s advantage narrows, a transitioning teacher (global $\\rightarrow$ online at round $r$) matches or beats both. On the anchor axis, the server must keep training on labeled data between rounds – otherwise the online teacher drifts – and this interleaving, more than the seed model, governs convergence. The two axes are inseparable: aggressive teacher choices pay off only once the anchor stabilizes training, which is highly sensitive to data augmentation and batch size – the settings that govern how much input and gradient noise the server injects. How much stabilization is needed is domain-dependent, governed by the dispersion of the seed data and its overlap with client data. These findings yield guidelines for SSFL in ASR training, improving over the strongest prior method on 9 of 11 pairs, by $20.8\\%$ on average in-domain and $10.0\\%$ cross-domain, narrowing the gap to fully-supervised FL.","datePublished":"2026-09-24T00:00:00+00:00","dateModified":"2026-09-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/24/APracticalRecipeforSemiSupervisedFederatedASROnlinePseudoLabelswithServerUpdateStabilization.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/24/APracticalRecipeforSemiSupervisedFederatedASROnlinePseudoLabelswithServerUpdateStabilization.html","author":{"@type":"Person","name":"Wonho Bae, Zakaria Aldeneh, Martin Pelikan, Jan \"Honza\" Silovsky, Tatiana Likhomanenko, Sheikh Shams Azam"},"@type":"BlogPosting","headline":"A Practical Recipe for Semi-Supervised Federated ASR: Online Pseudo-Labels with Server Update Stabilization","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-24 00:00:00 +0000">09-24</time>
+  </p>
+  
+  <h1>A Practical Recipe for Semi-Supervised Federated ASR: Online Pseudo-Labels with Server Update Stabilization</h1>
+  <br>Wonho Bae, Zakaria Aldeneh, Martin Pelikan, Jan "Honza" Silovsky, Tatiana Likhomanenko, Sheikh Shams Azam</h3>
+  <br> [stat.ML]
+
+  <p>Semi-supervised federated learning (SSFL) trains models on clients’ unlabeled data using a teacher to generate pseudo-labels, with a small labeled seed dataset on the server. Automatic Speech Recognition (ASR) is particularly fragile here: pseudo-label errors compound across the output sequence and across training rounds into divergence, leaving a large gap to fully-supervised FL. We show that closing this gap turns on two coupled design axes – the teacher (which model generates the pseudo-labels) and the anchor (the server-side updates on labeled data that stabilize training). On the teacher axis, a per-client online teacher (each client’s own evolving model) diverges on its own, but once stabilized it matches or beats the broadcast global teacher (one server model, fixed within a round) – decisively in-domain and competitively under domain shift. As the seed grows stronger and the online teacher’s advantage narrows, a transitioning teacher (global $\rightarrow$ online at round $r$) matches or beats both. On the anchor axis, the server must keep training on labeled data between rounds – otherwise the online teacher drifts – and this interleaving, more than the seed model, governs convergence. The two axes are inseparable: aggressive teacher choices pay off only once the anchor stabilizes training, which is highly sensitive to data augmentation and batch size – the settings that govern how much input and gradient noise the server injects. How much stabilization is needed is domain-dependent, governed by the dispersion of the seed data and its overlap with client data. These findings yield guidelines for SSFL in ASR training, improving over the strongest prior method on 9 of 11 pairs, by $20.8\%$ on average in-domain and $10.0\%$ cross-domain, narrowing the gap to fully-supervised FL.</p>
+
+<p><a href="https://arxiv.org/abs/2609.25471">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
