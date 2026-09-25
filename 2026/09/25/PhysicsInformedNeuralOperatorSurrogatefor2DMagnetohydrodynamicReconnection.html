@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Physics-Informed Neural Operator Surrogate for 2D Magnetohydrodynamic Reconnection</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Physics-Informed Neural Operator Surrogate for 2D Magnetohydrodynamic Reconnection" />
+<meta name="author" content="Kushaal Kumar Pothula, Arunav Kumar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Direct numerical simulation of magnetic reconnection is limited by the scale separation of resistive magnetohydrodynamics. At large Lundquist numbers $S$ the current layer thins as $S^{-1/2}$, forcing fine grids and short time steps that make parameter scans prohibitively expensive. Deep learning neural operators offer an alternative by learning the map between function spaces rather than individual solutions, so that a single trained model returns the state for any parameter and time at inference cost. We have developed a Fourier Neural Operator (FNO) based Physics-Informed Neural Operator (PINO) surrogate for two-dimensional compressible, viscous, resistive reconnection in a wall bounded domain. We condition on the initial state, the Lundquist number, and a continuous query time. Predicting the magnetic flux function makes $\grad!\cdot!\bB=0$ exact, direct time queries remove autoregressive error accumulation, and parity-aware spectral differentiation matches the wall treatment of the reference solver. Trained across $10^{3}\le S\le2\times10^{5}$ with two values withheld, the surrogate recovers density, pressure, and guide field to better than $0.2\%$, velocity to $3.2$ to $3.9\%$, the flux function to $1.0\%$, and the spectral current density to $7.5\%$. It resolves the thin, narrow current sheet, Alfv&#39;enic jets, and spectral resolution beyond mode cutoff. Our surrogate reproduces the layer-averaged reconnection rate to within $3\%$ through $S=1.1\times10^{4}$, recovering a reconnection time exponent of $0.497$ consistent with Sweet-Parker scaling. When queried zero-shot on the $2049^{2}$ solver mesh, a full trajectory run is on the order of seconds on one GPU against several hours for the DNS, over two orders of magnitude faster, establishing learned operators as a practical route to surveying reconnection across parameter space." />
+<meta property="og:description" content="Direct numerical simulation of magnetic reconnection is limited by the scale separation of resistive magnetohydrodynamics. At large Lundquist numbers $S$ the current layer thins as $S^{-1/2}$, forcing fine grids and short time steps that make parameter scans prohibitively expensive. Deep learning neural operators offer an alternative by learning the map between function spaces rather than individual solutions, so that a single trained model returns the state for any parameter and time at inference cost. We have developed a Fourier Neural Operator (FNO) based Physics-Informed Neural Operator (PINO) surrogate for two-dimensional compressible, viscous, resistive reconnection in a wall bounded domain. We condition on the initial state, the Lundquist number, and a continuous query time. Predicting the magnetic flux function makes $\grad!\cdot!\bB=0$ exact, direct time queries remove autoregressive error accumulation, and parity-aware spectral differentiation matches the wall treatment of the reference solver. Trained across $10^{3}\le S\le2\times10^{5}$ with two values withheld, the surrogate recovers density, pressure, and guide field to better than $0.2\%$, velocity to $3.2$ to $3.9\%$, the flux function to $1.0\%$, and the spectral current density to $7.5\%$. It resolves the thin, narrow current sheet, Alfv&#39;enic jets, and spectral resolution beyond mode cutoff. Our surrogate reproduces the layer-averaged reconnection rate to within $3\%$ through $S=1.1\times10^{4}$, recovering a reconnection time exponent of $0.497$ consistent with Sweet-Parker scaling. When queried zero-shot on the $2049^{2}$ solver mesh, a full trajectory run is on the order of seconds on one GPU against several hours for the DNS, over two orders of magnitude faster, establishing learned operators as a practical route to surveying reconnection across parameter space." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/25/PhysicsInformedNeuralOperatorSurrogatefor2DMagnetohydrodynamicReconnection.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/25/PhysicsInformedNeuralOperatorSurrogatefor2DMagnetohydrodynamicReconnection.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Physics-Informed Neural Operator Surrogate for 2D Magnetohydrodynamic Reconnection" />
+<script type="application/ld+json">
+{"description":"Direct numerical simulation of magnetic reconnection is limited by the scale separation of resistive magnetohydrodynamics. At large Lundquist numbers $S$ the current layer thins as $S^{-1/2}$, forcing fine grids and short time steps that make parameter scans prohibitively expensive. Deep learning neural operators offer an alternative by learning the map between function spaces rather than individual solutions, so that a single trained model returns the state for any parameter and time at inference cost. We have developed a Fourier Neural Operator (FNO) based Physics-Informed Neural Operator (PINO) surrogate for two-dimensional compressible, viscous, resistive reconnection in a wall bounded domain. We condition on the initial state, the Lundquist number, and a continuous query time. Predicting the magnetic flux function makes $\\grad!\\cdot!\\bB=0$ exact, direct time queries remove autoregressive error accumulation, and parity-aware spectral differentiation matches the wall treatment of the reference solver. Trained across $10^{3}\\le S\\le2\\times10^{5}$ with two values withheld, the surrogate recovers density, pressure, and guide field to better than $0.2\\%$, velocity to $3.2$ to $3.9\\%$, the flux function to $1.0\\%$, and the spectral current density to $7.5\\%$. It resolves the thin, narrow current sheet, Alfv&#39;enic jets, and spectral resolution beyond mode cutoff. Our surrogate reproduces the layer-averaged reconnection rate to within $3\\%$ through $S=1.1\\times10^{4}$, recovering a reconnection time exponent of $0.497$ consistent with Sweet-Parker scaling. When queried zero-shot on the $2049^{2}$ solver mesh, a full trajectory run is on the order of seconds on one GPU against several hours for the DNS, over two orders of magnitude faster, establishing learned operators as a practical route to surveying reconnection across parameter space.","datePublished":"2026-09-25T00:00:00+00:00","dateModified":"2026-09-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/25/PhysicsInformedNeuralOperatorSurrogatefor2DMagnetohydrodynamicReconnection.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/25/PhysicsInformedNeuralOperatorSurrogatefor2DMagnetohydrodynamicReconnection.html","author":{"@type":"Person","name":"Kushaal Kumar Pothula, Arunav Kumar"},"@type":"BlogPosting","headline":"Physics-Informed Neural Operator Surrogate for 2D Magnetohydrodynamic Reconnection","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-25 00:00:00 +0000">09-25</time>
+  </p>
+  
+  <h1>Physics-Informed Neural Operator Surrogate for 2D Magnetohydrodynamic Reconnection</h1>
+  <br>Kushaal Kumar Pothula, Arunav Kumar</h3>
+  <br> [stat.ML]
+
+  <p>Direct numerical simulation of magnetic reconnection is limited by the scale separation of resistive magnetohydrodynamics. At large Lundquist numbers $S$ the current layer thins as $S^{-1/2}$, forcing fine grids and short time steps that make parameter scans prohibitively expensive. Deep learning neural operators offer an alternative by learning the map between function spaces rather than individual solutions, so that a single trained model returns the state for any parameter and time at inference cost. We have developed a Fourier Neural Operator (FNO) based Physics-Informed Neural Operator (PINO) surrogate for two-dimensional compressible, viscous, resistive reconnection in a wall bounded domain. We condition on the initial state, the Lundquist number, and a continuous query time. Predicting the magnetic flux function makes $\grad!\cdot!\bB=0$ exact, direct time queries remove autoregressive error accumulation, and parity-aware spectral differentiation matches the wall treatment of the reference solver. Trained across $10^{3}\le S\le2\times10^{5}$ with two values withheld, the surrogate recovers density, pressure, and guide field to better than $0.2\%$, velocity to $3.2$ to $3.9\%$, the flux function to $1.0\%$, and the spectral current density to $7.5\%$. It resolves the thin, narrow current sheet, Alfv'enic jets, and spectral resolution beyond mode cutoff. Our surrogate reproduces the layer-averaged reconnection rate to within $3\%$ through $S=1.1\times10^{4}$, recovering a reconnection time exponent of $0.497$ consistent with Sweet-Parker scaling. When queried zero-shot on the $2049^{2}$ solver mesh, a full trajectory run is on the order of seconds on one GPU against several hours for the DNS, over two orders of magnitude faster, establishing learned operators as a practical route to surveying reconnection across parameter space.</p>
+
+<p><a href="https://arxiv.org/abs/2609.29514">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

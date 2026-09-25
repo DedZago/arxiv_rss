@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Impossible Trinity of Time-Series Validation: A Conservation Law among Training Sufficiency, Test Coverage, and Temporal Causality</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Impossible Trinity of Time-Series Validation: A Conservation Law among Training Sufficiency, Test Coverage, and Temporal Causality" />
+<meta name="author" content="Jiayu Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Validating a model on a time series asks for three things at once: each training run should use most of the sample (sufficiency), the test sets should together cover most of the sample (coverage), and training data should come before test data (causality). We prove that the three cannot be had together and price each one. Let $\alpha$ be the smallest training fraction over folds, $\beta$ the fraction of the sample covered by tests, $\Lambda$ the fraction of the sample used as training data from the future of a test point, and $\delta$ the distance from a test point to the nearest training point in its future. Every scheme on a sample of length $T$ satisfies $\alpha+\beta \le 1+\Lambda$ and $\alpha+\min{\beta,\delta/T} \le 1$, and under $\beta$-mixing the leakage bias at a test point is at most $2M\beta_{\mathrm{mix}}(\delta)$. In words: going beyond the causal frontier $\alpha+\beta=1$ requires training on the future; that future data must sit within $(1-\alpha)T$ of a test point; and its harm depends on its distance, not its amount. Hence expanding walk-forward is exactly the Pareto frontier of causal validation, $k$-fold cross-validation buys the most future data, and purged $k$-fold with an embargo pays in distance instead, which is cheap when the process forgets quickly but cannot repair the part of causality demanded by non-stationarity. On pure noise, shuffled 5-fold reports an information coefficient of $+0.32$, while contiguous 5-fold, using the same amount of future data, reports $+0.004$." />
+<meta property="og:description" content="Validating a model on a time series asks for three things at once: each training run should use most of the sample (sufficiency), the test sets should together cover most of the sample (coverage), and training data should come before test data (causality). We prove that the three cannot be had together and price each one. Let $\alpha$ be the smallest training fraction over folds, $\beta$ the fraction of the sample covered by tests, $\Lambda$ the fraction of the sample used as training data from the future of a test point, and $\delta$ the distance from a test point to the nearest training point in its future. Every scheme on a sample of length $T$ satisfies $\alpha+\beta \le 1+\Lambda$ and $\alpha+\min{\beta,\delta/T} \le 1$, and under $\beta$-mixing the leakage bias at a test point is at most $2M\beta_{\mathrm{mix}}(\delta)$. In words: going beyond the causal frontier $\alpha+\beta=1$ requires training on the future; that future data must sit within $(1-\alpha)T$ of a test point; and its harm depends on its distance, not its amount. Hence expanding walk-forward is exactly the Pareto frontier of causal validation, $k$-fold cross-validation buys the most future data, and purged $k$-fold with an embargo pays in distance instead, which is cheap when the process forgets quickly but cannot repair the part of causality demanded by non-stationarity. On pure noise, shuffled 5-fold reports an information coefficient of $+0.32$, while contiguous 5-fold, using the same amount of future data, reports $+0.004$." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/25/TheImpossibleTrinityofTimeSeriesValidationAConservationLawamongTrainingSufficiencyTestCoverageandTemporalCausality.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/25/TheImpossibleTrinityofTimeSeriesValidationAConservationLawamongTrainingSufficiencyTestCoverageandTemporalCausality.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Impossible Trinity of Time-Series Validation: A Conservation Law among Training Sufficiency, Test Coverage, and Temporal Causality" />
+<script type="application/ld+json">
+{"description":"Validating a model on a time series asks for three things at once: each training run should use most of the sample (sufficiency), the test sets should together cover most of the sample (coverage), and training data should come before test data (causality). We prove that the three cannot be had together and price each one. Let $\\alpha$ be the smallest training fraction over folds, $\\beta$ the fraction of the sample covered by tests, $\\Lambda$ the fraction of the sample used as training data from the future of a test point, and $\\delta$ the distance from a test point to the nearest training point in its future. Every scheme on a sample of length $T$ satisfies $\\alpha+\\beta \\le 1+\\Lambda$ and $\\alpha+\\min{\\beta,\\delta/T} \\le 1$, and under $\\beta$-mixing the leakage bias at a test point is at most $2M\\beta_{\\mathrm{mix}}(\\delta)$. In words: going beyond the causal frontier $\\alpha+\\beta=1$ requires training on the future; that future data must sit within $(1-\\alpha)T$ of a test point; and its harm depends on its distance, not its amount. Hence expanding walk-forward is exactly the Pareto frontier of causal validation, $k$-fold cross-validation buys the most future data, and purged $k$-fold with an embargo pays in distance instead, which is cheap when the process forgets quickly but cannot repair the part of causality demanded by non-stationarity. On pure noise, shuffled 5-fold reports an information coefficient of $+0.32$, while contiguous 5-fold, using the same amount of future data, reports $+0.004$.","datePublished":"2026-09-25T00:00:00+00:00","dateModified":"2026-09-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/25/TheImpossibleTrinityofTimeSeriesValidationAConservationLawamongTrainingSufficiencyTestCoverageandTemporalCausality.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/25/TheImpossibleTrinityofTimeSeriesValidationAConservationLawamongTrainingSufficiencyTestCoverageandTemporalCausality.html","author":{"@type":"Person","name":"Jiayu Li"},"@type":"BlogPosting","headline":"The Impossible Trinity of Time-Series Validation: A Conservation Law among Training Sufficiency, Test Coverage, and Temporal Causality","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-25 00:00:00 +0000">09-25</time>
+  </p>
+  
+  <h1>The Impossible Trinity of Time-Series Validation: A Conservation Law among Training Sufficiency, Test Coverage, and Temporal Causality</h1>
+  <br>Jiayu Li</h3>
+  <br> [stat.ML]
+
+  <p>Validating a model on a time series asks for three things at once: each training run should use most of the sample (sufficiency), the test sets should together cover most of the sample (coverage), and training data should come before test data (causality). We prove that the three cannot be had together and price each one. Let $\alpha$ be the smallest training fraction over folds, $\beta$ the fraction of the sample covered by tests, $\Lambda$ the fraction of the sample used as training data from the future of a test point, and $\delta$ the distance from a test point to the nearest training point in its future. Every scheme on a sample of length $T$ satisfies $\alpha+\beta \le 1+\Lambda$ and $\alpha+\min{\beta,\delta/T} \le 1$, and under $\beta$-mixing the leakage bias at a test point is at most $2M\beta_{\mathrm{mix}}(\delta)$. In words: going beyond the causal frontier $\alpha+\beta=1$ requires training on the future; that future data must sit within $(1-\alpha)T$ of a test point; and its harm depends on its distance, not its amount. Hence expanding walk-forward is exactly the Pareto frontier of causal validation, $k$-fold cross-validation buys the most future data, and purged $k$-fold with an embargo pays in distance instead, which is cheap when the process forgets quickly but cannot repair the part of causality demanded by non-stationarity. On pure noise, shuffled 5-fold reports an information coefficient of $+0.32$, while contiguous 5-fold, using the same amount of future data, reports $+0.004$.</p>
+
+<p><a href="https://arxiv.org/abs/2609.29530">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

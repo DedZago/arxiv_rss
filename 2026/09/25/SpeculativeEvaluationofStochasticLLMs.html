@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Speculative Evaluation of Stochastic LLMs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Speculative Evaluation of Stochastic LLMs" />
+<meta name="author" content="Qianli Shen, Xiang Li, Ruomeng Ding, Yanxi Chen, Daoyuan Chen, Yaliang Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Evaluating a stochastic large language model is costly: benchmark scores estimate expected performance from randomized rollouts, yet uniform repetition ignores sharp differences in task-level rollout variance. We ask how to minimize the variance of a fixed-benchmark mean under an exact rollout budget. We develop Speculative Evaluation with a Hierarchical Bayesian Neyman (HBN) policy with pilot size and stage weight jointly chosen ex ante. It runs a short uniform pilot, pools per-task success counts with a hierarchical Bayesian model, and uses posterior expectations of task-level sampling variances for exact positive-integer Neyman allocation. To mitigate the pilot synchronization barrier, HBN-async speculatively executes continuations from partial pilot feedback and retains those selected by the final allocation. Across six checkpoints and 18 benchmark groups, we evaluate 107 nondegenerate benchmark-checkpoint profiles. For rollout budgets of 8-64 per task, Speculative Evaluation reduces variance relative to Uniform by 12.8%-33.6% on average across profiles, outperforming hindsight-tuned empirical and independent Bayesian baselines. Real-generation experiments that account for the pilot synchronization barrier show that HBN-async mitigates its overhead, helping translate statistical efficiency into practical evaluation benefits." />
+<meta property="og:description" content="Evaluating a stochastic large language model is costly: benchmark scores estimate expected performance from randomized rollouts, yet uniform repetition ignores sharp differences in task-level rollout variance. We ask how to minimize the variance of a fixed-benchmark mean under an exact rollout budget. We develop Speculative Evaluation with a Hierarchical Bayesian Neyman (HBN) policy with pilot size and stage weight jointly chosen ex ante. It runs a short uniform pilot, pools per-task success counts with a hierarchical Bayesian model, and uses posterior expectations of task-level sampling variances for exact positive-integer Neyman allocation. To mitigate the pilot synchronization barrier, HBN-async speculatively executes continuations from partial pilot feedback and retains those selected by the final allocation. Across six checkpoints and 18 benchmark groups, we evaluate 107 nondegenerate benchmark-checkpoint profiles. For rollout budgets of 8-64 per task, Speculative Evaluation reduces variance relative to Uniform by 12.8%-33.6% on average across profiles, outperforming hindsight-tuned empirical and independent Bayesian baselines. Real-generation experiments that account for the pilot synchronization barrier show that HBN-async mitigates its overhead, helping translate statistical efficiency into practical evaluation benefits." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/25/SpeculativeEvaluationofStochasticLLMs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/25/SpeculativeEvaluationofStochasticLLMs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Speculative Evaluation of Stochastic LLMs" />
+<script type="application/ld+json">
+{"description":"Evaluating a stochastic large language model is costly: benchmark scores estimate expected performance from randomized rollouts, yet uniform repetition ignores sharp differences in task-level rollout variance. We ask how to minimize the variance of a fixed-benchmark mean under an exact rollout budget. We develop Speculative Evaluation with a Hierarchical Bayesian Neyman (HBN) policy with pilot size and stage weight jointly chosen ex ante. It runs a short uniform pilot, pools per-task success counts with a hierarchical Bayesian model, and uses posterior expectations of task-level sampling variances for exact positive-integer Neyman allocation. To mitigate the pilot synchronization barrier, HBN-async speculatively executes continuations from partial pilot feedback and retains those selected by the final allocation. Across six checkpoints and 18 benchmark groups, we evaluate 107 nondegenerate benchmark-checkpoint profiles. For rollout budgets of 8-64 per task, Speculative Evaluation reduces variance relative to Uniform by 12.8%-33.6% on average across profiles, outperforming hindsight-tuned empirical and independent Bayesian baselines. Real-generation experiments that account for the pilot synchronization barrier show that HBN-async mitigates its overhead, helping translate statistical efficiency into practical evaluation benefits.","datePublished":"2026-09-25T00:00:00+00:00","dateModified":"2026-09-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/25/SpeculativeEvaluationofStochasticLLMs.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/25/SpeculativeEvaluationofStochasticLLMs.html","author":{"@type":"Person","name":"Qianli Shen, Xiang Li, Ruomeng Ding, Yanxi Chen, Daoyuan Chen, Yaliang Li"},"@type":"BlogPosting","headline":"Speculative Evaluation of Stochastic LLMs","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-25 00:00:00 +0000">09-25</time>
+  </p>
+  
+  <h1>Speculative Evaluation of Stochastic LLMs</h1>
+  <br>Qianli Shen, Xiang Li, Ruomeng Ding, Yanxi Chen, Daoyuan Chen, Yaliang Li</h3>
+  <br> [stat.ML]
+
+  <p>Evaluating a stochastic large language model is costly: benchmark scores estimate expected performance from randomized rollouts, yet uniform repetition ignores sharp differences in task-level rollout variance. We ask how to minimize the variance of a fixed-benchmark mean under an exact rollout budget. We develop Speculative Evaluation with a Hierarchical Bayesian Neyman (HBN) policy with pilot size and stage weight jointly chosen ex ante. It runs a short uniform pilot, pools per-task success counts with a hierarchical Bayesian model, and uses posterior expectations of task-level sampling variances for exact positive-integer Neyman allocation. To mitigate the pilot synchronization barrier, HBN-async speculatively executes continuations from partial pilot feedback and retains those selected by the final allocation. Across six checkpoints and 18 benchmark groups, we evaluate 107 nondegenerate benchmark-checkpoint profiles. For rollout budgets of 8-64 per task, Speculative Evaluation reduces variance relative to Uniform by 12.8%-33.6% on average across profiles, outperforming hindsight-tuned empirical and independent Bayesian baselines. Real-generation experiments that account for the pilot synchronization barrier show that HBN-async mitigates its overhead, helping translate statistical efficiency into practical evaluation benefits.</p>
+
+<p><a href="https://arxiv.org/abs/2609.28560">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Transformers as Cross-Task Learners: Shared Structure Drives Sample Efficiency in In-Context Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Transformers as Cross-Task Learners: Shared Structure Drives Sample Efficiency in In-Context Learning" />
+<meta name="author" content="Zhongjie Shi, Rongjie Lai, Alexander Cloninger, Wenjing Liao" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Transformers achieve remarkable performance by jointly learning broad families of tasks during pretraining and adapting to unseen tasks from only a short prompt. Yet a rigorous mathematical and statistical understanding of this phenomenon remains limited. This paper aims to study how Transformers exploit shared cross-task structure and how this structure affects the sample complexity of in-context learning (ICL). Specifically, we characterize task-space complexity through covering numbers under a prescribed metric, thereby quantifying the low-dimensional cross-task structure without requiring an explicit parametric representation. The resulting cover provides a set of anchor functions, which we use to introduce a task-identification-and-evaluation procedure: context observations localize an unseen task among the anchor functions, and the response at a query is predicted by aggregating the corresponding anchor function query evaluations. For approximation, we explicitly construct a Transformer with Softmax attention to approximate this procedure. For generalization, we derive an error bound that separates the effects of the number of pretraining tasks and the prompt length. The scaling with respect to the number of pretraining tasks is governed by the intrinsic dimensions of the task space and input domain; once sufficiently many tasks are available, the dependence on the prompt context length becomes dimension-free. To the best of our knowledge, this is the first work to quantify cross-task complexity for general nonlinear task families and explicitly construct a Transformer that exploits their low-dimensional structure to perform ICL. Our theory provides a quantitative explanation of how joint pretraining across related tasks improves in-context generalization." />
+<meta property="og:description" content="Transformers achieve remarkable performance by jointly learning broad families of tasks during pretraining and adapting to unseen tasks from only a short prompt. Yet a rigorous mathematical and statistical understanding of this phenomenon remains limited. This paper aims to study how Transformers exploit shared cross-task structure and how this structure affects the sample complexity of in-context learning (ICL). Specifically, we characterize task-space complexity through covering numbers under a prescribed metric, thereby quantifying the low-dimensional cross-task structure without requiring an explicit parametric representation. The resulting cover provides a set of anchor functions, which we use to introduce a task-identification-and-evaluation procedure: context observations localize an unseen task among the anchor functions, and the response at a query is predicted by aggregating the corresponding anchor function query evaluations. For approximation, we explicitly construct a Transformer with Softmax attention to approximate this procedure. For generalization, we derive an error bound that separates the effects of the number of pretraining tasks and the prompt length. The scaling with respect to the number of pretraining tasks is governed by the intrinsic dimensions of the task space and input domain; once sufficiently many tasks are available, the dependence on the prompt context length becomes dimension-free. To the best of our knowledge, this is the first work to quantify cross-task complexity for general nonlinear task families and explicitly construct a Transformer that exploits their low-dimensional structure to perform ICL. Our theory provides a quantitative explanation of how joint pretraining across related tasks improves in-context generalization." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/25/TransformersasCrossTaskLearnersSharedStructureDrivesSampleEfficiencyinInContextLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/25/TransformersasCrossTaskLearnersSharedStructureDrivesSampleEfficiencyinInContextLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Transformers as Cross-Task Learners: Shared Structure Drives Sample Efficiency in In-Context Learning" />
+<script type="application/ld+json">
+{"description":"Transformers achieve remarkable performance by jointly learning broad families of tasks during pretraining and adapting to unseen tasks from only a short prompt. Yet a rigorous mathematical and statistical understanding of this phenomenon remains limited. This paper aims to study how Transformers exploit shared cross-task structure and how this structure affects the sample complexity of in-context learning (ICL). Specifically, we characterize task-space complexity through covering numbers under a prescribed metric, thereby quantifying the low-dimensional cross-task structure without requiring an explicit parametric representation. The resulting cover provides a set of anchor functions, which we use to introduce a task-identification-and-evaluation procedure: context observations localize an unseen task among the anchor functions, and the response at a query is predicted by aggregating the corresponding anchor function query evaluations. For approximation, we explicitly construct a Transformer with Softmax attention to approximate this procedure. For generalization, we derive an error bound that separates the effects of the number of pretraining tasks and the prompt length. The scaling with respect to the number of pretraining tasks is governed by the intrinsic dimensions of the task space and input domain; once sufficiently many tasks are available, the dependence on the prompt context length becomes dimension-free. To the best of our knowledge, this is the first work to quantify cross-task complexity for general nonlinear task families and explicitly construct a Transformer that exploits their low-dimensional structure to perform ICL. Our theory provides a quantitative explanation of how joint pretraining across related tasks improves in-context generalization.","datePublished":"2026-09-25T00:00:00+00:00","dateModified":"2026-09-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/25/TransformersasCrossTaskLearnersSharedStructureDrivesSampleEfficiencyinInContextLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/25/TransformersasCrossTaskLearnersSharedStructureDrivesSampleEfficiencyinInContextLearning.html","author":{"@type":"Person","name":"Zhongjie Shi, Rongjie Lai, Alexander Cloninger, Wenjing Liao"},"@type":"BlogPosting","headline":"Transformers as Cross-Task Learners: Shared Structure Drives Sample Efficiency in In-Context Learning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-25 00:00:00 +0000">09-25</time>
+  </p>
+  
+  <h1>Transformers as Cross-Task Learners: Shared Structure Drives Sample Efficiency in In-Context Learning</h1>
+  <br>Zhongjie Shi, Rongjie Lai, Alexander Cloninger, Wenjing Liao</h3>
+  <br> [stat.ML]
+
+  <p>Transformers achieve remarkable performance by jointly learning broad families of tasks during pretraining and adapting to unseen tasks from only a short prompt. Yet a rigorous mathematical and statistical understanding of this phenomenon remains limited. This paper aims to study how Transformers exploit shared cross-task structure and how this structure affects the sample complexity of in-context learning (ICL). Specifically, we characterize task-space complexity through covering numbers under a prescribed metric, thereby quantifying the low-dimensional cross-task structure without requiring an explicit parametric representation. The resulting cover provides a set of anchor functions, which we use to introduce a task-identification-and-evaluation procedure: context observations localize an unseen task among the anchor functions, and the response at a query is predicted by aggregating the corresponding anchor function query evaluations. For approximation, we explicitly construct a Transformer with Softmax attention to approximate this procedure. For generalization, we derive an error bound that separates the effects of the number of pretraining tasks and the prompt length. The scaling with respect to the number of pretraining tasks is governed by the intrinsic dimensions of the task space and input domain; once sufficiently many tasks are available, the dependence on the prompt context length becomes dimension-free. To the best of our knowledge, this is the first work to quantify cross-task complexity for general nonlinear task families and explicitly construct a Transformer that exploits their low-dimensional structure to perform ICL. Our theory provides a quantitative explanation of how joint pretraining across related tasks improves in-context generalization.</p>
+
+<p><a href="https://arxiv.org/abs/2609.29060">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
