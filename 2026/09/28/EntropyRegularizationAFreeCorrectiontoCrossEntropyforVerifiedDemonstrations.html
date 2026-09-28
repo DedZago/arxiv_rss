@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations" />
+<meta name="author" content="Mihir Dhanakshirur, Adam Ousherovitch, Ambuj Tewari" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large language models are often post-trained on expert demonstrations using cross-entropy (CE), even when the downstream objective is not to imitate the demonstrated solution but to produce any output accepted by a verifier. This mismatch is seen in verifiable domains with multiple correct solutions, such as mathematical reasoning and code generation, where training data may contain only one expert solution per problem. We show that minimizing cross-entropy can be misaligned with minimizing verifier risk; two policies can assign identical likelihood to the observed demonstrations while placing different probability mass on incorrect outputs. This is formalized through a learning-theoretic counterexample in which CE minimization selects a suboptimal policy. We identify that controlling the support of the learned policy can solve this problem by preventing probability mass from spreading to unsupported outputs. Since support size is non-differentiable and computationally intractable, we propose entropy-regularized cross-entropy (ER-CE), using token-level Shannon entropy as a tractable proxy. Finally, across mathematical reasoning and code-generation benchmarks, we find that entropy-regularized training consistently improves verifier accuracy over standard cross-entropy. Our results identify a simple failure mode of imitation-based post-training in verifiable tasks and provide a practical objective that is better aligned with producing correct outputs." />
+<meta property="og:description" content="Large language models are often post-trained on expert demonstrations using cross-entropy (CE), even when the downstream objective is not to imitate the demonstrated solution but to produce any output accepted by a verifier. This mismatch is seen in verifiable domains with multiple correct solutions, such as mathematical reasoning and code generation, where training data may contain only one expert solution per problem. We show that minimizing cross-entropy can be misaligned with minimizing verifier risk; two policies can assign identical likelihood to the observed demonstrations while placing different probability mass on incorrect outputs. This is formalized through a learning-theoretic counterexample in which CE minimization selects a suboptimal policy. We identify that controlling the support of the learned policy can solve this problem by preventing probability mass from spreading to unsupported outputs. Since support size is non-differentiable and computationally intractable, we propose entropy-regularized cross-entropy (ER-CE), using token-level Shannon entropy as a tractable proxy. Finally, across mathematical reasoning and code-generation benchmarks, we find that entropy-regularized training consistently improves verifier accuracy over standard cross-entropy. Our results identify a simple failure mode of imitation-based post-training in verifiable tasks and provide a practical objective that is better aligned with producing correct outputs." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/28/EntropyRegularizationAFreeCorrectiontoCrossEntropyforVerifiedDemonstrations.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/28/EntropyRegularizationAFreeCorrectiontoCrossEntropyforVerifiedDemonstrations.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations" />
+<script type="application/ld+json">
+{"description":"Large language models are often post-trained on expert demonstrations using cross-entropy (CE), even when the downstream objective is not to imitate the demonstrated solution but to produce any output accepted by a verifier. This mismatch is seen in verifiable domains with multiple correct solutions, such as mathematical reasoning and code generation, where training data may contain only one expert solution per problem. We show that minimizing cross-entropy can be misaligned with minimizing verifier risk; two policies can assign identical likelihood to the observed demonstrations while placing different probability mass on incorrect outputs. This is formalized through a learning-theoretic counterexample in which CE minimization selects a suboptimal policy. We identify that controlling the support of the learned policy can solve this problem by preventing probability mass from spreading to unsupported outputs. Since support size is non-differentiable and computationally intractable, we propose entropy-regularized cross-entropy (ER-CE), using token-level Shannon entropy as a tractable proxy. Finally, across mathematical reasoning and code-generation benchmarks, we find that entropy-regularized training consistently improves verifier accuracy over standard cross-entropy. Our results identify a simple failure mode of imitation-based post-training in verifiable tasks and provide a practical objective that is better aligned with producing correct outputs.","datePublished":"2026-09-28T00:00:00+00:00","dateModified":"2026-09-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/28/EntropyRegularizationAFreeCorrectiontoCrossEntropyforVerifiedDemonstrations.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/28/EntropyRegularizationAFreeCorrectiontoCrossEntropyforVerifiedDemonstrations.html","author":{"@type":"Person","name":"Mihir Dhanakshirur, Adam Ousherovitch, Ambuj Tewari"},"@type":"BlogPosting","headline":"Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-28 00:00:00 +0000">09-28</time>
+  </p>
+  
+  <h1>Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations</h1>
+  <br>Mihir Dhanakshirur, Adam Ousherovitch, Ambuj Tewari</h3>
+  <br> [stat.ML]
+
+  <p>Large language models are often post-trained on expert demonstrations using cross-entropy (CE), even when the downstream objective is not to imitate the demonstrated solution but to produce any output accepted by a verifier. This mismatch is seen in verifiable domains with multiple correct solutions, such as mathematical reasoning and code generation, where training data may contain only one expert solution per problem. We show that minimizing cross-entropy can be misaligned with minimizing verifier risk; two policies can assign identical likelihood to the observed demonstrations while placing different probability mass on incorrect outputs. This is formalized through a learning-theoretic counterexample in which CE minimization selects a suboptimal policy. We identify that controlling the support of the learned policy can solve this problem by preventing probability mass from spreading to unsupported outputs. Since support size is non-differentiable and computationally intractable, we propose entropy-regularized cross-entropy (ER-CE), using token-level Shannon entropy as a tractable proxy. Finally, across mathematical reasoning and code-generation benchmarks, we find that entropy-regularized training consistently improves verifier accuracy over standard cross-entropy. Our results identify a simple failure mode of imitation-based post-training in verifiable tasks and provide a practical objective that is better aligned with producing correct outputs.</p>
+
+<p><a href="https://arxiv.org/abs/2609.30572">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
