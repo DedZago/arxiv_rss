@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Why and When Deep is Better than Shallow: Implementation-Agnostic State-Transition Model of Deep Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Why and When Deep is Better than Shallow: Implementation-Agnostic State-Transition Model of Deep Learning" />
+<meta name="author" content="Sho Sonoda, Yuka Hashimoto, Isao Ishikawa, Masahiro Ikeda" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We ask when adding hidden layers improves generalization, in a model that keeps the layers fixed and varies only their number. A hidden layer is a self-map of a state space, a depth-$k$ network composes at most $k$ hidden layers with an output layer, and depth is compared within the nested family $H_0\subset H_1\subset\cdots$ built from one class $F$ of hidden layers; this compares a deep network with shallower networks built from the same layers, not with wider ones. Our message is that the statistical cost of depth is the metric entropy of the set $B(k,F)$ of compositions. The estimation error is bounded by an entropy integral over $B(k,F)$ with constants that do not depend on the depth, and the bound is matched from below when the output layer can see the hidden states. For Lipschitz layers on a bounded state space this entropy grows at most polynomially in $k$, and it stays bounded, or grows only like $\log k$, under contraction, equicontinuity, or nilpotent structure. Balanced against the approximation error, this gives depths $k^\ast(n)$ that grow with the sample size, and it separates the models whose estimation error is independent of the depth from those whose estimation error grows with it. Deep ReLU networks, unrolled solvers, and chain-of-thought computation are worked out; for the last two the number of steps is derived rather than assumed. All statements are machine-checked in Lean~4; the formalization and its blueprint are available at https://shosonoda.github.io/lean-deepgen/ ." />
+<meta property="og:description" content="We ask when adding hidden layers improves generalization, in a model that keeps the layers fixed and varies only their number. A hidden layer is a self-map of a state space, a depth-$k$ network composes at most $k$ hidden layers with an output layer, and depth is compared within the nested family $H_0\subset H_1\subset\cdots$ built from one class $F$ of hidden layers; this compares a deep network with shallower networks built from the same layers, not with wider ones. Our message is that the statistical cost of depth is the metric entropy of the set $B(k,F)$ of compositions. The estimation error is bounded by an entropy integral over $B(k,F)$ with constants that do not depend on the depth, and the bound is matched from below when the output layer can see the hidden states. For Lipschitz layers on a bounded state space this entropy grows at most polynomially in $k$, and it stays bounded, or grows only like $\log k$, under contraction, equicontinuity, or nilpotent structure. Balanced against the approximation error, this gives depths $k^\ast(n)$ that grow with the sample size, and it separates the models whose estimation error is independent of the depth from those whose estimation error grows with it. Deep ReLU networks, unrolled solvers, and chain-of-thought computation are worked out; for the last two the number of steps is derived rather than assumed. All statements are machine-checked in Lean~4; the formalization and its blueprint are available at https://shosonoda.github.io/lean-deepgen/ ." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/29/WhyandWhenDeepisBetterthanShallowImplementationAgnosticStateTransitionModelofDeepLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/29/WhyandWhenDeepisBetterthanShallowImplementationAgnosticStateTransitionModelofDeepLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Why and When Deep is Better than Shallow: Implementation-Agnostic State-Transition Model of Deep Learning" />
+<script type="application/ld+json">
+{"description":"We ask when adding hidden layers improves generalization, in a model that keeps the layers fixed and varies only their number. A hidden layer is a self-map of a state space, a depth-$k$ network composes at most $k$ hidden layers with an output layer, and depth is compared within the nested family $H_0\\subset H_1\\subset\\cdots$ built from one class $F$ of hidden layers; this compares a deep network with shallower networks built from the same layers, not with wider ones. Our message is that the statistical cost of depth is the metric entropy of the set $B(k,F)$ of compositions. The estimation error is bounded by an entropy integral over $B(k,F)$ with constants that do not depend on the depth, and the bound is matched from below when the output layer can see the hidden states. For Lipschitz layers on a bounded state space this entropy grows at most polynomially in $k$, and it stays bounded, or grows only like $\\log k$, under contraction, equicontinuity, or nilpotent structure. Balanced against the approximation error, this gives depths $k^\\ast(n)$ that grow with the sample size, and it separates the models whose estimation error is independent of the depth from those whose estimation error grows with it. Deep ReLU networks, unrolled solvers, and chain-of-thought computation are worked out; for the last two the number of steps is derived rather than assumed. All statements are machine-checked in Lean~4; the formalization and its blueprint are available at https://shosonoda.github.io/lean-deepgen/ .","datePublished":"2026-09-29T00:00:00+00:00","dateModified":"2026-09-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/29/WhyandWhenDeepisBetterthanShallowImplementationAgnosticStateTransitionModelofDeepLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/29/WhyandWhenDeepisBetterthanShallowImplementationAgnosticStateTransitionModelofDeepLearning.html","author":{"@type":"Person","name":"Sho Sonoda, Yuka Hashimoto, Isao Ishikawa, Masahiro Ikeda"},"@type":"BlogPosting","headline":"Why and When Deep is Better than Shallow: Implementation-Agnostic State-Transition Model of Deep Learning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-29 00:00:00 +0000">09-29</time>
+  </p>
+  
+  <h1>Why and When Deep is Better than Shallow: Implementation-Agnostic State-Transition Model of Deep Learning</h1>
+  <br>Sho Sonoda, Yuka Hashimoto, Isao Ishikawa, Masahiro Ikeda</h3>
+  <br> [stat.ML]
+
+  <p>We ask when adding hidden layers improves generalization, in a model that keeps the layers fixed and varies only their number. A hidden layer is a self-map of a state space, a depth-$k$ network composes at most $k$ hidden layers with an output layer, and depth is compared within the nested family $H_0\subset H_1\subset\cdots$ built from one class $F$ of hidden layers; this compares a deep network with shallower networks built from the same layers, not with wider ones. Our message is that the statistical cost of depth is the metric entropy of the set $B(k,F)$ of compositions. The estimation error is bounded by an entropy integral over $B(k,F)$ with constants that do not depend on the depth, and the bound is matched from below when the output layer can see the hidden states. For Lipschitz layers on a bounded state space this entropy grows at most polynomially in $k$, and it stays bounded, or grows only like $\log k$, under contraction, equicontinuity, or nilpotent structure. Balanced against the approximation error, this gives depths $k^\ast(n)$ that grow with the sample size, and it separates the models whose estimation error is independent of the depth from those whose estimation error grows with it. Deep ReLU networks, unrolled solvers, and chain-of-thought computation are worked out; for the last two the number of steps is derived rather than assumed. All statements are machine-checked in Lean~4; the formalization and its blueprint are available at https://shosonoda.github.io/lean-deepgen/ .</p>
+
+<p><a href="https://arxiv.org/abs/2505.15064">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Propagate, Then Sharpen: Post-Hoc Refinement of Frozen Node Classifiers</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Propagate, Then Sharpen: Post-Hoc Refinement of Frozen Node Classifiers" />
+<meta name="author" content="Preben Johnsen Bentdal, Nello Blaser, Xue-Cheng Tai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study post-hoc refinement of frozen node classifiers: given only the graph $G$ and class distributions $Q$ predicted by a frozen model, can we improve accuracy without access to node features, model parameters, or gradients? APPNP answers this by propagating logits with a restart towards the initial predictions, minimizing the anchored Dirichlet energy. Instead, we consider the Potts energy, and decompose it into a Dirichlet term, which penalizes disagreement between neighbouring nodes, and a Gini term, which penalizes indecision within each node. This decomposition motivates Propagate, Then Sharpen (PtS), which alternates between propagation of class probabilities and node-wise, mass-preserving sharpening, with only one additional hyperparameter selected using labelled validation nodes. Across nine homophilic graphs, with a frozen MLP backbone, PtS improves mean test accuracy over independently tuned APPNP by $1.71$ percentage points on clean inputs and $3.90$ under severe Gaussian feature corruption. Gains over APPNP become smaller, but remain positive with frozen GCN and GraphSAGE backbones. Sharpening also removes most of the accuracy loss of deep propagation: on clean inputs without restart, accuracy falls by $2.2$ points between $2$ and $100$ propagation steps under PtS, compared with $33.8$ for APPNP." />
+<meta property="og:description" content="We study post-hoc refinement of frozen node classifiers: given only the graph $G$ and class distributions $Q$ predicted by a frozen model, can we improve accuracy without access to node features, model parameters, or gradients? APPNP answers this by propagating logits with a restart towards the initial predictions, minimizing the anchored Dirichlet energy. Instead, we consider the Potts energy, and decompose it into a Dirichlet term, which penalizes disagreement between neighbouring nodes, and a Gini term, which penalizes indecision within each node. This decomposition motivates Propagate, Then Sharpen (PtS), which alternates between propagation of class probabilities and node-wise, mass-preserving sharpening, with only one additional hyperparameter selected using labelled validation nodes. Across nine homophilic graphs, with a frozen MLP backbone, PtS improves mean test accuracy over independently tuned APPNP by $1.71$ percentage points on clean inputs and $3.90$ under severe Gaussian feature corruption. Gains over APPNP become smaller, but remain positive with frozen GCN and GraphSAGE backbones. Sharpening also removes most of the accuracy loss of deep propagation: on clean inputs without restart, accuracy falls by $2.2$ points between $2$ and $100$ propagation steps under PtS, compared with $33.8$ for APPNP." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/29/PropagateThenSharpenPostHocRefinementofFrozenNodeClassifiers.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/29/PropagateThenSharpenPostHocRefinementofFrozenNodeClassifiers.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Propagate, Then Sharpen: Post-Hoc Refinement of Frozen Node Classifiers" />
+<script type="application/ld+json">
+{"description":"We study post-hoc refinement of frozen node classifiers: given only the graph $G$ and class distributions $Q$ predicted by a frozen model, can we improve accuracy without access to node features, model parameters, or gradients? APPNP answers this by propagating logits with a restart towards the initial predictions, minimizing the anchored Dirichlet energy. Instead, we consider the Potts energy, and decompose it into a Dirichlet term, which penalizes disagreement between neighbouring nodes, and a Gini term, which penalizes indecision within each node. This decomposition motivates Propagate, Then Sharpen (PtS), which alternates between propagation of class probabilities and node-wise, mass-preserving sharpening, with only one additional hyperparameter selected using labelled validation nodes. Across nine homophilic graphs, with a frozen MLP backbone, PtS improves mean test accuracy over independently tuned APPNP by $1.71$ percentage points on clean inputs and $3.90$ under severe Gaussian feature corruption. Gains over APPNP become smaller, but remain positive with frozen GCN and GraphSAGE backbones. Sharpening also removes most of the accuracy loss of deep propagation: on clean inputs without restart, accuracy falls by $2.2$ points between $2$ and $100$ propagation steps under PtS, compared with $33.8$ for APPNP.","datePublished":"2026-09-29T00:00:00+00:00","dateModified":"2026-09-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/29/PropagateThenSharpenPostHocRefinementofFrozenNodeClassifiers.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/29/PropagateThenSharpenPostHocRefinementofFrozenNodeClassifiers.html","author":{"@type":"Person","name":"Preben Johnsen Bentdal, Nello Blaser, Xue-Cheng Tai"},"@type":"BlogPosting","headline":"Propagate, Then Sharpen: Post-Hoc Refinement of Frozen Node Classifiers","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-29 00:00:00 +0000">09-29</time>
+  </p>
+  
+  <h1>Propagate, Then Sharpen: Post-Hoc Refinement of Frozen Node Classifiers</h1>
+  <br>Preben Johnsen Bentdal, Nello Blaser, Xue-Cheng Tai</h3>
+  <br> [stat.ML]
+
+  <p>We study post-hoc refinement of frozen node classifiers: given only the graph $G$ and class distributions $Q$ predicted by a frozen model, can we improve accuracy without access to node features, model parameters, or gradients? APPNP answers this by propagating logits with a restart towards the initial predictions, minimizing the anchored Dirichlet energy. Instead, we consider the Potts energy, and decompose it into a Dirichlet term, which penalizes disagreement between neighbouring nodes, and a Gini term, which penalizes indecision within each node. This decomposition motivates Propagate, Then Sharpen (PtS), which alternates between propagation of class probabilities and node-wise, mass-preserving sharpening, with only one additional hyperparameter selected using labelled validation nodes. Across nine homophilic graphs, with a frozen MLP backbone, PtS improves mean test accuracy over independently tuned APPNP by $1.71$ percentage points on clean inputs and $3.90$ under severe Gaussian feature corruption. Gains over APPNP become smaller, but remain positive with frozen GCN and GraphSAGE backbones. Sharpening also removes most of the accuracy loss of deep propagation: on clean inputs without restart, accuracy falls by $2.2$ points between $2$ and $100$ propagation steps under PtS, compared with $33.8$ for APPNP.</p>
+
+<p><a href="https://arxiv.org/abs/2609.35080">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

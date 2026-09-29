@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Quantifying Behavioral Tails in Black-Box Language Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Quantifying Behavioral Tails in Black-Box Language Models" />
+<meta name="author" content="Elsayed Eshra, Ali Al-Lawati, Dongwon Lee, Suhang Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce RareTrap, a framework for estimating the probability of severe behaviors in black box large language models (LLMs). A key challenge for probability estimation is defining a tractable distribution over the input space. To accomplish that, RareTrap uses a surrogate LLM and constructs a geometry-aware mapping from a lower-dimensional latent reference space into its token-embedding space to induce an explicit and reproducible distribution over input prompts. A response-level performance function is utilized on the response to quantify behavior severity. This enables sequential rare event simulation that concentrates evaluations on progressively more severe behaviors while preserving probability under the induced prompt distribution, which would otherwise be prohibitive to measure. Across 10 open-weight and two frontier models (GPT-5.4 and Claude Sonnet 4.6), we find that RareTrap successfully induces severe resource consumption behaviors and computes their probability with as few as 200 evaluations. RareTrap provides model developers a principled approach for evaluating language models under a common distribution, and prioritizing alignment effort to improve safety and mitigate risks. Code is published online: https://anonymous.4open.science/r/rare_trap-D7F0." />
+<meta property="og:description" content="We introduce RareTrap, a framework for estimating the probability of severe behaviors in black box large language models (LLMs). A key challenge for probability estimation is defining a tractable distribution over the input space. To accomplish that, RareTrap uses a surrogate LLM and constructs a geometry-aware mapping from a lower-dimensional latent reference space into its token-embedding space to induce an explicit and reproducible distribution over input prompts. A response-level performance function is utilized on the response to quantify behavior severity. This enables sequential rare event simulation that concentrates evaluations on progressively more severe behaviors while preserving probability under the induced prompt distribution, which would otherwise be prohibitive to measure. Across 10 open-weight and two frontier models (GPT-5.4 and Claude Sonnet 4.6), we find that RareTrap successfully induces severe resource consumption behaviors and computes their probability with as few as 200 evaluations. RareTrap provides model developers a principled approach for evaluating language models under a common distribution, and prioritizing alignment effort to improve safety and mitigate risks. Code is published online: https://anonymous.4open.science/r/rare_trap-D7F0." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/29/QuantifyingBehavioralTailsinBlackBoxLanguageModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/29/QuantifyingBehavioralTailsinBlackBoxLanguageModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quantifying Behavioral Tails in Black-Box Language Models" />
+<script type="application/ld+json">
+{"description":"We introduce RareTrap, a framework for estimating the probability of severe behaviors in black box large language models (LLMs). A key challenge for probability estimation is defining a tractable distribution over the input space. To accomplish that, RareTrap uses a surrogate LLM and constructs a geometry-aware mapping from a lower-dimensional latent reference space into its token-embedding space to induce an explicit and reproducible distribution over input prompts. A response-level performance function is utilized on the response to quantify behavior severity. This enables sequential rare event simulation that concentrates evaluations on progressively more severe behaviors while preserving probability under the induced prompt distribution, which would otherwise be prohibitive to measure. Across 10 open-weight and two frontier models (GPT-5.4 and Claude Sonnet 4.6), we find that RareTrap successfully induces severe resource consumption behaviors and computes their probability with as few as 200 evaluations. RareTrap provides model developers a principled approach for evaluating language models under a common distribution, and prioritizing alignment effort to improve safety and mitigate risks. Code is published online: https://anonymous.4open.science/r/rare_trap-D7F0.","datePublished":"2026-09-29T00:00:00+00:00","dateModified":"2026-09-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/29/QuantifyingBehavioralTailsinBlackBoxLanguageModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/29/QuantifyingBehavioralTailsinBlackBoxLanguageModels.html","author":{"@type":"Person","name":"Elsayed Eshra, Ali Al-Lawati, Dongwon Lee, Suhang Wang"},"@type":"BlogPosting","headline":"Quantifying Behavioral Tails in Black-Box Language Models","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-29 00:00:00 +0000">09-29</time>
+  </p>
+  
+  <h1>Quantifying Behavioral Tails in Black-Box Language Models</h1>
+  <br>Elsayed Eshra, Ali Al-Lawati, Dongwon Lee, Suhang Wang</h3>
+  <br> [stat.ML]
+
+  <p>We introduce RareTrap, a framework for estimating the probability of severe behaviors in black box large language models (LLMs). A key challenge for probability estimation is defining a tractable distribution over the input space. To accomplish that, RareTrap uses a surrogate LLM and constructs a geometry-aware mapping from a lower-dimensional latent reference space into its token-embedding space to induce an explicit and reproducible distribution over input prompts. A response-level performance function is utilized on the response to quantify behavior severity. This enables sequential rare event simulation that concentrates evaluations on progressively more severe behaviors while preserving probability under the induced prompt distribution, which would otherwise be prohibitive to measure. Across 10 open-weight and two frontier models (GPT-5.4 and Claude Sonnet 4.6), we find that RareTrap successfully induces severe resource consumption behaviors and computes their probability with as few as 200 evaluations. RareTrap provides model developers a principled approach for evaluating language models under a common distribution, and prioritizing alignment effort to improve safety and mitigate risks. Code is published online: https://anonymous.4open.science/r/rare_trap-D7F0.</p>
+
+<p><a href="https://arxiv.org/abs/2609.33638">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

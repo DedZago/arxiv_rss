@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage" />
+<meta name="author" content="Qianyi Chen, Bo Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Conformal prediction provides distribution-free finite-sample marginal coverage, but post-hoc calibration data may be too scarce to learn how uncertainty varies across inputs. Meanwhile, abundant covariates can often be labeled cheaply by domain models or general-purpose language models. We study whether these synthetic labels can improve conditional coverage when only a small trusted sample is available. Building on score-quantile regression, we introduce prediction-powered quantile learning: a synthetic-labeled pool estimates pinball risk, paired trusted and synthetic outcomes correct its bias, and an independent trusted split performs final conformalization. Profiling pinball risk over scalar corrections reveals that population conditional-coverage error is its functional gradient; the corresponding Hessian removes global shifts and weights remaining shape error by boundary density. Composing this geometry with prediction-powered learning yields a three-resource expansion and a benefit–cost rule for synthetic power. Across eight regression benchmarks, synthetic-powered quantile learning substantially improves downstream conditional coverage while preserving marginal validity and producing more compact prediction sets. A human-rating study finds similar gains from external LLM labels and exposes a quality–quantity–cost tradeoff." />
+<meta property="og:description" content="Conformal prediction provides distribution-free finite-sample marginal coverage, but post-hoc calibration data may be too scarce to learn how uncertainty varies across inputs. Meanwhile, abundant covariates can often be labeled cheaply by domain models or general-purpose language models. We study whether these synthetic labels can improve conditional coverage when only a small trusted sample is available. Building on score-quantile regression, we introduce prediction-powered quantile learning: a synthetic-labeled pool estimates pinball risk, paired trusted and synthetic outcomes correct its bias, and an independent trusted split performs final conformalization. Profiling pinball risk over scalar corrections reveals that population conditional-coverage error is its functional gradient; the corresponding Hessian removes global shifts and weights remaining shape error by boundary density. Composing this geometry with prediction-powered learning yields a three-resource expansion and a benefit–cost rule for synthetic power. Across eight regression benchmarks, synthetic-powered quantile learning substantially improves downstream conditional coverage while preserving marginal validity and producing more compact prediction sets. A human-rating study finds similar gains from external LLM labels and exposes a quality–quantity–cost tradeoff." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/29/HowSyntheticLabelsImproveConformalPredictionAPerspectiveonConditionalCoverage.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/29/HowSyntheticLabelsImproveConformalPredictionAPerspectiveonConditionalCoverage.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage" />
+<script type="application/ld+json">
+{"description":"Conformal prediction provides distribution-free finite-sample marginal coverage, but post-hoc calibration data may be too scarce to learn how uncertainty varies across inputs. Meanwhile, abundant covariates can often be labeled cheaply by domain models or general-purpose language models. We study whether these synthetic labels can improve conditional coverage when only a small trusted sample is available. Building on score-quantile regression, we introduce prediction-powered quantile learning: a synthetic-labeled pool estimates pinball risk, paired trusted and synthetic outcomes correct its bias, and an independent trusted split performs final conformalization. Profiling pinball risk over scalar corrections reveals that population conditional-coverage error is its functional gradient; the corresponding Hessian removes global shifts and weights remaining shape error by boundary density. Composing this geometry with prediction-powered learning yields a three-resource expansion and a benefit–cost rule for synthetic power. Across eight regression benchmarks, synthetic-powered quantile learning substantially improves downstream conditional coverage while preserving marginal validity and producing more compact prediction sets. A human-rating study finds similar gains from external LLM labels and exposes a quality–quantity–cost tradeoff.","datePublished":"2026-09-29T00:00:00+00:00","dateModified":"2026-09-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/29/HowSyntheticLabelsImproveConformalPredictionAPerspectiveonConditionalCoverage.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/29/HowSyntheticLabelsImproveConformalPredictionAPerspectiveonConditionalCoverage.html","author":{"@type":"Person","name":"Qianyi Chen, Bo Li"},"@type":"BlogPosting","headline":"How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-29 00:00:00 +0000">09-29</time>
+  </p>
+  
+  <h1>How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage</h1>
+  <br>Qianyi Chen, Bo Li</h3>
+  <br> [stat.ME]
+
+  <p>Conformal prediction provides distribution-free finite-sample marginal coverage, but post-hoc calibration data may be too scarce to learn how uncertainty varies across inputs. Meanwhile, abundant covariates can often be labeled cheaply by domain models or general-purpose language models. We study whether these synthetic labels can improve conditional coverage when only a small trusted sample is available. Building on score-quantile regression, we introduce prediction-powered quantile learning: a synthetic-labeled pool estimates pinball risk, paired trusted and synthetic outcomes correct its bias, and an independent trusted split performs final conformalization. Profiling pinball risk over scalar corrections reveals that population conditional-coverage error is its functional gradient; the corresponding Hessian removes global shifts and weights remaining shape error by boundary density. Composing this geometry with prediction-powered learning yields a three-resource expansion and a benefit–cost rule for synthetic power. Across eight regression benchmarks, synthetic-powered quantile learning substantially improves downstream conditional coverage while preserving marginal validity and producing more compact prediction sets. A human-rating study finds similar gains from external LLM labels and exposes a quality–quantity–cost tradeoff.</p>
+
+<p><a href="https://arxiv.org/abs/2609.33482">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
