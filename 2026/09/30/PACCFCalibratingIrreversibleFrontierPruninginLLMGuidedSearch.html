@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PAC-CF: Calibrating Irreversible Frontier Pruning in LLM-Guided Search</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="PAC-CF: Calibrating Irreversible Frontier Pruning in LLM-Guided Search" />
+<meta name="author" content="Tianhao Qian, Jiayu Chen, Zhenyu Sun, Lixu Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="LLM-guided search explores multiple candidate trajectories, but at substantial test-time cost. Pruning low-scoring frontier candidates can control this cost, yet it also turns potentially biased evaluator scores into irreversible decisions: systematic ranking errors can persist under repeated scoring and remove useful branches. We propose Probably Approximately Correct Conformal Filtering (PAC-CF). Its fixed-frontier analysis formulates elimination as an $(\varepsilon,\delta)$-PAC problem under bounded evaluator bias; its operational rule separately calibrates a score-gap threshold on held-out tasks by running the original controller without PAC-CF and using post-search verifier labels to measure the deficit of solution-preserving candidates relative to the frontier leader. Conditional on exchangeable native-controller tasks with nonempty protected exposure, conformal calibration gives finite-sample coverage for retaining at least one verifier-defined valid continuation at every protected frontier on the native trajectory. At deployment, PAC-CF removes only candidates whose gap from the highest frontier score exceeds the frozen threshold. We evaluate PAC-CF across three domains, five controllers, and four request budgets from B100 to B500. In the cross-domain/controller macro averages, the point estimates for all three workload measures are lower at every budget; the paired-bootstrap 95\% confidence interval for utility excludes zero at B100 and B200. For pruning-aware ToolTree, the full-test-set cross-domain utility difference is $+4.38$ points at each tested budget; on the natural-termination sensitivity cohort, physical requests decrease by $18.94$–$18.95\%$ and end-to-end token usage by $23.57$–$23.76\%$." />
+<meta property="og:description" content="LLM-guided search explores multiple candidate trajectories, but at substantial test-time cost. Pruning low-scoring frontier candidates can control this cost, yet it also turns potentially biased evaluator scores into irreversible decisions: systematic ranking errors can persist under repeated scoring and remove useful branches. We propose Probably Approximately Correct Conformal Filtering (PAC-CF). Its fixed-frontier analysis formulates elimination as an $(\varepsilon,\delta)$-PAC problem under bounded evaluator bias; its operational rule separately calibrates a score-gap threshold on held-out tasks by running the original controller without PAC-CF and using post-search verifier labels to measure the deficit of solution-preserving candidates relative to the frontier leader. Conditional on exchangeable native-controller tasks with nonempty protected exposure, conformal calibration gives finite-sample coverage for retaining at least one verifier-defined valid continuation at every protected frontier on the native trajectory. At deployment, PAC-CF removes only candidates whose gap from the highest frontier score exceeds the frozen threshold. We evaluate PAC-CF across three domains, five controllers, and four request budgets from B100 to B500. In the cross-domain/controller macro averages, the point estimates for all three workload measures are lower at every budget; the paired-bootstrap 95\% confidence interval for utility excludes zero at B100 and B200. For pruning-aware ToolTree, the full-test-set cross-domain utility difference is $+4.38$ points at each tested budget; on the natural-termination sensitivity cohort, physical requests decrease by $18.94$–$18.95\%$ and end-to-end token usage by $23.57$–$23.76\%$." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/30/PACCFCalibratingIrreversibleFrontierPruninginLLMGuidedSearch.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/30/PACCFCalibratingIrreversibleFrontierPruninginLLMGuidedSearch.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PAC-CF: Calibrating Irreversible Frontier Pruning in LLM-Guided Search" />
+<script type="application/ld+json">
+{"description":"LLM-guided search explores multiple candidate trajectories, but at substantial test-time cost. Pruning low-scoring frontier candidates can control this cost, yet it also turns potentially biased evaluator scores into irreversible decisions: systematic ranking errors can persist under repeated scoring and remove useful branches. We propose Probably Approximately Correct Conformal Filtering (PAC-CF). Its fixed-frontier analysis formulates elimination as an $(\\varepsilon,\\delta)$-PAC problem under bounded evaluator bias; its operational rule separately calibrates a score-gap threshold on held-out tasks by running the original controller without PAC-CF and using post-search verifier labels to measure the deficit of solution-preserving candidates relative to the frontier leader. Conditional on exchangeable native-controller tasks with nonempty protected exposure, conformal calibration gives finite-sample coverage for retaining at least one verifier-defined valid continuation at every protected frontier on the native trajectory. At deployment, PAC-CF removes only candidates whose gap from the highest frontier score exceeds the frozen threshold. We evaluate PAC-CF across three domains, five controllers, and four request budgets from B100 to B500. In the cross-domain/controller macro averages, the point estimates for all three workload measures are lower at every budget; the paired-bootstrap 95\\% confidence interval for utility excludes zero at B100 and B200. For pruning-aware ToolTree, the full-test-set cross-domain utility difference is $+4.38$ points at each tested budget; on the natural-termination sensitivity cohort, physical requests decrease by $18.94$–$18.95\\%$ and end-to-end token usage by $23.57$–$23.76\\%$.","datePublished":"2026-09-30T00:00:00+00:00","dateModified":"2026-09-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/30/PACCFCalibratingIrreversibleFrontierPruninginLLMGuidedSearch.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/30/PACCFCalibratingIrreversibleFrontierPruninginLLMGuidedSearch.html","author":{"@type":"Person","name":"Tianhao Qian, Jiayu Chen, Zhenyu Sun, Lixu Wang"},"@type":"BlogPosting","headline":"PAC-CF: Calibrating Irreversible Frontier Pruning in LLM-Guided Search","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-30 00:00:00 +0000">09-30</time>
+  </p>
+  
+  <h1>PAC-CF: Calibrating Irreversible Frontier Pruning in LLM-Guided Search</h1>
+  <br>Tianhao Qian, Jiayu Chen, Zhenyu Sun, Lixu Wang</h3>
+  <br> [stat.ML]
+
+  <p>LLM-guided search explores multiple candidate trajectories, but at substantial test-time cost. Pruning low-scoring frontier candidates can control this cost, yet it also turns potentially biased evaluator scores into irreversible decisions: systematic ranking errors can persist under repeated scoring and remove useful branches. We propose Probably Approximately Correct Conformal Filtering (PAC-CF). Its fixed-frontier analysis formulates elimination as an $(\varepsilon,\delta)$-PAC problem under bounded evaluator bias; its operational rule separately calibrates a score-gap threshold on held-out tasks by running the original controller without PAC-CF and using post-search verifier labels to measure the deficit of solution-preserving candidates relative to the frontier leader. Conditional on exchangeable native-controller tasks with nonempty protected exposure, conformal calibration gives finite-sample coverage for retaining at least one verifier-defined valid continuation at every protected frontier on the native trajectory. At deployment, PAC-CF removes only candidates whose gap from the highest frontier score exceeds the frozen threshold. We evaluate PAC-CF across three domains, five controllers, and four request budgets from B100 to B500. In the cross-domain/controller macro averages, the point estimates for all three workload measures are lower at every budget; the paired-bootstrap 95\% confidence interval for utility excludes zero at B100 and B200. For pruning-aware ToolTree, the full-test-set cross-domain utility difference is $+4.38$ points at each tested budget; on the natural-termination sensitivity cohort, physical requests decrease by $18.94$–$18.95\%$ and end-to-end token usage by $23.57$–$23.76\%$.</p>
+
+<p><a href="https://arxiv.org/abs/2604.14345">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

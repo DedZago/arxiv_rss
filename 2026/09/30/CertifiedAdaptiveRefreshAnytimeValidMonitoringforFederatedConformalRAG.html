@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Certified Adaptive Refresh: Anytime-Valid Monitoring for Federated Conformal RAG</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Certified Adaptive Refresh: Anytime-Valid Monitoring for Federated Conformal RAG" />
+<meta name="author" content="Prasanjit Dubey, Xiaoming Huo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Question-answering services built on retrieval-augmented generation (RAG), in which a language model answers from retrieved documents, are inspected continuously and upgraded repeatedly, so their reliability guarantee must survive both. We study federated conformal RAG: nodes holding private corpora score candidate answers with a shared language model and send compressed scores to a hub that returns an answer set; a miss omits the true answer. We formulate monitoring as a sequential test: alarm when misses exceed a certified bound on the miss rate (the allowance). But a conformal certificate covers one frozen configuration at one look fixed in advance, so it gives no anytime-valid alarm; a threshold calibrated for one model certifies nothing about its replacement; and re-certifying each upgrade at full error level compounds failures. We propose Anytime-FC-RAG with three auditable rules: pick each configuration before its fresh calibration, charge every certificate attempt to one trajectory-wide budget $\delta_{\rm cal}$, and fix threshold, allowance and bet before each query. One betting wealth $E_t$, growing in expectation only when misses exceed the allowance, never resets across deployments. Our certified adaptive-refresh theorem shows that, with evidence budget $\delta_e$, alarming when $E_t$ reaches $1/\delta_e$ has false-alarm probability at most $\delta_e + \delta_{\rm cal}$ under a random number of history-selected, evidence-driven refreshes of model, retriever, corpus, score or threshold; $\delta_{\rm cal}$ pays for wrong certificates. With an exact order-statistic certificate the bound is distribution-free, architecture-agnostic and about misses, not per-input coverage or distribution shift as such. On Qwen2.5/MMLU-Pro the alarm separated audited-harmful from benign shifts completely at a 5% budget; in a model swap, only fresh calibration kept a downgrade’s miss rate in check." />
+<meta property="og:description" content="Question-answering services built on retrieval-augmented generation (RAG), in which a language model answers from retrieved documents, are inspected continuously and upgraded repeatedly, so their reliability guarantee must survive both. We study federated conformal RAG: nodes holding private corpora score candidate answers with a shared language model and send compressed scores to a hub that returns an answer set; a miss omits the true answer. We formulate monitoring as a sequential test: alarm when misses exceed a certified bound on the miss rate (the allowance). But a conformal certificate covers one frozen configuration at one look fixed in advance, so it gives no anytime-valid alarm; a threshold calibrated for one model certifies nothing about its replacement; and re-certifying each upgrade at full error level compounds failures. We propose Anytime-FC-RAG with three auditable rules: pick each configuration before its fresh calibration, charge every certificate attempt to one trajectory-wide budget $\delta_{\rm cal}$, and fix threshold, allowance and bet before each query. One betting wealth $E_t$, growing in expectation only when misses exceed the allowance, never resets across deployments. Our certified adaptive-refresh theorem shows that, with evidence budget $\delta_e$, alarming when $E_t$ reaches $1/\delta_e$ has false-alarm probability at most $\delta_e + \delta_{\rm cal}$ under a random number of history-selected, evidence-driven refreshes of model, retriever, corpus, score or threshold; $\delta_{\rm cal}$ pays for wrong certificates. With an exact order-statistic certificate the bound is distribution-free, architecture-agnostic and about misses, not per-input coverage or distribution shift as such. On Qwen2.5/MMLU-Pro the alarm separated audited-harmful from benign shifts completely at a 5% budget; in a model swap, only fresh calibration kept a downgrade’s miss rate in check." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/30/CertifiedAdaptiveRefreshAnytimeValidMonitoringforFederatedConformalRAG.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/30/CertifiedAdaptiveRefreshAnytimeValidMonitoringforFederatedConformalRAG.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Certified Adaptive Refresh: Anytime-Valid Monitoring for Federated Conformal RAG" />
+<script type="application/ld+json">
+{"description":"Question-answering services built on retrieval-augmented generation (RAG), in which a language model answers from retrieved documents, are inspected continuously and upgraded repeatedly, so their reliability guarantee must survive both. We study federated conformal RAG: nodes holding private corpora score candidate answers with a shared language model and send compressed scores to a hub that returns an answer set; a miss omits the true answer. We formulate monitoring as a sequential test: alarm when misses exceed a certified bound on the miss rate (the allowance). But a conformal certificate covers one frozen configuration at one look fixed in advance, so it gives no anytime-valid alarm; a threshold calibrated for one model certifies nothing about its replacement; and re-certifying each upgrade at full error level compounds failures. We propose Anytime-FC-RAG with three auditable rules: pick each configuration before its fresh calibration, charge every certificate attempt to one trajectory-wide budget $\\delta_{\\rm cal}$, and fix threshold, allowance and bet before each query. One betting wealth $E_t$, growing in expectation only when misses exceed the allowance, never resets across deployments. Our certified adaptive-refresh theorem shows that, with evidence budget $\\delta_e$, alarming when $E_t$ reaches $1/\\delta_e$ has false-alarm probability at most $\\delta_e + \\delta_{\\rm cal}$ under a random number of history-selected, evidence-driven refreshes of model, retriever, corpus, score or threshold; $\\delta_{\\rm cal}$ pays for wrong certificates. With an exact order-statistic certificate the bound is distribution-free, architecture-agnostic and about misses, not per-input coverage or distribution shift as such. On Qwen2.5/MMLU-Pro the alarm separated audited-harmful from benign shifts completely at a 5% budget; in a model swap, only fresh calibration kept a downgrade’s miss rate in check.","datePublished":"2026-09-30T00:00:00+00:00","dateModified":"2026-09-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/30/CertifiedAdaptiveRefreshAnytimeValidMonitoringforFederatedConformalRAG.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/30/CertifiedAdaptiveRefreshAnytimeValidMonitoringforFederatedConformalRAG.html","author":{"@type":"Person","name":"Prasanjit Dubey, Xiaoming Huo"},"@type":"BlogPosting","headline":"Certified Adaptive Refresh: Anytime-Valid Monitoring for Federated Conformal RAG","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-30 00:00:00 +0000">09-30</time>
+  </p>
+  
+  <h1>Certified Adaptive Refresh: Anytime-Valid Monitoring for Federated Conformal RAG</h1>
+  <br>Prasanjit Dubey, Xiaoming Huo</h3>
+  <br> [stat.ML]
+
+  <p>Question-answering services built on retrieval-augmented generation (RAG), in which a language model answers from retrieved documents, are inspected continuously and upgraded repeatedly, so their reliability guarantee must survive both. We study federated conformal RAG: nodes holding private corpora score candidate answers with a shared language model and send compressed scores to a hub that returns an answer set; a miss omits the true answer. We formulate monitoring as a sequential test: alarm when misses exceed a certified bound on the miss rate (the allowance). But a conformal certificate covers one frozen configuration at one look fixed in advance, so it gives no anytime-valid alarm; a threshold calibrated for one model certifies nothing about its replacement; and re-certifying each upgrade at full error level compounds failures. We propose Anytime-FC-RAG with three auditable rules: pick each configuration before its fresh calibration, charge every certificate attempt to one trajectory-wide budget $\delta_{\rm cal}$, and fix threshold, allowance and bet before each query. One betting wealth $E_t$, growing in expectation only when misses exceed the allowance, never resets across deployments. Our certified adaptive-refresh theorem shows that, with evidence budget $\delta_e$, alarming when $E_t$ reaches $1/\delta_e$ has false-alarm probability at most $\delta_e + \delta_{\rm cal}$ under a random number of history-selected, evidence-driven refreshes of model, retriever, corpus, score or threshold; $\delta_{\rm cal}$ pays for wrong certificates. With an exact order-statistic certificate the bound is distribution-free, architecture-agnostic and about misses, not per-input coverage or distribution shift as such. On Qwen2.5/MMLU-Pro the alarm separated audited-harmful from benign shifts completely at a 5% budget; in a model swap, only fresh calibration kept a downgrade’s miss rate in check.</p>
+
+<p><a href="https://arxiv.org/abs/2605.29139">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

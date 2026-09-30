@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The MCMC convergence graph: a diagnostic for multimodal posteriors</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The MCMC convergence graph: a diagnostic for multimodal posteriors" />
+<meta name="author" content="Cici Chen Gu, Eszter Lakatos, Sara Hamis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Multimodality is common in many scientific and engineering applications. However, standard Markov chain Monte Carlo (MCMC) convergence diagnostics often penalise multimodality in practice by conflating overall poor mixing with groups of chains that have mixed well within distinct modes. To diagnose multimodality rather than flag it as a sampling failure, we introduce the MCMC convergence graph: a graph-based diagnostic that computes pairwise R-hat values between chains and summarises them in a graph, revealing sets of chains that explore the same posterior mode. We implement the method in the probabilistic programming framework Stan and demonstrate its use on worked examples ranging from regression models with inherent multimodality in the data, to a pharmacokinetic model for which multimodality reflects non-identifiability. The graph-based diagnostic, which we make freely available in the R package mcmcConvergenceGraph and which accepts MCMC output from any sampler, provides both graphical and numerical summaries of MCMC behaviour for diagnosing multimodality." />
+<meta property="og:description" content="Multimodality is common in many scientific and engineering applications. However, standard Markov chain Monte Carlo (MCMC) convergence diagnostics often penalise multimodality in practice by conflating overall poor mixing with groups of chains that have mixed well within distinct modes. To diagnose multimodality rather than flag it as a sampling failure, we introduce the MCMC convergence graph: a graph-based diagnostic that computes pairwise R-hat values between chains and summarises them in a graph, revealing sets of chains that explore the same posterior mode. We implement the method in the probabilistic programming framework Stan and demonstrate its use on worked examples ranging from regression models with inherent multimodality in the data, to a pharmacokinetic model for which multimodality reflects non-identifiability. The graph-based diagnostic, which we make freely available in the R package mcmcConvergenceGraph and which accepts MCMC output from any sampler, provides both graphical and numerical summaries of MCMC behaviour for diagnosing multimodality." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/09/30/TheMCMCconvergencegraphadiagnosticformultimodalposteriors.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/09/30/TheMCMCconvergencegraphadiagnosticformultimodalposteriors.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The MCMC convergence graph: a diagnostic for multimodal posteriors" />
+<script type="application/ld+json">
+{"description":"Multimodality is common in many scientific and engineering applications. However, standard Markov chain Monte Carlo (MCMC) convergence diagnostics often penalise multimodality in practice by conflating overall poor mixing with groups of chains that have mixed well within distinct modes. To diagnose multimodality rather than flag it as a sampling failure, we introduce the MCMC convergence graph: a graph-based diagnostic that computes pairwise R-hat values between chains and summarises them in a graph, revealing sets of chains that explore the same posterior mode. We implement the method in the probabilistic programming framework Stan and demonstrate its use on worked examples ranging from regression models with inherent multimodality in the data, to a pharmacokinetic model for which multimodality reflects non-identifiability. The graph-based diagnostic, which we make freely available in the R package mcmcConvergenceGraph and which accepts MCMC output from any sampler, provides both graphical and numerical summaries of MCMC behaviour for diagnosing multimodality.","datePublished":"2026-09-30T00:00:00+00:00","dateModified":"2026-09-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/09/30/TheMCMCconvergencegraphadiagnosticformultimodalposteriors.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/09/30/TheMCMCconvergencegraphadiagnosticformultimodalposteriors.html","author":{"@type":"Person","name":"Cici Chen Gu, Eszter Lakatos, Sara Hamis"},"@type":"BlogPosting","headline":"The MCMC convergence graph: a diagnostic for multimodal posteriors","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-09-30 00:00:00 +0000">09-30</time>
+  </p>
+  
+  <h1>The MCMC convergence graph: a diagnostic for multimodal posteriors</h1>
+  <br>Cici Chen Gu, Eszter Lakatos, Sara Hamis</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>Multimodality is common in many scientific and engineering applications. However, standard Markov chain Monte Carlo (MCMC) convergence diagnostics often penalise multimodality in practice by conflating overall poor mixing with groups of chains that have mixed well within distinct modes. To diagnose multimodality rather than flag it as a sampling failure, we introduce the MCMC convergence graph: a graph-based diagnostic that computes pairwise R-hat values between chains and summarises them in a graph, revealing sets of chains that explore the same posterior mode. We implement the method in the probabilistic programming framework Stan and demonstrate its use on worked examples ranging from regression models with inherent multimodality in the data, to a pharmacokinetic model for which multimodality reflects non-identifiability. The graph-based diagnostic, which we make freely available in the R package mcmcConvergenceGraph and which accepts MCMC output from any sampler, provides both graphical and numerical summaries of MCMC behaviour for diagnosing multimodality.</p>
+
+<p><a href="https://arxiv.org/abs/2609.37352">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
