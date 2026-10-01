@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Warm-starting PDE solvers with any-dimensional machine learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Warm-starting PDE solvers with any-dimensional machine learning" />
+<meta name="author" content="Wilson G. Gregory, George A. Kevrekidis, Ben Blum-Smith, Soledad Villar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Any-dimensional machine learning models, such as graph neural networks (GNNs), can be naturally trained and evaluated on inputs of different sizes and dimensions. Inspired by the GNN transferability literature, we show mathematical conditions under which a partial differential equation (PDE) learning-based solver can be trained in small dimensions and directly applied to solve a higher dimensional PDE in a zero-shot fashion. These conditions are based on symmetries in both the partial differential equation and the initial data. When the equations satisfy the symmetries but the data does not, which is the case for many PDEs arising from physics, we show that our theory gives a principled way of warm-starting low-dimensional PDE solvers for higher dimensional PDEs. We apply this method on the heat equation, Burgers’ equation, and the compressible Navier–Stokes equations, improving the performance in both zero-shot and typical training regimes on high dimensional data. For example, we train a surrogate model on 2D Navier–Stokes data and achieve better results on 3D test data than a baseline surrogate model trained on 3D data, while only using 12$\%$ of the flops and 20$\%$ of the total data size." />
+<meta property="og:description" content="Any-dimensional machine learning models, such as graph neural networks (GNNs), can be naturally trained and evaluated on inputs of different sizes and dimensions. Inspired by the GNN transferability literature, we show mathematical conditions under which a partial differential equation (PDE) learning-based solver can be trained in small dimensions and directly applied to solve a higher dimensional PDE in a zero-shot fashion. These conditions are based on symmetries in both the partial differential equation and the initial data. When the equations satisfy the symmetries but the data does not, which is the case for many PDEs arising from physics, we show that our theory gives a principled way of warm-starting low-dimensional PDE solvers for higher dimensional PDEs. We apply this method on the heat equation, Burgers’ equation, and the compressible Navier–Stokes equations, improving the performance in both zero-shot and typical training regimes on high dimensional data. For example, we train a surrogate model on 2D Navier–Stokes data and achieve better results on 3D test data than a baseline surrogate model trained on 3D data, while only using 12$\%$ of the flops and 20$\%$ of the total data size." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/01/WarmstartingPDEsolverswithanydimensionalmachinelearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/01/WarmstartingPDEsolverswithanydimensionalmachinelearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Warm-starting PDE solvers with any-dimensional machine learning" />
+<script type="application/ld+json">
+{"description":"Any-dimensional machine learning models, such as graph neural networks (GNNs), can be naturally trained and evaluated on inputs of different sizes and dimensions. Inspired by the GNN transferability literature, we show mathematical conditions under which a partial differential equation (PDE) learning-based solver can be trained in small dimensions and directly applied to solve a higher dimensional PDE in a zero-shot fashion. These conditions are based on symmetries in both the partial differential equation and the initial data. When the equations satisfy the symmetries but the data does not, which is the case for many PDEs arising from physics, we show that our theory gives a principled way of warm-starting low-dimensional PDE solvers for higher dimensional PDEs. We apply this method on the heat equation, Burgers’ equation, and the compressible Navier–Stokes equations, improving the performance in both zero-shot and typical training regimes on high dimensional data. For example, we train a surrogate model on 2D Navier–Stokes data and achieve better results on 3D test data than a baseline surrogate model trained on 3D data, while only using 12$\\%$ of the flops and 20$\\%$ of the total data size.","datePublished":"2026-10-01T00:00:00+00:00","dateModified":"2026-10-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/01/WarmstartingPDEsolverswithanydimensionalmachinelearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/01/WarmstartingPDEsolverswithanydimensionalmachinelearning.html","author":{"@type":"Person","name":"Wilson G. Gregory, George A. Kevrekidis, Ben Blum-Smith, Soledad Villar"},"@type":"BlogPosting","headline":"Warm-starting PDE solvers with any-dimensional machine learning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>Warm-starting PDE solvers with any-dimensional machine learning</h1>
+  <br>Wilson G. Gregory, George A. Kevrekidis, Ben Blum-Smith, Soledad Villar</h3>
+  <br> [stat.ML]
+
+  <p>Any-dimensional machine learning models, such as graph neural networks (GNNs), can be naturally trained and evaluated on inputs of different sizes and dimensions. Inspired by the GNN transferability literature, we show mathematical conditions under which a partial differential equation (PDE) learning-based solver can be trained in small dimensions and directly applied to solve a higher dimensional PDE in a zero-shot fashion. These conditions are based on symmetries in both the partial differential equation and the initial data. When the equations satisfy the symmetries but the data does not, which is the case for many PDEs arising from physics, we show that our theory gives a principled way of warm-starting low-dimensional PDE solvers for higher dimensional PDEs. We apply this method on the heat equation, Burgers’ equation, and the compressible Navier–Stokes equations, improving the performance in both zero-shot and typical training regimes on high dimensional data. For example, we train a surrogate model on 2D Navier–Stokes data and achieve better results on 3D test data than a baseline surrogate model trained on 3D data, while only using 12$\%$ of the flops and 20$\%$ of the total data size.</p>
+
+<p><a href="https://arxiv.org/abs/2609.38916">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

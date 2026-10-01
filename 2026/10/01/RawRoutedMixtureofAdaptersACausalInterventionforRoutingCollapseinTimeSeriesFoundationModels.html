@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models" />
+<meta name="author" content="Hung Phan, Thuy T. Nguyen, Minh Ngoc Dinh, Nhat-Quang Tran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Time series foundation models (TSFMs) commonly adapt to new data by attaching a single trainable head to a frozen backbone, a one-size-fits-all setup that underfits heterogeneous regimes. Replacing the head with a mixture of experts is the standard upgrade, but on instance-normalized backbones (the dominant TSFM design class) it fails: routing entropy collapses to zero and one expert absorbs every input, a failure we call normalization-induced routing collapse. Standard MoE rescue mechanisms do not repair it, because the cause is in the router’s input, not its optimization. Pre-encoder normalization strips the statistics a router would need to tell regimes apart. A mutual-information decomposition makes this precise and yields a signal-ratio that, computed before training, predicts dataset vulnerability (Spearman $\rho = -0.88$). Eight causal controls, including a vision-modality replication, isolate instance normalization as the cause. The prescription is a minimal causal intervention: Raw-Routed Mixture of Adapters (RR-MoA), which routes on the raw, pre-normalization input. Under a strictly frozen backbone, RR-MoA wins 54/54 comparisons against the strongest fixed adapter and significantly outperforms LoRA, TRACE, AdaMix, and full fine-tuning. The effect generalizes across six backbones and an imputation task. Frozen RR-MoA also beats full fine-tuning by 12-79% (the Frozen Paradox); two architecturally distinct variants confirm the principle generalizes beyond this specific router." />
+<meta property="og:description" content="Time series foundation models (TSFMs) commonly adapt to new data by attaching a single trainable head to a frozen backbone, a one-size-fits-all setup that underfits heterogeneous regimes. Replacing the head with a mixture of experts is the standard upgrade, but on instance-normalized backbones (the dominant TSFM design class) it fails: routing entropy collapses to zero and one expert absorbs every input, a failure we call normalization-induced routing collapse. Standard MoE rescue mechanisms do not repair it, because the cause is in the router’s input, not its optimization. Pre-encoder normalization strips the statistics a router would need to tell regimes apart. A mutual-information decomposition makes this precise and yields a signal-ratio that, computed before training, predicts dataset vulnerability (Spearman $\rho = -0.88$). Eight causal controls, including a vision-modality replication, isolate instance normalization as the cause. The prescription is a minimal causal intervention: Raw-Routed Mixture of Adapters (RR-MoA), which routes on the raw, pre-normalization input. Under a strictly frozen backbone, RR-MoA wins 54/54 comparisons against the strongest fixed adapter and significantly outperforms LoRA, TRACE, AdaMix, and full fine-tuning. The effect generalizes across six backbones and an imputation task. Frozen RR-MoA also beats full fine-tuning by 12-79% (the Frozen Paradox); two architecturally distinct variants confirm the principle generalizes beyond this specific router." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/01/RawRoutedMixtureofAdaptersACausalInterventionforRoutingCollapseinTimeSeriesFoundationModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/01/RawRoutedMixtureofAdaptersACausalInterventionforRoutingCollapseinTimeSeriesFoundationModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models" />
+<script type="application/ld+json">
+{"description":"Time series foundation models (TSFMs) commonly adapt to new data by attaching a single trainable head to a frozen backbone, a one-size-fits-all setup that underfits heterogeneous regimes. Replacing the head with a mixture of experts is the standard upgrade, but on instance-normalized backbones (the dominant TSFM design class) it fails: routing entropy collapses to zero and one expert absorbs every input, a failure we call normalization-induced routing collapse. Standard MoE rescue mechanisms do not repair it, because the cause is in the router’s input, not its optimization. Pre-encoder normalization strips the statistics a router would need to tell regimes apart. A mutual-information decomposition makes this precise and yields a signal-ratio that, computed before training, predicts dataset vulnerability (Spearman $\\rho = -0.88$). Eight causal controls, including a vision-modality replication, isolate instance normalization as the cause. The prescription is a minimal causal intervention: Raw-Routed Mixture of Adapters (RR-MoA), which routes on the raw, pre-normalization input. Under a strictly frozen backbone, RR-MoA wins 54/54 comparisons against the strongest fixed adapter and significantly outperforms LoRA, TRACE, AdaMix, and full fine-tuning. The effect generalizes across six backbones and an imputation task. Frozen RR-MoA also beats full fine-tuning by 12-79% (the Frozen Paradox); two architecturally distinct variants confirm the principle generalizes beyond this specific router.","datePublished":"2026-10-01T00:00:00+00:00","dateModified":"2026-10-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/01/RawRoutedMixtureofAdaptersACausalInterventionforRoutingCollapseinTimeSeriesFoundationModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/01/RawRoutedMixtureofAdaptersACausalInterventionforRoutingCollapseinTimeSeriesFoundationModels.html","author":{"@type":"Person","name":"Hung Phan, Thuy T. Nguyen, Minh Ngoc Dinh, Nhat-Quang Tran"},"@type":"BlogPosting","headline":"Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models</h1>
+  <br>Hung Phan, Thuy T. Nguyen, Minh Ngoc Dinh, Nhat-Quang Tran</h3>
+  <br> [stat.ML]
+
+  <p>Time series foundation models (TSFMs) commonly adapt to new data by attaching a single trainable head to a frozen backbone, a one-size-fits-all setup that underfits heterogeneous regimes. Replacing the head with a mixture of experts is the standard upgrade, but on instance-normalized backbones (the dominant TSFM design class) it fails: routing entropy collapses to zero and one expert absorbs every input, a failure we call normalization-induced routing collapse. Standard MoE rescue mechanisms do not repair it, because the cause is in the router’s input, not its optimization. Pre-encoder normalization strips the statistics a router would need to tell regimes apart. A mutual-information decomposition makes this precise and yields a signal-ratio that, computed before training, predicts dataset vulnerability (Spearman $\rho = -0.88$). Eight causal controls, including a vision-modality replication, isolate instance normalization as the cause. The prescription is a minimal causal intervention: Raw-Routed Mixture of Adapters (RR-MoA), which routes on the raw, pre-normalization input. Under a strictly frozen backbone, RR-MoA wins 54/54 comparisons against the strongest fixed adapter and significantly outperforms LoRA, TRACE, AdaMix, and full fine-tuning. The effect generalizes across six backbones and an imputation task. Frozen RR-MoA also beats full fine-tuning by 12-79% (the Frozen Paradox); two architecturally distinct variants confirm the principle generalizes beyond this specific router.</p>
+
+<p><a href="https://arxiv.org/abs/2609.39445">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

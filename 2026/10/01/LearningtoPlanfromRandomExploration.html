@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning to Plan from Random Exploration</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning to Plan from Random Exploration" />
+<meta name="author" content="Deqian Kong, Guangyan Sun, Sheng Cheng, Sirui Xie, Bo Pang, Jianwen Xie, Tony Geng, Caiwen Ding, Ying Nian Wu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Random exploration reveals how an environment can be traversed before a goal is specified. Can this experience support long-range planning without policy-improvement training? Our random-walk analysis explains what temporal relations contain: short horizons reveal geodesic geometry in the diffusion limit, while longer horizons reveal connectivity between regions before mixing removes these distinctions. We learn these relations with a conditional energy-based model that estimates temporal log-density ratios through horizon-conditioned embeddings. The model is trained on observation pairs by noise-contrastive estimation, without action or reward labels. The planner queries these learned relations at different horizons as it moves toward the goal. At test time, a separate local dynamics model predicts candidate action outcomes, and the temporal model evaluates their progress toward the goal by selecting or aggregating estimated improvements across horizons. The agent executes one action and replans with both models fixed. Experiments demonstrate long-range maze planning from random exploration using states and images. Learned score fields, embedding probes, and planned routes exhibit properties of a multiscale cognitive map. We further demonstrate egocentric navigation from random exploration and manipulation planning from suboptimal data." />
+<meta property="og:description" content="Random exploration reveals how an environment can be traversed before a goal is specified. Can this experience support long-range planning without policy-improvement training? Our random-walk analysis explains what temporal relations contain: short horizons reveal geodesic geometry in the diffusion limit, while longer horizons reveal connectivity between regions before mixing removes these distinctions. We learn these relations with a conditional energy-based model that estimates temporal log-density ratios through horizon-conditioned embeddings. The model is trained on observation pairs by noise-contrastive estimation, without action or reward labels. The planner queries these learned relations at different horizons as it moves toward the goal. At test time, a separate local dynamics model predicts candidate action outcomes, and the temporal model evaluates their progress toward the goal by selecting or aggregating estimated improvements across horizons. The agent executes one action and replans with both models fixed. Experiments demonstrate long-range maze planning from random exploration using states and images. Learned score fields, embedding probes, and planned routes exhibit properties of a multiscale cognitive map. We further demonstrate egocentric navigation from random exploration and manipulation planning from suboptimal data." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/01/LearningtoPlanfromRandomExploration.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/01/LearningtoPlanfromRandomExploration.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning to Plan from Random Exploration" />
+<script type="application/ld+json">
+{"description":"Random exploration reveals how an environment can be traversed before a goal is specified. Can this experience support long-range planning without policy-improvement training? Our random-walk analysis explains what temporal relations contain: short horizons reveal geodesic geometry in the diffusion limit, while longer horizons reveal connectivity between regions before mixing removes these distinctions. We learn these relations with a conditional energy-based model that estimates temporal log-density ratios through horizon-conditioned embeddings. The model is trained on observation pairs by noise-contrastive estimation, without action or reward labels. The planner queries these learned relations at different horizons as it moves toward the goal. At test time, a separate local dynamics model predicts candidate action outcomes, and the temporal model evaluates their progress toward the goal by selecting or aggregating estimated improvements across horizons. The agent executes one action and replans with both models fixed. Experiments demonstrate long-range maze planning from random exploration using states and images. Learned score fields, embedding probes, and planned routes exhibit properties of a multiscale cognitive map. We further demonstrate egocentric navigation from random exploration and manipulation planning from suboptimal data.","datePublished":"2026-10-01T00:00:00+00:00","dateModified":"2026-10-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/01/LearningtoPlanfromRandomExploration.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/01/LearningtoPlanfromRandomExploration.html","author":{"@type":"Person","name":"Deqian Kong, Guangyan Sun, Sheng Cheng, Sirui Xie, Bo Pang, Jianwen Xie, Tony Geng, Caiwen Ding, Ying Nian Wu"},"@type":"BlogPosting","headline":"Learning to Plan from Random Exploration","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>Learning to Plan from Random Exploration</h1>
+  <br>Deqian Kong, Guangyan Sun, Sheng Cheng, Sirui Xie, Bo Pang, Jianwen Xie, Tony Geng, Caiwen Ding, Ying Nian Wu</h3>
+  <br> [stat.ML]
+
+  <p>Random exploration reveals how an environment can be traversed before a goal is specified. Can this experience support long-range planning without policy-improvement training? Our random-walk analysis explains what temporal relations contain: short horizons reveal geodesic geometry in the diffusion limit, while longer horizons reveal connectivity between regions before mixing removes these distinctions. We learn these relations with a conditional energy-based model that estimates temporal log-density ratios through horizon-conditioned embeddings. The model is trained on observation pairs by noise-contrastive estimation, without action or reward labels. The planner queries these learned relations at different horizons as it moves toward the goal. At test time, a separate local dynamics model predicts candidate action outcomes, and the temporal model evaluates their progress toward the goal by selecting or aggregating estimated improvements across horizons. The agent executes one action and replans with both models fixed. Experiments demonstrate long-range maze planning from random exploration using states and images. Learned score fields, embedding probes, and planned routes exhibit properties of a multiscale cognitive map. We further demonstrate egocentric navigation from random exploration and manipulation planning from suboptimal data.</p>
+
+<p><a href="https://arxiv.org/abs/2609.38383">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

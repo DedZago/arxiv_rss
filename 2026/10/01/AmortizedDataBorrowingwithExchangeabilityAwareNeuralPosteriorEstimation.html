@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Amortized Data Borrowing with Exchangeability-Aware Neural Posterior Estimation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Amortized Data Borrowing with Exchangeability-Aware Neural Posterior Estimation" />
+<meta name="author" content="Chin-Hung Huang, JooChul Lee, Huan He" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Augmenting small concurrent studies with external or historical cohorts is attractive in drug development, where enrollment is slow, follow-up is expensive, and closely related trial or real-world data are often already available. Bayesian dynamic borrowing (BDB) provides a principled framework for adaptively controlling the influence of external data, but classical implementations often depend on hand-specified priors and MCMC-based inference, which can be computationally expensive and not generalizable. In this work, we study amortized neural posterior estimation (NPE) as a flexible alternative. A single network is pretrained on simulated current/external dataset pairs spanning covariate shift, outcome drift, and joint non-exchangeability, and then returns an approximate posterior for a scalar current-study target in a single forward pass. Through simulation studies, we find that NPE is most useful under outcome drift and joint mismatch: in the harder outcome-drift regimes, it gives up to about five-fold lower absolute bias than the best classical baseline and keeps Type I error close to nominal. After pretraining, posterior summaries are obtained in about 8 ms per dataset, roughly $10^3\times$ faster than MCMC-based borrowing baselines in our timing experiment. We further analyze Alzheimer’s Disease Neuroimaging Initiative (ADNI) data and show that, when mild cognitive impairment outcomes differ across cohorts, the NPE formulation recovers the later-cohort risk level in this example without claiming greater precision. Code is available at https://github.com/ChinHungScott/NPE-for-Bayesian-Dynamic-Borrowing-MLHC-." />
+<meta property="og:description" content="Augmenting small concurrent studies with external or historical cohorts is attractive in drug development, where enrollment is slow, follow-up is expensive, and closely related trial or real-world data are often already available. Bayesian dynamic borrowing (BDB) provides a principled framework for adaptively controlling the influence of external data, but classical implementations often depend on hand-specified priors and MCMC-based inference, which can be computationally expensive and not generalizable. In this work, we study amortized neural posterior estimation (NPE) as a flexible alternative. A single network is pretrained on simulated current/external dataset pairs spanning covariate shift, outcome drift, and joint non-exchangeability, and then returns an approximate posterior for a scalar current-study target in a single forward pass. Through simulation studies, we find that NPE is most useful under outcome drift and joint mismatch: in the harder outcome-drift regimes, it gives up to about five-fold lower absolute bias than the best classical baseline and keeps Type I error close to nominal. After pretraining, posterior summaries are obtained in about 8 ms per dataset, roughly $10^3\times$ faster than MCMC-based borrowing baselines in our timing experiment. We further analyze Alzheimer’s Disease Neuroimaging Initiative (ADNI) data and show that, when mild cognitive impairment outcomes differ across cohorts, the NPE formulation recovers the later-cohort risk level in this example without claiming greater precision. Code is available at https://github.com/ChinHungScott/NPE-for-Bayesian-Dynamic-Borrowing-MLHC-." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/01/AmortizedDataBorrowingwithExchangeabilityAwareNeuralPosteriorEstimation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/01/AmortizedDataBorrowingwithExchangeabilityAwareNeuralPosteriorEstimation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Amortized Data Borrowing with Exchangeability-Aware Neural Posterior Estimation" />
+<script type="application/ld+json">
+{"description":"Augmenting small concurrent studies with external or historical cohorts is attractive in drug development, where enrollment is slow, follow-up is expensive, and closely related trial or real-world data are often already available. Bayesian dynamic borrowing (BDB) provides a principled framework for adaptively controlling the influence of external data, but classical implementations often depend on hand-specified priors and MCMC-based inference, which can be computationally expensive and not generalizable. In this work, we study amortized neural posterior estimation (NPE) as a flexible alternative. A single network is pretrained on simulated current/external dataset pairs spanning covariate shift, outcome drift, and joint non-exchangeability, and then returns an approximate posterior for a scalar current-study target in a single forward pass. Through simulation studies, we find that NPE is most useful under outcome drift and joint mismatch: in the harder outcome-drift regimes, it gives up to about five-fold lower absolute bias than the best classical baseline and keeps Type I error close to nominal. After pretraining, posterior summaries are obtained in about 8 ms per dataset, roughly $10^3\\times$ faster than MCMC-based borrowing baselines in our timing experiment. We further analyze Alzheimer’s Disease Neuroimaging Initiative (ADNI) data and show that, when mild cognitive impairment outcomes differ across cohorts, the NPE formulation recovers the later-cohort risk level in this example without claiming greater precision. Code is available at https://github.com/ChinHungScott/NPE-for-Bayesian-Dynamic-Borrowing-MLHC-.","datePublished":"2026-10-01T00:00:00+00:00","dateModified":"2026-10-01T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/01/AmortizedDataBorrowingwithExchangeabilityAwareNeuralPosteriorEstimation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/01/AmortizedDataBorrowingwithExchangeabilityAwareNeuralPosteriorEstimation.html","author":{"@type":"Person","name":"Chin-Hung Huang, JooChul Lee, Huan He"},"@type":"BlogPosting","headline":"Amortized Data Borrowing with Exchangeability-Aware Neural Posterior Estimation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-01 00:00:00 +0000">10-01</time>
+  </p>
+  
+  <h1>Amortized Data Borrowing with Exchangeability-Aware Neural Posterior Estimation</h1>
+  <br>Chin-Hung Huang, JooChul Lee, Huan He</h3>
+  <br> [stat.ML]
+
+  <p>Augmenting small concurrent studies with external or historical cohorts is attractive in drug development, where enrollment is slow, follow-up is expensive, and closely related trial or real-world data are often already available. Bayesian dynamic borrowing (BDB) provides a principled framework for adaptively controlling the influence of external data, but classical implementations often depend on hand-specified priors and MCMC-based inference, which can be computationally expensive and not generalizable. In this work, we study amortized neural posterior estimation (NPE) as a flexible alternative. A single network is pretrained on simulated current/external dataset pairs spanning covariate shift, outcome drift, and joint non-exchangeability, and then returns an approximate posterior for a scalar current-study target in a single forward pass. Through simulation studies, we find that NPE is most useful under outcome drift and joint mismatch: in the harder outcome-drift regimes, it gives up to about five-fold lower absolute bias than the best classical baseline and keeps Type I error close to nominal. After pretraining, posterior summaries are obtained in about 8 ms per dataset, roughly $10^3\times$ faster than MCMC-based borrowing baselines in our timing experiment. We further analyze Alzheimer’s Disease Neuroimaging Initiative (ADNI) data and show that, when mild cognitive impairment outcomes differ across cohorts, the NPE formulation recovers the later-cohort risk level in this example without claiming greater precision. Code is available at https://github.com/ChinHungScott/NPE-for-Bayesian-Dynamic-Borrowing-MLHC-.</p>
+
+<p><a href="https://arxiv.org/abs/2609.38902">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
