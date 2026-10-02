@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Exceedance Design Effect: Effective Sample Size for Thresholds under Clustering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Exceedance Design Effect: Effective Sample Size for Thresholds under Clustering" />
+<meta name="author" content="Adam Noonan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Suppose we want a cutoff that 90% of a population falls below. We estimate it from a sample, and another sample would give a different cutoff and a different fraction below it. We ask how much that fraction varies when observations come in independent groups, such as pupils in classrooms or sentences in news articles. We prove that grouping multiplies its large-sample variance by $1+(m-1)\rho_I(p)$, where $m$ is the group size, $p$ is the target fraction, and $\rho_I(p)$ measures whether two members of a group fall on the same side of the cutoff. That correlation can differ from the correlation between the scores themselves, and it changes with the target. We give a direct proof, a counterexample to using score correlation, and an extension to unequal group sizes. A dataset therefore does not have one effective sample size. How much information it contains depends on the question you ask. In our document experiment, the same 1,000 rows carried about 217 independent observations’ worth of information at the median. At the 95th percentile, they carried about 621. Nothing about the dataset changed. We asked it a different question. The number of rows is a property of the dataset. The effective sample size belongs to the analysis." />
+<meta property="og:description" content="Suppose we want a cutoff that 90% of a population falls below. We estimate it from a sample, and another sample would give a different cutoff and a different fraction below it. We ask how much that fraction varies when observations come in independent groups, such as pupils in classrooms or sentences in news articles. We prove that grouping multiplies its large-sample variance by $1+(m-1)\rho_I(p)$, where $m$ is the group size, $p$ is the target fraction, and $\rho_I(p)$ measures whether two members of a group fall on the same side of the cutoff. That correlation can differ from the correlation between the scores themselves, and it changes with the target. We give a direct proof, a counterexample to using score correlation, and an extension to unequal group sizes. A dataset therefore does not have one effective sample size. How much information it contains depends on the question you ask. In our document experiment, the same 1,000 rows carried about 217 independent observations’ worth of information at the median. At the 95th percentile, they carried about 621. Nothing about the dataset changed. We asked it a different question. The number of rows is a property of the dataset. The effective sample size belongs to the analysis." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/02/TheExceedanceDesignEffectEffectiveSampleSizeforThresholdsunderClustering.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/02/TheExceedanceDesignEffectEffectiveSampleSizeforThresholdsunderClustering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Exceedance Design Effect: Effective Sample Size for Thresholds under Clustering" />
+<script type="application/ld+json">
+{"description":"Suppose we want a cutoff that 90% of a population falls below. We estimate it from a sample, and another sample would give a different cutoff and a different fraction below it. We ask how much that fraction varies when observations come in independent groups, such as pupils in classrooms or sentences in news articles. We prove that grouping multiplies its large-sample variance by $1+(m-1)\\rho_I(p)$, where $m$ is the group size, $p$ is the target fraction, and $\\rho_I(p)$ measures whether two members of a group fall on the same side of the cutoff. That correlation can differ from the correlation between the scores themselves, and it changes with the target. We give a direct proof, a counterexample to using score correlation, and an extension to unequal group sizes. A dataset therefore does not have one effective sample size. How much information it contains depends on the question you ask. In our document experiment, the same 1,000 rows carried about 217 independent observations’ worth of information at the median. At the 95th percentile, they carried about 621. Nothing about the dataset changed. We asked it a different question. The number of rows is a property of the dataset. The effective sample size belongs to the analysis.","datePublished":"2026-10-02T00:00:00+00:00","dateModified":"2026-10-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/02/TheExceedanceDesignEffectEffectiveSampleSizeforThresholdsunderClustering.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/02/TheExceedanceDesignEffectEffectiveSampleSizeforThresholdsunderClustering.html","author":{"@type":"Person","name":"Adam Noonan"},"@type":"BlogPosting","headline":"The Exceedance Design Effect: Effective Sample Size for Thresholds under Clustering","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-02 00:00:00 +0000">10-02</time>
+  </p>
+  
+  <h1>The Exceedance Design Effect: Effective Sample Size for Thresholds under Clustering</h1>
+  <br>Adam Noonan</h3>
+  <br> [stat.ML]
+
+  <p>Suppose we want a cutoff that 90% of a population falls below. We estimate it from a sample, and another sample would give a different cutoff and a different fraction below it. We ask how much that fraction varies when observations come in independent groups, such as pupils in classrooms or sentences in news articles. We prove that grouping multiplies its large-sample variance by $1+(m-1)\rho_I(p)$, where $m$ is the group size, $p$ is the target fraction, and $\rho_I(p)$ measures whether two members of a group fall on the same side of the cutoff. That correlation can differ from the correlation between the scores themselves, and it changes with the target. We give a direct proof, a counterexample to using score correlation, and an extension to unequal group sizes.
+  A dataset therefore does not have one effective sample size. How much information it contains depends on the question you ask. In our document experiment, the same 1,000 rows carried about 217 independent observations’ worth of information at the median. At the 95th percentile, they carried about 621. Nothing about the dataset changed. We asked it a different question. The number of rows is a property of the dataset. The effective sample size belongs to the analysis.</p>
+
+<p><a href="https://arxiv.org/abs/2608.21262">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

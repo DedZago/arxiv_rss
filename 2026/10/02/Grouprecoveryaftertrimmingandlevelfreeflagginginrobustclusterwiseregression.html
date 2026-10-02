@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Group recovery after trimming, and level-free flagging, in robust clusterwise regression</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Group recovery after trimming, and level-free flagging, in robust clusterwise regression" />
+<meta name="author" content="Samir Orujov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Trimming methods for robust clusterwise regression discard a fixed fraction of the data. Too low a level breaks the fit; too generous a level can trim away a small group. We first propose a group-recovery step that can follow any trimming or flagging method: it searches the discarded units for a line, tests whether those near it form a peak rather than a band, and restores the line as a group when the likelihood of Gaussian groups plus uniform noise improves by a margin like that of the Bayesian information criterion. In simulations it repaired the failures of a generous TCLUST-REG level with unequal groups, but not with three or four groups. The second proposal, ESF (exact-subsample flagging), is a flagging procedure without a trimming level: it solves the clusterwise least-squares problem exactly on small subsamples, flags units far from the best fit, and draws later subsamples from the rest. Two constants stand in for the level: a subsample size, set from a lower bound on the smallest group proportion, and a cap on the flagged set. It is meant for data about whose contamination nothing is known: TCLUST-REG at the fixed level 0.30, followed by reweighting and the recovery step, was as accurate as ESF on average up to a fifth of outliers, and higher levels were more accurate beyond. The flagged fraction estimates the contamination only when the errors are close to Gaussian. On taxi fares with known tariffs, ESF found both in every sample." />
+<meta property="og:description" content="Trimming methods for robust clusterwise regression discard a fixed fraction of the data. Too low a level breaks the fit; too generous a level can trim away a small group. We first propose a group-recovery step that can follow any trimming or flagging method: it searches the discarded units for a line, tests whether those near it form a peak rather than a band, and restores the line as a group when the likelihood of Gaussian groups plus uniform noise improves by a margin like that of the Bayesian information criterion. In simulations it repaired the failures of a generous TCLUST-REG level with unequal groups, but not with three or four groups. The second proposal, ESF (exact-subsample flagging), is a flagging procedure without a trimming level: it solves the clusterwise least-squares problem exactly on small subsamples, flags units far from the best fit, and draws later subsamples from the rest. Two constants stand in for the level: a subsample size, set from a lower bound on the smallest group proportion, and a cap on the flagged set. It is meant for data about whose contamination nothing is known: TCLUST-REG at the fixed level 0.30, followed by reweighting and the recovery step, was as accurate as ESF on average up to a fifth of outliers, and higher levels were more accurate beyond. The flagged fraction estimates the contamination only when the errors are close to Gaussian. On taxi fares with known tariffs, ESF found both in every sample." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/02/Grouprecoveryaftertrimmingandlevelfreeflagginginrobustclusterwiseregression.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/02/Grouprecoveryaftertrimmingandlevelfreeflagginginrobustclusterwiseregression.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Group recovery after trimming, and level-free flagging, in robust clusterwise regression" />
+<script type="application/ld+json">
+{"description":"Trimming methods for robust clusterwise regression discard a fixed fraction of the data. Too low a level breaks the fit; too generous a level can trim away a small group. We first propose a group-recovery step that can follow any trimming or flagging method: it searches the discarded units for a line, tests whether those near it form a peak rather than a band, and restores the line as a group when the likelihood of Gaussian groups plus uniform noise improves by a margin like that of the Bayesian information criterion. In simulations it repaired the failures of a generous TCLUST-REG level with unequal groups, but not with three or four groups. The second proposal, ESF (exact-subsample flagging), is a flagging procedure without a trimming level: it solves the clusterwise least-squares problem exactly on small subsamples, flags units far from the best fit, and draws later subsamples from the rest. Two constants stand in for the level: a subsample size, set from a lower bound on the smallest group proportion, and a cap on the flagged set. It is meant for data about whose contamination nothing is known: TCLUST-REG at the fixed level 0.30, followed by reweighting and the recovery step, was as accurate as ESF on average up to a fifth of outliers, and higher levels were more accurate beyond. The flagged fraction estimates the contamination only when the errors are close to Gaussian. On taxi fares with known tariffs, ESF found both in every sample.","datePublished":"2026-10-02T00:00:00+00:00","dateModified":"2026-10-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/02/Grouprecoveryaftertrimmingandlevelfreeflagginginrobustclusterwiseregression.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/02/Grouprecoveryaftertrimmingandlevelfreeflagginginrobustclusterwiseregression.html","author":{"@type":"Person","name":"Samir Orujov"},"@type":"BlogPosting","headline":"Group recovery after trimming, and level-free flagging, in robust clusterwise regression","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-02 00:00:00 +0000">10-02</time>
+  </p>
+  
+  <h1>Group recovery after trimming, and level-free flagging, in robust clusterwise regression</h1>
+  <br>Samir Orujov</h3>
+  <br> [stat.CO,stat.ME,stat.ML]
+
+  <p>Trimming methods for robust clusterwise regression discard a fixed fraction of the data. Too low a level breaks the fit; too generous a level can trim away a small group. We first propose a group-recovery step that can follow any trimming or flagging method: it searches the discarded units for a line, tests whether those near it form a peak rather than a band, and restores the line as a group when the likelihood of Gaussian groups plus uniform noise improves by a margin like that of the Bayesian information criterion. In simulations it repaired the failures of a generous TCLUST-REG level with unequal groups, but not with three or four groups. The second proposal, ESF (exact-subsample flagging), is a flagging procedure without a trimming level: it solves the clusterwise least-squares problem exactly on small subsamples, flags units far from the best fit, and draws later subsamples from the rest. Two constants stand in for the level: a subsample size, set from a lower bound on the smallest group proportion, and a cap on the flagged set. It is meant for data about whose contamination nothing is known: TCLUST-REG at the fixed level 0.30, followed by reweighting and the recovery step, was as accurate as ESF on average up to a fifth of outliers, and higher levels were more accurate beyond. The flagged fraction estimates the contamination only when the errors are close to Gaussian. On taxi fares with known tariffs, ESF found both in every sample.</p>
+
+<p><a href="https://arxiv.org/abs/2609.31019">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
