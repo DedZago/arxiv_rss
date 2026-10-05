@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Hold-Out Scoring for Efficient Gaussian DAG Learning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Hold-Out Scoring for Efficient Gaussian DAG Learning" />
+<meta name="author" content="Donguk Shin, Byeongguk Kang, Inseol Lee, Gunwoong Park" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="High-dimensional Gaussian DAG learning faces a statistical-computational gap: methods with sharp sample complexity rely on computationally expensive subset search and a supplied indegree bound, whereas polynomial-time alternatives have less favorable sample complexity. We introduce HOST, an efficient DAG learning algorithm that replaces subset search with nodewise hold-out scoring and convex regression, without requiring a supplied indegree bound. Our key insight is that recovering a correct ordering does not require uniformly small estimation errors in ordering scores but only one-sided control of those errors. In the ordering step, HOST exploits the fact that score estimation using hold-out samples inflates ordering scores in expectation, which is the favorable direction for candidates that should not yet be selected. Given the ordering, HOST recovers parents by recursively removing indirect effects from total effects between two nodes. Under suitable conditions, HOST exactly recovers a $p$-node DAG of maximum indegree $d$ with sample complexity of order $d\log p$ in polynomial time. Experiments show that HOST achieves competitive graph recovery while exhibiting favorable runtime scaling." />
+<meta property="og:description" content="High-dimensional Gaussian DAG learning faces a statistical-computational gap: methods with sharp sample complexity rely on computationally expensive subset search and a supplied indegree bound, whereas polynomial-time alternatives have less favorable sample complexity. We introduce HOST, an efficient DAG learning algorithm that replaces subset search with nodewise hold-out scoring and convex regression, without requiring a supplied indegree bound. Our key insight is that recovering a correct ordering does not require uniformly small estimation errors in ordering scores but only one-sided control of those errors. In the ordering step, HOST exploits the fact that score estimation using hold-out samples inflates ordering scores in expectation, which is the favorable direction for candidates that should not yet be selected. Given the ordering, HOST recovers parents by recursively removing indirect effects from total effects between two nodes. Under suitable conditions, HOST exactly recovers a $p$-node DAG of maximum indegree $d$ with sample complexity of order $d\log p$ in polynomial time. Experiments show that HOST achieves competitive graph recovery while exhibiting favorable runtime scaling." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/05/HoldOutScoringforEfficientGaussianDAGLearning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/05/HoldOutScoringforEfficientGaussianDAGLearning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hold-Out Scoring for Efficient Gaussian DAG Learning" />
+<script type="application/ld+json">
+{"description":"High-dimensional Gaussian DAG learning faces a statistical-computational gap: methods with sharp sample complexity rely on computationally expensive subset search and a supplied indegree bound, whereas polynomial-time alternatives have less favorable sample complexity. We introduce HOST, an efficient DAG learning algorithm that replaces subset search with nodewise hold-out scoring and convex regression, without requiring a supplied indegree bound. Our key insight is that recovering a correct ordering does not require uniformly small estimation errors in ordering scores but only one-sided control of those errors. In the ordering step, HOST exploits the fact that score estimation using hold-out samples inflates ordering scores in expectation, which is the favorable direction for candidates that should not yet be selected. Given the ordering, HOST recovers parents by recursively removing indirect effects from total effects between two nodes. Under suitable conditions, HOST exactly recovers a $p$-node DAG of maximum indegree $d$ with sample complexity of order $d\\log p$ in polynomial time. Experiments show that HOST achieves competitive graph recovery while exhibiting favorable runtime scaling.","datePublished":"2026-10-05T00:00:00+00:00","dateModified":"2026-10-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/05/HoldOutScoringforEfficientGaussianDAGLearning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/05/HoldOutScoringforEfficientGaussianDAGLearning.html","author":{"@type":"Person","name":"Donguk Shin, Byeongguk Kang, Inseol Lee, Gunwoong Park"},"@type":"BlogPosting","headline":"Hold-Out Scoring for Efficient Gaussian DAG Learning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-05 00:00:00 +0000">10-05</time>
+  </p>
+  
+  <h1>Hold-Out Scoring for Efficient Gaussian DAG Learning</h1>
+  <br>Donguk Shin, Byeongguk Kang, Inseol Lee, Gunwoong Park</h3>
+  <br> [stat.ML]
+
+  <p>High-dimensional Gaussian DAG learning faces a statistical-computational gap: methods with sharp sample complexity rely on computationally expensive subset search and a supplied indegree bound, whereas polynomial-time alternatives have less favorable sample complexity. We introduce HOST, an efficient DAG learning algorithm that replaces subset search with nodewise hold-out scoring and convex regression, without requiring a supplied indegree bound. Our key insight is that recovering a correct ordering does not require uniformly small estimation errors in ordering scores but only one-sided control of those errors. In the ordering step, HOST exploits the fact that score estimation using hold-out samples inflates ordering scores in expectation, which is the favorable direction for candidates that should not yet be selected. Given the ordering, HOST recovers parents by recursively removing indirect effects from total effects between two nodes. Under suitable conditions, HOST exactly recovers a $p$-node DAG of maximum indegree $d$ with sample complexity of order $d\log p$ in polynomial time. Experiments show that HOST achieves competitive graph recovery while exhibiting favorable runtime scaling.</p>
+
+<p><a href="https://arxiv.org/abs/2610.02785">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

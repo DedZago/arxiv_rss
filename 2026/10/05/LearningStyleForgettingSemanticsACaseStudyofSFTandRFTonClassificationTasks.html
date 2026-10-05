@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning Style, Forgetting Semantics: A Case Study of SFT and RFT on Classification Tasks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning Style, Forgetting Semantics: A Case Study of SFT and RFT on Classification Tasks" />
+<meta name="author" content="Haodong Liang, Yanhao Jin, Krishnakumar Balasubramanian, Lifeng Lai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Why does supervised fine-tuning (SFT) lead to more forgetting than reinforcement fine-tuning (RFT), even when all teacher demonstrations are semantically correct? We study this question on classification tasks where tokens within each semantic class express the same semantic answer in different styles. The tasks share an underlying semantic rule but differ in their prompt distributions and teachers’ stylistic preferences. Using a tractable linear-softmax policy, we derive an exact decomposition of the updates into semantic and style components. We show that, at a common policy and prompt, SFT and RFT have parallel semantic updates but differ in their style dynamics. Starting from a policy with no within-class style preference, RFT with exact policy gradients preserves this symmetry, whereas SFT with a nonuniform teacher develops off-axis style drift along a nonzero task mean under population updates. We use this drift to establish a separation under explicit conditions: for population updates from a common perfectly fitted checkpoint, SFT forgetting admits a strictly positive lower bound over a finite training interval, while RFT retains zero semantic error. Simulations over task sequences support these theoretical predictions." />
+<meta property="og:description" content="Why does supervised fine-tuning (SFT) lead to more forgetting than reinforcement fine-tuning (RFT), even when all teacher demonstrations are semantically correct? We study this question on classification tasks where tokens within each semantic class express the same semantic answer in different styles. The tasks share an underlying semantic rule but differ in their prompt distributions and teachers’ stylistic preferences. Using a tractable linear-softmax policy, we derive an exact decomposition of the updates into semantic and style components. We show that, at a common policy and prompt, SFT and RFT have parallel semantic updates but differ in their style dynamics. Starting from a policy with no within-class style preference, RFT with exact policy gradients preserves this symmetry, whereas SFT with a nonuniform teacher develops off-axis style drift along a nonzero task mean under population updates. We use this drift to establish a separation under explicit conditions: for population updates from a common perfectly fitted checkpoint, SFT forgetting admits a strictly positive lower bound over a finite training interval, while RFT retains zero semantic error. Simulations over task sequences support these theoretical predictions." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/05/LearningStyleForgettingSemanticsACaseStudyofSFTandRFTonClassificationTasks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/05/LearningStyleForgettingSemanticsACaseStudyofSFTandRFTonClassificationTasks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning Style, Forgetting Semantics: A Case Study of SFT and RFT on Classification Tasks" />
+<script type="application/ld+json">
+{"description":"Why does supervised fine-tuning (SFT) lead to more forgetting than reinforcement fine-tuning (RFT), even when all teacher demonstrations are semantically correct? We study this question on classification tasks where tokens within each semantic class express the same semantic answer in different styles. The tasks share an underlying semantic rule but differ in their prompt distributions and teachers’ stylistic preferences. Using a tractable linear-softmax policy, we derive an exact decomposition of the updates into semantic and style components. We show that, at a common policy and prompt, SFT and RFT have parallel semantic updates but differ in their style dynamics. Starting from a policy with no within-class style preference, RFT with exact policy gradients preserves this symmetry, whereas SFT with a nonuniform teacher develops off-axis style drift along a nonzero task mean under population updates. We use this drift to establish a separation under explicit conditions: for population updates from a common perfectly fitted checkpoint, SFT forgetting admits a strictly positive lower bound over a finite training interval, while RFT retains zero semantic error. Simulations over task sequences support these theoretical predictions.","datePublished":"2026-10-05T00:00:00+00:00","dateModified":"2026-10-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/05/LearningStyleForgettingSemanticsACaseStudyofSFTandRFTonClassificationTasks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/05/LearningStyleForgettingSemanticsACaseStudyofSFTandRFTonClassificationTasks.html","author":{"@type":"Person","name":"Haodong Liang, Yanhao Jin, Krishnakumar Balasubramanian, Lifeng Lai"},"@type":"BlogPosting","headline":"Learning Style, Forgetting Semantics: A Case Study of SFT and RFT on Classification Tasks","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-05 00:00:00 +0000">10-05</time>
+  </p>
+  
+  <h1>Learning Style, Forgetting Semantics: A Case Study of SFT and RFT on Classification Tasks</h1>
+  <br>Haodong Liang, Yanhao Jin, Krishnakumar Balasubramanian, Lifeng Lai</h3>
+  <br> [stat.ML]
+
+  <p>Why does supervised fine-tuning (SFT) lead to more forgetting than reinforcement fine-tuning (RFT), even when all teacher demonstrations are semantically correct? We study this question on classification tasks where tokens within each semantic class express the same semantic answer in different styles. The tasks share an underlying semantic rule but differ in their prompt distributions and teachers’ stylistic preferences. Using a tractable linear-softmax policy, we derive an exact decomposition of the updates into semantic and style components. We show that, at a common policy and prompt, SFT and RFT have parallel semantic updates but differ in their style dynamics. Starting from a policy with no within-class style preference, RFT with exact policy gradients preserves this symmetry, whereas SFT with a nonuniform teacher develops off-axis style drift along a nonzero task mean under population updates. We use this drift to establish a separation under explicit conditions: for population updates from a common perfectly fitted checkpoint, SFT forgetting admits a strictly positive lower bound over a finite training interval, while RFT retains zero semantic error. Simulations over task sequences support these theoretical predictions.</p>
+
+<p><a href="https://arxiv.org/abs/2610.02437">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

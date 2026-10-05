@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Iterating Consistency Models: Stability, Error Bounds and Noise Schedules</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Iterating Consistency Models: Stability, Error Bounds and Noise Schedules" />
+<meta name="author" content="Alessio Spagnoletti, Abdul-Lateef Haji-Ali, Andrés Almansa, Alain Oliviero Durmus, Eric Moulines, Marcelo Pereyra" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Consistency models (CMs) have become a leading approach for generating high-quality samples in few steps. However, adding steps can improve or degrade sample quality in ways that are highly sensitive to the schedule and that existing theory does not fully explain. To provide accuracy guarantees and guide CM sampler design, we analyze multistep CM sampling as a composition of noising and approximate denoising operators. Under explicit, verifiable stability assumptions, we derive a non-asymptotic error bound that separates contraction of the initialization error from accumulation of approximation error. The bound assigns distinct roles to the schedule: large early noise levels drive contraction, while small late noise levels control the residual bias. As a corollary, we obtain explicit constants for strongly log-concave and semi-log-concave targets. We further establish a complementary guarantee whose assumptions, one-step accuracy and stability, can be estimated for a given trained model. Experiments show that the contraction and approximation profiles entering our bounds can be reliably measured and closely match the predicted functional forms. Together, these results provide a meaningful convergence theory for multi-step CMs and a practical route to sampler design." />
+<meta property="og:description" content="Consistency models (CMs) have become a leading approach for generating high-quality samples in few steps. However, adding steps can improve or degrade sample quality in ways that are highly sensitive to the schedule and that existing theory does not fully explain. To provide accuracy guarantees and guide CM sampler design, we analyze multistep CM sampling as a composition of noising and approximate denoising operators. Under explicit, verifiable stability assumptions, we derive a non-asymptotic error bound that separates contraction of the initialization error from accumulation of approximation error. The bound assigns distinct roles to the schedule: large early noise levels drive contraction, while small late noise levels control the residual bias. As a corollary, we obtain explicit constants for strongly log-concave and semi-log-concave targets. We further establish a complementary guarantee whose assumptions, one-step accuracy and stability, can be estimated for a given trained model. Experiments show that the contraction and approximation profiles entering our bounds can be reliably measured and closely match the predicted functional forms. Together, these results provide a meaningful convergence theory for multi-step CMs and a practical route to sampler design." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/05/IteratingConsistencyModelsStabilityErrorBoundsandNoiseSchedules.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/05/IteratingConsistencyModelsStabilityErrorBoundsandNoiseSchedules.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Iterating Consistency Models: Stability, Error Bounds and Noise Schedules" />
+<script type="application/ld+json">
+{"description":"Consistency models (CMs) have become a leading approach for generating high-quality samples in few steps. However, adding steps can improve or degrade sample quality in ways that are highly sensitive to the schedule and that existing theory does not fully explain. To provide accuracy guarantees and guide CM sampler design, we analyze multistep CM sampling as a composition of noising and approximate denoising operators. Under explicit, verifiable stability assumptions, we derive a non-asymptotic error bound that separates contraction of the initialization error from accumulation of approximation error. The bound assigns distinct roles to the schedule: large early noise levels drive contraction, while small late noise levels control the residual bias. As a corollary, we obtain explicit constants for strongly log-concave and semi-log-concave targets. We further establish a complementary guarantee whose assumptions, one-step accuracy and stability, can be estimated for a given trained model. Experiments show that the contraction and approximation profiles entering our bounds can be reliably measured and closely match the predicted functional forms. Together, these results provide a meaningful convergence theory for multi-step CMs and a practical route to sampler design.","datePublished":"2026-10-05T00:00:00+00:00","dateModified":"2026-10-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/05/IteratingConsistencyModelsStabilityErrorBoundsandNoiseSchedules.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/05/IteratingConsistencyModelsStabilityErrorBoundsandNoiseSchedules.html","author":{"@type":"Person","name":"Alessio Spagnoletti, Abdul-Lateef Haji-Ali, Andrés Almansa, Alain Oliviero Durmus, Eric Moulines, Marcelo Pereyra"},"@type":"BlogPosting","headline":"Iterating Consistency Models: Stability, Error Bounds and Noise Schedules","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-05 00:00:00 +0000">10-05</time>
+  </p>
+  
+  <h1>Iterating Consistency Models: Stability, Error Bounds and Noise Schedules</h1>
+  <br>Alessio Spagnoletti, Abdul-Lateef Haji-Ali, Andrés Almansa, Alain Oliviero Durmus, Eric Moulines, Marcelo Pereyra</h3>
+  <br> [stat.ML]
+
+  <p>Consistency models (CMs) have become a leading approach for generating high-quality samples in few steps. However, adding steps can improve or degrade sample quality in ways that are highly sensitive to the schedule and that existing theory does not fully explain. To provide accuracy guarantees and guide CM sampler design, we analyze multistep CM sampling as a composition of noising and approximate denoising operators. Under explicit, verifiable stability assumptions, we derive a non-asymptotic error bound that separates contraction of the initialization error from accumulation of approximation error. The bound assigns distinct roles to the schedule: large early noise levels drive contraction, while small late noise levels control the residual bias. As a corollary, we obtain explicit constants for strongly log-concave and semi-log-concave targets. We further establish a complementary guarantee whose assumptions, one-step accuracy and stability, can be estimated for a given trained model. Experiments show that the contraction and approximation profiles entering our bounds can be reliably measured and closely match the predicted functional forms. Together, these results provide a meaningful convergence theory for multi-step CMs and a practical route to sampler design.</p>
+
+<p><a href="https://arxiv.org/abs/2610.03414">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

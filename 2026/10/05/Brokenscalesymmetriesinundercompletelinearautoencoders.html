@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Broken scale symmetries in undercomplete linear autoencoders</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Broken scale symmetries in undercomplete linear autoencoders" />
+<meta name="author" content="Farhad Pashakhanloo, Jacob A. Zavatone-Veth" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Neural network loss landscapes have many symmetries, which are preserved by gradient flow but broken by finite-stepsize stochastic gradient descent (SGD). A canonical example of such a symmetry is scale in homogeneous networks: one can scale up the parameters in one layer and down in the next without changing the network output. Previous work has documented cases in which SGD breaks this symmetry in favor of balancing gradient noise or minimizing fluctuations. Here, we show that the solution geometry of undercomplete linear autoencoders instead selects a preferred sign for scale drift: on the PCA solution manifold, SGD favors large decoder weights. This directed scale drift occurs on a slow timescale, and its dynamics admit an analytically-tractable effective description. However, it cannot continue indefinitely: increasing scale eventually drives the dynamics towards a finite-stepsize stability boundary. The resulting solutions are sharper than a balanced baseline in the sense of the maximum eigenvalue of the loss Hessian, but different sharpness measures can move in opposing directions. Thus, undercomplete autoencoders give a concrete illustration of how loss geometry can convert residual gradient noise into directed motion along a manifold of functionally-equivalent solutions." />
+<meta property="og:description" content="Neural network loss landscapes have many symmetries, which are preserved by gradient flow but broken by finite-stepsize stochastic gradient descent (SGD). A canonical example of such a symmetry is scale in homogeneous networks: one can scale up the parameters in one layer and down in the next without changing the network output. Previous work has documented cases in which SGD breaks this symmetry in favor of balancing gradient noise or minimizing fluctuations. Here, we show that the solution geometry of undercomplete linear autoencoders instead selects a preferred sign for scale drift: on the PCA solution manifold, SGD favors large decoder weights. This directed scale drift occurs on a slow timescale, and its dynamics admit an analytically-tractable effective description. However, it cannot continue indefinitely: increasing scale eventually drives the dynamics towards a finite-stepsize stability boundary. The resulting solutions are sharper than a balanced baseline in the sense of the maximum eigenvalue of the loss Hessian, but different sharpness measures can move in opposing directions. Thus, undercomplete autoencoders give a concrete illustration of how loss geometry can convert residual gradient noise into directed motion along a manifold of functionally-equivalent solutions." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/05/Brokenscalesymmetriesinundercompletelinearautoencoders.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/05/Brokenscalesymmetriesinundercompletelinearautoencoders.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Broken scale symmetries in undercomplete linear autoencoders" />
+<script type="application/ld+json">
+{"description":"Neural network loss landscapes have many symmetries, which are preserved by gradient flow but broken by finite-stepsize stochastic gradient descent (SGD). A canonical example of such a symmetry is scale in homogeneous networks: one can scale up the parameters in one layer and down in the next without changing the network output. Previous work has documented cases in which SGD breaks this symmetry in favor of balancing gradient noise or minimizing fluctuations. Here, we show that the solution geometry of undercomplete linear autoencoders instead selects a preferred sign for scale drift: on the PCA solution manifold, SGD favors large decoder weights. This directed scale drift occurs on a slow timescale, and its dynamics admit an analytically-tractable effective description. However, it cannot continue indefinitely: increasing scale eventually drives the dynamics towards a finite-stepsize stability boundary. The resulting solutions are sharper than a balanced baseline in the sense of the maximum eigenvalue of the loss Hessian, but different sharpness measures can move in opposing directions. Thus, undercomplete autoencoders give a concrete illustration of how loss geometry can convert residual gradient noise into directed motion along a manifold of functionally-equivalent solutions.","datePublished":"2026-10-05T00:00:00+00:00","dateModified":"2026-10-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/05/Brokenscalesymmetriesinundercompletelinearautoencoders.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/05/Brokenscalesymmetriesinundercompletelinearautoencoders.html","author":{"@type":"Person","name":"Farhad Pashakhanloo, Jacob A. Zavatone-Veth"},"@type":"BlogPosting","headline":"Broken scale symmetries in undercomplete linear autoencoders","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-05 00:00:00 +0000">10-05</time>
+  </p>
+  
+  <h1>Broken scale symmetries in undercomplete linear autoencoders</h1>
+  <br>Farhad Pashakhanloo, Jacob A. Zavatone-Veth</h3>
+  <br> [stat.ML]
+
+  <p>Neural network loss landscapes have many symmetries, which are preserved by gradient flow but broken by finite-stepsize stochastic gradient descent (SGD). A canonical example of such a symmetry is scale in homogeneous networks: one can scale up the parameters in one layer and down in the next without changing the network output. Previous work has documented cases in which SGD breaks this symmetry in favor of balancing gradient noise or minimizing fluctuations. Here, we show that the solution geometry of undercomplete linear autoencoders instead selects a preferred sign for scale drift: on the PCA solution manifold, SGD favors large decoder weights. This directed scale drift occurs on a slow timescale, and its dynamics admit an analytically-tractable effective description. However, it cannot continue indefinitely: increasing scale eventually drives the dynamics towards a finite-stepsize stability boundary. The resulting solutions are sharper than a balanced baseline in the sense of the maximum eigenvalue of the loss Hessian, but different sharpness measures can move in opposing directions. Thus, undercomplete autoencoders give a concrete illustration of how loss geometry can convert residual gradient noise into directed motion along a manifold of functionally-equivalent solutions.</p>
+
+<p><a href="https://arxiv.org/abs/2610.03640">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
