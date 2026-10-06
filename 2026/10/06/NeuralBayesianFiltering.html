@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Neural Bayesian Filtering</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Neural Bayesian Filtering" />
+<meta name="author" content="Christopher Solinas, Radovan Haluska, David Sychrovsky, Finbarr Timbers, Nolan Bard, Michael Buro, Martin Schmid, Nathan R. Sturtevant, Michael Bowling" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sequential estimation under partial observability requires tracking beliefs that may be high-dimensional, multimodal, and non-Gaussian. Classical Bayesian filters generalize zero-shot to any system whose dynamics can be evaluated, but their representations scale poorly: parametric filters struggle to capture multimodality, and particle filters require exponentially many particles in the state dimension. Generative Distribution Embeddings (GDEs) learn compact representations of complex distributions but have no sequential update. We present Neural Bayesian Filtering (NBF), which represents beliefs as embeddings and approximates their Bayesian update. At each step, NBF samples particles from a learned conditional generator, propagates them through the dynamics, and embeds the propagated set, weighted by the likelihood of the new observation. Regenerating the set from the embedding at each step, rather than resampling a surviving pool, mitigates the risk of impoverishment that degrades particle filters. The system dynamics and likelihood enter only through propagation and weighting, so NBF retains zero-shot adaptability to new dynamics as long as the beliefs they produce fall within the family the embedding was trained on. Training the GDE to represent that family requires only the states realized at training time. We validate NBF on Lorenz-96 and a pursuit–evasion domain, showing graceful scaling with state dimension, accurate tracking of multimodal posteriors, and zero-shot generalization to dynamics and likelihoods held out from training." />
+<meta property="og:description" content="Sequential estimation under partial observability requires tracking beliefs that may be high-dimensional, multimodal, and non-Gaussian. Classical Bayesian filters generalize zero-shot to any system whose dynamics can be evaluated, but their representations scale poorly: parametric filters struggle to capture multimodality, and particle filters require exponentially many particles in the state dimension. Generative Distribution Embeddings (GDEs) learn compact representations of complex distributions but have no sequential update. We present Neural Bayesian Filtering (NBF), which represents beliefs as embeddings and approximates their Bayesian update. At each step, NBF samples particles from a learned conditional generator, propagates them through the dynamics, and embeds the propagated set, weighted by the likelihood of the new observation. Regenerating the set from the embedding at each step, rather than resampling a surviving pool, mitigates the risk of impoverishment that degrades particle filters. The system dynamics and likelihood enter only through propagation and weighting, so NBF retains zero-shot adaptability to new dynamics as long as the beliefs they produce fall within the family the embedding was trained on. Training the GDE to represent that family requires only the states realized at training time. We validate NBF on Lorenz-96 and a pursuit–evasion domain, showing graceful scaling with state dimension, accurate tracking of multimodal posteriors, and zero-shot generalization to dynamics and likelihoods held out from training." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/06/NeuralBayesianFiltering.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/06/NeuralBayesianFiltering.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Neural Bayesian Filtering" />
+<script type="application/ld+json">
+{"description":"Sequential estimation under partial observability requires tracking beliefs that may be high-dimensional, multimodal, and non-Gaussian. Classical Bayesian filters generalize zero-shot to any system whose dynamics can be evaluated, but their representations scale poorly: parametric filters struggle to capture multimodality, and particle filters require exponentially many particles in the state dimension. Generative Distribution Embeddings (GDEs) learn compact representations of complex distributions but have no sequential update. We present Neural Bayesian Filtering (NBF), which represents beliefs as embeddings and approximates their Bayesian update. At each step, NBF samples particles from a learned conditional generator, propagates them through the dynamics, and embeds the propagated set, weighted by the likelihood of the new observation. Regenerating the set from the embedding at each step, rather than resampling a surviving pool, mitigates the risk of impoverishment that degrades particle filters. The system dynamics and likelihood enter only through propagation and weighting, so NBF retains zero-shot adaptability to new dynamics as long as the beliefs they produce fall within the family the embedding was trained on. Training the GDE to represent that family requires only the states realized at training time. We validate NBF on Lorenz-96 and a pursuit–evasion domain, showing graceful scaling with state dimension, accurate tracking of multimodal posteriors, and zero-shot generalization to dynamics and likelihoods held out from training.","datePublished":"2026-10-06T00:00:00+00:00","dateModified":"2026-10-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/06/NeuralBayesianFiltering.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/06/NeuralBayesianFiltering.html","author":{"@type":"Person","name":"Christopher Solinas, Radovan Haluska, David Sychrovsky, Finbarr Timbers, Nolan Bard, Michael Buro, Martin Schmid, Nathan R. Sturtevant, Michael Bowling"},"@type":"BlogPosting","headline":"Neural Bayesian Filtering","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-06 00:00:00 +0000">10-06</time>
+  </p>
+  
+  <h1>Neural Bayesian Filtering</h1>
+  <br>Christopher Solinas, Radovan Haluska, David Sychrovsky, Finbarr Timbers, Nolan Bard, Michael Buro, Martin Schmid, Nathan R. Sturtevant, Michael Bowling</h3>
+  <br> [stat.ML]
+
+  <p>Sequential estimation under partial observability requires tracking beliefs that may be high-dimensional, multimodal, and non-Gaussian. Classical Bayesian filters generalize zero-shot to any system whose dynamics can be evaluated, but their representations scale poorly: parametric filters struggle to capture multimodality, and particle filters require exponentially many particles in the state dimension. Generative Distribution Embeddings (GDEs) learn compact representations of complex distributions but have no sequential update. We present Neural Bayesian Filtering (NBF), which represents beliefs as embeddings and approximates their Bayesian update. At each step, NBF samples particles from a learned conditional generator, propagates them through the dynamics, and embeds the propagated set, weighted by the likelihood of the new observation. Regenerating the set from the embedding at each step, rather than resampling a surviving pool, mitigates the risk of impoverishment that degrades particle filters. The system dynamics and likelihood enter only through propagation and weighting, so NBF retains zero-shot adaptability to new dynamics as long as the beliefs they produce fall within the family the embedding was trained on. Training the GDE to represent that family requires only the states realized at training time. We validate NBF on Lorenz-96 and a pursuit–evasion domain, showing graceful scaling with state dimension, accurate tracking of multimodal posteriors, and zero-shot generalization to dynamics and likelihoods held out from training.</p>
+
+<p><a href="https://arxiv.org/abs/2510.03614">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

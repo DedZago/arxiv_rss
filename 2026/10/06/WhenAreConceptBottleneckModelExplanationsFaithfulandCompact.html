@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Are Concept Bottleneck Model Explanations Faithful and Compact?</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When Are Concept Bottleneck Model Explanations Faithful and Compact?" />
+<meta name="author" content="Stefano Teso, Emanuele Marconato, Steve Azzolin, Antonio Vergari" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Concept bottleneck models (CBMs) are neural classifiers that allow to explain their decisions via high-level concepts, potentially enabling understanding, steering and debugging. However, their explanations are often derived heuristically. Building on formal explainability, we argue they should also be faithful, i.e., not misreport which concepts actually matter. We show that, for widespread CBM architectures, including recent VLM-based variants, faithful explanations must include all concepts in the bottleneck, compromising interpretability when this is large. This result applies to both heuristic and faithful-by-construction formal explanations. To encourage the existence of compact faithful explanations, we suggest i) modeling concepts probabilistically as binary or categorical random variables (rather than logits), and ii) employing per-concept training-time sparsification via group lasso (rather than regular elastic net). We also extend algorithms from formal explainability to CBMs, and show they outperform natural heuristics in terms of guarantees and explanation size. Overall, our work warns against naive interpretability claims and provides formal conditions and practical strategies for ensuring CBMs are as interpretable as advertised." />
+<meta property="og:description" content="Concept bottleneck models (CBMs) are neural classifiers that allow to explain their decisions via high-level concepts, potentially enabling understanding, steering and debugging. However, their explanations are often derived heuristically. Building on formal explainability, we argue they should also be faithful, i.e., not misreport which concepts actually matter. We show that, for widespread CBM architectures, including recent VLM-based variants, faithful explanations must include all concepts in the bottleneck, compromising interpretability when this is large. This result applies to both heuristic and faithful-by-construction formal explanations. To encourage the existence of compact faithful explanations, we suggest i) modeling concepts probabilistically as binary or categorical random variables (rather than logits), and ii) employing per-concept training-time sparsification via group lasso (rather than regular elastic net). We also extend algorithms from formal explainability to CBMs, and show they outperform natural heuristics in terms of guarantees and explanation size. Overall, our work warns against naive interpretability claims and provides formal conditions and practical strategies for ensuring CBMs are as interpretable as advertised." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/06/WhenAreConceptBottleneckModelExplanationsFaithfulandCompact.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/06/WhenAreConceptBottleneckModelExplanationsFaithfulandCompact.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When Are Concept Bottleneck Model Explanations Faithful and Compact?" />
+<script type="application/ld+json">
+{"description":"Concept bottleneck models (CBMs) are neural classifiers that allow to explain their decisions via high-level concepts, potentially enabling understanding, steering and debugging. However, their explanations are often derived heuristically. Building on formal explainability, we argue they should also be faithful, i.e., not misreport which concepts actually matter. We show that, for widespread CBM architectures, including recent VLM-based variants, faithful explanations must include all concepts in the bottleneck, compromising interpretability when this is large. This result applies to both heuristic and faithful-by-construction formal explanations. To encourage the existence of compact faithful explanations, we suggest i) modeling concepts probabilistically as binary or categorical random variables (rather than logits), and ii) employing per-concept training-time sparsification via group lasso (rather than regular elastic net). We also extend algorithms from formal explainability to CBMs, and show they outperform natural heuristics in terms of guarantees and explanation size. Overall, our work warns against naive interpretability claims and provides formal conditions and practical strategies for ensuring CBMs are as interpretable as advertised.","datePublished":"2026-10-06T00:00:00+00:00","dateModified":"2026-10-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/06/WhenAreConceptBottleneckModelExplanationsFaithfulandCompact.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/06/WhenAreConceptBottleneckModelExplanationsFaithfulandCompact.html","author":{"@type":"Person","name":"Stefano Teso, Emanuele Marconato, Steve Azzolin, Antonio Vergari"},"@type":"BlogPosting","headline":"When Are Concept Bottleneck Model Explanations Faithful and Compact?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-06 00:00:00 +0000">10-06</time>
+  </p>
+  
+  <h1>When Are Concept Bottleneck Model Explanations Faithful and Compact?</h1>
+  <br>Stefano Teso, Emanuele Marconato, Steve Azzolin, Antonio Vergari</h3>
+  <br> [stat.ML]
+
+  <p>Concept bottleneck models (CBMs) are neural classifiers that allow to explain their decisions via high-level concepts, potentially enabling understanding, steering and debugging. However, their explanations are often derived heuristically. Building on formal explainability, we argue they should also be faithful, i.e., not misreport which concepts actually matter. We show that, for widespread CBM architectures, including recent VLM-based variants, faithful explanations must include all concepts in the bottleneck, compromising interpretability when this is large. This result applies to both heuristic and faithful-by-construction formal explanations. To encourage the existence of compact faithful explanations, we suggest i) modeling concepts probabilistically as binary or categorical random variables (rather than logits), and ii) employing per-concept training-time sparsification via group lasso (rather than regular elastic net). We also extend algorithms from formal explainability to CBMs, and show they outperform natural heuristics in terms of guarantees and explanation size. Overall, our work warns against naive interpretability claims and provides formal conditions and practical strategies for ensuring CBMs are as interpretable as advertised.</p>
+
+<p><a href="https://arxiv.org/abs/2610.06285">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>How RL Reshapes LLM Reasoning: Transferability, Coverage, and Scaling Laws</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="How RL Reshapes LLM Reasoning: Transferability, Coverage, and Scaling Laws" />
+<meta name="author" content="Ziheng Cheng, Yixiao Huang, Hanlin Zhu, Somayeh Sojoudi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recent studies on reinforcement learning (RL) report seemingly conflicting evidence about large language model (LLM) reasoning. Training on mathematics can improve performance in other domains, yet gains in Pass@1 can coincide with lower Pass@$N$ than the base model. This raises a fundamental question: does RL expand an LLM’s reasoning boundary, or merely reweight its existing reasoning space? We revisit these phenomena across Qwen and Gemma model families, showing both cross-domain gains and forgetting, while coverage at large sampling budgets increases on some tasks and decreases on others. Detailed analysis of solution traces before and after RL indicates a shift in the reasoning strategies the model employs, motivating a two-stage autoregressive policy model that separates \emph{strategy selection} from problem-specific execution. Within this framework, we prove how RL’s implicit bias reshapes strategy preferences, allowing gains on some tasks while suppressing strategies required by others. This mechanism can also broaden or narrow coverage at a given sampling budget even without expanding strategy support. We further provide theoretical justifications for log-sigmoid and log-linear scaling laws in RL compute, and evaluate their predictive power. Together, these results connect changes in strategy selection to cross-domain transfer, reasoning coverage, and compute scaling." />
+<meta property="og:description" content="Recent studies on reinforcement learning (RL) report seemingly conflicting evidence about large language model (LLM) reasoning. Training on mathematics can improve performance in other domains, yet gains in Pass@1 can coincide with lower Pass@$N$ than the base model. This raises a fundamental question: does RL expand an LLM’s reasoning boundary, or merely reweight its existing reasoning space? We revisit these phenomena across Qwen and Gemma model families, showing both cross-domain gains and forgetting, while coverage at large sampling budgets increases on some tasks and decreases on others. Detailed analysis of solution traces before and after RL indicates a shift in the reasoning strategies the model employs, motivating a two-stage autoregressive policy model that separates \emph{strategy selection} from problem-specific execution. Within this framework, we prove how RL’s implicit bias reshapes strategy preferences, allowing gains on some tasks while suppressing strategies required by others. This mechanism can also broaden or narrow coverage at a given sampling budget even without expanding strategy support. We further provide theoretical justifications for log-sigmoid and log-linear scaling laws in RL compute, and evaluate their predictive power. Together, these results connect changes in strategy selection to cross-domain transfer, reasoning coverage, and compute scaling." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/06/HowRLReshapesLLMReasoningTransferabilityCoverageandScalingLaws.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/06/HowRLReshapesLLMReasoningTransferabilityCoverageandScalingLaws.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How RL Reshapes LLM Reasoning: Transferability, Coverage, and Scaling Laws" />
+<script type="application/ld+json">
+{"description":"Recent studies on reinforcement learning (RL) report seemingly conflicting evidence about large language model (LLM) reasoning. Training on mathematics can improve performance in other domains, yet gains in Pass@1 can coincide with lower Pass@$N$ than the base model. This raises a fundamental question: does RL expand an LLM’s reasoning boundary, or merely reweight its existing reasoning space? We revisit these phenomena across Qwen and Gemma model families, showing both cross-domain gains and forgetting, while coverage at large sampling budgets increases on some tasks and decreases on others. Detailed analysis of solution traces before and after RL indicates a shift in the reasoning strategies the model employs, motivating a two-stage autoregressive policy model that separates \\emph{strategy selection} from problem-specific execution. Within this framework, we prove how RL’s implicit bias reshapes strategy preferences, allowing gains on some tasks while suppressing strategies required by others. This mechanism can also broaden or narrow coverage at a given sampling budget even without expanding strategy support. We further provide theoretical justifications for log-sigmoid and log-linear scaling laws in RL compute, and evaluate their predictive power. Together, these results connect changes in strategy selection to cross-domain transfer, reasoning coverage, and compute scaling.","datePublished":"2026-10-06T00:00:00+00:00","dateModified":"2026-10-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/06/HowRLReshapesLLMReasoningTransferabilityCoverageandScalingLaws.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/06/HowRLReshapesLLMReasoningTransferabilityCoverageandScalingLaws.html","author":{"@type":"Person","name":"Ziheng Cheng, Yixiao Huang, Hanlin Zhu, Somayeh Sojoudi"},"@type":"BlogPosting","headline":"How RL Reshapes LLM Reasoning: Transferability, Coverage, and Scaling Laws","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-06 00:00:00 +0000">10-06</time>
+  </p>
+  
+  <h1>How RL Reshapes LLM Reasoning: Transferability, Coverage, and Scaling Laws</h1>
+  <br>Ziheng Cheng, Yixiao Huang, Hanlin Zhu, Somayeh Sojoudi</h3>
+  <br> [stat.ML]
+
+  <p>Recent studies on reinforcement learning (RL) report seemingly conflicting evidence about large language model (LLM) reasoning. Training on mathematics can improve performance in other domains, yet gains in Pass@1 can coincide with lower Pass@$N$ than the base model. This raises a fundamental question: does RL expand an LLM’s reasoning boundary, or merely reweight its existing reasoning space? We revisit these phenomena across Qwen and Gemma model families, showing both cross-domain gains and forgetting, while coverage at large sampling budgets increases on some tasks and decreases on others. Detailed analysis of solution traces before and after RL indicates a shift in the reasoning strategies the model employs, motivating a two-stage autoregressive policy model that separates \emph{strategy selection} from problem-specific execution. Within this framework, we prove how RL’s implicit bias reshapes strategy preferences, allowing gains on some tasks while suppressing strategies required by others. This mechanism can also broaden or narrow coverage at a given sampling budget even without expanding strategy support. We further provide theoretical justifications for log-sigmoid and log-linear scaling laws in RL compute, and evaluate their predictive power. Together, these results connect changes in strategy selection to cross-domain transfer, reasoning coverage, and compute scaling.</p>
+
+<p><a href="https://arxiv.org/abs/2610.04158">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

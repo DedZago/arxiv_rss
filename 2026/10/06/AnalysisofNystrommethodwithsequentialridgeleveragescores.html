@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Analysis of Nystrom method with sequential ridge leverage scores</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Analysis of Nystrom method with sequential ridge leverage scores" />
+<meta name="author" content="Daniele Calandriello, Alessandro Lazaric, Michal Valko" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Large-scale kernel ridge regression (KRR) is limited by the need to store a large kernel matrix K_t. To avoid storing the entire matrix K_t, Nystrom methods subsample a subset of columns of the kernel matrix, and efficiently find an approximate KRR solution on the reconstructed matrix. The chosen subsampling distribution in turn affects the statistical and computational tradeoffs. For KRR problems, recent works show that a sampling distribution proportional to the ridge leverage scores (RLSs) provides strong reconstruction guarantees for the approximation. While exact RLSs are as difficult to compute as a KRR solution, we may be able to approximate them well enough. In this paper, we study KRR problems in a sequential setting and introduce the INK-ESTIMATE algorithm, that incrementally computes the RLSs estimates. INK-ESTIMATE maintains a small sketch of K_t, that at each step is used to compute an intermediate estimate of the RLSs. First, our sketch update does not require access to previously seen columns, and therefore a single pass over the kernel matrix is sufficient. Second, the algorithm requires a fixed, small space budget to run dependent only on the effective dimension of the kernel matrix. Finally, our sketch provides strong approximation guarantees on the distance between the true kernel matrix and its approximation, and on the statistical risk of the approximate KRR solution at any time, because all our guarantees hold at any intermediate step." />
+<meta property="og:description" content="Large-scale kernel ridge regression (KRR) is limited by the need to store a large kernel matrix K_t. To avoid storing the entire matrix K_t, Nystrom methods subsample a subset of columns of the kernel matrix, and efficiently find an approximate KRR solution on the reconstructed matrix. The chosen subsampling distribution in turn affects the statistical and computational tradeoffs. For KRR problems, recent works show that a sampling distribution proportional to the ridge leverage scores (RLSs) provides strong reconstruction guarantees for the approximation. While exact RLSs are as difficult to compute as a KRR solution, we may be able to approximate them well enough. In this paper, we study KRR problems in a sequential setting and introduce the INK-ESTIMATE algorithm, that incrementally computes the RLSs estimates. INK-ESTIMATE maintains a small sketch of K_t, that at each step is used to compute an intermediate estimate of the RLSs. First, our sketch update does not require access to previously seen columns, and therefore a single pass over the kernel matrix is sufficient. Second, the algorithm requires a fixed, small space budget to run dependent only on the effective dimension of the kernel matrix. Finally, our sketch provides strong approximation guarantees on the distance between the true kernel matrix and its approximation, and on the statistical risk of the approximate KRR solution at any time, because all our guarantees hold at any intermediate step." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/06/AnalysisofNystrommethodwithsequentialridgeleveragescores.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/06/AnalysisofNystrommethodwithsequentialridgeleveragescores.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Analysis of Nystrom method with sequential ridge leverage scores" />
+<script type="application/ld+json">
+{"description":"Large-scale kernel ridge regression (KRR) is limited by the need to store a large kernel matrix K_t. To avoid storing the entire matrix K_t, Nystrom methods subsample a subset of columns of the kernel matrix, and efficiently find an approximate KRR solution on the reconstructed matrix. The chosen subsampling distribution in turn affects the statistical and computational tradeoffs. For KRR problems, recent works show that a sampling distribution proportional to the ridge leverage scores (RLSs) provides strong reconstruction guarantees for the approximation. While exact RLSs are as difficult to compute as a KRR solution, we may be able to approximate them well enough. In this paper, we study KRR problems in a sequential setting and introduce the INK-ESTIMATE algorithm, that incrementally computes the RLSs estimates. INK-ESTIMATE maintains a small sketch of K_t, that at each step is used to compute an intermediate estimate of the RLSs. First, our sketch update does not require access to previously seen columns, and therefore a single pass over the kernel matrix is sufficient. Second, the algorithm requires a fixed, small space budget to run dependent only on the effective dimension of the kernel matrix. Finally, our sketch provides strong approximation guarantees on the distance between the true kernel matrix and its approximation, and on the statistical risk of the approximate KRR solution at any time, because all our guarantees hold at any intermediate step.","datePublished":"2026-10-06T00:00:00+00:00","dateModified":"2026-10-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/06/AnalysisofNystrommethodwithsequentialridgeleveragescores.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/06/AnalysisofNystrommethodwithsequentialridgeleveragescores.html","author":{"@type":"Person","name":"Daniele Calandriello, Alessandro Lazaric, Michal Valko"},"@type":"BlogPosting","headline":"Analysis of Nystrom method with sequential ridge leverage scores","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-06 00:00:00 +0000">10-06</time>
+  </p>
+  
+  <h1>Analysis of Nystrom method with sequential ridge leverage scores</h1>
+  <br>Daniele Calandriello, Alessandro Lazaric, Michal Valko</h3>
+  <br> [stat.ML]
+
+  <p>Large-scale kernel ridge regression (KRR) is limited by the need to store a large kernel matrix K_t. To avoid storing the entire matrix K_t, Nystrom methods subsample a subset of columns of the kernel matrix, and efficiently find an approximate KRR solution on the reconstructed matrix. The chosen subsampling distribution in turn affects the statistical and computational tradeoffs. For KRR problems, recent works show that a sampling distribution proportional to the ridge leverage scores (RLSs) provides strong reconstruction guarantees for the approximation. While exact RLSs are as difficult to compute as a KRR solution, we may be able to approximate them well enough. In this paper, we study KRR problems in a sequential setting and introduce the INK-ESTIMATE algorithm, that incrementally computes the RLSs estimates. INK-ESTIMATE maintains a small sketch of K_t, that at each step is used to compute an intermediate estimate of the RLSs. First, our sketch update does not require access to previously seen columns, and therefore a single pass over the kernel matrix is sufficient. Second, the algorithm requires a fixed, small space budget to run dependent only on the effective dimension of the kernel matrix. Finally, our sketch provides strong approximation guarantees on the distance between the true kernel matrix and its approximation, and on the statistical risk of the approximate KRR solution at any time, because all our guarantees hold at any intermediate step.</p>
+
+<p><a href="https://arxiv.org/abs/2604.20077">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
