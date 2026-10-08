@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Koopman Observers for Diffusion Acceleration: Correcting Feature Forecasts with Shallow Measurements</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Koopman Observers for Diffusion Acceleration: Correcting Feature Forecasts with Shallow Measurements" />
+<meta name="author" content="Hanru Bai, Yuanchao Xu, Fengyi Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Feature caching accelerates diffusion sampling by replacing expensive network evaluations with predictions from previously computed activations. However, forecasts based only on past features cannot directly incorporate changes in the current denoising state. We investigate whether inexpensive, freshly computed features can serve as observations for correcting these predictions. We introduce an observation-corrected Koopman framework for accelerating frozen diffusion models. Using calibration trajectories, we identify finite-dimensional, time-dependent Koopman approximations that jointly describe the increments of shallow and deep network features. During accelerated sampling, these operators predict the evolution of expensive deep features, while innovations in the observed shallow features correct the predicted state. Periodic full evaluations refresh the observer, and all generative-model parameters remain unchanged. This formulation enables controlled comparisons of temporal prediction and observation correction. Across three 10,000-image runs per dataset, our method reduces paired Inception-feature MSE by $19.9\%$ on CIFAR-10 and $11.9\%$ on a ten-class ImageNet subset relative to channelwise affine prediction under the same four-partial-step schedule. Matched ablations attribute additional reductions of $4.54\%$ and $4.67\%$ to observation correction. The observer achieves $1.89\times$ and $1.85\times$ measured speedups over DDIM-50, supporting improved reference-sampler fidelity without retraining the denoiser." />
+<meta property="og:description" content="Feature caching accelerates diffusion sampling by replacing expensive network evaluations with predictions from previously computed activations. However, forecasts based only on past features cannot directly incorporate changes in the current denoising state. We investigate whether inexpensive, freshly computed features can serve as observations for correcting these predictions. We introduce an observation-corrected Koopman framework for accelerating frozen diffusion models. Using calibration trajectories, we identify finite-dimensional, time-dependent Koopman approximations that jointly describe the increments of shallow and deep network features. During accelerated sampling, these operators predict the evolution of expensive deep features, while innovations in the observed shallow features correct the predicted state. Periodic full evaluations refresh the observer, and all generative-model parameters remain unchanged. This formulation enables controlled comparisons of temporal prediction and observation correction. Across three 10,000-image runs per dataset, our method reduces paired Inception-feature MSE by $19.9\%$ on CIFAR-10 and $11.9\%$ on a ten-class ImageNet subset relative to channelwise affine prediction under the same four-partial-step schedule. Matched ablations attribute additional reductions of $4.54\%$ and $4.67\%$ to observation correction. The observer achieves $1.89\times$ and $1.85\times$ measured speedups over DDIM-50, supporting improved reference-sampler fidelity without retraining the denoiser." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/08/KoopmanObserversforDiffusionAccelerationCorrectingFeatureForecastswithShallowMeasurements.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/08/KoopmanObserversforDiffusionAccelerationCorrectingFeatureForecastswithShallowMeasurements.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Koopman Observers for Diffusion Acceleration: Correcting Feature Forecasts with Shallow Measurements" />
+<script type="application/ld+json">
+{"description":"Feature caching accelerates diffusion sampling by replacing expensive network evaluations with predictions from previously computed activations. However, forecasts based only on past features cannot directly incorporate changes in the current denoising state. We investigate whether inexpensive, freshly computed features can serve as observations for correcting these predictions. We introduce an observation-corrected Koopman framework for accelerating frozen diffusion models. Using calibration trajectories, we identify finite-dimensional, time-dependent Koopman approximations that jointly describe the increments of shallow and deep network features. During accelerated sampling, these operators predict the evolution of expensive deep features, while innovations in the observed shallow features correct the predicted state. Periodic full evaluations refresh the observer, and all generative-model parameters remain unchanged. This formulation enables controlled comparisons of temporal prediction and observation correction. Across three 10,000-image runs per dataset, our method reduces paired Inception-feature MSE by $19.9\\%$ on CIFAR-10 and $11.9\\%$ on a ten-class ImageNet subset relative to channelwise affine prediction under the same four-partial-step schedule. Matched ablations attribute additional reductions of $4.54\\%$ and $4.67\\%$ to observation correction. The observer achieves $1.89\\times$ and $1.85\\times$ measured speedups over DDIM-50, supporting improved reference-sampler fidelity without retraining the denoiser.","datePublished":"2026-10-08T00:00:00+00:00","dateModified":"2026-10-08T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/08/KoopmanObserversforDiffusionAccelerationCorrectingFeatureForecastswithShallowMeasurements.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/08/KoopmanObserversforDiffusionAccelerationCorrectingFeatureForecastswithShallowMeasurements.html","author":{"@type":"Person","name":"Hanru Bai, Yuanchao Xu, Fengyi Li"},"@type":"BlogPosting","headline":"Koopman Observers for Diffusion Acceleration: Correcting Feature Forecasts with Shallow Measurements","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-08 00:00:00 +0000">10-08</time>
+  </p>
+  
+  <h1>Koopman Observers for Diffusion Acceleration: Correcting Feature Forecasts with Shallow Measurements</h1>
+  <br>Hanru Bai, Yuanchao Xu, Fengyi Li</h3>
+  <br> [stat.ML]
+
+  <p>Feature caching accelerates diffusion sampling by replacing expensive network evaluations with predictions from previously computed activations. However, forecasts based only on past features cannot directly incorporate changes in the current denoising state. We investigate whether inexpensive, freshly computed features can serve as observations for correcting these predictions. We introduce an observation-corrected Koopman framework for accelerating frozen diffusion models. Using calibration trajectories, we identify finite-dimensional, time-dependent Koopman approximations that jointly describe the increments of shallow and deep network features. During accelerated sampling, these operators predict the evolution of expensive deep features, while innovations in the observed shallow features correct the predicted state. Periodic full evaluations refresh the observer, and all generative-model parameters remain unchanged. This formulation enables controlled comparisons of temporal prediction and observation correction. Across three 10,000-image runs per dataset, our method reduces paired Inception-feature MSE by $19.9\%$ on CIFAR-10 and $11.9\%$ on a ten-class ImageNet subset relative to channelwise affine prediction under the same four-partial-step schedule. Matched ablations attribute additional reductions of $4.54\%$ and $4.67\%$ to observation correction. The observer achieves $1.89\times$ and $1.85\times$ measured speedups over DDIM-50, supporting improved reference-sampler fidelity without retraining the denoiser.</p>
+
+<p><a href="https://arxiv.org/abs/2610.10366">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
