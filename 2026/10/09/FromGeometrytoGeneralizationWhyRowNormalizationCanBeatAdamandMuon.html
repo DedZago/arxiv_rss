@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon" />
+<meta name="author" content="Jihwan Kim, Dogyoon Song, Chulhee Yun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Different optimizers can fit the same training data while selecting classifiers with substantially different geometries, but whether this difference provably affects population performance remains unclear. We show that row-wise normalization can achieve strictly higher population accuracy than full-batch Adam, a proxy for random-reshuffling Adam, and exact-SVD Muon in high-dimensional multiclass classification. Under an isotropic Gaussian-cloud data model, this advantage arises because row normalization’s class-wise Euclidean geometry asymptotically preserves the population decision-boundary directions, whereas Adam’s coordinate-wise geometry and Muon’s spectral geometry introduce nonvanishing distortions. Beyond isotropy, the advantage persists for full-batch training on class means with independently oriented class-mean and test-noise covariances. It holds for power-law spectra with class-mean exponent below one, even under heavily anisotropic test noise. When both covariances are diagonal and sufficiently close, the advantage over Adam can reverse, while applying the same random rotation to both restores it by changing only their alignment with Adam’s coordinate axes. Synthetic and last-layer language-model experiments support the predicted advantage." />
+<meta property="og:description" content="Different optimizers can fit the same training data while selecting classifiers with substantially different geometries, but whether this difference provably affects population performance remains unclear. We show that row-wise normalization can achieve strictly higher population accuracy than full-batch Adam, a proxy for random-reshuffling Adam, and exact-SVD Muon in high-dimensional multiclass classification. Under an isotropic Gaussian-cloud data model, this advantage arises because row normalization’s class-wise Euclidean geometry asymptotically preserves the population decision-boundary directions, whereas Adam’s coordinate-wise geometry and Muon’s spectral geometry introduce nonvanishing distortions. Beyond isotropy, the advantage persists for full-batch training on class means with independently oriented class-mean and test-noise covariances. It holds for power-law spectra with class-mean exponent below one, even under heavily anisotropic test noise. When both covariances are diagonal and sufficiently close, the advantage over Adam can reverse, while applying the same random rotation to both restores it by changing only their alignment with Adam’s coordinate axes. Synthetic and last-layer language-model experiments support the predicted advantage." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/09/FromGeometrytoGeneralizationWhyRowNormalizationCanBeatAdamandMuon.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/09/FromGeometrytoGeneralizationWhyRowNormalizationCanBeatAdamandMuon.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon" />
+<script type="application/ld+json">
+{"description":"Different optimizers can fit the same training data while selecting classifiers with substantially different geometries, but whether this difference provably affects population performance remains unclear. We show that row-wise normalization can achieve strictly higher population accuracy than full-batch Adam, a proxy for random-reshuffling Adam, and exact-SVD Muon in high-dimensional multiclass classification. Under an isotropic Gaussian-cloud data model, this advantage arises because row normalization’s class-wise Euclidean geometry asymptotically preserves the population decision-boundary directions, whereas Adam’s coordinate-wise geometry and Muon’s spectral geometry introduce nonvanishing distortions. Beyond isotropy, the advantage persists for full-batch training on class means with independently oriented class-mean and test-noise covariances. It holds for power-law spectra with class-mean exponent below one, even under heavily anisotropic test noise. When both covariances are diagonal and sufficiently close, the advantage over Adam can reverse, while applying the same random rotation to both restores it by changing only their alignment with Adam’s coordinate axes. Synthetic and last-layer language-model experiments support the predicted advantage.","datePublished":"2026-10-09T00:00:00+00:00","dateModified":"2026-10-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/09/FromGeometrytoGeneralizationWhyRowNormalizationCanBeatAdamandMuon.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/09/FromGeometrytoGeneralizationWhyRowNormalizationCanBeatAdamandMuon.html","author":{"@type":"Person","name":"Jihwan Kim, Dogyoon Song, Chulhee Yun"},"@type":"BlogPosting","headline":"From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-09 00:00:00 +0000">10-09</time>
+  </p>
+  
+  <h1>From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon</h1>
+  <br>Jihwan Kim, Dogyoon Song, Chulhee Yun</h3>
+  <br> [stat.ML]
+
+  <p>Different optimizers can fit the same training data while selecting classifiers with substantially different geometries, but whether this difference provably affects population performance remains unclear. We show that row-wise normalization can achieve strictly higher population accuracy than full-batch Adam, a proxy for random-reshuffling Adam, and exact-SVD Muon in high-dimensional multiclass classification. Under an isotropic Gaussian-cloud data model, this advantage arises because row normalization’s class-wise Euclidean geometry asymptotically preserves the population decision-boundary directions, whereas Adam’s coordinate-wise geometry and Muon’s spectral geometry introduce nonvanishing distortions. Beyond isotropy, the advantage persists for full-batch training on class means with independently oriented class-mean and test-noise covariances. It holds for power-law spectra with class-mean exponent below one, even under heavily anisotropic test noise. When both covariances are diagonal and sufficiently close, the advantage over Adam can reverse, while applying the same random rotation to both restores it by changing only their alignment with Adam’s coordinate axes. Synthetic and last-layer language-model experiments support the predicted advantage.</p>
+
+<p><a href="https://arxiv.org/abs/2610.11309">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

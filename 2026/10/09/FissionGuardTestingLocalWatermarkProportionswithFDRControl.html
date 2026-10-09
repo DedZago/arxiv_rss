@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>FissionGuard: Testing Local Watermark Proportions with FDR Control</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="FissionGuard: Testing Local Watermark Proportions with FDR Control" />
+<meta name="author" content="Zijian Wei, Yajie Bao, Haojie Ren, Zhen Chen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A watermark detector can flag a text even when only a small fraction of its tokens are watermarked. We study sequential auditing to identify local passages whose watermark proportions exceed a prespecified threshold. Each alarm fixes a candidate passage’s endpoint, while its start is chosen from earlier tokens. Reusing the same evidence to locate and test a passage can invalidate inference. We propose FissionGuard, which uses data fission to construct an alarm value and a validation value from each token-level $p$-value. The alarm values guide alarms and localization. The validation values yield passage-level $p$-values through partial conjunction, excluding as many of the strongest signals as the proportion null allows. These $p$-values are used to test the corresponding hypotheses at levels assigned by an online multiple-testing procedure. Under the stated watermark generation model, allowing dependence among token-level $p$-values at watermarked positions, we prove finite-sample false discovery rate (FDR) control among reported passages at every fixed finite horizon. We also derive a finite-sample lower bound on power for testing nonnull candidates. Experiments on synthetic streams and Mistral and Qwen generations across four marking layouts show gains in watermarked-token coverage over sample splitting, with empirical FDR below the target." />
+<meta property="og:description" content="A watermark detector can flag a text even when only a small fraction of its tokens are watermarked. We study sequential auditing to identify local passages whose watermark proportions exceed a prespecified threshold. Each alarm fixes a candidate passage’s endpoint, while its start is chosen from earlier tokens. Reusing the same evidence to locate and test a passage can invalidate inference. We propose FissionGuard, which uses data fission to construct an alarm value and a validation value from each token-level $p$-value. The alarm values guide alarms and localization. The validation values yield passage-level $p$-values through partial conjunction, excluding as many of the strongest signals as the proportion null allows. These $p$-values are used to test the corresponding hypotheses at levels assigned by an online multiple-testing procedure. Under the stated watermark generation model, allowing dependence among token-level $p$-values at watermarked positions, we prove finite-sample false discovery rate (FDR) control among reported passages at every fixed finite horizon. We also derive a finite-sample lower bound on power for testing nonnull candidates. Experiments on synthetic streams and Mistral and Qwen generations across four marking layouts show gains in watermarked-token coverage over sample splitting, with empirical FDR below the target." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/09/FissionGuardTestingLocalWatermarkProportionswithFDRControl.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/09/FissionGuardTestingLocalWatermarkProportionswithFDRControl.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="FissionGuard: Testing Local Watermark Proportions with FDR Control" />
+<script type="application/ld+json">
+{"description":"A watermark detector can flag a text even when only a small fraction of its tokens are watermarked. We study sequential auditing to identify local passages whose watermark proportions exceed a prespecified threshold. Each alarm fixes a candidate passage’s endpoint, while its start is chosen from earlier tokens. Reusing the same evidence to locate and test a passage can invalidate inference. We propose FissionGuard, which uses data fission to construct an alarm value and a validation value from each token-level $p$-value. The alarm values guide alarms and localization. The validation values yield passage-level $p$-values through partial conjunction, excluding as many of the strongest signals as the proportion null allows. These $p$-values are used to test the corresponding hypotheses at levels assigned by an online multiple-testing procedure. Under the stated watermark generation model, allowing dependence among token-level $p$-values at watermarked positions, we prove finite-sample false discovery rate (FDR) control among reported passages at every fixed finite horizon. We also derive a finite-sample lower bound on power for testing nonnull candidates. Experiments on synthetic streams and Mistral and Qwen generations across four marking layouts show gains in watermarked-token coverage over sample splitting, with empirical FDR below the target.","datePublished":"2026-10-09T00:00:00+00:00","dateModified":"2026-10-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/09/FissionGuardTestingLocalWatermarkProportionswithFDRControl.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/09/FissionGuardTestingLocalWatermarkProportionswithFDRControl.html","author":{"@type":"Person","name":"Zijian Wei, Yajie Bao, Haojie Ren, Zhen Chen"},"@type":"BlogPosting","headline":"FissionGuard: Testing Local Watermark Proportions with FDR Control","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-09 00:00:00 +0000">10-09</time>
+  </p>
+  
+  <h1>FissionGuard: Testing Local Watermark Proportions with FDR Control</h1>
+  <br>Zijian Wei, Yajie Bao, Haojie Ren, Zhen Chen</h3>
+  <br> [stat.ME]
+
+  <p>A watermark detector can flag a text even when only a small fraction of its tokens are watermarked. We study sequential auditing to identify local passages whose watermark proportions exceed a prespecified threshold. Each alarm fixes a candidate passage’s endpoint, while its start is chosen from earlier tokens. Reusing the same evidence to locate and test a passage can invalidate inference. We propose FissionGuard, which uses data fission to construct an alarm value and a validation value from each token-level $p$-value. The alarm values guide alarms and localization. The validation values yield passage-level $p$-values through partial conjunction, excluding as many of the strongest signals as the proportion null allows. These $p$-values are used to test the corresponding hypotheses at levels assigned by an online multiple-testing procedure. Under the stated watermark generation model, allowing dependence among token-level $p$-values at watermarked positions, we prove finite-sample false discovery rate (FDR) control among reported passages at every fixed finite horizon. We also derive a finite-sample lower bound on power for testing nonnull candidates. Experiments on synthetic streams and Mistral and Qwen generations across four marking layouts show gains in watermarked-token coverage over sample splitting, with empirical FDR below the target.</p>
+
+<p><a href="https://arxiv.org/abs/2610.11625">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
