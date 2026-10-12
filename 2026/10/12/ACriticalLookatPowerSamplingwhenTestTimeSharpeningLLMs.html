@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A Critical Look at Power Sampling when Test Time Sharpening LLMs</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="A Critical Look at Power Sampling when Test Time Sharpening LLMs" />
+<meta name="author" content="Abiel Malkani Talwar, Christopher Nemeth, Henry Moss" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reinforcement learning with verifiable rewards (RLVR) has substantially improved LLM reasoning, yet growing evidence suggests it mainly performs distribution sharpening: concentrating probability mass on reasoning paths the base model already produces. Recent work therefore seeks RLVR’s gains without needing reward signals, by sampling from the power distribution $\pi_\alpha \propto \pi_{\text{base}}^\alpha$ via Markov chain Monte Carlo or sequential Monte Carlo. We show that these samplers fail to converge to $\pi_\alpha$ under realistic compute budgets, and that their gains are largely recreated via simple Best-of-$N$ with appropriate grading . This suggests they succeed by selecting high-probability sequences, not by approximating $\pi_\alpha$, raising a natural question: is the power distribution itself a worthwhile target? We test this hypothesis directly by fine-tuning the base model to match $\pi_\alpha$, sidestepping sampler convergence issues entirely. Despite approximating the target far more faithfully than existing samplers, this strategy yields gains that are noisy and specific to certain models and sampling tasks. Together, our results suggest that the value of power sampling lies not in faithfully targeting $\pi_\alpha$, but in the simpler goal of extracting sequences the base model already deems likely." />
+<meta property="og:description" content="Reinforcement learning with verifiable rewards (RLVR) has substantially improved LLM reasoning, yet growing evidence suggests it mainly performs distribution sharpening: concentrating probability mass on reasoning paths the base model already produces. Recent work therefore seeks RLVR’s gains without needing reward signals, by sampling from the power distribution $\pi_\alpha \propto \pi_{\text{base}}^\alpha$ via Markov chain Monte Carlo or sequential Monte Carlo. We show that these samplers fail to converge to $\pi_\alpha$ under realistic compute budgets, and that their gains are largely recreated via simple Best-of-$N$ with appropriate grading . This suggests they succeed by selecting high-probability sequences, not by approximating $\pi_\alpha$, raising a natural question: is the power distribution itself a worthwhile target? We test this hypothesis directly by fine-tuning the base model to match $\pi_\alpha$, sidestepping sampler convergence issues entirely. Despite approximating the target far more faithfully than existing samplers, this strategy yields gains that are noisy and specific to certain models and sampling tasks. Together, our results suggest that the value of power sampling lies not in faithfully targeting $\pi_\alpha$, but in the simpler goal of extracting sequences the base model already deems likely." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/12/ACriticalLookatPowerSamplingwhenTestTimeSharpeningLLMs.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/12/ACriticalLookatPowerSamplingwhenTestTimeSharpeningLLMs.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Critical Look at Power Sampling when Test Time Sharpening LLMs" />
+<script type="application/ld+json">
+{"description":"Reinforcement learning with verifiable rewards (RLVR) has substantially improved LLM reasoning, yet growing evidence suggests it mainly performs distribution sharpening: concentrating probability mass on reasoning paths the base model already produces. Recent work therefore seeks RLVR’s gains without needing reward signals, by sampling from the power distribution $\\pi_\\alpha \\propto \\pi_{\\text{base}}^\\alpha$ via Markov chain Monte Carlo or sequential Monte Carlo. We show that these samplers fail to converge to $\\pi_\\alpha$ under realistic compute budgets, and that their gains are largely recreated via simple Best-of-$N$ with appropriate grading . This suggests they succeed by selecting high-probability sequences, not by approximating $\\pi_\\alpha$, raising a natural question: is the power distribution itself a worthwhile target? We test this hypothesis directly by fine-tuning the base model to match $\\pi_\\alpha$, sidestepping sampler convergence issues entirely. Despite approximating the target far more faithfully than existing samplers, this strategy yields gains that are noisy and specific to certain models and sampling tasks. Together, our results suggest that the value of power sampling lies not in faithfully targeting $\\pi_\\alpha$, but in the simpler goal of extracting sequences the base model already deems likely.","datePublished":"2026-10-12T00:00:00+00:00","dateModified":"2026-10-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/12/ACriticalLookatPowerSamplingwhenTestTimeSharpeningLLMs.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/12/ACriticalLookatPowerSamplingwhenTestTimeSharpeningLLMs.html","author":{"@type":"Person","name":"Abiel Malkani Talwar, Christopher Nemeth, Henry Moss"},"@type":"BlogPosting","headline":"A Critical Look at Power Sampling when Test Time Sharpening LLMs","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-12 00:00:00 +0000">10-12</time>
+  </p>
+  
+  <h1>A Critical Look at Power Sampling when Test Time Sharpening LLMs</h1>
+  <br>Abiel Malkani Talwar, Christopher Nemeth, Henry Moss</h3>
+  <br> [stat.ML]
+
+  <p>Reinforcement learning with verifiable rewards (RLVR) has substantially improved LLM reasoning, yet growing evidence suggests it mainly performs distribution sharpening: concentrating probability mass on reasoning paths the base model already produces. Recent work therefore seeks RLVR’s gains without needing reward signals, by sampling from the power distribution $\pi_\alpha \propto \pi_{\text{base}}^\alpha$ via Markov chain Monte Carlo or sequential Monte Carlo. We show that these samplers fail to converge to $\pi_\alpha$ under realistic compute budgets, and that their gains are largely recreated via simple Best-of-$N$ with appropriate grading . This suggests they succeed by selecting high-probability sequences, not by approximating $\pi_\alpha$, raising a natural question: is the power distribution itself a worthwhile target? We test this hypothesis directly by fine-tuning the base model to match $\pi_\alpha$, sidestepping sampler convergence issues entirely. Despite approximating the target far more faithfully than existing samplers, this strategy yields gains that are noisy and specific to certain models and sampling tasks. Together, our results suggest that the value of power sampling lies not in faithfully targeting $\pi_\alpha$, but in the simpler goal of extracting sequences the base model already deems likely.</p>
+
+<p><a href="https://arxiv.org/abs/2610.13653">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

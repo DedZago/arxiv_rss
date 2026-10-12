@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Scan-Parallel Variational Inference for event-driven Latent Jump Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Scan-Parallel Variational Inference for event-driven Latent Jump Models" />
+<meta name="author" content="Vansh Bansal, Min Chen, James G. Scott" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Continuous-time latent state-space models are widely used for irregularly observed time series, typically representing uncertainty through a random initial state followed by smooth ordinary differential equation (ODE) dynamics, or Brownian perturbations accumulated by a stochastic differential equation (SDE). While these constructions are natural for smooth or diffusive systems, they do not directly encode a finite set of unobserved shocks whose timing, magnitude, and effect on memory are themselves uncertain. We instead introduce latent jump models (LJMs): the latent state follows closed-form deterministic dynamics between Poisson-driven event times and undergoes a learned instantaneous jump at each event, with state-dependent intensity and mark distributions. This defines a time-homogeneous Markov process whose jumps are intrinsic state transitions rather than numerical integration steps. For training, we derive a tractable event-augmented path-space evidence lower bound (ELBO) and introduce Scan-Parallel Variational Inference (SPVI): an observation-conditioned variational posterior samples the complete latent event configuration before the state recurrence is evaluated using triangular affine scans. This enables fast and scalable training for LJMs in logarithmic temporal depth. Across synthetic stochastic systems and real irregular time series, LJMs remain competitive with continuous-time latent baselines in forecast accuracy, often with fewer latent updates than numerical solver evaluations, while training one to two orders of magnitude faster than the sequential baselines." />
+<meta property="og:description" content="Continuous-time latent state-space models are widely used for irregularly observed time series, typically representing uncertainty through a random initial state followed by smooth ordinary differential equation (ODE) dynamics, or Brownian perturbations accumulated by a stochastic differential equation (SDE). While these constructions are natural for smooth or diffusive systems, they do not directly encode a finite set of unobserved shocks whose timing, magnitude, and effect on memory are themselves uncertain. We instead introduce latent jump models (LJMs): the latent state follows closed-form deterministic dynamics between Poisson-driven event times and undergoes a learned instantaneous jump at each event, with state-dependent intensity and mark distributions. This defines a time-homogeneous Markov process whose jumps are intrinsic state transitions rather than numerical integration steps. For training, we derive a tractable event-augmented path-space evidence lower bound (ELBO) and introduce Scan-Parallel Variational Inference (SPVI): an observation-conditioned variational posterior samples the complete latent event configuration before the state recurrence is evaluated using triangular affine scans. This enables fast and scalable training for LJMs in logarithmic temporal depth. Across synthetic stochastic systems and real irregular time series, LJMs remain competitive with continuous-time latent baselines in forecast accuracy, often with fewer latent updates than numerical solver evaluations, while training one to two orders of magnitude faster than the sequential baselines." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/12/ScanParallelVariationalInferenceforeventdrivenLatentJumpModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/12/ScanParallelVariationalInferenceforeventdrivenLatentJumpModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Scan-Parallel Variational Inference for event-driven Latent Jump Models" />
+<script type="application/ld+json">
+{"description":"Continuous-time latent state-space models are widely used for irregularly observed time series, typically representing uncertainty through a random initial state followed by smooth ordinary differential equation (ODE) dynamics, or Brownian perturbations accumulated by a stochastic differential equation (SDE). While these constructions are natural for smooth or diffusive systems, they do not directly encode a finite set of unobserved shocks whose timing, magnitude, and effect on memory are themselves uncertain. We instead introduce latent jump models (LJMs): the latent state follows closed-form deterministic dynamics between Poisson-driven event times and undergoes a learned instantaneous jump at each event, with state-dependent intensity and mark distributions. This defines a time-homogeneous Markov process whose jumps are intrinsic state transitions rather than numerical integration steps. For training, we derive a tractable event-augmented path-space evidence lower bound (ELBO) and introduce Scan-Parallel Variational Inference (SPVI): an observation-conditioned variational posterior samples the complete latent event configuration before the state recurrence is evaluated using triangular affine scans. This enables fast and scalable training for LJMs in logarithmic temporal depth. Across synthetic stochastic systems and real irregular time series, LJMs remain competitive with continuous-time latent baselines in forecast accuracy, often with fewer latent updates than numerical solver evaluations, while training one to two orders of magnitude faster than the sequential baselines.","datePublished":"2026-10-12T00:00:00+00:00","dateModified":"2026-10-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/12/ScanParallelVariationalInferenceforeventdrivenLatentJumpModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/12/ScanParallelVariationalInferenceforeventdrivenLatentJumpModels.html","author":{"@type":"Person","name":"Vansh Bansal, Min Chen, James G. Scott"},"@type":"BlogPosting","headline":"Scan-Parallel Variational Inference for event-driven Latent Jump Models","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-12 00:00:00 +0000">10-12</time>
+  </p>
+  
+  <h1>Scan-Parallel Variational Inference for event-driven Latent Jump Models</h1>
+  <br>Vansh Bansal, Min Chen, James G. Scott</h3>
+  <br> [stat.ML]
+
+  <p>Continuous-time latent state-space models are widely used for irregularly observed time series, typically representing uncertainty through a random initial state followed by smooth ordinary differential equation (ODE) dynamics, or Brownian perturbations accumulated by a stochastic differential equation (SDE). While these constructions are natural for smooth or diffusive systems, they do not directly encode a finite set of unobserved shocks whose timing, magnitude, and effect on memory are themselves uncertain. We instead introduce latent jump models (LJMs): the latent state follows closed-form deterministic dynamics between Poisson-driven event times and undergoes a learned instantaneous jump at each event, with state-dependent intensity and mark distributions. This defines a time-homogeneous Markov process whose jumps are intrinsic state transitions rather than numerical integration steps. For training, we derive a tractable event-augmented path-space evidence lower bound (ELBO) and introduce Scan-Parallel Variational Inference (SPVI): an observation-conditioned variational posterior samples the complete latent event configuration before the state recurrence is evaluated using triangular affine scans. This enables fast and scalable training for LJMs in logarithmic temporal depth. Across synthetic stochastic systems and real irregular time series, LJMs remain competitive with continuous-time latent baselines in forecast accuracy, often with fewer latent updates than numerical solver evaluations, while training one to two orders of magnitude faster than the sequential baselines.</p>
+
+<p><a href="https://arxiv.org/abs/2610.12986">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

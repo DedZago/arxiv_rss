@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Why Heavy-Tailed Weight Spectra Predict Model Quality</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Why Heavy-Tailed Weight Spectra Predict Model Quality" />
+<meta name="author" content="Joseph Wilson, Chris van der Heide, Liam Hodgkinson, Zhichao Wang, Fred Roosta, Michael W. Mahoney" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A solid understanding of the predictive success of deep neural networks (DNNs) remains elusive. For example, while many data-dependent metrics exist that seek to predict model quality of DNNs, these metrics may be expensive to compute for large datasets and/or may be impossible to compute when training datasets are not released. A practical and effective predictor of model quality involves analyzing DNN weight matrices, as prior work has established that heavy-tailed spectral distributions in trained weight matrices can be strongly predictive of model quality. However, such metrics lack a rigorous statistical justification. In this work, we aim to understand why these metrics perform well, from a statistical perspective. To do so, we employ a probabilistic framework to derive the marginal likelihood for a DNN, evaluated using only the final layer weights. Across large-scale convolutional DNNs and LLMs, we find that this marginal likelihood predicts model quality. To understand the role heavy-tailed spectra play in predictive performance, we derive the limiting log-marginal likelihood for spectra that follow the (heavy-tailed) High-Temperature Marchenko-Pastur (HTMP) distribution. We show that this limiting quantity is convex in a heaviness parameter, and we derive an optimal heaviness that empirically predicts over-fitting for large-scale DNNs." />
+<meta property="og:description" content="A solid understanding of the predictive success of deep neural networks (DNNs) remains elusive. For example, while many data-dependent metrics exist that seek to predict model quality of DNNs, these metrics may be expensive to compute for large datasets and/or may be impossible to compute when training datasets are not released. A practical and effective predictor of model quality involves analyzing DNN weight matrices, as prior work has established that heavy-tailed spectral distributions in trained weight matrices can be strongly predictive of model quality. However, such metrics lack a rigorous statistical justification. In this work, we aim to understand why these metrics perform well, from a statistical perspective. To do so, we employ a probabilistic framework to derive the marginal likelihood for a DNN, evaluated using only the final layer weights. Across large-scale convolutional DNNs and LLMs, we find that this marginal likelihood predicts model quality. To understand the role heavy-tailed spectra play in predictive performance, we derive the limiting log-marginal likelihood for spectra that follow the (heavy-tailed) High-Temperature Marchenko-Pastur (HTMP) distribution. We show that this limiting quantity is convex in a heaviness parameter, and we derive an optimal heaviness that empirically predicts over-fitting for large-scale DNNs." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/12/WhyHeavyTailedWeightSpectraPredictModelQuality.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/12/WhyHeavyTailedWeightSpectraPredictModelQuality.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Why Heavy-Tailed Weight Spectra Predict Model Quality" />
+<script type="application/ld+json">
+{"description":"A solid understanding of the predictive success of deep neural networks (DNNs) remains elusive. For example, while many data-dependent metrics exist that seek to predict model quality of DNNs, these metrics may be expensive to compute for large datasets and/or may be impossible to compute when training datasets are not released. A practical and effective predictor of model quality involves analyzing DNN weight matrices, as prior work has established that heavy-tailed spectral distributions in trained weight matrices can be strongly predictive of model quality. However, such metrics lack a rigorous statistical justification. In this work, we aim to understand why these metrics perform well, from a statistical perspective. To do so, we employ a probabilistic framework to derive the marginal likelihood for a DNN, evaluated using only the final layer weights. Across large-scale convolutional DNNs and LLMs, we find that this marginal likelihood predicts model quality. To understand the role heavy-tailed spectra play in predictive performance, we derive the limiting log-marginal likelihood for spectra that follow the (heavy-tailed) High-Temperature Marchenko-Pastur (HTMP) distribution. We show that this limiting quantity is convex in a heaviness parameter, and we derive an optimal heaviness that empirically predicts over-fitting for large-scale DNNs.","datePublished":"2026-10-12T00:00:00+00:00","dateModified":"2026-10-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/12/WhyHeavyTailedWeightSpectraPredictModelQuality.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/12/WhyHeavyTailedWeightSpectraPredictModelQuality.html","author":{"@type":"Person","name":"Joseph Wilson, Chris van der Heide, Liam Hodgkinson, Zhichao Wang, Fred Roosta, Michael W. Mahoney"},"@type":"BlogPosting","headline":"Why Heavy-Tailed Weight Spectra Predict Model Quality","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-12 00:00:00 +0000">10-12</time>
+  </p>
+  
+  <h1>Why Heavy-Tailed Weight Spectra Predict Model Quality</h1>
+  <br>Joseph Wilson, Chris van der Heide, Liam Hodgkinson, Zhichao Wang, Fred Roosta, Michael W. Mahoney</h3>
+  <br> [stat.ML]
+
+  <p>A solid understanding of the predictive success of deep neural networks (DNNs) remains elusive. For example, while many data-dependent metrics exist that seek to predict model quality of DNNs, these metrics may be expensive to compute for large datasets and/or may be impossible to compute when training datasets are not released. A practical and effective predictor of model quality involves analyzing DNN weight matrices, as prior work has established that heavy-tailed spectral distributions in trained weight matrices can be strongly predictive of model quality. However, such metrics lack a rigorous statistical justification. In this work, we aim to understand why these metrics perform well, from a statistical perspective. To do so, we employ a probabilistic framework to derive the marginal likelihood for a DNN, evaluated using only the final layer weights. Across large-scale convolutional DNNs and LLMs, we find that this marginal likelihood predicts model quality. To understand the role heavy-tailed spectra play in predictive performance, we derive the limiting log-marginal likelihood for spectra that follow the (heavy-tailed) High-Temperature Marchenko-Pastur (HTMP) distribution. We show that this limiting quantity is convex in a heaviness parameter, and we derive an optimal heaviness that empirically predicts over-fitting for large-scale DNNs.</p>
+
+<p><a href="https://arxiv.org/abs/2610.13123">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

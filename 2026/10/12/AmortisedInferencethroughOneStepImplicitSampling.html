@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Amortised Inference through One-Step Implicit Sampling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Amortised Inference through One-Step Implicit Sampling" />
+<meta name="author" content="Vincent Pauline, Kirill Tamogashev, Arran Carter, Sanghyeok Choi, Stefan Bauer, Esmeralda S. Whitammer" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Efficient sampling from Bayesian posterior distributions in high dimensions remains a hard problem, despite advances in theory and algorithms. Multiple steps are usually required to draw unbiased samples, for example, iterations of an MCMC algorithm or integration steps in a diffusion-based amortised sampler. However, scalable one-step amortised inference remains a challenging open problem. In this work, we build upon recent progress in data-driven generative modelling to offer a possible solution for one-step amortised sampling. Our one-step implicit sampler (OSIS) uses short-time MCMC dynamics to define a local target for the evolution of an implicitly modelled distribution. In the asymptotic limit, the modelled distribution is a fixed point of the MCMC kernel and thus samples from the target. We analyse the convergence properties of OSIS and show connections with other generative modelling and sampling algorithms. We study various design choices and show that OSIS performs well compared to multi-step amortised samplers and non-amortised MCMC baselines while being far more efficient at sampling time." />
+<meta property="og:description" content="Efficient sampling from Bayesian posterior distributions in high dimensions remains a hard problem, despite advances in theory and algorithms. Multiple steps are usually required to draw unbiased samples, for example, iterations of an MCMC algorithm or integration steps in a diffusion-based amortised sampler. However, scalable one-step amortised inference remains a challenging open problem. In this work, we build upon recent progress in data-driven generative modelling to offer a possible solution for one-step amortised sampling. Our one-step implicit sampler (OSIS) uses short-time MCMC dynamics to define a local target for the evolution of an implicitly modelled distribution. In the asymptotic limit, the modelled distribution is a fixed point of the MCMC kernel and thus samples from the target. We analyse the convergence properties of OSIS and show connections with other generative modelling and sampling algorithms. We study various design choices and show that OSIS performs well compared to multi-step amortised samplers and non-amortised MCMC baselines while being far more efficient at sampling time." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/12/AmortisedInferencethroughOneStepImplicitSampling.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/12/AmortisedInferencethroughOneStepImplicitSampling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Amortised Inference through One-Step Implicit Sampling" />
+<script type="application/ld+json">
+{"description":"Efficient sampling from Bayesian posterior distributions in high dimensions remains a hard problem, despite advances in theory and algorithms. Multiple steps are usually required to draw unbiased samples, for example, iterations of an MCMC algorithm or integration steps in a diffusion-based amortised sampler. However, scalable one-step amortised inference remains a challenging open problem. In this work, we build upon recent progress in data-driven generative modelling to offer a possible solution for one-step amortised sampling. Our one-step implicit sampler (OSIS) uses short-time MCMC dynamics to define a local target for the evolution of an implicitly modelled distribution. In the asymptotic limit, the modelled distribution is a fixed point of the MCMC kernel and thus samples from the target. We analyse the convergence properties of OSIS and show connections with other generative modelling and sampling algorithms. We study various design choices and show that OSIS performs well compared to multi-step amortised samplers and non-amortised MCMC baselines while being far more efficient at sampling time.","datePublished":"2026-10-12T00:00:00+00:00","dateModified":"2026-10-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/12/AmortisedInferencethroughOneStepImplicitSampling.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/12/AmortisedInferencethroughOneStepImplicitSampling.html","author":{"@type":"Person","name":"Vincent Pauline, Kirill Tamogashev, Arran Carter, Sanghyeok Choi, Stefan Bauer, Esmeralda S. Whitammer"},"@type":"BlogPosting","headline":"Amortised Inference through One-Step Implicit Sampling","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-12 00:00:00 +0000">10-12</time>
+  </p>
+  
+  <h1>Amortised Inference through One-Step Implicit Sampling</h1>
+  <br>Vincent Pauline, Kirill Tamogashev, Arran Carter, Sanghyeok Choi, Stefan Bauer, Esmeralda S. Whitammer</h3>
+  <br> [stat.ML]
+
+  <p>Efficient sampling from Bayesian posterior distributions in high dimensions remains a hard problem, despite advances in theory and algorithms. Multiple steps are usually required to draw unbiased samples, for example, iterations of an MCMC algorithm or integration steps in a diffusion-based amortised sampler. However, scalable one-step amortised inference remains a challenging open problem. In this work, we build upon recent progress in data-driven generative modelling to offer a possible solution for one-step amortised sampling. Our one-step implicit sampler (OSIS) uses short-time MCMC dynamics to define a local target for the evolution of an implicitly modelled distribution. In the asymptotic limit, the modelled distribution is a fixed point of the MCMC kernel and thus samples from the target. We analyse the convergence properties of OSIS and show connections with other generative modelling and sampling algorithms. We study various design choices and show that OSIS performs well compared to multi-step amortised samplers and non-amortised MCMC baselines while being far more efficient at sampling time.</p>
+
+<p><a href="https://arxiv.org/abs/2610.12679">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
