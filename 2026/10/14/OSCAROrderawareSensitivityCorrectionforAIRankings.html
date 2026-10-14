@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>OSCAR: Order-aware Sensitivity Correction for AI Rankings</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="OSCAR: Order-aware Sensitivity Correction for AI Rankings" />
+<meta name="author" content="You Liu, Yue Liu, Quanchao Lu, Ergan Shang, Nick Shipilov" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="LLM judges evaluate candidate language models through pairwise comparisons of their responses. Judge-aware Bradley–Terry models aggregate pairwise comparisons by jointly estimating candidate scores and judge-specific sensitivities (how strongly each judge responds to quality differences), often interpreted as reliability. We show that this reading fails when judges prefer a display position. Even under balanced display orders or swap-and-average, omitting position attenuates fitted judge sensitivity by approximately the factor $1-D^2$ near equal quality, where $D$ is the judge’s net first-slot preference between equally good responses. We propose OSCAR, which jointly estimates candidate scores, judge sensitivities and judge-specific position, length and family effects, and provides confidence intervals for pairwise win probabilities that account for dependence within prompts. On held-out data, observed attenuation closely matches the prediction $1-D^2$ (correlation of log ratios 0.99). Across four datasets, position adjustment lowers held-out log loss by 14-23% and changes which judges would be dropped for low sensitivity on three datasets. On MT-Bench, it ranks GPT-4 first instead of claude-v1, matching human votes. Simulations with known parameters show improved recovery of judge sensitivities and candidate rankings, with 94.4-95.2% confidence interval coverage. Low estimated sensitivity alone is therefore not evidence of an unreliable judge." />
+<meta property="og:description" content="LLM judges evaluate candidate language models through pairwise comparisons of their responses. Judge-aware Bradley–Terry models aggregate pairwise comparisons by jointly estimating candidate scores and judge-specific sensitivities (how strongly each judge responds to quality differences), often interpreted as reliability. We show that this reading fails when judges prefer a display position. Even under balanced display orders or swap-and-average, omitting position attenuates fitted judge sensitivity by approximately the factor $1-D^2$ near equal quality, where $D$ is the judge’s net first-slot preference between equally good responses. We propose OSCAR, which jointly estimates candidate scores, judge sensitivities and judge-specific position, length and family effects, and provides confidence intervals for pairwise win probabilities that account for dependence within prompts. On held-out data, observed attenuation closely matches the prediction $1-D^2$ (correlation of log ratios 0.99). Across four datasets, position adjustment lowers held-out log loss by 14-23% and changes which judges would be dropped for low sensitivity on three datasets. On MT-Bench, it ranks GPT-4 first instead of claude-v1, matching human votes. Simulations with known parameters show improved recovery of judge sensitivities and candidate rankings, with 94.4-95.2% confidence interval coverage. Low estimated sensitivity alone is therefore not evidence of an unreliable judge." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/14/OSCAROrderawareSensitivityCorrectionforAIRankings.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/14/OSCAROrderawareSensitivityCorrectionforAIRankings.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="OSCAR: Order-aware Sensitivity Correction for AI Rankings" />
+<script type="application/ld+json">
+{"description":"LLM judges evaluate candidate language models through pairwise comparisons of their responses. Judge-aware Bradley–Terry models aggregate pairwise comparisons by jointly estimating candidate scores and judge-specific sensitivities (how strongly each judge responds to quality differences), often interpreted as reliability. We show that this reading fails when judges prefer a display position. Even under balanced display orders or swap-and-average, omitting position attenuates fitted judge sensitivity by approximately the factor $1-D^2$ near equal quality, where $D$ is the judge’s net first-slot preference between equally good responses. We propose OSCAR, which jointly estimates candidate scores, judge sensitivities and judge-specific position, length and family effects, and provides confidence intervals for pairwise win probabilities that account for dependence within prompts. On held-out data, observed attenuation closely matches the prediction $1-D^2$ (correlation of log ratios 0.99). Across four datasets, position adjustment lowers held-out log loss by 14-23% and changes which judges would be dropped for low sensitivity on three datasets. On MT-Bench, it ranks GPT-4 first instead of claude-v1, matching human votes. Simulations with known parameters show improved recovery of judge sensitivities and candidate rankings, with 94.4-95.2% confidence interval coverage. Low estimated sensitivity alone is therefore not evidence of an unreliable judge.","datePublished":"2026-10-14T00:00:00+00:00","dateModified":"2026-10-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/14/OSCAROrderawareSensitivityCorrectionforAIRankings.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/14/OSCAROrderawareSensitivityCorrectionforAIRankings.html","author":{"@type":"Person","name":"You Liu, Yue Liu, Quanchao Lu, Ergan Shang, Nick Shipilov"},"@type":"BlogPosting","headline":"OSCAR: Order-aware Sensitivity Correction for AI Rankings","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>OSCAR: Order-aware Sensitivity Correction for AI Rankings</h1>
+  <br>You Liu, Yue Liu, Quanchao Lu, Ergan Shang, Nick Shipilov</h3>
+  <br> [stat.ML,stat.AP]
+
+  <p>LLM judges evaluate candidate language models through pairwise comparisons of their responses. Judge-aware Bradley–Terry models aggregate pairwise comparisons by jointly estimating candidate scores and judge-specific sensitivities (how strongly each judge responds to quality differences), often interpreted as reliability. We show that this reading fails when judges prefer a display position. Even under balanced display orders or swap-and-average, omitting position attenuates fitted judge sensitivity by approximately the factor $1-D^2$ near equal quality, where $D$ is the judge’s net first-slot preference between equally good responses. We propose OSCAR, which jointly estimates candidate scores, judge sensitivities and judge-specific position, length and family effects, and provides confidence intervals for pairwise win probabilities that account for dependence within prompts. On held-out data, observed attenuation closely matches the prediction $1-D^2$ (correlation of log ratios 0.99). Across four datasets, position adjustment lowers held-out log loss by 14-23% and changes which judges would be dropped for low sensitivity on three datasets. On MT-Bench, it ranks GPT-4 first instead of claude-v1, matching human votes. Simulations with known parameters show improved recovery of judge sensitivities and candidate rankings, with 94.4-95.2% confidence interval coverage. Low estimated sensitivity alone is therefore not evidence of an unreliable judge.</p>
+
+<p><a href="https://arxiv.org/abs/2609.24128">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

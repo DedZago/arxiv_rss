@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Free-support Wasserstein Resampling in Sequential Monte Carlo</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Free-support Wasserstein Resampling in Sequential Monte Carlo" />
+<meta name="author" content="Mengyu Li, Cheng Meng, Jun S. Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs an equal-weight measure that optimally approximates the weighted particle distribution by solving a free-support Wasserstein barycenter problem. We then randomize the resulting optimal coupling by Dirichlet mixing. Theoretically, we provide non-asymptotic mean squared error bounds that quantify the bias-variance trade-off and show that the rate depends on the intrinsic dimension. A truncated variant preserves high-weight particles while applying WDR to the remaining mass, targeting mild weight degeneracy. Experiments on state-space models and conditional image generation demonstrate that WDR consistently improves estimation accuracy, stability, and sample diversity. The improvements persist at matched wall-clock cost when the propagation cost dominates." />
+<meta property="og:description" content="In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs an equal-weight measure that optimally approximates the weighted particle distribution by solving a free-support Wasserstein barycenter problem. We then randomize the resulting optimal coupling by Dirichlet mixing. Theoretically, we provide non-asymptotic mean squared error bounds that quantify the bias-variance trade-off and show that the rate depends on the intrinsic dimension. A truncated variant preserves high-weight particles while applying WDR to the remaining mass, targeting mild weight degeneracy. Experiments on state-space models and conditional image generation demonstrate that WDR consistently improves estimation accuracy, stability, and sample diversity. The improvements persist at matched wall-clock cost when the propagation cost dominates." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/14/FreesupportWassersteinResamplinginSequentialMonteCarlo.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/14/FreesupportWassersteinResamplinginSequentialMonteCarlo.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Free-support Wasserstein Resampling in Sequential Monte Carlo" />
+<script type="application/ld+json">
+{"description":"In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs an equal-weight measure that optimally approximates the weighted particle distribution by solving a free-support Wasserstein barycenter problem. We then randomize the resulting optimal coupling by Dirichlet mixing. Theoretically, we provide non-asymptotic mean squared error bounds that quantify the bias-variance trade-off and show that the rate depends on the intrinsic dimension. A truncated variant preserves high-weight particles while applying WDR to the remaining mass, targeting mild weight degeneracy. Experiments on state-space models and conditional image generation demonstrate that WDR consistently improves estimation accuracy, stability, and sample diversity. The improvements persist at matched wall-clock cost when the propagation cost dominates.","datePublished":"2026-10-14T00:00:00+00:00","dateModified":"2026-10-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/14/FreesupportWassersteinResamplinginSequentialMonteCarlo.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/14/FreesupportWassersteinResamplinginSequentialMonteCarlo.html","author":{"@type":"Person","name":"Mengyu Li, Cheng Meng, Jun S. Liu"},"@type":"BlogPosting","headline":"Free-support Wasserstein Resampling in Sequential Monte Carlo","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>Free-support Wasserstein Resampling in Sequential Monte Carlo</h1>
+  <br>Mengyu Li, Cheng Meng, Jun S. Liu</h3>
+  <br> [stat.ME,stat.CO]
+
+  <p>In modern sequential Monte Carlo (SMC) applications, such as diffusion model samplers, propagating a particle is expensive, so only a few particles can be afforded. In this regime, each resampling step decides which regions of the state space survive, so a better resampling scheme is worth extra computation. However, classical resampling methods only replicate existing particles and suffer from sample impoverishment, especially when the particle size is small relative to the dimension. To create new particles, we relax the unbiasedness of resampling and control the mean squared error via a Wasserstein criterion. Specifically, we propose Wasserstein-Dirichlet resampling (WDR), which constructs an equal-weight measure that optimally approximates the weighted particle distribution by solving a free-support Wasserstein barycenter problem. We then randomize the resulting optimal coupling by Dirichlet mixing. Theoretically, we provide non-asymptotic mean squared error bounds that quantify the bias-variance trade-off and show that the rate depends on the intrinsic dimension. A truncated variant preserves high-weight particles while applying WDR to the remaining mass, targeting mild weight degeneracy. Experiments on state-space models and conditional image generation demonstrate that WDR consistently improves estimation accuracy, stability, and sample diversity. The improvements persist at matched wall-clock cost when the propagation cost dominates.</p>
+
+<p><a href="https://arxiv.org/abs/2610.17924">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

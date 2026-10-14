@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Recalibrating Many Questions with Few Labels: Minimax Rates and Identification Limits</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Recalibrating Many Questions with Few Labels: Minimax Rates and Identification Limits" />
+<meta name="author" content="Xiaoyu Li, Chiwun Yang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Many related prediction problems, which we call questions, come with few labels each. What information can be shared across them, and what is actually necessary for good decisions? We answer both for recalibration, motivated by decision models such as Jev (TypeSafe AI, 2026) that return a probability for any yes/no question a developer writes. A predictor reports a probability $P$ with output law $\mu$ on $m$ questions, each with $n$ labels and a nondecreasing map $g_j(p)=\mathbb{P}(Y=1\mid P=p)$; the compound risk is the excess Brier score over the true maps, averaged over questions. Over maps within sup-distance $\tau\le 1$ and total variation $V\le 2$ of one nondecreasing shape (fixed effects), the minimax compound risk is $(mn)^{-2/3}+\min{\tau^2,1/n}+\min{\tau^2,V^2,(V/n)^{2/3}}$ up to universal constants, for every non-atomic $\mu$. A pooled isotonic fit with a per-question correction sized once, on held-out labels of all questions, attains it without knowing $\tau$, $V$ or $\mu$ ($n\ge 2$, $m\ge 3$); tuning each question on its own labels loses a factor of order $\min{n,\log(m^2/n)}$ when the maps differ by constants and $m^2/n$ is large. When the maps are drawn from an unknown prior (random effects), other questions need not identify the Bayes rule. The loss, the identification regret, is at most $2^{-n}$ once the law of a question’s data is known, extending a bound of Skibinsky (1968) for coins, and in the worst case at least $\beta_\star^{-n}/(72\sqrt{n})$ at every finite $m$, where $\beta_\star\approx 3.583$. Beyond a few labels per question, what cannot be learned is nearly unnecessary. For constant maps (an uninformative predictor) and constant-map priors, the exponential base is exactly $\beta_\star$, not the 4 suggested by the moment range; for monotone maps it lies in $[2,\beta_\star]$." />
+<meta property="og:description" content="Many related prediction problems, which we call questions, come with few labels each. What information can be shared across them, and what is actually necessary for good decisions? We answer both for recalibration, motivated by decision models such as Jev (TypeSafe AI, 2026) that return a probability for any yes/no question a developer writes. A predictor reports a probability $P$ with output law $\mu$ on $m$ questions, each with $n$ labels and a nondecreasing map $g_j(p)=\mathbb{P}(Y=1\mid P=p)$; the compound risk is the excess Brier score over the true maps, averaged over questions. Over maps within sup-distance $\tau\le 1$ and total variation $V\le 2$ of one nondecreasing shape (fixed effects), the minimax compound risk is $(mn)^{-2/3}+\min{\tau^2,1/n}+\min{\tau^2,V^2,(V/n)^{2/3}}$ up to universal constants, for every non-atomic $\mu$. A pooled isotonic fit with a per-question correction sized once, on held-out labels of all questions, attains it without knowing $\tau$, $V$ or $\mu$ ($n\ge 2$, $m\ge 3$); tuning each question on its own labels loses a factor of order $\min{n,\log(m^2/n)}$ when the maps differ by constants and $m^2/n$ is large. When the maps are drawn from an unknown prior (random effects), other questions need not identify the Bayes rule. The loss, the identification regret, is at most $2^{-n}$ once the law of a question’s data is known, extending a bound of Skibinsky (1968) for coins, and in the worst case at least $\beta_\star^{-n}/(72\sqrt{n})$ at every finite $m$, where $\beta_\star\approx 3.583$. Beyond a few labels per question, what cannot be learned is nearly unnecessary. For constant maps (an uninformative predictor) and constant-map priors, the exponential base is exactly $\beta_\star$, not the 4 suggested by the moment range; for monotone maps it lies in $[2,\beta_\star]$." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/14/RecalibratingManyQuestionswithFewLabelsMinimaxRatesandIdentificationLimits.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/14/RecalibratingManyQuestionswithFewLabelsMinimaxRatesandIdentificationLimits.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Recalibrating Many Questions with Few Labels: Minimax Rates and Identification Limits" />
+<script type="application/ld+json">
+{"description":"Many related prediction problems, which we call questions, come with few labels each. What information can be shared across them, and what is actually necessary for good decisions? We answer both for recalibration, motivated by decision models such as Jev (TypeSafe AI, 2026) that return a probability for any yes/no question a developer writes. A predictor reports a probability $P$ with output law $\\mu$ on $m$ questions, each with $n$ labels and a nondecreasing map $g_j(p)=\\mathbb{P}(Y=1\\mid P=p)$; the compound risk is the excess Brier score over the true maps, averaged over questions. Over maps within sup-distance $\\tau\\le 1$ and total variation $V\\le 2$ of one nondecreasing shape (fixed effects), the minimax compound risk is $(mn)^{-2/3}+\\min{\\tau^2,1/n}+\\min{\\tau^2,V^2,(V/n)^{2/3}}$ up to universal constants, for every non-atomic $\\mu$. A pooled isotonic fit with a per-question correction sized once, on held-out labels of all questions, attains it without knowing $\\tau$, $V$ or $\\mu$ ($n\\ge 2$, $m\\ge 3$); tuning each question on its own labels loses a factor of order $\\min{n,\\log(m^2/n)}$ when the maps differ by constants and $m^2/n$ is large. When the maps are drawn from an unknown prior (random effects), other questions need not identify the Bayes rule. The loss, the identification regret, is at most $2^{-n}$ once the law of a question’s data is known, extending a bound of Skibinsky (1968) for coins, and in the worst case at least $\\beta_\\star^{-n}/(72\\sqrt{n})$ at every finite $m$, where $\\beta_\\star\\approx 3.583$. Beyond a few labels per question, what cannot be learned is nearly unnecessary. For constant maps (an uninformative predictor) and constant-map priors, the exponential base is exactly $\\beta_\\star$, not the 4 suggested by the moment range; for monotone maps it lies in $[2,\\beta_\\star]$.","datePublished":"2026-10-14T00:00:00+00:00","dateModified":"2026-10-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/14/RecalibratingManyQuestionswithFewLabelsMinimaxRatesandIdentificationLimits.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/14/RecalibratingManyQuestionswithFewLabelsMinimaxRatesandIdentificationLimits.html","author":{"@type":"Person","name":"Xiaoyu Li, Chiwun Yang"},"@type":"BlogPosting","headline":"Recalibrating Many Questions with Few Labels: Minimax Rates and Identification Limits","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>Recalibrating Many Questions with Few Labels: Minimax Rates and Identification Limits</h1>
+  <br>Xiaoyu Li, Chiwun Yang</h3>
+  <br> [stat.ML]
+
+  <p>Many related prediction problems, which we call questions, come with few labels each. What information can be shared across them, and what is actually necessary for good decisions? We answer both for recalibration, motivated by decision models such as Jev (TypeSafe AI, 2026) that return a probability for any yes/no question a developer writes. A predictor reports a probability $P$ with output law $\mu$ on $m$ questions, each with $n$ labels and a nondecreasing map $g_j(p)=\mathbb{P}(Y=1\mid P=p)$; the compound risk is the excess Brier score over the true maps, averaged over questions. Over maps within sup-distance $\tau\le 1$ and total variation $V\le 2$ of one nondecreasing shape (fixed effects), the minimax compound risk is $(mn)^{-2/3}+\min{\tau^2,1/n}+\min{\tau^2,V^2,(V/n)^{2/3}}$ up to universal constants, for every non-atomic $\mu$. A pooled isotonic fit with a per-question correction sized once, on held-out labels of all questions, attains it without knowing $\tau$, $V$ or $\mu$ ($n\ge 2$, $m\ge 3$); tuning each question on its own labels loses a factor of order $\min{n,\log(m^2/n)}$ when the maps differ by constants and $m^2/n$ is large. When the maps are drawn from an unknown prior (random effects), other questions need not identify the Bayes rule. The loss, the identification regret, is at most $2^{-n}$ once the law of a question’s data is known, extending a bound of Skibinsky (1968) for coins, and in the worst case at least $\beta_\star^{-n}/(72\sqrt{n})$ at every finite $m$, where $\beta_\star\approx 3.583$. Beyond a few labels per question, what cannot be learned is nearly unnecessary. For constant maps (an uninformative predictor) and constant-map priors, the exponential base is exactly $\beta_\star$, not the 4 suggested by the moment range; for monotone maps it lies in $[2,\beta_\star]$.</p>
+
+<p><a href="https://arxiv.org/abs/2610.18488">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

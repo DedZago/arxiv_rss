@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Averaged Annealed Markov Chains Achieve the Algorithmic Threshold for Tensor PCA, Part I: Glauber Dynamics</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Averaged Annealed Markov Chains Achieve the Algorithmic Threshold for Tensor PCA, Part I: Glauber Dynamics" />
+<meta name="author" content="Aniket Das, Tselil Schramm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In the tensor principal components analysis (tensor PCA) problem, we are asked to recover an unknown vector in ${\pm1}^N$ from a noisy observation of its $k$-th tensor power, for a fixed $k\ge3$. Tensor PCA exhibits a well-studied information-computation gap: global algorithms such as spectral methods and sum-of-squares work above an algorithmic threshold, below which we know matching lower bounds (against these and some other restricted models of computation). In contrast, local algorithms such as Markov chains were only known to succeed from a random initialization at a polynomially larger signal-to-noise ratio, and were believed to be inferior to global algorithms for tensor PCA. We show that Glauber dynamics, when supplemented with annealing and ergodic averaging, achieves polynomial-time strong recovery above the algorithmic threshold from a uniformly random initialization, demonstrating that local Markov chains can succeed all the way down to the algorithmic threshold from an uninformative cold start." />
+<meta property="og:description" content="In the tensor principal components analysis (tensor PCA) problem, we are asked to recover an unknown vector in ${\pm1}^N$ from a noisy observation of its $k$-th tensor power, for a fixed $k\ge3$. Tensor PCA exhibits a well-studied information-computation gap: global algorithms such as spectral methods and sum-of-squares work above an algorithmic threshold, below which we know matching lower bounds (against these and some other restricted models of computation). In contrast, local algorithms such as Markov chains were only known to succeed from a random initialization at a polynomially larger signal-to-noise ratio, and were believed to be inferior to global algorithms for tensor PCA. We show that Glauber dynamics, when supplemented with annealing and ergodic averaging, achieves polynomial-time strong recovery above the algorithmic threshold from a uniformly random initialization, demonstrating that local Markov chains can succeed all the way down to the algorithmic threshold from an uninformative cold start." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/14/AveragedAnnealedMarkovChainsAchievetheAlgorithmicThresholdforTensorPCAPartIGlauberDynamics.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/14/AveragedAnnealedMarkovChainsAchievetheAlgorithmicThresholdforTensorPCAPartIGlauberDynamics.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Averaged Annealed Markov Chains Achieve the Algorithmic Threshold for Tensor PCA, Part I: Glauber Dynamics" />
+<script type="application/ld+json">
+{"description":"In the tensor principal components analysis (tensor PCA) problem, we are asked to recover an unknown vector in ${\\pm1}^N$ from a noisy observation of its $k$-th tensor power, for a fixed $k\\ge3$. Tensor PCA exhibits a well-studied information-computation gap: global algorithms such as spectral methods and sum-of-squares work above an algorithmic threshold, below which we know matching lower bounds (against these and some other restricted models of computation). In contrast, local algorithms such as Markov chains were only known to succeed from a random initialization at a polynomially larger signal-to-noise ratio, and were believed to be inferior to global algorithms for tensor PCA. We show that Glauber dynamics, when supplemented with annealing and ergodic averaging, achieves polynomial-time strong recovery above the algorithmic threshold from a uniformly random initialization, demonstrating that local Markov chains can succeed all the way down to the algorithmic threshold from an uninformative cold start.","datePublished":"2026-10-14T00:00:00+00:00","dateModified":"2026-10-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/14/AveragedAnnealedMarkovChainsAchievetheAlgorithmicThresholdforTensorPCAPartIGlauberDynamics.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/14/AveragedAnnealedMarkovChainsAchievetheAlgorithmicThresholdforTensorPCAPartIGlauberDynamics.html","author":{"@type":"Person","name":"Aniket Das, Tselil Schramm"},"@type":"BlogPosting","headline":"Averaged Annealed Markov Chains Achieve the Algorithmic Threshold for Tensor PCA, Part I: Glauber Dynamics","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-14 00:00:00 +0000">10-14</time>
+  </p>
+  
+  <h1>Averaged Annealed Markov Chains Achieve the Algorithmic Threshold for Tensor PCA, Part I: Glauber Dynamics</h1>
+  <br>Aniket Das, Tselil Schramm</h3>
+  <br> [stat.ML]
+
+  <p>In the tensor principal components analysis (tensor PCA) problem, we are asked to recover an unknown vector in ${\pm1}^N$ from a noisy observation of its $k$-th tensor power, for a fixed $k\ge3$. Tensor PCA exhibits a well-studied information-computation gap: global algorithms such as spectral methods and sum-of-squares work above an algorithmic threshold, below which we know matching lower bounds (against these and some other restricted models of computation). In contrast, local algorithms such as Markov chains were only known to succeed from a random initialization at a polynomially larger signal-to-noise ratio, and were believed to be inferior to global algorithms for tensor PCA. We show that Glauber dynamics, when supplemented with annealing and ergodic averaging, achieves polynomial-time strong recovery above the algorithmic threshold from a uniformly random initialization, demonstrating that local Markov chains can succeed all the way down to the algorithmic threshold from an uninformative cold start.</p>
+
+<p><a href="https://arxiv.org/abs/2610.16705">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
