@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?" />
+<meta name="author" content="Kaifei Wang, Zikang Shan, Liwei Wang, Yinyu Ye, Han Zhong" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $\beta$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $\beta$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $\eta$ decreases, the expected gain with fixed $\beta$ vanishes faster than these fluctuations, whereas increasing $\beta$ to keep $\eta/(1-\beta)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $\beta_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle’s effectiveness at a larger model scale." />
+<meta property="og:description" content="Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $\beta$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $\beta$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $\eta$ decreases, the expected gain with fixed $\beta$ vanishes faster than these fluctuations, whereas increasing $\beta$ to keep $\eta/(1-\beta)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $\beta_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle’s effectiveness at a larger model scale." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/15/WhenDoesMomentumHelpinReinforcementLearningwithVerifiableRewards.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/15/WhenDoesMomentumHelpinReinforcementLearningwithVerifiableRewards.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?" />
+<script type="application/ld+json">
+{"description":"Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $\\beta$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $\\beta$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $\\eta$ decreases, the expected gain with fixed $\\beta$ vanishes faster than these fluctuations, whereas increasing $\\beta$ to keep $\\eta/(1-\\beta)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $\\beta_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle’s effectiveness at a larger model scale.","datePublished":"2026-10-15T00:00:00+00:00","dateModified":"2026-10-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/15/WhenDoesMomentumHelpinReinforcementLearningwithVerifiableRewards.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/15/WhenDoesMomentumHelpinReinforcementLearningwithVerifiableRewards.html","author":{"@type":"Person","name":"Kaifei Wang, Zikang Shan, Liwei Wang, Yinyu Ye, Han Zhong"},"@type":"BlogPosting","headline":"When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-15 00:00:00 +0000">10-15</time>
+  </p>
+  
+  <h1>When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?</h1>
+  <br>Kaifei Wang, Zikang Shan, Liwei Wang, Yinyu Ye, Han Zhong</h3>
+  <br> [stat.ML]
+
+  <p>Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $\beta$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $\beta$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $\eta$ decreases, the expected gain with fixed $\beta$ vanishes faster than these fluctuations, whereas increasing $\beta$ to keep $\eta/(1-\beta)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $\beta_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle’s effectiveness at a larger model scale.</p>
+
+<p><a href="https://arxiv.org/abs/2610.20413">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
