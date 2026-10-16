@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Detectability without Interference: Efficient Canary Design for Privacy Auditing in One Run</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Detectability without Interference: Efficient Canary Design for Privacy Auditing in One Run" />
+<meta name="author" content="Mathieu Dagréou, Valentin Dorseuil, Mohammad Yaghini, Nicolas Papernot, Aurélien Bellet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Privacy auditing aims to empirically assess privacy leakage in machine learning models using membership inference attacks (MIAs), and to derive lower bounds on differential privacy (DP) parameters. Standard privacy auditing inserts a sensitive sample (a canary) into many ($\gg 100$) randomized training runs, requiring the auditor to detect whether it was included in each run. In one-run auditing, many canaries are included in a single training run, avoiding the high computational cost of multi-run approaches. However, recent theory shows that canaries can interfere with one another, reducing per-canary MIA scores and thereby weakening the audit power. We propose IBIS, a framework that optimizes canaries to maximize their own score while minimizing their impact on others. IBIS combines influence-based greedy initialization with bilevel optimization, introducing a novel regularization term that encourages canaries to be orthogonal in embedding space as a proxy for reducing interference. We propose an efficient bilevel algorithm that incrementally updates a single model at each canary update, avoiding the need to retrain the model from scratch after every update. Experiments show that IBIS offers a better performance-cost trade-off than existing canary crafting approaches, improving MIA metrics while reducing computational cost by up to two orders of magnitude." />
+<meta property="og:description" content="Privacy auditing aims to empirically assess privacy leakage in machine learning models using membership inference attacks (MIAs), and to derive lower bounds on differential privacy (DP) parameters. Standard privacy auditing inserts a sensitive sample (a canary) into many ($\gg 100$) randomized training runs, requiring the auditor to detect whether it was included in each run. In one-run auditing, many canaries are included in a single training run, avoiding the high computational cost of multi-run approaches. However, recent theory shows that canaries can interfere with one another, reducing per-canary MIA scores and thereby weakening the audit power. We propose IBIS, a framework that optimizes canaries to maximize their own score while minimizing their impact on others. IBIS combines influence-based greedy initialization with bilevel optimization, introducing a novel regularization term that encourages canaries to be orthogonal in embedding space as a proxy for reducing interference. We propose an efficient bilevel algorithm that incrementally updates a single model at each canary update, avoiding the need to retrain the model from scratch after every update. Experiments show that IBIS offers a better performance-cost trade-off than existing canary crafting approaches, improving MIA metrics while reducing computational cost by up to two orders of magnitude." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/16/DetectabilitywithoutInterferenceEfficientCanaryDesignforPrivacyAuditinginOneRun.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/16/DetectabilitywithoutInterferenceEfficientCanaryDesignforPrivacyAuditinginOneRun.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Detectability without Interference: Efficient Canary Design for Privacy Auditing in One Run" />
+<script type="application/ld+json">
+{"description":"Privacy auditing aims to empirically assess privacy leakage in machine learning models using membership inference attacks (MIAs), and to derive lower bounds on differential privacy (DP) parameters. Standard privacy auditing inserts a sensitive sample (a canary) into many ($\\gg 100$) randomized training runs, requiring the auditor to detect whether it was included in each run. In one-run auditing, many canaries are included in a single training run, avoiding the high computational cost of multi-run approaches. However, recent theory shows that canaries can interfere with one another, reducing per-canary MIA scores and thereby weakening the audit power. We propose IBIS, a framework that optimizes canaries to maximize their own score while minimizing their impact on others. IBIS combines influence-based greedy initialization with bilevel optimization, introducing a novel regularization term that encourages canaries to be orthogonal in embedding space as a proxy for reducing interference. We propose an efficient bilevel algorithm that incrementally updates a single model at each canary update, avoiding the need to retrain the model from scratch after every update. Experiments show that IBIS offers a better performance-cost trade-off than existing canary crafting approaches, improving MIA metrics while reducing computational cost by up to two orders of magnitude.","datePublished":"2026-10-16T00:00:00+00:00","dateModified":"2026-10-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/16/DetectabilitywithoutInterferenceEfficientCanaryDesignforPrivacyAuditinginOneRun.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/16/DetectabilitywithoutInterferenceEfficientCanaryDesignforPrivacyAuditinginOneRun.html","author":{"@type":"Person","name":"Mathieu Dagréou, Valentin Dorseuil, Mohammad Yaghini, Nicolas Papernot, Aurélien Bellet"},"@type":"BlogPosting","headline":"Detectability without Interference: Efficient Canary Design for Privacy Auditing in One Run","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-16 00:00:00 +0000">10-16</time>
+  </p>
+  
+  <h1>Detectability without Interference: Efficient Canary Design for Privacy Auditing in One Run</h1>
+  <br>Mathieu Dagréou, Valentin Dorseuil, Mohammad Yaghini, Nicolas Papernot, Aurélien Bellet</h3>
+  <br> [stat.ML]
+
+  <p>Privacy auditing aims to empirically assess privacy leakage in machine learning models using membership inference attacks (MIAs), and to derive lower bounds on differential privacy (DP) parameters. Standard privacy auditing inserts a sensitive sample (a canary) into many ($\gg 100$) randomized training runs, requiring the auditor to detect whether it was included in each run. In one-run auditing, many canaries are included in a single training run, avoiding the high computational cost of multi-run approaches. However, recent theory shows that canaries can interfere with one another, reducing per-canary MIA scores and thereby weakening the audit power. We propose IBIS, a framework that optimizes canaries to maximize their own score while minimizing their impact on others. IBIS combines influence-based greedy initialization with bilevel optimization, introducing a novel regularization term that encourages canaries to be orthogonal in embedding space as a proxy for reducing interference. We propose an efficient bilevel algorithm that incrementally updates a single model at each canary update, avoiding the need to retrain the model from scratch after every update. Experiments show that IBIS offers a better performance-cost trade-off than existing canary crafting approaches, improving MIA metrics while reducing computational cost by up to two orders of magnitude.</p>
+
+<p><a href="https://arxiv.org/abs/2605.27292">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

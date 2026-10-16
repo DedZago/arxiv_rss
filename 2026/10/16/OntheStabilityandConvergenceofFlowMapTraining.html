@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>On the Stability and Convergence of Flow Map Training</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="On the Stability and Convergence of Flow Map Training" />
+<meta name="author" content="Ishan Nath, Tom Stanic, Avishek Joey Bose, Gauthier Gidel, Quentin Bertrand" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Flow maps are a recent method of probabilistic generation that amortize diffusion trajectories into one-step samplers, unlocking efficient generation. While progress has been made in improving their empirical performance, there is still a lack of understanding behind the mechanisms underlying their success. Specifically, many flow map learning methods employ stop gradient operators as a crucial part of their training target. Adaptive weighting also drastically improves the generation capabilities of flow maps. Although many interpretations have been proposed to support the inclusion of these heuristics, none have analyzed the impact of these assumptions on the training dynamics of flow maps themselves. In this work, we address this issue by providing grounded theory explaining why such tricks are required. Analyzing the functional gradient flow induced by the MeanFlow and Lagrangian losses, we show their convergence to the true flow map, settling the validity of these objectives. For finite updates, we highlight a severe roadblock to the usage of these losses in practice: the possible unboundedness of the update. Adaptive normalization not only provides bounded updates, but, combined with a specific weighting, additionally provides convergence guarantees towards a neighborhood of the solution. On synthetic data, we show that our functional gradient flow analysis exactly describes the true training dynamics for flow maps. Experiments on standard image datasets demonstrate that a proper reweighting scheme is essential for strong empirical performance, which is only achieved for a specific range of reweighting strengths." />
+<meta property="og:description" content="Flow maps are a recent method of probabilistic generation that amortize diffusion trajectories into one-step samplers, unlocking efficient generation. While progress has been made in improving their empirical performance, there is still a lack of understanding behind the mechanisms underlying their success. Specifically, many flow map learning methods employ stop gradient operators as a crucial part of their training target. Adaptive weighting also drastically improves the generation capabilities of flow maps. Although many interpretations have been proposed to support the inclusion of these heuristics, none have analyzed the impact of these assumptions on the training dynamics of flow maps themselves. In this work, we address this issue by providing grounded theory explaining why such tricks are required. Analyzing the functional gradient flow induced by the MeanFlow and Lagrangian losses, we show their convergence to the true flow map, settling the validity of these objectives. For finite updates, we highlight a severe roadblock to the usage of these losses in practice: the possible unboundedness of the update. Adaptive normalization not only provides bounded updates, but, combined with a specific weighting, additionally provides convergence guarantees towards a neighborhood of the solution. On synthetic data, we show that our functional gradient flow analysis exactly describes the true training dynamics for flow maps. Experiments on standard image datasets demonstrate that a proper reweighting scheme is essential for strong empirical performance, which is only achieved for a specific range of reweighting strengths." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/16/OntheStabilityandConvergenceofFlowMapTraining.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/16/OntheStabilityandConvergenceofFlowMapTraining.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On the Stability and Convergence of Flow Map Training" />
+<script type="application/ld+json">
+{"description":"Flow maps are a recent method of probabilistic generation that amortize diffusion trajectories into one-step samplers, unlocking efficient generation. While progress has been made in improving their empirical performance, there is still a lack of understanding behind the mechanisms underlying their success. Specifically, many flow map learning methods employ stop gradient operators as a crucial part of their training target. Adaptive weighting also drastically improves the generation capabilities of flow maps. Although many interpretations have been proposed to support the inclusion of these heuristics, none have analyzed the impact of these assumptions on the training dynamics of flow maps themselves. In this work, we address this issue by providing grounded theory explaining why such tricks are required. Analyzing the functional gradient flow induced by the MeanFlow and Lagrangian losses, we show their convergence to the true flow map, settling the validity of these objectives. For finite updates, we highlight a severe roadblock to the usage of these losses in practice: the possible unboundedness of the update. Adaptive normalization not only provides bounded updates, but, combined with a specific weighting, additionally provides convergence guarantees towards a neighborhood of the solution. On synthetic data, we show that our functional gradient flow analysis exactly describes the true training dynamics for flow maps. Experiments on standard image datasets demonstrate that a proper reweighting scheme is essential for strong empirical performance, which is only achieved for a specific range of reweighting strengths.","datePublished":"2026-10-16T00:00:00+00:00","dateModified":"2026-10-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/16/OntheStabilityandConvergenceofFlowMapTraining.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/16/OntheStabilityandConvergenceofFlowMapTraining.html","author":{"@type":"Person","name":"Ishan Nath, Tom Stanic, Avishek Joey Bose, Gauthier Gidel, Quentin Bertrand"},"@type":"BlogPosting","headline":"On the Stability and Convergence of Flow Map Training","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-16 00:00:00 +0000">10-16</time>
+  </p>
+  
+  <h1>On the Stability and Convergence of Flow Map Training</h1>
+  <br>Ishan Nath, Tom Stanic, Avishek Joey Bose, Gauthier Gidel, Quentin Bertrand</h3>
+  <br> [stat.ML]
+
+  <p>Flow maps are a recent method of probabilistic generation that amortize diffusion trajectories into one-step samplers, unlocking efficient generation. While progress has been made in improving their empirical performance, there is still a lack of understanding behind the mechanisms underlying their success. Specifically, many flow map learning methods employ stop gradient operators as a crucial part of their training target. Adaptive weighting also drastically improves the generation capabilities of flow maps. Although many interpretations have been proposed to support the inclusion of these heuristics, none have analyzed the impact of these assumptions on the training dynamics of flow maps themselves. In this work, we address this issue by providing grounded theory explaining why such tricks are required. Analyzing the functional gradient flow induced by the MeanFlow and Lagrangian losses, we show their convergence to the true flow map, settling the validity of these objectives. For finite updates, we highlight a severe roadblock to the usage of these losses in practice: the possible unboundedness of the update. Adaptive normalization not only provides bounded updates, but, combined with a specific weighting, additionally provides convergence guarantees towards a neighborhood of the solution. On synthetic data, we show that our functional gradient flow analysis exactly describes the true training dynamics for flow maps. Experiments on standard image datasets demonstrate that a proper reweighting scheme is essential for strong empirical performance, which is only achieved for a specific range of reweighting strengths.</p>
+
+<p><a href="https://arxiv.org/abs/2610.20674">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

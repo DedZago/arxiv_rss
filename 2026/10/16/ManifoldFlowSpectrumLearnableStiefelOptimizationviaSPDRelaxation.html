@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ManifoldFlow: Spectrum-Learnable Stiefel Optimization via SPD Relaxation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="ManifoldFlow: Spectrum-Learnable Stiefel Optimization via SPD Relaxation" />
+<meta name="author" content="Haiwen Yi, Xinyuan Song" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Orthogonal and Stiefel constraints are widely used in neural network optimization to control weight geometry, improve conditioning, and stabilize signal propagation. Yet standard Stiefel optimization imposes a hidden restriction: while learning the directions of a linear map, it fixes every singular value to one, preventing the model from learning how strongly different directions should be amplified or suppressed. We introduce ManifoldFlow, a spectrum-learnable extension of Stiefel optimization that separates directional geometry from spectral scaling through $W=QS^{1/2}$, where $Q^\top Q=I$ and $S\succ0$. Beyond simply making the spectrum trainable, ManifoldFlow uses the gradient component rejected by the Stiefel constraint as a signal for how the spectrum should change, accumulates this signal across aligned tangent spaces, and jointly updates the orthonormal basis and a bounded SPD spectrum. This construction preserves exact spectral interpretability because $W^\top W=S$, while recovering standard Stiefel optimization when $S=I$. We establish the geometry of the rejected gradient, characterize optimization over the resulting Stiefel–SPD product space, and derive how the learned spectrum affects conditioning, signal propagation, and spectral complexity. Across diverse tasks, ManifoldFlow consistently outperforms matched fixed-spectrum Stiefel baselines, with particularly strong gains in recurrent language modeling. Our code is available at https://github.com/Hik289/manifold_flow.git." />
+<meta property="og:description" content="Orthogonal and Stiefel constraints are widely used in neural network optimization to control weight geometry, improve conditioning, and stabilize signal propagation. Yet standard Stiefel optimization imposes a hidden restriction: while learning the directions of a linear map, it fixes every singular value to one, preventing the model from learning how strongly different directions should be amplified or suppressed. We introduce ManifoldFlow, a spectrum-learnable extension of Stiefel optimization that separates directional geometry from spectral scaling through $W=QS^{1/2}$, where $Q^\top Q=I$ and $S\succ0$. Beyond simply making the spectrum trainable, ManifoldFlow uses the gradient component rejected by the Stiefel constraint as a signal for how the spectrum should change, accumulates this signal across aligned tangent spaces, and jointly updates the orthonormal basis and a bounded SPD spectrum. This construction preserves exact spectral interpretability because $W^\top W=S$, while recovering standard Stiefel optimization when $S=I$. We establish the geometry of the rejected gradient, characterize optimization over the resulting Stiefel–SPD product space, and derive how the learned spectrum affects conditioning, signal propagation, and spectral complexity. Across diverse tasks, ManifoldFlow consistently outperforms matched fixed-spectrum Stiefel baselines, with particularly strong gains in recurrent language modeling. Our code is available at https://github.com/Hik289/manifold_flow.git." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/16/ManifoldFlowSpectrumLearnableStiefelOptimizationviaSPDRelaxation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/16/ManifoldFlowSpectrumLearnableStiefelOptimizationviaSPDRelaxation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ManifoldFlow: Spectrum-Learnable Stiefel Optimization via SPD Relaxation" />
+<script type="application/ld+json">
+{"description":"Orthogonal and Stiefel constraints are widely used in neural network optimization to control weight geometry, improve conditioning, and stabilize signal propagation. Yet standard Stiefel optimization imposes a hidden restriction: while learning the directions of a linear map, it fixes every singular value to one, preventing the model from learning how strongly different directions should be amplified or suppressed. We introduce ManifoldFlow, a spectrum-learnable extension of Stiefel optimization that separates directional geometry from spectral scaling through $W=QS^{1/2}$, where $Q^\\top Q=I$ and $S\\succ0$. Beyond simply making the spectrum trainable, ManifoldFlow uses the gradient component rejected by the Stiefel constraint as a signal for how the spectrum should change, accumulates this signal across aligned tangent spaces, and jointly updates the orthonormal basis and a bounded SPD spectrum. This construction preserves exact spectral interpretability because $W^\\top W=S$, while recovering standard Stiefel optimization when $S=I$. We establish the geometry of the rejected gradient, characterize optimization over the resulting Stiefel–SPD product space, and derive how the learned spectrum affects conditioning, signal propagation, and spectral complexity. Across diverse tasks, ManifoldFlow consistently outperforms matched fixed-spectrum Stiefel baselines, with particularly strong gains in recurrent language modeling. Our code is available at https://github.com/Hik289/manifold_flow.git.","datePublished":"2026-10-16T00:00:00+00:00","dateModified":"2026-10-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/16/ManifoldFlowSpectrumLearnableStiefelOptimizationviaSPDRelaxation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/16/ManifoldFlowSpectrumLearnableStiefelOptimizationviaSPDRelaxation.html","author":{"@type":"Person","name":"Haiwen Yi, Xinyuan Song"},"@type":"BlogPosting","headline":"ManifoldFlow: Spectrum-Learnable Stiefel Optimization via SPD Relaxation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-16 00:00:00 +0000">10-16</time>
+  </p>
+  
+  <h1>ManifoldFlow: Spectrum-Learnable Stiefel Optimization via SPD Relaxation</h1>
+  <br>Haiwen Yi, Xinyuan Song</h3>
+  <br> [stat.ML]
+
+  <p>Orthogonal and Stiefel constraints are widely used in neural network optimization to control weight geometry, improve conditioning, and stabilize signal propagation. Yet standard Stiefel optimization imposes a hidden restriction: while learning the directions of a linear map, it fixes every singular value to one, preventing the model from learning how strongly different directions should be amplified or suppressed. We introduce ManifoldFlow, a spectrum-learnable extension of Stiefel optimization that separates directional geometry from spectral scaling through $W=QS^{1/2}$, where $Q^\top Q=I$ and $S\succ0$. Beyond simply making the spectrum trainable, ManifoldFlow uses the gradient component rejected by the Stiefel constraint as a signal for how the spectrum should change, accumulates this signal across aligned tangent spaces, and jointly updates the orthonormal basis and a bounded SPD spectrum. This construction preserves exact spectral interpretability because $W^\top W=S$, while recovering standard Stiefel optimization when $S=I$. We establish the geometry of the rejected gradient, characterize optimization over the resulting Stiefel–SPD product space, and derive how the learned spectrum affects conditioning, signal propagation, and spectral complexity. Across diverse tasks, ManifoldFlow consistently outperforms matched fixed-spectrum Stiefel baselines, with particularly strong gains in recurrent language modeling. Our code is available at https://github.com/Hik289/manifold_flow.git.</p>
+
+<p><a href="https://arxiv.org/abs/2607.04535">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
