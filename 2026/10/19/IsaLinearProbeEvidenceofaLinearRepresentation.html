@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Is a Linear Probe Evidence of a Linear Representation?</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Is a Linear Probe Evidence of a Linear Representation?" />
+<meta name="author" content="Nadir Kutluozen, Christian Internò, David Klindt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The linear representation hypothesis holds that pretrained vision models encode generative factors as linearly decodable directions in feature space, and comes with a standard methodology: train a linear probe, declare a factor represented if accuracy is high. We show this test is too permissive. Asymptotically, any sufficiently rich feature map, including a random one, admits a linear readout, so high probe accuracy is consistent with two very different geometries: a true linear world model, where the latent-aligned subspace dominates the representation, or a kernel machine, where the latents lie linearly inside a much larger curved manifold. This distinction matters because the curved structure orthogonal to the probe is relevant for out-of-distribution generalization, robustness, and compositional transfer. We propose three asymmetric diagnostics that distinguish the two cases: reverse predictivity, spectral concentration, and out-of-distribution generalization. We validate them in a fully observed simulation where ground truth is known. Applied to six pretrained vision transformers on SVG-World, our deterministic generative benchmark with paired visual styles, and to two of them on CelebA, they show pretraining produces structure beyond a random kernel but well short of a linear world model. On dSprites, 3D Shapes and MPI3D, forward decodability and latent-aligned variance dissociate. Thus, forward decoding alone does not show that the probed factors align with the dominant geometry of the representation. In summary, our work cautions about the success of linear probes as opposed to truly linear and low dimensional representations." />
+<meta property="og:description" content="The linear representation hypothesis holds that pretrained vision models encode generative factors as linearly decodable directions in feature space, and comes with a standard methodology: train a linear probe, declare a factor represented if accuracy is high. We show this test is too permissive. Asymptotically, any sufficiently rich feature map, including a random one, admits a linear readout, so high probe accuracy is consistent with two very different geometries: a true linear world model, where the latent-aligned subspace dominates the representation, or a kernel machine, where the latents lie linearly inside a much larger curved manifold. This distinction matters because the curved structure orthogonal to the probe is relevant for out-of-distribution generalization, robustness, and compositional transfer. We propose three asymmetric diagnostics that distinguish the two cases: reverse predictivity, spectral concentration, and out-of-distribution generalization. We validate them in a fully observed simulation where ground truth is known. Applied to six pretrained vision transformers on SVG-World, our deterministic generative benchmark with paired visual styles, and to two of them on CelebA, they show pretraining produces structure beyond a random kernel but well short of a linear world model. On dSprites, 3D Shapes and MPI3D, forward decodability and latent-aligned variance dissociate. Thus, forward decoding alone does not show that the probed factors align with the dominant geometry of the representation. In summary, our work cautions about the success of linear probes as opposed to truly linear and low dimensional representations." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/19/IsaLinearProbeEvidenceofaLinearRepresentation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/19/IsaLinearProbeEvidenceofaLinearRepresentation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Is a Linear Probe Evidence of a Linear Representation?" />
+<script type="application/ld+json">
+{"description":"The linear representation hypothesis holds that pretrained vision models encode generative factors as linearly decodable directions in feature space, and comes with a standard methodology: train a linear probe, declare a factor represented if accuracy is high. We show this test is too permissive. Asymptotically, any sufficiently rich feature map, including a random one, admits a linear readout, so high probe accuracy is consistent with two very different geometries: a true linear world model, where the latent-aligned subspace dominates the representation, or a kernel machine, where the latents lie linearly inside a much larger curved manifold. This distinction matters because the curved structure orthogonal to the probe is relevant for out-of-distribution generalization, robustness, and compositional transfer. We propose three asymmetric diagnostics that distinguish the two cases: reverse predictivity, spectral concentration, and out-of-distribution generalization. We validate them in a fully observed simulation where ground truth is known. Applied to six pretrained vision transformers on SVG-World, our deterministic generative benchmark with paired visual styles, and to two of them on CelebA, they show pretraining produces structure beyond a random kernel but well short of a linear world model. On dSprites, 3D Shapes and MPI3D, forward decodability and latent-aligned variance dissociate. Thus, forward decoding alone does not show that the probed factors align with the dominant geometry of the representation. In summary, our work cautions about the success of linear probes as opposed to truly linear and low dimensional representations.","datePublished":"2026-10-19T00:00:00+00:00","dateModified":"2026-10-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/19/IsaLinearProbeEvidenceofaLinearRepresentation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/19/IsaLinearProbeEvidenceofaLinearRepresentation.html","author":{"@type":"Person","name":"Nadir Kutluozen, Christian Internò, David Klindt"},"@type":"BlogPosting","headline":"Is a Linear Probe Evidence of a Linear Representation?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-19 00:00:00 +0000">10-19</time>
+  </p>
+  
+  <h1>Is a Linear Probe Evidence of a Linear Representation?</h1>
+  <br>Nadir Kutluozen, Christian Internò, David Klindt</h3>
+  <br> [stat.ML]
+
+  <p>The linear representation hypothesis holds that pretrained vision models encode generative factors as linearly decodable directions in feature space, and comes with a standard methodology: train a linear probe, declare a factor represented if accuracy is high. We show this test is too permissive. Asymptotically, any sufficiently rich feature map, including a random one, admits a linear readout, so high probe accuracy is consistent with two very different geometries: a true linear world model, where the latent-aligned subspace dominates the representation, or a kernel machine, where the latents lie linearly inside a much larger curved manifold. This distinction matters because the curved structure orthogonal to the probe is relevant for out-of-distribution generalization, robustness, and compositional transfer. We propose three asymmetric diagnostics that distinguish the two cases: reverse predictivity, spectral concentration, and out-of-distribution generalization. We validate them in a fully observed simulation where ground truth is known. Applied to six pretrained vision transformers on SVG-World, our deterministic generative benchmark with paired visual styles, and to two of them on CelebA, they show pretraining produces structure beyond a random kernel but well short of a linear world model. On dSprites, 3D Shapes and MPI3D, forward decodability and latent-aligned variance dissociate. Thus, forward decoding alone does not show that the probed factors align with the dominant geometry of the representation. In summary, our work cautions about the success of linear probes as opposed to truly linear and low dimensional representations.</p>
+
+<p><a href="https://arxiv.org/abs/2610.22655">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
