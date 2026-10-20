@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Test-Time Augmentation for LLMs: Where to Inject Diversity at Inference Time</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Test-Time Augmentation for LLMs: Where to Inject Diversity at Inference Time" />
+<meta name="author" content="Nikita Kozodoi, Zainab Afolabi, Jack Butler" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Aggregating several LLM responses to the same question can improve accuracy, but every method that does so must decide where the responses should differ. Established test-time scaling methods such as self-consistency vary only the reasoning path, resampling from a fixed input. The input modification offers several further options: the wording of the question can be rephrased, the spelling can be perturbed, and the accompanying images can be transformed. We study Test-Time Augmentation (TTA), which aggregates predictions across transformed versions of the input, and use it to ask where diversity is best injected. Comparing these options across six benchmarks at a matched number of inference calls, we find that where the diversity comes from matters more than how much of it there is. Meaning-preserving paraphrases of the input yield the largest accuracy gains (+1.80 pp over a single call) and reach peak accuracy with the fewest samples. Yet, they are not the most diverse: character-level noise makes the responses disagree far more often (37.8% versus 27.4%) while gaining less accuracy, and perturbing two modalities at once falls below the single-call baseline. Not all diversity is equally useful: perturbations that keep the meaning intact produce disagreement that aggregation can use, while those that corrupt it produce disagreement that is wrong. Overall, our results suggest that for mid-tier LLMs such as Claude Haiku, varying how a question is phrased is a better use of an inference call than varying the reasoning path. Our TTA implementation is available at github.com/aws-samples/sample-genai-reflection-for-bedrock." />
+<meta property="og:description" content="Aggregating several LLM responses to the same question can improve accuracy, but every method that does so must decide where the responses should differ. Established test-time scaling methods such as self-consistency vary only the reasoning path, resampling from a fixed input. The input modification offers several further options: the wording of the question can be rephrased, the spelling can be perturbed, and the accompanying images can be transformed. We study Test-Time Augmentation (TTA), which aggregates predictions across transformed versions of the input, and use it to ask where diversity is best injected. Comparing these options across six benchmarks at a matched number of inference calls, we find that where the diversity comes from matters more than how much of it there is. Meaning-preserving paraphrases of the input yield the largest accuracy gains (+1.80 pp over a single call) and reach peak accuracy with the fewest samples. Yet, they are not the most diverse: character-level noise makes the responses disagree far more often (37.8% versus 27.4%) while gaining less accuracy, and perturbing two modalities at once falls below the single-call baseline. Not all diversity is equally useful: perturbations that keep the meaning intact produce disagreement that aggregation can use, while those that corrupt it produce disagreement that is wrong. Overall, our results suggest that for mid-tier LLMs such as Claude Haiku, varying how a question is phrased is a better use of an inference call than varying the reasoning path. Our TTA implementation is available at github.com/aws-samples/sample-genai-reflection-for-bedrock." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/20/TestTimeAugmentationforLLMsWheretoInjectDiversityatInferenceTime.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/20/TestTimeAugmentationforLLMsWheretoInjectDiversityatInferenceTime.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Test-Time Augmentation for LLMs: Where to Inject Diversity at Inference Time" />
+<script type="application/ld+json">
+{"description":"Aggregating several LLM responses to the same question can improve accuracy, but every method that does so must decide where the responses should differ. Established test-time scaling methods such as self-consistency vary only the reasoning path, resampling from a fixed input. The input modification offers several further options: the wording of the question can be rephrased, the spelling can be perturbed, and the accompanying images can be transformed. We study Test-Time Augmentation (TTA), which aggregates predictions across transformed versions of the input, and use it to ask where diversity is best injected. Comparing these options across six benchmarks at a matched number of inference calls, we find that where the diversity comes from matters more than how much of it there is. Meaning-preserving paraphrases of the input yield the largest accuracy gains (+1.80 pp over a single call) and reach peak accuracy with the fewest samples. Yet, they are not the most diverse: character-level noise makes the responses disagree far more often (37.8% versus 27.4%) while gaining less accuracy, and perturbing two modalities at once falls below the single-call baseline. Not all diversity is equally useful: perturbations that keep the meaning intact produce disagreement that aggregation can use, while those that corrupt it produce disagreement that is wrong. Overall, our results suggest that for mid-tier LLMs such as Claude Haiku, varying how a question is phrased is a better use of an inference call than varying the reasoning path. Our TTA implementation is available at github.com/aws-samples/sample-genai-reflection-for-bedrock.","datePublished":"2026-10-20T00:00:00+00:00","dateModified":"2026-10-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/20/TestTimeAugmentationforLLMsWheretoInjectDiversityatInferenceTime.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/20/TestTimeAugmentationforLLMsWheretoInjectDiversityatInferenceTime.html","author":{"@type":"Person","name":"Nikita Kozodoi, Zainab Afolabi, Jack Butler"},"@type":"BlogPosting","headline":"Test-Time Augmentation for LLMs: Where to Inject Diversity at Inference Time","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-20 00:00:00 +0000">10-20</time>
+  </p>
+  
+  <h1>Test-Time Augmentation for LLMs: Where to Inject Diversity at Inference Time</h1>
+  <br>Nikita Kozodoi, Zainab Afolabi, Jack Butler</h3>
+  <br> [stat.ML]
+
+  <p>Aggregating several LLM responses to the same question can improve accuracy, but every method that does so must decide where the responses should differ. Established test-time scaling methods such as self-consistency vary only the reasoning path, resampling from a fixed input. The input modification offers several further options: the wording of the question can be rephrased, the spelling can be perturbed, and the accompanying images can be transformed. We study Test-Time Augmentation (TTA), which aggregates predictions across transformed versions of the input, and use it to ask where diversity is best injected. Comparing these options across six benchmarks at a matched number of inference calls, we find that where the diversity comes from matters more than how much of it there is. Meaning-preserving paraphrases of the input yield the largest accuracy gains (+1.80 pp over a single call) and reach peak accuracy with the fewest samples. Yet, they are not the most diverse: character-level noise makes the responses disagree far more often (37.8% versus 27.4%) while gaining less accuracy, and perturbing two modalities at once falls below the single-call baseline. Not all diversity is equally useful: perturbations that keep the meaning intact produce disagreement that aggregation can use, while those that corrupt it produce disagreement that is wrong. Overall, our results suggest that for mid-tier LLMs such as Claude Haiku, varying how a question is phrased is a better use of an inference call than varying the reasoning path. Our TTA implementation is available at github.com/aws-samples/sample-genai-reflection-for-bedrock.</p>
+
+<p><a href="https://arxiv.org/abs/2608.09351">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

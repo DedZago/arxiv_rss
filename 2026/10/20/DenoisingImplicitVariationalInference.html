@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Denoising Implicit Variational Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Denoising Implicit Variational Inference" />
+<meta name="author" content="Zitong Wang, Zekun Wu, Longlin Yu, Cheng Zhang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Semi-implicit variational inference (SIVI) expands the representational capacity of variational families, but optimizing the Evidence Lower Bound (ELBO) remains challenging because the marginal score of the semi-implicit distribution is generally intractable. Unbiased Implicit Variational Inference (UIVI) and related methods address this difficulty through reparameterized ELBO gradients, but existing approaches estimate the required score indirectly through reverse-conditional sampling or approximation, which can be computationally costly and unstable. We propose Denoising Implicit Variational Inference (DIVI), which learns the marginal score directly via denoising score matching. The learned score is used as a plug-in estimator in the pathwise ELBO gradient, replacing inner reverse-conditional sampling with a score-network evaluation. We analyze DIVI as inexact stochastic gradient ascent and show, under stated assumptions, that the averaged stationarity measure is controlled by the usual optimization term and the average score-matching error. Empirically, we evaluate DIVI on both synthetic distributions and a variety of real-data Bayesian inference tasks. The results show that DIVI improves over the current UIVI baselines while reducing the cost of ELBO-gradient estimation." />
+<meta property="og:description" content="Semi-implicit variational inference (SIVI) expands the representational capacity of variational families, but optimizing the Evidence Lower Bound (ELBO) remains challenging because the marginal score of the semi-implicit distribution is generally intractable. Unbiased Implicit Variational Inference (UIVI) and related methods address this difficulty through reparameterized ELBO gradients, but existing approaches estimate the required score indirectly through reverse-conditional sampling or approximation, which can be computationally costly and unstable. We propose Denoising Implicit Variational Inference (DIVI), which learns the marginal score directly via denoising score matching. The learned score is used as a plug-in estimator in the pathwise ELBO gradient, replacing inner reverse-conditional sampling with a score-network evaluation. We analyze DIVI as inexact stochastic gradient ascent and show, under stated assumptions, that the averaged stationarity measure is controlled by the usual optimization term and the average score-matching error. Empirically, we evaluate DIVI on both synthetic distributions and a variety of real-data Bayesian inference tasks. The results show that DIVI improves over the current UIVI baselines while reducing the cost of ELBO-gradient estimation." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/20/DenoisingImplicitVariationalInference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/20/DenoisingImplicitVariationalInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Denoising Implicit Variational Inference" />
+<script type="application/ld+json">
+{"description":"Semi-implicit variational inference (SIVI) expands the representational capacity of variational families, but optimizing the Evidence Lower Bound (ELBO) remains challenging because the marginal score of the semi-implicit distribution is generally intractable. Unbiased Implicit Variational Inference (UIVI) and related methods address this difficulty through reparameterized ELBO gradients, but existing approaches estimate the required score indirectly through reverse-conditional sampling or approximation, which can be computationally costly and unstable. We propose Denoising Implicit Variational Inference (DIVI), which learns the marginal score directly via denoising score matching. The learned score is used as a plug-in estimator in the pathwise ELBO gradient, replacing inner reverse-conditional sampling with a score-network evaluation. We analyze DIVI as inexact stochastic gradient ascent and show, under stated assumptions, that the averaged stationarity measure is controlled by the usual optimization term and the average score-matching error. Empirically, we evaluate DIVI on both synthetic distributions and a variety of real-data Bayesian inference tasks. The results show that DIVI improves over the current UIVI baselines while reducing the cost of ELBO-gradient estimation.","datePublished":"2026-10-20T00:00:00+00:00","dateModified":"2026-10-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/20/DenoisingImplicitVariationalInference.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/20/DenoisingImplicitVariationalInference.html","author":{"@type":"Person","name":"Zitong Wang, Zekun Wu, Longlin Yu, Cheng Zhang"},"@type":"BlogPosting","headline":"Denoising Implicit Variational Inference","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-20 00:00:00 +0000">10-20</time>
+  </p>
+  
+  <h1>Denoising Implicit Variational Inference</h1>
+  <br>Zitong Wang, Zekun Wu, Longlin Yu, Cheng Zhang</h3>
+  <br> [stat.ML]
+
+  <p>Semi-implicit variational inference (SIVI) expands the representational capacity of variational families, but optimizing the Evidence Lower Bound (ELBO) remains challenging because the marginal score of the semi-implicit distribution is generally intractable. Unbiased Implicit Variational Inference (UIVI) and related methods address this difficulty through reparameterized ELBO gradients, but existing approaches estimate the required score indirectly through reverse-conditional sampling or approximation, which can be computationally costly and unstable. We propose Denoising Implicit Variational Inference (DIVI), which learns the marginal score directly via denoising score matching. The learned score is used as a plug-in estimator in the pathwise ELBO gradient, replacing inner reverse-conditional sampling with a score-network evaluation. We analyze DIVI as inexact stochastic gradient ascent and show, under stated assumptions, that the averaged stationarity measure is controlled by the usual optimization term and the average score-matching error. Empirically, we evaluate DIVI on both synthetic distributions and a variety of real-data Bayesian inference tasks. The results show that DIVI improves over the current UIVI baselines while reducing the cost of ELBO-gradient estimation.</p>
+
+<p><a href="https://arxiv.org/abs/2610.24509">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
