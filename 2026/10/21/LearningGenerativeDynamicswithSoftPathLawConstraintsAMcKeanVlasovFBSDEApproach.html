@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Learning Generative Dynamics with Soft Path-Law Constraints: A McKean-Vlasov FBSDE Approach</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Learning Generative Dynamics with Soft Path-Law Constraints: A McKean-Vlasov FBSDE Approach" />
+<meta name="author" content="Samer El Boustany, Samy Mekkaoui, Yadh Hafsi, Alexandre Alouadi, Huyên Pham" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We introduce a unified framework for learning stochastic dynamics from distributional observations and discretely observed trajectories. The key contribution is to combine soft law constraints, which regularize fitting to empirical distributions, with path-dependent supervision, which captures temporal structure that marginal distributions alone cannot identify. We formulate the problem as a discrete path-dependent McKean-Vlasov control problem, penalizing endpoint, intermediate marginal, and joint sampled-path laws within a single objective. Its optimality system takes the form of a McKean-Vlasov forward-backward stochastic differential equation (FBSDE), in which the marginal terms act continuously in time while the path-law term instead induces conditional adjoint jumps at the observation dates. We derive the reduced FBSDE for quadratic control cost and constant diffusion, establish local well-posedness for a Maximum Mean Discrepancy (MMD) path-law formulation, and develop a sample-based neural solver with causal representations. Experiments on synthetic transport, latent face transport, and human motion validate the framework. In particular, a two-state AMASS experiment under path-law supervision captures both low-to-high and high-to-low transitions, which marginal supervision alone cannot distinguish." />
+<meta property="og:description" content="We introduce a unified framework for learning stochastic dynamics from distributional observations and discretely observed trajectories. The key contribution is to combine soft law constraints, which regularize fitting to empirical distributions, with path-dependent supervision, which captures temporal structure that marginal distributions alone cannot identify. We formulate the problem as a discrete path-dependent McKean-Vlasov control problem, penalizing endpoint, intermediate marginal, and joint sampled-path laws within a single objective. Its optimality system takes the form of a McKean-Vlasov forward-backward stochastic differential equation (FBSDE), in which the marginal terms act continuously in time while the path-law term instead induces conditional adjoint jumps at the observation dates. We derive the reduced FBSDE for quadratic control cost and constant diffusion, establish local well-posedness for a Maximum Mean Discrepancy (MMD) path-law formulation, and develop a sample-based neural solver with causal representations. Experiments on synthetic transport, latent face transport, and human motion validate the framework. In particular, a two-state AMASS experiment under path-law supervision captures both low-to-high and high-to-low transitions, which marginal supervision alone cannot distinguish." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/21/LearningGenerativeDynamicswithSoftPathLawConstraintsAMcKeanVlasovFBSDEApproach.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/21/LearningGenerativeDynamicswithSoftPathLawConstraintsAMcKeanVlasovFBSDEApproach.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning Generative Dynamics with Soft Path-Law Constraints: A McKean-Vlasov FBSDE Approach" />
+<script type="application/ld+json">
+{"description":"We introduce a unified framework for learning stochastic dynamics from distributional observations and discretely observed trajectories. The key contribution is to combine soft law constraints, which regularize fitting to empirical distributions, with path-dependent supervision, which captures temporal structure that marginal distributions alone cannot identify. We formulate the problem as a discrete path-dependent McKean-Vlasov control problem, penalizing endpoint, intermediate marginal, and joint sampled-path laws within a single objective. Its optimality system takes the form of a McKean-Vlasov forward-backward stochastic differential equation (FBSDE), in which the marginal terms act continuously in time while the path-law term instead induces conditional adjoint jumps at the observation dates. We derive the reduced FBSDE for quadratic control cost and constant diffusion, establish local well-posedness for a Maximum Mean Discrepancy (MMD) path-law formulation, and develop a sample-based neural solver with causal representations. Experiments on synthetic transport, latent face transport, and human motion validate the framework. In particular, a two-state AMASS experiment under path-law supervision captures both low-to-high and high-to-low transitions, which marginal supervision alone cannot distinguish.","datePublished":"2026-10-21T00:00:00+00:00","dateModified":"2026-10-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/21/LearningGenerativeDynamicswithSoftPathLawConstraintsAMcKeanVlasovFBSDEApproach.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/21/LearningGenerativeDynamicswithSoftPathLawConstraintsAMcKeanVlasovFBSDEApproach.html","author":{"@type":"Person","name":"Samer El Boustany, Samy Mekkaoui, Yadh Hafsi, Alexandre Alouadi, Huyên Pham"},"@type":"BlogPosting","headline":"Learning Generative Dynamics with Soft Path-Law Constraints: A McKean-Vlasov FBSDE Approach","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-21 00:00:00 +0000">10-21</time>
+  </p>
+  
+  <h1>Learning Generative Dynamics with Soft Path-Law Constraints: A McKean-Vlasov FBSDE Approach</h1>
+  <br>Samer El Boustany, Samy Mekkaoui, Yadh Hafsi, Alexandre Alouadi, Huyên Pham</h3>
+  <br> [stat.ML]
+
+  <p>We introduce a unified framework for learning stochastic dynamics from distributional observations and discretely observed trajectories. The key contribution is to combine soft law constraints, which regularize fitting to empirical distributions, with path-dependent supervision, which captures temporal structure that marginal distributions alone cannot identify. We formulate the problem as a discrete path-dependent McKean-Vlasov control problem, penalizing endpoint, intermediate marginal, and joint sampled-path laws within a single objective. Its optimality system takes the form of a McKean-Vlasov forward-backward stochastic differential equation (FBSDE), in which the marginal terms act continuously in time while the path-law term instead induces conditional adjoint jumps at the observation dates. We derive the reduced FBSDE for quadratic control cost and constant diffusion, establish local well-posedness for a Maximum Mean Discrepancy (MMD) path-law formulation, and develop a sample-based neural solver with causal representations. Experiments on synthetic transport, latent face transport, and human motion validate the framework. In particular, a two-state AMASS experiment under path-law supervision captures both low-to-high and high-to-low transitions, which marginal supervision alone cannot distinguish.</p>
+
+<p><a href="https://arxiv.org/abs/2605.08928">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

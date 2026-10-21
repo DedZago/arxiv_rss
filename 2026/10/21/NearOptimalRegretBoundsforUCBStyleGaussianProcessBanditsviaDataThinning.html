@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Near-Optimal Regret Bounds for UCB-Style Gaussian Process Bandits via Data Thinning</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Near-Optimal Regret Bounds for UCB-Style Gaussian Process Bandits via Data Thinning" />
+<meta name="author" content="Shion Takeno, Shogo Iwazaki, Ichiro Takeuchi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Gaussian process upper confidence bound (GP-UCB) has been widely studied, though its known regret upper bound is suboptimal. To obtain near-optimal regret upper bounds, existing studies mainly focus on non-adaptive methods, such as uncertainty sampling, whose practical effectiveness is often limited. This paper shows that, under a Gaussian noise assumption, UCB-style algorithms can achieve near-optimal regret upper bounds via data thinning, a statistical technique for creating independent datasets from a single dataset. First, we show that data thinning can yield tighter confidence intervals in the bandit setting, and that a direct extension of GP-UCB achieves a near-optimal simple regret upper bound. Furthermore, by leveraging the tighter confidence intervals and combining GP-UCB with a phased elimination algorithm, we show a near-optimal cumulative regret upper bound. Finally, we demonstrate the effectiveness of UCB-style algorithms incorporating data thinning via numerical experiments." />
+<meta property="og:description" content="Gaussian process upper confidence bound (GP-UCB) has been widely studied, though its known regret upper bound is suboptimal. To obtain near-optimal regret upper bounds, existing studies mainly focus on non-adaptive methods, such as uncertainty sampling, whose practical effectiveness is often limited. This paper shows that, under a Gaussian noise assumption, UCB-style algorithms can achieve near-optimal regret upper bounds via data thinning, a statistical technique for creating independent datasets from a single dataset. First, we show that data thinning can yield tighter confidence intervals in the bandit setting, and that a direct extension of GP-UCB achieves a near-optimal simple regret upper bound. Furthermore, by leveraging the tighter confidence intervals and combining GP-UCB with a phased elimination algorithm, we show a near-optimal cumulative regret upper bound. Finally, we demonstrate the effectiveness of UCB-style algorithms incorporating data thinning via numerical experiments." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/21/NearOptimalRegretBoundsforUCBStyleGaussianProcessBanditsviaDataThinning.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/21/NearOptimalRegretBoundsforUCBStyleGaussianProcessBanditsviaDataThinning.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Near-Optimal Regret Bounds for UCB-Style Gaussian Process Bandits via Data Thinning" />
+<script type="application/ld+json">
+{"description":"Gaussian process upper confidence bound (GP-UCB) has been widely studied, though its known regret upper bound is suboptimal. To obtain near-optimal regret upper bounds, existing studies mainly focus on non-adaptive methods, such as uncertainty sampling, whose practical effectiveness is often limited. This paper shows that, under a Gaussian noise assumption, UCB-style algorithms can achieve near-optimal regret upper bounds via data thinning, a statistical technique for creating independent datasets from a single dataset. First, we show that data thinning can yield tighter confidence intervals in the bandit setting, and that a direct extension of GP-UCB achieves a near-optimal simple regret upper bound. Furthermore, by leveraging the tighter confidence intervals and combining GP-UCB with a phased elimination algorithm, we show a near-optimal cumulative regret upper bound. Finally, we demonstrate the effectiveness of UCB-style algorithms incorporating data thinning via numerical experiments.","datePublished":"2026-10-21T00:00:00+00:00","dateModified":"2026-10-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/21/NearOptimalRegretBoundsforUCBStyleGaussianProcessBanditsviaDataThinning.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/21/NearOptimalRegretBoundsforUCBStyleGaussianProcessBanditsviaDataThinning.html","author":{"@type":"Person","name":"Shion Takeno, Shogo Iwazaki, Ichiro Takeuchi"},"@type":"BlogPosting","headline":"Near-Optimal Regret Bounds for UCB-Style Gaussian Process Bandits via Data Thinning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-21 00:00:00 +0000">10-21</time>
+  </p>
+  
+  <h1>Near-Optimal Regret Bounds for UCB-Style Gaussian Process Bandits via Data Thinning</h1>
+  <br>Shion Takeno, Shogo Iwazaki, Ichiro Takeuchi</h3>
+  <br> [stat.ML]
+
+  <p>Gaussian process upper confidence bound (GP-UCB) has been widely studied, though its known regret upper bound is suboptimal. To obtain near-optimal regret upper bounds, existing studies mainly focus on non-adaptive methods, such as uncertainty sampling, whose practical effectiveness is often limited. This paper shows that, under a Gaussian noise assumption, UCB-style algorithms can achieve near-optimal regret upper bounds via data thinning, a statistical technique for creating independent datasets from a single dataset. First, we show that data thinning can yield tighter confidence intervals in the bandit setting, and that a direct extension of GP-UCB achieves a near-optimal simple regret upper bound. Furthermore, by leveraging the tighter confidence intervals and combining GP-UCB with a phased elimination algorithm, we show a near-optimal cumulative regret upper bound. Finally, we demonstrate the effectiveness of UCB-style algorithms incorporating data thinning via numerical experiments.</p>
+
+<p><a href="https://arxiv.org/abs/2610.28136">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
