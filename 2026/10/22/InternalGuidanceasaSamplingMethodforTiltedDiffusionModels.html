@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Internal Guidance as a Sampling Method for Tilted Diffusion Models</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Internal Guidance as a Sampling Method for Tilted Diffusion Models" />
+<meta name="author" content="Curtis McDonald, Peter Bartlett" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reward guidance methods sample an exponential tilt of a base density using a diffusion model trained with only samples from the base distribution. Existing methods use what we call external guidance: additive terms in the drift or multiplicative terms on the transition probabilities. We propose internal guidance which leaves the output of the base denoiser unmodified and instead changes the point at which it is evaluated. For discrete distributions embedded in the hypercube ${-1,1}^{d}$, the denoiser of any linearly tilted density is exactly the base denoiser evaluated at a shifted and rescaled input. In practice the base denoiser is a neural network trained on noised samples of the base distribution. The required evaluation points for sampling the tilted density would be out-of-distribution for basic noising of the base distribution. We modify the training algorithm with random diagonal rescalings of the data, so that the denoiser network learns both in- and out-of-distribution evaluations of the denoiser relative to the base distribution. A single denoiser network samples binary reward tilts, class labels, and infilling with no fine-tuning and no external guidance term." />
+<meta property="og:description" content="Reward guidance methods sample an exponential tilt of a base density using a diffusion model trained with only samples from the base distribution. Existing methods use what we call external guidance: additive terms in the drift or multiplicative terms on the transition probabilities. We propose internal guidance which leaves the output of the base denoiser unmodified and instead changes the point at which it is evaluated. For discrete distributions embedded in the hypercube ${-1,1}^{d}$, the denoiser of any linearly tilted density is exactly the base denoiser evaluated at a shifted and rescaled input. In practice the base denoiser is a neural network trained on noised samples of the base distribution. The required evaluation points for sampling the tilted density would be out-of-distribution for basic noising of the base distribution. We modify the training algorithm with random diagonal rescalings of the data, so that the denoiser network learns both in- and out-of-distribution evaluations of the denoiser relative to the base distribution. A single denoiser network samples binary reward tilts, class labels, and infilling with no fine-tuning and no external guidance term." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/22/InternalGuidanceasaSamplingMethodforTiltedDiffusionModels.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/22/InternalGuidanceasaSamplingMethodforTiltedDiffusionModels.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Internal Guidance as a Sampling Method for Tilted Diffusion Models" />
+<script type="application/ld+json">
+{"description":"Reward guidance methods sample an exponential tilt of a base density using a diffusion model trained with only samples from the base distribution. Existing methods use what we call external guidance: additive terms in the drift or multiplicative terms on the transition probabilities. We propose internal guidance which leaves the output of the base denoiser unmodified and instead changes the point at which it is evaluated. For discrete distributions embedded in the hypercube ${-1,1}^{d}$, the denoiser of any linearly tilted density is exactly the base denoiser evaluated at a shifted and rescaled input. In practice the base denoiser is a neural network trained on noised samples of the base distribution. The required evaluation points for sampling the tilted density would be out-of-distribution for basic noising of the base distribution. We modify the training algorithm with random diagonal rescalings of the data, so that the denoiser network learns both in- and out-of-distribution evaluations of the denoiser relative to the base distribution. A single denoiser network samples binary reward tilts, class labels, and infilling with no fine-tuning and no external guidance term.","datePublished":"2026-10-22T00:00:00+00:00","dateModified":"2026-10-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/22/InternalGuidanceasaSamplingMethodforTiltedDiffusionModels.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/22/InternalGuidanceasaSamplingMethodforTiltedDiffusionModels.html","author":{"@type":"Person","name":"Curtis McDonald, Peter Bartlett"},"@type":"BlogPosting","headline":"Internal Guidance as a Sampling Method for Tilted Diffusion Models","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-22 00:00:00 +0000">10-22</time>
+  </p>
+  
+  <h1>Internal Guidance as a Sampling Method for Tilted Diffusion Models</h1>
+  <br>Curtis McDonald, Peter Bartlett</h3>
+  <br> [stat.ML]
+
+  <p>Reward guidance methods sample an exponential tilt of a base density using a diffusion model trained with only samples from the base distribution. Existing methods use what we call external guidance: additive terms in the drift or multiplicative terms on the transition probabilities. We propose internal guidance which leaves the output of the base denoiser unmodified and instead changes the point at which it is evaluated. For discrete distributions embedded in the hypercube ${-1,1}^{d}$, the denoiser of any linearly tilted density is exactly the base denoiser evaluated at a shifted and rescaled input. In practice the base denoiser is a neural network trained on noised samples of the base distribution. The required evaluation points for sampling the tilted density would be out-of-distribution for basic noising of the base distribution. We modify the training algorithm with random diagonal rescalings of the data, so that the denoiser network learns both in- and out-of-distribution evaluations of the denoiser relative to the base distribution. A single denoiser network samples binary reward tilts, class labels, and infilling with no fine-tuning and no external guidance term.</p>
+
+<p><a href="https://arxiv.org/abs/2610.29086">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
