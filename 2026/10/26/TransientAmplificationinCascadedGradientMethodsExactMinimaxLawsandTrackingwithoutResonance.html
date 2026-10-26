@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Transient Amplification in Cascaded Gradient Methods: Exact Minimax Laws and Tracking without Resonance</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Transient Amplification in Cascaded Gradient Methods: Exact Minimax Laws and Tracking without Resonance" />
+<meta name="author" content="Ahanaf Hasan Ariq, Davide Wiest" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Leader-follower gradient iterations, including bilevel and two-time-scale methods, can exhibit large finite-time excursions despite asymptotic stability. For cascaded iterations with block matrix J = [[A,0],[C,D]], symmetric diagonal blocks of norm at most gamma &lt; 1, and coupling norm at most c, we prove an exact, dimension-free minimax formula: at every horizon t, the worst-case amplification equals the spectral norm of [[gamma^t,0],[c t gamma^(t-1),gamma^t]], attained by an aligned two-dimensional quadratic. Consequently, the worst transient is on the order of 1 + c/(1-gamma), and eigenvalues alone cannot predict finite-time gain. Under martingale noise, the aligned system has stationary follower variance sigma^2 c^2 (1+gamma^2)/(1-gamma^2)^3, establishing cubic inverse-gap scaling. For quadratic followers, the coupling is linked to follower sensitivity R by C = (I-D)R. When the leader is isotropic and the follower map is positive semidefinite, amplification is at most 1 plus the operator norm of R, independently of the spectral gaps. A look-ahead Newton update eliminates follower memory and is minimax-optimal among linear updates that track the leader exactly. Experiments validate the bounds and show that accelerated or inexact follower solvers can exceed the sensitivity bound when their effective maps have negative eigenvalues. Code and experiment scripts: https://github.com/Axym-Labs/transient-amplification" />
+<meta property="og:description" content="Leader-follower gradient iterations, including bilevel and two-time-scale methods, can exhibit large finite-time excursions despite asymptotic stability. For cascaded iterations with block matrix J = [[A,0],[C,D]], symmetric diagonal blocks of norm at most gamma &lt; 1, and coupling norm at most c, we prove an exact, dimension-free minimax formula: at every horizon t, the worst-case amplification equals the spectral norm of [[gamma^t,0],[c t gamma^(t-1),gamma^t]], attained by an aligned two-dimensional quadratic. Consequently, the worst transient is on the order of 1 + c/(1-gamma), and eigenvalues alone cannot predict finite-time gain. Under martingale noise, the aligned system has stationary follower variance sigma^2 c^2 (1+gamma^2)/(1-gamma^2)^3, establishing cubic inverse-gap scaling. For quadratic followers, the coupling is linked to follower sensitivity R by C = (I-D)R. When the leader is isotropic and the follower map is positive semidefinite, amplification is at most 1 plus the operator norm of R, independently of the spectral gaps. A look-ahead Newton update eliminates follower memory and is minimax-optimal among linear updates that track the leader exactly. Experiments validate the bounds and show that accelerated or inexact follower solvers can exceed the sensitivity bound when their effective maps have negative eigenvalues. Code and experiment scripts: https://github.com/Axym-Labs/transient-amplification" />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/26/TransientAmplificationinCascadedGradientMethodsExactMinimaxLawsandTrackingwithoutResonance.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/26/TransientAmplificationinCascadedGradientMethodsExactMinimaxLawsandTrackingwithoutResonance.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Transient Amplification in Cascaded Gradient Methods: Exact Minimax Laws and Tracking without Resonance" />
+<script type="application/ld+json">
+{"description":"Leader-follower gradient iterations, including bilevel and two-time-scale methods, can exhibit large finite-time excursions despite asymptotic stability. For cascaded iterations with block matrix J = [[A,0],[C,D]], symmetric diagonal blocks of norm at most gamma &lt; 1, and coupling norm at most c, we prove an exact, dimension-free minimax formula: at every horizon t, the worst-case amplification equals the spectral norm of [[gamma^t,0],[c t gamma^(t-1),gamma^t]], attained by an aligned two-dimensional quadratic. Consequently, the worst transient is on the order of 1 + c/(1-gamma), and eigenvalues alone cannot predict finite-time gain. Under martingale noise, the aligned system has stationary follower variance sigma^2 c^2 (1+gamma^2)/(1-gamma^2)^3, establishing cubic inverse-gap scaling. For quadratic followers, the coupling is linked to follower sensitivity R by C = (I-D)R. When the leader is isotropic and the follower map is positive semidefinite, amplification is at most 1 plus the operator norm of R, independently of the spectral gaps. A look-ahead Newton update eliminates follower memory and is minimax-optimal among linear updates that track the leader exactly. Experiments validate the bounds and show that accelerated or inexact follower solvers can exceed the sensitivity bound when their effective maps have negative eigenvalues. Code and experiment scripts: https://github.com/Axym-Labs/transient-amplification","datePublished":"2026-10-26T00:00:00+00:00","dateModified":"2026-10-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/26/TransientAmplificationinCascadedGradientMethodsExactMinimaxLawsandTrackingwithoutResonance.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/26/TransientAmplificationinCascadedGradientMethodsExactMinimaxLawsandTrackingwithoutResonance.html","author":{"@type":"Person","name":"Ahanaf Hasan Ariq, Davide Wiest"},"@type":"BlogPosting","headline":"Transient Amplification in Cascaded Gradient Methods: Exact Minimax Laws and Tracking without Resonance","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-26 00:00:00 +0000">10-26</time>
+  </p>
+  
+  <h1>Transient Amplification in Cascaded Gradient Methods: Exact Minimax Laws and Tracking without Resonance</h1>
+  <br>Ahanaf Hasan Ariq, Davide Wiest</h3>
+  <br> [stat.ML]
+
+  <p>Leader-follower gradient iterations, including bilevel and two-time-scale methods, can exhibit large finite-time excursions despite asymptotic stability. For cascaded iterations with block matrix J = [[A,0],[C,D]], symmetric diagonal blocks of norm at most gamma &lt; 1, and coupling norm at most c, we prove an exact, dimension-free minimax formula: at every horizon t, the worst-case amplification equals the spectral norm of [[gamma^t,0],[c t gamma^(t-1),gamma^t]], attained by an aligned two-dimensional quadratic. Consequently, the worst transient is on the order of 1 + c/(1-gamma), and eigenvalues alone cannot predict finite-time gain. Under martingale noise, the aligned system has stationary follower variance sigma^2 c^2 (1+gamma^2)/(1-gamma^2)^3, establishing cubic inverse-gap scaling. For quadratic followers, the coupling is linked to follower sensitivity R by C = (I-D)R. When the leader is isotropic and the follower map is positive semidefinite, amplification is at most 1 plus the operator norm of R, independently of the spectral gaps. A look-ahead Newton update eliminates follower memory and is minimax-optimal among linear updates that track the leader exactly. Experiments validate the bounds and show that accelerated or inexact follower solvers can exceed the sensitivity bound when their effective maps have negative eigenvalues. Code and experiment scripts: https://github.com/Axym-Labs/transient-amplification</p>
+
+<p><a href="https://arxiv.org/abs/2606.04031">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

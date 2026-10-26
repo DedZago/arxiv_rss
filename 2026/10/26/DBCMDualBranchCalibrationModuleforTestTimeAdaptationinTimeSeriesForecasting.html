@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>DBCM: Dual-Branch Calibration Module for Test-Time Adaptation in Time Series Forecasting</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="DBCM: Dual-Branch Calibration Module for Test-Time Adaptation in Time Series Forecasting" />
+<meta name="author" content="Jaebyeong Jeon, Kunwoo Kang, Sang Yup Lee, Kibok Lee" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Non-stationarity induces test-time distribution shifts in time series forecasting (TSF), resulting in forecast residuals between predictions and the corresponding ground truth. Recent works on test-time adaptation for TSF address this by introducing lightweight calibration modules around frozen forecasters, updated using observations that become incrementally available at test time. Existing approaches typically employ channel-wise adapters, implicitly assuming that forecast residuals are inherently channel-specific. However, we observe that forecast residuals often exhibit substantial shared structure across channels, suggesting that fully independent channel-wise parameterization may be redundant. Motivated by this observation, we propose the Dual-Branch Calibration Module (DBCM), which shares adaptation capacity across channels through a shared adapter while retaining limited channel-specific flexibility through a low-rank channel-wise adapter, further enhanced by channel mixing and nonlinear gated modulation. Extensive experiments show that DBCM consistently outperforms prior methods across diverse datasets, horizons, and backbones." />
+<meta property="og:description" content="Non-stationarity induces test-time distribution shifts in time series forecasting (TSF), resulting in forecast residuals between predictions and the corresponding ground truth. Recent works on test-time adaptation for TSF address this by introducing lightweight calibration modules around frozen forecasters, updated using observations that become incrementally available at test time. Existing approaches typically employ channel-wise adapters, implicitly assuming that forecast residuals are inherently channel-specific. However, we observe that forecast residuals often exhibit substantial shared structure across channels, suggesting that fully independent channel-wise parameterization may be redundant. Motivated by this observation, we propose the Dual-Branch Calibration Module (DBCM), which shares adaptation capacity across channels through a shared adapter while retaining limited channel-specific flexibility through a low-rank channel-wise adapter, further enhanced by channel mixing and nonlinear gated modulation. Extensive experiments show that DBCM consistently outperforms prior methods across diverse datasets, horizons, and backbones." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/26/DBCMDualBranchCalibrationModuleforTestTimeAdaptationinTimeSeriesForecasting.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/26/DBCMDualBranchCalibrationModuleforTestTimeAdaptationinTimeSeriesForecasting.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DBCM: Dual-Branch Calibration Module for Test-Time Adaptation in Time Series Forecasting" />
+<script type="application/ld+json">
+{"description":"Non-stationarity induces test-time distribution shifts in time series forecasting (TSF), resulting in forecast residuals between predictions and the corresponding ground truth. Recent works on test-time adaptation for TSF address this by introducing lightweight calibration modules around frozen forecasters, updated using observations that become incrementally available at test time. Existing approaches typically employ channel-wise adapters, implicitly assuming that forecast residuals are inherently channel-specific. However, we observe that forecast residuals often exhibit substantial shared structure across channels, suggesting that fully independent channel-wise parameterization may be redundant. Motivated by this observation, we propose the Dual-Branch Calibration Module (DBCM), which shares adaptation capacity across channels through a shared adapter while retaining limited channel-specific flexibility through a low-rank channel-wise adapter, further enhanced by channel mixing and nonlinear gated modulation. Extensive experiments show that DBCM consistently outperforms prior methods across diverse datasets, horizons, and backbones.","datePublished":"2026-10-26T00:00:00+00:00","dateModified":"2026-10-26T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/26/DBCMDualBranchCalibrationModuleforTestTimeAdaptationinTimeSeriesForecasting.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/26/DBCMDualBranchCalibrationModuleforTestTimeAdaptationinTimeSeriesForecasting.html","author":{"@type":"Person","name":"Jaebyeong Jeon, Kunwoo Kang, Sang Yup Lee, Kibok Lee"},"@type":"BlogPosting","headline":"DBCM: Dual-Branch Calibration Module for Test-Time Adaptation in Time Series Forecasting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-26 00:00:00 +0000">10-26</time>
+  </p>
+  
+  <h1>DBCM: Dual-Branch Calibration Module for Test-Time Adaptation in Time Series Forecasting</h1>
+  <br>Jaebyeong Jeon, Kunwoo Kang, Sang Yup Lee, Kibok Lee</h3>
+  <br> [stat.ML]
+
+  <p>Non-stationarity induces test-time distribution shifts in time series forecasting (TSF), resulting in forecast residuals between predictions and the corresponding ground truth. Recent works on test-time adaptation for TSF address this by introducing lightweight calibration modules around frozen forecasters, updated using observations that become incrementally available at test time. Existing approaches typically employ channel-wise adapters, implicitly assuming that forecast residuals are inherently channel-specific. However, we observe that forecast residuals often exhibit substantial shared structure across channels, suggesting that fully independent channel-wise parameterization may be redundant. Motivated by this observation, we propose the Dual-Branch Calibration Module (DBCM), which shares adaptation capacity across channels through a shared adapter while retaining limited channel-specific flexibility through a low-rank channel-wise adapter, further enhanced by channel mixing and nonlinear gated modulation. Extensive experiments show that DBCM consistently outperforms prior methods across diverse datasets, horizons, and backbones.</p>
+
+<p><a href="https://arxiv.org/abs/2610.32071">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
