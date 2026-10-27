@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Not All Mislabels Are Equal: Efficient Task-Aware Auditing with Confidence Sequences</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Not All Mislabels Are Equal: Efficient Task-Aware Auditing with Confidence Sequences" />
+<meta name="author" content="Fangyuan Lin, Noah Krever, Jakub Černý, Lily Xu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="We study efficient, adaptive auditing of categorical labels in a fixed dataset, motivated by biodiversity-credit programs in which expert verification of species records is costly and downstream scores (e.g., payment) are more sensitive to errors on certain labels than on others. Our proposed ATLAS framework couples anytime-valid inference with a task-aware adaptive auditing policy. Representing label corrections through a confusion matrix, we prioritize which data points to inspect next based on both label uncertainty and the influence of potential label corrections on the downstream score function. For linear scores such as the mislabel rate, our priority-aware approach certifies the overall label error rate to $\pm 2$ percentage points with 24% and 11% fewer audits than random sampling on biodiversity data from Kenya and a widely used CIFAR-10N benchmark, respectively. For nonlinear scores such as the Hill-Shannon diversity, we exploit a linear-envelope representation that reduces inference to a family of linear-score audits; priority-aware sampling reaches the target precision with 36% fewer audits. When distribution-free guarantees are prohibitively costly, we develop a model-based Bayesian alternative that trades assumption-free validity for substantially fewer audits. Our biodiversity case study highlights a gap between statistical validity and practical feasibility: generic methods such as Serfling’s bound and existing confidence-sequence procedures are rigorous but can require prohibitively many expert reviews in practice. Together, these results show task-aware auditing can significantly reduce the number of expert audits needed while providing finite-sample, anytime-valid guarantees." />
+<meta property="og:description" content="We study efficient, adaptive auditing of categorical labels in a fixed dataset, motivated by biodiversity-credit programs in which expert verification of species records is costly and downstream scores (e.g., payment) are more sensitive to errors on certain labels than on others. Our proposed ATLAS framework couples anytime-valid inference with a task-aware adaptive auditing policy. Representing label corrections through a confusion matrix, we prioritize which data points to inspect next based on both label uncertainty and the influence of potential label corrections on the downstream score function. For linear scores such as the mislabel rate, our priority-aware approach certifies the overall label error rate to $\pm 2$ percentage points with 24% and 11% fewer audits than random sampling on biodiversity data from Kenya and a widely used CIFAR-10N benchmark, respectively. For nonlinear scores such as the Hill-Shannon diversity, we exploit a linear-envelope representation that reduces inference to a family of linear-score audits; priority-aware sampling reaches the target precision with 36% fewer audits. When distribution-free guarantees are prohibitively costly, we develop a model-based Bayesian alternative that trades assumption-free validity for substantially fewer audits. Our biodiversity case study highlights a gap between statistical validity and practical feasibility: generic methods such as Serfling’s bound and existing confidence-sequence procedures are rigorous but can require prohibitively many expert reviews in practice. Together, these results show task-aware auditing can significantly reduce the number of expert audits needed while providing finite-sample, anytime-valid guarantees." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/27/NotAllMislabelsAreEqualEfficientTaskAwareAuditingwithConfidenceSequences.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/27/NotAllMislabelsAreEqualEfficientTaskAwareAuditingwithConfidenceSequences.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Not All Mislabels Are Equal: Efficient Task-Aware Auditing with Confidence Sequences" />
+<script type="application/ld+json">
+{"description":"We study efficient, adaptive auditing of categorical labels in a fixed dataset, motivated by biodiversity-credit programs in which expert verification of species records is costly and downstream scores (e.g., payment) are more sensitive to errors on certain labels than on others. Our proposed ATLAS framework couples anytime-valid inference with a task-aware adaptive auditing policy. Representing label corrections through a confusion matrix, we prioritize which data points to inspect next based on both label uncertainty and the influence of potential label corrections on the downstream score function. For linear scores such as the mislabel rate, our priority-aware approach certifies the overall label error rate to $\\pm 2$ percentage points with 24% and 11% fewer audits than random sampling on biodiversity data from Kenya and a widely used CIFAR-10N benchmark, respectively. For nonlinear scores such as the Hill-Shannon diversity, we exploit a linear-envelope representation that reduces inference to a family of linear-score audits; priority-aware sampling reaches the target precision with 36% fewer audits. When distribution-free guarantees are prohibitively costly, we develop a model-based Bayesian alternative that trades assumption-free validity for substantially fewer audits. Our biodiversity case study highlights a gap between statistical validity and practical feasibility: generic methods such as Serfling’s bound and existing confidence-sequence procedures are rigorous but can require prohibitively many expert reviews in practice. Together, these results show task-aware auditing can significantly reduce the number of expert audits needed while providing finite-sample, anytime-valid guarantees.","datePublished":"2026-10-27T00:00:00+00:00","dateModified":"2026-10-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/27/NotAllMislabelsAreEqualEfficientTaskAwareAuditingwithConfidenceSequences.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/27/NotAllMislabelsAreEqualEfficientTaskAwareAuditingwithConfidenceSequences.html","author":{"@type":"Person","name":"Fangyuan Lin, Noah Krever, Jakub Černý, Lily Xu"},"@type":"BlogPosting","headline":"Not All Mislabels Are Equal: Efficient Task-Aware Auditing with Confidence Sequences","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-27 00:00:00 +0000">10-27</time>
+  </p>
+  
+  <h1>Not All Mislabels Are Equal: Efficient Task-Aware Auditing with Confidence Sequences</h1>
+  <br>Fangyuan Lin, Noah Krever, Jakub Černý, Lily Xu</h3>
+  <br> [stat.ME,stat.AP,stat.ML,stat.TH]
+
+  <p>We study efficient, adaptive auditing of categorical labels in a fixed dataset, motivated by biodiversity-credit programs in which expert verification of species records is costly and downstream scores (e.g., payment) are more sensitive to errors on certain labels than on others. Our proposed ATLAS framework couples anytime-valid inference with a task-aware adaptive auditing policy. Representing label corrections through a confusion matrix, we prioritize which data points to inspect next based on both label uncertainty and the influence of potential label corrections on the downstream score function. For linear scores such as the mislabel rate, our priority-aware approach certifies the overall label error rate to $\pm 2$ percentage points with 24% and 11% fewer audits than random sampling on biodiversity data from Kenya and a widely used CIFAR-10N benchmark, respectively. For nonlinear scores such as the Hill-Shannon diversity, we exploit a linear-envelope representation that reduces inference to a family of linear-score audits; priority-aware sampling reaches the target precision with 36% fewer audits. When distribution-free guarantees are prohibitively costly, we develop a model-based Bayesian alternative that trades assumption-free validity for substantially fewer audits. Our biodiversity case study highlights a gap between statistical validity and practical feasibility: generic methods such as Serfling’s bound and existing confidence-sequence procedures are rigorous but can require prohibitively many expert reviews in practice. Together, these results show task-aware auditing can significantly reduce the number of expert audits needed while providing finite-sample, anytime-valid guarantees.</p>
+
+<p><a href="https://arxiv.org/abs/2610.33262">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

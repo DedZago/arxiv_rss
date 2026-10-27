@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Noise-Transmission Burden of Diffusion Network: Why Image Prediction Can Outperform Noise Prediction</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="The Noise-Transmission Burden of Diffusion Network: Why Image Prediction Can Outperform Noise Prediction" />
+<meta name="author" content="Gyeonghun Kang, Pengxi Liu, Bingshuo Qian, Xiang Cheng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Clean-image prediction ($x$-prediction) and noise prediction yield equivalent population-optimal denoisers, yet can perform very differently in finite diffusion networks. For noisy input $Y_t$ with noise standard deviation $\sigma_t$, a noise predictor $f_{\varepsilon,t}$ induces the clean-image estimate $\widehat X_1=Y_t-\sigma_t f_{\varepsilon,t}(Y_t)$. This reveals a noise-transmission burden: the predictor must preserve information needed to cancel the input corruption. Under Gaussian corruption of $d$-dimensional data, a linear input bottleneck of rank $r&lt;d$ imposes a denoising-error floor $\sigma_t^2(d-r)$ even with unrestricted downstream computation, while the corresponding optimal risk for image prediction remains bounded. EDM attenuates this bottleneck contribution at high noise; exact preconditioning cancels it at every noise level. Without an input bottleneck, assuming exact affine recovery of the noisy patch from the model representation, we characterize how the covariance spectrum of corrections beyond linear denoising determines the width required above the patch dimension. ImageNet experiments with JiT show that measured denoising losses reflect the predicted bottleneck floor and its attenuation or cancellation through preconditioning. Further widening yields larger relative denoising gains at low noise, where corrections beyond linear denoising spread across more directions, consistent with our spectral characterization of the required model width. Together, these results provide a denoising-based account of practical generation-quality gaps across prediction targets, preconditioning choices, and model widths." />
+<meta property="og:description" content="Clean-image prediction ($x$-prediction) and noise prediction yield equivalent population-optimal denoisers, yet can perform very differently in finite diffusion networks. For noisy input $Y_t$ with noise standard deviation $\sigma_t$, a noise predictor $f_{\varepsilon,t}$ induces the clean-image estimate $\widehat X_1=Y_t-\sigma_t f_{\varepsilon,t}(Y_t)$. This reveals a noise-transmission burden: the predictor must preserve information needed to cancel the input corruption. Under Gaussian corruption of $d$-dimensional data, a linear input bottleneck of rank $r&lt;d$ imposes a denoising-error floor $\sigma_t^2(d-r)$ even with unrestricted downstream computation, while the corresponding optimal risk for image prediction remains bounded. EDM attenuates this bottleneck contribution at high noise; exact preconditioning cancels it at every noise level. Without an input bottleneck, assuming exact affine recovery of the noisy patch from the model representation, we characterize how the covariance spectrum of corrections beyond linear denoising determines the width required above the patch dimension. ImageNet experiments with JiT show that measured denoising losses reflect the predicted bottleneck floor and its attenuation or cancellation through preconditioning. Further widening yields larger relative denoising gains at low noise, where corrections beyond linear denoising spread across more directions, consistent with our spectral characterization of the required model width. Together, these results provide a denoising-based account of practical generation-quality gaps across prediction targets, preconditioning choices, and model widths." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/27/TheNoiseTransmissionBurdenofDiffusionNetworkWhyImagePredictionCanOutperformNoisePrediction.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/27/TheNoiseTransmissionBurdenofDiffusionNetworkWhyImagePredictionCanOutperformNoisePrediction.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Noise-Transmission Burden of Diffusion Network: Why Image Prediction Can Outperform Noise Prediction" />
+<script type="application/ld+json">
+{"description":"Clean-image prediction ($x$-prediction) and noise prediction yield equivalent population-optimal denoisers, yet can perform very differently in finite diffusion networks. For noisy input $Y_t$ with noise standard deviation $\\sigma_t$, a noise predictor $f_{\\varepsilon,t}$ induces the clean-image estimate $\\widehat X_1=Y_t-\\sigma_t f_{\\varepsilon,t}(Y_t)$. This reveals a noise-transmission burden: the predictor must preserve information needed to cancel the input corruption. Under Gaussian corruption of $d$-dimensional data, a linear input bottleneck of rank $r&lt;d$ imposes a denoising-error floor $\\sigma_t^2(d-r)$ even with unrestricted downstream computation, while the corresponding optimal risk for image prediction remains bounded. EDM attenuates this bottleneck contribution at high noise; exact preconditioning cancels it at every noise level. Without an input bottleneck, assuming exact affine recovery of the noisy patch from the model representation, we characterize how the covariance spectrum of corrections beyond linear denoising determines the width required above the patch dimension. ImageNet experiments with JiT show that measured denoising losses reflect the predicted bottleneck floor and its attenuation or cancellation through preconditioning. Further widening yields larger relative denoising gains at low noise, where corrections beyond linear denoising spread across more directions, consistent with our spectral characterization of the required model width. Together, these results provide a denoising-based account of practical generation-quality gaps across prediction targets, preconditioning choices, and model widths.","datePublished":"2026-10-27T00:00:00+00:00","dateModified":"2026-10-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/27/TheNoiseTransmissionBurdenofDiffusionNetworkWhyImagePredictionCanOutperformNoisePrediction.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/27/TheNoiseTransmissionBurdenofDiffusionNetworkWhyImagePredictionCanOutperformNoisePrediction.html","author":{"@type":"Person","name":"Gyeonghun Kang, Pengxi Liu, Bingshuo Qian, Xiang Cheng"},"@type":"BlogPosting","headline":"The Noise-Transmission Burden of Diffusion Network: Why Image Prediction Can Outperform Noise Prediction","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-27 00:00:00 +0000">10-27</time>
+  </p>
+  
+  <h1>The Noise-Transmission Burden of Diffusion Network: Why Image Prediction Can Outperform Noise Prediction</h1>
+  <br>Gyeonghun Kang, Pengxi Liu, Bingshuo Qian, Xiang Cheng</h3>
+  <br> [stat.ML]
+
+  <p>Clean-image prediction ($x$-prediction) and noise prediction yield equivalent population-optimal denoisers, yet can perform very differently in finite diffusion networks. For noisy input $Y_t$ with noise standard deviation $\sigma_t$, a noise predictor $f_{\varepsilon,t}$ induces the clean-image estimate $\widehat X_1=Y_t-\sigma_t f_{\varepsilon,t}(Y_t)$. This reveals a noise-transmission burden: the predictor must preserve information needed to cancel the input corruption. Under Gaussian corruption of $d$-dimensional data, a linear input bottleneck of rank $r&lt;d$ imposes a denoising-error floor $\sigma_t^2(d-r)$ even with unrestricted downstream computation, while the corresponding optimal risk for image prediction remains bounded. EDM attenuates this bottleneck contribution at high noise; exact preconditioning cancels it at every noise level. Without an input bottleneck, assuming exact affine recovery of the noisy patch from the model representation, we characterize how the covariance spectrum of corrections beyond linear denoising determines the width required above the patch dimension. ImageNet experiments with JiT show that measured denoising losses reflect the predicted bottleneck floor and its attenuation or cancellation through preconditioning. Further widening yields larger relative denoising gains at low noise, where corrections beyond linear denoising spread across more directions, consistent with our spectral characterization of the required model width. Together, these results provide a denoising-based account of practical generation-quality gaps across prediction targets, preconditioning choices, and model widths.</p>
+
+<p><a href="https://arxiv.org/abs/2610.34834">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

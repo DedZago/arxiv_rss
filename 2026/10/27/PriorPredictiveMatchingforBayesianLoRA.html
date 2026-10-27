@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Prior Predictive Matching for Bayesian LoRA</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Prior Predictive Matching for Bayesian LoRA" />
+<meta name="author" content="Tomasz Kuśmierczyk, Eliezer de Souza da Silva, Marcin Sendera" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bayesian variants of Low-Rank Adaptation (LoRA) provide principled uncertainty estimation when fine-tuning large foundation models, but require specifying the prior over the low-rank weight updates. We address this hyperparameter selection problem by introducing a closed-form prior-predictive estimator that operates before fine-tuning. We analyze a second-order expansion of the network and quantify how the low-rank prior drives function-space deviations from the pretrained outputs. We also show that these prior-predictive quantities depend on the prior only through the product of the adaptation rank and the fourth power of the prior scale. Because the training targets share a single draw of the latent weight update, we can leverage the covariance between example residuals to derive a moment-matching estimator. Furthermore, our theoretical analysis establishes that the optimal prior precision scales as $r^{-1/2}$ with the rank $r$, allowing a single estimate to generalize across all ranks. Controlled experiments across regression and classification tasks validate our approximation and show that our estimator recovers the true prior scale. On RoBERTa-large, our approach improves predictive negative log-likelihood (NLL) and calibration over both MAP and marginal-likelihood selection without requiring validation data, while achieving competitive out-of-distribution detection." />
+<meta property="og:description" content="Bayesian variants of Low-Rank Adaptation (LoRA) provide principled uncertainty estimation when fine-tuning large foundation models, but require specifying the prior over the low-rank weight updates. We address this hyperparameter selection problem by introducing a closed-form prior-predictive estimator that operates before fine-tuning. We analyze a second-order expansion of the network and quantify how the low-rank prior drives function-space deviations from the pretrained outputs. We also show that these prior-predictive quantities depend on the prior only through the product of the adaptation rank and the fourth power of the prior scale. Because the training targets share a single draw of the latent weight update, we can leverage the covariance between example residuals to derive a moment-matching estimator. Furthermore, our theoretical analysis establishes that the optimal prior precision scales as $r^{-1/2}$ with the rank $r$, allowing a single estimate to generalize across all ranks. Controlled experiments across regression and classification tasks validate our approximation and show that our estimator recovers the true prior scale. On RoBERTa-large, our approach improves predictive negative log-likelihood (NLL) and calibration over both MAP and marginal-likelihood selection without requiring validation data, while achieving competitive out-of-distribution detection." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/27/PriorPredictiveMatchingforBayesianLoRA.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/27/PriorPredictiveMatchingforBayesianLoRA.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Prior Predictive Matching for Bayesian LoRA" />
+<script type="application/ld+json">
+{"description":"Bayesian variants of Low-Rank Adaptation (LoRA) provide principled uncertainty estimation when fine-tuning large foundation models, but require specifying the prior over the low-rank weight updates. We address this hyperparameter selection problem by introducing a closed-form prior-predictive estimator that operates before fine-tuning. We analyze a second-order expansion of the network and quantify how the low-rank prior drives function-space deviations from the pretrained outputs. We also show that these prior-predictive quantities depend on the prior only through the product of the adaptation rank and the fourth power of the prior scale. Because the training targets share a single draw of the latent weight update, we can leverage the covariance between example residuals to derive a moment-matching estimator. Furthermore, our theoretical analysis establishes that the optimal prior precision scales as $r^{-1/2}$ with the rank $r$, allowing a single estimate to generalize across all ranks. Controlled experiments across regression and classification tasks validate our approximation and show that our estimator recovers the true prior scale. On RoBERTa-large, our approach improves predictive negative log-likelihood (NLL) and calibration over both MAP and marginal-likelihood selection without requiring validation data, while achieving competitive out-of-distribution detection.","datePublished":"2026-10-27T00:00:00+00:00","dateModified":"2026-10-27T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/27/PriorPredictiveMatchingforBayesianLoRA.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/27/PriorPredictiveMatchingforBayesianLoRA.html","author":{"@type":"Person","name":"Tomasz Kuśmierczyk, Eliezer de Souza da Silva, Marcin Sendera"},"@type":"BlogPosting","headline":"Prior Predictive Matching for Bayesian LoRA","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-27 00:00:00 +0000">10-27</time>
+  </p>
+  
+  <h1>Prior Predictive Matching for Bayesian LoRA</h1>
+  <br>Tomasz Kuśmierczyk, Eliezer de Souza da Silva, Marcin Sendera</h3>
+  <br> [stat.ML]
+
+  <p>Bayesian variants of Low-Rank Adaptation (LoRA) provide principled uncertainty estimation when fine-tuning large foundation models, but require specifying the prior over the low-rank weight updates. We address this hyperparameter selection problem by introducing a closed-form prior-predictive estimator that operates before fine-tuning.
+  We analyze a second-order expansion of the network and quantify how the low-rank prior drives function-space deviations from the pretrained outputs. We also show that these prior-predictive quantities depend on the prior only through the product of the adaptation rank and the fourth power of the prior scale. Because the training targets share a single draw of the latent weight update, we can leverage the covariance between example residuals to derive a moment-matching estimator. Furthermore, our theoretical analysis establishes that the optimal prior precision scales as $r^{-1/2}$ with the rank $r$, allowing a single estimate to generalize across all ranks.
+  Controlled experiments across regression and classification tasks validate our approximation and show that our estimator recovers the true prior scale. On RoBERTa-large, our approach improves predictive negative log-likelihood (NLL) and calibration over both MAP and marginal-likelihood selection without requiring validation data, while achieving competitive out-of-distribution detection.</p>
+
+<p><a href="https://arxiv.org/abs/2610.35457">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
