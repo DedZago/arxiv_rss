@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pinpointing Pivot Points: The DECIDE Framework for Data Analysis Decision Importances</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Pinpointing Pivot Points: The DECIDE Framework for Data Analysis Decision Importances" />
+<meta name="author" content="Zachary T. Rewolinski, Jan Simson, Frauke Kreuter, Christoph Kern, Bin Yu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Human judgment calls made throughout the data science life cycle can change the conclusions drawn from data. Independent analysts often make different choices when given the same data, leading to often unacceptable variations in results and contributing to the ongoing reproducibility crisis across scientific disciplines. The rapid adoption of agentic tools threatens to amplify this crisis. Several approaches have been developed to address this variation by following the same strategy: repeating an analysis under different combinations of analytical decisions and inspecting the distribution of outcomes. Examples include multiverse analysis, specification curve analysis, and vibration of effects. More broadly, the Predictability-Computability-Stability (PCS) framework assesses how documented judgment calls across the data science life cycle affect conclusions, with predictability serving as a reality-check that a model captures signal. Each of these approaches results in a “multiverse” object. While the distribution of outcomes reflects the overall variability of conclusions, estimating the influence of each individual decision requires additional tools. A common heuristic is to train a model to predict the outcome from these decisions and treat its coefficients or feature importances as proxies for each decision’s influence. Although this strategy may work in certain cases, it assumes the model is correctly specified and accurately predicts the outcome, which we show is not always the case. In this work, we introduce DECIDE, a model-free framework that quantifies each decision’s importance from the actual outcomes across the plausible decision space, avoiding issues of predictability by design. We demonstrate the effectiveness of DECIDE by applying it to real-world multiverse analyses. We further provide what is, to our knowledge, the first formal definition of the multiverse." />
+<meta property="og:description" content="Human judgment calls made throughout the data science life cycle can change the conclusions drawn from data. Independent analysts often make different choices when given the same data, leading to often unacceptable variations in results and contributing to the ongoing reproducibility crisis across scientific disciplines. The rapid adoption of agentic tools threatens to amplify this crisis. Several approaches have been developed to address this variation by following the same strategy: repeating an analysis under different combinations of analytical decisions and inspecting the distribution of outcomes. Examples include multiverse analysis, specification curve analysis, and vibration of effects. More broadly, the Predictability-Computability-Stability (PCS) framework assesses how documented judgment calls across the data science life cycle affect conclusions, with predictability serving as a reality-check that a model captures signal. Each of these approaches results in a “multiverse” object. While the distribution of outcomes reflects the overall variability of conclusions, estimating the influence of each individual decision requires additional tools. A common heuristic is to train a model to predict the outcome from these decisions and treat its coefficients or feature importances as proxies for each decision’s influence. Although this strategy may work in certain cases, it assumes the model is correctly specified and accurately predicts the outcome, which we show is not always the case. In this work, we introduce DECIDE, a model-free framework that quantifies each decision’s importance from the actual outcomes across the plausible decision space, avoiding issues of predictability by design. We demonstrate the effectiveness of DECIDE by applying it to real-world multiverse analyses. We further provide what is, to our knowledge, the first formal definition of the multiverse." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/30/PinpointingPivotPointsTheDECIDEFrameworkforDataAnalysisDecisionImportances.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/30/PinpointingPivotPointsTheDECIDEFrameworkforDataAnalysisDecisionImportances.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Pinpointing Pivot Points: The DECIDE Framework for Data Analysis Decision Importances" />
+<script type="application/ld+json">
+{"description":"Human judgment calls made throughout the data science life cycle can change the conclusions drawn from data. Independent analysts often make different choices when given the same data, leading to often unacceptable variations in results and contributing to the ongoing reproducibility crisis across scientific disciplines. The rapid adoption of agentic tools threatens to amplify this crisis. Several approaches have been developed to address this variation by following the same strategy: repeating an analysis under different combinations of analytical decisions and inspecting the distribution of outcomes. Examples include multiverse analysis, specification curve analysis, and vibration of effects. More broadly, the Predictability-Computability-Stability (PCS) framework assesses how documented judgment calls across the data science life cycle affect conclusions, with predictability serving as a reality-check that a model captures signal. Each of these approaches results in a “multiverse” object. While the distribution of outcomes reflects the overall variability of conclusions, estimating the influence of each individual decision requires additional tools. A common heuristic is to train a model to predict the outcome from these decisions and treat its coefficients or feature importances as proxies for each decision’s influence. Although this strategy may work in certain cases, it assumes the model is correctly specified and accurately predicts the outcome, which we show is not always the case. In this work, we introduce DECIDE, a model-free framework that quantifies each decision’s importance from the actual outcomes across the plausible decision space, avoiding issues of predictability by design. We demonstrate the effectiveness of DECIDE by applying it to real-world multiverse analyses. We further provide what is, to our knowledge, the first formal definition of the multiverse.","headline":"Pinpointing Pivot Points: The DECIDE Framework for Data Analysis Decision Importances","dateModified":"2026-10-30T00:00:00+00:00","datePublished":"2026-10-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/30/PinpointingPivotPointsTheDECIDEFrameworkforDataAnalysisDecisionImportances.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/30/PinpointingPivotPointsTheDECIDEFrameworkforDataAnalysisDecisionImportances.html","author":{"@type":"Person","name":"Zachary T. Rewolinski, Jan Simson, Frauke Kreuter, Christoph Kern, Bin Yu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-30 00:00:00 +0000">10-30</time>
+  </p>
+  
+  <h1>Pinpointing Pivot Points: The DECIDE Framework for Data Analysis Decision Importances</h1>
+  <br>Zachary T. Rewolinski, Jan Simson, Frauke Kreuter, Christoph Kern, Bin Yu</h3>
+  <br> [stat.ML,stat.ME]
+
+  <p>Human judgment calls made throughout the data science life cycle can change the conclusions drawn from data. Independent analysts often make different choices when given the same data, leading to often unacceptable variations in results and contributing to the ongoing reproducibility crisis across scientific disciplines. The rapid adoption of agentic tools threatens to amplify this crisis. Several approaches have been developed to address this variation by following the same strategy: repeating an analysis under different combinations of analytical decisions and inspecting the distribution of outcomes. Examples include multiverse analysis, specification curve analysis, and vibration of effects. More broadly, the Predictability-Computability-Stability (PCS) framework assesses how documented judgment calls across the data science life cycle affect conclusions, with predictability serving as a reality-check that a model captures signal. Each of these approaches results in a “multiverse” object. While the distribution of outcomes reflects the overall variability of conclusions, estimating the influence of each individual decision requires additional tools. A common heuristic is to train a model to predict the outcome from these decisions and treat its coefficients or feature importances as proxies for each decision’s influence. Although this strategy may work in certain cases, it assumes the model is correctly specified and accurately predicts the outcome, which we show is not always the case. In this work, we introduce DECIDE, a model-free framework that quantifies each decision’s importance from the actual outcomes across the plausible decision space, avoiding issues of predictability by design. We demonstrate the effectiveness of DECIDE by applying it to real-world multiverse analyses. We further provide what is, to our knowledge, the first formal definition of the multiverse.</p>
+
+<p><a href="https://arxiv.org/abs/2610.38797">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

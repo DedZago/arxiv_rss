@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Anisotropic Trust Region Warping for Prior-Data Fitted Networks in Bayesian Optimisation</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Anisotropic Trust Region Warping for Prior-Data Fitted Networks in Bayesian Optimisation" />
+<meta name="author" content="Samuel Younger, Tinkle Chugh, George De Ath" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prior-Data Fitted Networks (PFNs) replace the hyperparameter refitting of Gaussian Process (GP) surrogates in Bayesian optimisation with a single forward pass, at the cost of a prior that is fixed at meta-training time. We show empirically that a PFN’s predictive log-likelihood falls increasingly behind that of a refitted GP as the objective function’s lengthscale grows beyond the mode of the PFN’s meta-training prior, and that this deficit carries over to optimisation performance. To correct the mismatch without retraining the network, we introduce Anisotropic Trust Region (ATR) warping. Per-dimension lengthscales are estimated by kernel target alignment, and an affine rescaling of the input space maps the objective onto the lengthscale the PFN expects, with a trust region around the anchor determining which observations are retained, leaving the PFN’s $\mathcal{O}(d \cdot N^2)$ inference cost unchanged. On functions drawn from a Mat&#39;ern-3/2 kernel, ATR warping improves optimisation performance of the PFN at both extremes of the lengthscale range. Our implementation is publicly available at https://github.com/youngers2006/Trust-Region-Warping-For-PFNs." />
+<meta property="og:description" content="Prior-Data Fitted Networks (PFNs) replace the hyperparameter refitting of Gaussian Process (GP) surrogates in Bayesian optimisation with a single forward pass, at the cost of a prior that is fixed at meta-training time. We show empirically that a PFN’s predictive log-likelihood falls increasingly behind that of a refitted GP as the objective function’s lengthscale grows beyond the mode of the PFN’s meta-training prior, and that this deficit carries over to optimisation performance. To correct the mismatch without retraining the network, we introduce Anisotropic Trust Region (ATR) warping. Per-dimension lengthscales are estimated by kernel target alignment, and an affine rescaling of the input space maps the objective onto the lengthscale the PFN expects, with a trust region around the anchor determining which observations are retained, leaving the PFN’s $\mathcal{O}(d \cdot N^2)$ inference cost unchanged. On functions drawn from a Mat&#39;ern-3/2 kernel, ATR warping improves optimisation performance of the PFN at both extremes of the lengthscale range. Our implementation is publicly available at https://github.com/youngers2006/Trust-Region-Warping-For-PFNs." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/30/AnisotropicTrustRegionWarpingforPriorDataFittedNetworksinBayesianOptimisation.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/30/AnisotropicTrustRegionWarpingforPriorDataFittedNetworksinBayesianOptimisation.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Anisotropic Trust Region Warping for Prior-Data Fitted Networks in Bayesian Optimisation" />
+<script type="application/ld+json">
+{"description":"Prior-Data Fitted Networks (PFNs) replace the hyperparameter refitting of Gaussian Process (GP) surrogates in Bayesian optimisation with a single forward pass, at the cost of a prior that is fixed at meta-training time. We show empirically that a PFN’s predictive log-likelihood falls increasingly behind that of a refitted GP as the objective function’s lengthscale grows beyond the mode of the PFN’s meta-training prior, and that this deficit carries over to optimisation performance. To correct the mismatch without retraining the network, we introduce Anisotropic Trust Region (ATR) warping. Per-dimension lengthscales are estimated by kernel target alignment, and an affine rescaling of the input space maps the objective onto the lengthscale the PFN expects, with a trust region around the anchor determining which observations are retained, leaving the PFN’s $\\mathcal{O}(d \\cdot N^2)$ inference cost unchanged. On functions drawn from a Mat&#39;ern-3/2 kernel, ATR warping improves optimisation performance of the PFN at both extremes of the lengthscale range. Our implementation is publicly available at https://github.com/youngers2006/Trust-Region-Warping-For-PFNs.","headline":"Anisotropic Trust Region Warping for Prior-Data Fitted Networks in Bayesian Optimisation","dateModified":"2026-10-30T00:00:00+00:00","datePublished":"2026-10-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/30/AnisotropicTrustRegionWarpingforPriorDataFittedNetworksinBayesianOptimisation.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/30/AnisotropicTrustRegionWarpingforPriorDataFittedNetworksinBayesianOptimisation.html","author":{"@type":"Person","name":"Samuel Younger, Tinkle Chugh, George De Ath"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-30 00:00:00 +0000">10-30</time>
+  </p>
+  
+  <h1>Anisotropic Trust Region Warping for Prior-Data Fitted Networks in Bayesian Optimisation</h1>
+  <br>Samuel Younger, Tinkle Chugh, George De Ath</h3>
+  <br> [stat.ML]
+
+  <p>Prior-Data Fitted Networks (PFNs) replace the hyperparameter refitting of Gaussian Process (GP) surrogates in Bayesian optimisation with a single forward pass, at the cost of a prior that is fixed at meta-training time. We show empirically that a PFN’s predictive log-likelihood falls increasingly behind that of a refitted GP as the objective function’s lengthscale grows beyond the mode of the PFN’s meta-training prior, and that this deficit carries over to optimisation performance. To correct the mismatch without retraining the network, we introduce Anisotropic Trust Region (ATR) warping. Per-dimension lengthscales are estimated by kernel target alignment, and an affine rescaling of the input space maps the objective onto the lengthscale the PFN expects, with a trust region around the anchor determining which observations are retained, leaving the PFN’s $\mathcal{O}(d \cdot N^2)$ inference cost unchanged. On functions drawn from a Mat'ern-3/2 kernel, ATR warping improves optimisation performance of the PFN at both extremes of the lengthscale range. Our implementation is publicly available at https://github.com/youngers2006/Trust-Region-Warping-For-PFNs.</p>
+
+<p><a href="https://arxiv.org/abs/2610.37737">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

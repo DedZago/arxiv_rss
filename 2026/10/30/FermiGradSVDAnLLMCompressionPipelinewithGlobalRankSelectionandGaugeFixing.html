@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing" />
+<meta name="author" content="Roman Rausch, David Jansen, Sukhbinder Singh, Román Orús" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Low-rank factorization of weight matrices is a promising approach to compress large language models (LLMs), but its practical effectiveness depends on allocating ranks across layers and efficiently representing the resulting factors. We introduce three complementary methods for improving SVD-based LLM compression. First, FermiGrad formulates global layer-wise rank allocation as a differentiable optimization problem by replacing discrete singular-value truncation with continuous Fermi gates. Because FermiGrad optimizes only rank parameters over precomputed low-rank factors, it avoids repeated activation decompositions and backpropagation through SVD operations. Second, the Targeted Compressor extends FermiGrad with a task-specific objective that directs limited model capacity toward a selected domain. At 60% parameter density for Llama-3.1-8B-Instruct, SciQ-targeted compression achieves 60% MMLU accuracy, exceeding the reported quantized Dobi-SVD result by 10 percentage points, while deliberately trading performance on unrelated tasks for domain specialization. Third, PivGa provides a lossless secondary compression of low-rank factors by exploiting the gauge freedom in their parametrization. The proposed framework is modular, computationally efficient, and applicable at scale, as demonstrated by compressing Llama-3.3-70B-Instruct to 50% parameter density." />
+<meta property="og:description" content="Low-rank factorization of weight matrices is a promising approach to compress large language models (LLMs), but its practical effectiveness depends on allocating ranks across layers and efficiently representing the resulting factors. We introduce three complementary methods for improving SVD-based LLM compression. First, FermiGrad formulates global layer-wise rank allocation as a differentiable optimization problem by replacing discrete singular-value truncation with continuous Fermi gates. Because FermiGrad optimizes only rank parameters over precomputed low-rank factors, it avoids repeated activation decompositions and backpropagation through SVD operations. Second, the Targeted Compressor extends FermiGrad with a task-specific objective that directs limited model capacity toward a selected domain. At 60% parameter density for Llama-3.1-8B-Instruct, SciQ-targeted compression achieves 60% MMLU accuracy, exceeding the reported quantized Dobi-SVD result by 10 percentage points, while deliberately trading performance on unrelated tasks for domain specialization. Third, PivGa provides a lossless secondary compression of low-rank factors by exploiting the gauge freedom in their parametrization. The proposed framework is modular, computationally efficient, and applicable at scale, as demonstrated by compressing Llama-3.3-70B-Instruct to 50% parameter density." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/10/30/FermiGradSVDAnLLMCompressionPipelinewithGlobalRankSelectionandGaugeFixing.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/10/30/FermiGradSVDAnLLMCompressionPipelinewithGlobalRankSelectionandGaugeFixing.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing" />
+<script type="application/ld+json">
+{"description":"Low-rank factorization of weight matrices is a promising approach to compress large language models (LLMs), but its practical effectiveness depends on allocating ranks across layers and efficiently representing the resulting factors. We introduce three complementary methods for improving SVD-based LLM compression. First, FermiGrad formulates global layer-wise rank allocation as a differentiable optimization problem by replacing discrete singular-value truncation with continuous Fermi gates. Because FermiGrad optimizes only rank parameters over precomputed low-rank factors, it avoids repeated activation decompositions and backpropagation through SVD operations. Second, the Targeted Compressor extends FermiGrad with a task-specific objective that directs limited model capacity toward a selected domain. At 60% parameter density for Llama-3.1-8B-Instruct, SciQ-targeted compression achieves 60% MMLU accuracy, exceeding the reported quantized Dobi-SVD result by 10 percentage points, while deliberately trading performance on unrelated tasks for domain specialization. Third, PivGa provides a lossless secondary compression of low-rank factors by exploiting the gauge freedom in their parametrization. The proposed framework is modular, computationally efficient, and applicable at scale, as demonstrated by compressing Llama-3.3-70B-Instruct to 50% parameter density.","headline":"FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing","dateModified":"2026-10-30T00:00:00+00:00","datePublished":"2026-10-30T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/10/30/FermiGradSVDAnLLMCompressionPipelinewithGlobalRankSelectionandGaugeFixing.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/10/30/FermiGradSVDAnLLMCompressionPipelinewithGlobalRankSelectionandGaugeFixing.html","author":{"@type":"Person","name":"Roman Rausch, David Jansen, Sukhbinder Singh, Román Orús"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-10-30 00:00:00 +0000">10-30</time>
+  </p>
+  
+  <h1>FermiGrad-SVD: An LLM Compression Pipeline with Global Rank Selection and Gauge Fixing</h1>
+  <br>Roman Rausch, David Jansen, Sukhbinder Singh, Román Orús</h3>
+  <br> [stat.ML]
+
+  <p>Low-rank factorization of weight matrices is a promising approach to compress large language models (LLMs), but its practical effectiveness depends on allocating ranks across layers and efficiently representing the resulting factors. We introduce three complementary methods for improving SVD-based LLM compression. First, FermiGrad formulates global layer-wise rank allocation as a differentiable optimization problem by replacing discrete singular-value truncation with continuous Fermi gates. Because FermiGrad optimizes only rank parameters over precomputed low-rank factors, it avoids repeated activation decompositions and backpropagation through SVD operations. Second, the Targeted Compressor extends FermiGrad with a task-specific objective that directs limited model capacity toward a selected domain. At 60% parameter density for Llama-3.1-8B-Instruct, SciQ-targeted compression achieves 60% MMLU accuracy, exceeding the reported quantized Dobi-SVD result by 10 percentage points, while deliberately trading performance on unrelated tasks for domain specialization. Third, PivGa provides a lossless secondary compression of low-rank factors by exploiting the gauge freedom in their parametrization. The proposed framework is modular, computationally efficient, and applicable at scale, as demonstrated by compressing Llama-3.3-70B-Instruct to 50% parameter density.</p>
+
+<p><a href="https://arxiv.org/abs/2512.03062">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
