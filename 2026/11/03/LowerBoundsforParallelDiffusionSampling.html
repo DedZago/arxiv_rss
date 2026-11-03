@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Lower Bounds for Parallel Diffusion Sampling</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Lower Bounds for Parallel Diffusion Sampling" />
+<meta name="author" content="Yiwen Kou, Yimeng Wang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Standard diffusion samplers generate samples through sequential evaluations of a learned score function, with each query depending on previous answers. Parallel samplers seek to accelerate this process by making multiple score queries simultaneously. We ask how many adaptive rounds are necessary when each round allows polynomially many queries. We establish the first polynomial lower bounds on the round complexity of diffusion sampling with approximate scores satisfying a mean-square accuracy guarantee. Specifically, we prove (1) a $\widetilde{\Omega}(d^{1/3})$-round lower bound for sampling smooth, near-isotropic Gaussian mixtures in $\mathbb{R}^d$, and (2) a tight $\Omega(d)$-round lower bound for uniform sampling from anisotropic axis-aligned boxes contained in the unit ball. Both bounds hold for arbitrary randomized algorithms making polynomially many queries per round at arbitrary locations and noise levels, with inverse-polynomial score error and constant total variation accuracy. Our near-isotropic construction follows the blockwise approach of earlier lower bounds for parallel matroid search and discrete sampling \cite{KUW85,AGR24}. We use independent coordinate blocks containing random codebooks with well-separated rates and construct approximate score oracles whose responses in each block depend on consistency tests in earlier blocks. Together, the rate separation and these tests ensure that each round reveals information about at most one additional block with high probability." />
+<meta property="og:description" content="Standard diffusion samplers generate samples through sequential evaluations of a learned score function, with each query depending on previous answers. Parallel samplers seek to accelerate this process by making multiple score queries simultaneously. We ask how many adaptive rounds are necessary when each round allows polynomially many queries. We establish the first polynomial lower bounds on the round complexity of diffusion sampling with approximate scores satisfying a mean-square accuracy guarantee. Specifically, we prove (1) a $\widetilde{\Omega}(d^{1/3})$-round lower bound for sampling smooth, near-isotropic Gaussian mixtures in $\mathbb{R}^d$, and (2) a tight $\Omega(d)$-round lower bound for uniform sampling from anisotropic axis-aligned boxes contained in the unit ball. Both bounds hold for arbitrary randomized algorithms making polynomially many queries per round at arbitrary locations and noise levels, with inverse-polynomial score error and constant total variation accuracy. Our near-isotropic construction follows the blockwise approach of earlier lower bounds for parallel matroid search and discrete sampling \cite{KUW85,AGR24}. We use independent coordinate blocks containing random codebooks with well-separated rates and construct approximate score oracles whose responses in each block depend on consistency tests in earlier blocks. Together, the rate separation and these tests ensure that each round reveals information about at most one additional block with high probability." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/03/LowerBoundsforParallelDiffusionSampling.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/03/LowerBoundsforParallelDiffusionSampling.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lower Bounds for Parallel Diffusion Sampling" />
+<script type="application/ld+json">
+{"description":"Standard diffusion samplers generate samples through sequential evaluations of a learned score function, with each query depending on previous answers. Parallel samplers seek to accelerate this process by making multiple score queries simultaneously. We ask how many adaptive rounds are necessary when each round allows polynomially many queries. We establish the first polynomial lower bounds on the round complexity of diffusion sampling with approximate scores satisfying a mean-square accuracy guarantee. Specifically, we prove (1) a $\\widetilde{\\Omega}(d^{1/3})$-round lower bound for sampling smooth, near-isotropic Gaussian mixtures in $\\mathbb{R}^d$, and (2) a tight $\\Omega(d)$-round lower bound for uniform sampling from anisotropic axis-aligned boxes contained in the unit ball. Both bounds hold for arbitrary randomized algorithms making polynomially many queries per round at arbitrary locations and noise levels, with inverse-polynomial score error and constant total variation accuracy. Our near-isotropic construction follows the blockwise approach of earlier lower bounds for parallel matroid search and discrete sampling \\cite{KUW85,AGR24}. We use independent coordinate blocks containing random codebooks with well-separated rates and construct approximate score oracles whose responses in each block depend on consistency tests in earlier blocks. Together, the rate separation and these tests ensure that each round reveals information about at most one additional block with high probability.","headline":"Lower Bounds for Parallel Diffusion Sampling","dateModified":"2026-11-03T00:00:00+00:00","datePublished":"2026-11-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/03/LowerBoundsforParallelDiffusionSampling.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/03/LowerBoundsforParallelDiffusionSampling.html","author":{"@type":"Person","name":"Yiwen Kou, Yimeng Wang"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-03 00:00:00 +0000">11-03</time>
+  </p>
+  
+  <h1>Lower Bounds for Parallel Diffusion Sampling</h1>
+  <br>Yiwen Kou, Yimeng Wang</h3>
+  <br> [stat.ML]
+
+  <p>Standard diffusion samplers generate samples through sequential evaluations of a learned score function, with each query depending on previous answers. Parallel samplers seek to accelerate this process by making multiple score queries simultaneously. We ask how many adaptive rounds are necessary when each round allows polynomially many queries.
+  We establish the first polynomial lower bounds on the round complexity of diffusion sampling with approximate scores satisfying a mean-square accuracy guarantee. Specifically, we prove (1) a $\widetilde{\Omega}(d^{1/3})$-round lower bound for sampling smooth, near-isotropic Gaussian mixtures in $\mathbb{R}^d$, and (2) a tight $\Omega(d)$-round lower bound for uniform sampling from anisotropic axis-aligned boxes contained in the unit ball. Both bounds hold for arbitrary randomized algorithms making polynomially many queries per round at arbitrary locations and noise levels, with inverse-polynomial score error and constant total variation accuracy.
+  Our near-isotropic construction follows the blockwise approach of earlier lower bounds for parallel matroid search and discrete sampling \cite{KUW85,AGR24}. We use independent coordinate blocks containing random codebooks with well-separated rates and construct approximate score oracles whose responses in each block depend on consistency tests in earlier blocks. Together, the rate separation and these tests ensure that each round reveals information about at most one additional block with high probability.</p>
+
+<p><a href="https://arxiv.org/abs/2610.09166">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

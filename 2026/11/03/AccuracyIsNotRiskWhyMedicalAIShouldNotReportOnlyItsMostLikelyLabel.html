@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Accuracy Is Not Risk: Why Medical AI Should Not Report Only Its Most Likely Label</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Accuracy Is Not Risk: Why Medical AI Should Not Report Only Its Most Likely Label" />
+<meta name="author" content="Jeffrey Humpherys, Makoto Jones" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Background. Many medical AI models are trained to reproduce a single reference label and hand the most likely label to the next step in a clinical workflow. A classifier can select that label correctly while providing an inadequate summary for estimating downstream risk. Methods. We use Jeffrey’s rule of conditioning to specify when probabilities over intermediate states, such as diagnoses or imaging categories, can be carried forward to an outcome risk. We separate two errors of reporting only the most likely label, discarding the probability of the other states and applying the risk of patients who have the leading diagnosis to a patient who only probably has it. We also give conditions under which the label and the full distribution lead to the same decision, and we propose guardrails for device developers, regulatory reviewers, and health insurers. Results. In a hypothetical chest-pain differential, reporting only the benign leading diagnosis greatly understates the patient’s risk of death or cardiac arrest, so a patient who warrants evaluation could be discharged or denied imaging. In a hypothetical BI-RADS example, the most likely category is “probably benign,” yet the propagated malignancy risk exceeds the ceiling that defines that category. Conclusions. A predicted label is not an observed state, and a calibrated classifier is not automatically a valid outcome model. Clinical and insurance coverage decisions should rest on the patient’s outcome risk, judged against a threshold justified by the consequences of acting and not acting. Developers should state what each model output means and check that every step between the model and the decision preserves the patient’s risk." />
+<meta property="og:description" content="Background. Many medical AI models are trained to reproduce a single reference label and hand the most likely label to the next step in a clinical workflow. A classifier can select that label correctly while providing an inadequate summary for estimating downstream risk. Methods. We use Jeffrey’s rule of conditioning to specify when probabilities over intermediate states, such as diagnoses or imaging categories, can be carried forward to an outcome risk. We separate two errors of reporting only the most likely label, discarding the probability of the other states and applying the risk of patients who have the leading diagnosis to a patient who only probably has it. We also give conditions under which the label and the full distribution lead to the same decision, and we propose guardrails for device developers, regulatory reviewers, and health insurers. Results. In a hypothetical chest-pain differential, reporting only the benign leading diagnosis greatly understates the patient’s risk of death or cardiac arrest, so a patient who warrants evaluation could be discharged or denied imaging. In a hypothetical BI-RADS example, the most likely category is “probably benign,” yet the propagated malignancy risk exceeds the ceiling that defines that category. Conclusions. A predicted label is not an observed state, and a calibrated classifier is not automatically a valid outcome model. Clinical and insurance coverage decisions should rest on the patient’s outcome risk, judged against a threshold justified by the consequences of acting and not acting. Developers should state what each model output means and check that every step between the model and the decision preserves the patient’s risk." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/03/AccuracyIsNotRiskWhyMedicalAIShouldNotReportOnlyItsMostLikelyLabel.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/03/AccuracyIsNotRiskWhyMedicalAIShouldNotReportOnlyItsMostLikelyLabel.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Accuracy Is Not Risk: Why Medical AI Should Not Report Only Its Most Likely Label" />
+<script type="application/ld+json">
+{"description":"Background. Many medical AI models are trained to reproduce a single reference label and hand the most likely label to the next step in a clinical workflow. A classifier can select that label correctly while providing an inadequate summary for estimating downstream risk. Methods. We use Jeffrey’s rule of conditioning to specify when probabilities over intermediate states, such as diagnoses or imaging categories, can be carried forward to an outcome risk. We separate two errors of reporting only the most likely label, discarding the probability of the other states and applying the risk of patients who have the leading diagnosis to a patient who only probably has it. We also give conditions under which the label and the full distribution lead to the same decision, and we propose guardrails for device developers, regulatory reviewers, and health insurers. Results. In a hypothetical chest-pain differential, reporting only the benign leading diagnosis greatly understates the patient’s risk of death or cardiac arrest, so a patient who warrants evaluation could be discharged or denied imaging. In a hypothetical BI-RADS example, the most likely category is “probably benign,” yet the propagated malignancy risk exceeds the ceiling that defines that category. Conclusions. A predicted label is not an observed state, and a calibrated classifier is not automatically a valid outcome model. Clinical and insurance coverage decisions should rest on the patient’s outcome risk, judged against a threshold justified by the consequences of acting and not acting. Developers should state what each model output means and check that every step between the model and the decision preserves the patient’s risk.","headline":"Accuracy Is Not Risk: Why Medical AI Should Not Report Only Its Most Likely Label","dateModified":"2026-11-03T00:00:00+00:00","datePublished":"2026-11-03T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/03/AccuracyIsNotRiskWhyMedicalAIShouldNotReportOnlyItsMostLikelyLabel.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/03/AccuracyIsNotRiskWhyMedicalAIShouldNotReportOnlyItsMostLikelyLabel.html","author":{"@type":"Person","name":"Jeffrey Humpherys, Makoto Jones"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-03 00:00:00 +0000">11-03</time>
+  </p>
+  
+  <h1>Accuracy Is Not Risk: Why Medical AI Should Not Report Only Its Most Likely Label</h1>
+  <br>Jeffrey Humpherys, Makoto Jones</h3>
+  <br> [stat.ME,stat.AP]
+
+  <p>Background. Many medical AI models are trained to reproduce a single reference label and hand the most likely label to the next step in a clinical workflow. A classifier can select that label correctly while providing an inadequate summary for estimating downstream risk. Methods. We use Jeffrey’s rule of conditioning to specify when probabilities over intermediate states, such as diagnoses or imaging categories, can be carried forward to an outcome risk. We separate two errors of reporting only the most likely label, discarding the probability of the other states and applying the risk of patients who have the leading diagnosis to a patient who only probably has it. We also give conditions under which the label and the full distribution lead to the same decision, and we propose guardrails for device developers, regulatory reviewers, and health insurers. Results. In a hypothetical chest-pain differential, reporting only the benign leading diagnosis greatly understates the patient’s risk of death or cardiac arrest, so a patient who warrants evaluation could be discharged or denied imaging. In a hypothetical BI-RADS example, the most likely category is “probably benign,” yet the propagated malignancy risk exceeds the ceiling that defines that category. Conclusions. A predicted label is not an observed state, and a calibrated classifier is not automatically a valid outcome model. Clinical and insurance coverage decisions should rest on the patient’s outcome risk, judged against a threshold justified by the consequences of acting and not acting. Developers should state what each model output means and check that every step between the model and the decision preserves the patient’s risk.</p>
+
+<p><a href="https://arxiv.org/abs/2611.01312">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
