@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Towards Efficient Whole Page Ranking with One-Pass Inference</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Towards Efficient Whole Page Ranking with One-Pass Inference" />
+<meta name="author" content="Qi Xu, Zhigang Hua, Zijie Lei, Yan Xie, Jizhe Zhang, Lynn Lu, Delun Du, Sha Hua, Ren Mao, Ke Pan, Haomin Yu, Sandeep Pandey, Luke Simon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Whole-page ranking jointly optimizes advertisements and organic content to balance business outcomes and user engagement under complex layout and business constraints. Existing non-autoregressive (NAR) approaches enable efficient page generation but typically score candidate items independently of previously selected items, limiting their ability to capture order-dependent interactions. Autoregressive (AR) methods address this limitation through sequential conditioning, but incur substantial inference overhead that challenges large-scale deployment. Bridging this quality-efficiency gap remains a challenge in industrial whole-page ranking. We propose Multi-Item Scoring (MIS), a prefix-aware NAR-style framework that incorporates sequential context into efficient multi-item scoring. MIS integrates global candidate interactions, localized prefix conditioning, and position-aware scoring within a shared representation architecture. By computing reusable representations once per request and performing lightweight prefix-conditioned scoring during constrained beam search, MIS captures important sequential dependencies without repeated full-model inference. Experiments on KuaiRand-1K and RL4RS demonstrate that MIS approaches the generation quality of an autoregressive CGA baseline while achieving 4.07x and 3.54x faster CPU decoding, respectively. In a randomized evaluation on a large-scale social-video platform, MIS improves the realization metric by 0.104% and watch time by 0.058%, while reducing ranking-service CPU consumption by 9.73%. These results demonstrate that prefix-aware multi-item scoring can narrow the quality gap between NAR and AR generation while retaining the efficiency required for industrial scalability." />
+<meta property="og:description" content="Whole-page ranking jointly optimizes advertisements and organic content to balance business outcomes and user engagement under complex layout and business constraints. Existing non-autoregressive (NAR) approaches enable efficient page generation but typically score candidate items independently of previously selected items, limiting their ability to capture order-dependent interactions. Autoregressive (AR) methods address this limitation through sequential conditioning, but incur substantial inference overhead that challenges large-scale deployment. Bridging this quality-efficiency gap remains a challenge in industrial whole-page ranking. We propose Multi-Item Scoring (MIS), a prefix-aware NAR-style framework that incorporates sequential context into efficient multi-item scoring. MIS integrates global candidate interactions, localized prefix conditioning, and position-aware scoring within a shared representation architecture. By computing reusable representations once per request and performing lightweight prefix-conditioned scoring during constrained beam search, MIS captures important sequential dependencies without repeated full-model inference. Experiments on KuaiRand-1K and RL4RS demonstrate that MIS approaches the generation quality of an autoregressive CGA baseline while achieving 4.07x and 3.54x faster CPU decoding, respectively. In a randomized evaluation on a large-scale social-video platform, MIS improves the realization metric by 0.104% and watch time by 0.058%, while reducing ranking-service CPU consumption by 9.73%. These results demonstrate that prefix-aware multi-item scoring can narrow the quality gap between NAR and AR generation while retaining the efficiency required for industrial scalability." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/05/TowardsEfficientWholePageRankingwithOnePassInference.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/05/TowardsEfficientWholePageRankingwithOnePassInference.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Towards Efficient Whole Page Ranking with One-Pass Inference" />
+<script type="application/ld+json">
+{"description":"Whole-page ranking jointly optimizes advertisements and organic content to balance business outcomes and user engagement under complex layout and business constraints. Existing non-autoregressive (NAR) approaches enable efficient page generation but typically score candidate items independently of previously selected items, limiting their ability to capture order-dependent interactions. Autoregressive (AR) methods address this limitation through sequential conditioning, but incur substantial inference overhead that challenges large-scale deployment. Bridging this quality-efficiency gap remains a challenge in industrial whole-page ranking. We propose Multi-Item Scoring (MIS), a prefix-aware NAR-style framework that incorporates sequential context into efficient multi-item scoring. MIS integrates global candidate interactions, localized prefix conditioning, and position-aware scoring within a shared representation architecture. By computing reusable representations once per request and performing lightweight prefix-conditioned scoring during constrained beam search, MIS captures important sequential dependencies without repeated full-model inference. Experiments on KuaiRand-1K and RL4RS demonstrate that MIS approaches the generation quality of an autoregressive CGA baseline while achieving 4.07x and 3.54x faster CPU decoding, respectively. In a randomized evaluation on a large-scale social-video platform, MIS improves the realization metric by 0.104% and watch time by 0.058%, while reducing ranking-service CPU consumption by 9.73%. These results demonstrate that prefix-aware multi-item scoring can narrow the quality gap between NAR and AR generation while retaining the efficiency required for industrial scalability.","headline":"Towards Efficient Whole Page Ranking with One-Pass Inference","dateModified":"2026-11-05T00:00:00+00:00","datePublished":"2026-11-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/05/TowardsEfficientWholePageRankingwithOnePassInference.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/05/TowardsEfficientWholePageRankingwithOnePassInference.html","author":{"@type":"Person","name":"Qi Xu, Zhigang Hua, Zijie Lei, Yan Xie, Jizhe Zhang, Lynn Lu, Delun Du, Sha Hua, Ren Mao, Ke Pan, Haomin Yu, Sandeep Pandey, Luke Simon"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-05 00:00:00 +0000">11-05</time>
+  </p>
+  
+  <h1>Towards Efficient Whole Page Ranking with One-Pass Inference</h1>
+  <br>Qi Xu, Zhigang Hua, Zijie Lei, Yan Xie, Jizhe Zhang, Lynn Lu, Delun Du, Sha Hua, Ren Mao, Ke Pan, Haomin Yu, Sandeep Pandey, Luke Simon</h3>
+  <br> [stat.ML]
+
+  <p>Whole-page ranking jointly optimizes advertisements and organic content to balance business outcomes and user engagement under complex layout and business constraints. Existing non-autoregressive (NAR) approaches enable efficient page generation but typically score candidate items independently of previously selected items, limiting their ability to capture order-dependent interactions. Autoregressive (AR) methods address this limitation through sequential conditioning, but incur substantial inference overhead that challenges large-scale deployment. Bridging this quality-efficiency gap remains a challenge in industrial whole-page ranking.
+  We propose Multi-Item Scoring (MIS), a prefix-aware NAR-style framework that incorporates sequential context into efficient multi-item scoring. MIS integrates global candidate interactions, localized prefix conditioning, and position-aware scoring within a shared representation architecture. By computing reusable representations once per request and performing lightweight prefix-conditioned scoring during constrained beam search, MIS captures important sequential dependencies without repeated full-model inference.
+  Experiments on KuaiRand-1K and RL4RS demonstrate that MIS approaches the generation quality of an autoregressive CGA baseline while achieving 4.07x and 3.54x faster CPU decoding, respectively. In a randomized evaluation on a large-scale social-video platform, MIS improves the realization metric by 0.104% and watch time by 0.058%, while reducing ranking-service CPU consumption by 9.73%. These results demonstrate that prefix-aware multi-item scoring can narrow the quality gap between NAR and AR generation while retaining the efficiency required for industrial scalability.</p>
+
+<p><a href="https://arxiv.org/abs/2611.05542">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
