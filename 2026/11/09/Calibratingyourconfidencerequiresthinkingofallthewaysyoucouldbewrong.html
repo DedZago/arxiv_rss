@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calibrating your confidence requires thinking of all the ways you could be wrong</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Calibrating your confidence requires thinking of all the ways you could be wrong" />
+<meta name="author" content="Marco Miani" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A primary limitation of modern deep learning is the miscalibration of model confidence; traditional architectures fundamentally lack a mechanism to quantify their own uncertainty. Larger models and larger datasets mitigate this issue, but they do not resolve the underlying structural deficiency. Bayesian methods offer a principled uncertainty-aware learning framework through stochastic parameters. Yet, despite the established benefits, the inherent computational overhead often compromises either scalability or quality. This trade-off currently prevents the widespread adoption of Bayesian methods. This Thesis bridges the gap between high-quality and low-complexity by introducing a novel distribution on parameter space: a degenerate Gaussian whose covariance is a projection matrix aligned with the null space of the Fisher information matrix. We demonstrate the scalability of this Bayesian posterior through two numerically efficient algorithms: one for posterior sampling and another for the direct computation of predictive confidence. Empirically, we show State-Of-The-Art confidence calibration and out-of-distribution detection for large models. We provide theoretical grounding for this approach. We study the degeneracies inherent in Amari’s information geometry and highlight its most relevant component: the split of parameter’s perturbations into two orthogonal subspaces. From this perspective, our posterior naturally emerges as the simplest choice that captures this split, assigning unitary variance to one subspace and zero variance to the other. Moreover, through the tools of differential geometry, we utilize this split to identify and rectify a critical misalignment issue of the non-linearized Laplace Approximation. Finally, with a focus on PAC-Bayes generalization bounds, we pave the way for a deeper understanding of the learning capabilities of overparametrized models." />
+<meta property="og:description" content="A primary limitation of modern deep learning is the miscalibration of model confidence; traditional architectures fundamentally lack a mechanism to quantify their own uncertainty. Larger models and larger datasets mitigate this issue, but they do not resolve the underlying structural deficiency. Bayesian methods offer a principled uncertainty-aware learning framework through stochastic parameters. Yet, despite the established benefits, the inherent computational overhead often compromises either scalability or quality. This trade-off currently prevents the widespread adoption of Bayesian methods. This Thesis bridges the gap between high-quality and low-complexity by introducing a novel distribution on parameter space: a degenerate Gaussian whose covariance is a projection matrix aligned with the null space of the Fisher information matrix. We demonstrate the scalability of this Bayesian posterior through two numerically efficient algorithms: one for posterior sampling and another for the direct computation of predictive confidence. Empirically, we show State-Of-The-Art confidence calibration and out-of-distribution detection for large models. We provide theoretical grounding for this approach. We study the degeneracies inherent in Amari’s information geometry and highlight its most relevant component: the split of parameter’s perturbations into two orthogonal subspaces. From this perspective, our posterior naturally emerges as the simplest choice that captures this split, assigning unitary variance to one subspace and zero variance to the other. Moreover, through the tools of differential geometry, we utilize this split to identify and rectify a critical misalignment issue of the non-linearized Laplace Approximation. Finally, with a focus on PAC-Bayes generalization bounds, we pave the way for a deeper understanding of the learning capabilities of overparametrized models." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/09/Calibratingyourconfidencerequiresthinkingofallthewaysyoucouldbewrong.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/09/Calibratingyourconfidencerequiresthinkingofallthewaysyoucouldbewrong.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Calibrating your confidence requires thinking of all the ways you could be wrong" />
+<script type="application/ld+json">
+{"description":"A primary limitation of modern deep learning is the miscalibration of model confidence; traditional architectures fundamentally lack a mechanism to quantify their own uncertainty. Larger models and larger datasets mitigate this issue, but they do not resolve the underlying structural deficiency. Bayesian methods offer a principled uncertainty-aware learning framework through stochastic parameters. Yet, despite the established benefits, the inherent computational overhead often compromises either scalability or quality. This trade-off currently prevents the widespread adoption of Bayesian methods. This Thesis bridges the gap between high-quality and low-complexity by introducing a novel distribution on parameter space: a degenerate Gaussian whose covariance is a projection matrix aligned with the null space of the Fisher information matrix. We demonstrate the scalability of this Bayesian posterior through two numerically efficient algorithms: one for posterior sampling and another for the direct computation of predictive confidence. Empirically, we show State-Of-The-Art confidence calibration and out-of-distribution detection for large models. We provide theoretical grounding for this approach. We study the degeneracies inherent in Amari’s information geometry and highlight its most relevant component: the split of parameter’s perturbations into two orthogonal subspaces. From this perspective, our posterior naturally emerges as the simplest choice that captures this split, assigning unitary variance to one subspace and zero variance to the other. Moreover, through the tools of differential geometry, we utilize this split to identify and rectify a critical misalignment issue of the non-linearized Laplace Approximation. Finally, with a focus on PAC-Bayes generalization bounds, we pave the way for a deeper understanding of the learning capabilities of overparametrized models.","headline":"Calibrating your confidence requires thinking of all the ways you could be wrong","dateModified":"2026-11-09T00:00:00+00:00","datePublished":"2026-11-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/09/Calibratingyourconfidencerequiresthinkingofallthewaysyoucouldbewrong.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/09/Calibratingyourconfidencerequiresthinkingofallthewaysyoucouldbewrong.html","author":{"@type":"Person","name":"Marco Miani"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-09 00:00:00 +0000">11-09</time>
+  </p>
+  
+  <h1>Calibrating your confidence requires thinking of all the ways you could be wrong</h1>
+  <br>Marco Miani</h3>
+  <br> [stat.ML]
+
+  <p>A primary limitation of modern deep learning is the miscalibration of model confidence; traditional architectures fundamentally lack a mechanism to quantify their own uncertainty. Larger models and larger datasets mitigate this issue, but they do not resolve the underlying structural deficiency. Bayesian methods offer a principled uncertainty-aware learning framework through stochastic parameters. Yet, despite the established benefits, the inherent computational overhead often compromises either scalability or quality. This trade-off currently prevents the widespread adoption of Bayesian methods.
+  This Thesis bridges the gap between high-quality and low-complexity by introducing a novel distribution on parameter space: a degenerate Gaussian whose covariance is a projection matrix aligned with the null space of the Fisher information matrix. We demonstrate the scalability of this Bayesian posterior through two numerically efficient algorithms: one for posterior sampling and another for the direct computation of predictive confidence. Empirically, we show State-Of-The-Art confidence calibration and out-of-distribution detection for large models.
+  We provide theoretical grounding for this approach. We study the degeneracies inherent in Amari’s information geometry and highlight its most relevant component: the split of parameter’s perturbations into two orthogonal subspaces. From this perspective, our posterior naturally emerges as the simplest choice that captures this split, assigning unitary variance to one subspace and zero variance to the other. Moreover, through the tools of differential geometry, we utilize this split to identify and rectify a critical misalignment issue of the non-linearized Laplace Approximation. Finally, with a focus on PAC-Bayes generalization bounds, we pave the way for a deeper understanding of the learning capabilities of overparametrized models.</p>
+
+<p><a href="https://arxiv.org/abs/2611.08997">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
