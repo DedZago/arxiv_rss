@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Lower-Level Agnostic Bilevel Optimization</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Lower-Level Agnostic Bilevel Optimization" />
+<meta name="author" content="Peiwen Qiu, Prashant Khanduri, Jia Liu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bilevel optimization is a fundamental framework for machine learning problems, where an upper-level (UL) objective depends on the solution of a nested lower-level (LL) problem. Existing bilevel algorithms typically assume that the LL objective is available for evaluation, differentiation, or unrolling. However, this assumption can fail when the LL response is produced by a black-box solver, simulator, adversary, or learned predictor. In this paper, we study LL agnostic bilevel optimization, where the UL learner has access only to an approximate LL solution $\bar{\mathbf{y}}(\mathbf{x})$ and cannot query the LL objective, its gradients, Hessian/Jacobian information, or the procedure that generates the LL response. We propose LeGo-BiO, a coordinate-wise pseudo-hypergradient method that estimates the missing Jacobian $\nabla _{\mathbf{x}}\bar{\mathbf{y}}(\mathbf{x})$ using finite differences of $\bar{\mathbf{y}}(\cdot)$. For each UL coordinate, LeGo-BiO constructs a decision vector subject to 1-sparse updates, thereby isolating the corresponding Jacobian column needed in the UL gradient computation. This avoids the directional-projection limitation of full-parameter response differences and, unlike derivative-free/zeroth-order approximations of the entire UL gradient, preserves the available first-order gradient information with respect to the UL variables for more accurate UL gradient evaluation. We establish convergence guarantees for LeGo-BiO in both deterministic and stochastic settings under an LL error-bound/Polyak-Lojasiewicz-type condition, without requiring LL strong convexity. Our bounds yield an $O(T^{-1})$ rate in the deterministic setting and an $O(T^{-1/2})$ rate in the stochastic setting when the LL approximation error decreases geometrically. Experiments demonstrate competitive performance of LeGo-BiO despite being agnostic to the LL objective." />
+<meta property="og:description" content="Bilevel optimization is a fundamental framework for machine learning problems, where an upper-level (UL) objective depends on the solution of a nested lower-level (LL) problem. Existing bilevel algorithms typically assume that the LL objective is available for evaluation, differentiation, or unrolling. However, this assumption can fail when the LL response is produced by a black-box solver, simulator, adversary, or learned predictor. In this paper, we study LL agnostic bilevel optimization, where the UL learner has access only to an approximate LL solution $\bar{\mathbf{y}}(\mathbf{x})$ and cannot query the LL objective, its gradients, Hessian/Jacobian information, or the procedure that generates the LL response. We propose LeGo-BiO, a coordinate-wise pseudo-hypergradient method that estimates the missing Jacobian $\nabla _{\mathbf{x}}\bar{\mathbf{y}}(\mathbf{x})$ using finite differences of $\bar{\mathbf{y}}(\cdot)$. For each UL coordinate, LeGo-BiO constructs a decision vector subject to 1-sparse updates, thereby isolating the corresponding Jacobian column needed in the UL gradient computation. This avoids the directional-projection limitation of full-parameter response differences and, unlike derivative-free/zeroth-order approximations of the entire UL gradient, preserves the available first-order gradient information with respect to the UL variables for more accurate UL gradient evaluation. We establish convergence guarantees for LeGo-BiO in both deterministic and stochastic settings under an LL error-bound/Polyak-Lojasiewicz-type condition, without requiring LL strong convexity. Our bounds yield an $O(T^{-1})$ rate in the deterministic setting and an $O(T^{-1/2})$ rate in the stochastic setting when the LL approximation error decreases geometrically. Experiments demonstrate competitive performance of LeGo-BiO despite being agnostic to the LL objective." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/10/LowerLevelAgnosticBilevelOptimization.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/10/LowerLevelAgnosticBilevelOptimization.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lower-Level Agnostic Bilevel Optimization" />
+<script type="application/ld+json">
+{"description":"Bilevel optimization is a fundamental framework for machine learning problems, where an upper-level (UL) objective depends on the solution of a nested lower-level (LL) problem. Existing bilevel algorithms typically assume that the LL objective is available for evaluation, differentiation, or unrolling. However, this assumption can fail when the LL response is produced by a black-box solver, simulator, adversary, or learned predictor. In this paper, we study LL agnostic bilevel optimization, where the UL learner has access only to an approximate LL solution $\\bar{\\mathbf{y}}(\\mathbf{x})$ and cannot query the LL objective, its gradients, Hessian/Jacobian information, or the procedure that generates the LL response. We propose LeGo-BiO, a coordinate-wise pseudo-hypergradient method that estimates the missing Jacobian $\\nabla _{\\mathbf{x}}\\bar{\\mathbf{y}}(\\mathbf{x})$ using finite differences of $\\bar{\\mathbf{y}}(\\cdot)$. For each UL coordinate, LeGo-BiO constructs a decision vector subject to 1-sparse updates, thereby isolating the corresponding Jacobian column needed in the UL gradient computation. This avoids the directional-projection limitation of full-parameter response differences and, unlike derivative-free/zeroth-order approximations of the entire UL gradient, preserves the available first-order gradient information with respect to the UL variables for more accurate UL gradient evaluation. We establish convergence guarantees for LeGo-BiO in both deterministic and stochastic settings under an LL error-bound/Polyak-Lojasiewicz-type condition, without requiring LL strong convexity. Our bounds yield an $O(T^{-1})$ rate in the deterministic setting and an $O(T^{-1/2})$ rate in the stochastic setting when the LL approximation error decreases geometrically. Experiments demonstrate competitive performance of LeGo-BiO despite being agnostic to the LL objective.","headline":"Lower-Level Agnostic Bilevel Optimization","dateModified":"2026-11-10T00:00:00+00:00","datePublished":"2026-11-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/10/LowerLevelAgnosticBilevelOptimization.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/10/LowerLevelAgnosticBilevelOptimization.html","author":{"@type":"Person","name":"Peiwen Qiu, Prashant Khanduri, Jia Liu"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-10 00:00:00 +0000">11-10</time>
+  </p>
+  
+  <h1>Lower-Level Agnostic Bilevel Optimization</h1>
+  <br>Peiwen Qiu, Prashant Khanduri, Jia Liu</h3>
+  <br> [stat.ML]
+
+  <p>Bilevel optimization is a fundamental framework for machine learning problems, where an upper-level (UL) objective depends on the solution of a nested lower-level (LL) problem. Existing bilevel algorithms typically assume that the LL objective is available for evaluation, differentiation, or unrolling. However, this assumption can fail when the LL response is produced by a black-box solver, simulator, adversary, or learned predictor. In this paper, we study LL agnostic bilevel optimization, where the UL learner has access only to an approximate LL solution $\bar{\mathbf{y}}(\mathbf{x})$ and cannot query the LL objective, its gradients, Hessian/Jacobian information, or the procedure that generates the LL response. We propose LeGo-BiO, a coordinate-wise pseudo-hypergradient method that estimates the missing Jacobian $\nabla _{\mathbf{x}}\bar{\mathbf{y}}(\mathbf{x})$ using finite differences of $\bar{\mathbf{y}}(\cdot)$. For each UL coordinate, LeGo-BiO constructs a decision vector subject to 1-sparse updates, thereby isolating the corresponding Jacobian column needed in the UL gradient computation. This avoids the directional-projection limitation of full-parameter response differences and, unlike derivative-free/zeroth-order approximations of the entire UL gradient, preserves the available first-order gradient information with respect to the UL variables for more accurate UL gradient evaluation. We establish convergence guarantees for LeGo-BiO in both deterministic and stochastic settings under an LL error-bound/Polyak-Lojasiewicz-type condition, without requiring LL strong convexity. Our bounds yield an $O(T^{-1})$ rate in the deterministic setting and an $O(T^{-1/2})$ rate in the stochastic setting when the LL approximation error decreases geometrically. Experiments demonstrate competitive performance of LeGo-BiO despite being agnostic to the LL objective.</p>
+
+<p><a href="https://arxiv.org/abs/2611.10223">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

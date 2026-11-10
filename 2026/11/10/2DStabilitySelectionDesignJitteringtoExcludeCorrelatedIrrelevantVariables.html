@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>2D Stability Selection: Design Jittering to Exclude Correlated Irrelevant Variables</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="2D Stability Selection: Design Jittering to Exclude Correlated Irrelevant Variables" />
+<meta name="author" content="Mahdi Nouraie, Houying Zhu, Samuel Muller" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stability Selection finds the variables that are chosen consistently across random subsamples of the data, but it can consistently choose the wrong ones. An irrelevant variable that is strongly correlated with relevant variables can be selected in many subsamples, because resampling the observations does not change the variables themselves. We call such a variable a confounder; the term refers only to this correlation and not to causal confounding. We propose 2D Stability Selection, which also adds random noise to the design matrix, at increasing noise levels, and keeps the variables that are selected throughout. On average, the added noise acts as a ridge penalty, so each fit is a noisy elastic net. This changes the conditions under which the Lasso selects the correct variables: it can restore them when a confounder would otherwise be chosen, and it can also make selection worse. For uncorrelated relevant variables we give an exact criterion for the noise levels at which the population elastic-net irrepresentable condition holds, recovery guarantees for a single fit and for the aggregated procedure, and, for thresholds above $1/2$, a bound on the expected number of false positives (under i.i.d.\ observations; its closed form also needs exchangeable irrelevant variables). In simulations, the method excludes the confounders that Stability Selection includes. In the simulated design, an elastic net used without any noise, with a fixed ridge weight or along a deterministic path, excludes the confounders as well, which suggests that for the Lasso the ridge effect, not the randomness of the noise, is responsible." />
+<meta property="og:description" content="Stability Selection finds the variables that are chosen consistently across random subsamples of the data, but it can consistently choose the wrong ones. An irrelevant variable that is strongly correlated with relevant variables can be selected in many subsamples, because resampling the observations does not change the variables themselves. We call such a variable a confounder; the term refers only to this correlation and not to causal confounding. We propose 2D Stability Selection, which also adds random noise to the design matrix, at increasing noise levels, and keeps the variables that are selected throughout. On average, the added noise acts as a ridge penalty, so each fit is a noisy elastic net. This changes the conditions under which the Lasso selects the correct variables: it can restore them when a confounder would otherwise be chosen, and it can also make selection worse. For uncorrelated relevant variables we give an exact criterion for the noise levels at which the population elastic-net irrepresentable condition holds, recovery guarantees for a single fit and for the aggregated procedure, and, for thresholds above $1/2$, a bound on the expected number of false positives (under i.i.d.\ observations; its closed form also needs exchangeable irrelevant variables). In simulations, the method excludes the confounders that Stability Selection includes. In the simulated design, an elastic net used without any noise, with a fixed ridge weight or along a deterministic path, excludes the confounders as well, which suggests that for the Lasso the ridge effect, not the randomness of the noise, is responsible." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/10/2DStabilitySelectionDesignJitteringtoExcludeCorrelatedIrrelevantVariables.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/10/2DStabilitySelectionDesignJitteringtoExcludeCorrelatedIrrelevantVariables.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="2D Stability Selection: Design Jittering to Exclude Correlated Irrelevant Variables" />
+<script type="application/ld+json">
+{"description":"Stability Selection finds the variables that are chosen consistently across random subsamples of the data, but it can consistently choose the wrong ones. An irrelevant variable that is strongly correlated with relevant variables can be selected in many subsamples, because resampling the observations does not change the variables themselves. We call such a variable a confounder; the term refers only to this correlation and not to causal confounding. We propose 2D Stability Selection, which also adds random noise to the design matrix, at increasing noise levels, and keeps the variables that are selected throughout. On average, the added noise acts as a ridge penalty, so each fit is a noisy elastic net. This changes the conditions under which the Lasso selects the correct variables: it can restore them when a confounder would otherwise be chosen, and it can also make selection worse. For uncorrelated relevant variables we give an exact criterion for the noise levels at which the population elastic-net irrepresentable condition holds, recovery guarantees for a single fit and for the aggregated procedure, and, for thresholds above $1/2$, a bound on the expected number of false positives (under i.i.d.\\ observations; its closed form also needs exchangeable irrelevant variables). In simulations, the method excludes the confounders that Stability Selection includes. In the simulated design, an elastic net used without any noise, with a fixed ridge weight or along a deterministic path, excludes the confounders as well, which suggests that for the Lasso the ridge effect, not the randomness of the noise, is responsible.","headline":"2D Stability Selection: Design Jittering to Exclude Correlated Irrelevant Variables","dateModified":"2026-11-10T00:00:00+00:00","datePublished":"2026-11-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/10/2DStabilitySelectionDesignJitteringtoExcludeCorrelatedIrrelevantVariables.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/10/2DStabilitySelectionDesignJitteringtoExcludeCorrelatedIrrelevantVariables.html","author":{"@type":"Person","name":"Mahdi Nouraie, Houying Zhu, Samuel Muller"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-10 00:00:00 +0000">11-10</time>
+  </p>
+  
+  <h1>2D Stability Selection: Design Jittering to Exclude Correlated Irrelevant Variables</h1>
+  <br>Mahdi Nouraie, Houying Zhu, Samuel Muller</h3>
+  <br> [stat.ME,stat.ML]
+
+  <p>Stability Selection finds the variables that are chosen consistently across random subsamples of the data, but it can consistently choose the wrong ones. An irrelevant variable that is strongly correlated with relevant variables can be selected in many subsamples, because resampling the observations does not change the variables themselves. We call such a variable a confounder; the term refers only to this correlation and not to causal confounding. We propose 2D Stability Selection, which also adds random noise to the design matrix, at increasing noise levels, and keeps the variables that are selected throughout. On average, the added noise acts as a ridge penalty, so each fit is a noisy elastic net. This changes the conditions under which the Lasso selects the correct variables: it can restore them when a confounder would otherwise be chosen, and it can also make selection worse. For uncorrelated relevant variables we give an exact criterion for the noise levels at which the population elastic-net irrepresentable condition holds, recovery guarantees for a single fit and for the aggregated procedure, and, for thresholds above $1/2$, a bound on the expected number of false positives (under i.i.d.\ observations; its closed form also needs exchangeable irrelevant variables). In simulations, the method excludes the confounders that Stability Selection includes. In the simulated design, an elastic net used without any noise, with a fixed ridge weight or along a deterministic path, excludes the confounders as well, which suggests that for the Lasso the ridge effect, not the randomness of the noise, is responsible.</p>
+
+<p><a href="https://arxiv.org/abs/2605.02205">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
