@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>CP-MLPs: A Tensor-Rank Theory of Tied and Untied MLP Blocks</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="CP-MLPs: A Tensor-Rank Theory of Tied and Untied MLP Blocks" />
+<meta name="author" content="Md Rifat Arefin, Farzaneh Heidari, Irina Rish, Guillaume Rabusseau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Transformer feed-forward blocks combine several design choices: squared activations, gating, and tied versus untied parameter sharing, whose separate contributions to expressivity remain poorly understood. We introduce CP-MLPs, a tensor framework in which each multiplicative unit contributes a rank-1 interaction with three roles: detecting an input feature, reading a value, and writing to the output. Tied gated blocks such as ReLU$^2$ force the detector and value roles to share the same direction; untied gated blocks such as ReGLU and SwiGLU let them differ. We show that this distinction yields exact, degree-wise tensor-rank separations: untied detector-value units are strictly more width-efficient for indefinite quadratic interactions and role-asymmetric monomials, while tied units are structurally matched to symmetric pure-power targets. The width advantage of untying therefore depends on the target structure. Experiments show loss plateaus below the exact-representation width, but these plateaus alone do not establish a positive approximation gap: arbitrarily accurate approximation is governed by border rank. In trained gated MLPs, untied blocks retain an advantage in selected comparisons at matched input-projection budget. Code is available at https://github.com/rarefin/CP-MLPs." />
+<meta property="og:description" content="Transformer feed-forward blocks combine several design choices: squared activations, gating, and tied versus untied parameter sharing, whose separate contributions to expressivity remain poorly understood. We introduce CP-MLPs, a tensor framework in which each multiplicative unit contributes a rank-1 interaction with three roles: detecting an input feature, reading a value, and writing to the output. Tied gated blocks such as ReLU$^2$ force the detector and value roles to share the same direction; untied gated blocks such as ReGLU and SwiGLU let them differ. We show that this distinction yields exact, degree-wise tensor-rank separations: untied detector-value units are strictly more width-efficient for indefinite quadratic interactions and role-asymmetric monomials, while tied units are structurally matched to symmetric pure-power targets. The width advantage of untying therefore depends on the target structure. Experiments show loss plateaus below the exact-representation width, but these plateaus alone do not establish a positive approximation gap: arbitrarily accurate approximation is governed by border rank. In trained gated MLPs, untied blocks retain an advantage in selected comparisons at matched input-projection budget. Code is available at https://github.com/rarefin/CP-MLPs." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/11/CPMLPsATensorRankTheoryofTiedandUntiedMLPBlocks.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/11/CPMLPsATensorRankTheoryofTiedandUntiedMLPBlocks.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CP-MLPs: A Tensor-Rank Theory of Tied and Untied MLP Blocks" />
+<script type="application/ld+json">
+{"description":"Transformer feed-forward blocks combine several design choices: squared activations, gating, and tied versus untied parameter sharing, whose separate contributions to expressivity remain poorly understood. We introduce CP-MLPs, a tensor framework in which each multiplicative unit contributes a rank-1 interaction with three roles: detecting an input feature, reading a value, and writing to the output. Tied gated blocks such as ReLU$^2$ force the detector and value roles to share the same direction; untied gated blocks such as ReGLU and SwiGLU let them differ. We show that this distinction yields exact, degree-wise tensor-rank separations: untied detector-value units are strictly more width-efficient for indefinite quadratic interactions and role-asymmetric monomials, while tied units are structurally matched to symmetric pure-power targets. The width advantage of untying therefore depends on the target structure. Experiments show loss plateaus below the exact-representation width, but these plateaus alone do not establish a positive approximation gap: arbitrarily accurate approximation is governed by border rank. In trained gated MLPs, untied blocks retain an advantage in selected comparisons at matched input-projection budget. Code is available at https://github.com/rarefin/CP-MLPs.","headline":"CP-MLPs: A Tensor-Rank Theory of Tied and Untied MLP Blocks","dateModified":"2026-11-11T00:00:00+00:00","datePublished":"2026-11-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/11/CPMLPsATensorRankTheoryofTiedandUntiedMLPBlocks.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/11/CPMLPsATensorRankTheoryofTiedandUntiedMLPBlocks.html","author":{"@type":"Person","name":"Md Rifat Arefin, Farzaneh Heidari, Irina Rish, Guillaume Rabusseau"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-11 00:00:00 +0000">11-11</time>
+  </p>
+  
+  <h1>CP-MLPs: A Tensor-Rank Theory of Tied and Untied MLP Blocks</h1>
+  <br>Md Rifat Arefin, Farzaneh Heidari, Irina Rish, Guillaume Rabusseau</h3>
+  <br> [stat.ML]
+
+  <p>Transformer feed-forward blocks combine several design choices: squared activations, gating, and tied versus untied parameter sharing, whose separate contributions to expressivity remain poorly understood. We introduce CP-MLPs, a tensor framework in which each multiplicative unit contributes a rank-1 interaction with three roles: detecting an input feature, reading a value, and writing to the output. Tied gated blocks such as ReLU$^2$ force the detector and value roles to share the same direction; untied gated blocks such as ReGLU and SwiGLU let them differ. We show that this distinction yields exact, degree-wise tensor-rank separations: untied detector-value units are strictly more width-efficient for indefinite quadratic interactions and role-asymmetric monomials, while tied units are structurally matched to symmetric pure-power targets. The width advantage of untying therefore depends on the target structure. Experiments show loss plateaus below the exact-representation width, but these plateaus alone do not establish a positive approximation gap: arbitrarily accurate approximation is governed by border rank. In trained gated MLPs, untied blocks retain an advantage in selected comparisons at matched input-projection budget. Code is available at https://github.com/rarefin/CP-MLPs.</p>
+
+<p><a href="https://arxiv.org/abs/2611.13647">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

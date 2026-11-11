@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding" />
+<meta name="author" content="Mahdi Nazemi, Oleg Rybakov, Tijmen Blankevoort, Asit Mishra, Carlo del Mundo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to BF16 using round-to-nearest, small updates often leave the BF16 weights used for rollout generation and training unchanged. Consequently, several optimizer steps may be needed before updates to the shadow weights are reflected in the BF16 weights. Raising the BF16 learning rate reduces weight sticking and matches FP16’s convergence speed, but it also increases the KL divergence from the reference model. We instead apply stochastic rounding when quantizing the FP32 shadow weights to BF16. This approach matches FP16’s convergence speed across different models and datasets while reducing the KL divergence relative to BF16 training with a larger learning rate. Unlike FP16, it keeps BF16’s wider dynamic range and needs no loss scaling." />
+<meta property="og:description" content="BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to BF16 using round-to-nearest, small updates often leave the BF16 weights used for rollout generation and training unchanged. Consequently, several optimizer steps may be needed before updates to the shadow weights are reflected in the BF16 weights. Raising the BF16 learning rate reduces weight sticking and matches FP16’s convergence speed, but it also increases the KL divergence from the reference model. We instead apply stochastic rounding when quantizing the FP32 shadow weights to BF16. This approach matches FP16’s convergence speed across different models and datasets while reducing the KL divergence relative to BF16 training with a larger learning rate. Unlike FP16, it keeps BF16’s wider dynamic range and needs no loss scaling." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/11/ClosingtheBF16FP16ConvergenceSpeedGapinRLPostTrainingwithStochasticRounding.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/11/ClosingtheBF16FP16ConvergenceSpeedGapinRLPostTrainingwithStochasticRounding.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding" />
+<script type="application/ld+json">
+{"description":"BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to BF16 using round-to-nearest, small updates often leave the BF16 weights used for rollout generation and training unchanged. Consequently, several optimizer steps may be needed before updates to the shadow weights are reflected in the BF16 weights. Raising the BF16 learning rate reduces weight sticking and matches FP16’s convergence speed, but it also increases the KL divergence from the reference model. We instead apply stochastic rounding when quantizing the FP32 shadow weights to BF16. This approach matches FP16’s convergence speed across different models and datasets while reducing the KL divergence relative to BF16 training with a larger learning rate. Unlike FP16, it keeps BF16’s wider dynamic range and needs no loss scaling.","headline":"Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding","dateModified":"2026-11-11T00:00:00+00:00","datePublished":"2026-11-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/11/ClosingtheBF16FP16ConvergenceSpeedGapinRLPostTrainingwithStochasticRounding.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/11/ClosingtheBF16FP16ConvergenceSpeedGapinRLPostTrainingwithStochasticRounding.html","author":{"@type":"Person","name":"Mahdi Nazemi, Oleg Rybakov, Tijmen Blankevoort, Asit Mishra, Carlo del Mundo"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-11 00:00:00 +0000">11-11</time>
+  </p>
+  
+  <h1>Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding</h1>
+  <br>Mahdi Nazemi, Oleg Rybakov, Tijmen Blankevoort, Asit Mishra, Carlo del Mundo</h3>
+  <br> [stat.ML]
+
+  <p>BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to BF16 using round-to-nearest, small updates often leave the BF16 weights used for rollout generation and training unchanged. Consequently, several optimizer steps may be needed before updates to the shadow weights are reflected in the BF16 weights. Raising the BF16 learning rate reduces weight sticking and matches FP16’s convergence speed, but it also increases the KL divergence from the reference model. We instead apply stochastic rounding when quantizing the FP32 shadow weights to BF16. This approach matches FP16’s convergence speed across different models and datasets while reducing the KL divergence relative to BF16 training with a larger learning rate. Unlike FP16, it keeps BF16’s wider dynamic range and needs no loss scaling.</p>
+
+<p><a href="https://arxiv.org/abs/2611.13545">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>

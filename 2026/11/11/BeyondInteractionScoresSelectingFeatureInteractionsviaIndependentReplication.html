@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication" />
+<meta name="author" content="Jincheng Gao, Shuo Sun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Learning feature interactions is essential for accurate prediction and interpretable modeling, yet a high interaction score may reflect fitting noise rather than a reproducible pattern. Ranking methods score feature pairs but leave the cutoff to the user; testing methods set the cutoff but rely on repeated model refits or a model of the joint feature distribution. We present LENS, a model-agnostic framework for selecting feature interactions through independent replication. LENS trains two models with the same learning algorithm on disjoint data and accesses them only through predictions. For each feature pair, it removes main effects from the joint-effect surface to isolate an interaction pattern, ranks pairs by its strength, and tests whether the second model reproduces it at a meaningful strength. A single multiple-testing correction determines which pairs to retain, using only two model fits regardless of the number of features. We prove that a replication ratio alone can retain arbitrarily weak patterns shared by both fits, whereas a strength floor restores selection consistency, and we characterize when normalization in Friedman’s $H^2$ reverses interaction rankings. On 16 synthetic designs, LENS matches leading model-specific ranking methods (e.g., TreeSHAP) and recovers 91% of material interactions, against 45% for the knockoff-based DIAMOND, without selecting false pairs; with 1,225 candidate pairs and no interactions, it makes substantially fewer false discoveries. On large-scale French motor insurance data, it identifies interactions documented in the actuarial literature and recovers 90% of the deviance gain obtained using all pairs. On two credit datasets, LENS selects few pairs while maintaining or slightly improving predictive performance over the additive baseline." />
+<meta property="og:description" content="Learning feature interactions is essential for accurate prediction and interpretable modeling, yet a high interaction score may reflect fitting noise rather than a reproducible pattern. Ranking methods score feature pairs but leave the cutoff to the user; testing methods set the cutoff but rely on repeated model refits or a model of the joint feature distribution. We present LENS, a model-agnostic framework for selecting feature interactions through independent replication. LENS trains two models with the same learning algorithm on disjoint data and accesses them only through predictions. For each feature pair, it removes main effects from the joint-effect surface to isolate an interaction pattern, ranks pairs by its strength, and tests whether the second model reproduces it at a meaningful strength. A single multiple-testing correction determines which pairs to retain, using only two model fits regardless of the number of features. We prove that a replication ratio alone can retain arbitrarily weak patterns shared by both fits, whereas a strength floor restores selection consistency, and we characterize when normalization in Friedman’s $H^2$ reverses interaction rankings. On 16 synthetic designs, LENS matches leading model-specific ranking methods (e.g., TreeSHAP) and recovers 91% of material interactions, against 45% for the knockoff-based DIAMOND, without selecting false pairs; with 1,225 candidate pairs and no interactions, it makes substantially fewer false discoveries. On large-scale French motor insurance data, it identifies interactions documented in the actuarial literature and recovers 90% of the deviance gain obtained using all pairs. On two credit datasets, LENS selects few pairs while maintaining or slightly improving predictive performance over the additive baseline." />
+<link rel="canonical" href="https://dedzago.github.io/arxiv_rss/2026/11/11/BeyondInteractionScoresSelectingFeatureInteractionsviaIndependentReplication.html" />
+<meta property="og:url" content="https://dedzago.github.io/arxiv_rss/2026/11/11/BeyondInteractionScoresSelectingFeatureInteractionsviaIndependentReplication.html" />
+<meta property="og:site_name" content="Stat Arxiv of Today" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-11-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication" />
+<script type="application/ld+json">
+{"description":"Learning feature interactions is essential for accurate prediction and interpretable modeling, yet a high interaction score may reflect fitting noise rather than a reproducible pattern. Ranking methods score feature pairs but leave the cutoff to the user; testing methods set the cutoff but rely on repeated model refits or a model of the joint feature distribution. We present LENS, a model-agnostic framework for selecting feature interactions through independent replication. LENS trains two models with the same learning algorithm on disjoint data and accesses them only through predictions. For each feature pair, it removes main effects from the joint-effect surface to isolate an interaction pattern, ranks pairs by its strength, and tests whether the second model reproduces it at a meaningful strength. A single multiple-testing correction determines which pairs to retain, using only two model fits regardless of the number of features. We prove that a replication ratio alone can retain arbitrarily weak patterns shared by both fits, whereas a strength floor restores selection consistency, and we characterize when normalization in Friedman’s $H^2$ reverses interaction rankings. On 16 synthetic designs, LENS matches leading model-specific ranking methods (e.g., TreeSHAP) and recovers 91% of material interactions, against 45% for the knockoff-based DIAMOND, without selecting false pairs; with 1,225 candidate pairs and no interactions, it makes substantially fewer false discoveries. On large-scale French motor insurance data, it identifies interactions documented in the actuarial literature and recovers 90% of the deviance gain obtained using all pairs. On two credit datasets, LENS selects few pairs while maintaining or slightly improving predictive performance over the additive baseline.","headline":"Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication","dateModified":"2026-11-11T00:00:00+00:00","datePublished":"2026-11-11T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dedzago.github.io/arxiv_rss/2026/11/11/BeyondInteractionScoresSelectingFeatureInteractionsviaIndependentReplication.html"},"url":"https://dedzago.github.io/arxiv_rss/2026/11/11/BeyondInteractionScoresSelectingFeatureInteractionsviaIndependentReplication.html","author":{"@type":"Person","name":"Jincheng Gao, Shuo Sun"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://dedzago.github.io/arxiv_rss/feed.xml" title="Stat Arxiv of Today" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/arxiv_rss/assets/css/main.css" />
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body a="light">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/arxiv_rss/">..</a><article>
+  <p class="post-meta">
+    <time datetime="2026-11-11 00:00:00 +0000">11-11</time>
+  </p>
+  
+  <h1>Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication</h1>
+  <br>Jincheng Gao, Shuo Sun</h3>
+  <br> [stat.ML]
+
+  <p>Learning feature interactions is essential for accurate prediction and interpretable modeling, yet a high interaction score may reflect fitting noise rather than a reproducible pattern. Ranking methods score feature pairs but leave the cutoff to the user; testing methods set the cutoff but rely on repeated model refits or a model of the joint feature distribution. We present LENS, a model-agnostic framework for selecting feature interactions through independent replication. LENS trains two models with the same learning algorithm on disjoint data and accesses them only through predictions. For each feature pair, it removes main effects from the joint-effect surface to isolate an interaction pattern, ranks pairs by its strength, and tests whether the second model reproduces it at a meaningful strength. A single multiple-testing correction determines which pairs to retain, using only two model fits regardless of the number of features. We prove that a replication ratio alone can retain arbitrarily weak patterns shared by both fits, whereas a strength floor restores selection consistency, and we characterize when normalization in Friedman’s $H^2$ reverses interaction rankings. On 16 synthetic designs, LENS matches leading model-specific ranking methods (e.g., TreeSHAP) and recovers 91% of material interactions, against 45% for the knockoff-based DIAMOND, without selecting false pairs; with 1,225 candidate pairs and no interactions, it makes substantially fewer false discoveries. On large-scale French motor insurance data, it identifies interactions documented in the actuarial literature and recovers 90% of the deviance gain obtained using all pairs. On two credit datasets, LENS selects few pairs while maintaining or slightly improving predictive performance over the additive baseline.</p>
+
+<p><a href="https://arxiv.org/abs/2611.13765">Read more</a></p>
+
+</article>
+
+      </div>
+    </main>
+  </body>
+</html>
